@@ -1,0 +1,29 @@
+{
+  "Time_10/org/joda/time/base/BaseSingleFieldPeriod.java": {
+    "project": "Time_10",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_10/org/joda/time/base/BaseSingleFieldPeriod.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Time_10/Time_10_buggy/BaseSingleFieldPeriodTest.java",
+    "file_size_bytes": 6990,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4243,
+      "completion_tokens": 24549,
+      "total_tokens": 28792
+    },
+    "content_char_count": 7004,
+    "reasoning_char_count": 93649,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 1153.95,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 709957,
+      "daily_remaining_tokens": 290043
+    },
+    "updated_at": "2026-09-25T07:26:35.174970"
+  }
+}

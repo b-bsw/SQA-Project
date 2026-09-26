@@ -1,0 +1,29 @@
+{
+  "Math_34/org/apache/commons/math3/genetics/ListPopulation.java": {
+    "project": "Math_34",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_34/org/apache/commons/math3/genetics/ListPopulation.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_34/Math_34_buggy/ListPopulationTest.java",
+    "file_size_bytes": 7116,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3238,
+      "completion_tokens": 29682,
+      "total_tokens": 32920
+    },
+    "content_char_count": 7116,
+    "reasoning_char_count": 118503,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 144.15,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 668868,
+      "daily_remaining_tokens": 331132
+    },
+    "updated_at": "2026-09-25T11:12:58.513154"
+  }
+}

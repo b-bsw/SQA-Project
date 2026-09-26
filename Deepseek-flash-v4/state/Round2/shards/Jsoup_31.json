@@ -1,0 +1,83 @@
+{
+  "Jsoup_31/org/jsoup/parser/Token.java": {
+    "project": "Jsoup_31",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_31/org/jsoup/parser/Token.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_31/Jsoup_31_buggy/TokenTest.java",
+    "file_size_bytes": 10815,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2680,
+      "completion_tokens": 3713,
+      "total_tokens": 6393
+    },
+    "content_char_count": 10815,
+    "reasoning_char_count": 4964,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 32.8,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 110083,
+      "daily_remaining_tokens": 889917
+    },
+    "updated_at": "2026-09-25T10:49:39.802784"
+  },
+  "Jsoup_31/org/jsoup/parser/TokeniserState.java": {
+    "project": "Jsoup_31",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_31/org/jsoup/parser/TokeniserState.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_31/Jsoup_31_buggy/TokeniserStateTest.java",
+    "file_size_bytes": 19017,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 12507,
+      "completion_tokens": 12985,
+      "total_tokens": 25492
+    },
+    "content_char_count": 19017,
+    "reasoning_char_count": 34027,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 111.26,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 145271,
+      "daily_remaining_tokens": 854729
+    },
+    "updated_at": "2026-09-25T10:51:31.158936"
+  },
+  "Jsoup_31/org/jsoup/parser/XmlTreeBuilder.java": {
+    "project": "Jsoup_31",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_31/org/jsoup/parser/XmlTreeBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_31/Jsoup_31_buggy/XmlTreeBuilderTest.java",
+    "file_size_bytes": 6723,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2120,
+      "completion_tokens": 2905,
+      "total_tokens": 5025
+    },
+    "content_char_count": 6661,
+    "reasoning_char_count": 5192,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 28.73,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 150296,
+      "daily_remaining_tokens": 849704
+    },
+    "updated_at": "2026-09-25T10:51:59.977382"
+  }
+}

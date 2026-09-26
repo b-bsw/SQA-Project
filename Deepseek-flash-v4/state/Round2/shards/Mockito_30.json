@@ -1,0 +1,56 @@
+{
+  "Mockito_30/org/mockito/exceptions/Reporter.java": {
+    "project": "Mockito_30",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_30/org/mockito/exceptions/Reporter.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Mockito_30/Mockito_30_buggy/ReporterTest.java",
+    "file_size_bytes": 10139,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6969,
+      "completion_tokens": 25633,
+      "total_tokens": 32602
+    },
+    "content_char_count": 10139,
+    "reasoning_char_count": 97370,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 126.63,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 640519,
+      "daily_remaining_tokens": 359481
+    },
+    "updated_at": "2026-09-25T11:14:51.238429"
+  },
+  "Mockito_30/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java": {
+    "project": "Mockito_30",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_30/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Mockito_30/Mockito_30_buggy/ReturnsSmartNullsTest.java",
+    "file_size_bytes": 5476,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2279,
+      "completion_tokens": 28047,
+      "total_tokens": 30326
+    },
+    "content_char_count": 5476,
+    "reasoning_char_count": 111444,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 153.17,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 695524,
+      "daily_remaining_tokens": 304476
+    },
+    "updated_at": "2026-09-25T11:17:24.511130"
+  }
+}

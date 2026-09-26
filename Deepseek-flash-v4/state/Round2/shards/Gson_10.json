@@ -1,0 +1,29 @@
+{
+  "Gson_10/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java": {
+    "project": "Gson_10",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Gson_10/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Gson_10/Gson_10_buggy/ReflectiveTypeAdapterFactoryTest.java",
+    "file_size_bytes": 20820,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3542,
+      "completion_tokens": 6243,
+      "total_tokens": 9785
+    },
+    "content_char_count": 20820,
+    "reasoning_char_count": 8599,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 56.99,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 9785,
+      "daily_remaining_tokens": 990215
+    },
+    "updated_at": "2026-09-25T10:46:17.523724"
+  }
+}

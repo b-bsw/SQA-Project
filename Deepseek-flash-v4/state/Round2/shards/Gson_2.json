@@ -1,0 +1,29 @@
+{
+  "Gson_2/com/google/gson/internal/bind/TypeAdapters.java": {
+    "project": "Gson_2",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Gson_2/com/google/gson/internal/bind/TypeAdapters.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Gson_2/Gson_2_buggy/TypeAdaptersTest.java",
+    "file_size_bytes": 9800,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7681,
+      "completion_tokens": 7690,
+      "total_tokens": 15371
+    },
+    "content_char_count": 9800,
+    "reasoning_char_count": 20124,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 67.57,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 28608,
+      "daily_remaining_tokens": 971392
+    },
+    "updated_at": "2026-09-25T10:46:58.035663"
+  }
+}

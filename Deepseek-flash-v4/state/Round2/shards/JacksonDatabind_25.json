@@ -1,0 +1,110 @@
+{
+  "JacksonDatabind_25/com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java": {
+    "project": "JacksonDatabind_25",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_25/com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_25/JacksonDatabind_25_buggy/BasicDeserializerFactoryTest.java",
+    "file_size_bytes": 10766,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 15648,
+      "completion_tokens": 34208,
+      "total_tokens": 49856
+    },
+    "content_char_count": 10766,
+    "reasoning_char_count": 140721,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 168.08,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 277156,
+      "daily_remaining_tokens": 722844
+    },
+    "updated_at": "2026-09-25T10:56:52.553488"
+  },
+  "JacksonDatabind_25/com/fasterxml/jackson/databind/deser/DeserializerCache.java": {
+    "project": "JacksonDatabind_25",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_25/com/fasterxml/jackson/databind/deser/DeserializerCache.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_25/JacksonDatabind_25_buggy/DeserializerCacheTest.java",
+    "file_size_bytes": 8209,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5047,
+      "completion_tokens": 29972,
+      "total_tokens": 35019
+    },
+    "content_char_count": 8221,
+    "reasoning_char_count": 111025,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 146.44,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 346995,
+      "daily_remaining_tokens": 653005
+    },
+    "updated_at": "2026-09-25T10:59:19.114777"
+  },
+  "JacksonDatabind_25/com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBase.java": {
+    "project": "JacksonDatabind_25",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_25/com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBase.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_25/JacksonDatabind_25_buggy/TypeDeserializerBaseTest.java",
+    "file_size_bytes": 13592,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4084,
+      "completion_tokens": 34576,
+      "total_tokens": 38660
+    },
+    "content_char_count": 13592,
+    "reasoning_char_count": 135932,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 164.97,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 406723,
+      "daily_remaining_tokens": 593277
+    },
+    "updated_at": "2026-09-25T11:02:04.205206"
+  },
+  "JacksonDatabind_25/com/fasterxml/jackson/databind/module/SimpleAbstractTypeResolver.java": {
+    "project": "JacksonDatabind_25",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_25/com/fasterxml/jackson/databind/module/SimpleAbstractTypeResolver.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_25/JacksonDatabind_25_buggy/SimpleAbstractTypeResolverTest.java",
+    "file_size_bytes": 2362,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2316,
+      "completion_tokens": 11718,
+      "total_tokens": 14034
+    },
+    "content_char_count": 2362,
+    "reasoning_char_count": 50293,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 66.1,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 429685,
+      "daily_remaining_tokens": 570315
+    },
+    "updated_at": "2026-09-25T11:03:10.416554"
+  }
+}

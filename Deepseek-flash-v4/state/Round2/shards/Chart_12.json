@@ -1,0 +1,25 @@
+{
+  "Chart_12/org/jfree/chart/plot/MultiplePiePlot.java": {
+    "project": "Chart_12",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_12/org/jfree/chart/plot/MultiplePiePlot.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Chart_12/Chart_12_buggy/MultiplePiePlotTest.java",
+    "file_size_bytes": 7854,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6326,
+      "completion_tokens": 8130,
+      "total_tokens": 14456
+    },
+    "content_char_count": 7854,
+    "reasoning_char_count": 22854,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 45.69,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 14462,
+      "daily_remaining_tokens": 985538
+    },
+    "updated_at": "2026-09-25T01:09:32.902458"
+  }
+}

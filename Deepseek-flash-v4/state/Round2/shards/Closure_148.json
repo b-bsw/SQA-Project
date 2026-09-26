@@ -1,0 +1,56 @@
+{
+  "Closure_148/com/google/javascript/jscomp/PeepholeFoldConstants.java": {
+    "project": "Closure_148",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_148/com/google/javascript/jscomp/PeepholeFoldConstants.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_148/Closure_148_buggy/PeepholeFoldConstantsTest.java",
+    "file_size_bytes": 28558,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 8117,
+      "completion_tokens": 17519,
+      "total_tokens": 25636
+    },
+    "content_char_count": 28558,
+    "reasoning_char_count": 42220,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 130.97,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 979193,
+      "daily_remaining_tokens": 20807
+    },
+    "updated_at": "2026-09-24T17:47:56.221500"
+  },
+  "Closure_148/com/google/javascript/jscomp/SourceMap.java": {
+    "project": "Closure_148",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_148/com/google/javascript/jscomp/SourceMap.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_148/Closure_148_buggy/SourceMapTest.java",
+    "file_size_bytes": 5950,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5449,
+      "completion_tokens": 7607,
+      "total_tokens": 13056
+    },
+    "content_char_count": 5950,
+    "reasoning_char_count": 24143,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 70.35,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 992249,
+      "daily_remaining_tokens": 7751
+    },
+    "updated_at": "2026-09-24T17:49:06.663568"
+  }
+}

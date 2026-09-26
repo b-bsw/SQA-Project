@@ -25,7 +25,9 @@
     "result": "NOT_RUN",
     "fails": null,
     "compile": "PASS",
-    "test_compile": "FAIL"
+    "test_compile": "FAIL",
+    "test_seconds": 1.0,
+    "test_time_source": "log_ant_total"
   },
   "verdict": "NOT_AVAILABLE"
 }

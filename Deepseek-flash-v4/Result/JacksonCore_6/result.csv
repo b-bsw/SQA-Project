@@ -1,2 +1,2 @@
-project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
-JacksonCore,6,24,FAIL,4,FAIL,3,INCONCLUSIVE,84,80,95.24,62,54,87.1
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
+JacksonCore,6,24,FAIL,4,FAIL,3,INCONCLUSIVE,84,80,95.24,62,54,87.1,,,,,

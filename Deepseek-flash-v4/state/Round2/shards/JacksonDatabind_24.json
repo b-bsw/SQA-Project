@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_24/com/fasterxml/jackson/databind/cfg/BaseSettings.java": {
+    "project": "JacksonDatabind_24",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_24/com/fasterxml/jackson/databind/cfg/BaseSettings.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_24/JacksonDatabind_24_buggy/BaseSettingsTest.java",
+    "file_size_bytes": 13624,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4321,
+      "completion_tokens": 17331,
+      "total_tokens": 21652
+    },
+    "content_char_count": 13624,
+    "reasoning_char_count": 64508,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 160.47,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 205761,
+      "daily_remaining_tokens": 794239
+    },
+    "updated_at": "2026-09-25T10:56:05.241639"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Math_38/org/apache/commons/math/optimization/direct/BOBYQAOptimizer.java": {
+    "project": "Math_38",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_38/org/apache/commons/math/optimization/direct/BOBYQAOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_38/Math_38_buggy/BOBYQAOptimizerTest.java",
+    "file_size_bytes": 5121,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 19301,
+      "completion_tokens": 3625,
+      "total_tokens": 22926
+    },
+    "content_char_count": 5121,
+    "reasoning_char_count": 9275,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 34.78,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 752068,
+      "daily_remaining_tokens": 247932
+    },
+    "updated_at": "2026-09-25T11:13:34.926819"
+  }
+}

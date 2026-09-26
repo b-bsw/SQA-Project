@@ -1,0 +1,29 @@
+{
+  "Closure_128/com/google/javascript/jscomp/CodeGenerator.java": {
+    "project": "Closure_128",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_128/com/google/javascript/jscomp/CodeGenerator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_128/Closure_128_buggy/CodeGeneratorTest.java",
+    "file_size_bytes": 15524,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 8993,
+      "completion_tokens": 5740,
+      "total_tokens": 14733
+    },
+    "content_char_count": 15524,
+    "reasoning_char_count": 7327,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 51.32,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 847631,
+      "daily_remaining_tokens": 152369
+    },
+    "updated_at": "2026-09-24T17:37:56.481233"
+  }
+}

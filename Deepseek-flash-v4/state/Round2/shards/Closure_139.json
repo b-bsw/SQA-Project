@@ -1,0 +1,29 @@
+{
+  "Closure_139/com/google/javascript/jscomp/Normalize.java": {
+    "project": "Closure_139",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_139/com/google/javascript/jscomp/Normalize.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_139/Closure_139_buggy/NormalizeTest.java",
+    "file_size_bytes": 7618,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6319,
+      "completion_tokens": 12966,
+      "total_tokens": 19285
+    },
+    "content_char_count": 7618,
+    "reasoning_char_count": 40949,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 121.98,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 910548,
+      "daily_remaining_tokens": 89452
+    },
+    "updated_at": "2026-09-24T17:44:18.040468"
+  }
+}

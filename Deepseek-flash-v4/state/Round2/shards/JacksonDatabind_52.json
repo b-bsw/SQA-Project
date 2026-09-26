@@ -1,0 +1,56 @@
+{
+  "JacksonDatabind_52/com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java": {
+    "project": "JacksonDatabind_52",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_52/com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_52/JacksonDatabind_52_buggy/BeanDeserializerBaseTest.java",
+    "file_size_bytes": 28494,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11701,
+      "completion_tokens": 8991,
+      "total_tokens": 20692
+    },
+    "content_char_count": 28494,
+    "reasoning_char_count": 10622,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 81.26,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 401354,
+      "daily_remaining_tokens": 598646
+    },
+    "updated_at": "2026-09-25T11:08:46.832914"
+  },
+  "JacksonDatabind_52/com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java": {
+    "project": "JacksonDatabind_52",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_52/com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_52/JacksonDatabind_52_buggy/ExternalTypeHandlerTest.java",
+    "file_size_bytes": 16115,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4802,
+      "completion_tokens": 39519,
+      "total_tokens": 44321
+    },
+    "content_char_count": 16115,
+    "reasoning_char_count": 150510,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 189.87,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 475793,
+      "daily_remaining_tokens": 524207
+    },
+    "updated_at": "2026-09-25T11:11:56.794112"
+  }
+}

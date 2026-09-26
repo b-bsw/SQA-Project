@@ -1,0 +1,83 @@
+{
+  "JacksonCore_18/com/fasterxml/jackson/core/base/GeneratorBase.java": {
+    "project": "JacksonCore_18",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonCore_18/com/fasterxml/jackson/core/base/GeneratorBase.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonCore_18/JacksonCore_18_buggy/GeneratorBaseTest.java",
+    "file_size_bytes": 15000,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4882,
+      "completion_tokens": 3363,
+      "total_tokens": 8245
+    },
+    "content_char_count": 15000,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 53.95,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 278250,
+      "daily_remaining_tokens": 721750
+    },
+    "updated_at": "2026-09-26T10:30:22.072013"
+  },
+  "JacksonCore_18/com/fasterxml/jackson/core/json/UTF8JsonGenerator.java": {
+    "project": "JacksonCore_18",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonCore_18/com/fasterxml/jackson/core/json/UTF8JsonGenerator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonCore_18/JacksonCore_18_buggy/UTF8JsonGeneratorTest.java",
+    "file_size_bytes": 15989,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 15270,
+      "completion_tokens": 3747,
+      "total_tokens": 19017
+    },
+    "content_char_count": 15989,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 32.28,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 297267,
+      "daily_remaining_tokens": 702733
+    },
+    "updated_at": "2026-09-26T10:30:54.555933"
+  },
+  "JacksonCore_18/com/fasterxml/jackson/core/json/WriterBasedJsonGenerator.java": {
+    "project": "JacksonCore_18",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonCore_18/com/fasterxml/jackson/core/json/WriterBasedJsonGenerator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonCore_18/JacksonCore_18_buggy/WriterBasedJsonGeneratorTest.java",
+    "file_size_bytes": 8611,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 13271,
+      "completion_tokens": 1889,
+      "total_tokens": 15160
+    },
+    "content_char_count": 8611,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 21.18,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 312427,
+      "daily_remaining_tokens": 687573
+    },
+    "updated_at": "2026-09-26T10:31:16.191264"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Math_58/org/apache/commons/math/optimization/fitting/GaussianFitter.java": {
+    "project": "Math_58",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_58/org/apache/commons/math/optimization/fitting/GaussianFitter.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_58/Math_58_buggy/GaussianFitterTest.java",
+    "file_size_bytes": 4044,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4641,
+      "completion_tokens": 20278,
+      "total_tokens": 24919
+    },
+    "content_char_count": 4044,
+    "reasoning_char_count": 70587,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 110.84,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 790309,
+      "daily_remaining_tokens": 209691
+    },
+    "updated_at": "2026-09-25T11:21:30.179879"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Math_49/org/apache/commons/math/linear/OpenMapRealVector.java": {
+    "project": "Math_49",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_49/org/apache/commons/math/linear/OpenMapRealVector.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_49/Math_49_buggy/OpenMapRealVectorTest.java",
+    "file_size_bytes": 11141,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5968,
+      "completion_tokens": 21769,
+      "total_tokens": 27737
+    },
+    "content_char_count": 11141,
+    "reasoning_char_count": 64957,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 101.38,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 842764,
+      "daily_remaining_tokens": 157236
+    },
+    "updated_at": "2026-09-25T11:16:33.580493"
+  }
+}

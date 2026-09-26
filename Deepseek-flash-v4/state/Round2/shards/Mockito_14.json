@@ -1,0 +1,56 @@
+{
+  "Mockito_14/org/mockito/internal/MockHandler.java": {
+    "project": "Mockito_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_14/org/mockito/internal/MockHandler.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Mockito_14/Mockito_14_buggy/MockHandlerTest.java",
+    "file_size_bytes": 9538,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2752,
+      "completion_tokens": 9704,
+      "total_tokens": 12456
+    },
+    "content_char_count": 9536,
+    "reasoning_char_count": 31925,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 92.73,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 423236,
+      "daily_remaining_tokens": 576764
+    },
+    "updated_at": "2026-09-25T11:10:06.181372"
+  },
+  "Mockito_14/org/mockito/internal/MockitoCore.java": {
+    "project": "Mockito_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_14/org/mockito/internal/MockitoCore.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Mockito_14/Mockito_14_buggy/MockitoCoreTest.java",
+    "file_size_bytes": 6926,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3192,
+      "completion_tokens": 31441,
+      "total_tokens": 34633
+    },
+    "content_char_count": 6926,
+    "reasoning_char_count": 121291,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 156.77,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 529191,
+      "daily_remaining_tokens": 470809
+    },
+    "updated_at": "2026-09-25T11:12:43.042456"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Math_52/org/apache/commons/math/geometry/euclidean/threed/Rotation.java": {
+    "project": "Math_52",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_52/org/apache/commons/math/geometry/euclidean/threed/Rotation.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_52/Math_52_buggy/RotationTest.java",
+    "file_size_bytes": 8032,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 8318,
+      "completion_tokens": 47273,
+      "total_tokens": 55591
+    },
+    "content_char_count": 8032,
+    "reasoning_char_count": 141820,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 274.63,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 804619,
+      "daily_remaining_tokens": 195381
+    },
+    "updated_at": "2026-09-25T11:28:12.124672"
+  }
+}

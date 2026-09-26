@@ -1,0 +1,29 @@
+{
+  "Closure_75/com/google/javascript/jscomp/NodeUtil.java": {
+    "project": "Closure_75",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_75/com/google/javascript/jscomp/NodeUtil.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_75/Closure_75_buggy/NodeUtilTest.java",
+    "file_size_bytes": 80107,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 16300,
+      "completion_tokens": 20415,
+      "total_tokens": 36715
+    },
+    "content_char_count": 80107,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 171.11,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 255346,
+      "daily_remaining_tokens": 744654
+    },
+    "updated_at": "2026-09-26T10:17:11.266311"
+  }
+}

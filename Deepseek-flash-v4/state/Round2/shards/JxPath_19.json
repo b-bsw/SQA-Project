@@ -1,0 +1,56 @@
+{
+  "JxPath_19/org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java": {
+    "project": "JxPath_19",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_19/org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_19/JxPath_19_buggy/DOMNodePointerTest.java",
+    "file_size_bytes": 16135,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6329,
+      "completion_tokens": 3673,
+      "total_tokens": 10002
+    },
+    "content_char_count": 16135,
+    "reasoning_char_count": 0,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 34.04,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 107181,
+      "daily_remaining_tokens": 892819
+    },
+    "updated_at": "2026-09-26T10:11:51.459082"
+  },
+  "JxPath_19/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java": {
+    "project": "JxPath_19",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_19/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_19/JxPath_19_buggy/JDOMNodePointerTest.java",
+    "file_size_bytes": 20593,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6259,
+      "completion_tokens": 4975,
+      "total_tokens": 11234
+    },
+    "content_char_count": 20593,
+    "reasoning_char_count": 0,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 45.05,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 118415,
+      "daily_remaining_tokens": 881585
+    },
+    "updated_at": "2026-09-26T10:12:36.758951"
+  }
+}

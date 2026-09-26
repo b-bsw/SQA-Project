@@ -1,0 +1,137 @@
+{
+  "JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java": {
+    "project": "JxPath_7",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_7/JxPath_7_buggy/CoreOperationGreaterThanTest.java",
+    "file_size_bytes": 4615,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1891,
+      "completion_tokens": 2088,
+      "total_tokens": 3979
+    },
+    "content_char_count": 4615,
+    "reasoning_char_count": 5039,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 23.12,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 52796,
+      "daily_remaining_tokens": 947204
+    },
+    "updated_at": "2026-09-26T10:09:07.124409"
+  },
+  "JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java": {
+    "project": "JxPath_7",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_7/JxPath_7_buggy/CoreOperationGreaterThanOrEqualTest.java",
+    "file_size_bytes": 3404,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1971,
+      "completion_tokens": 14906,
+      "total_tokens": 16877
+    },
+    "content_char_count": 3404,
+    "reasoning_char_count": 65957,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 172.59,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 81736,
+      "daily_remaining_tokens": 918264
+    },
+    "updated_at": "2026-09-26T10:11:59.848688"
+  },
+  "JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java": {
+    "project": "JxPath_7",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_7/JxPath_7_buggy/CoreOperationLessThanTest.java",
+    "file_size_bytes": 4009,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1891,
+      "completion_tokens": 962,
+      "total_tokens": 2853
+    },
+    "content_char_count": 4009,
+    "reasoning_char_count": 0,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 13.56,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 99291,
+      "daily_remaining_tokens": 900709
+    },
+    "updated_at": "2026-09-26T10:12:13.526506"
+  },
+  "JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java": {
+    "project": "JxPath_7",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_7/JxPath_7_buggy/CoreOperationLessThanOrEqualTest.java",
+    "file_size_bytes": 3431,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1891,
+      "completion_tokens": 773,
+      "total_tokens": 2664
+    },
+    "content_char_count": 3431,
+    "reasoning_char_count": 0,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 4.25,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 101955,
+      "daily_remaining_tokens": 898045
+    },
+    "updated_at": "2026-09-26T10:12:17.986978"
+  },
+  "JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java": {
+    "project": "JxPath_7",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_7/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_7/JxPath_7_buggy/CoreOperationRelationalExpressionTest.java",
+    "file_size_bytes": 2824,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1835,
+      "completion_tokens": 591,
+      "total_tokens": 2426
+    },
+    "content_char_count": 2824,
+    "reasoning_char_count": 0,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 4.82,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 104381,
+      "daily_remaining_tokens": 895619
+    },
+    "updated_at": "2026-09-26T10:12:23.141942"
+  }
+}

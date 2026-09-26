@@ -1,0 +1,29 @@
+{
+  "Collections_28/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java": {
+    "project": "Collections_28",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Collections_28/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Collections_28/Collections_28_buggy/AbstractPatriciaTrieTest.java",
+    "file_size_bytes": 12999,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 13031,
+      "completion_tokens": 3300,
+      "total_tokens": 16331
+    },
+    "content_char_count": 12999,
+    "reasoning_char_count": 0,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 31.69,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 182404,
+      "daily_remaining_tokens": 817596
+    },
+    "updated_at": "2026-09-26T10:15:55.790334"
+  }
+}

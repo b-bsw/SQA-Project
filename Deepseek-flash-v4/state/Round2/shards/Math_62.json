@@ -1,0 +1,29 @@
+{
+  "Math_62/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java": {
+    "project": "Math_62",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_62/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_62/Math_62_buggy/MultiStartUnivariateRealOptimizerTest.java",
+    "file_size_bytes": 9952,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3362,
+      "completion_tokens": 25091,
+      "total_tokens": 28453
+    },
+    "content_char_count": 9952,
+    "reasoning_char_count": 94979,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 149.93,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 896950,
+      "daily_remaining_tokens": 103050
+    },
+    "updated_at": "2026-09-25T11:24:20.122171"
+  }
+}

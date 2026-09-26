@@ -1,0 +1,29 @@
+{
+  "Compress_43/org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java": {
+    "project": "Compress_43",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Compress_43/org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Compress_43/Compress_43_buggy/ZipArchiveOutputStreamTest.java",
+    "file_size_bytes": 14931,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10876,
+      "completion_tokens": 3656,
+      "total_tokens": 14532
+    },
+    "content_char_count": 14931,
+    "reasoning_char_count": 0,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 30.64,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 139787,
+      "daily_remaining_tokens": 860213
+    },
+    "updated_at": "2026-09-26T10:27:45.562593"
+  }
+}

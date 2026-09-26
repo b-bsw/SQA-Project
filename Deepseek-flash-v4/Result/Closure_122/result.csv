@@ -1,2 +1,2 @@
-project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
-Closure,122,17,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
+Closure,122,17,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,5.0,4.0,9.0,log_ant_total,log_ant_total

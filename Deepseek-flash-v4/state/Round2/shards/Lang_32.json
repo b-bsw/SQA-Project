@@ -1,0 +1,29 @@
+{
+  "Lang_32/org/apache/commons/lang3/builder/HashCodeBuilder.java": {
+    "project": "Lang_32",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_32/org/apache/commons/lang3/builder/HashCodeBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Lang_32/Lang_32_buggy/HashCodeBuilderTest.java",
+    "file_size_bytes": 11162,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3663,
+      "completion_tokens": 6887,
+      "total_tokens": 10550
+    },
+    "content_char_count": 11162,
+    "reasoning_char_count": 15539,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 73.15,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 927558,
+      "daily_remaining_tokens": 72442
+    },
+    "updated_at": "2026-09-25T07:26:18.192191"
+  }
+}

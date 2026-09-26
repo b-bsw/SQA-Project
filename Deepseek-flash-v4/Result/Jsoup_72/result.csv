@@ -1,2 +1,2 @@
-project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
-Jsoup,72,68,FAIL,10,FAIL,10,INCONCLUSIVE,228,216,94.74,198,159,80.3
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
+Jsoup,72,68,FAIL,10,FAIL,10,INCONCLUSIVE,228,216,94.74,198,159,80.3,,,,,

@@ -1,0 +1,56 @@
+{
+  "Cli_34/org/apache/commons/cli/Option.java": {
+    "project": "Cli_34",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_34/org/apache/commons/cli/Option.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Cli_34/Cli_34_buggy/OptionTest.java",
+    "file_size_bytes": 8783,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5642,
+      "completion_tokens": 21605,
+      "total_tokens": 27247
+    },
+    "content_char_count": 8795,
+    "reasoning_char_count": 79820,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 571.52,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 569770,
+      "daily_remaining_tokens": 430230
+    },
+    "updated_at": "2026-09-24T16:48:14.546864"
+  },
+  "Cli_34/org/apache/commons/cli/OptionBuilder.java": {
+    "project": "Cli_34",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_34/org/apache/commons/cli/OptionBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Cli_34/Cli_34_buggy/OptionBuilderTest.java",
+    "file_size_bytes": 6113,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3721,
+      "completion_tokens": 13534,
+      "total_tokens": 17255
+    },
+    "content_char_count": 6113,
+    "reasoning_char_count": 53414,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 349.11,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 587025,
+      "daily_remaining_tokens": 412975
+    },
+    "updated_at": "2026-09-24T16:54:03.724557"
+  }
+}

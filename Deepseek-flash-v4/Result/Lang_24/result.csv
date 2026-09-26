@@ -1,2 +1,2 @@
-project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
-Lang,24,24,FAIL,3,FAIL,3,INCONCLUSIVE,376,244,64.89,356,161,45.22
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
+Lang,24,24,FAIL,3,FAIL,3,INCONCLUSIVE,376,244,64.89,356,161,45.22,,,,,

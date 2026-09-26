@@ -1,0 +1,29 @@
+{
+  "Closure_108/com/google/javascript/jscomp/ScopedAliases.java": {
+    "project": "Closure_108",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_108/com/google/javascript/jscomp/ScopedAliases.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_108/Closure_108_buggy/ScopedAliasesTest.java",
+    "file_size_bytes": 13271,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6725,
+      "completion_tokens": 13290,
+      "total_tokens": 20015
+    },
+    "content_char_count": 13271,
+    "reasoning_char_count": 39771,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 128.63,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 625073,
+      "daily_remaining_tokens": 374927
+    },
+    "updated_at": "2026-09-24T17:29:42.167156"
+  }
+}

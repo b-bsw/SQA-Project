@@ -1,0 +1,56 @@
+{
+  "Closure_167/com/google/javascript/jscomp/type/SemanticReverseAbstractInterpreter.java": {
+    "project": "Closure_167",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_167/com/google/javascript/jscomp/type/SemanticReverseAbstractInterpreter.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_167/Closure_167_buggy/SemanticReverseAbstractInterpreterTest.java",
+    "file_size_bytes": 24576,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6229,
+      "completion_tokens": 7304,
+      "total_tokens": 13533
+    },
+    "content_char_count": 24576,
+    "reasoning_char_count": 4383,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 56.56,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 894124,
+      "daily_remaining_tokens": 105876
+    },
+    "updated_at": "2026-09-24T18:06:06.669240"
+  },
+  "Closure_167/com/google/javascript/rhino/jstype/JSType.java": {
+    "project": "Closure_167",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_167/com/google/javascript/rhino/jstype/JSType.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_167/Closure_167_buggy/JSTypeTest.java",
+    "file_size_bytes": 29288,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5954,
+      "completion_tokens": 9292,
+      "total_tokens": 15246
+    },
+    "content_char_count": 29288,
+    "reasoning_char_count": 9356,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 75.11,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 909370,
+      "daily_remaining_tokens": 90630
+    },
+    "updated_at": "2026-09-24T18:07:21.850792"
+  }
+}

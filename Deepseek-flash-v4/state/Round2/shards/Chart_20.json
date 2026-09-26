@@ -1,0 +1,25 @@
+{
+  "Chart_20/org/jfree/chart/plot/ValueMarker.java": {
+    "project": "Chart_20",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_20/org/jfree/chart/plot/ValueMarker.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Chart_20/Chart_20_buggy/ValueMarkerTest.java",
+    "file_size_bytes": 3616,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2606,
+      "completion_tokens": 18712,
+      "total_tokens": 21318
+    },
+    "content_char_count": 3629,
+    "reasoning_char_count": 70522,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 475.71,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 81723,
+      "daily_remaining_tokens": 918277
+    },
+    "updated_at": "2026-09-24T14:40:47.660138"
+  }
+}

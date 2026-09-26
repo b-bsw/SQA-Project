@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_45/com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java": {
+    "project": "JacksonDatabind_45",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_45/com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_45/JacksonDatabind_45_buggy/DateTimeSerializerBaseTest.java",
+    "file_size_bytes": 10480,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2732,
+      "completion_tokens": 43560,
+      "total_tokens": 46292
+    },
+    "content_char_count": 10480,
+    "reasoning_char_count": 183878,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 208.37,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 378726,
+      "daily_remaining_tokens": 621274
+    },
+    "updated_at": "2026-09-25T11:07:17.486617"
+  }
+}

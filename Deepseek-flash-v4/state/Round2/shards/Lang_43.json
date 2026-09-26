@@ -1,0 +1,29 @@
+{
+  "Lang_43/org/apache/commons/lang/text/ExtendedMessageFormat.java": {
+    "project": "Lang_43",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_43/org/apache/commons/lang/text/ExtendedMessageFormat.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Lang_43/Lang_43_buggy/ExtendedMessageFormatTest.java",
+    "file_size_bytes": 7689,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5087,
+      "completion_tokens": 1650,
+      "total_tokens": 6737
+    },
+    "content_char_count": 7689,
+    "reasoning_char_count": 0,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 26.91,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 938753,
+      "daily_remaining_tokens": 61247
+    },
+    "updated_at": "2026-09-25T07:32:12.067487"
+  }
+}

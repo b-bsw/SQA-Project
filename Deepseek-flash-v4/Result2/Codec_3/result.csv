@@ -1,2 +1,2 @@
-project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
-Codec,3,185,FAIL,105,FAIL,105,INCONCLUSIVE,453,419,92.49,450,364,80.89
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
+Codec,3,185,FAIL,105,FAIL,105,INCONCLUSIVE,453,419,92.49,450,364,80.89,,,,,

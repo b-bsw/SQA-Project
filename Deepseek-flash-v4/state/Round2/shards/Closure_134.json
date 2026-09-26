@@ -1,0 +1,56 @@
+{
+  "Closure_134/com/google/javascript/jscomp/AmbiguateProperties.java": {
+    "project": "Closure_134",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_134/com/google/javascript/jscomp/AmbiguateProperties.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_134/Closure_134_buggy/AmbiguatePropertiesTest.java",
+    "file_size_bytes": 4196,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5723,
+      "completion_tokens": 12342,
+      "total_tokens": 18065
+    },
+    "content_char_count": 4196,
+    "reasoning_char_count": 44008,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 119.56,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 729873,
+      "daily_remaining_tokens": 270127
+    },
+    "updated_at": "2026-09-24T17:41:11.510850"
+  },
+  "Closure_134/com/google/javascript/jscomp/TypedScopeCreator.java": {
+    "project": "Closure_134",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_134/com/google/javascript/jscomp/TypedScopeCreator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_134/Closure_134_buggy/TypedScopeCreatorTest.java",
+    "file_size_bytes": 2834,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10663,
+      "completion_tokens": 8339,
+      "total_tokens": 19002
+    },
+    "content_char_count": 2834,
+    "reasoning_char_count": 30522,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 90.28,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 748875,
+      "daily_remaining_tokens": 251125
+    },
+    "updated_at": "2026-09-24T17:42:41.859600"
+  }
+}

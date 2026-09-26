@@ -1,0 +1,56 @@
+{
+  "Jsoup_91/org/jsoup/UncheckedIOException.java": {
+    "project": "Jsoup_91",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_91/org/jsoup/UncheckedIOException.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_91/Jsoup_91_buggy/UncheckedIOExceptionTest.java",
+    "file_size_bytes": 846,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1451,
+      "completion_tokens": 674,
+      "total_tokens": 2125
+    },
+    "content_char_count": 846,
+    "reasoning_char_count": 2057,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 8.67,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 436102,
+      "daily_remaining_tokens": 563898
+    },
+    "updated_at": "2026-09-25T11:07:55.210789"
+  },
+  "Jsoup_91/org/jsoup/parser/CharacterReader.java": {
+    "project": "Jsoup_91",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_91/org/jsoup/parser/CharacterReader.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_91/Jsoup_91_buggy/CharacterReaderTest.java",
+    "file_size_bytes": 19073,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4956,
+      "completion_tokens": 5192,
+      "total_tokens": 10148
+    },
+    "content_char_count": 19073,
+    "reasoning_char_count": 3810,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 49.24,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 446250,
+      "daily_remaining_tokens": 553750
+    },
+    "updated_at": "2026-09-25T11:08:44.538836"
+  }
+}

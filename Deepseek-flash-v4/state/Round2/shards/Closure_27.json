@@ -1,0 +1,29 @@
+{
+  "Closure_27/com/google/javascript/rhino/IR.java": {
+    "project": "Closure_27",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_27/com/google/javascript/rhino/IR.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_27/Closure_27_buggy/IRTest.java",
+    "file_size_bytes": 10084,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5721,
+      "completion_tokens": 19107,
+      "total_tokens": 24828
+    },
+    "content_char_count": 10096,
+    "reasoning_char_count": 63522,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 813.0,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 222790,
+      "daily_remaining_tokens": 777210
+    },
+    "updated_at": "2026-09-25T05:06:34.520873"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_60/com/fasterxml/jackson/databind/ser/std/JsonValueSerializer.java": {
+    "project": "JacksonDatabind_60",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_60/com/fasterxml/jackson/databind/ser/std/JsonValueSerializer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_60/JacksonDatabind_60_buggy/JsonValueSerializerTest.java",
+    "file_size_bytes": 10996,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4850,
+      "completion_tokens": 36094,
+      "total_tokens": 40944
+    },
+    "content_char_count": 10996,
+    "reasoning_char_count": 149789,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 174.85,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 618388,
+      "daily_remaining_tokens": 381612
+    },
+    "updated_at": "2026-09-25T11:15:58.028211"
+  }
+}

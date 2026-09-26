@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_41/com/fasterxml/jackson/databind/type/TypeFactory.java": {
+    "project": "JacksonDatabind_41",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_41/com/fasterxml/jackson/databind/type/TypeFactory.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_41/JacksonDatabind_41_buggy/TypeFactoryTest.java",
+    "file_size_bytes": 10445,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7648,
+      "completion_tokens": 2812,
+      "total_tokens": 10460
+    },
+    "content_char_count": 10445,
+    "reasoning_char_count": 2580,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 24.3,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 444663,
+      "daily_remaining_tokens": 555337
+    },
+    "updated_at": "2026-09-25T11:03:40.755852"
+  }
+}

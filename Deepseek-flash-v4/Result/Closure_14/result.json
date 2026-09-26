@@ -12,7 +12,9 @@
     "result": "NOT_RUN",
     "fails": null,
     "compile": "PASS",
-    "test_compile": "FAIL"
+    "test_compile": "FAIL",
+    "test_seconds": 3.0,
+    "test_time_source": "log_ant_total"
   },
   "fixed": {
     "result": "NOT_RUN",

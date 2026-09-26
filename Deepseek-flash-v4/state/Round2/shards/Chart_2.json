@@ -1,0 +1,25 @@
+{
+  "Chart_2/org/jfree/data/general/DatasetUtilities.java": {
+    "project": "Chart_2",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_2/org/jfree/data/general/DatasetUtilities.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Chart_2/Chart_2_buggy/DatasetUtilitiesTest.java",
+    "file_size_bytes": 28391,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 12136,
+      "completion_tokens": 6997,
+      "total_tokens": 19133
+    },
+    "content_char_count": 28391,
+    "reasoning_char_count": 0,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 228.8,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 136112,
+      "daily_remaining_tokens": 863888
+    },
+    "updated_at": "2026-09-24T14:36:40.742162"
+  }
+}

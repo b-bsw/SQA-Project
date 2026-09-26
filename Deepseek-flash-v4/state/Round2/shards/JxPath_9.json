@@ -1,0 +1,83 @@
+{
+  "JxPath_9/org/apache/commons/jxpath/ri/compiler/CoreOperationCompare.java": {
+    "project": "JxPath_9",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_9/org/apache/commons/jxpath/ri/compiler/CoreOperationCompare.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_9/JxPath_9_buggy/CoreOperationCompareTest.java",
+    "file_size_bytes": 10220,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2558,
+      "completion_tokens": 15543,
+      "total_tokens": 18101
+    },
+    "content_char_count": 10218,
+    "reasoning_char_count": 60788,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 233.97,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 50194,
+      "daily_remaining_tokens": 949806
+    },
+    "updated_at": "2026-09-26T10:10:54.081218"
+  },
+  "JxPath_9/org/apache/commons/jxpath/ri/compiler/CoreOperationEqual.java": {
+    "project": "JxPath_9",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_9/org/apache/commons/jxpath/ri/compiler/CoreOperationEqual.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_9/JxPath_9_buggy/CoreOperationEqualTest.java",
+    "file_size_bytes": 6234,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1750,
+      "completion_tokens": 1316,
+      "total_tokens": 3066
+    },
+    "content_char_count": 6234,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 15.99,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 82513,
+      "daily_remaining_tokens": 917487
+    },
+    "updated_at": "2026-09-26T10:11:10.408800"
+  },
+  "JxPath_9/org/apache/commons/jxpath/ri/compiler/CoreOperationNotEqual.java": {
+    "project": "JxPath_9",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_9/org/apache/commons/jxpath/ri/compiler/CoreOperationNotEqual.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_9/JxPath_9_buggy/CoreOperationNotEqualTest.java",
+    "file_size_bytes": 7709,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1751,
+      "completion_tokens": 1704,
+      "total_tokens": 3455
+    },
+    "content_char_count": 7709,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 37.74,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 85968,
+      "daily_remaining_tokens": 914032
+    },
+    "updated_at": "2026-09-26T10:11:48.287837"
+  }
+}

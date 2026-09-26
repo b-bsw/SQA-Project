@@ -1,0 +1,29 @@
+{
+  "Jsoup_73/org/jsoup/helper/W3CDom.java": {
+    "project": "Jsoup_73",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_73/org/jsoup/helper/W3CDom.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_73/Jsoup_73_buggy/W3CDomTest.java",
+    "file_size_bytes": 9282,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2906,
+      "completion_tokens": 2897,
+      "total_tokens": 5803
+    },
+    "content_char_count": 9282,
+    "reasoning_char_count": 3191,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 24.85,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 381876,
+      "daily_remaining_tokens": 618124
+    },
+    "updated_at": "2026-09-25T11:05:53.170852"
+  }
+}

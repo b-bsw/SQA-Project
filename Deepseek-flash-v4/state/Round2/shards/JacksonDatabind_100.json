@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_100/com/fasterxml/jackson/databind/node/TreeTraversingParser.java": {
+    "project": "JacksonDatabind_100",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_100/com/fasterxml/jackson/databind/node/TreeTraversingParser.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_100/JacksonDatabind_100_buggy/TreeTraversingParserTest.java",
+    "file_size_bytes": 19052,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3974,
+      "completion_tokens": 5162,
+      "total_tokens": 9136
+    },
+    "content_char_count": 19052,
+    "reasoning_char_count": 4024,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 64.51,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 9136,
+      "daily_remaining_tokens": 990864
+    },
+    "updated_at": "2026-09-25T10:45:16.869326"
+  }
+}

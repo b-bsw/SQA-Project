@@ -12,13 +12,18 @@
     "result": "NOT_RUN",
     "fails": null,
     "compile": "PASS",
-    "test_compile": "FAIL"
+    "test_compile": "FAIL",
+    "test_seconds": 16.0,
+    "test_time_source": "log_ant_total"
   },
   "fixed": {
     "result": "NOT_RUN",
     "fails": null,
     "compile": "PASS",
-    "test_compile": "FAIL"
+    "test_compile": "FAIL",
+    "test_seconds": 16.0,
+    "test_time_source": "log_ant_total"
   },
-  "verdict": "NOT_AVAILABLE"
+  "verdict": "NOT_AVAILABLE",
+  "test_run_seconds": 32.0
 }

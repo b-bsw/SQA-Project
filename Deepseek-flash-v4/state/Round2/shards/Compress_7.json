@@ -1,0 +1,29 @@
+{
+  "Compress_7/org/apache/commons/compress/archivers/tar/TarUtils.java": {
+    "project": "Compress_7",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Compress_7/org/apache/commons/compress/archivers/tar/TarUtils.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Compress_7/Compress_7_buggy/TarUtilsTest.java",
+    "file_size_bytes": 6058,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3493,
+      "completion_tokens": 1582,
+      "total_tokens": 5075
+    },
+    "content_char_count": 6058,
+    "reasoning_char_count": 0,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 13.76,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 216437,
+      "daily_remaining_tokens": 783563
+    },
+    "updated_at": "2026-09-26T10:28:24.565303"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "Codec_13/org/apache/commons/codec/binary/StringUtils.java": {
+    "project": "Codec_13",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_13/org/apache/commons/codec/binary/StringUtils.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Codec_13/Codec_13_buggy/StringUtilsTest.java",
+    "file_size_bytes": 4473,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5613,
+      "completion_tokens": 1165,
+      "total_tokens": 6778
+    },
+    "content_char_count": 4473,
+    "reasoning_char_count": 0,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 7.64,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 257346,
+      "daily_remaining_tokens": 742654
+    },
+    "updated_at": "2026-09-26T10:21:00.588628"
+  },
+  "Codec_13/org/apache/commons/codec/language/DoubleMetaphone.java": {
+    "project": "Codec_13",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_13/org/apache/commons/codec/language/DoubleMetaphone.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Codec_13/Codec_13_buggy/DoubleMetaphoneTest.java",
+    "file_size_bytes": 21312,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 8247,
+      "completion_tokens": 5802,
+      "total_tokens": 14049
+    },
+    "content_char_count": 21312,
+    "reasoning_char_count": 0,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 52.74,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 271395,
+      "daily_remaining_tokens": 728605
+    },
+    "updated_at": "2026-09-26T10:21:53.841885"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "Chart_11/org/jfree/chart/util/ShapeUtilities.java": {
+    "project": "Chart_11",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_11/org/jfree/chart/util/ShapeUtilities.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Chart_11/Chart_11_buggy/ShapeUtilitiesTest.java",
+    "file_size_bytes": 10566,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6624,
+      "completion_tokens": 26307,
+      "total_tokens": 32931
+    },
+    "content_char_count": 10578,
+    "reasoning_char_count": 85296,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 647.68,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 137308,
+      "daily_remaining_tokens": 862692
+    },
+    "updated_at": "2026-09-24T14:43:39.670289"
+  }
+}

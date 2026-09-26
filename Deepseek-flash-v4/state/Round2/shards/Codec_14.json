@@ -1,0 +1,83 @@
+{
+  "Codec_14/org/apache/commons/codec/language/bm/Lang.java": {
+    "project": "Codec_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_14/org/apache/commons/codec/language/bm/Lang.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Codec_14/Codec_14_buggy/LangTest.java",
+    "file_size_bytes": 2831,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3688,
+      "completion_tokens": 617,
+      "total_tokens": 4305
+    },
+    "content_char_count": 2831,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 4.58,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 383056,
+      "daily_remaining_tokens": 616944
+    },
+    "updated_at": "2026-09-26T10:21:07.442129"
+  },
+  "Codec_14/org/apache/commons/codec/language/bm/PhoneticEngine.java": {
+    "project": "Codec_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_14/org/apache/commons/codec/language/bm/PhoneticEngine.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Codec_14/Codec_14_buggy/PhoneticEngineTest.java",
+    "file_size_bytes": 7172,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6055,
+      "completion_tokens": 1686,
+      "total_tokens": 7741
+    },
+    "content_char_count": 7172,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 11.46,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 390797,
+      "daily_remaining_tokens": 609203
+    },
+    "updated_at": "2026-09-26T10:21:19.035684"
+  },
+  "Codec_14/org/apache/commons/codec/language/bm/Rule.java": {
+    "project": "Codec_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_14/org/apache/commons/codec/language/bm/Rule.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Codec_14/Codec_14_buggy/RuleTest.java",
+    "file_size_bytes": 11287,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5647,
+      "completion_tokens": 2912,
+      "total_tokens": 8559
+    },
+    "content_char_count": 11287,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 20.02,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 399356,
+      "daily_remaining_tokens": 600644
+    },
+    "updated_at": "2026-09-26T10:21:39.187807"
+  }
+}

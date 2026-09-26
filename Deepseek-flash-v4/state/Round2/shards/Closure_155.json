@@ -1,0 +1,83 @@
+{
+  "Closure_155/com/google/javascript/jscomp/InlineVariables.java": {
+    "project": "Closure_155",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_155/com/google/javascript/jscomp/InlineVariables.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_155/Closure_155_buggy/InlineVariablesTest.java",
+    "file_size_bytes": 24615,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7224,
+      "completion_tokens": 18407,
+      "total_tokens": 25631
+    },
+    "content_char_count": 24615,
+    "reasoning_char_count": 52621,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 156.18,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 1020686,
+      "daily_remaining_tokens": -20686
+    },
+    "updated_at": "2026-09-24T17:53:50.382812"
+  },
+  "Closure_155/com/google/javascript/jscomp/ReferenceCollectingCallback.java": {
+    "project": "Closure_155",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_155/com/google/javascript/jscomp/ReferenceCollectingCallback.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_155/Closure_155_buggy/ReferenceCollectingCallbackTest.java",
+    "file_size_bytes": 16628,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5774,
+      "completion_tokens": 23140,
+      "total_tokens": 28914
+    },
+    "content_char_count": 16628,
+    "reasoning_char_count": 77558,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 215.37,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 41323,
+      "daily_remaining_tokens": 958677
+    },
+    "updated_at": "2026-09-25T03:10:11.013175"
+  },
+  "Closure_155/com/google/javascript/jscomp/Scope.java": {
+    "project": "Closure_155",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_155/com/google/javascript/jscomp/Scope.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_155/Closure_155_buggy/ScopeTest.java",
+    "file_size_bytes": 7400,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3670,
+      "completion_tokens": 22239,
+      "total_tokens": 25909
+    },
+    "content_char_count": 7412,
+    "reasoning_char_count": 81336,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 787.78,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 79168,
+      "daily_remaining_tokens": 920832
+    },
+    "updated_at": "2026-09-25T03:24:27.243605"
+  }
+}

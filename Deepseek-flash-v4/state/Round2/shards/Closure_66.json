@@ -1,0 +1,29 @@
+{
+  "Closure_66/com/google/javascript/jscomp/TypeCheck.java": {
+    "project": "Closure_66",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_66/com/google/javascript/jscomp/TypeCheck.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_66/Closure_66_buggy/TypeCheckTest.java",
+    "file_size_bytes": 23833,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 14182,
+      "completion_tokens": 5816,
+      "total_tokens": 19998
+    },
+    "content_char_count": 23833,
+    "reasoning_char_count": 0,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 59.08,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 108218,
+      "daily_remaining_tokens": 891782
+    },
+    "updated_at": "2026-09-26T10:12:46.172171"
+  }
+}

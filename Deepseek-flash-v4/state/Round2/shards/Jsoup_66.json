@@ -1,0 +1,29 @@
+{
+  "Jsoup_66/org/jsoup/nodes/Element.java": {
+    "project": "Jsoup_66",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_66/org/jsoup/nodes/Element.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_66/Jsoup_66_buggy/ElementTest.java",
+    "file_size_bytes": 18574,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6862,
+      "completion_tokens": 5075,
+      "total_tokens": 11937
+    },
+    "content_char_count": 18574,
+    "reasoning_char_count": 3431,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 41.21,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 461998,
+      "daily_remaining_tokens": 538002
+    },
+    "updated_at": "2026-09-25T11:02:29.979584"
+  }
+}

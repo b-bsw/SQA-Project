@@ -1,0 +1,29 @@
+{
+  "Closure_49/com/google/javascript/jscomp/MakeDeclaredNamesUnique.java": {
+    "project": "Closure_49",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_49/com/google/javascript/jscomp/MakeDeclaredNamesUnique.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_49/Closure_49_buggy/MakeDeclaredNamesUniqueTest.java",
+    "file_size_bytes": 3614,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5700,
+      "completion_tokens": 21964,
+      "total_tokens": 27664
+    },
+    "content_char_count": 3626,
+    "reasoning_char_count": 86478,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 1070.76,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 648917,
+      "daily_remaining_tokens": 351083
+    },
+    "updated_at": "2026-09-25T07:16:05.806579"
+  }
+}

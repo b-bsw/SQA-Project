@@ -1,0 +1,29 @@
+{
+  "Lang_3/org/apache/commons/lang3/math/NumberUtils.java": {
+    "project": "Lang_3",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_3/org/apache/commons/lang3/math/NumberUtils.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Lang_3/Lang_3_buggy/NumberUtilsTest.java",
+    "file_size_bytes": 9730,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6156,
+      "completion_tokens": 3061,
+      "total_tokens": 9217
+    },
+    "content_char_count": 9730,
+    "reasoning_char_count": 2281,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 35.18,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 917008,
+      "daily_remaining_tokens": 82992
+    },
+    "updated_at": "2026-09-25T07:25:02.956903"
+  }
+}

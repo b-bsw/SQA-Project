@@ -1,0 +1,29 @@
+{
+  "Compress_23/org/apache/commons/compress/archivers/sevenz/Coders.java": {
+    "project": "Compress_23",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Compress_23/org/apache/commons/compress/archivers/sevenz/Coders.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Compress_23/Compress_23_buggy/CodersTest.java",
+    "file_size_bytes": 7510,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3859,
+      "completion_tokens": 1998,
+      "total_tokens": 5857
+    },
+    "content_char_count": 7510,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 25.08,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 429742,
+      "daily_remaining_tokens": 570258
+    },
+    "updated_at": "2026-09-26T10:23:37.730580"
+  }
+}

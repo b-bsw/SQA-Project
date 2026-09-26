@@ -1,0 +1,29 @@
+{
+  "Jsoup_59/org/jsoup/parser/Token.java": {
+    "project": "Jsoup_59",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_59/org/jsoup/parser/Token.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_59/Jsoup_59_buggy/TokenTest.java",
+    "file_size_bytes": 9928,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3500,
+      "completion_tokens": 27445,
+      "total_tokens": 30945
+    },
+    "content_char_count": 9928,
+    "reasoning_char_count": 107936,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 139.37,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 172454,
+      "daily_remaining_tokens": 827546
+    },
+    "updated_at": "2026-09-25T10:59:58.665680"
+  }
+}

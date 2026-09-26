@@ -1,0 +1,56 @@
+{
+  "JxPath_13/org/apache/commons/jxpath/ri/NamespaceResolver.java": {
+    "project": "JxPath_13",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_13/org/apache/commons/jxpath/ri/NamespaceResolver.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_13/JxPath_13_buggy/NamespaceResolverTest.java",
+    "file_size_bytes": 33243,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2853,
+      "completion_tokens": 5412,
+      "total_tokens": 8265
+    },
+    "content_char_count": 33243,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 49.32,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 161735,
+      "daily_remaining_tokens": 838265
+    },
+    "updated_at": "2026-09-26T10:13:28.800830"
+  },
+  "JxPath_13/org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java": {
+    "project": "JxPath_13",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_13/org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_13/JxPath_13_buggy/DOMNodePointerTest.java",
+    "file_size_bytes": 14080,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6889,
+      "completion_tokens": 3172,
+      "total_tokens": 10061
+    },
+    "content_char_count": 14080,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 28.61,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 188826,
+      "daily_remaining_tokens": 811174
+    },
+    "updated_at": "2026-09-26T10:13:57.736405"
+  }
+}

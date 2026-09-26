@@ -1,2 +1,2 @@
-project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
-JacksonDatabind,39,10,FAIL,2,FAIL,2,INCONCLUSIVE,7,7,100.0,2,2,100.0
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
+JacksonDatabind,39,10,FAIL,2,FAIL,2,INCONCLUSIVE,7,7,100.0,2,2,100.0,,,,,

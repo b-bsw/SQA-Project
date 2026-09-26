@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_93/com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java": {
+    "project": "JacksonDatabind_93",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_93/com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_93/JacksonDatabind_93_buggy/SubTypeValidatorTest.java",
+    "file_size_bytes": 2537,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2566,
+      "completion_tokens": 15816,
+      "total_tokens": 18382
+    },
+    "content_char_count": 2549,
+    "reasoning_char_count": 66891,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 500.09,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 949419,
+      "daily_remaining_tokens": 50581
+    },
+    "updated_at": "2026-09-25T14:37:51.777167"
+  }
+}

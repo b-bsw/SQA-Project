@@ -1,0 +1,29 @@
+{
+  "Lang_39/org/apache/commons/lang3/StringUtils.java": {
+    "project": "Lang_39",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_39/org/apache/commons/lang3/StringUtils.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Lang_39/Lang_39_buggy/StringUtilsTest.java",
+    "file_size_bytes": 7900,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 15402,
+      "completion_tokens": 2677,
+      "total_tokens": 18079
+    },
+    "content_char_count": 7900,
+    "reasoning_char_count": 3252,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 41.74,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 35825,
+      "daily_remaining_tokens": 964175
+    },
+    "updated_at": "2026-09-26T10:06:37.855881"
+  }
+}

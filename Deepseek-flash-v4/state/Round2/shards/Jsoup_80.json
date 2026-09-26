@@ -1,0 +1,29 @@
+{
+  "Jsoup_80/org/jsoup/parser/XmlTreeBuilder.java": {
+    "project": "Jsoup_80",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_80/org/jsoup/parser/XmlTreeBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_80/Jsoup_80_buggy/XmlTreeBuilderTest.java",
+    "file_size_bytes": 8485,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2587,
+      "completion_tokens": 3710,
+      "total_tokens": 6297
+    },
+    "content_char_count": 8485,
+    "reasoning_char_count": 4586,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 34.1,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 582588,
+      "daily_remaining_tokens": 417412
+    },
+    "updated_at": "2026-09-25T11:07:33.704665"
+  }
+}

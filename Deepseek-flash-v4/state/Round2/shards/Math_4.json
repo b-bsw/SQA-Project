@@ -1,0 +1,56 @@
+{
+  "Math_4/org/apache/commons/math3/geometry/euclidean/threed/SubLine.java": {
+    "project": "Math_4",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_4/org/apache/commons/math3/geometry/euclidean/threed/SubLine.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_4/Math_4_buggy/SubLineTest.java",
+    "file_size_bytes": 6305,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2770,
+      "completion_tokens": 2776,
+      "total_tokens": 5546
+    },
+    "content_char_count": 6305,
+    "reasoning_char_count": 3793,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 23.97,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 631535,
+      "daily_remaining_tokens": 368465
+    },
+    "updated_at": "2026-09-25T11:13:58.747145"
+  },
+  "Math_4/org/apache/commons/math3/geometry/euclidean/twod/SubLine.java": {
+    "project": "Math_4",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_4/org/apache/commons/math3/geometry/euclidean/twod/SubLine.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_4/Math_4_buggy/SubLineTest_6a29aee3.java",
+    "file_size_bytes": 5386,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3808,
+      "completion_tokens": 9943,
+      "total_tokens": 13751
+    },
+    "content_char_count": 5377,
+    "reasoning_char_count": 28559,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 90.42,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 645286,
+      "daily_remaining_tokens": 354714
+    },
+    "updated_at": "2026-09-25T11:15:29.277868"
+  }
+}

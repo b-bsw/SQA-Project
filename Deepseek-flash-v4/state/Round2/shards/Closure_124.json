@@ -1,0 +1,29 @@
+{
+  "Closure_124/com/google/javascript/jscomp/ExploitAssigns.java": {
+    "project": "Closure_124",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_124/com/google/javascript/jscomp/ExploitAssigns.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_124/Closure_124_buggy/ExploitAssignsTest.java",
+    "file_size_bytes": 23015,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3250,
+      "completion_tokens": 6907,
+      "total_tokens": 10157
+    },
+    "content_char_count": 23015,
+    "reasoning_char_count": 4067,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 60.75,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 832898,
+      "daily_remaining_tokens": 167102
+    },
+    "updated_at": "2026-09-24T17:37:03.369214"
+  }
+}

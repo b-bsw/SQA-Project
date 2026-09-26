@@ -1,0 +1,29 @@
+{
+  "Closure_129/com/google/javascript/jscomp/PrepareAst.java": {
+    "project": "Closure_129",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_129/com/google/javascript/jscomp/PrepareAst.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_129/Closure_129_buggy/PrepareAstTest.java",
+    "file_size_bytes": 8286,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3019,
+      "completion_tokens": 15465,
+      "total_tokens": 18484
+    },
+    "content_char_count": 8280,
+    "reasoning_char_count": 51932,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 159.32,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 634604,
+      "daily_remaining_tokens": 365396
+    },
+    "updated_at": "2026-09-24T17:39:54.852270"
+  }
+}

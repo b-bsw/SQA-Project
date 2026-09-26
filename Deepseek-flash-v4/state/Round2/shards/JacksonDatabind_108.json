@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_108/com/fasterxml/jackson/databind/ObjectReader.java": {
+    "project": "JacksonDatabind_108",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_108/com/fasterxml/jackson/databind/ObjectReader.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JacksonDatabind_108/JacksonDatabind_108_buggy/ObjectReaderTest.java",
+    "file_size_bytes": 6320,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10400,
+      "completion_tokens": 28497,
+      "total_tokens": 38897
+    },
+    "content_char_count": 6333,
+    "reasoning_char_count": 106114,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 1340.95,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 419521,
+      "daily_remaining_tokens": 580479
+    },
+    "updated_at": "2026-09-25T06:50:51.380244"
+  }
+}

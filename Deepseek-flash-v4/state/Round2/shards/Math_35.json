@@ -1,0 +1,29 @@
+{
+  "Math_35/org/apache/commons/math3/genetics/ElitisticListPopulation.java": {
+    "project": "Math_35",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_35/org/apache/commons/math3/genetics/ElitisticListPopulation.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_35/Math_35_buggy/ElitisticListPopulationTest.java",
+    "file_size_bytes": 6306,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2442,
+      "completion_tokens": 26207,
+      "total_tokens": 28649
+    },
+    "content_char_count": 6306,
+    "reasoning_char_count": 102384,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 129.93,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 613592,
+      "daily_remaining_tokens": 386408
+    },
+    "updated_at": "2026-09-25T11:13:34.560013"
+  }
+}

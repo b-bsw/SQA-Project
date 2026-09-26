@@ -1,0 +1,29 @@
+{
+  "Gson_14/com/google/gson/internal/$Gson$Types.java": {
+    "project": "Gson_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Gson_14/com/google/gson/internal/$Gson$Types.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Gson_14/Gson_14_buggy/$Gson$TypesTest.java",
+    "file_size_bytes": 9742,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6382,
+      "completion_tokens": 27229,
+      "total_tokens": 33611
+    },
+    "content_char_count": 9742,
+    "reasoning_char_count": 106777,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 135.92,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 33611,
+      "daily_remaining_tokens": 966389
+    },
+    "updated_at": "2026-09-25T10:47:36.393239"
+  }
+}

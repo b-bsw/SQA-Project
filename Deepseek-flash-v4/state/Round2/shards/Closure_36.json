@@ -1,0 +1,29 @@
+{
+  "Closure_36/com/google/javascript/jscomp/InlineVariables.java": {
+    "project": "Closure_36",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_36/com/google/javascript/jscomp/InlineVariables.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_36/Closure_36_buggy/InlineVariablesTest.java",
+    "file_size_bytes": 2927,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5226,
+      "completion_tokens": 16544,
+      "total_tokens": 21770
+    },
+    "content_char_count": 2940,
+    "reasoning_char_count": 63474,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 742.57,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 335739,
+      "daily_remaining_tokens": 664261
+    },
+    "updated_at": "2026-09-25T06:08:21.533469"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Time_22/org/joda/time/base/BasePeriod.java": {
+    "project": "Time_22",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_22/org/joda/time/base/BasePeriod.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Time_22/Time_22_buggy/BasePeriodTest.java",
+    "file_size_bytes": 8603,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4125,
+      "completion_tokens": 29626,
+      "total_tokens": 33751
+    },
+    "content_char_count": 8615,
+    "reasoning_char_count": 110843,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 1465.73,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 260556,
+      "daily_remaining_tokens": 739444
+    },
+    "updated_at": "2026-09-25T06:05:06.008535"
+  }
+}

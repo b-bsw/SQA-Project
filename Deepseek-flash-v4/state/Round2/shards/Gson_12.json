@@ -1,0 +1,29 @@
+{
+  "Gson_12/com/google/gson/internal/bind/JsonTreeReader.java": {
+    "project": "Gson_12",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Gson_12/com/google/gson/internal/bind/JsonTreeReader.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Gson_12/Gson_12_buggy/JsonTreeReaderTest.java",
+    "file_size_bytes": 8487,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3868,
+      "completion_tokens": 4656,
+      "total_tokens": 8524
+    },
+    "content_char_count": 8487,
+    "reasoning_char_count": 10929,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 64.96,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 17660,
+      "daily_remaining_tokens": 982340
+    },
+    "updated_at": "2026-09-25T10:46:25.451200"
+  }
+}

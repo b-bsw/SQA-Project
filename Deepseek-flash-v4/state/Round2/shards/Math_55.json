@@ -1,0 +1,29 @@
+{
+  "Math_55/org/apache/commons/math/geometry/Vector3D.java": {
+    "project": "Math_55",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_55/org/apache/commons/math/geometry/Vector3D.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_55/Math_55_buggy/Vector3DTest.java",
+    "file_size_bytes": 6235,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6871,
+      "completion_tokens": 27446,
+      "total_tokens": 34317
+    },
+    "content_char_count": 6235,
+    "reasoning_char_count": 84340,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 144.05,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 832924,
+      "daily_remaining_tokens": 167076
+    },
+    "updated_at": "2026-09-25T11:21:48.479802"
+  }
+}

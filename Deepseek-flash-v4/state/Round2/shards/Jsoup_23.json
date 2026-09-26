@@ -1,0 +1,56 @@
+{
+  "Jsoup_23/org/jsoup/parser/CharacterReader.java": {
+    "project": "Jsoup_23",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_23/org/jsoup/parser/CharacterReader.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_23/Jsoup_23_buggy/CharacterReaderTest.java",
+    "file_size_bytes": 10534,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2456,
+      "completion_tokens": 7740,
+      "total_tokens": 10196
+    },
+    "content_char_count": 10534,
+    "reasoning_char_count": 20215,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 68.32,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 41868,
+      "daily_remaining_tokens": 958132
+    },
+    "updated_at": "2026-09-25T10:47:56.699628"
+  },
+  "Jsoup_23/org/jsoup/parser/Tokeniser.java": {
+    "project": "Jsoup_23",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_23/org/jsoup/parser/Tokeniser.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Jsoup_23/Jsoup_23_buggy/TokeniserTest.java",
+    "file_size_bytes": 5476,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3184,
+      "completion_tokens": 26849,
+      "total_tokens": 30033
+    },
+    "content_char_count": 5488,
+    "reasoning_char_count": 107775,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 1186.59,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 94753,
+      "daily_remaining_tokens": 905247
+    },
+    "updated_at": "2026-09-25T11:07:43.381696"
+  }
+}

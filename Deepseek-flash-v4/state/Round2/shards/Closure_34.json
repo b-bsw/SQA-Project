@@ -1,0 +1,56 @@
+{
+  "Closure_34/com/google/javascript/jscomp/CodeGenerator.java": {
+    "project": "Closure_34",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_34/com/google/javascript/jscomp/CodeGenerator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_34/Closure_34_buggy/CodeGeneratorTest.java",
+    "file_size_bytes": 2310,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 8687,
+      "completion_tokens": 20979,
+      "total_tokens": 29666
+    },
+    "content_char_count": 2323,
+    "reasoning_char_count": 79729,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 951.22,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 408639,
+      "daily_remaining_tokens": 591361
+    },
+    "updated_at": "2026-09-25T05:53:21.104827"
+  },
+  "Closure_34/com/google/javascript/jscomp/CodePrinter.java": {
+    "project": "Closure_34",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_34/com/google/javascript/jscomp/CodePrinter.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_34/Closure_34_buggy/CodePrinterTest.java",
+    "file_size_bytes": 2441,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6509,
+      "completion_tokens": 15187,
+      "total_tokens": 21696
+    },
+    "content_char_count": 2453,
+    "reasoning_char_count": 60348,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 714.05,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 430335,
+      "daily_remaining_tokens": 569665
+    },
+    "updated_at": "2026-09-25T06:05:15.267728"
+  }
+}

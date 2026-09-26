@@ -1,0 +1,29 @@
+{
+  "Closure_113/com/google/javascript/jscomp/ProcessClosurePrimitives.java": {
+    "project": "Closure_113",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_113/com/google/javascript/jscomp/ProcessClosurePrimitives.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_113/Closure_113_buggy/ProcessClosurePrimitivesTest.java",
+    "file_size_bytes": 23282,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 8975,
+      "completion_tokens": 15418,
+      "total_tokens": 24393
+    },
+    "content_char_count": 23294,
+    "reasoning_char_count": 41859,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 397.5,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 582691,
+      "daily_remaining_tokens": 417309
+    },
+    "updated_at": "2026-09-24T17:35:55.939252"
+  }
+}

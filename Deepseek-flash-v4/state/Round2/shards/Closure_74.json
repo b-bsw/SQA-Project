@@ -1,0 +1,29 @@
+{
+  "Closure_74/com/google/javascript/jscomp/PeepholeFoldConstants.java": {
+    "project": "Closure_74",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_74/com/google/javascript/jscomp/PeepholeFoldConstants.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_74/Closure_74_buggy/PeepholeFoldConstantsTest.java",
+    "file_size_bytes": 35452,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11451,
+      "completion_tokens": 8924,
+      "total_tokens": 20375
+    },
+    "content_char_count": 35452,
+    "reasoning_char_count": 0,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 82.0,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 151220,
+      "daily_remaining_tokens": 848780
+    },
+    "updated_at": "2026-09-26T10:15:36.638834"
+  }
+}

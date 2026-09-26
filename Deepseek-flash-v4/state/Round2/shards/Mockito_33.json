@@ -1,0 +1,29 @@
+{
+  "Mockito_33/org/mockito/internal/invocation/InvocationMatcher.java": {
+    "project": "Mockito_33",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_33/org/mockito/internal/invocation/InvocationMatcher.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Mockito_33/Mockito_33_buggy/InvocationMatcherTest.java",
+    "file_size_bytes": 16139,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2399,
+      "completion_tokens": 21050,
+      "total_tokens": 23449
+    },
+    "content_char_count": 16139,
+    "reasoning_char_count": 73725,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 287.79,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 898059,
+      "daily_remaining_tokens": 101941
+    },
+    "updated_at": "2026-09-25T07:33:49.686161"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Collections_17/org/apache/commons/collections/functors/EqualPredicate.java": {
+    "project": "Collections_17",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Collections_17/org/apache/commons/collections/functors/EqualPredicate.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Collections_17/Collections_17_buggy/EqualPredicateTest.java",
+    "file_size_bytes": 6755,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2222,
+      "completion_tokens": 1493,
+      "total_tokens": 3715
+    },
+    "content_char_count": 6755,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 16.67,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 207169,
+      "daily_remaining_tokens": 792831
+    },
+    "updated_at": "2026-09-26T10:15:17.978472"
+  }
+}

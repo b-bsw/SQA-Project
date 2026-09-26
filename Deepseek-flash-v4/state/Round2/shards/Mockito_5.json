@@ -1,0 +1,29 @@
+{
+  "Mockito_5/org/mockito/internal/verification/VerificationOverTimeImpl.java": {
+    "project": "Mockito_5",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_5/org/mockito/internal/verification/VerificationOverTimeImpl.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Mockito_5/Mockito_5_buggy/VerificationOverTimeImplTest.java",
+    "file_size_bytes": 10219,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2628,
+      "completion_tokens": 4226,
+      "total_tokens": 6854
+    },
+    "content_char_count": 10217,
+    "reasoning_char_count": 9915,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 60.64,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 964865,
+      "daily_remaining_tokens": 35135
+    },
+    "updated_at": "2026-09-25T07:19:59.094664"
+  }
+}

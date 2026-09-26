@@ -1,0 +1,29 @@
+{
+  "Codec_10/org/apache/commons/codec/language/Caverphone.java": {
+    "project": "Codec_10",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_10/org/apache/commons/codec/language/Caverphone.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Codec_10/Codec_10_buggy/CaverphoneTest.java",
+    "file_size_bytes": 2434,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3451,
+      "completion_tokens": 21697,
+      "total_tokens": 25148
+    },
+    "content_char_count": 2446,
+    "reasoning_char_count": 68129,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 901.6,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 745987,
+      "daily_remaining_tokens": 254013
+    },
+    "updated_at": "2026-09-25T14:09:55.585152"
+  }
+}

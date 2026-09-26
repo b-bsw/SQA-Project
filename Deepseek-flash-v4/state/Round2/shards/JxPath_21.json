@@ -1,0 +1,29 @@
+{
+  "JxPath_21/org/apache/commons/jxpath/ri/model/beans/PropertyPointer.java": {
+    "project": "JxPath_21",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_21/org/apache/commons/jxpath/ri/model/beans/PropertyPointer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_21/JxPath_21_buggy/PropertyPointerTest.java",
+    "file_size_bytes": 16123,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3003,
+      "completion_tokens": 3438,
+      "total_tokens": 6441
+    },
+    "content_char_count": 16123,
+    "reasoning_char_count": 0,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 42.52,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 92470,
+      "daily_remaining_tokens": 907530
+    },
+    "updated_at": "2026-09-26T10:10:53.149047"
+  }
+}

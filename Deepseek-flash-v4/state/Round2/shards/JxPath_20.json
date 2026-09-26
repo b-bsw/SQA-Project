@@ -1,0 +1,29 @@
+{
+  "JxPath_20/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java": {
+    "project": "JxPath_20",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JxPath_20/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/JxPath_20/JxPath_20_buggy/CoreOperationRelationalExpressionTest.java",
+    "file_size_bytes": 11743,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2483,
+      "completion_tokens": 2226,
+      "total_tokens": 4709
+    },
+    "content_char_count": 11743,
+    "reasoning_char_count": 0,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 20.6,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 97179,
+      "daily_remaining_tokens": 902821
+    },
+    "updated_at": "2026-09-26T10:11:15.640917"
+  }
+}

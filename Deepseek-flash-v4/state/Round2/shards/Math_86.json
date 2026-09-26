@@ -1,0 +1,29 @@
+{
+  "Math_86/org/apache/commons/math/linear/CholeskyDecompositionImpl.java": {
+    "project": "Math_86",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_86/org/apache/commons/math/linear/CholeskyDecompositionImpl.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Math_86/Math_86_buggy/CholeskyDecompositionImplTest.java",
+    "file_size_bytes": 6401,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4395,
+      "completion_tokens": 31076,
+      "total_tokens": 35471
+    },
+    "content_char_count": 6401,
+    "reasoning_char_count": 110915,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 183.12,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 856580,
+      "daily_remaining_tokens": 143420
+    },
+    "updated_at": "2026-09-25T11:37:21.444333"
+  }
+}

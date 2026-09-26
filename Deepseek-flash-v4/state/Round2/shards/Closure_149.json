@@ -1,0 +1,110 @@
+{
+  "Closure_149/com/google/javascript/jscomp/AbstractCommandLineRunner.java": {
+    "project": "Closure_149",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_149/com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_149/Closure_149_buggy/AbstractCommandLineRunnerTest.java",
+    "file_size_bytes": 17189,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 9205,
+      "completion_tokens": 4752,
+      "total_tokens": 13957
+    },
+    "content_char_count": 17189,
+    "reasoning_char_count": 4538,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 40.24,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 944948,
+      "daily_remaining_tokens": 55052
+    },
+    "updated_at": "2026-09-24T17:47:19.493371"
+  },
+  "Closure_149/com/google/javascript/jscomp/CommandLineRunner.java": {
+    "project": "Closure_149",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_149/com/google/javascript/jscomp/CommandLineRunner.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_149/Closure_149_buggy/CommandLineRunnerTest.java",
+    "file_size_bytes": 6753,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7176,
+      "completion_tokens": 11381,
+      "total_tokens": 18557
+    },
+    "content_char_count": 6765,
+    "reasoning_char_count": 38371,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 110.1,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 963505,
+      "daily_remaining_tokens": 36495
+    },
+    "updated_at": "2026-09-24T17:49:09.681996"
+  },
+  "Closure_149/com/google/javascript/jscomp/Compiler.java": {
+    "project": "Closure_149",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_149/com/google/javascript/jscomp/Compiler.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_149/Closure_149_buggy/CompilerTest.java",
+    "file_size_bytes": 13366,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11310,
+      "completion_tokens": 9352,
+      "total_tokens": 20662
+    },
+    "content_char_count": 13366,
+    "reasoning_char_count": 24589,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 78.09,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 984167,
+      "daily_remaining_tokens": 15833
+    },
+    "updated_at": "2026-09-24T17:50:27.870943"
+  },
+  "Closure_149/com/google/javascript/jscomp/CompilerOptions.java": {
+    "project": "Closure_149",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_149/com/google/javascript/jscomp/CompilerOptions.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Closure_149/Closure_149_buggy/CompilerOptionsTest.java",
+    "file_size_bytes": 18779,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5467,
+      "completion_tokens": 5421,
+      "total_tokens": 10888
+    },
+    "content_char_count": 18779,
+    "reasoning_char_count": 6866,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 44.89,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 995055,
+      "daily_remaining_tokens": 4945
+    },
+    "updated_at": "2026-09-24T17:51:12.842793"
+  }
+}

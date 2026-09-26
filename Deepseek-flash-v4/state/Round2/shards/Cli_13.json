@@ -1,0 +1,83 @@
+{
+  "Cli_13/org/apache/commons/cli2/WriteableCommandLine.java": {
+    "project": "Cli_13",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_13/org/apache/commons/cli2/WriteableCommandLine.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Cli_13/Cli_13_buggy/WriteableCommandLineTest.java",
+    "file_size_bytes": 3976,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2403,
+      "completion_tokens": 19450,
+      "total_tokens": 21853
+    },
+    "content_char_count": 3988,
+    "reasoning_char_count": 81145,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 493.89,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 627867,
+      "daily_remaining_tokens": 372133
+    },
+    "updated_at": "2026-09-24T16:46:56.979365"
+  },
+  "Cli_13/org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java": {
+    "project": "Cli_13",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_13/org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Cli_13/Cli_13_buggy/WriteableCommandLineImplTest.java",
+    "file_size_bytes": 11834,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2942,
+      "completion_tokens": 27488,
+      "total_tokens": 30430
+    },
+    "content_char_count": 11847,
+    "reasoning_char_count": 108734,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 649.63,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 460749,
+      "daily_remaining_tokens": 539251
+    },
+    "updated_at": "2026-09-24T15:57:23.727323"
+  },
+  "Cli_13/org/apache/commons/cli2/option/ArgumentImpl.java": {
+    "project": "Cli_13",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_13/org/apache/commons/cli2/option/ArgumentImpl.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Cli_13/Cli_13_buggy/ArgumentImplTest.java",
+    "file_size_bytes": 12619,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3978,
+      "completion_tokens": 31338,
+      "total_tokens": 35316
+    },
+    "content_char_count": 12632,
+    "reasoning_char_count": 123887,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 802.65,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 663183,
+      "daily_remaining_tokens": 336817
+    },
+    "updated_at": "2026-09-24T17:00:19.705835"
+  }
+}

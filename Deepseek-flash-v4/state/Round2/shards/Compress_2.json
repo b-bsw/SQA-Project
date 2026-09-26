@@ -1,0 +1,29 @@
+{
+  "Compress_2/org/apache/commons/compress/archivers/ar/ArArchiveInputStream.java": {
+    "project": "Compress_2",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Compress_2/org/apache/commons/compress/archivers/ar/ArArchiveInputStream.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Compress_2/Compress_2_buggy/ArArchiveInputStreamTest.java",
+    "file_size_bytes": 8434,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2590,
+      "completion_tokens": 2208,
+      "total_tokens": 4798
+    },
+    "content_char_count": 8434,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 20.54,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 188104,
+      "daily_remaining_tokens": 811896
+    },
+    "updated_at": "2026-09-26T10:23:11.459430"
+  }
+}

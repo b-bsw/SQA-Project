@@ -1,0 +1,25 @@
+{
+  "Chart_25/org/jfree/chart/renderer/category/StatisticalBarRenderer.java": {
+    "project": "Chart_25",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_25/org/jfree/chart/renderer/category/StatisticalBarRenderer.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Chart_25/Chart_25_buggy/StatisticalBarRendererTest.java",
+    "file_size_bytes": 3333,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6180,
+      "completion_tokens": 11235,
+      "total_tokens": 17415
+    },
+    "content_char_count": 3333,
+    "reasoning_char_count": 46782,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 295.88,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 188403,
+      "daily_remaining_tokens": 811597
+    },
+    "updated_at": "2026-09-24T14:41:38.545538"
+  }
+}

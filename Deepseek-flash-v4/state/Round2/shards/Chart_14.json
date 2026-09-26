@@ -1,0 +1,48 @@
+{
+  "Chart_14/org/jfree/chart/plot/CategoryPlot.java": {
+    "project": "Chart_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_14/org/jfree/chart/plot/CategoryPlot.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Chart_14/Chart_14_buggy/CategoryPlotTest.java",
+    "file_size_bytes": 8797,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 18285,
+      "completion_tokens": 27559,
+      "total_tokens": 45844
+    },
+    "content_char_count": 8917,
+    "reasoning_char_count": 107814,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 700.68,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 87904,
+      "daily_remaining_tokens": 912096
+    },
+    "updated_at": "2026-09-24T14:44:32.936053"
+  },
+  "Chart_14/org/jfree/chart/plot/XYPlot.java": {
+    "project": "Chart_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_14/org/jfree/chart/plot/XYPlot.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/state/Round2/staging/Chart_14/Chart_14_buggy/XYPlotTest.java",
+    "file_size_bytes": 8729,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 23255,
+      "completion_tokens": 27235,
+      "total_tokens": 50490
+    },
+    "content_char_count": 8742,
+    "reasoning_char_count": 99481,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 689.66,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 225502,
+      "daily_remaining_tokens": 774498
+    },
+    "updated_at": "2026-09-24T14:56:02.704092"
+  }
+}
