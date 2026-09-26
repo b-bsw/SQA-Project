@@ -1,0 +1,25 @@
+{
+  "Chart_4/org/jfree/chart/plot/XYPlot.java": {
+    "project": "Chart_4",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_4/org/jfree/chart/plot/XYPlot.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Chart_4/Chart_4_buggy/XYPlotTest.java",
+    "file_size_bytes": 9764,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 26536,
+      "completion_tokens": 27507,
+      "total_tokens": 54043
+    },
+    "content_char_count": 9776,
+    "reasoning_char_count": 102097,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 704.66,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 265095,
+      "daily_remaining_tokens": 734905
+    },
+    "updated_at": "2026-09-24T14:53:24.887226"
+  }
+}

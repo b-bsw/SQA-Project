@@ -1,0 +1,37 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-JacksonCore_21-xyudlqej/JacksonCore-21b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 31
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsStringCustomDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsBooleanCustomDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetTextCharacters
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetTokenLocation
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetCurrentLocationNull
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetNumberValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetShortValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetTextLength
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetByteValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetTextOffset
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsIntDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetText
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsDoubleDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsStringDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsLongDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsDoubleCustomDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testConstructorNullParser
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetBooleanValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testNextValueWithNullToken
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testHasTextCharacters
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetFloatValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsLongCustomDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetDoubleValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetLongValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetNumberType
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetEmbeddedObject
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetBigIntegerValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetDecimalValue
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetValueAsBooleanDefault
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testNextTokenWithNullToken
+  - com.fasterxml.jackson.core.filter.FilteringParserDelegateTest::testGetIntValue
+[exit 0]

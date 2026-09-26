@@ -1,0 +1,29 @@
+{
+  "Closure_70/com/google/javascript/jscomp/TypedScopeCreator.java": {
+    "project": "Closure_70",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_70/com/google/javascript/jscomp/TypedScopeCreator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_70/Closure_70_buggy/TypedScopeCreatorTest.java",
+    "file_size_bytes": 12217,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 13934,
+      "completion_tokens": 3012,
+      "total_tokens": 16946
+    },
+    "content_char_count": 12217,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 26.08,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 187446,
+      "daily_remaining_tokens": 812554
+    },
+    "updated_at": "2026-09-26T10:13:34.182460"
+  }
+}

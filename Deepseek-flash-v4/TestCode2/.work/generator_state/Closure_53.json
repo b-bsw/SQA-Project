@@ -1,0 +1,29 @@
+{
+  "Closure_53/com/google/javascript/jscomp/InlineObjectLiterals.java": {
+    "project": "Closure_53",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_53/com/google/javascript/jscomp/InlineObjectLiterals.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_53/Closure_53_buggy/InlineObjectLiteralsTest.java",
+    "file_size_bytes": 13094,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5193,
+      "completion_tokens": 3460,
+      "total_tokens": 8653
+    },
+    "content_char_count": 13094,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 152.34,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 832222,
+      "daily_remaining_tokens": 167778
+    },
+    "updated_at": "2026-09-25T07:22:24.263585"
+  }
+}

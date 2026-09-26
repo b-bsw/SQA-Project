@@ -1,0 +1,16 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_173-btre5cj_/Closure-173b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 10
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testSplitCommaWhenLateTrue
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testDoNotFoldStringCallWithNonLiteral
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testFoldStringCallWithLiteral
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testUndefinedNameNotReplacedWhenNotNormalized
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testSplitCommaWhenLateFalse
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testCallToUnknownFunctionUnchanged
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testDoNotFoldStringCallWithMultipleArgs
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testNewArrayUnchangedWithoutAstNormalization
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testReduceReturnVoidZero
+  - com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testReduceReturnUndefined
+[exit 0]

@@ -1,0 +1,14 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_170-y54w6di5/Closure-170b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 8
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessEmptyExternAndRoot
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessEmptyFunction
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessUseInsideLoop
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessGlobalScopeIsIgnored
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessInlineCandidate
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessAssignmentCandidate
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessMultipleCandidates
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testExitScopeIsNoOp
+[exit 0]

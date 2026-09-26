@@ -1,0 +1,56 @@
+{
+  "Math_71/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java": {
+    "project": "Math_71",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_71/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_71/Math_71_buggy/EmbeddedRungeKuttaIntegratorTest.java",
+    "file_size_bytes": 5458,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5174,
+      "completion_tokens": 28915,
+      "total_tokens": 34089
+    },
+    "content_char_count": 5458,
+    "reasoning_char_count": 97886,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 180.18,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 1028342,
+      "daily_remaining_tokens": -28342
+    },
+    "updated_at": "2026-09-25T11:39:43.252705"
+  },
+  "Math_71/org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java": {
+    "project": "Math_71",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_71/org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_71/Math_71_buggy/RungeKuttaIntegratorTest.java",
+    "file_size_bytes": 7337,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3722,
+      "completion_tokens": 48412,
+      "total_tokens": 52134
+    },
+    "content_char_count": 7337,
+    "reasoning_char_count": 192131,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 293.82,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 879848,
+      "daily_remaining_tokens": 120152
+    },
+    "updated_at": "2026-09-25T11:49:31.430487"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "target": "Closure_144",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:51:21.180830+00:00",
+  "generated_files": [
+    "FunctionTypeBuilderTest.java",
+    "TypedScopeCreatorTest.java",
+    "FunctionBuilderTest.java",
+    "FunctionTypeTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_144_buggy"
+}

@@ -1,0 +1,4039 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-24T18:02:11.310609+00:00",
+  "targets": [
+    {
+      "target": "Chart_1",
+      "sources": [
+        "org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java"
+      ]
+    },
+    {
+      "target": "Chart_11",
+      "sources": [
+        "org/jfree/chart/util/ShapeUtilities.java"
+      ]
+    },
+    {
+      "target": "Chart_12",
+      "sources": [
+        "org/jfree/chart/plot/MultiplePiePlot.java"
+      ]
+    },
+    {
+      "target": "Chart_13",
+      "sources": [
+        "org/jfree/chart/block/BorderArrangement.java"
+      ]
+    },
+    {
+      "target": "Chart_14",
+      "sources": [
+        "org/jfree/chart/plot/CategoryPlot.java",
+        "org/jfree/chart/plot/XYPlot.java"
+      ]
+    },
+    {
+      "target": "Chart_16",
+      "sources": [
+        "org/jfree/data/category/DefaultIntervalCategoryDataset.java"
+      ]
+    },
+    {
+      "target": "Chart_17",
+      "sources": [
+        "org/jfree/data/time/TimeSeries.java"
+      ]
+    },
+    {
+      "target": "Chart_19",
+      "sources": [
+        "org/jfree/chart/plot/CategoryPlot.java"
+      ]
+    },
+    {
+      "target": "Chart_2",
+      "sources": [
+        "org/jfree/data/general/DatasetUtilities.java"
+      ]
+    },
+    {
+      "target": "Chart_20",
+      "sources": [
+        "org/jfree/chart/plot/ValueMarker.java"
+      ]
+    },
+    {
+      "target": "Chart_23",
+      "sources": [
+        "org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java"
+      ]
+    },
+    {
+      "target": "Chart_25",
+      "sources": [
+        "org/jfree/chart/renderer/category/StatisticalBarRenderer.java"
+      ]
+    },
+    {
+      "target": "Chart_26",
+      "sources": [
+        "org/jfree/chart/axis/Axis.java"
+      ]
+    },
+    {
+      "target": "Chart_3",
+      "sources": [
+        "org/jfree/data/time/TimeSeries.java"
+      ]
+    },
+    {
+      "target": "Chart_4",
+      "sources": [
+        "org/jfree/chart/plot/XYPlot.java"
+      ]
+    },
+    {
+      "target": "Chart_5",
+      "sources": [
+        "org/jfree/data/xy/XYSeries.java"
+      ]
+    },
+    {
+      "target": "Chart_6",
+      "sources": [
+        "org/jfree/chart/util/ShapeList.java"
+      ]
+    },
+    {
+      "target": "Chart_7",
+      "sources": [
+        "org/jfree/data/time/TimePeriodValues.java"
+      ]
+    },
+    {
+      "target": "Chart_9",
+      "sources": [
+        "org/jfree/data/time/TimeSeries.java"
+      ]
+    },
+    {
+      "target": "Cli_1",
+      "sources": [
+        "org/apache/commons/cli/CommandLine.java"
+      ]
+    },
+    {
+      "target": "Cli_10",
+      "sources": [
+        "org/apache/commons/cli/Parser.java"
+      ]
+    },
+    {
+      "target": "Cli_11",
+      "sources": [
+        "org/apache/commons/cli/HelpFormatter.java"
+      ]
+    },
+    {
+      "target": "Cli_13",
+      "sources": [
+        "org/apache/commons/cli2/WriteableCommandLine.java",
+        "org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java",
+        "org/apache/commons/cli2/option/ArgumentImpl.java"
+      ]
+    },
+    {
+      "target": "Cli_14",
+      "sources": [
+        "org/apache/commons/cli2/option/GroupImpl.java"
+      ]
+    },
+    {
+      "target": "Cli_15",
+      "sources": [
+        "org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java"
+      ]
+    },
+    {
+      "target": "Cli_16",
+      "sources": [
+        "org/apache/commons/cli2/Option.java",
+        "org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java",
+        "org/apache/commons/cli2/option/GroupImpl.java",
+        "org/apache/commons/cli2/option/OptionImpl.java"
+      ]
+    },
+    {
+      "target": "Cli_17",
+      "sources": [
+        "org/apache/commons/cli/PosixParser.java"
+      ]
+    },
+    {
+      "target": "Cli_20",
+      "sources": [
+        "org/apache/commons/cli/PosixParser.java"
+      ]
+    },
+    {
+      "target": "Cli_21",
+      "sources": [
+        "org/apache/commons/cli2/WriteableCommandLine.java",
+        "org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java",
+        "org/apache/commons/cli2/option/GroupImpl.java"
+      ]
+    },
+    {
+      "target": "Cli_23",
+      "sources": [
+        "org/apache/commons/cli/HelpFormatter.java"
+      ]
+    },
+    {
+      "target": "Cli_25",
+      "sources": [
+        "org/apache/commons/cli/HelpFormatter.java"
+      ]
+    },
+    {
+      "target": "Cli_26",
+      "sources": [
+        "org/apache/commons/cli/OptionBuilder.java"
+      ]
+    },
+    {
+      "target": "Cli_28",
+      "sources": [
+        "org/apache/commons/cli/Parser.java"
+      ]
+    },
+    {
+      "target": "Cli_30",
+      "sources": [
+        "org/apache/commons/cli/DefaultParser.java",
+        "org/apache/commons/cli/Parser.java"
+      ]
+    },
+    {
+      "target": "Cli_31",
+      "sources": [
+        "org/apache/commons/cli/HelpFormatter.java",
+        "org/apache/commons/cli/Option.java",
+        "org/apache/commons/cli/OptionBuilder.java"
+      ]
+    },
+    {
+      "target": "Cli_32",
+      "sources": [
+        "org/apache/commons/cli/HelpFormatter.java"
+      ]
+    },
+    {
+      "target": "Cli_34",
+      "sources": [
+        "org/apache/commons/cli/Option.java",
+        "org/apache/commons/cli/OptionBuilder.java"
+      ]
+    },
+    {
+      "target": "Cli_36",
+      "sources": [
+        "org/apache/commons/cli/OptionGroup.java",
+        "org/apache/commons/cli/Options.java"
+      ]
+    },
+    {
+      "target": "Cli_37",
+      "sources": [
+        "org/apache/commons/cli/DefaultParser.java"
+      ]
+    },
+    {
+      "target": "Cli_38",
+      "sources": [
+        "org/apache/commons/cli/DefaultParser.java"
+      ]
+    },
+    {
+      "target": "Cli_40",
+      "sources": [
+        "org/apache/commons/cli/TypeHandler.java"
+      ]
+    },
+    {
+      "target": "Cli_7",
+      "sources": [
+        "org/apache/commons/cli2/builder/PatternBuilder.java"
+      ]
+    },
+    {
+      "target": "Cli_9",
+      "sources": [
+        "org/apache/commons/cli/Parser.java"
+      ]
+    },
+    {
+      "target": "Closure_1",
+      "sources": [
+        "com/google/javascript/jscomp/RemoveUnusedVars.java"
+      ]
+    },
+    {
+      "target": "Closure_10",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java"
+      ]
+    },
+    {
+      "target": "Closure_100",
+      "sources": [
+        "com/google/javascript/jscomp/CheckGlobalThis.java"
+      ]
+    },
+    {
+      "target": "Closure_101",
+      "sources": [
+        "com/google/javascript/jscomp/CommandLineRunner.java"
+      ]
+    },
+    {
+      "target": "Closure_102",
+      "sources": [
+        "com/google/javascript/jscomp/Normalize.java"
+      ]
+    },
+    {
+      "target": "Closure_103",
+      "sources": [
+        "com/google/javascript/jscomp/ControlFlowAnalysis.java",
+        "com/google/javascript/jscomp/DisambiguateProperties.java"
+      ]
+    },
+    {
+      "target": "Closure_104",
+      "sources": [
+        "com/google/javascript/rhino/jstype/UnionType.java"
+      ]
+    },
+    {
+      "target": "Closure_105",
+      "sources": [
+        "com/google/javascript/jscomp/FoldConstants.java"
+      ]
+    },
+    {
+      "target": "Closure_106",
+      "sources": [
+        "com/google/javascript/jscomp/GlobalNamespace.java",
+        "com/google/javascript/rhino/JSDocInfoBuilder.java"
+      ]
+    },
+    {
+      "target": "Closure_107",
+      "sources": [
+        "com/google/javascript/jscomp/CommandLineRunner.java"
+      ]
+    },
+    {
+      "target": "Closure_108",
+      "sources": [
+        "com/google/javascript/jscomp/ScopedAliases.java"
+      ]
+    },
+    {
+      "target": "Closure_109",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/JsDocInfoParser.java"
+      ]
+    },
+    {
+      "target": "Closure_11",
+      "sources": [
+        "com/google/javascript/jscomp/TypeCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_110",
+      "sources": [
+        "com/google/javascript/jscomp/ScopedAliases.java",
+        "com/google/javascript/rhino/Node.java"
+      ]
+    },
+    {
+      "target": "Closure_111",
+      "sources": [
+        "com/google/javascript/jscomp/type/ClosureReverseAbstractInterpreter.java"
+      ]
+    },
+    {
+      "target": "Closure_112",
+      "sources": [
+        "com/google/javascript/jscomp/TypeInference.java"
+      ]
+    },
+    {
+      "target": "Closure_113",
+      "sources": [
+        "com/google/javascript/jscomp/ProcessClosurePrimitives.java"
+      ]
+    },
+    {
+      "target": "Closure_114",
+      "sources": [
+        "com/google/javascript/jscomp/NameAnalyzer.java"
+      ]
+    },
+    {
+      "target": "Closure_115",
+      "sources": [
+        "com/google/javascript/jscomp/FunctionInjector.java"
+      ]
+    },
+    {
+      "target": "Closure_116",
+      "sources": [
+        "com/google/javascript/jscomp/FunctionInjector.java"
+      ]
+    },
+    {
+      "target": "Closure_117",
+      "sources": [
+        "com/google/javascript/jscomp/TypeValidator.java"
+      ]
+    },
+    {
+      "target": "Closure_118",
+      "sources": [
+        "com/google/javascript/jscomp/DisambiguateProperties.java"
+      ]
+    },
+    {
+      "target": "Closure_119",
+      "sources": [
+        "com/google/javascript/jscomp/GlobalNamespace.java"
+      ]
+    },
+    {
+      "target": "Closure_12",
+      "sources": [
+        "com/google/javascript/jscomp/MaybeReachingVariableUse.java"
+      ]
+    },
+    {
+      "target": "Closure_120",
+      "sources": [
+        "com/google/javascript/jscomp/ReferenceCollectingCallback.java"
+      ]
+    },
+    {
+      "target": "Closure_121",
+      "sources": [
+        "com/google/javascript/jscomp/InlineVariables.java"
+      ]
+    },
+    {
+      "target": "Closure_122",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/IRFactory.java"
+      ]
+    },
+    {
+      "target": "Closure_123",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java"
+      ]
+    },
+    {
+      "target": "Closure_124",
+      "sources": [
+        "com/google/javascript/jscomp/ExploitAssigns.java"
+      ]
+    },
+    {
+      "target": "Closure_125",
+      "sources": [
+        "com/google/javascript/jscomp/TypeCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_126",
+      "sources": [
+        "com/google/javascript/jscomp/MinimizeExitPoints.java"
+      ]
+    },
+    {
+      "target": "Closure_127",
+      "sources": [
+        "com/google/javascript/jscomp/UnreachableCodeElimination.java"
+      ]
+    },
+    {
+      "target": "Closure_128",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java"
+      ]
+    },
+    {
+      "target": "Closure_129",
+      "sources": [
+        "com/google/javascript/jscomp/PrepareAst.java"
+      ]
+    },
+    {
+      "target": "Closure_13",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeOptimizationsPass.java"
+      ]
+    },
+    {
+      "target": "Closure_130",
+      "sources": [
+        "com/google/javascript/jscomp/CollapseProperties.java"
+      ]
+    },
+    {
+      "target": "Closure_132",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java"
+      ]
+    },
+    {
+      "target": "Closure_133",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/JsDocInfoParser.java"
+      ]
+    },
+    {
+      "target": "Closure_134",
+      "sources": [
+        "com/google/javascript/jscomp/AmbiguateProperties.java",
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_135",
+      "sources": [
+        "com/google/javascript/jscomp/DevirtualizePrototypeMethods.java",
+        "com/google/javascript/rhino/jstype/FunctionType.java"
+      ]
+    },
+    {
+      "target": "Closure_136",
+      "sources": [
+        "com/google/javascript/jscomp/MethodCompilerPass.java",
+        "com/google/javascript/jscomp/RenameVars.java"
+      ]
+    },
+    {
+      "target": "Closure_137",
+      "sources": [
+        "com/google/javascript/jscomp/MakeDeclaredNamesUnique.java",
+        "com/google/javascript/jscomp/NodeUtil.java",
+        "com/google/javascript/jscomp/Normalize.java"
+      ]
+    },
+    {
+      "target": "Closure_138",
+      "sources": [
+        "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+        "com/google/javascript/jscomp/TypeInference.java"
+      ]
+    },
+    {
+      "target": "Closure_139",
+      "sources": [
+        "com/google/javascript/jscomp/Normalize.java"
+      ]
+    },
+    {
+      "target": "Closure_14",
+      "sources": [
+        "com/google/javascript/jscomp/ControlFlowAnalysis.java"
+      ]
+    },
+    {
+      "target": "Closure_140",
+      "sources": [
+        "com/google/javascript/jscomp/Compiler.java"
+      ]
+    },
+    {
+      "target": "Closure_141",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java",
+        "com/google/javascript/jscomp/PureFunctionIdentifier.java"
+      ]
+    },
+    {
+      "target": "Closure_142",
+      "sources": [
+        "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "com/google/javascript/jscomp/parsing/JsDocInfoParser.java"
+      ]
+    },
+    {
+      "target": "Closure_143",
+      "sources": [
+        "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+        "com/google/javascript/jscomp/RemoveConstantExpressions.java"
+      ]
+    },
+    {
+      "target": "Closure_144",
+      "sources": [
+        "com/google/javascript/jscomp/FunctionTypeBuilder.java",
+        "com/google/javascript/jscomp/TypedScopeCreator.java",
+        "com/google/javascript/rhino/jstype/FunctionBuilder.java",
+        "com/google/javascript/rhino/jstype/FunctionType.java"
+      ]
+    },
+    {
+      "target": "Closure_145",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java"
+      ]
+    },
+    {
+      "target": "Closure_146",
+      "sources": [
+        "com/google/javascript/rhino/jstype/JSType.java"
+      ]
+    },
+    {
+      "target": "Closure_147",
+      "sources": [
+        "com/google/javascript/jscomp/CheckGlobalThis.java",
+        "com/google/javascript/jscomp/RuntimeTypeCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_148",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeFoldConstants.java",
+        "com/google/javascript/jscomp/SourceMap.java"
+      ]
+    },
+    {
+      "target": "Closure_149",
+      "sources": [
+        "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+        "com/google/javascript/jscomp/CommandLineRunner.java",
+        "com/google/javascript/jscomp/Compiler.java",
+        "com/google/javascript/jscomp/CompilerOptions.java"
+      ]
+    },
+    {
+      "target": "Closure_15",
+      "sources": [
+        "com/google/javascript/jscomp/FlowSensitiveInlineVariables.java"
+      ]
+    },
+    {
+      "target": "Closure_150",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_151",
+      "sources": [
+        "com/google/javascript/jscomp/CommandLineRunner.java"
+      ]
+    },
+    {
+      "target": "Closure_152",
+      "sources": [
+        "com/google/javascript/rhino/jstype/FunctionType.java"
+      ]
+    },
+    {
+      "target": "Closure_153",
+      "sources": [
+        "com/google/javascript/jscomp/Normalize.java",
+        "com/google/javascript/jscomp/SyntacticScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_154",
+      "sources": [
+        "com/google/javascript/jscomp/TypeCheck.java",
+        "com/google/javascript/jscomp/TypeValidator.java"
+      ]
+    },
+    {
+      "target": "Closure_155",
+      "sources": [
+        "com/google/javascript/jscomp/InlineVariables.java",
+        "com/google/javascript/jscomp/ReferenceCollectingCallback.java",
+        "com/google/javascript/jscomp/Scope.java"
+      ]
+    },
+    {
+      "target": "Closure_156",
+      "sources": [
+        "com/google/javascript/jscomp/CollapseProperties.java"
+      ]
+    },
+    {
+      "target": "Closure_157",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java",
+        "com/google/javascript/jscomp/RenamePrototypes.java",
+        "com/google/javascript/jscomp/parsing/IRFactory.java"
+      ]
+    },
+    {
+      "target": "Closure_158",
+      "sources": [
+        "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+        "com/google/javascript/jscomp/CommandLineRunner.java",
+        "com/google/javascript/jscomp/DiagnosticGroups.java"
+      ]
+    },
+    {
+      "target": "Closure_159",
+      "sources": [
+        "com/google/javascript/jscomp/InlineFunctions.java"
+      ]
+    },
+    {
+      "target": "Closure_16",
+      "sources": [
+        "com/google/javascript/jscomp/ScopedAliases.java"
+      ]
+    },
+    {
+      "target": "Closure_160",
+      "sources": [
+        "com/google/javascript/jscomp/Compiler.java"
+      ]
+    },
+    {
+      "target": "Closure_162",
+      "sources": [
+        "com/google/javascript/jscomp/Scope.java",
+        "com/google/javascript/jscomp/ScopedAliases.java"
+      ]
+    },
+    {
+      "target": "Closure_163",
+      "sources": [
+        "com/google/javascript/jscomp/AnalyzePrototypeProperties.java",
+        "com/google/javascript/jscomp/CrossModuleMethodMotion.java"
+      ]
+    },
+    {
+      "target": "Closure_164",
+      "sources": [
+        "com/google/javascript/rhino/jstype/ArrowType.java"
+      ]
+    },
+    {
+      "target": "Closure_165",
+      "sources": [
+        "com/google/javascript/rhino/jstype/JSTypeRegistry.java",
+        "com/google/javascript/rhino/jstype/ObjectType.java",
+        "com/google/javascript/rhino/jstype/RecordType.java",
+        "com/google/javascript/rhino/jstype/RecordTypeBuilder.java"
+      ]
+    },
+    {
+      "target": "Closure_166",
+      "sources": [
+        "com/google/javascript/rhino/jstype/PrototypeObjectType.java"
+      ]
+    },
+    {
+      "target": "Closure_167",
+      "sources": [
+        "com/google/javascript/jscomp/type/SemanticReverseAbstractInterpreter.java",
+        "com/google/javascript/rhino/jstype/JSType.java"
+      ]
+    },
+    {
+      "target": "Closure_168",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_169",
+      "sources": [
+        "com/google/javascript/rhino/jstype/ArrowType.java",
+        "com/google/javascript/rhino/jstype/JSType.java",
+        "com/google/javascript/rhino/jstype/RecordType.java",
+        "com/google/javascript/rhino/jstype/UnionType.java"
+      ]
+    },
+    {
+      "target": "Closure_17",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_170",
+      "sources": [
+        "com/google/javascript/jscomp/FlowSensitiveInlineVariables.java"
+      ]
+    },
+    {
+      "target": "Closure_171",
+      "sources": [
+        "com/google/javascript/jscomp/TypeInference.java",
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_173",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java",
+        "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java"
+      ]
+    },
+    {
+      "target": "Closure_174",
+      "sources": [
+        "com/google/javascript/jscomp/JsAst.java",
+        "com/google/javascript/jscomp/NodeUtil.java",
+        "com/google/javascript/jscomp/ScopedAliases.java"
+      ]
+    },
+    {
+      "target": "Closure_18",
+      "sources": [
+        "com/google/javascript/jscomp/Compiler.java"
+      ]
+    },
+    {
+      "target": "Closure_19",
+      "sources": [
+        "com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java"
+      ]
+    },
+    {
+      "target": "Closure_2",
+      "sources": [
+        "com/google/javascript/jscomp/TypeCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_21",
+      "sources": [
+        "com/google/javascript/jscomp/CheckSideEffects.java"
+      ]
+    },
+    {
+      "target": "Closure_22",
+      "sources": [
+        "com/google/javascript/jscomp/CheckSideEffects.java"
+      ]
+    },
+    {
+      "target": "Closure_23",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeFoldConstants.java"
+      ]
+    },
+    {
+      "target": "Closure_24",
+      "sources": [
+        "com/google/javascript/jscomp/ScopedAliases.java"
+      ]
+    },
+    {
+      "target": "Closure_25",
+      "sources": [
+        "com/google/javascript/jscomp/TypeInference.java"
+      ]
+    },
+    {
+      "target": "Closure_26",
+      "sources": [
+        "com/google/javascript/jscomp/ProcessCommonJSModules.java"
+      ]
+    },
+    {
+      "target": "Closure_27",
+      "sources": [
+        "com/google/javascript/rhino/IR.java"
+      ]
+    },
+    {
+      "target": "Closure_28",
+      "sources": [
+        "com/google/javascript/jscomp/InlineCostEstimator.java"
+      ]
+    },
+    {
+      "target": "Closure_29",
+      "sources": [
+        "com/google/javascript/jscomp/InlineObjectLiterals.java"
+      ]
+    },
+    {
+      "target": "Closure_3",
+      "sources": [
+        "com/google/javascript/jscomp/FlowSensitiveInlineVariables.java"
+      ]
+    },
+    {
+      "target": "Closure_30",
+      "sources": [
+        "com/google/javascript/jscomp/FlowSensitiveInlineVariables.java",
+        "com/google/javascript/jscomp/MustBeReachingVariableDef.java"
+      ]
+    },
+    {
+      "target": "Closure_31",
+      "sources": [
+        "com/google/javascript/jscomp/Compiler.java"
+      ]
+    },
+    {
+      "target": "Closure_32",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/JsDocInfoParser.java"
+      ]
+    },
+    {
+      "target": "Closure_33",
+      "sources": [
+        "com/google/javascript/rhino/jstype/PrototypeObjectType.java"
+      ]
+    },
+    {
+      "target": "Closure_34",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java",
+        "com/google/javascript/jscomp/CodePrinter.java"
+      ]
+    },
+    {
+      "target": "Closure_35",
+      "sources": [
+        "com/google/javascript/jscomp/TypeInference.java"
+      ]
+    },
+    {
+      "target": "Closure_36",
+      "sources": [
+        "com/google/javascript/jscomp/InlineVariables.java"
+      ]
+    },
+    {
+      "target": "Closure_37",
+      "sources": [
+        "com/google/javascript/jscomp/NodeTraversal.java",
+        "com/google/javascript/jscomp/parsing/IRFactory.java"
+      ]
+    },
+    {
+      "target": "Closure_39",
+      "sources": [
+        "com/google/javascript/rhino/jstype/PrototypeObjectType.java"
+      ]
+    },
+    {
+      "target": "Closure_4",
+      "sources": [
+        "com/google/javascript/rhino/jstype/NamedType.java"
+      ]
+    },
+    {
+      "target": "Closure_40",
+      "sources": [
+        "com/google/javascript/jscomp/NameAnalyzer.java"
+      ]
+    },
+    {
+      "target": "Closure_41",
+      "sources": [
+        "com/google/javascript/jscomp/FunctionTypeBuilder.java"
+      ]
+    },
+    {
+      "target": "Closure_42",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/IRFactory.java"
+      ]
+    },
+    {
+      "target": "Closure_43",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_45",
+      "sources": [
+        "com/google/javascript/jscomp/RemoveUnusedVars.java"
+      ]
+    },
+    {
+      "target": "Closure_46",
+      "sources": [
+        "com/google/javascript/rhino/jstype/RecordType.java"
+      ]
+    },
+    {
+      "target": "Closure_47",
+      "sources": [
+        "com/google/debugging/sourcemap/SourceMapConsumerV3.java",
+        "com/google/javascript/jscomp/SourceMap.java"
+      ]
+    },
+    {
+      "target": "Closure_48",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_49",
+      "sources": [
+        "com/google/javascript/jscomp/MakeDeclaredNamesUnique.java"
+      ]
+    },
+    {
+      "target": "Closure_5",
+      "sources": [
+        "com/google/javascript/jscomp/InlineObjectLiterals.java"
+      ]
+    },
+    {
+      "target": "Closure_51",
+      "sources": [
+        "com/google/javascript/jscomp/CodeConsumer.java"
+      ]
+    },
+    {
+      "target": "Closure_52",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java"
+      ]
+    },
+    {
+      "target": "Closure_53",
+      "sources": [
+        "com/google/javascript/jscomp/InlineObjectLiterals.java"
+      ]
+    },
+    {
+      "target": "Closure_54",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java",
+        "com/google/javascript/rhino/jstype/FunctionType.java"
+      ]
+    },
+    {
+      "target": "Closure_55",
+      "sources": [
+        "com/google/javascript/jscomp/FunctionRewriter.java"
+      ]
+    },
+    {
+      "target": "Closure_56",
+      "sources": [
+        "com/google/javascript/jscomp/SourceFile.java"
+      ]
+    },
+    {
+      "target": "Closure_57",
+      "sources": [
+        "com/google/javascript/jscomp/ClosureCodingConvention.java"
+      ]
+    },
+    {
+      "target": "Closure_58",
+      "sources": [
+        "com/google/javascript/jscomp/LiveVariablesAnalysis.java"
+      ]
+    },
+    {
+      "target": "Closure_59",
+      "sources": [
+        "com/google/javascript/jscomp/Compiler.java"
+      ]
+    },
+    {
+      "target": "Closure_6",
+      "sources": [
+        "com/google/javascript/jscomp/TypeValidator.java"
+      ]
+    },
+    {
+      "target": "Closure_60",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java"
+      ]
+    },
+    {
+      "target": "Closure_61",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java"
+      ]
+    },
+    {
+      "target": "Closure_62",
+      "sources": [
+        "com/google/javascript/jscomp/LightweightMessageFormatter.java"
+      ]
+    },
+    {
+      "target": "Closure_64",
+      "sources": [
+        "com/google/javascript/jscomp/Compiler.java"
+      ]
+    },
+    {
+      "target": "Closure_65",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java"
+      ]
+    },
+    {
+      "target": "Closure_66",
+      "sources": [
+        "com/google/javascript/jscomp/TypeCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_67",
+      "sources": [
+        "com/google/javascript/jscomp/AnalyzePrototypeProperties.java"
+      ]
+    },
+    {
+      "target": "Closure_68",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/JsDocInfoParser.java"
+      ]
+    },
+    {
+      "target": "Closure_69",
+      "sources": [
+        "com/google/javascript/jscomp/TypeCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_7",
+      "sources": [
+        "com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java"
+      ]
+    },
+    {
+      "target": "Closure_70",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_71",
+      "sources": [
+        "com/google/javascript/jscomp/CheckAccessControls.java"
+      ]
+    },
+    {
+      "target": "Closure_72",
+      "sources": [
+        "com/google/javascript/jscomp/FunctionToBlockMutator.java",
+        "com/google/javascript/jscomp/RenameLabels.java"
+      ]
+    },
+    {
+      "target": "Closure_73",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java"
+      ]
+    },
+    {
+      "target": "Closure_74",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeFoldConstants.java"
+      ]
+    },
+    {
+      "target": "Closure_75",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java"
+      ]
+    },
+    {
+      "target": "Closure_76",
+      "sources": [
+        "com/google/javascript/jscomp/DeadAssignmentsElimination.java"
+      ]
+    },
+    {
+      "target": "Closure_77",
+      "sources": [
+        "com/google/javascript/jscomp/CodeGenerator.java"
+      ]
+    },
+    {
+      "target": "Closure_78",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeFoldConstants.java"
+      ]
+    },
+    {
+      "target": "Closure_79",
+      "sources": [
+        "com/google/javascript/jscomp/Normalize.java",
+        "com/google/javascript/jscomp/VarCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_8",
+      "sources": [
+        "com/google/javascript/jscomp/CollapseVariableDeclarations.java"
+      ]
+    },
+    {
+      "target": "Closure_80",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java"
+      ]
+    },
+    {
+      "target": "Closure_81",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/IRFactory.java"
+      ]
+    },
+    {
+      "target": "Closure_82",
+      "sources": [
+        "com/google/javascript/rhino/jstype/JSType.java"
+      ]
+    },
+    {
+      "target": "Closure_83",
+      "sources": [
+        "com/google/javascript/jscomp/CommandLineRunner.java"
+      ]
+    },
+    {
+      "target": "Closure_84",
+      "sources": [
+        "com/google/javascript/jscomp/parsing/IRFactory.java"
+      ]
+    },
+    {
+      "target": "Closure_85",
+      "sources": [
+        "com/google/javascript/jscomp/UnreachableCodeElimination.java"
+      ]
+    },
+    {
+      "target": "Closure_86",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java"
+      ]
+    },
+    {
+      "target": "Closure_87",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java"
+      ]
+    },
+    {
+      "target": "Closure_88",
+      "sources": [
+        "com/google/javascript/jscomp/DeadAssignmentsElimination.java"
+      ]
+    },
+    {
+      "target": "Closure_89",
+      "sources": [
+        "com/google/javascript/jscomp/CollapseProperties.java",
+        "com/google/javascript/jscomp/GlobalNamespace.java"
+      ]
+    },
+    {
+      "target": "Closure_9",
+      "sources": [
+        "com/google/javascript/jscomp/ProcessCommonJSModules.java"
+      ]
+    },
+    {
+      "target": "Closure_90",
+      "sources": [
+        "com/google/javascript/jscomp/FunctionTypeBuilder.java",
+        "com/google/javascript/rhino/jstype/FunctionType.java"
+      ]
+    },
+    {
+      "target": "Closure_91",
+      "sources": [
+        "com/google/javascript/jscomp/CheckGlobalThis.java"
+      ]
+    },
+    {
+      "target": "Closure_92",
+      "sources": [
+        "com/google/javascript/jscomp/ProcessClosurePrimitives.java"
+      ]
+    },
+    {
+      "target": "Closure_94",
+      "sources": [
+        "com/google/javascript/jscomp/NodeUtil.java"
+      ]
+    },
+    {
+      "target": "Closure_95",
+      "sources": [
+        "com/google/javascript/jscomp/TypedScopeCreator.java"
+      ]
+    },
+    {
+      "target": "Closure_96",
+      "sources": [
+        "com/google/javascript/jscomp/TypeCheck.java"
+      ]
+    },
+    {
+      "target": "Closure_97",
+      "sources": [
+        "com/google/javascript/jscomp/PeepholeFoldConstants.java"
+      ]
+    },
+    {
+      "target": "Closure_98",
+      "sources": [
+        "com/google/javascript/jscomp/ReferenceCollectingCallback.java"
+      ]
+    },
+    {
+      "target": "Closure_99",
+      "sources": [
+        "com/google/javascript/jscomp/CheckGlobalThis.java"
+      ]
+    },
+    {
+      "target": "Codec_1",
+      "sources": [
+        "org/apache/commons/codec/language/Caverphone.java",
+        "org/apache/commons/codec/language/DoubleMetaphone.java",
+        "org/apache/commons/codec/language/Metaphone.java",
+        "org/apache/commons/codec/language/SoundexUtils.java"
+      ]
+    },
+    {
+      "target": "Codec_10",
+      "sources": [
+        "org/apache/commons/codec/language/Caverphone.java"
+      ]
+    },
+    {
+      "target": "Codec_11",
+      "sources": [
+        "org/apache/commons/codec/net/QuotedPrintableCodec.java"
+      ]
+    },
+    {
+      "target": "Codec_12",
+      "sources": [
+        "org/apache/commons/codec/binary/BaseNCodecInputStream.java"
+      ]
+    },
+    {
+      "target": "Codec_13",
+      "sources": [
+        "org/apache/commons/codec/binary/StringUtils.java",
+        "org/apache/commons/codec/language/DoubleMetaphone.java"
+      ]
+    },
+    {
+      "target": "Codec_14",
+      "sources": [
+        "org/apache/commons/codec/language/bm/Lang.java",
+        "org/apache/commons/codec/language/bm/PhoneticEngine.java",
+        "org/apache/commons/codec/language/bm/Rule.java"
+      ]
+    },
+    {
+      "target": "Codec_15",
+      "sources": [
+        "org/apache/commons/codec/language/Soundex.java"
+      ]
+    },
+    {
+      "target": "Codec_16",
+      "sources": [
+        "org/apache/commons/codec/binary/Base32.java"
+      ]
+    },
+    {
+      "target": "Codec_17",
+      "sources": [
+        "org/apache/commons/codec/binary/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Codec_18",
+      "sources": [
+        "org/apache/commons/codec/binary/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Codec_3",
+      "sources": [
+        "org/apache/commons/codec/language/DoubleMetaphone.java"
+      ]
+    },
+    {
+      "target": "Codec_4",
+      "sources": [
+        "org/apache/commons/codec/binary/Base64.java"
+      ]
+    },
+    {
+      "target": "Codec_6",
+      "sources": [
+        "org/apache/commons/codec/binary/Base64InputStream.java"
+      ]
+    },
+    {
+      "target": "Codec_9",
+      "sources": [
+        "org/apache/commons/codec/binary/Base64.java"
+      ]
+    },
+    {
+      "target": "Collections_1",
+      "sources": [
+        "org/apache/commons/collections/map/Flat3Map.java"
+      ]
+    },
+    {
+      "target": "Collections_12",
+      "sources": [
+        "org/apache/commons/collections/ExtendedProperties.java"
+      ]
+    },
+    {
+      "target": "Collections_13",
+      "sources": [
+        "org/apache/commons/collections/ExtendedProperties.java"
+      ]
+    },
+    {
+      "target": "Collections_14",
+      "sources": [
+        "org/apache/commons/collections/map/CaseInsensitiveMap.java"
+      ]
+    },
+    {
+      "target": "Collections_15",
+      "sources": [
+        "org/apache/commons/collections/list/SetUniqueList.java"
+      ]
+    },
+    {
+      "target": "Collections_16",
+      "sources": [
+        "org/apache/commons/collections/list/SetUniqueList.java"
+      ]
+    },
+    {
+      "target": "Collections_17",
+      "sources": [
+        "org/apache/commons/collections/functors/EqualPredicate.java"
+      ]
+    },
+    {
+      "target": "Collections_18",
+      "sources": [
+        "org/apache/commons/collections/set/ListOrderedSet.java"
+      ]
+    },
+    {
+      "target": "Collections_19",
+      "sources": [
+        "org/apache/commons/collections/list/SetUniqueList.java"
+      ]
+    },
+    {
+      "target": "Collections_2",
+      "sources": [
+        "org/apache/commons/collections/ExtendedProperties.java"
+      ]
+    },
+    {
+      "target": "Collections_22",
+      "sources": [
+        "org/apache/commons/collections4/map/ListOrderedMap.java"
+      ]
+    },
+    {
+      "target": "Collections_23",
+      "sources": [
+        "org/apache/commons/collections4/trie/UnmodifiableTrie.java"
+      ]
+    },
+    {
+      "target": "Collections_25",
+      "sources": [
+        "org/apache/commons/collections4/IteratorUtils.java"
+      ]
+    },
+    {
+      "target": "Collections_28",
+      "sources": [
+        "org/apache/commons/collections4/trie/AbstractPatriciaTrie.java"
+      ]
+    },
+    {
+      "target": "Collections_3",
+      "sources": [
+        "org/apache/commons/collections/CollectionUtils.java"
+      ]
+    },
+    {
+      "target": "Collections_4",
+      "sources": [
+        "org/apache/commons/collections/map/MultiValueMap.java"
+      ]
+    },
+    {
+      "target": "Collections_7",
+      "sources": [
+        "org/apache/commons/collections/ExtendedProperties.java"
+      ]
+    },
+    {
+      "target": "Collections_8",
+      "sources": [
+        "org/apache/commons/collections/buffer/UnboundedFifoBuffer.java"
+      ]
+    },
+    {
+      "target": "Collections_9",
+      "sources": [
+        "org/apache/commons/collections/ExtendedProperties.java"
+      ]
+    },
+    {
+      "target": "Compress_1",
+      "sources": [
+        "org/apache/commons/compress/archivers/cpio/CpioArchiveOutputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_10",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipFile.java"
+      ]
+    },
+    {
+      "target": "Compress_11",
+      "sources": [
+        "org/apache/commons/compress/archivers/ArchiveStreamFactory.java"
+      ]
+    },
+    {
+      "target": "Compress_12",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_13",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java"
+      ]
+    },
+    {
+      "target": "Compress_15",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java"
+      ]
+    },
+    {
+      "target": "Compress_16",
+      "sources": [
+        "org/apache/commons/compress/archivers/ArchiveStreamFactory.java"
+      ]
+    },
+    {
+      "target": "Compress_18",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarArchiveOutputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_19",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/Zip64ExtendedInformationExtraField.java"
+      ]
+    },
+    {
+      "target": "Compress_2",
+      "sources": [
+        "org/apache/commons/compress/archivers/ar/ArArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_22",
+      "sources": [
+        "org/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_23",
+      "sources": [
+        "org/apache/commons/compress/archivers/sevenz/Coders.java"
+      ]
+    },
+    {
+      "target": "Compress_25",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_26",
+      "sources": [
+        "org/apache/commons/compress/utils/IOUtils.java"
+      ]
+    },
+    {
+      "target": "Compress_27",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarUtils.java"
+      ]
+    },
+    {
+      "target": "Compress_28",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_29",
+      "sources": [
+        "org/apache/commons/compress/archivers/ArchiveStreamFactory.java",
+        "org/apache/commons/compress/archivers/cpio/CpioArchiveInputStream.java",
+        "org/apache/commons/compress/archivers/cpio/CpioArchiveOutputStream.java",
+        "org/apache/commons/compress/archivers/dump/DumpArchiveInputStream.java",
+        "org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java",
+        "org/apache/commons/compress/archivers/tar/TarArchiveOutputStream.java",
+        "org/apache/commons/compress/archivers/zip/ZipArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_3",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarArchiveOutputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_33",
+      "sources": [
+        "org/apache/commons/compress/compressors/CompressorStreamFactory.java",
+        "org/apache/commons/compress/compressors/deflate/DeflateCompressorInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_34",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/X7875_NewUnix.java"
+      ]
+    },
+    {
+      "target": "Compress_35",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarUtils.java"
+      ]
+    },
+    {
+      "target": "Compress_37",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_38",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarArchiveEntry.java"
+      ]
+    },
+    {
+      "target": "Compress_39",
+      "sources": [
+        "org/apache/commons/compress/utils/ArchiveUtils.java"
+      ]
+    },
+    {
+      "target": "Compress_4",
+      "sources": [
+        "org/apache/commons/compress/archivers/cpio/CpioArchiveOutputStream.java",
+        "org/apache/commons/compress/archivers/tar/TarArchiveOutputStream.java",
+        "org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java",
+        "org/apache/commons/compress/changes/ChangeSetPerformer.java"
+      ]
+    },
+    {
+      "target": "Compress_40",
+      "sources": [
+        "org/apache/commons/compress/utils/BitInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_41",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_42",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/UnixStat.java",
+        "org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java"
+      ]
+    },
+    {
+      "target": "Compress_43",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_44",
+      "sources": [
+        "org/apache/commons/compress/utils/ChecksumCalculatingInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_46",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestamp.java"
+      ]
+    },
+    {
+      "target": "Compress_5",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipArchiveInputStream.java"
+      ]
+    },
+    {
+      "target": "Compress_6",
+      "sources": [
+        "org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java"
+      ]
+    },
+    {
+      "target": "Compress_7",
+      "sources": [
+        "org/apache/commons/compress/archivers/tar/TarUtils.java"
+      ]
+    },
+    {
+      "target": "Csv_10",
+      "sources": [
+        "org/apache/commons/csv/CSVPrinter.java"
+      ]
+    },
+    {
+      "target": "Csv_11",
+      "sources": [
+        "org/apache/commons/csv/CSVParser.java"
+      ]
+    },
+    {
+      "target": "Csv_13",
+      "sources": [
+        "org/apache/commons/csv/CSVFormat.java",
+        "org/apache/commons/csv/CSVPrinter.java"
+      ]
+    },
+    {
+      "target": "Csv_14",
+      "sources": [
+        "org/apache/commons/csv/CSVFormat.java"
+      ]
+    },
+    {
+      "target": "Csv_15",
+      "sources": [
+        "org/apache/commons/csv/CSVFormat.java"
+      ]
+    },
+    {
+      "target": "Csv_16",
+      "sources": [
+        "org/apache/commons/csv/CSVParser.java"
+      ]
+    },
+    {
+      "target": "Csv_3",
+      "sources": [
+        "org/apache/commons/csv/Lexer.java"
+      ]
+    },
+    {
+      "target": "Csv_4",
+      "sources": [
+        "org/apache/commons/csv/CSVParser.java"
+      ]
+    },
+    {
+      "target": "Csv_5",
+      "sources": [
+        "org/apache/commons/csv/CSVPrinter.java"
+      ]
+    },
+    {
+      "target": "Csv_8",
+      "sources": [
+        "org/apache/commons/csv/CSVFormat.java"
+      ]
+    },
+    {
+      "target": "Gson_10",
+      "sources": [
+        "com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java"
+      ]
+    },
+    {
+      "target": "Gson_11",
+      "sources": [
+        "com/google/gson/internal/bind/TypeAdapters.java"
+      ]
+    },
+    {
+      "target": "Gson_12",
+      "sources": [
+        "com/google/gson/internal/bind/JsonTreeReader.java"
+      ]
+    },
+    {
+      "target": "Gson_13",
+      "sources": [
+        "com/google/gson/stream/JsonReader.java"
+      ]
+    },
+    {
+      "target": "Gson_14",
+      "sources": [
+        "com/google/gson/internal/$Gson$Types.java"
+      ]
+    },
+    {
+      "target": "Gson_15",
+      "sources": [
+        "com/google/gson/stream/JsonWriter.java"
+      ]
+    },
+    {
+      "target": "Gson_16",
+      "sources": [
+        "com/google/gson/internal/$Gson$Types.java"
+      ]
+    },
+    {
+      "target": "Gson_17",
+      "sources": [
+        "com/google/gson/DefaultDateTypeAdapter.java"
+      ]
+    },
+    {
+      "target": "Gson_18",
+      "sources": [
+        "com/google/gson/internal/$Gson$Types.java"
+      ]
+    },
+    {
+      "target": "Gson_2",
+      "sources": [
+        "com/google/gson/internal/bind/TypeAdapters.java"
+      ]
+    },
+    {
+      "target": "Gson_4",
+      "sources": [
+        "com/google/gson/stream/JsonReader.java",
+        "com/google/gson/stream/JsonWriter.java"
+      ]
+    },
+    {
+      "target": "Gson_6",
+      "sources": [
+        "com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java"
+      ]
+    },
+    {
+      "target": "Gson_7",
+      "sources": [
+        "com/google/gson/stream/JsonReader.java"
+      ]
+    },
+    {
+      "target": "Gson_9",
+      "sources": [
+        "com/google/gson/internal/bind/JsonTreeWriter.java",
+        "com/google/gson/internal/bind/TypeAdapters.java",
+        "com/google/gson/stream/JsonWriter.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_1",
+      "sources": [
+        "com/fasterxml/jackson/core/io/NumberInput.java",
+        "com/fasterxml/jackson/core/util/TextBuffer.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_10",
+      "sources": [
+        "com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_12",
+      "sources": [
+        "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java",
+        "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_13",
+      "sources": [
+        "com/fasterxml/jackson/core/json/JsonGeneratorImpl.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_14",
+      "sources": [
+        "com/fasterxml/jackson/core/io/IOContext.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_15",
+      "sources": [
+        "com/fasterxml/jackson/core/filter/FilteringParserDelegate.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_16",
+      "sources": [
+        "com/fasterxml/jackson/core/util/JsonParserSequence.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_17",
+      "sources": [
+        "com/fasterxml/jackson/core/json/UTF8JsonGenerator.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_18",
+      "sources": [
+        "com/fasterxml/jackson/core/base/GeneratorBase.java",
+        "com/fasterxml/jackson/core/json/UTF8JsonGenerator.java",
+        "com/fasterxml/jackson/core/json/WriterBasedJsonGenerator.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_19",
+      "sources": [
+        "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java",
+        "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_2",
+      "sources": [
+        "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java",
+        "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_20",
+      "sources": [
+        "com/fasterxml/jackson/core/JsonGenerator.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_21",
+      "sources": [
+        "com/fasterxml/jackson/core/filter/FilteringParserDelegate.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_22",
+      "sources": [
+        "com/fasterxml/jackson/core/filter/FilteringParserDelegate.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_23",
+      "sources": [
+        "com/fasterxml/jackson/core/util/DefaultPrettyPrinter.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_24",
+      "sources": [
+        "com/fasterxml/jackson/core/base/ParserBase.java",
+        "com/fasterxml/jackson/core/base/ParserMinimalBase.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_25",
+      "sources": [
+        "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_3",
+      "sources": [
+        "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_4",
+      "sources": [
+        "com/fasterxml/jackson/core/util/TextBuffer.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_5",
+      "sources": [
+        "com/fasterxml/jackson/core/JsonPointer.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_7",
+      "sources": [
+        "com/fasterxml/jackson/core/json/JsonWriteContext.java"
+      ]
+    },
+    {
+      "target": "JacksonCore_9",
+      "sources": [
+        "com/fasterxml/jackson/core/base/ParserMinimalBase.java",
+        "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java",
+        "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_1",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_10",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/AnyGetterWriter.java",
+        "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_100",
+      "sources": [
+        "com/fasterxml/jackson/databind/node/TreeTraversingParser.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_101",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_102",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_103",
+      "sources": [
+        "com/fasterxml/jackson/databind/DatabindContext.java",
+        "com/fasterxml/jackson/databind/DeserializationContext.java",
+        "com/fasterxml/jackson/databind/JsonMappingException.java",
+        "com/fasterxml/jackson/databind/SerializerProvider.java",
+        "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java",
+        "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java",
+        "com/fasterxml/jackson/databind/deser/DeserializerCache.java",
+        "com/fasterxml/jackson/databind/deser/SettableAnyProperty.java",
+        "com/fasterxml/jackson/databind/deser/SettableBeanProperty.java",
+        "com/fasterxml/jackson/databind/deser/std/StdDeserializer.java",
+        "com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java",
+        "com/fasterxml/jackson/databind/deser/std/StdValueInstantiator.java",
+        "com/fasterxml/jackson/databind/introspect/BasicBeanDescription.java",
+        "com/fasterxml/jackson/databind/ser/DefaultSerializerProvider.java",
+        "com/fasterxml/jackson/databind/ser/PropertyBuilder.java",
+        "com/fasterxml/jackson/databind/util/ClassUtil.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_104",
+      "sources": [
+        "com/fasterxml/jackson/databind/util/StdDateFormat.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_106",
+      "sources": [
+        "com/fasterxml/jackson/databind/node/TreeTraversingParser.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_107",
+      "sources": [
+        "com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBase.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_108",
+      "sources": [
+        "com/fasterxml/jackson/databind/ObjectReader.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_109",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/NumberSerializer.java",
+        "com/fasterxml/jackson/databind/ser/std/NumberSerializers.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_11",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/TypeFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_110",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_111",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/CreatorProperty.java",
+        "com/fasterxml/jackson/databind/deser/impl/FieldProperty.java",
+        "com/fasterxml/jackson/databind/deser/impl/MethodProperty.java",
+        "com/fasterxml/jackson/databind/deser/impl/ObjectIdReferenceProperty.java",
+        "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java",
+        "com/fasterxml/jackson/databind/deser/impl/SetterlessProperty.java",
+        "com/fasterxml/jackson/databind/deser/std/AtomicReferenceDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_112",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_12",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/MapDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_13",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java",
+        "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_14",
+      "sources": [
+        "com/fasterxml/jackson/databind/ObjectReader.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_15",
+      "sources": [
+        "com/fasterxml/jackson/databind/JavaType.java",
+        "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java",
+        "com/fasterxml/jackson/databind/ser/std/BeanSerializerBase.java",
+        "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java",
+        "com/fasterxml/jackson/databind/ser/std/StdSerializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_17",
+      "sources": [
+        "com/fasterxml/jackson/databind/ObjectMapper.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_18",
+      "sources": [
+        "com/fasterxml/jackson/databind/MappingIterator.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_19",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/TypeFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_2",
+      "sources": [
+        "com/fasterxml/jackson/databind/util/TokenBuffer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_20",
+      "sources": [
+        "com/fasterxml/jackson/databind/node/ObjectNode.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_21",
+      "sources": [
+        "com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_22",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/BasicSerializerFactory.java",
+        "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_23",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/NumberSerializers.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_24",
+      "sources": [
+        "com/fasterxml/jackson/databind/cfg/BaseSettings.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_25",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java",
+        "com/fasterxml/jackson/databind/deser/DeserializerCache.java",
+        "com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBase.java",
+        "com/fasterxml/jackson/databind/module/SimpleAbstractTypeResolver.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_26",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_27",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_28",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/JsonNodeDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_29",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_3",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_30",
+      "sources": [
+        "com/fasterxml/jackson/databind/ObjectMapper.java",
+        "com/fasterxml/jackson/databind/util/TokenBuffer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_31",
+      "sources": [
+        "com/fasterxml/jackson/databind/util/TokenBuffer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_32",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/UntypedObjectDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_33",
+      "sources": [
+        "com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_34",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/NumberSerializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_35",
+      "sources": [
+        "com/fasterxml/jackson/databind/jsontype/impl/AsWrapperTypeDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_37",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/SimpleType.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_38",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/CollectionType.java",
+        "com/fasterxml/jackson/databind/type/MapType.java",
+        "com/fasterxml/jackson/databind/type/SimpleType.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_4",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_41",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/TypeFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_42",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/FromStringDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_43",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_45",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_46",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/ReferenceType.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_48",
+      "sources": [
+        "com/fasterxml/jackson/databind/DeserializationConfig.java",
+        "com/fasterxml/jackson/databind/SerializationConfig.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_49",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/impl/WritableObjectId.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_50",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_51",
+      "sources": [
+        "com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBase.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_52",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java",
+        "com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_54",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/PropertyBuilder.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_56",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/FromStringDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_58",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_59",
+      "sources": [
+        "com/fasterxml/jackson/databind/JavaType.java",
+        "com/fasterxml/jackson/databind/type/CollectionLikeType.java",
+        "com/fasterxml/jackson/databind/type/MapLikeType.java",
+        "com/fasterxml/jackson/databind/type/TypeFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_60",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/JsonValueSerializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_61",
+      "sources": [
+        "com/fasterxml/jackson/databind/ObjectMapper.java",
+        "com/fasterxml/jackson/databind/jsontype/impl/StdTypeResolverBuilder.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_62",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_64",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/PropertyBuilder.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_67",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_69",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_7",
+      "sources": [
+        "com/fasterxml/jackson/databind/util/TokenBuffer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_70",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_72",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/InnerClassProperty.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_74",
+      "sources": [
+        "com/fasterxml/jackson/databind/jsontype/impl/AsPropertyTypeDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_75",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/EnumSerializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_76",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_77",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_79",
+      "sources": [
+        "com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java",
+        "com/fasterxml/jackson/databind/introspect/ObjectIdInfo.java",
+        "com/fasterxml/jackson/databind/ser/std/BeanSerializerBase.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_8",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_80",
+      "sources": [
+        "com/fasterxml/jackson/databind/jsontype/impl/StdSubtypeResolver.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_81",
+      "sources": [
+        "com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_82",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_85",
+      "sources": [
+        "com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_88",
+      "sources": [
+        "com/fasterxml/jackson/databind/jsontype/impl/ClassNameIdResolver.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_90",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/ValueInstantiator.java",
+        "com/fasterxml/jackson/databind/deser/std/StdValueInstantiator.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_91",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/DeserializerCache.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_92",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_93",
+      "sources": [
+        "com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_95",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/TypeFactory.java",
+        "com/fasterxml/jackson/databind/type/TypeParser.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_96",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_97",
+      "sources": [
+        "com/fasterxml/jackson/databind/node/POJONode.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_98",
+      "sources": [
+        "com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java"
+      ]
+    },
+    {
+      "target": "JacksonDatabind_99",
+      "sources": [
+        "com/fasterxml/jackson/databind/type/ReferenceType.java"
+      ]
+    },
+    {
+      "target": "JacksonXml_1",
+      "sources": [
+        "com/fasterxml/jackson/dataformat/xml/deser/FromXmlParser.java"
+      ]
+    },
+    {
+      "target": "JacksonXml_2",
+      "sources": [
+        "com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStream.java"
+      ]
+    },
+    {
+      "target": "JacksonXml_3",
+      "sources": [
+        "com/fasterxml/jackson/dataformat/xml/deser/FromXmlParser.java"
+      ]
+    },
+    {
+      "target": "JacksonXml_4",
+      "sources": [
+        "com/fasterxml/jackson/dataformat/xml/ser/XmlSerializerProvider.java"
+      ]
+    },
+    {
+      "target": "JacksonXml_5",
+      "sources": [
+        "com/fasterxml/jackson/dataformat/xml/ser/XmlSerializerProvider.java"
+      ]
+    },
+    {
+      "target": "JacksonXml_6",
+      "sources": [
+        "com/fasterxml/jackson/dataformat/xml/ser/ToXmlGenerator.java"
+      ]
+    },
+    {
+      "target": "Jsoup_10",
+      "sources": [
+        "org/jsoup/nodes/Node.java"
+      ]
+    },
+    {
+      "target": "Jsoup_13",
+      "sources": [
+        "org/jsoup/nodes/Node.java"
+      ]
+    },
+    {
+      "target": "Jsoup_14",
+      "sources": [
+        "org/jsoup/parser/Tokeniser.java",
+        "org/jsoup/parser/TokeniserState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_15",
+      "sources": [
+        "org/jsoup/parser/TreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_17",
+      "sources": [
+        "org/jsoup/parser/TreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_19",
+      "sources": [
+        "org/jsoup/safety/Whitelist.java"
+      ]
+    },
+    {
+      "target": "Jsoup_2",
+      "sources": [
+        "org/jsoup/parser/Parser.java"
+      ]
+    },
+    {
+      "target": "Jsoup_21",
+      "sources": [
+        "org/jsoup/select/CombiningEvaluator.java",
+        "org/jsoup/select/QueryParser.java"
+      ]
+    },
+    {
+      "target": "Jsoup_22",
+      "sources": [
+        "org/jsoup/nodes/Element.java",
+        "org/jsoup/nodes/Node.java",
+        "org/jsoup/select/Elements.java"
+      ]
+    },
+    {
+      "target": "Jsoup_23",
+      "sources": [
+        "org/jsoup/parser/CharacterReader.java",
+        "org/jsoup/parser/Tokeniser.java"
+      ]
+    },
+    {
+      "target": "Jsoup_24",
+      "sources": [
+        "org/jsoup/parser/TokeniserState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_25",
+      "sources": [
+        "org/jsoup/parser/Tag.java"
+      ]
+    },
+    {
+      "target": "Jsoup_26",
+      "sources": [
+        "org/jsoup/safety/Cleaner.java"
+      ]
+    },
+    {
+      "target": "Jsoup_27",
+      "sources": [
+        "org/jsoup/helper/DataUtil.java"
+      ]
+    },
+    {
+      "target": "Jsoup_28",
+      "sources": [
+        "org/jsoup/nodes/Entities.java",
+        "org/jsoup/parser/Parser.java",
+        "org/jsoup/parser/Tokeniser.java"
+      ]
+    },
+    {
+      "target": "Jsoup_29",
+      "sources": [
+        "org/jsoup/nodes/Document.java"
+      ]
+    },
+    {
+      "target": "Jsoup_3",
+      "sources": [
+        "org/jsoup/nodes/Element.java",
+        "org/jsoup/parser/Parser.java",
+        "org/jsoup/parser/Tag.java"
+      ]
+    },
+    {
+      "target": "Jsoup_30",
+      "sources": [
+        "org/jsoup/safety/Cleaner.java"
+      ]
+    },
+    {
+      "target": "Jsoup_31",
+      "sources": [
+        "org/jsoup/parser/Token.java",
+        "org/jsoup/parser/TokeniserState.java",
+        "org/jsoup/parser/XmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_32",
+      "sources": [
+        "org/jsoup/nodes/Element.java"
+      ]
+    },
+    {
+      "target": "Jsoup_35",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_36",
+      "sources": [
+        "org/jsoup/helper/DataUtil.java"
+      ]
+    },
+    {
+      "target": "Jsoup_37",
+      "sources": [
+        "org/jsoup/nodes/Element.java"
+      ]
+    },
+    {
+      "target": "Jsoup_38",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_4",
+      "sources": [
+        "org/jsoup/nodes/Entities.java"
+      ]
+    },
+    {
+      "target": "Jsoup_41",
+      "sources": [
+        "org/jsoup/nodes/Element.java"
+      ]
+    },
+    {
+      "target": "Jsoup_42",
+      "sources": [
+        "org/jsoup/nodes/FormElement.java"
+      ]
+    },
+    {
+      "target": "Jsoup_43",
+      "sources": [
+        "org/jsoup/nodes/Element.java"
+      ]
+    },
+    {
+      "target": "Jsoup_44",
+      "sources": [
+        "org/jsoup/parser/TreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_45",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_47",
+      "sources": [
+        "org/jsoup/nodes/Entities.java"
+      ]
+    },
+    {
+      "target": "Jsoup_48",
+      "sources": [
+        "org/jsoup/helper/HttpConnection.java"
+      ]
+    },
+    {
+      "target": "Jsoup_49",
+      "sources": [
+        "org/jsoup/nodes/Node.java"
+      ]
+    },
+    {
+      "target": "Jsoup_50",
+      "sources": [
+        "org/jsoup/helper/DataUtil.java"
+      ]
+    },
+    {
+      "target": "Jsoup_52",
+      "sources": [
+        "org/jsoup/helper/DataUtil.java",
+        "org/jsoup/nodes/XmlDeclaration.java",
+        "org/jsoup/parser/XmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_54",
+      "sources": [
+        "org/jsoup/helper/W3CDom.java"
+      ]
+    },
+    {
+      "target": "Jsoup_55",
+      "sources": [
+        "org/jsoup/parser/TokeniserState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_56",
+      "sources": [
+        "org/jsoup/nodes/DocumentType.java",
+        "org/jsoup/parser/HtmlTreeBuilderState.java",
+        "org/jsoup/parser/Token.java",
+        "org/jsoup/parser/TokeniserState.java",
+        "org/jsoup/parser/XmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_59",
+      "sources": [
+        "org/jsoup/parser/Token.java"
+      ]
+    },
+    {
+      "target": "Jsoup_6",
+      "sources": [
+        "org/jsoup/nodes/Entities.java"
+      ]
+    },
+    {
+      "target": "Jsoup_60",
+      "sources": [
+        "org/jsoup/parser/TokenQueue.java",
+        "org/jsoup/select/QueryParser.java"
+      ]
+    },
+    {
+      "target": "Jsoup_61",
+      "sources": [
+        "org/jsoup/nodes/Element.java"
+      ]
+    },
+    {
+      "target": "Jsoup_62",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_63",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilder.java",
+        "org/jsoup/parser/Tokeniser.java"
+      ]
+    },
+    {
+      "target": "Jsoup_64",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_65",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilder.java",
+        "org/jsoup/parser/HtmlTreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_66",
+      "sources": [
+        "org/jsoup/nodes/Element.java"
+      ]
+    },
+    {
+      "target": "Jsoup_67",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_68",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_7",
+      "sources": [
+        "org/jsoup/nodes/Document.java"
+      ]
+    },
+    {
+      "target": "Jsoup_70",
+      "sources": [
+        "org/jsoup/nodes/Element.java"
+      ]
+    },
+    {
+      "target": "Jsoup_71",
+      "sources": [
+        "org/jsoup/select/Evaluator.java",
+        "org/jsoup/select/QueryParser.java"
+      ]
+    },
+    {
+      "target": "Jsoup_73",
+      "sources": [
+        "org/jsoup/helper/W3CDom.java"
+      ]
+    },
+    {
+      "target": "Jsoup_76",
+      "sources": [
+        "org/jsoup/parser/HtmlTreeBuilderState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_77",
+      "sources": [
+        "org/jsoup/parser/XmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_79",
+      "sources": [
+        "org/jsoup/nodes/LeafNode.java"
+      ]
+    },
+    {
+      "target": "Jsoup_8",
+      "sources": [
+        "org/jsoup/nodes/Node.java"
+      ]
+    },
+    {
+      "target": "Jsoup_80",
+      "sources": [
+        "org/jsoup/parser/XmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_81",
+      "sources": [
+        "org/jsoup/helper/DataUtil.java"
+      ]
+    },
+    {
+      "target": "Jsoup_83",
+      "sources": [
+        "org/jsoup/parser/CharacterReader.java",
+        "org/jsoup/parser/TokeniserState.java"
+      ]
+    },
+    {
+      "target": "Jsoup_84",
+      "sources": [
+        "org/jsoup/helper/W3CDom.java"
+      ]
+    },
+    {
+      "target": "Jsoup_87",
+      "sources": [
+        "org/jsoup/nodes/Element.java",
+        "org/jsoup/parser/HtmlTreeBuilder.java",
+        "org/jsoup/parser/HtmlTreeBuilderState.java",
+        "org/jsoup/parser/Tag.java"
+      ]
+    },
+    {
+      "target": "Jsoup_90",
+      "sources": [
+        "org/jsoup/helper/HttpConnection.java"
+      ]
+    },
+    {
+      "target": "Jsoup_91",
+      "sources": [
+        "org/jsoup/UncheckedIOException.java",
+        "org/jsoup/parser/CharacterReader.java"
+      ]
+    },
+    {
+      "target": "Jsoup_92",
+      "sources": [
+        "org/jsoup/nodes/Attributes.java",
+        "org/jsoup/parser/HtmlTreeBuilder.java",
+        "org/jsoup/parser/ParseSettings.java",
+        "org/jsoup/parser/Token.java",
+        "org/jsoup/parser/XmlTreeBuilder.java"
+      ]
+    },
+    {
+      "target": "Jsoup_93",
+      "sources": [
+        "org/jsoup/nodes/FormElement.java"
+      ]
+    },
+    {
+      "target": "JxPath_1",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java",
+        "org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_10",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java"
+      ]
+    },
+    {
+      "target": "JxPath_11",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java",
+        "org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java"
+      ]
+    },
+    {
+      "target": "JxPath_12",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_13",
+      "sources": [
+        "org/apache/commons/jxpath/ri/NamespaceResolver.java",
+        "org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_14",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/CoreFunction.java"
+      ]
+    },
+    {
+      "target": "JxPath_15",
+      "sources": [
+        "org/apache/commons/jxpath/ri/axes/UnionContext.java"
+      ]
+    },
+    {
+      "target": "JxPath_16",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java",
+        "org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_17",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java",
+        "org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java"
+      ]
+    },
+    {
+      "target": "JxPath_18",
+      "sources": [
+        "org/apache/commons/jxpath/ri/axes/AttributeContext.java"
+      ]
+    },
+    {
+      "target": "JxPath_19",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java",
+        "org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_2",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/Expression.java"
+      ]
+    },
+    {
+      "target": "JxPath_20",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java"
+      ]
+    },
+    {
+      "target": "JxPath_21",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/beans/PropertyPointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_22",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_3",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/beans/NullPropertyPointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_4",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java",
+        "org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_5",
+      "sources": [
+        "org/apache/commons/jxpath/ri/model/NodePointer.java"
+      ]
+    },
+    {
+      "target": "JxPath_6",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationCompare.java"
+      ]
+    },
+    {
+      "target": "JxPath_7",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java",
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java",
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java",
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java",
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java"
+      ]
+    },
+    {
+      "target": "JxPath_8",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java"
+      ]
+    },
+    {
+      "target": "JxPath_9",
+      "sources": [
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationCompare.java",
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationEqual.java",
+        "org/apache/commons/jxpath/ri/compiler/CoreOperationNotEqual.java"
+      ]
+    },
+    {
+      "target": "Lang_1",
+      "sources": [
+        "org/apache/commons/lang3/math/NumberUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_11",
+      "sources": [
+        "org/apache/commons/lang3/RandomStringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_12",
+      "sources": [
+        "org/apache/commons/lang3/RandomStringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_14",
+      "sources": [
+        "org/apache/commons/lang3/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_15",
+      "sources": [
+        "org/apache/commons/lang3/reflect/TypeUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_17",
+      "sources": [
+        "org/apache/commons/lang3/text/translate/CharSequenceTranslator.java"
+      ]
+    },
+    {
+      "target": "Lang_20",
+      "sources": [
+        "org/apache/commons/lang3/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_21",
+      "sources": [
+        "org/apache/commons/lang3/time/DateUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_22",
+      "sources": [
+        "org/apache/commons/lang3/math/Fraction.java"
+      ]
+    },
+    {
+      "target": "Lang_29",
+      "sources": [
+        "org/apache/commons/lang3/SystemUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_3",
+      "sources": [
+        "org/apache/commons/lang3/math/NumberUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_30",
+      "sources": [
+        "org/apache/commons/lang3/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_31",
+      "sources": [
+        "org/apache/commons/lang3/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_32",
+      "sources": [
+        "org/apache/commons/lang3/builder/HashCodeBuilder.java"
+      ]
+    },
+    {
+      "target": "Lang_33",
+      "sources": [
+        "org/apache/commons/lang3/ClassUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_34",
+      "sources": [
+        "org/apache/commons/lang3/builder/ToStringStyle.java"
+      ]
+    },
+    {
+      "target": "Lang_35",
+      "sources": [
+        "org/apache/commons/lang3/ArrayUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_36",
+      "sources": [
+        "org/apache/commons/lang3/math/NumberUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_37",
+      "sources": [
+        "org/apache/commons/lang3/ArrayUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_39",
+      "sources": [
+        "org/apache/commons/lang3/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_40",
+      "sources": [
+        "org/apache/commons/lang/StringUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_41",
+      "sources": [
+        "org/apache/commons/lang/ClassUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_42",
+      "sources": [
+        "org/apache/commons/lang/Entities.java"
+      ]
+    },
+    {
+      "target": "Lang_43",
+      "sources": [
+        "org/apache/commons/lang/text/ExtendedMessageFormat.java"
+      ]
+    },
+    {
+      "target": "Lang_46",
+      "sources": [
+        "org/apache/commons/lang/StringEscapeUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_47",
+      "sources": [
+        "org/apache/commons/lang/text/StrBuilder.java"
+      ]
+    },
+    {
+      "target": "Lang_50",
+      "sources": [
+        "org/apache/commons/lang/time/FastDateFormat.java"
+      ]
+    },
+    {
+      "target": "Lang_52",
+      "sources": [
+        "org/apache/commons/lang/StringEscapeUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_53",
+      "sources": [
+        "org/apache/commons/lang/time/DateUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_56",
+      "sources": [
+        "org/apache/commons/lang/time/FastDateFormat.java"
+      ]
+    },
+    {
+      "target": "Lang_59",
+      "sources": [
+        "org/apache/commons/lang/text/StrBuilder.java"
+      ]
+    },
+    {
+      "target": "Lang_60",
+      "sources": [
+        "org/apache/commons/lang/text/StrBuilder.java"
+      ]
+    },
+    {
+      "target": "Lang_61",
+      "sources": [
+        "org/apache/commons/lang/text/StrBuilder.java"
+      ]
+    },
+    {
+      "target": "Lang_62",
+      "sources": [
+        "org/apache/commons/lang/Entities.java"
+      ]
+    },
+    {
+      "target": "Lang_65",
+      "sources": [
+        "org/apache/commons/lang/time/DateUtils.java"
+      ]
+    },
+    {
+      "target": "Lang_9",
+      "sources": [
+        "org/apache/commons/lang3/time/FastDateParser.java"
+      ]
+    },
+    {
+      "target": "Math_100",
+      "sources": [
+        "org/apache/commons/math/estimation/AbstractEstimator.java"
+      ]
+    },
+    {
+      "target": "Math_102",
+      "sources": [
+        "org/apache/commons/math/stat/inference/ChiSquareTestImpl.java"
+      ]
+    },
+    {
+      "target": "Math_11",
+      "sources": [
+        "org/apache/commons/math3/distribution/MultivariateNormalDistribution.java"
+      ]
+    },
+    {
+      "target": "Math_13",
+      "sources": [
+        "org/apache/commons/math3/optimization/general/AbstractLeastSquaresOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_14",
+      "sources": [
+        "org/apache/commons/math3/optim/nonlinear/vector/Weight.java",
+        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_17",
+      "sources": [
+        "org/apache/commons/math3/dfp/Dfp.java"
+      ]
+    },
+    {
+      "target": "Math_18",
+      "sources": [
+        "org/apache/commons/math3/optimization/direct/CMAESOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_19",
+      "sources": [
+        "org/apache/commons/math3/optimization/direct/CMAESOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_20",
+      "sources": [
+        "org/apache/commons/math3/optimization/direct/CMAESOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_22",
+      "sources": [
+        "org/apache/commons/math3/distribution/FDistribution.java",
+        "org/apache/commons/math3/distribution/UniformRealDistribution.java"
+      ]
+    },
+    {
+      "target": "Math_23",
+      "sources": [
+        "org/apache/commons/math3/optimization/univariate/BrentOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_24",
+      "sources": [
+        "org/apache/commons/math3/optimization/univariate/BrentOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_26",
+      "sources": [
+        "org/apache/commons/math3/fraction/Fraction.java"
+      ]
+    },
+    {
+      "target": "Math_28",
+      "sources": [
+        "org/apache/commons/math3/optimization/linear/SimplexSolver.java"
+      ]
+    },
+    {
+      "target": "Math_32",
+      "sources": [
+        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java"
+      ]
+    },
+    {
+      "target": "Math_33",
+      "sources": [
+        "org/apache/commons/math3/optimization/linear/SimplexTableau.java"
+      ]
+    },
+    {
+      "target": "Math_34",
+      "sources": [
+        "org/apache/commons/math3/genetics/ListPopulation.java"
+      ]
+    },
+    {
+      "target": "Math_35",
+      "sources": [
+        "org/apache/commons/math3/genetics/ElitisticListPopulation.java"
+      ]
+    },
+    {
+      "target": "Math_36",
+      "sources": [
+        "org/apache/commons/math/fraction/BigFraction.java"
+      ]
+    },
+    {
+      "target": "Math_37",
+      "sources": [
+        "org/apache/commons/math/complex/Complex.java"
+      ]
+    },
+    {
+      "target": "Math_38",
+      "sources": [
+        "org/apache/commons/math/optimization/direct/BOBYQAOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_39",
+      "sources": [
+        "org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java"
+      ]
+    },
+    {
+      "target": "Math_4",
+      "sources": [
+        "org/apache/commons/math3/geometry/euclidean/threed/SubLine.java",
+        "org/apache/commons/math3/geometry/euclidean/twod/SubLine.java"
+      ]
+    },
+    {
+      "target": "Math_44",
+      "sources": [
+        "org/apache/commons/math/ode/AbstractIntegrator.java"
+      ]
+    },
+    {
+      "target": "Math_46",
+      "sources": [
+        "org/apache/commons/math/complex/Complex.java"
+      ]
+    },
+    {
+      "target": "Math_47",
+      "sources": [
+        "org/apache/commons/math/complex/Complex.java"
+      ]
+    },
+    {
+      "target": "Math_48",
+      "sources": [
+        "org/apache/commons/math/analysis/solvers/BaseSecantSolver.java"
+      ]
+    },
+    {
+      "target": "Math_49",
+      "sources": [
+        "org/apache/commons/math/linear/OpenMapRealVector.java"
+      ]
+    },
+    {
+      "target": "Math_5",
+      "sources": [
+        "org/apache/commons/math3/complex/Complex.java"
+      ]
+    },
+    {
+      "target": "Math_50",
+      "sources": [
+        "org/apache/commons/math/analysis/solvers/BaseSecantSolver.java"
+      ]
+    },
+    {
+      "target": "Math_51",
+      "sources": [
+        "org/apache/commons/math/analysis/solvers/BaseSecantSolver.java"
+      ]
+    },
+    {
+      "target": "Math_52",
+      "sources": [
+        "org/apache/commons/math/geometry/euclidean/threed/Rotation.java"
+      ]
+    },
+    {
+      "target": "Math_53",
+      "sources": [
+        "org/apache/commons/math/complex/Complex.java"
+      ]
+    },
+    {
+      "target": "Math_54",
+      "sources": [
+        "org/apache/commons/math/dfp/Dfp.java"
+      ]
+    },
+    {
+      "target": "Math_55",
+      "sources": [
+        "org/apache/commons/math/geometry/Vector3D.java"
+      ]
+    },
+    {
+      "target": "Math_57",
+      "sources": [
+        "org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java"
+      ]
+    },
+    {
+      "target": "Math_58",
+      "sources": [
+        "org/apache/commons/math/optimization/fitting/GaussianFitter.java"
+      ]
+    },
+    {
+      "target": "Math_6",
+      "sources": [
+        "org/apache/commons/math3/optim/BaseOptimizer.java",
+        "org/apache/commons/math3/optim/nonlinear/scalar/gradient/NonLinearConjugateGradientOptimizer.java",
+        "org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java",
+        "org/apache/commons/math3/optim/nonlinear/scalar/noderiv/PowellOptimizer.java",
+        "org/apache/commons/math3/optim/nonlinear/scalar/noderiv/SimplexOptimizer.java",
+        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/GaussNewtonOptimizer.java",
+        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/LevenbergMarquardtOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_62",
+      "sources": [
+        "org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_64",
+      "sources": [
+        "org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_65",
+      "sources": [
+        "org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_68",
+      "sources": [
+        "org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java"
+      ]
+    },
+    {
+      "target": "Math_7",
+      "sources": [
+        "org/apache/commons/math3/ode/AbstractIntegrator.java"
+      ]
+    },
+    {
+      "target": "Math_71",
+      "sources": [
+        "org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java",
+        "org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java"
+      ]
+    },
+    {
+      "target": "Math_74",
+      "sources": [
+        "org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java"
+      ]
+    },
+    {
+      "target": "Math_77",
+      "sources": [
+        "org/apache/commons/math/linear/ArrayRealVector.java",
+        "org/apache/commons/math/linear/OpenMapRealVector.java"
+      ]
+    },
+    {
+      "target": "Math_78",
+      "sources": [
+        "org/apache/commons/math/ode/events/EventState.java"
+      ]
+    },
+    {
+      "target": "Math_8",
+      "sources": [
+        "org/apache/commons/math3/distribution/DiscreteDistribution.java"
+      ]
+    },
+    {
+      "target": "Math_82",
+      "sources": [
+        "org/apache/commons/math/optimization/linear/SimplexSolver.java"
+      ]
+    },
+    {
+      "target": "Math_83",
+      "sources": [
+        "org/apache/commons/math/optimization/linear/SimplexTableau.java"
+      ]
+    },
+    {
+      "target": "Math_84",
+      "sources": [
+        "org/apache/commons/math/optimization/direct/MultiDirectional.java"
+      ]
+    },
+    {
+      "target": "Math_86",
+      "sources": [
+        "org/apache/commons/math/linear/CholeskyDecompositionImpl.java"
+      ]
+    },
+    {
+      "target": "Math_88",
+      "sources": [
+        "org/apache/commons/math/optimization/linear/SimplexTableau.java"
+      ]
+    },
+    {
+      "target": "Math_9",
+      "sources": [
+        "org/apache/commons/math3/geometry/euclidean/threed/Line.java"
+      ]
+    },
+    {
+      "target": "Mockito_1",
+      "sources": [
+        "org/mockito/internal/invocation/InvocationMatcher.java"
+      ]
+    },
+    {
+      "target": "Mockito_10",
+      "sources": [
+        "org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java"
+      ]
+    },
+    {
+      "target": "Mockito_13",
+      "sources": [
+        "org/mockito/internal/MockHandler.java"
+      ]
+    },
+    {
+      "target": "Mockito_14",
+      "sources": [
+        "org/mockito/internal/MockHandler.java",
+        "org/mockito/internal/MockitoCore.java"
+      ]
+    },
+    {
+      "target": "Mockito_16",
+      "sources": [
+        "org/mockito/Mockito.java",
+        "org/mockito/internal/MockitoCore.java"
+      ]
+    },
+    {
+      "target": "Mockito_17",
+      "sources": [
+        "org/mockito/internal/creation/MockSettingsImpl.java",
+        "org/mockito/internal/util/MockUtil.java"
+      ]
+    },
+    {
+      "target": "Mockito_18",
+      "sources": [
+        "org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java"
+      ]
+    },
+    {
+      "target": "Mockito_19",
+      "sources": [
+        "org/mockito/internal/configuration/injection/PropertyAndSetterInjection.java",
+        "org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilter.java",
+        "org/mockito/internal/configuration/injection/filter/MockCandidateFilter.java",
+        "org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java",
+        "org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilter.java"
+      ]
+    },
+    {
+      "target": "Mockito_20",
+      "sources": [
+        "org/mockito/internal/creation/bytebuddy/ByteBuddyMockMaker.java"
+      ]
+    },
+    {
+      "target": "Mockito_23",
+      "sources": [
+        "org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java"
+      ]
+    },
+    {
+      "target": "Mockito_24",
+      "sources": [
+        "org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java"
+      ]
+    },
+    {
+      "target": "Mockito_25",
+      "sources": [
+        "org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java"
+      ]
+    },
+    {
+      "target": "Mockito_26",
+      "sources": [
+        "org/mockito/internal/util/Primitives.java"
+      ]
+    },
+    {
+      "target": "Mockito_27",
+      "sources": [
+        "org/mockito/internal/util/MockUtil.java"
+      ]
+    },
+    {
+      "target": "Mockito_28",
+      "sources": [
+        "org/mockito/internal/configuration/DefaultInjectionEngine.java"
+      ]
+    },
+    {
+      "target": "Mockito_29",
+      "sources": [
+        "org/mockito/internal/matchers/Same.java"
+      ]
+    },
+    {
+      "target": "Mockito_3",
+      "sources": [
+        "org/mockito/internal/invocation/InvocationMatcher.java"
+      ]
+    },
+    {
+      "target": "Mockito_30",
+      "sources": [
+        "org/mockito/exceptions/Reporter.java",
+        "org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java"
+      ]
+    },
+    {
+      "target": "Mockito_31",
+      "sources": [
+        "org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java"
+      ]
+    },
+    {
+      "target": "Mockito_32",
+      "sources": [
+        "org/mockito/internal/configuration/SpyAnnotationEngine.java"
+      ]
+    },
+    {
+      "target": "Mockito_33",
+      "sources": [
+        "org/mockito/internal/invocation/InvocationMatcher.java"
+      ]
+    },
+    {
+      "target": "Mockito_34",
+      "sources": [
+        "org/mockito/internal/invocation/InvocationMatcher.java"
+      ]
+    },
+    {
+      "target": "Mockito_35",
+      "sources": [
+        "org/mockito/Matchers.java"
+      ]
+    },
+    {
+      "target": "Mockito_36",
+      "sources": [
+        "org/mockito/internal/invocation/Invocation.java"
+      ]
+    },
+    {
+      "target": "Mockito_38",
+      "sources": [
+        "org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java"
+      ]
+    },
+    {
+      "target": "Mockito_4",
+      "sources": [
+        "org/mockito/exceptions/Reporter.java"
+      ]
+    },
+    {
+      "target": "Mockito_5",
+      "sources": [
+        "org/mockito/internal/verification/VerificationOverTimeImpl.java"
+      ]
+    },
+    {
+      "target": "Time_1",
+      "sources": [
+        "org/joda/time/Partial.java",
+        "org/joda/time/field/UnsupportedDurationField.java"
+      ]
+    },
+    {
+      "target": "Time_10",
+      "sources": [
+        "org/joda/time/base/BaseSingleFieldPeriod.java"
+      ]
+    },
+    {
+      "target": "Time_11",
+      "sources": [
+        "org/joda/time/tz/ZoneInfoCompiler.java"
+      ]
+    },
+    {
+      "target": "Time_12",
+      "sources": [
+        "org/joda/time/LocalDate.java",
+        "org/joda/time/LocalDateTime.java"
+      ]
+    },
+    {
+      "target": "Time_14",
+      "sources": [
+        "org/joda/time/chrono/BasicMonthOfYearDateTimeField.java"
+      ]
+    },
+    {
+      "target": "Time_15",
+      "sources": [
+        "org/joda/time/field/FieldUtils.java"
+      ]
+    },
+    {
+      "target": "Time_16",
+      "sources": [
+        "org/joda/time/format/DateTimeFormatter.java"
+      ]
+    },
+    {
+      "target": "Time_17",
+      "sources": [
+        "org/joda/time/DateTimeZone.java"
+      ]
+    },
+    {
+      "target": "Time_18",
+      "sources": [
+        "org/joda/time/chrono/GJChronology.java"
+      ]
+    },
+    {
+      "target": "Time_19",
+      "sources": [
+        "org/joda/time/DateTimeZone.java"
+      ]
+    },
+    {
+      "target": "Time_2",
+      "sources": [
+        "org/joda/time/Partial.java",
+        "org/joda/time/field/UnsupportedDurationField.java"
+      ]
+    },
+    {
+      "target": "Time_20",
+      "sources": [
+        "org/joda/time/format/DateTimeFormatterBuilder.java"
+      ]
+    },
+    {
+      "target": "Time_22",
+      "sources": [
+        "org/joda/time/base/BasePeriod.java"
+      ]
+    },
+    {
+      "target": "Time_23",
+      "sources": [
+        "org/joda/time/DateTimeZone.java"
+      ]
+    },
+    {
+      "target": "Time_24",
+      "sources": [
+        "org/joda/time/format/DateTimeParserBucket.java"
+      ]
+    },
+    {
+      "target": "Time_26",
+      "sources": [
+        "org/joda/time/DateTimeZone.java",
+        "org/joda/time/chrono/ZonedChronology.java",
+        "org/joda/time/field/LenientDateTimeField.java"
+      ]
+    },
+    {
+      "target": "Time_3",
+      "sources": [
+        "org/joda/time/MutableDateTime.java"
+      ]
+    },
+    {
+      "target": "Time_5",
+      "sources": [
+        "org/joda/time/Period.java"
+      ]
+    },
+    {
+      "target": "Time_7",
+      "sources": [
+        "org/joda/time/format/DateTimeFormatter.java"
+      ]
+    },
+    {
+      "target": "Time_9",
+      "sources": [
+        "org/joda/time/DateTimeZone.java"
+      ]
+    }
+  ]
+}

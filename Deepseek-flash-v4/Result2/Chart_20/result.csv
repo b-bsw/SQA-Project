@@ -1,0 +1,2 @@
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
+Chart,20,6,FAIL,1,PASS,0,REVEALING,22,21,95.45,8,7,87.5

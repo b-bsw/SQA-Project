@@ -1,0 +1,29 @@
+{
+  "Math_37/org/apache/commons/math/complex/Complex.java": {
+    "project": "Math_37",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_37/org/apache/commons/math/complex/Complex.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_37/Math_37_buggy/ComplexTest.java",
+    "file_size_bytes": 10958,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4464,
+      "completion_tokens": 26830,
+      "total_tokens": 31294
+    },
+    "content_char_count": 10970,
+    "reasoning_char_count": 85939,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 1166.69,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 839120,
+      "daily_remaining_tokens": 160880
+    },
+    "updated_at": "2026-09-25T11:31:58.505677"
+  }
+}

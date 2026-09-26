@@ -1,0 +1,56 @@
+{
+  "JacksonDatabind_61/com/fasterxml/jackson/databind/ObjectMapper.java": {
+    "project": "JacksonDatabind_61",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_61/com/fasterxml/jackson/databind/ObjectMapper.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_61/JacksonDatabind_61_buggy/ObjectMapperTest.java",
+    "file_size_bytes": 8119,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 16508,
+      "completion_tokens": 21829,
+      "total_tokens": 38337
+    },
+    "content_char_count": 8119,
+    "reasoning_char_count": 84422,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 105.34,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 501304,
+      "daily_remaining_tokens": 498696
+    },
+    "updated_at": "2026-09-25T11:15:06.469705"
+  },
+  "JacksonDatabind_61/com/fasterxml/jackson/databind/jsontype/impl/StdTypeResolverBuilder.java": {
+    "project": "JacksonDatabind_61",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_61/com/fasterxml/jackson/databind/jsontype/impl/StdTypeResolverBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_61/JacksonDatabind_61_buggy/StdTypeResolverBuilderTest.java",
+    "file_size_bytes": 8916,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3377,
+      "completion_tokens": 26633,
+      "total_tokens": 30010
+    },
+    "content_char_count": 8916,
+    "reasoning_char_count": 105390,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 124.85,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 542833,
+      "daily_remaining_tokens": 457167
+    },
+    "updated_at": "2026-09-25T11:17:11.420156"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Mockito_38/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java": {
+    "project": "Mockito_38",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_38/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Mockito_38/Mockito_38_buggy/ArgumentMatchingToolTest.java",
+    "file_size_bytes": 5685,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1865,
+      "completion_tokens": 15184,
+      "total_tokens": 17049
+    },
+    "content_char_count": 5686,
+    "reasoning_char_count": 57737,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 349.94,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 424385,
+      "daily_remaining_tokens": 575615
+    },
+    "updated_at": "2026-09-24T16:07:34.185860"
+  }
+}

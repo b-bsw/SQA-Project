@@ -1,0 +1,29 @@
+{
+  "Collections_9/org/apache/commons/collections/ExtendedProperties.java": {
+    "project": "Collections_9",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Collections_9/org/apache/commons/collections/ExtendedProperties.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Collections_9/Collections_9_buggy/ExtendedPropertiesTest.java",
+    "file_size_bytes": 13365,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7148,
+      "completion_tokens": 3117,
+      "total_tokens": 10265
+    },
+    "content_char_count": 13365,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 28.5,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 247793,
+      "daily_remaining_tokens": 752207
+    },
+    "updated_at": "2026-09-26T10:16:14.599139"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "target": "Mockito_33",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T14:33:49.765621+00:00",
+  "generated_files": [
+    "InvocationMatcherTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Mockito_33_buggy"
+}

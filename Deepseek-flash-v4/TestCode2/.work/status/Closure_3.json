@@ -1,0 +1,9 @@
+{
+  "target": "Closure_3",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T12:24:36.081110+00:00",
+  "generated_files": [
+    "FlowSensitiveInlineVariablesTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_3_buggy"
+}

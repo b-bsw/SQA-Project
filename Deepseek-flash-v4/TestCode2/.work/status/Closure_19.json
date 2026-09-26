@@ -1,0 +1,9 @@
+{
+  "target": "Closure_19",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T11:30:29.235318+00:00",
+  "generated_files": [
+    "ChainableReverseAbstractInterpreterTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_19_buggy"
+}

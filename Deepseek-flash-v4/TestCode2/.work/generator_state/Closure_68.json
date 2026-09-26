@@ -1,0 +1,29 @@
+{
+  "Closure_68/com/google/javascript/jscomp/parsing/JsDocInfoParser.java": {
+    "project": "Closure_68",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_68/com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_68/Closure_68_buggy/JsDocInfoParserTest.java",
+    "file_size_bytes": 37146,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 13907,
+      "completion_tokens": 9329,
+      "total_tokens": 23236
+    },
+    "content_char_count": 37146,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 100.83,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 161930,
+      "daily_remaining_tokens": 838070
+    },
+    "updated_at": "2026-09-26T10:14:05.304123"
+  }
+}

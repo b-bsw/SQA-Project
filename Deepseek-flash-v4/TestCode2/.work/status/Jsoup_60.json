@@ -1,0 +1,10 @@
+{
+  "target": "Jsoup_60",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:00:07.102163+00:00",
+  "generated_files": [
+    "TokenQueueTest.java",
+    "QueryParserTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Jsoup_60_buggy"
+}

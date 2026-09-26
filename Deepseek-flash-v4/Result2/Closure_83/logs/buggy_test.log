@@ -1,0 +1,14 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_83-6dvytbfw/Closure-83b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 8
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testFlagsThirdPartyWithExterns
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testShouldRunCompilerVersionFlag
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testBooleanOptionHandlerInvalidString
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testManageClosureDependencies
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testBooleanOptionHandlerNullParam
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testShouldRunCompilerHelpFlag
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testCreateExternsWithCustomExternsOnly
+  - com.google.javascript.jscomp.CommandLineRunnerTest::testVersionFlagWithPrintStream
+[exit 0]

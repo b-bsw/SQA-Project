@@ -1,0 +1,25 @@
+{
+  "Chart_23/org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java": {
+    "project": "Chart_23",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_23/org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Chart_23/Chart_23_buggy/MinMaxCategoryRendererTest.java",
+    "file_size_bytes": 6231,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5939,
+      "completion_tokens": 13777,
+      "total_tokens": 19716
+    },
+    "content_char_count": 6232,
+    "reasoning_char_count": 52628,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 351.16,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 19722,
+      "daily_remaining_tokens": 980278
+    },
+    "updated_at": "2026-09-24T14:38:43.141062"
+  }
+}

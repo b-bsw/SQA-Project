@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "generator": "DeepSeek-V4-Flash",
+  "created_at": "2026-09-25T20:49:13.505451+00:00",
+  "project": "Time",
+  "bug_id": 26,
+  "source": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Time_26_buggy",
+  "coverage_scope": "modified classes of buggy revision",
+  "tests": 53,
+  "test_files": 3,
+  "buggy": {
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_compile": "PASS",
+    "coverage_status": "PASS",
+    "lines": 567,
+    "covered_lines": 392,
+    "line_cov": 69.14,
+    "branches": 240,
+    "covered_branches": 144,
+    "branch_cov": 60.0
+  },
+  "fixed": {
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_compile": "PASS"
+  },
+  "verdict": "INCONCLUSIVE"
+}

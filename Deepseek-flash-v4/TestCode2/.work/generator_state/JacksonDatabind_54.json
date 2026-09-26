@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_54/com/fasterxml/jackson/databind/ser/PropertyBuilder.java": {
+    "project": "JacksonDatabind_54",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_54/com/fasterxml/jackson/databind/ser/PropertyBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_54/JacksonDatabind_54_buggy/PropertyBuilderTest.java",
+    "file_size_bytes": 14376,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4656,
+      "completion_tokens": 30013,
+      "total_tokens": 34669
+    },
+    "content_char_count": 14376,
+    "reasoning_char_count": 116748,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 142.57,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 547711,
+      "daily_remaining_tokens": 452289
+    },
+    "updated_at": "2026-09-25T11:13:01.522241"
+  }
+}

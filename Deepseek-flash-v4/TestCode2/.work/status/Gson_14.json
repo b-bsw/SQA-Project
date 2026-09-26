@@ -1,0 +1,9 @@
+{
+  "target": "Gson_14",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T17:47:36.461900+00:00",
+  "generated_files": [
+    "$Gson$TypesTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Gson_14_buggy"
+}

@@ -1,0 +1,10 @@
+{
+  "target": "JacksonDatabind_10",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:00:55.952304+00:00",
+  "generated_files": [
+    "AnyGetterWriterTest.java",
+    "BeanSerializerFactoryTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_10_buggy"
+}

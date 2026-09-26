@@ -1,0 +1,29 @@
+{
+  "Cli_11/org/apache/commons/cli/HelpFormatter.java": {
+    "project": "Cli_11",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_11/org/apache/commons/cli/HelpFormatter.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": null,
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Cli_11/Cli_11_buggy/HelpFormatterTest.java",
+    "file_size_bytes": 8573,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4339,
+      "completion_tokens": 20785,
+      "total_tokens": 25124
+    },
+    "content_char_count": 8585,
+    "reasoning_char_count": 74806,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 510.35,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 250711,
+      "daily_remaining_tokens": 749289
+    },
+    "updated_at": "2026-09-24T15:15:07.992262"
+  }
+}

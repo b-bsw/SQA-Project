@@ -1,0 +1,9 @@
+{
+  "target": "Codec_6",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:22:04.243919+00:00",
+  "generated_files": [
+    "Base64InputStreamTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Codec_6_buggy"
+}

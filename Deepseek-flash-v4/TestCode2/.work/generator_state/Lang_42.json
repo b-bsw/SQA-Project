@@ -1,0 +1,29 @@
+{
+  "Lang_42/org/apache/commons/lang/Entities.java": {
+    "project": "Lang_42",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_42/org/apache/commons/lang/Entities.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Lang_42/Lang_42_buggy/EntitiesTest.java",
+    "file_size_bytes": 7218,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5844,
+      "completion_tokens": 5725,
+      "total_tokens": 11569
+    },
+    "content_char_count": 7215,
+    "reasoning_char_count": 14558,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 66.71,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 932016,
+      "daily_remaining_tokens": 67984
+    },
+    "updated_at": "2026-09-25T07:31:43.197029"
+  }
+}

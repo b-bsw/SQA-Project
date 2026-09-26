@@ -1,0 +1,9 @@
+{
+  "target": "Chart_4",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-24T21:53:25.069315+00:00",
+  "generated_files": [
+    "XYPlotTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Chart_4_buggy"
+}

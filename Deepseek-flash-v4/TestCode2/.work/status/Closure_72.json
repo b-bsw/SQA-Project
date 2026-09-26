@@ -1,0 +1,10 @@
+{
+  "target": "Closure_72",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:14:17.817185+00:00",
+  "generated_files": [
+    "FunctionToBlockMutatorTest.java",
+    "RenameLabelsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_72_buggy"
+}

@@ -1,0 +1,12 @@
+{
+  "target": "Codec_1",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T20:54:52.634747+00:00",
+  "generated_files": [
+    "CaverphoneTest.java",
+    "DoubleMetaphoneTest.java",
+    "MetaphoneTest.java",
+    "SoundexUtilsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Codec_1_buggy"
+}

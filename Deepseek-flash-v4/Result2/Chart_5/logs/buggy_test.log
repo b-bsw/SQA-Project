@@ -1,0 +1,11 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Chart_5-yne1gqsu/Chart-5b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 5
+  - org.jfree.data.xy.XYSeriesTest::testToArray
+  - org.jfree.data.xy.XYSeriesTest::testIndexOfUsesLinearSearchWhenNotSorted
+  - org.jfree.data.xy.XYSeriesTest::testAddOrUpdateWithDuplicateXAllowedAddsItem
+  - org.jfree.data.xy.XYSeriesTest::testSetMaximumItemCountRejectsNegative
+  - org.jfree.data.xy.XYSeriesTest::testToArrayEmpty
+[exit 0]

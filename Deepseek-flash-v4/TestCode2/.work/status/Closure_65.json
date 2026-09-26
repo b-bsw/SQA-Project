@@ -1,0 +1,9 @@
+{
+  "target": "Closure_65",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:12:21.671374+00:00",
+  "generated_files": [
+    "CodeGeneratorTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_65_buggy"
+}

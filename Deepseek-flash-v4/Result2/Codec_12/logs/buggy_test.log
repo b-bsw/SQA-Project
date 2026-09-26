@@ -1,0 +1,9 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Codec_12-wmm4tnkx/Codec-12b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 3
+  - org.apache.commons.codec.binary.BaseNCodecInputStreamTest::testSkipNegativeRejected
+  - org.apache.commons.codec.binary.BaseNCodecInputStreamTest::testSkip
+  - org.apache.commons.codec.binary.BaseNCodecInputStreamTest::testAvailable
+[exit 0]

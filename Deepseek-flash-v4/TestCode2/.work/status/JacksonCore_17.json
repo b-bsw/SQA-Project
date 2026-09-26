@@ -1,0 +1,9 @@
+{
+  "target": "JacksonCore_17",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:29:58.500796+00:00",
+  "generated_files": [
+    "UTF8JsonGeneratorTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonCore_17_buggy"
+}

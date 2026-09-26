@@ -1,0 +1,9 @@
+{
+  "target": "Time_20",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T13:11:08.939152+00:00",
+  "generated_files": [
+    "DateTimeFormatterBuilderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Time_20_buggy"
+}

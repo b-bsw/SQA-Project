@@ -1,0 +1,10 @@
+{
+  "target": "Gson_4",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T17:48:46.725782+00:00",
+  "generated_files": [
+    "JsonReaderTest.java",
+    "JsonWriterTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Gson_4_buggy"
+}

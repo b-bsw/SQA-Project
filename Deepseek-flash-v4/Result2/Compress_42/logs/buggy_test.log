@@ -1,0 +1,11 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Compress_42-9h_1au3j/Compress-42b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 5
+  - org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest::testSetExtraInvalidData
+  - org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest::testConstructorZipEntryExtraParsingError
+  - org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest::testConstructorFileDirectory
+  - org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest::testAddExtraFieldReplacesExisting
+  - org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest::testRemoveExtraFieldPresent
+[exit 0]

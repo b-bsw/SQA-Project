@@ -1,0 +1,29 @@
+{
+  "Math_28/org/apache/commons/math3/optimization/linear/SimplexSolver.java": {
+    "project": "Math_28",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_28/org/apache/commons/math3/optimization/linear/SimplexSolver.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_28/Math_28_buggy/SimplexSolverTest.java",
+    "file_size_bytes": 7151,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3388,
+      "completion_tokens": 2913,
+      "total_tokens": 6301
+    },
+    "content_char_count": 7151,
+    "reasoning_char_count": 5097,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 26.44,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 627066,
+      "daily_remaining_tokens": 372934
+    },
+    "updated_at": "2026-09-25T11:10:32.835041"
+  }
+}

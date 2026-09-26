@@ -1,0 +1,9 @@
+{
+  "target": "Closure_118",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:34:44.586773+00:00",
+  "generated_files": [
+    "DisambiguatePropertiesTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_118_buggy"
+}

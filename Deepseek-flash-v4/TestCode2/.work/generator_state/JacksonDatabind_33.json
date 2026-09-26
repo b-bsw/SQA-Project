@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_33/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java": {
+    "project": "JacksonDatabind_33",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_33/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_33/JacksonDatabind_33_buggy/JacksonAnnotationIntrospectorTest.java",
+    "file_size_bytes": 26174,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 8315,
+      "completion_tokens": 6579,
+      "total_tokens": 14894
+    },
+    "content_char_count": 26174,
+    "reasoning_char_count": 4607,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 60.94,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 272672,
+      "daily_remaining_tokens": 727328
+    },
+    "updated_at": "2026-09-25T11:01:58.872844"
+  }
+}

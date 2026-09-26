@@ -1,0 +1,12 @@
+{
+  "target": "Closure_165",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T01:05:15.238136+00:00",
+  "generated_files": [
+    "JSTypeRegistryTest.java",
+    "ObjectTypeTest.java",
+    "RecordTypeTest.java",
+    "RecordTypeBuilderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_165_buggy"
+}

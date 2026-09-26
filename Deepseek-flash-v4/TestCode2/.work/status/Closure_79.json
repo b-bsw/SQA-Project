@@ -1,0 +1,10 @@
+{
+  "target": "Closure_79",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:16:51.588067+00:00",
+  "generated_files": [
+    "NormalizeTest.java",
+    "VarCheckTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_79_buggy"
+}

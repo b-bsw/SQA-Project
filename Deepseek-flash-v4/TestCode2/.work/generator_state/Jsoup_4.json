@@ -1,0 +1,29 @@
+{
+  "Jsoup_4/org/jsoup/nodes/Entities.java": {
+    "project": "Jsoup_4",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_4/org/jsoup/nodes/Entities.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Jsoup_4/Jsoup_4_buggy/EntitiesTest.java",
+    "file_size_bytes": 2674,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 27719,
+      "completion_tokens": 10378,
+      "total_tokens": 38097
+    },
+    "content_char_count": 2674,
+    "reasoning_char_count": 38590,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 59.44,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 233058,
+      "daily_remaining_tokens": 766942
+    },
+    "updated_at": "2026-09-25T10:53:48.316621"
+  }
+}

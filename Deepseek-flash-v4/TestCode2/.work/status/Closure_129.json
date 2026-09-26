@@ -1,0 +1,9 @@
+{
+  "target": "Closure_129",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:39:54.908887+00:00",
+  "generated_files": [
+    "PrepareAstTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_129_buggy"
+}

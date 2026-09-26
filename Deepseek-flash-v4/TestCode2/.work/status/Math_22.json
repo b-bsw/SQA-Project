@@ -1,0 +1,10 @@
+{
+  "target": "Math_22",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:10:29.199190+00:00",
+  "generated_files": [
+    "FDistributionTest.java",
+    "UniformRealDistributionTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Math_22_buggy"
+}

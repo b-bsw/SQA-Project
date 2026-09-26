@@ -1,0 +1,191 @@
+{
+  "Math_6/org/apache/commons/math3/optim/BaseOptimizer.java": {
+    "project": "Math_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_6/org/apache/commons/math3/optim/BaseOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_6/Math_6_buggy/BaseOptimizerTest.java",
+    "file_size_bytes": 4322,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3776,
+      "completion_tokens": 30136,
+      "total_tokens": 33912
+    },
+    "content_char_count": 4322,
+    "reasoning_char_count": 122307,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 184.3,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 824221,
+      "daily_remaining_tokens": 175779
+    },
+    "updated_at": "2026-09-25T11:24:36.420863"
+  },
+  "Math_6/org/apache/commons/math3/optim/nonlinear/scalar/gradient/NonLinearConjugateGradientOptimizer.java": {
+    "project": "Math_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_6/org/apache/commons/math3/optim/nonlinear/scalar/gradient/NonLinearConjugateGradientOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_6/Math_6_buggy/NonLinearConjugateGradientOptimizerTest.java",
+    "file_size_bytes": 6494,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4976,
+      "completion_tokens": 20930,
+      "total_tokens": 25906
+    },
+    "content_char_count": 6494,
+    "reasoning_char_count": 76312,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 124.38,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 850127,
+      "daily_remaining_tokens": 149873
+    },
+    "updated_at": "2026-09-25T11:26:40.895152"
+  },
+  "Math_6/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java": {
+    "project": "Math_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_6/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_6/Math_6_buggy/CMAESOptimizerTest.java",
+    "file_size_bytes": 8270,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 9693,
+      "completion_tokens": 29212,
+      "total_tokens": 38905
+    },
+    "content_char_count": 8270,
+    "reasoning_char_count": 104540,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 173.1,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 889032,
+      "daily_remaining_tokens": 110968
+    },
+    "updated_at": "2026-09-25T11:29:34.129901"
+  },
+  "Math_6/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/PowellOptimizer.java": {
+    "project": "Math_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_6/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/PowellOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_6/Math_6_buggy/PowellOptimizerTest.java",
+    "file_size_bytes": 5156,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5166,
+      "completion_tokens": 11018,
+      "total_tokens": 16184
+    },
+    "content_char_count": 5156,
+    "reasoning_char_count": 38643,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 69.38,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 935163,
+      "daily_remaining_tokens": 64837
+    },
+    "updated_at": "2026-09-25T11:30:43.652693"
+  },
+  "Math_6/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/SimplexOptimizer.java": {
+    "project": "Math_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_6/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/SimplexOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_6/Math_6_buggy/SimplexOptimizerTest.java",
+    "file_size_bytes": 8911,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3727,
+      "completion_tokens": 1750,
+      "total_tokens": 5477
+    },
+    "content_char_count": 8911,
+    "reasoning_char_count": 0,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 15.63,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 940640,
+      "daily_remaining_tokens": 59360
+    },
+    "updated_at": "2026-09-25T11:30:59.426824"
+  },
+  "Math_6/org/apache/commons/math3/optim/nonlinear/vector/jacobian/GaussNewtonOptimizer.java": {
+    "project": "Math_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_6/org/apache/commons/math3/optim/nonlinear/vector/jacobian/GaussNewtonOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_6/Math_6_buggy/GaussNewtonOptimizerTest.java",
+    "file_size_bytes": 5014,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3309,
+      "completion_tokens": 39706,
+      "total_tokens": 43015
+    },
+    "content_char_count": 5014,
+    "reasoning_char_count": 163493,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 231.38,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 983655,
+      "daily_remaining_tokens": 16345
+    },
+    "updated_at": "2026-09-25T11:34:50.921624"
+  },
+  "Math_6/org/apache/commons/math3/optim/nonlinear/vector/jacobian/LevenbergMarquardtOptimizer.java": {
+    "project": "Math_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_6/org/apache/commons/math3/optim/nonlinear/vector/jacobian/LevenbergMarquardtOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_6/Math_6_buggy/LevenbergMarquardtOptimizerTest.java",
+    "file_size_bytes": 4889,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7081,
+      "completion_tokens": 20249,
+      "total_tokens": 27330
+    },
+    "content_char_count": 4889,
+    "reasoning_char_count": 78622,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 119.19,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 1010985,
+      "daily_remaining_tokens": -10985
+    },
+    "updated_at": "2026-09-25T11:36:50.231078"
+  }
+}

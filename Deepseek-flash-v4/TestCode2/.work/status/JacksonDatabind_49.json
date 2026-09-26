@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_49",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:10:54.591119+00:00",
+  "generated_files": [
+    "WritableObjectIdTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_49_buggy"
+}

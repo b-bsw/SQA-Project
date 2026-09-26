@@ -1,0 +1,29 @@
+{
+  "Math_18/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java": {
+    "project": "Math_18",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_18/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_18/Math_18_buggy/CMAESOptimizerTest.java",
+    "file_size_bytes": 6814,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10256,
+      "completion_tokens": 7946,
+      "total_tokens": 18202
+    },
+    "content_char_count": 6814,
+    "reasoning_char_count": 25451,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 38.68,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 125935,
+      "daily_remaining_tokens": 874065
+    },
+    "updated_at": "2026-09-25T11:08:29.763421"
+  }
+}

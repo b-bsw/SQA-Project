@@ -1,0 +1,29 @@
+{
+  "Jsoup_42/org/jsoup/nodes/FormElement.java": {
+    "project": "Jsoup_42",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_42/org/jsoup/nodes/FormElement.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Jsoup_42/Jsoup_42_buggy/FormElementTest.java",
+    "file_size_bytes": 7834,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2250,
+      "completion_tokens": 7030,
+      "total_tokens": 9280
+    },
+    "content_char_count": 7834,
+    "reasoning_char_count": 21239,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 66.13,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 170142,
+      "daily_remaining_tokens": 829858
+    },
+    "updated_at": "2026-09-25T10:54:14.745339"
+  }
+}

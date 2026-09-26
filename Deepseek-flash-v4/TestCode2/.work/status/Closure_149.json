@@ -1,0 +1,12 @@
+{
+  "target": "Closure_149",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:51:12.918359+00:00",
+  "generated_files": [
+    "AbstractCommandLineRunnerTest.java",
+    "CommandLineRunnerTest.java",
+    "CompilerTest.java",
+    "CompilerOptionsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_149_buggy"
+}

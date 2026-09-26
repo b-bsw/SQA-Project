@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_7/com/fasterxml/jackson/databind/util/TokenBuffer.java": {
+    "project": "JacksonDatabind_7",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_7/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_7/JacksonDatabind_7_buggy/TokenBufferTest.java",
+    "file_size_bytes": 12858,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10360,
+      "completion_tokens": 25213,
+      "total_tokens": 35573
+    },
+    "content_char_count": 12858,
+    "reasoning_char_count": 92394,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 131.56,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 800344,
+      "daily_remaining_tokens": 199656
+    },
+    "updated_at": "2026-09-25T11:21:06.411573"
+  }
+}

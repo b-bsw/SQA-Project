@@ -1,0 +1,9 @@
+{
+  "target": "Closure_8",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:16:33.355161+00:00",
+  "generated_files": [
+    "CollapseVariableDeclarationsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_8_buggy"
+}

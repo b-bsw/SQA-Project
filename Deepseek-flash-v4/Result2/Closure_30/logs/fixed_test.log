@@ -1,0 +1,11 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_30-5bt0iog1/Closure-30b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 5
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessInlinesSingleUseVariable
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessMultipleVariablesDoesNotThrow
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessEmptyFunctionDoesNotThrow
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessLoopDoesNotThrow
+  - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testProcessGlobalCodeDoesNotThrow
+[exit 0]

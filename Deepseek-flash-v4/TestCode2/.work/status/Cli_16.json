@@ -1,0 +1,12 @@
+{
+  "target": "Cli_16",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-24T23:38:40.865486+00:00",
+  "generated_files": [
+    "OptionTest.java",
+    "WriteableCommandLineImplTest.java",
+    "GroupImplTest.java",
+    "OptionImplTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Cli_16_buggy"
+}

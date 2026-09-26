@@ -1,0 +1,13 @@
+{
+  "target": "Jsoup_92",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:16:10.487094+00:00",
+  "generated_files": [
+    "AttributesTest.java",
+    "HtmlTreeBuilderTest.java",
+    "ParseSettingsTest.java",
+    "TokenTest.java",
+    "XmlTreeBuilderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Jsoup_92_buggy"
+}

@@ -1,0 +1,9 @@
+{
+  "target": "Jsoup_32",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:10:32.669670+00:00",
+  "generated_files": [
+    "ElementTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Jsoup_32_buggy"
+}

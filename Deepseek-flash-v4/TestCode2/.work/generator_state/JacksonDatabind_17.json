@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_17/com/fasterxml/jackson/databind/ObjectMapper.java": {
+    "project": "JacksonDatabind_17",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_17/com/fasterxml/jackson/databind/ObjectMapper.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_17/JacksonDatabind_17_buggy/ObjectMapperTest.java",
+    "file_size_bytes": 5415,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 15209,
+      "completion_tokens": 7780,
+      "total_tokens": 22989
+    },
+    "content_char_count": 5415,
+    "reasoning_char_count": 26477,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 73.15,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 37735,
+      "daily_remaining_tokens": 962265
+    },
+    "updated_at": "2026-09-25T10:47:05.859681"
+  }
+}

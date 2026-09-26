@@ -1,0 +1,9 @@
+{
+  "target": "Chart_26",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-24T21:46:42.964205+00:00",
+  "generated_files": [
+    "AxisTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Chart_26_buggy"
+}

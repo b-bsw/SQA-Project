@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_18/com/fasterxml/jackson/databind/MappingIterator.java": {
+    "project": "JacksonDatabind_18",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_18/com/fasterxml/jackson/databind/MappingIterator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_18/JacksonDatabind_18_buggy/MappingIteratorTest.java",
+    "file_size_bytes": 9286,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3784,
+      "completion_tokens": 18944,
+      "total_tokens": 22728
+    },
+    "content_char_count": 9298,
+    "reasoning_char_count": 73737,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 832.92,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 79585,
+      "daily_remaining_tokens": 920415
+    },
+    "updated_at": "2026-09-25T11:01:00.984786"
+  }
+}

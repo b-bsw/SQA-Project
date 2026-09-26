@@ -1,0 +1,10 @@
+{
+  "target": "Closure_47",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T14:19:50.315780+00:00",
+  "generated_files": [
+    "SourceMapConsumerV3Test.java",
+    "SourceMapTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_47_buggy"
+}

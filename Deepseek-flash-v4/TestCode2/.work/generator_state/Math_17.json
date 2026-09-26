@@ -1,0 +1,29 @@
+{
+  "Math_17/org/apache/commons/math3/dfp/Dfp.java": {
+    "project": "Math_17",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_17/org/apache/commons/math3/dfp/Dfp.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_17/Math_17_buggy/DfpTest.java",
+    "file_size_bytes": 5703,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 14609,
+      "completion_tokens": 20303,
+      "total_tokens": 34912
+    },
+    "content_char_count": 5715,
+    "reasoning_char_count": 63571,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 891.56,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 468889,
+      "daily_remaining_tokens": 531111
+    },
+    "updated_at": "2026-09-25T11:22:42.351689"
+  }
+}

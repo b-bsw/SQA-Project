@@ -1,0 +1,12 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Codec_11-np4pf9os/Codec-11b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 6
+  - org.apache.commons.codec.net.QuotedPrintableCodecTest::testEmptyStringsAndByteArrays
+  - org.apache.commons.codec.net.QuotedPrintableCodecTest::testEncodeStringWithCharset
+  - org.apache.commons.codec.net.QuotedPrintableCodecTest::testEncodeQuotedPrintableNullHandling
+  - org.apache.commons.codec.net.QuotedPrintableCodecTest::testEncodeStringEscapesNonAscii
+  - org.apache.commons.codec.net.QuotedPrintableCodecTest::testEncodeObjectDispatchesToByteArrayAndString
+  - org.apache.commons.codec.net.QuotedPrintableCodecTest::testEncodeByteArrayEscapesEqualSign
+[exit 0]

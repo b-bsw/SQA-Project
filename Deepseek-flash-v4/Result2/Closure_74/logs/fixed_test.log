@@ -1,0 +1,62 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_74-5jd_6xr8/Closure-74b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 56
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Comparison_Sheq
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Comparison_Shne
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_BitOr_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldObjectPropAccess_Simple
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_BitXor_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Pos_NumericResult
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldComparison_ThisAndThis
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldKnownMethods_StringSubstr
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldKnownMethods_StringIndexOf
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldKnownMethods_StringToLowerCase
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Lsh_Numbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Sub_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Mul_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Void_WithoutSideEffects
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_GetProp_ArrayLength
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldKnownMethods_StringLastIndexOf
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Not_TrueLiteral
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldKnownMethods_StringToUpperCase
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldComparison_NullAndUndefined
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Mod_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_BitAnd_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Div_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Ursh_Numbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldCtorCall_StringInForcedStringContext
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Not_FalseLiteral
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Instanceof_LiteralLeft
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldAssign_Simple
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_And_FalseLeft
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_GetElem_ArrayLitValidIndex
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Or_FalseLeft
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Add_TwoNumbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Neg_NaN
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Add_TwoStrings
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldKnownMethods_ArrayJoin
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Rsh_Numbers
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Bitnot_OutOfRange
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Or_TrueLeft
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_GetElem_ArrayLitEmptyElement
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Bitnot_InRange
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Comparison_Eq
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Comparison_Gt
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Comparison_Lt
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Comparison_Ne
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_GetElem_ArrayLitOutOfBounds
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Neg_Number
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_GetProp_StringLength
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_GetElem_ArrayLitNonIntegerIndex
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_GetElem_ArrayLitNegativeIndex
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Bitnot_Fractional
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Typeof_LiteralNumber
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Typeof_LiteralString
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_New
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldCtorCall_StringNoArg
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_And_TrueLeft
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_Typeof_UndefinedName
+  - com.google.javascript.jscomp.PeepholeFoldConstantsTest::testOptimizeSubtree_TryFoldKnownMethods_StringSubstring
+[exit 0]

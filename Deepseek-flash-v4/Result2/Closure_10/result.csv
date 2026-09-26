@@ -1,0 +1,2 @@
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
+Closure,10,8,FAIL,4,FAIL,4,INCONCLUSIVE,1031,75,7.27,1028,44,4.28

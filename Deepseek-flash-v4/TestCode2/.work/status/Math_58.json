@@ -1,0 +1,9 @@
+{
+  "target": "Math_58",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:21:30.239764+00:00",
+  "generated_files": [
+    "GaussianFitterTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Math_58_buggy"
+}

@@ -1,0 +1,9 @@
+{
+  "target": "Closure_42",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T13:48:09.884458+00:00",
+  "generated_files": [
+    "IRFactoryTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_42_buggy"
+}

@@ -1,0 +1,9 @@
+{
+  "target": "Closure_62",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:11:00.583728+00:00",
+  "generated_files": [
+    "LightweightMessageFormatterTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_62_buggy"
+}

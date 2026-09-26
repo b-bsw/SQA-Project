@@ -1,0 +1,9 @@
+{
+  "target": "Chart_12",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-24T18:22:02.951855+00:00",
+  "generated_files": [
+    "MultiplePiePlotTest.java"
+  ],
+  "test_code": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Deepseek-flash-v4\\TestCode2\\Chart_12_buggy"
+}

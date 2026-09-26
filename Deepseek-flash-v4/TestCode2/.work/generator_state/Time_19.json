@@ -1,0 +1,29 @@
+{
+  "Time_19/org/joda/time/DateTimeZone.java": {
+    "project": "Time_19",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_19/org/joda/time/DateTimeZone.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Time_19/Time_19_buggy/DateTimeZoneTest.java",
+    "file_size_bytes": 8836,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6137,
+      "completion_tokens": 33445,
+      "total_tokens": 39582
+    },
+    "content_char_count": 8849,
+    "reasoning_char_count": 122915,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 1507.87,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 352863,
+      "daily_remaining_tokens": 647137
+    },
+    "updated_at": "2026-09-25T06:30:15.818821"
+  }
+}

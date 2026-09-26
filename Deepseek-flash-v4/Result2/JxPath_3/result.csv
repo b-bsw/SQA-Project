@@ -1,0 +1,2 @@
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
+JxPath,3,10,FAIL,1,FAIL,1,INCONCLUSIVE,77,53,68.83,26,13,50.0

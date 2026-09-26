@@ -1,0 +1,29 @@
+{
+  "Math_68/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java": {
+    "project": "Math_68",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_68/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_68/Math_68_buggy/LevenbergMarquardtOptimizerTest.java",
+    "file_size_bytes": 5329,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6195,
+      "completion_tokens": 12205,
+      "total_tokens": 18400
+    },
+    "content_char_count": 5329,
+    "reasoning_char_count": 43853,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 75.27,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 941170,
+      "daily_remaining_tokens": 58830
+    },
+    "updated_at": "2026-09-25T11:25:37.070563"
+  }
+}

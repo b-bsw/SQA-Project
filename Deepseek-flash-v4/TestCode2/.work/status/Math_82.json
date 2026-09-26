@@ -1,0 +1,9 @@
+{
+  "target": "Math_82",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:39:32.733617+00:00",
+  "generated_files": [
+    "SimplexSolverTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Math_82_buggy"
+}

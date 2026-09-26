@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_101/com/fasterxml/jackson/databind/deser/BeanDeserializer.java": {
+    "project": "JacksonDatabind_101",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_101/com/fasterxml/jackson/databind/deser/BeanDeserializer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_101/JacksonDatabind_101_buggy/BeanDeserializerTest.java",
+    "file_size_bytes": 27213,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7898,
+      "completion_tokens": 32290,
+      "total_tokens": 40188
+    },
+    "content_char_count": 27225,
+    "reasoning_char_count": 109822,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 435.67,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 40188,
+      "daily_remaining_tokens": 959812
+    },
+    "updated_at": "2026-09-25T10:51:28.125140"
+  }
+}

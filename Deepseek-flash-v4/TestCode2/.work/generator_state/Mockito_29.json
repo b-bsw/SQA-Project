@@ -1,0 +1,25 @@
+{
+  "Mockito_29/org/mockito/internal/matchers/Same.java": {
+    "project": "Mockito_29",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_29/org/mockito/internal/matchers/Same.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Mockito_29_buggy/SameTest.java",
+    "file_size_bytes": 2897,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1646,
+      "completion_tokens": 649,
+      "total_tokens": 2295
+    },
+    "content_char_count": 2897,
+    "reasoning_char_count": 0,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 16.39,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 6890,
+      "daily_remaining_tokens": 993110
+    },
+    "updated_at": "2026-09-25T01:07:01.098122"
+  }
+}

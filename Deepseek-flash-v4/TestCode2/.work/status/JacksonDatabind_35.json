@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_35",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:03:47.451922+00:00",
+  "generated_files": [
+    "AsWrapperTypeDeserializerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_35_buggy"
+}

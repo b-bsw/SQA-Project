@@ -1,0 +1,56 @@
+{
+  "Closure_162/com/google/javascript/jscomp/Scope.java": {
+    "project": "Closure_162",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_162/com/google/javascript/jscomp/Scope.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_162/Closure_162_buggy/ScopeTest.java",
+    "file_size_bytes": 20779,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5623,
+      "completion_tokens": 5489,
+      "total_tokens": 11112
+    },
+    "content_char_count": 20779,
+    "reasoning_char_count": 0,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 42.08,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 919193,
+      "daily_remaining_tokens": 80807
+    },
+    "updated_at": "2026-09-24T17:58:07.235680"
+  },
+  "Closure_162/com/google/javascript/jscomp/ScopedAliases.java": {
+    "project": "Closure_162",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_162/com/google/javascript/jscomp/ScopedAliases.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_162/Closure_162_buggy/ScopedAliasesTest.java",
+    "file_size_bytes": 10195,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4855,
+      "completion_tokens": 9569,
+      "total_tokens": 14424
+    },
+    "content_char_count": 10195,
+    "reasoning_char_count": 27435,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 90.86,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 933617,
+      "daily_remaining_tokens": 66383
+    },
+    "updated_at": "2026-09-24T17:59:38.199525"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_98",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T19:55:33.492556+00:00",
+  "generated_files": [
+    "ExternalTypeHandlerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_98_buggy"
+}

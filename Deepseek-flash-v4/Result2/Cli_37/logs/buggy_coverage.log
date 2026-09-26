@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-Cli_37-3sriqh8t/Cli-37b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 187
+     Lines covered: 158
+  Conditions total: 158
+Conditions covered: 102
+     Line coverage: 84.5%
+Condition coverage: 64.6%
+[exit 0]

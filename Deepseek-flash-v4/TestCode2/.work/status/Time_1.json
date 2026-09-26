@@ -1,0 +1,10 @@
+{
+  "target": "Time_1",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T17:48:39.252674+00:00",
+  "generated_files": [
+    "PartialTest.java",
+    "UnsupportedDurationFieldTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Time_1_buggy"
+}

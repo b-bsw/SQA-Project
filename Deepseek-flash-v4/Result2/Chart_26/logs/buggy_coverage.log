@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-Chart_26-dskvvp1a/Chart-26b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 350
+     Lines covered: 195
+  Conditions total: 128
+Conditions covered: 65
+     Line coverage: 55.7%
+Condition coverage: 50.8%
+[exit 0]

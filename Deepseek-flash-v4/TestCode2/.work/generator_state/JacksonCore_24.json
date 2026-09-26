@@ -1,0 +1,56 @@
+{
+  "JacksonCore_24/com/fasterxml/jackson/core/base/ParserBase.java": {
+    "project": "JacksonCore_24",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonCore_24/com/fasterxml/jackson/core/base/ParserBase.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonCore_24/JacksonCore_24_buggy/ParserBaseTest.java",
+    "file_size_bytes": 12978,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7804,
+      "completion_tokens": 3059,
+      "total_tokens": 10863
+    },
+    "content_char_count": 12978,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 30.36,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 344933,
+      "daily_remaining_tokens": 655067
+    },
+    "updated_at": "2026-09-26T10:34:10.800359"
+  },
+  "JacksonCore_24/com/fasterxml/jackson/core/base/ParserMinimalBase.java": {
+    "project": "JacksonCore_24",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonCore_24/com/fasterxml/jackson/core/base/ParserMinimalBase.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonCore_24/JacksonCore_24_buggy/ParserMinimalBaseTest.java",
+    "file_size_bytes": 29929,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6901,
+      "completion_tokens": 6989,
+      "total_tokens": 13890
+    },
+    "content_char_count": 29929,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 60.62,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 358823,
+      "daily_remaining_tokens": 641177
+    },
+    "updated_at": "2026-09-26T10:35:11.529715"
+  }
+}

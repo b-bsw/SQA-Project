@@ -1,0 +1,9 @@
+{
+  "target": "Math_100",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:09:36.452014+00:00",
+  "generated_files": [
+    "AbstractEstimatorTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Math_100_buggy"
+}

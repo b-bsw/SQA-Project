@@ -1,0 +1,9 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_51-tdsjjzd3/Closure-51b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 3
+  - com.google.javascript.jscomp.CodeConsumerTest::testAddNumber_largeDoubleScientificNotation
+  - com.google.javascript.jscomp.CodeConsumerTest::testAddOp_arrow_prevMinus_addsSpaceBefore
+  - com.google.javascript.jscomp.CodeConsumerTest::testEndBlock_default
+[exit 0]

@@ -1,0 +1,25 @@
+{
+  "Chart_9/org/jfree/data/time/TimeSeries.java": {
+    "project": "Chart_9",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_9/org/jfree/data/time/TimeSeries.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Chart_9/Chart_9_buggy/TimeSeriesTest.java",
+    "file_size_bytes": 11561,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5034,
+      "completion_tokens": 14492,
+      "total_tokens": 19526
+    },
+    "content_char_count": 11561,
+    "reasoning_char_count": 44906,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 364.61,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 284621,
+      "daily_remaining_tokens": 715379
+    },
+    "updated_at": "2026-09-24T14:59:32.171609"
+  }
+}

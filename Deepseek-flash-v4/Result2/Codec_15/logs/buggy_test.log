@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Codec_15-wnf220d7/Codec-15b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Use of uninitialized value $lines[112] in pattern match (m//) at /home/face/defect4j/defects4j/framework/core/Utils.pm line 738.
+Use of uninitialized value $lines[112] in pattern match (m//) at /home/face/defect4j/defects4j/framework/core/Utils.pm line 738.
+Use of uninitialized value in pattern match (m//) at /home/face/defect4j/defects4j/framework/core/Utils.pm line 741.
+Failing tests: 4
+  - org.apache.commons.codec.language.SoundexTest::testMapInvalidChar
+  - org.apache.commons.codec.language.SoundexTest::testSoundexHWRule
+  - org.apache.commons.codec.language.SoundexTest::testDifference
+  - org.apache.commons.codec.language.SoundexTest::testMapNonLetter
+[exit 0]

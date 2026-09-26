@@ -1,0 +1,2 @@
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
+Time,14,22,PASS,0,PASS,0,NOT_REVEALING,114,84,73.68,46,30,65.22

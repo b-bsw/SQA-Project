@@ -1,0 +1,12 @@
+{
+  "target": "Compress_4",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:27:39.126420+00:00",
+  "generated_files": [
+    "CpioArchiveOutputStreamTest.java",
+    "TarArchiveOutputStreamTest.java",
+    "ZipArchiveOutputStreamTest.java",
+    "ChangeSetPerformerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Compress_4_buggy"
+}

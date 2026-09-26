@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_29-9kt9o3pw/Closure-29b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 7
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::leavesNonObjectVariablesAlone
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::doesNotInlineSelfReferencingInitializer
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::doesNotInlineGlobalObject
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::doesNotInlineWhenMethodIsCalledOnObject
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::doesNotInlineWhenObjectIsUsedDirectly
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::inlinesLocalObjectWithOnlyPropertyReads
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::doesNotInlineWhenReferencedPropertyIsMissing
+[exit 0]

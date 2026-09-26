@@ -1,0 +1,9 @@
+{
+  "target": "Mockito_25",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:12:55.746997+00:00",
+  "generated_files": [
+    "ReturnsDeepStubsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Mockito_25_buggy"
+}

@@ -1,0 +1,24 @@
+{
+  "target": "JacksonDatabind_103",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:16:42.907536+00:00",
+  "generated_files": [
+    "DatabindContextTest.java",
+    "DeserializationContextTest.java",
+    "JsonMappingExceptionTest.java",
+    "SerializerProviderTest.java",
+    "BasicDeserializerFactoryTest.java",
+    "BeanDeserializerFactoryTest.java",
+    "DeserializerCacheTest.java",
+    "SettableAnyPropertyTest.java",
+    "SettableBeanPropertyTest.java",
+    "StdDeserializerTest.java",
+    "StdKeyDeserializerTest.java",
+    "StdValueInstantiatorTest.java",
+    "BasicBeanDescriptionTest.java",
+    "DefaultSerializerProviderTest.java",
+    "PropertyBuilderTest.java",
+    "ClassUtilTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_103_buggy"
+}

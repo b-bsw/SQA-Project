@@ -1,0 +1,10 @@
+{
+  "target": "Closure_162",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:59:38.275343+00:00",
+  "generated_files": [
+    "ScopeTest.java",
+    "ScopedAliasesTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_162_buggy"
+}

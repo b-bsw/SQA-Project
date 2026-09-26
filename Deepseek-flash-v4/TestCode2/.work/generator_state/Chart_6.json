@@ -1,0 +1,25 @@
+{
+  "Chart_6/org/jfree/chart/util/ShapeList.java": {
+    "project": "Chart_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_6/org/jfree/chart/util/ShapeList.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Chart_6/Chart_6_buggy/ShapeListTest.java",
+    "file_size_bytes": 1879,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2456,
+      "completion_tokens": 26398,
+      "total_tokens": 28854
+    },
+    "content_char_count": 2000,
+    "reasoning_char_count": 107291,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 652.26,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 73813,
+      "daily_remaining_tokens": 926187
+    },
+    "updated_at": "2026-09-24T14:57:37.164994"
+  }
+}

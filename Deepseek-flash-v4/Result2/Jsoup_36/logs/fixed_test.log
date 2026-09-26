@@ -1,0 +1,8 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Jsoup_36-f2gfa3qj/Jsoup-36b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 2
+  - org.jsoup.helper.DataUtilTest::testGetCharsetFromContentType_UpperCase
+  - org.jsoup.helper.DataUtilTest::testLoad_InputStreamWithXmlParser
+[exit 0]

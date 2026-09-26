@@ -1,0 +1,9 @@
+{
+  "target": "Lang_11",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T21:37:33.944260+00:00",
+  "generated_files": [
+    "RandomStringUtilsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Lang_11_buggy"
+}

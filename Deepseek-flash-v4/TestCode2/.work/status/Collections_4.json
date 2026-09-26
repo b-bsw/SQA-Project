@@ -1,0 +1,9 @@
+{
+  "target": "Collections_4",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:21:54.570848+00:00",
+  "generated_files": [
+    "MultiValueMapTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Collections_4_buggy"
+}

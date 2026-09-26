@@ -1,0 +1,29 @@
+{
+  "Math_33/org/apache/commons/math3/optimization/linear/SimplexTableau.java": {
+    "project": "Math_33",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_33/org/apache/commons/math3/optimization/linear/SimplexTableau.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_33/Math_33_buggy/SimplexTableauTest.java",
+    "file_size_bytes": 7299,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6615,
+      "completion_tokens": 5967,
+      "total_tokens": 12582
+    },
+    "content_char_count": 7299,
+    "reasoning_char_count": 17001,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 49.25,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 584943,
+      "daily_remaining_tokens": 415057
+    },
+    "updated_at": "2026-09-25T11:11:22.975746"
+  }
+}

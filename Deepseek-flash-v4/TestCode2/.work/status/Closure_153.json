@@ -1,0 +1,10 @@
+{
+  "target": "Closure_153",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:51:55.720964+00:00",
+  "generated_files": [
+    "NormalizeTest.java",
+    "SyntacticScopeCreatorTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_153_buggy"
+}

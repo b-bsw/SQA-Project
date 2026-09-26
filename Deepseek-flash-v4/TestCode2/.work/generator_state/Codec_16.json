@@ -1,0 +1,29 @@
+{
+  "Codec_16/org/apache/commons/codec/binary/Base32.java": {
+    "project": "Codec_16",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_16/org/apache/commons/codec/binary/Base32.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Codec_16/Codec_16_buggy/Base32Test.java",
+    "file_size_bytes": 6172,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5092,
+      "completion_tokens": 1783,
+      "total_tokens": 6875
+    },
+    "content_char_count": 6172,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 10.12,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 150559,
+      "daily_remaining_tokens": 849441
+    },
+    "updated_at": "2026-09-26T10:21:16.734507"
+  }
+}

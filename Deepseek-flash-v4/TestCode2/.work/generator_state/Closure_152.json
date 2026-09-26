@@ -1,0 +1,29 @@
+{
+  "Closure_152/com/google/javascript/rhino/jstype/FunctionType.java": {
+    "project": "Closure_152",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_152/com/google/javascript/rhino/jstype/FunctionType.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_152/Closure_152_buggy/FunctionTypeTest.java",
+    "file_size_bytes": 7842,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6384,
+      "completion_tokens": 8493,
+      "total_tokens": 14877
+    },
+    "content_char_count": 7842,
+    "reasoning_char_count": 26852,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 91.06,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 874781,
+      "daily_remaining_tokens": 125219
+    },
+    "updated_at": "2026-09-24T17:53:54.525910"
+  }
+}

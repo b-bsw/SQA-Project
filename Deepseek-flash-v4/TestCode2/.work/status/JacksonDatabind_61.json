@@ -1,0 +1,10 @@
+{
+  "target": "JacksonDatabind_61",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:17:11.519507+00:00",
+  "generated_files": [
+    "ObjectMapperTest.java",
+    "StdTypeResolverBuilderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_61_buggy"
+}

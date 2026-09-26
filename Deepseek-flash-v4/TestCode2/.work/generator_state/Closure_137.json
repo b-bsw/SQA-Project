@@ -1,0 +1,83 @@
+{
+  "Closure_137/com/google/javascript/jscomp/MakeDeclaredNamesUnique.java": {
+    "project": "Closure_137",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_137/com/google/javascript/jscomp/MakeDeclaredNamesUnique.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_137/Closure_137_buggy/MakeDeclaredNamesUniqueTest.java",
+    "file_size_bytes": 19171,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5373,
+      "completion_tokens": 11416,
+      "total_tokens": 16789
+    },
+    "content_char_count": 19183,
+    "reasoning_char_count": 25835,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 107.07,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 792100,
+      "daily_remaining_tokens": 207900
+    },
+    "updated_at": "2026-09-24T17:40:58.203696"
+  },
+  "Closure_137/com/google/javascript/jscomp/NodeUtil.java": {
+    "project": "Closure_137",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_137/com/google/javascript/jscomp/NodeUtil.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_137/Closure_137_buggy/NodeUtilTest.java",
+    "file_size_bytes": 34007,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10899,
+      "completion_tokens": 10065,
+      "total_tokens": 20964
+    },
+    "content_char_count": 34002,
+    "reasoning_char_count": 7470,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 80.03,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 813064,
+      "daily_remaining_tokens": 186936
+    },
+    "updated_at": "2026-09-24T17:42:18.318943"
+  },
+  "Closure_137/com/google/javascript/jscomp/Normalize.java": {
+    "project": "Closure_137",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_137/com/google/javascript/jscomp/Normalize.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_137/Closure_137_buggy/NormalizeTest.java",
+    "file_size_bytes": 15836,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6291,
+      "completion_tokens": 5203,
+      "total_tokens": 11494
+    },
+    "content_char_count": 15836,
+    "reasoning_char_count": 5296,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 44.35,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 824558,
+      "daily_remaining_tokens": 175442
+    },
+    "updated_at": "2026-09-24T17:43:02.755160"
+  }
+}

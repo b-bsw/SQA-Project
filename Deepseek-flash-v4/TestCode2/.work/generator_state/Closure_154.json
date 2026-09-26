@@ -1,0 +1,56 @@
+{
+  "Closure_154/com/google/javascript/jscomp/TypeCheck.java": {
+    "project": "Closure_154",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_154/com/google/javascript/jscomp/TypeCheck.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_154/Closure_154_buggy/TypeCheckTest.java",
+    "file_size_bytes": 15184,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 13367,
+      "completion_tokens": 12862,
+      "total_tokens": 26229
+    },
+    "content_char_count": 15184,
+    "reasoning_char_count": 37487,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 112.89,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 1018478,
+      "daily_remaining_tokens": -18478
+    },
+    "updated_at": "2026-09-24T17:51:01.607972"
+  },
+  "Closure_154/com/google/javascript/jscomp/TypeValidator.java": {
+    "project": "Closure_154",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_154/com/google/javascript/jscomp/TypeValidator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_154/Closure_154_buggy/TypeValidatorTest.java",
+    "file_size_bytes": 15980,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6455,
+      "completion_tokens": 5954,
+      "total_tokens": 12409
+    },
+    "content_char_count": 15980,
+    "reasoning_char_count": 9640,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 54.14,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 12409,
+      "daily_remaining_tokens": 987591
+    },
+    "updated_at": "2026-09-25T03:06:34.202782"
+  }
+}

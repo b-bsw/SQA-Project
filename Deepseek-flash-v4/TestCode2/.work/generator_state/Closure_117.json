@@ -1,0 +1,29 @@
+{
+  "Closure_117/com/google/javascript/jscomp/TypeValidator.java": {
+    "project": "Closure_117",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_117/com/google/javascript/jscomp/TypeValidator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_117/Closure_117_buggy/TypeValidatorTest.java",
+    "file_size_bytes": 15493,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7011,
+      "completion_tokens": 4417,
+      "total_tokens": 11428
+    },
+    "content_char_count": 15493,
+    "reasoning_char_count": 2318,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 36.85,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 717276,
+      "daily_remaining_tokens": 282724
+    },
+    "updated_at": "2026-09-24T17:33:20.420007"
+  }
+}

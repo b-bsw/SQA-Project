@@ -1,0 +1,9 @@
+{
+  "target": "JacksonXml_1",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:15:10.249344+00:00",
+  "generated_files": [
+    "FromXmlParserTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonXml_1_buggy"
+}

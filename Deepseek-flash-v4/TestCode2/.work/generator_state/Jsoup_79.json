@@ -1,0 +1,29 @@
+{
+  "Jsoup_79/org/jsoup/nodes/LeafNode.java": {
+    "project": "Jsoup_79",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_79/org/jsoup/nodes/LeafNode.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Jsoup_79/Jsoup_79_buggy/LeafNodeTest.java",
+    "file_size_bytes": 4844,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1897,
+      "completion_tokens": 26150,
+      "total_tokens": 28047
+    },
+    "content_char_count": 5093,
+    "reasoning_char_count": 108512,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 604.04,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 518892,
+      "daily_remaining_tokens": 481108
+    },
+    "updated_at": "2026-09-24T16:11:48.113553"
+  }
+}

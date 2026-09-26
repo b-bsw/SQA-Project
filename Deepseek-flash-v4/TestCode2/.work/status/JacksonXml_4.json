@@ -1,0 +1,9 @@
+{
+  "target": "JacksonXml_4",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:14:47.329379+00:00",
+  "generated_files": [
+    "XmlSerializerProviderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonXml_4_buggy"
+}

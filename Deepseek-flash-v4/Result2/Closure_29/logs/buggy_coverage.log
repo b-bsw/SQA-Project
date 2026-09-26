@@ -1,0 +1,14 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-Closure_29-9kt9o3pw/Closure-29b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /tmp/deepseek-Closure_29-9kt9o3pw/buggy/failing_tests)!
+       Lines total: 174
+     Lines covered: 8
+  Conditions total: 104
+Conditions covered: 0
+     Line coverage: 4.6%
+Condition coverage: 0.0%
+[exit 0]

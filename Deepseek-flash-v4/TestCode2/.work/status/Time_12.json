@@ -1,0 +1,10 @@
+{
+  "target": "Time_12",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T14:18:55.571984+00:00",
+  "generated_files": [
+    "LocalDateTest.java",
+    "LocalDateTimeTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Time_12_buggy"
+}

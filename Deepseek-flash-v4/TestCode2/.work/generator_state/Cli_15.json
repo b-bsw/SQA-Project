@@ -1,0 +1,29 @@
+{
+  "Cli_15/org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java": {
+    "project": "Cli_15",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_15/org/apache/commons/cli2/commandline/WriteableCommandLineImpl.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": null,
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Cli_15/Cli_15_buggy/WriteableCommandLineImplTest.java",
+    "file_size_bytes": 9017,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3217,
+      "completion_tokens": 26033,
+      "total_tokens": 29250
+    },
+    "content_char_count": 9029,
+    "reasoning_char_count": 106598,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 643.05,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 103148,
+      "daily_remaining_tokens": 896852
+    },
+    "updated_at": "2026-09-24T15:17:20.676869"
+  }
+}

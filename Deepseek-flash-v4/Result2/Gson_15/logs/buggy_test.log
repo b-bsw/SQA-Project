@@ -1,0 +1,9 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Gson_15-pthoz6yo/Gson-15b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 3
+  - com.google.gson.stream.JsonWriterTest::testFlushAfterClose
+  - com.google.gson.stream.JsonWriterTest::testNameAfterClose
+  - com.google.gson.stream.JsonWriterTest::testValueDoubleNonFiniteLenient
+[exit 0]

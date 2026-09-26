@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_72/com/fasterxml/jackson/databind/deser/impl/InnerClassProperty.java": {
+    "project": "JacksonDatabind_72",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_72/com/fasterxml/jackson/databind/deser/impl/InnerClassProperty.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_72/JacksonDatabind_72_buggy/InnerClassPropertyTest.java",
+    "file_size_bytes": 13065,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2733,
+      "completion_tokens": 46668,
+      "total_tokens": 49401
+    },
+    "content_char_count": 13065,
+    "reasoning_char_count": 184893,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 265.61,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 883581,
+      "daily_remaining_tokens": 116419
+    },
+    "updated_at": "2026-09-25T11:25:33.832631"
+  }
+}

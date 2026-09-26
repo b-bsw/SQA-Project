@@ -1,0 +1,29 @@
+{
+  "Closure_22/com/google/javascript/jscomp/CheckSideEffects.java": {
+    "project": "Closure_22",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_22/com/google/javascript/jscomp/CheckSideEffects.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_22/Closure_22_buggy/CheckSideEffectsTest.java",
+    "file_size_bytes": 5414,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3426,
+      "completion_tokens": 19003,
+      "total_tokens": 22429
+    },
+    "content_char_count": 5426,
+    "reasoning_char_count": 71286,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 809.48,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 282665,
+      "daily_remaining_tokens": 717335
+    },
+    "updated_at": "2026-09-25T04:48:25.239273"
+  }
+}

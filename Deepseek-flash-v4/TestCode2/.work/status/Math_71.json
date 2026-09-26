@@ -1,0 +1,10 @@
+{
+  "target": "Math_71",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:49:31.534907+00:00",
+  "generated_files": [
+    "EmbeddedRungeKuttaIntegratorTest.java",
+    "RungeKuttaIntegratorTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Math_71_buggy"
+}

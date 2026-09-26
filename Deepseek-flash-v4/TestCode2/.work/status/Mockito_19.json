@@ -1,0 +1,13 @@
+{
+  "target": "Mockito_19",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:14:24.750774+00:00",
+  "generated_files": [
+    "PropertyAndSetterInjectionTest.java",
+    "FinalMockCandidateFilterTest.java",
+    "MockCandidateFilterTest.java",
+    "NameBasedCandidateFilterTest.java",
+    "TypeBasedCandidateFilterTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Mockito_19_buggy"
+}

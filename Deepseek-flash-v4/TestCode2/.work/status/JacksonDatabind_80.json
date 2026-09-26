@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_80",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:46:29.280980+00:00",
+  "generated_files": [
+    "StdSubtypeResolverTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_80_buggy"
+}

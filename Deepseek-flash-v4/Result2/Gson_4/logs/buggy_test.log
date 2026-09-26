@@ -1,0 +1,33 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Gson_4-q9_dahge/Gson-4b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 27
+  - com.google.gson.stream.JsonReaderTest::testNextString
+  - com.google.gson.stream.JsonReaderTest::testPeekTypes
+  - com.google.gson.stream.JsonReaderTest::testNextIntZero
+  - com.google.gson.stream.JsonReaderTest::testNextIntOverflow
+  - com.google.gson.stream.JsonReaderTest::testNextLongQuotedString
+  - com.google.gson.stream.JsonReaderTest::testNextIntNegative
+  - com.google.gson.stream.JsonReaderTest::testNextStringBoolean
+  - com.google.gson.stream.JsonReaderTest::testNextBooleanFalse
+  - com.google.gson.stream.JsonReaderTest::testNextBooleanTrue
+  - com.google.gson.stream.JsonReaderTest::testSkipValueObject
+  - com.google.gson.stream.JsonReaderTest::testNextStringNumber
+  - com.google.gson.stream.JsonReaderTest::testNextIntQuotedString
+  - com.google.gson.stream.JsonReaderTest::testNextDoubleScientific
+  - com.google.gson.stream.JsonReaderTest::testNextLongNumber
+  - com.google.gson.stream.JsonReaderTest::testNextDoubleInteger
+  - com.google.gson.stream.JsonReaderTest::testNextNullNotNull
+  - com.google.gson.stream.JsonReaderTest::testEOFAfterAllTokens
+  - com.google.gson.stream.JsonReaderTest::testNextLongMinValue
+  - com.google.gson.stream.JsonReaderTest::testMultiplePeek
+  - com.google.gson.stream.JsonReaderTest::testNextInt
+  - com.google.gson.stream.JsonReaderTest::testNextBooleanNotBoolean
+  - com.google.gson.stream.JsonReaderTest::testStrictModeSingleQuote
+  - com.google.gson.stream.JsonReaderTest::testNextDoubleFraction
+  - com.google.gson.stream.JsonReaderTest::testNextStringEscaped
+  - com.google.gson.stream.JsonReaderTest::testNextLongFractional
+  - com.google.gson.stream.JsonReaderTest::testNextLong
+  - com.google.gson.stream.JsonReaderTest::testNextNull
+[exit 0]

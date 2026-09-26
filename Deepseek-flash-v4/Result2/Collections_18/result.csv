@@ -1,0 +1,2 @@
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
+Collections,18,37,FAIL,1,FAIL,1,INCONCLUSIVE,93,84,90.32,36,34,94.44

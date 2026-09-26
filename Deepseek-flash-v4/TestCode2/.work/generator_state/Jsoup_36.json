@@ -1,0 +1,29 @@
+{
+  "Jsoup_36/org/jsoup/helper/DataUtil.java": {
+    "project": "Jsoup_36",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_36/org/jsoup/helper/DataUtil.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Jsoup_36/Jsoup_36_buggy/DataUtilTest.java",
+    "file_size_bytes": 5998,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3067,
+      "completion_tokens": 7499,
+      "total_tokens": 10566
+    },
+    "content_char_count": 5998,
+    "reasoning_char_count": 22838,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 65.12,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 160862,
+      "daily_remaining_tokens": 839138
+    },
+    "updated_at": "2026-09-25T10:53:06.833066"
+  }
+}

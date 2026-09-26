@@ -1,0 +1,15 @@
+{
+  "target": "JacksonDatabind_111",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:50:21.885817+00:00",
+  "generated_files": [
+    "CreatorPropertyTest.java",
+    "FieldPropertyTest.java",
+    "MethodPropertyTest.java",
+    "ObjectIdReferencePropertyTest.java",
+    "ObjectIdValuePropertyTest.java",
+    "SetterlessPropertyTest.java",
+    "AtomicReferenceDeserializerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_111_buggy"
+}

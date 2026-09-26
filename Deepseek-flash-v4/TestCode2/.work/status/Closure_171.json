@@ -1,0 +1,10 @@
+{
+  "target": "Closure_171",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T01:16:57.803675+00:00",
+  "generated_files": [
+    "TypeInferenceTest.java",
+    "TypedScopeCreatorTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_171_buggy"
+}

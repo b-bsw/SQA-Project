@@ -1,0 +1,11 @@
+{
+  "target": "Codec_14",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:21:39.278702+00:00",
+  "generated_files": [
+    "LangTest.java",
+    "PhoneticEngineTest.java",
+    "RuleTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Codec_14_buggy"
+}

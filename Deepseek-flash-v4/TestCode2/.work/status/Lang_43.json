@@ -1,0 +1,9 @@
+{
+  "target": "Lang_43",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T14:32:12.128250+00:00",
+  "generated_files": [
+    "ExtendedMessageFormatTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Lang_43_buggy"
+}

@@ -1,0 +1,25 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Codec_1-fh8vdbgo/Codec-1b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 19
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleGNWithVowel
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testSilentStartGN
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testCHToX
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleWSlavic
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleXAtStart
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testCipherCH
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleSWithSH
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testConditionCH0_Mc
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleZWithH
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleZSlavoGermanic
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleLLWithCondition
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleXNotStart
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleDG
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleWR
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleTWithTION
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testAlternateResultDiffers
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandlePWithPB
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleTHWithOM
+  - org.apache.commons.codec.language.DoubleMetaphoneTest::testHandleCCWithIE
+[exit 0]

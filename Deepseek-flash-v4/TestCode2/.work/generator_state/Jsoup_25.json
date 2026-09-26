@@ -1,0 +1,29 @@
+{
+  "Jsoup_25/org/jsoup/parser/Tag.java": {
+    "project": "Jsoup_25",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_25/org/jsoup/parser/Tag.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Jsoup_25/Jsoup_25_buggy/TagTest.java",
+    "file_size_bytes": 3654,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3534,
+      "completion_tokens": 4186,
+      "total_tokens": 7720
+    },
+    "content_char_count": 3654,
+    "reasoning_char_count": 13187,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 68.2,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 56643,
+      "daily_remaining_tokens": 943357
+    },
+    "updated_at": "2026-09-25T10:48:39.806237"
+  }
+}

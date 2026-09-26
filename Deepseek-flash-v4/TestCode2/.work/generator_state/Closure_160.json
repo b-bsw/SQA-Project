@@ -1,0 +1,29 @@
+{
+  "Closure_160/com/google/javascript/jscomp/Compiler.java": {
+    "project": "Closure_160",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_160/com/google/javascript/jscomp/Compiler.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_160/Closure_160_buggy/CompilerTest.java",
+    "file_size_bytes": 21730,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 12289,
+      "completion_tokens": 5282,
+      "total_tokens": 17571
+    },
+    "content_char_count": 21730,
+    "reasoning_char_count": 1677,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 44.36,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 817562,
+      "daily_remaining_tokens": 182438
+    },
+    "updated_at": "2026-09-24T17:58:05.723858"
+  }
+}

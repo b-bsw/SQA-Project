@@ -1,0 +1,10 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Collections_1-mq9jhm58/Collections-1b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 4
+  - org.apache.commons.collections.map.Flat3MapTest::testRemoveMiddleEntryWhenThree
+  - org.apache.commons.collections.map.Flat3MapTest::testRemoveFirstEntry
+  - org.apache.commons.collections.map.Flat3MapTest::testRemoveReorders
+  - org.apache.commons.collections.map.Flat3MapTest::testRemoveNullKey
+[exit 0]

@@ -1,0 +1,10 @@
+{
+  "target": "Closure_89",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:20:13.611272+00:00",
+  "generated_files": [
+    "CollapsePropertiesTest.java",
+    "GlobalNamespaceTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_89_buggy"
+}

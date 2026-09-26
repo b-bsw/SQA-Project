@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "finish_reason": "stop",
+  "elapsed": 107.15086078643799,
+  "ttft": 2.70243501663208,
+  "usage": {
+    "prompt_tokens": 4600,
+    "completion_tokens": 3786,
+    "total_tokens": 8386
+  },
+  "content_char_count": 14746,
+  "reasoning_char_count": 3194
+}

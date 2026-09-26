@@ -1,0 +1,29 @@
+{
+  "Gson_6/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java": {
+    "project": "Gson_6",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Gson_6/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Gson_6/Gson_6_buggy/JsonAdapterAnnotationTypeAdapterFactoryTest.java",
+    "file_size_bytes": 7187,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 1963,
+      "completion_tokens": 3651,
+      "total_tokens": 5614
+    },
+    "content_char_count": 7187,
+    "reasoning_char_count": 9549,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 35.82,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 23274,
+      "daily_remaining_tokens": 976726
+    },
+    "updated_at": "2026-09-25T10:47:03.213300"
+  }
+}

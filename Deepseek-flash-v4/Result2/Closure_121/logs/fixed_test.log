@@ -1,0 +1,9 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_121-odo_sq5s/Closure-121b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 3
+  - com.google.javascript.jscomp.InlineVariablesTest::testObjectLiteralNotInlined
+  - com.google.javascript.jscomp.InlineVariablesTest::testConstantsOnlyMode
+  - com.google.javascript.jscomp.InlineVariablesTest::testNoArgumentsModification
+[exit 0]

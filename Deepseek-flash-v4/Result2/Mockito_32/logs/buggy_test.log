@@ -1,0 +1,8 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Mockito_32-jp51no41/Mockito-32b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 2
+  - org.mockito.internal.configuration.SpyAnnotationEngineTest::testProcessSpyOnNewInstance
+  - org.mockito.internal.configuration.SpyAnnotationEngineTest::testProcessSpyOnMockInstance
+[exit 0]

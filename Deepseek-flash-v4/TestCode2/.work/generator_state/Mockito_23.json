@@ -1,0 +1,29 @@
+{
+  "Mockito_23/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java": {
+    "project": "Mockito_23",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Mockito_23/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Mockito_23/Mockito_23_buggy/ReturnsDeepStubsTest.java",
+    "file_size_bytes": 9185,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2636,
+      "completion_tokens": 10470,
+      "total_tokens": 13106
+    },
+    "content_char_count": 9185,
+    "reasoning_char_count": 36790,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 94.4,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 480273,
+      "daily_remaining_tokens": 519727
+    },
+    "updated_at": "2026-09-25T11:11:28.092520"
+  }
+}

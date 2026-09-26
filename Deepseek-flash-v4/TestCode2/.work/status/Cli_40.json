@@ -1,0 +1,9 @@
+{
+  "target": "Cli_40",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:12:18.579436+00:00",
+  "generated_files": [
+    "TypeHandlerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Cli_40_buggy"
+}

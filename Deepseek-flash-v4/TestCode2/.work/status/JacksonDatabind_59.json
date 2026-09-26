@@ -1,0 +1,12 @@
+{
+  "target": "JacksonDatabind_59",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T19:12:27.166383+00:00",
+  "generated_files": [
+    "JavaTypeTest.java",
+    "CollectionLikeTypeTest.java",
+    "MapLikeTypeTest.java",
+    "TypeFactoryTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_59_buggy"
+}

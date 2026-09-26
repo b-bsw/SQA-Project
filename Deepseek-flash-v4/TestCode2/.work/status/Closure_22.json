@@ -1,0 +1,9 @@
+{
+  "target": "Closure_22",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T11:48:25.318991+00:00",
+  "generated_files": [
+    "CheckSideEffectsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_22_buggy"
+}

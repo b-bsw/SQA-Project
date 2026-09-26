@@ -1,0 +1,25 @@
+{
+  "Chart_5/org/jfree/data/xy/XYSeries.java": {
+    "project": "Chart_5",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Chart_5/org/jfree/data/xy/XYSeries.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Chart_5/Chart_5_buggy/XYSeriesTest.java",
+    "file_size_bytes": 14019,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 7273,
+      "completion_tokens": 28913,
+      "total_tokens": 36186
+    },
+    "content_char_count": 14032,
+    "reasoning_char_count": 97260,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 716.8,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 240644,
+      "daily_remaining_tokens": 759356
+    },
+    "updated_at": "2026-09-24T14:55:38.133567"
+  }
+}

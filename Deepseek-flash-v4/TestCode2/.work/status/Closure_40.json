@@ -1,0 +1,9 @@
+{
+  "target": "Closure_40",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T13:31:07.006948+00:00",
+  "generated_files": [
+    "NameAnalyzerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_40_buggy"
+}

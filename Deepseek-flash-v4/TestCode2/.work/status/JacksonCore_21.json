@@ -1,0 +1,9 @@
+{
+  "target": "JacksonCore_21",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:32:34.626981+00:00",
+  "generated_files": [
+    "FilteringParserDelegateTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonCore_21_buggy"
+}

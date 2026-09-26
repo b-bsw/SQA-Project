@@ -1,0 +1,24 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Lang_14-ddf6v3u6/Lang-14b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 18
+  - org.apache.commons.lang3.StringUtilsTest::testSplitPreserveAllTokens
+  - org.apache.commons.lang3.StringUtilsTest::testStripEnd
+  - org.apache.commons.lang3.StringUtilsTest::testReplaceEachRepeatedly
+  - org.apache.commons.lang3.StringUtilsTest::testOverlay
+  - org.apache.commons.lang3.StringUtilsTest::testAbbreviateMinWidthWithOffset
+  - org.apache.commons.lang3.StringUtilsTest::testSubstringAfter
+  - org.apache.commons.lang3.StringUtilsTest::testLastIndexOfCharSequence
+  - org.apache.commons.lang3.StringUtilsTest::testReplaceCharsChar
+  - org.apache.commons.lang3.StringUtilsTest::testIsWhitespace
+  - org.apache.commons.lang3.StringUtilsTest::testAbbreviateMiddle
+  - org.apache.commons.lang3.StringUtilsTest::testSubstringsBetween
+  - org.apache.commons.lang3.StringUtilsTest::testLastIndexOfIgnoreCase
+  - org.apache.commons.lang3.StringUtilsTest::testLastIndexOfAny
+  - org.apache.commons.lang3.StringUtilsTest::testLastOrdinalIndexOf
+  - org.apache.commons.lang3.StringUtilsTest::testSubstringBeforeLast
+  - org.apache.commons.lang3.StringUtilsTest::testSubstringAfterLast
+  - org.apache.commons.lang3.StringUtilsTest::testAbbreviate
+  - org.apache.commons.lang3.StringUtilsTest::testStripStart
+[exit 0]

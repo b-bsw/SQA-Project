@@ -1,0 +1,29 @@
+{
+  "Codec_12/org/apache/commons/codec/binary/BaseNCodecInputStream.java": {
+    "project": "Codec_12",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Codec_12/org/apache/commons/codec/binary/BaseNCodecInputStream.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Codec_12/Codec_12_buggy/BaseNCodecInputStreamTest.java",
+    "file_size_bytes": 7121,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2693,
+      "completion_tokens": 25595,
+      "total_tokens": 28288
+    },
+    "content_char_count": 7135,
+    "reasoning_char_count": 93205,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 782.13,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 899292,
+      "daily_remaining_tokens": 100708
+    },
+    "updated_at": "2026-09-25T14:36:39.186021"
+  }
+}

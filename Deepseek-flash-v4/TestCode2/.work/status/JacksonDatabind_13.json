@@ -1,0 +1,10 @@
+{
+  "target": "JacksonDatabind_13",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T17:48:10.512006+00:00",
+  "generated_files": [
+    "DefaultDeserializationContextTest.java",
+    "ObjectIdValuePropertyTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_13_buggy"
+}

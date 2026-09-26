@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_72",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:25:33.907053+00:00",
+  "generated_files": [
+    "InnerClassPropertyTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_72_buggy"
+}

@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_70/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java": {
+    "project": "JacksonDatabind_70",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_70/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_70/JacksonDatabind_70_buggy/BeanPropertyMapTest.java",
+    "file_size_bytes": 12565,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6453,
+      "completion_tokens": 20525,
+      "total_tokens": 26978
+    },
+    "content_char_count": 12565,
+    "reasoning_char_count": 73033,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 83.7,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 655451,
+      "daily_remaining_tokens": 344549
+    },
+    "updated_at": "2026-09-25T11:21:13.610666"
+  }
+}

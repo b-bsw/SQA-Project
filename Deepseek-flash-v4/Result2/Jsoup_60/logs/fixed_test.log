@@ -1,0 +1,9 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Jsoup_60-u0oh0on2/Jsoup-60b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 3
+  - org.jsoup.parser.TokenQueueTest::testChompBalancedNoOpener
+  - org.jsoup.parser.TokenQueueTest::testConsumeToIgnoreCase
+  - org.jsoup.select.QueryParserTest::testParseNullQuery
+[exit 0]

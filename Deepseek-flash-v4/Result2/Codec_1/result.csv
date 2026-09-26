@@ -1,0 +1,2 @@
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov
+Codec,1,63,FAIL,19,FAIL,19,INCONCLUSIVE,256,185,72.27,184,98,53.26

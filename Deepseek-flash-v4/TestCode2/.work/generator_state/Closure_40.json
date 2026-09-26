@@ -1,0 +1,29 @@
+{
+  "Closure_40/com/google/javascript/jscomp/NameAnalyzer.java": {
+    "project": "Closure_40",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_40/com/google/javascript/jscomp/NameAnalyzer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_40/Closure_40_buggy/NameAnalyzerTest.java",
+    "file_size_bytes": 5015,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10678,
+      "completion_tokens": 15871,
+      "total_tokens": 26549
+    },
+    "content_char_count": 5027,
+    "reasoning_char_count": 60094,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 759.0,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 440735,
+      "daily_remaining_tokens": 559265
+    },
+    "updated_at": "2026-09-25T06:31:06.947249"
+  }
+}

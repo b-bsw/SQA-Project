@@ -1,0 +1,56 @@
+{
+  "Math_14/org/apache/commons/math3/optim/nonlinear/vector/Weight.java": {
+    "project": "Math_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_14/org/apache/commons/math3/optim/nonlinear/vector/Weight.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_14/Math_14_buggy/WeightTest.java",
+    "file_size_bytes": 2965,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2146,
+      "completion_tokens": 4351,
+      "total_tokens": 6497
+    },
+    "content_char_count": 2965,
+    "reasoning_char_count": 14325,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 22.37,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 254609,
+      "daily_remaining_tokens": 745391
+    },
+    "updated_at": "2026-09-25T11:08:13.535863"
+  },
+  "Math_14/org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java": {
+    "project": "Math_14",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_14/org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_14/Math_14_buggy/AbstractLeastSquaresOptimizerTest.java",
+    "file_size_bytes": 6206,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4033,
+      "completion_tokens": 62078,
+      "total_tokens": 66111
+    },
+    "content_char_count": 6206,
+    "reasoning_char_count": 250740,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 307.13,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 320805,
+      "daily_remaining_tokens": 679195
+    },
+    "updated_at": "2026-09-25T11:13:20.794577"
+  }
+}

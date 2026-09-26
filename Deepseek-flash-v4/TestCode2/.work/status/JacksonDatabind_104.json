@@ -1,0 +1,10 @@
+{
+  "target": "JacksonDatabind_104",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T13:47:47.429147+00:00",
+  "generated_files": [
+    "StdDateFormatTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_104_buggy",
+  "recovery_note": "Earlier parallel run published TestCode2; duplicate run failed to replace it"
+}

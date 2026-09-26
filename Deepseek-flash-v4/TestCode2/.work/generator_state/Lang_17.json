@@ -1,0 +1,29 @@
+{
+  "Lang_17/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java": {
+    "project": "Lang_17",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_17/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Lang_17/Lang_17_buggy/CharSequenceTranslatorTest.java",
+    "file_size_bytes": 5161,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2556,
+      "completion_tokens": 20900,
+      "total_tokens": 23456
+    },
+    "content_char_count": 5174,
+    "reasoning_char_count": 79628,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 947.93,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 736088,
+      "daily_remaining_tokens": 263912
+    },
+    "updated_at": "2026-09-25T07:03:09.967711"
+  }
+}

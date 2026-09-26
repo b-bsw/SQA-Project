@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_27-mq9l100y/Closure-27b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 7
+  - com.google.javascript.rhino.IRTest::testGetPropGetElemAssignHook
+  - com.google.javascript.rhino.IRTest::testIf
+  - com.google.javascript.rhino.IRTest::testUnaryOperators
+  - com.google.javascript.rhino.IRTest::testBinaryOperators
+  - com.google.javascript.rhino.IRTest::testCallAndNew
+  - com.google.javascript.rhino.IRTest::testBlockAndScript
+  - com.google.javascript.rhino.IRTest::testLabelAndBranches
+[exit 0]

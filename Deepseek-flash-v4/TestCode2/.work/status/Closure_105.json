@@ -1,0 +1,9 @@
+{
+  "target": "Closure_105",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:23:59.546669+00:00",
+  "generated_files": [
+    "FoldConstantsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_105_buggy"
+}

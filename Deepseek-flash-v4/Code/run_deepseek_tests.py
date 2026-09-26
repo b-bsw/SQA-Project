@@ -285,7 +285,12 @@ def collect_reports():
 
 
 def main(argv=None):
+    global TEST_ROOT, RESULT_ROOT
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--test-root", type=Path, default=TEST_ROOT,
+                        help="Directory containing <target>_buggy test folders")
+    parser.add_argument("--result-root", type=Path, default=RESULT_ROOT,
+                        help="Directory for per-target and combined reports")
     parser.add_argument("--workers", type=int, default=4, help="Concurrent Defects4J checkouts (default: 4)")
     parser.add_argument("--projects", nargs="+", help="Project names, for example Chart Cli")
     parser.add_argument("--targets", nargs="+", help="Exact targets, for example Chart_1 Cli_5")
@@ -298,6 +303,8 @@ def main(argv=None):
     parser.add_argument("--dry-run", action="store_true", help="List pending targets without running")
     parser.add_argument("--collect-only", action="store_true", help="Rebuild combined report without running tests")
     args = parser.parse_args(argv)
+    TEST_ROOT = args.test_root.resolve()
+    RESULT_ROOT = args.result_root.resolve()
     if args.workers < 1 or args.test_timeout < 1 or (args.limit is not None and args.limit < 1):
         parser.error("--workers, --limit, and --test-timeout must be positive")
     if args.collect_only:

@@ -1,0 +1,29 @@
+{
+  "Lang_29/org/apache/commons/lang3/SystemUtils.java": {
+    "project": "Lang_29",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_29/org/apache/commons/lang3/SystemUtils.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Lang_29/Lang_29_buggy/SystemUtilsTest.java",
+    "file_size_bytes": 4623,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4270,
+      "completion_tokens": 23081,
+      "total_tokens": 27351
+    },
+    "content_char_count": 4635,
+    "reasoning_char_count": 83025,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 1115.59,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 679683,
+      "daily_remaining_tokens": 320317
+    },
+    "updated_at": "2026-09-25T07:24:29.529283"
+  }
+}

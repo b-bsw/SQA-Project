@@ -1,0 +1,29 @@
+{
+  "Lang_52/org/apache/commons/lang/StringEscapeUtils.java": {
+    "project": "Lang_52",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_52/org/apache/commons/lang/StringEscapeUtils.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Lang_52/Lang_52_buggy/StringEscapeUtilsTest.java",
+    "file_size_bytes": 9208,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3177,
+      "completion_tokens": 2820,
+      "total_tokens": 5997
+    },
+    "content_char_count": 9208,
+    "reasoning_char_count": 2488,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 25.37,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 20479,
+      "daily_remaining_tokens": 979521
+    },
+    "updated_at": "2026-09-26T10:05:54.405318"
+  }
+}

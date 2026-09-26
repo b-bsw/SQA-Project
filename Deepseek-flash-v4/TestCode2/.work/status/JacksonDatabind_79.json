@@ -1,0 +1,11 @@
+{
+  "target": "JacksonDatabind_79",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T20:41:43.112903+00:00",
+  "generated_files": [
+    "JacksonAnnotationIntrospectorTest.java",
+    "ObjectIdInfoTest.java",
+    "BeanSerializerBaseTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_79_buggy"
+}

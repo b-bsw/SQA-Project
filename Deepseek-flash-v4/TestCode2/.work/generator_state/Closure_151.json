@@ -1,0 +1,29 @@
+{
+  "Closure_151/com/google/javascript/jscomp/CommandLineRunner.java": {
+    "project": "Closure_151",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_151/com/google/javascript/jscomp/CommandLineRunner.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_151/Closure_151_buggy/CommandLineRunnerTest.java",
+    "file_size_bytes": 2784,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6814,
+      "completion_tokens": 3969,
+      "total_tokens": 10783
+    },
+    "content_char_count": 2784,
+    "reasoning_char_count": 13042,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 39.77,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 830755,
+      "daily_remaining_tokens": 169245
+    },
+    "updated_at": "2026-09-24T17:49:01.831233"
+  }
+}

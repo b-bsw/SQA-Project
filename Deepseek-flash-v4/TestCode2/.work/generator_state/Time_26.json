@@ -1,0 +1,83 @@
+{
+  "Time_26/org/joda/time/DateTimeZone.java": {
+    "project": "Time_26",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_26/org/joda/time/DateTimeZone.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Time_26/Time_26_buggy/DateTimeZoneTest.java",
+    "file_size_bytes": 13740,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6163,
+      "completion_tokens": 21684,
+      "total_tokens": 27847
+    },
+    "content_char_count": 13740,
+    "reasoning_char_count": 75993,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 593.51,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 51071,
+      "daily_remaining_tokens": 948929
+    },
+    "updated_at": "2026-09-25T10:57:16.271685"
+  },
+  "Time_26/org/joda/time/chrono/ZonedChronology.java": {
+    "project": "Time_26",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_26/org/joda/time/chrono/ZonedChronology.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Time_26/Time_26_buggy/ZonedChronologyTest.java",
+    "file_size_bytes": 5961,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6548,
+      "completion_tokens": 29687,
+      "total_tokens": 36235
+    },
+    "content_char_count": 5961,
+    "reasoning_char_count": 106641,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 152.96,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 157481,
+      "daily_remaining_tokens": 842519
+    },
+    "updated_at": "2026-09-25T10:59:49.346808"
+  },
+  "Time_26/org/joda/time/field/LenientDateTimeField.java": {
+    "project": "Time_26",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_26/org/joda/time/field/LenientDateTimeField.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Time_26/Time_26_buggy/LenientDateTimeFieldTest.java",
+    "file_size_bytes": 2622,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2048,
+      "completion_tokens": 10929,
+      "total_tokens": 12977
+    },
+    "content_char_count": 2622,
+    "reasoning_char_count": 40547,
+    "used_key": "sk_nWI...6ADW",
+    "elapsed_seconds": 58.91,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 190721,
+      "daily_remaining_tokens": 809279
+    },
+    "updated_at": "2026-09-25T11:00:48.360763"
+  }
+}

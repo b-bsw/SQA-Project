@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_31",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:12:06.231492+00:00",
+  "generated_files": [
+    "TokenBufferTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_31_buggy"
+}

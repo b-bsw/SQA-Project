@@ -1,0 +1,29 @@
+{
+  "Closure_98/com/google/javascript/jscomp/ReferenceCollectingCallback.java": {
+    "project": "Closure_98",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_98/com/google/javascript/jscomp/ReferenceCollectingCallback.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_98/Closure_98_buggy/ReferenceCollectingCallbackTest.java",
+    "file_size_bytes": 14899,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5470,
+      "completion_tokens": 3670,
+      "total_tokens": 9140
+    },
+    "content_char_count": 14899,
+    "reasoning_char_count": 0,
+    "used_key": "sk_rsu...UtSR",
+    "elapsed_seconds": 26.44,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 378751,
+      "daily_remaining_tokens": 621249
+    },
+    "updated_at": "2026-09-26T10:21:00.049676"
+  }
+}

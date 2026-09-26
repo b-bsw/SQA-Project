@@ -1,0 +1,29 @@
+{
+  "Closure_42/com/google/javascript/jscomp/parsing/IRFactory.java": {
+    "project": "Closure_42",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_42/com/google/javascript/jscomp/parsing/IRFactory.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_42/Closure_42_buggy/IRFactoryTest.java",
+    "file_size_bytes": 4333,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11849,
+      "completion_tokens": 22107,
+      "total_tokens": 33956
+    },
+    "content_char_count": 4346,
+    "reasoning_char_count": 87575,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 1021.25,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 541714,
+      "daily_remaining_tokens": 458286
+    },
+    "updated_at": "2026-09-25T06:48:09.793617"
+  }
+}

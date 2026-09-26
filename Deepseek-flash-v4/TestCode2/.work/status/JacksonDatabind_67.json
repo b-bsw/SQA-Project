@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_67",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:18:52.568356+00:00",
+  "generated_files": [
+    "BasicDeserializerFactoryTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_67_buggy"
+}

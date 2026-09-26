@@ -1,0 +1,10 @@
+{
+  "target": "Mockito_30",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:17:24.578459+00:00",
+  "generated_files": [
+    "ReporterTest.java",
+    "ReturnsSmartNullsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Mockito_30_buggy"
+}

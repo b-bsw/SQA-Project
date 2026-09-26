@@ -1,0 +1,9 @@
+{
+  "target": "Closure_151",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:49:01.894488+00:00",
+  "generated_files": [
+    "CommandLineRunnerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_151_buggy"
+}

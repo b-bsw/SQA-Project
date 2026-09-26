@@ -1,0 +1,56 @@
+{
+  "JacksonDatabind_109/com/fasterxml/jackson/databind/ser/std/NumberSerializer.java": {
+    "project": "JacksonDatabind_109",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_109/com/fasterxml/jackson/databind/ser/std/NumberSerializer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_109/JacksonDatabind_109_buggy/NumberSerializerTest.java",
+    "file_size_bytes": 6795,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2673,
+      "completion_tokens": 27162,
+      "total_tokens": 29835
+    },
+    "content_char_count": 6807,
+    "reasoning_char_count": 112580,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 1246.94,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 639578,
+      "daily_remaining_tokens": 360422
+    },
+    "updated_at": "2026-09-25T07:10:47.715557"
+  },
+  "JacksonDatabind_109/com/fasterxml/jackson/databind/ser/std/NumberSerializers.java": {
+    "project": "JacksonDatabind_109",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_109/com/fasterxml/jackson/databind/ser/std/NumberSerializers.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_109/JacksonDatabind_109_buggy/NumberSerializersTest.java",
+    "file_size_bytes": 7809,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3491,
+      "completion_tokens": 14695,
+      "total_tokens": 18186
+    },
+    "content_char_count": 7822,
+    "reasoning_char_count": 58700,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 718.11,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 787348,
+      "daily_remaining_tokens": 212652
+    },
+    "updated_at": "2026-09-25T07:22:45.921099"
+  }
+}

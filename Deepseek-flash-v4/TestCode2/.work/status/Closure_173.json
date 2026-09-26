@@ -1,0 +1,10 @@
+{
+  "target": "Closure_173",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T11:34:53.457746+00:00",
+  "generated_files": [
+    "CodeGeneratorTest.java",
+    "PeepholeSubstituteAlternateSyntaxTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_173_buggy"
+}

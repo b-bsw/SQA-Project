@@ -1,0 +1,9 @@
+{
+  "target": "Chart_11",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-24T21:43:39.729168+00:00",
+  "generated_files": [
+    "ShapeUtilitiesTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Chart_11_buggy"
+}

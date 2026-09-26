@@ -1,0 +1,14 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-Lang_3-1444gcht/Lang-3b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /tmp/deepseek-Lang_3-1444gcht/buggy/failing_tests)!
+       Lines total: 373
+     Lines covered: 245
+  Conditions total: 334
+Conditions covered: 176
+     Line coverage: 65.7%
+Condition coverage: 52.7%
+[exit 0]

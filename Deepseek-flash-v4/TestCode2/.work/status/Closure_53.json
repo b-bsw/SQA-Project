@@ -1,0 +1,9 @@
+{
+  "target": "Closure_53",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T14:22:24.320911+00:00",
+  "generated_files": [
+    "InlineObjectLiteralsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_53_buggy"
+}

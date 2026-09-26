@@ -1,0 +1,10 @@
+{
+  "target": "Closure_148",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:49:06.759436+00:00",
+  "generated_files": [
+    "PeepholeFoldConstantsTest.java",
+    "SourceMapTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_148_buggy"
+}

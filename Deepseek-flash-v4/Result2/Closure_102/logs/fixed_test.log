@@ -1,0 +1,12 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_102-s1i8jsof/Closure-102b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 6
+  - com.google.javascript.jscomp.NormalizeTest::testProcessEmptyVarWithAssertOnChangeThrows
+  - com.google.javascript.jscomp.NormalizeTest::testProcessSplitsVarDeclarations
+  - com.google.javascript.jscomp.NormalizeTest::testProcessWithEmptyRoots
+  - com.google.javascript.jscomp.NormalizeTest::testProcessWhileWithAssertOnChangeThrows
+  - com.google.javascript.jscomp.NormalizeTest::testProcessNullRootThrows
+  - com.google.javascript.jscomp.NormalizeTest::testProcessEmptyVarWithoutAssertOnChangeDoesNotThrow
+[exit 0]

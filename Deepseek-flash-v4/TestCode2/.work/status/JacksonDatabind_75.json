@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_75",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:27:20.031146+00:00",
+  "generated_files": [
+    "EnumSerializerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_75_buggy"
+}

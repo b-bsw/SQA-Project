@@ -1,0 +1,29 @@
+{
+  "Cli_40/org/apache/commons/cli/TypeHandler.java": {
+    "project": "Cli_40",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_40/org/apache/commons/cli/TypeHandler.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Cli_40/Cli_40_buggy/TypeHandlerTest.java",
+    "file_size_bytes": 5469,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3276,
+      "completion_tokens": 27222,
+      "total_tokens": 30498
+    },
+    "content_char_count": 5482,
+    "reasoning_char_count": 113708,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 716.82,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 693766,
+      "daily_remaining_tokens": 306234
+    },
+    "updated_at": "2026-09-24T17:12:18.512027"
+  }
+}

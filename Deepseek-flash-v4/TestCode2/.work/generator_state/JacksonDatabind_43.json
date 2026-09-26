@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_43/com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java": {
+    "project": "JacksonDatabind_43",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_43/com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_43/JacksonDatabind_43_buggy/ObjectIdValuePropertyTest.java",
+    "file_size_bytes": 10205,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2389,
+      "completion_tokens": 42270,
+      "total_tokens": 44659
+    },
+    "content_char_count": 10205,
+    "reasoning_char_count": 122875,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 204.08,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 248112,
+      "daily_remaining_tokens": 751888
+    },
+    "updated_at": "2026-09-25T11:07:07.845978"
+  }
+}

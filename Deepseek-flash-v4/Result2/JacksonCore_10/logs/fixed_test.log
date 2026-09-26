@@ -1,0 +1,26 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-JacksonCore_10-iualyo20/JacksonCore-10b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 20
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testFindNameNotFoundTwoQuads
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testFindNameNotFoundThreeQuads
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testHashSharedAfterRelease
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testLongNameAppend
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testMultipleAddsAndSearch
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testMaybeDirtyInitiallyFalse
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testTotalCountAfterAddThree
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testBucketCount
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testPrimaryCountAfterAdd
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testCreateRoot
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testFindNameNotFoundOneQuad
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testAddNameMultipleTimesSameQuad
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testAddAndFindTwoQuads
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testAddAndFindThreeQuads
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testAddAndFindArrayQuadLength1
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testAddAndFindArrayQuadLength2
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testAddAndFindArrayQuadLength3
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testVerifyLongNameFallback
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testAddAndFindOneQuad
+  - com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerTest::testTotalCountAfterAddOne
+[exit 0]

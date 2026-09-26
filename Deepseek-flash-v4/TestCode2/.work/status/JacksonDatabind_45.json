@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_45",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:07:17.567263+00:00",
+  "generated_files": [
+    "DateTimeSerializerBaseTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_45_buggy"
+}

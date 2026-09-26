@@ -1,0 +1,9 @@
+{
+  "target": "Closure_10",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:17:04.134768+00:00",
+  "generated_files": [
+    "NodeUtilTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_10_buggy"
+}

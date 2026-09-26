@@ -1,0 +1,11 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Compress_46-pvvgc2k1/Compress-46b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 5
+  - org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest::testParseFromCentralDirectoryData
+  - org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest::testParseFromLocalFileDataOnlyModify
+  - org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest::testUnixTimeToZipLongTooLarge
+  - org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest::testParseFromCentralDirectoryDataResetsFirst
+  - org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest::testParseFromLocalFileDataNullData
+[exit 0]

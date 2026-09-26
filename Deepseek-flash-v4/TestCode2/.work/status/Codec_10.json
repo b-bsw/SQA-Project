@@ -1,0 +1,9 @@
+{
+  "target": "Codec_10",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T21:09:55.656549+00:00",
+  "generated_files": [
+    "CaverphoneTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Codec_10_buggy"
+}

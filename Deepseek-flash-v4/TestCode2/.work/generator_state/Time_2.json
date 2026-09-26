@@ -1,0 +1,56 @@
+{
+  "Time_2/org/joda/time/Partial.java": {
+    "project": "Time_2",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_2/org/joda/time/Partial.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Time_2/Time_2_buggy/PartialTest.java",
+    "file_size_bytes": 7812,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5180,
+      "completion_tokens": 20878,
+      "total_tokens": 26058
+    },
+    "content_char_count": 7824,
+    "reasoning_char_count": 71288,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 956.71,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 374548,
+      "daily_remaining_tokens": 625452
+    },
+    "updated_at": "2026-09-25T06:18:27.544648"
+  },
+  "Time_2/org/joda/time/field/UnsupportedDurationField.java": {
+    "project": "Time_2",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Time_2/org/joda/time/field/UnsupportedDurationField.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Time_2/Time_2_buggy/UnsupportedDurationFieldTest.java",
+    "file_size_bytes": 3461,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2955,
+      "completion_tokens": 20527,
+      "total_tokens": 23482
+    },
+    "content_char_count": 3473,
+    "reasoning_char_count": 79800,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 961.9,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 437668,
+      "daily_remaining_tokens": 562332
+    },
+    "updated_at": "2026-09-25T06:34:29.554991"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "target": "Jsoup_6",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T17:58:36.331276+00:00",
+  "generated_files": [
+    "EntitiesTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Jsoup_6_buggy"
+}

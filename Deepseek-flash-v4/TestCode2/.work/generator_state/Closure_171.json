@@ -1,0 +1,56 @@
+{
+  "Closure_171/com/google/javascript/jscomp/TypeInference.java": {
+    "project": "Closure_171",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_171/com/google/javascript/jscomp/TypeInference.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_171/Closure_171_buggy/TypeInferenceTest.java",
+    "file_size_bytes": 31609,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 12193,
+      "completion_tokens": 8323,
+      "total_tokens": 20516
+    },
+    "content_char_count": 31609,
+    "reasoning_char_count": 3282,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 65.09,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 998934,
+      "daily_remaining_tokens": 1066
+    },
+    "updated_at": "2026-09-24T18:16:12.757052"
+  },
+  "Closure_171/com/google/javascript/jscomp/TypedScopeCreator.java": {
+    "project": "Closure_171",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_171/com/google/javascript/jscomp/TypedScopeCreator.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_171/Closure_171_buggy/TypedScopeCreatorTest.java",
+    "file_size_bytes": 18347,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 15755,
+      "completion_tokens": 5214,
+      "total_tokens": 20969
+    },
+    "content_char_count": 18347,
+    "reasoning_char_count": 2013,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 44.89,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 1019903,
+      "daily_remaining_tokens": -19903
+    },
+    "updated_at": "2026-09-24T18:16:57.727739"
+  }
+}

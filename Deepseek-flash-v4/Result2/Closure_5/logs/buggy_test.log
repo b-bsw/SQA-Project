@@ -1,0 +1,11 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Closure_5-js5c7elj/Closure-5b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 5
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::isVarOrAssignExprLhs_orphanName_throwsNullPointerException
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::isInlinableObject_emptyList_returnsFalse
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::isVarOrAssignExprLhs_nameInsideGetProp_returnsFalse
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::isVarOrAssignExprLhs_nameInsideVar_returnsTrue
+  - com.google.javascript.jscomp.InlineObjectLiteralsTest::isVarOrAssignExprLhs_nameInsideAssignExpr_returnsTrue
+[exit 0]

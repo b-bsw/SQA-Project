@@ -1,0 +1,29 @@
+{
+  "Closure_33/com/google/javascript/rhino/jstype/PrototypeObjectType.java": {
+    "project": "Closure_33",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_33/com/google/javascript/rhino/jstype/PrototypeObjectType.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_33/Closure_33_buggy/PrototypeObjectTypeTest.java",
+    "file_size_bytes": 6587,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5770,
+      "completion_tokens": 24000,
+      "total_tokens": 29770
+    },
+    "content_char_count": 6599,
+    "reasoning_char_count": 94706,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 1120.16,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 313969,
+      "daily_remaining_tokens": 686031
+    },
+    "updated_at": "2026-09-25T05:55:56.899937"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_108",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T13:50:51.437558+00:00",
+  "generated_files": [
+    "ObjectReaderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_108_buggy"
+}

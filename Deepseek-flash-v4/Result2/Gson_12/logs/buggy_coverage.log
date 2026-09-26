@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-Gson_12-0dqv737e/Gson-12b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 168
+     Lines covered: 147
+  Conditions total: 86
+Conditions covered: 64
+     Line coverage: 87.5%
+Condition coverage: 74.4%
+[exit 0]

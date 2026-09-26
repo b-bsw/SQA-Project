@@ -1,0 +1,29 @@
+{
+  "Gson_17/com/google/gson/DefaultDateTypeAdapter.java": {
+    "project": "Gson_17",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Gson_17/com/google/gson/DefaultDateTypeAdapter.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Gson_17/Gson_17_buggy/DefaultDateTypeAdapterTest.java",
+    "file_size_bytes": 6732,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2493,
+      "completion_tokens": 9073,
+      "total_tokens": 11566
+    },
+    "content_char_count": 6732,
+    "reasoning_char_count": 29819,
+    "used_key": "sk_lrI...6HFu",
+    "elapsed_seconds": 80.92,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 11566,
+      "daily_remaining_tokens": 988434
+    },
+    "updated_at": "2026-09-25T10:46:41.549412"
+  }
+}

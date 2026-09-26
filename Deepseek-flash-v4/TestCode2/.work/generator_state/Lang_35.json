@@ -1,0 +1,29 @@
+{
+  "Lang_35/org/apache/commons/lang3/ArrayUtils.java": {
+    "project": "Lang_35",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_35/org/apache/commons/lang3/ArrayUtils.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Lang_35/Lang_35_buggy/ArrayUtilsTest.java",
+    "file_size_bytes": 7008,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 15271,
+      "completion_tokens": 2271,
+      "total_tokens": 17542
+    },
+    "content_char_count": 7008,
+    "reasoning_char_count": 1669,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 28.62,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 978374,
+      "daily_remaining_tokens": 21626
+    },
+    "updated_at": "2026-09-25T07:27:50.441746"
+  }
+}

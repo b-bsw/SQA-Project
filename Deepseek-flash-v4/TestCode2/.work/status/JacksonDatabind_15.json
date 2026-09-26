@@ -1,0 +1,13 @@
+{
+  "target": "JacksonDatabind_15",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T17:58:55.873891+00:00",
+  "generated_files": [
+    "JavaTypeTest.java",
+    "BeanSerializerFactoryTest.java",
+    "BeanSerializerBaseTest.java",
+    "StdDelegatingSerializerTest.java",
+    "StdSerializerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_15_buggy"
+}

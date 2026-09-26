@@ -1,0 +1,9 @@
+{
+  "target": "Compress_22",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:23:10.492737+00:00",
+  "generated_files": [
+    "BZip2CompressorInputStreamTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Compress_22_buggy"
+}

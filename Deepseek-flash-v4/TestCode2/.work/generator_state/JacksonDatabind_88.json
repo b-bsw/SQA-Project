@@ -1,0 +1,29 @@
+{
+  "JacksonDatabind_88/com/fasterxml/jackson/databind/jsontype/impl/ClassNameIdResolver.java": {
+    "project": "JacksonDatabind_88",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_88/com/fasterxml/jackson/databind/jsontype/impl/ClassNameIdResolver.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_88/JacksonDatabind_88_buggy/ClassNameIdResolverTest.java",
+    "file_size_bytes": 5032,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3027,
+      "completion_tokens": 20704,
+      "total_tokens": 23731
+    },
+    "content_char_count": 5032,
+    "reasoning_char_count": 82406,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 124.24,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 970281,
+      "daily_remaining_tokens": 29719
+    },
+    "updated_at": "2026-09-25T11:35:12.584104"
+  }
+}

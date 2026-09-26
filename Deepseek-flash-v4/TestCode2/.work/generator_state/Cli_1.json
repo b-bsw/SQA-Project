@@ -1,0 +1,25 @@
+{
+  "Cli_1/org/apache/commons/cli/CommandLine.java": {
+    "project": "Cli_1",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_1/org/apache/commons/cli/CommandLine.java",
+    "status": "GENERATED",
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Cli_1/Cli_1_buggy/CommandLineTest.java",
+    "file_size_bytes": 7471,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3400,
+      "completion_tokens": 22636,
+      "total_tokens": 26036
+    },
+    "content_char_count": 7483,
+    "reasoning_char_count": 87838,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 576.84,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 266680,
+      "daily_remaining_tokens": 733320
+    },
+    "updated_at": "2026-09-24T15:05:16.798680"
+  }
+}

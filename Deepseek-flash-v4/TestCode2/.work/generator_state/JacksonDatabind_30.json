@@ -1,0 +1,56 @@
+{
+  "JacksonDatabind_30/com/fasterxml/jackson/databind/ObjectMapper.java": {
+    "project": "JacksonDatabind_30",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_30/com/fasterxml/jackson/databind/ObjectMapper.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_30/JacksonDatabind_30_buggy/ObjectMapperTest.java",
+    "file_size_bytes": 13865,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 16255,
+      "completion_tokens": 28002,
+      "total_tokens": 44257
+    },
+    "content_char_count": 13865,
+    "reasoning_char_count": 105268,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 138.74,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 297603,
+      "daily_remaining_tokens": 702397
+    },
+    "updated_at": "2026-09-25T11:00:53.059046"
+  },
+  "JacksonDatabind_30/com/fasterxml/jackson/databind/util/TokenBuffer.java": {
+    "project": "JacksonDatabind_30",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonDatabind_30/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonDatabind_30/JacksonDatabind_30_buggy/TokenBufferTest.java",
+    "file_size_bytes": 15115,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10522,
+      "completion_tokens": 24156,
+      "total_tokens": 34678
+    },
+    "content_char_count": 15115,
+    "reasoning_char_count": 84606,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 116.45,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 332281,
+      "daily_remaining_tokens": 667719
+    },
+    "updated_at": "2026-09-25T11:02:49.618669"
+  }
+}

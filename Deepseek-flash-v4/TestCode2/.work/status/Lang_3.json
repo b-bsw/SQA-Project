@@ -1,0 +1,9 @@
+{
+  "target": "Lang_3",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T14:25:03.027195+00:00",
+  "generated_files": [
+    "NumberUtilsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Lang_3_buggy"
+}

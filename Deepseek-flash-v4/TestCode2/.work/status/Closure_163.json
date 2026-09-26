@@ -1,0 +1,10 @@
+{
+  "target": "Closure_163",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T01:04:16.906759+00:00",
+  "generated_files": [
+    "AnalyzePrototypePropertiesTest.java",
+    "CrossModuleMethodMotionTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_163_buggy"
+}

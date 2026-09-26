@@ -1,0 +1,9 @@
+{
+  "target": "Compress_44",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:27:34.145809+00:00",
+  "generated_files": [
+    "ChecksumCalculatingInputStreamTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Compress_44_buggy"
+}

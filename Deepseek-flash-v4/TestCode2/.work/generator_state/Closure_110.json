@@ -1,0 +1,56 @@
+{
+  "Closure_110/com/google/javascript/jscomp/ScopedAliases.java": {
+    "project": "Closure_110",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_110/com/google/javascript/jscomp/ScopedAliases.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_110/Closure_110_buggy/ScopedAliasesTest.java",
+    "file_size_bytes": 7953,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6524,
+      "completion_tokens": 18576,
+      "total_tokens": 25100
+    },
+    "content_char_count": 7953,
+    "reasoning_char_count": 62696,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 174.83,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 760628,
+      "daily_remaining_tokens": 239372
+    },
+    "updated_at": "2026-09-24T17:30:28.666274"
+  },
+  "Closure_110/com/google/javascript/rhino/Node.java": {
+    "project": "Closure_110",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_110/com/google/javascript/rhino/Node.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_110/Closure_110_buggy/NodeTest.java",
+    "file_size_bytes": 28857,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 14057,
+      "completion_tokens": 7658,
+      "total_tokens": 21715
+    },
+    "content_char_count": 28857,
+    "reasoning_char_count": 2136,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 132.24,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 782343,
+      "daily_remaining_tokens": 217657
+    },
+    "updated_at": "2026-09-24T17:32:40.986956"
+  }
+}

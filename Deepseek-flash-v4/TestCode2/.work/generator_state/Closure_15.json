@@ -1,0 +1,29 @@
+{
+  "Closure_15/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java": {
+    "project": "Closure_15",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_15/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_15/Closure_15_buggy/FlowSensitiveInlineVariablesTest.java",
+    "file_size_bytes": 14085,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5543,
+      "completion_tokens": 4751,
+      "total_tokens": 10294
+    },
+    "content_char_count": 14085,
+    "reasoning_char_count": 5381,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 43.81,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 705030,
+      "daily_remaining_tokens": 294970
+    },
+    "updated_at": "2026-09-24T17:47:47.553888"
+  }
+}

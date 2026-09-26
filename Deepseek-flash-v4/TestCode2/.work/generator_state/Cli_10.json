@@ -1,0 +1,29 @@
+{
+  "Cli_10/org/apache/commons/cli/Parser.java": {
+    "project": "Cli_10",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Cli_10/org/apache/commons/cli/Parser.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": null,
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Cli_10/Cli_10_buggy/ParserTest.java",
+    "file_size_bytes": 7711,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 4087,
+      "completion_tokens": 20364,
+      "total_tokens": 24451
+    },
+    "content_char_count": 7723,
+    "reasoning_char_count": 79037,
+    "used_key": "sk_E3p...Drbt",
+    "elapsed_seconds": 500.79,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 291137,
+      "daily_remaining_tokens": 708863
+    },
+    "updated_at": "2026-09-24T15:14:58.612451"
+  }
+}

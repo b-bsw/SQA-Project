@@ -1,0 +1,9 @@
+{
+  "target": "JacksonDatabind_34",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:03:41.986171+00:00",
+  "generated_files": [
+    "NumberSerializerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JacksonDatabind_34_buggy"
+}

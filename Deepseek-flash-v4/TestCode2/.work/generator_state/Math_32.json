@@ -1,0 +1,29 @@
+{
+  "Math_32/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java": {
+    "project": "Math_32",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Math_32/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Math_32/Math_32_buggy/PolygonsSetTest.java",
+    "file_size_bytes": 4070,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6028,
+      "completion_tokens": 22386,
+      "total_tokens": 28414
+    },
+    "content_char_count": 4070,
+    "reasoning_char_count": 82968,
+    "used_key": "sk_3Zm...Fh3j",
+    "elapsed_seconds": 119.36,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 676023,
+      "daily_remaining_tokens": 323977
+    },
+    "updated_at": "2026-09-25T11:12:30.101656"
+  }
+}

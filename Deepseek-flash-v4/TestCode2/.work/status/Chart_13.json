@@ -1,0 +1,9 @@
+{
+  "target": "Chart_13",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-24T18:22:02.956496+00:00",
+  "generated_files": [
+    "BorderArrangementTest.java"
+  ],
+  "test_code": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Deepseek-flash-v4\\TestCode2\\Chart_13_buggy"
+}

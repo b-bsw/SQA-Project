@@ -1,0 +1,8 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Jsoup_4-ct_9f_kj/Jsoup-4b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 2
+  - org.jsoup.nodes.EntitiesTest::testEscapeExtendedEscapesExtendedEntityButBaseDoesNot
+  - org.jsoup.nodes.EntitiesTest::testUnescapeNamedEntity
+[exit 0]

@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-Math_19-noimkhcv/Math-19b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 498
+     Lines covered: 451
+  Conditions total: 272
+Conditions covered: 210
+     Line coverage: 90.6%
+Condition coverage: 77.2%
+[exit 0]

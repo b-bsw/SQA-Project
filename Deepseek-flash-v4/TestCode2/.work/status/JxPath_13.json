@@ -1,0 +1,10 @@
+{
+  "target": "JxPath_13",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:13:57.929691+00:00",
+  "generated_files": [
+    "NamespaceResolverTest.java",
+    "DOMNodePointerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/JxPath_13_buggy"
+}

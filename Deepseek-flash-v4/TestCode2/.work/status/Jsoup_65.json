@@ -1,0 +1,10 @@
+{
+  "target": "Jsoup_65",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:04:06.753017+00:00",
+  "generated_files": [
+    "HtmlTreeBuilderTest.java",
+    "HtmlTreeBuilderStateTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Jsoup_65_buggy"
+}

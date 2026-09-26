@@ -1,0 +1,11 @@
+{
+  "target": "Cli_31",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:05:35.350917+00:00",
+  "generated_files": [
+    "HelpFormatterTest.java",
+    "OptionTest.java",
+    "OptionBuilderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Cli_31_buggy"
+}

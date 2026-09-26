@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-JacksonDatabind_37-i0ij640m/JacksonDatabind-37b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 67
+     Lines covered: 48
+  Conditions total: 32
+Conditions covered: 22
+     Line coverage: 71.6%
+Condition coverage: 68.8%
+[exit 0]

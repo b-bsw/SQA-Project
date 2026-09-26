@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "generator": "DeepSeek-V4-Flash",
+  "created_at": "2026-09-25T19:54:29.316048+00:00",
+  "project": "Gson",
+  "bug_id": 13,
+  "source": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Gson_13_buggy",
+  "coverage_scope": "modified classes of buggy revision",
+  "tests": 30,
+  "test_files": 1,
+  "buggy": {
+    "result": "FAIL",
+    "fails": 2,
+    "compile": "PASS",
+    "test_compile": "PASS",
+    "coverage_status": "PASS",
+    "lines": 683,
+    "covered_lines": 425,
+    "line_cov": 62.23,
+    "branches": 484,
+    "covered_branches": 246,
+    "branch_cov": 50.83
+  },
+  "fixed": {
+    "result": "FAIL",
+    "fails": 2,
+    "compile": "PASS",
+    "test_compile": "PASS"
+  },
+  "verdict": "INCONCLUSIVE"
+}

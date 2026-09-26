@@ -1,0 +1,29 @@
+{
+  "Jsoup_24/org/jsoup/parser/TokeniserState.java": {
+    "project": "Jsoup_24",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Jsoup_24/org/jsoup/parser/TokeniserState.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Jsoup_24/Jsoup_24_buggy/TokeniserStateTest.java",
+    "file_size_bytes": 16520,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 12325,
+      "completion_tokens": 4465,
+      "total_tokens": 16790
+    },
+    "content_char_count": 16520,
+    "reasoning_char_count": 4671,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 39.66,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 50658,
+      "daily_remaining_tokens": 949342
+    },
+    "updated_at": "2026-09-25T10:47:32.376997"
+  }
+}

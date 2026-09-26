@@ -1,0 +1,8 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Math_47-o48saw7w/Math-47b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 2
+  - org.apache.commons.math.complex.ComplexTest::testDivideDouble_Zero
+  - org.apache.commons.math.complex.ComplexTest::testDivide_ZeroDivisor
+[exit 0]

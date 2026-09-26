@@ -1,0 +1,10 @@
+{
+  "target": "Closure_106",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-26T17:06:34.461256+00:00",
+  "generated_files": [
+    "GlobalNamespaceTest.java",
+    "JSDocInfoBuilderTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_106_buggy"
+}

@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/deepseek-Jsoup_37-29wmxu2y/Jsoup-37b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 7
+  - org.jsoup.nodes.ElementTest::testTextPreserveWhitespace
+  - org.jsoup.nodes.ElementTest::testChildren
+  - org.jsoup.nodes.ElementTest::testChild
+  - org.jsoup.nodes.ElementTest::testParents
+  - org.jsoup.nodes.ElementTest::testHtml
+  - org.jsoup.nodes.ElementTest::testSelectInvalidQuery
+  - org.jsoup.nodes.ElementTest::testChildOutOfBounds
+[exit 0]

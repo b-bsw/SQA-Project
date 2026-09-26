@@ -1,0 +1,9 @@
+{
+  "target": "Cli_1",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-24T22:05:16.876118+00:00",
+  "generated_files": [
+    "CommandLineTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Cli_1_buggy"
+}

@@ -1,0 +1,9 @@
+{
+  "target": "Jsoup_48",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T17:56:17.581969+00:00",
+  "generated_files": [
+    "HttpConnectionTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Jsoup_48_buggy"
+}

@@ -1,0 +1,9 @@
+{
+  "target": "Closure_124",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T00:37:03.428548+00:00",
+  "generated_files": [
+    "ExploitAssignsTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_124_buggy"
+}

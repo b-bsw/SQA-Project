@@ -1,0 +1,56 @@
+{
+  "Closure_90/com/google/javascript/jscomp/FunctionTypeBuilder.java": {
+    "project": "Closure_90",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_90/com/google/javascript/jscomp/FunctionTypeBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_90/Closure_90_buggy/FunctionTypeBuilderTest.java",
+    "file_size_bytes": 10154,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6294,
+      "completion_tokens": 2496,
+      "total_tokens": 8790
+    },
+    "content_char_count": 10154,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 20.19,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 382567,
+      "daily_remaining_tokens": 617433
+    },
+    "updated_at": "2026-09-26T10:19:53.364811"
+  },
+  "Closure_90/com/google/javascript/rhino/jstype/FunctionType.java": {
+    "project": "Closure_90",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Closure_90/com/google/javascript/rhino/jstype/FunctionType.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Closure_90/Closure_90_buggy/FunctionTypeTest.java",
+    "file_size_bytes": 14423,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6319,
+      "completion_tokens": 3525,
+      "total_tokens": 9844
+    },
+    "content_char_count": 14423,
+    "reasoning_char_count": 0,
+    "used_key": "sk_I9V...htmY",
+    "elapsed_seconds": 34.82,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 392411,
+      "daily_remaining_tokens": 607589
+    },
+    "updated_at": "2026-09-26T10:20:28.337112"
+  }
+}

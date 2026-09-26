@@ -1,0 +1,10 @@
+{
+  "target": "Closure_167",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T01:07:21.914948+00:00",
+  "generated_files": [
+    "SemanticReverseAbstractInterpreterTest.java",
+    "JSTypeTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Closure_167_buggy"
+}

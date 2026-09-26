@@ -1,0 +1,15 @@
+{
+  "target": "Math_6",
+  "status": "COMMITTED",
+  "updated_at": "2026-09-25T18:36:50.429232+00:00",
+  "generated_files": [
+    "BaseOptimizerTest.java",
+    "NonLinearConjugateGradientOptimizerTest.java",
+    "CMAESOptimizerTest.java",
+    "PowellOptimizerTest.java",
+    "SimplexOptimizerTest.java",
+    "GaussNewtonOptimizerTest.java",
+    "LevenbergMarquardtOptimizerTest.java"
+  ],
+  "test_code": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/Math_6_buggy"
+}

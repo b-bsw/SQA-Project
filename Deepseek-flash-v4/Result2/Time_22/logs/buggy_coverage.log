@@ -1,0 +1,14 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/deepseek-Time_22-l8n2d6e_/Time-22b-deepseek.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /tmp/deepseek-Time_22-l8n2d6e_/buggy/failing_tests)!
+       Lines total: 171
+     Lines covered: 96
+  Conditions total: 58
+Conditions covered: 23
+     Line coverage: 56.1%
+Condition coverage: 39.7%
+[exit 0]

@@ -1,0 +1,29 @@
+{
+  "Lang_61/org/apache/commons/lang/text/StrBuilder.java": {
+    "project": "Lang_61",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/Lang_61/org/apache/commons/lang/text/StrBuilder.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/Lang_61/Lang_61_buggy/StrBuilderTest.java",
+    "file_size_bytes": 30676,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 9648,
+      "completion_tokens": 8013,
+      "total_tokens": 17661
+    },
+    "content_char_count": 30676,
+    "reasoning_char_count": 1774,
+    "used_key": "sk_tPX...Zcy7",
+    "elapsed_seconds": 68.24,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 17661,
+      "daily_remaining_tokens": 982339
+    },
+    "updated_at": "2026-09-26T10:05:53.394359"
+  }
+}

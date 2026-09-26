@@ -1,0 +1,56 @@
+{
+  "JacksonCore_1/com/fasterxml/jackson/core/io/NumberInput.java": {
+    "project": "JacksonCore_1",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonCore_1/com/fasterxml/jackson/core/io/NumberInput.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonCore_1/JacksonCore_1_buggy/NumberInputTest.java",
+    "file_size_bytes": 10280,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 3773,
+      "completion_tokens": 2805,
+      "total_tokens": 6578
+    },
+    "content_char_count": 10280,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 32.5,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 260819,
+      "daily_remaining_tokens": 739181
+    },
+    "updated_at": "2026-09-26T10:28:48.012682"
+  },
+  "JacksonCore_1/com/fasterxml/jackson/core/util/TextBuffer.java": {
+    "project": "JacksonCore_1",
+    "source_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Resoucre/JacksonCore_1/com/fasterxml/jackson/core/util/TextBuffer.java",
+    "status": "GENERATED",
+    "model": "deepseek-v4-flash",
+    "thinking": null,
+    "reasoning_effort": "low",
+    "max_tokens": 100000,
+    "test_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Deepseek-flash-v4/TestCode2/.work/staging/JacksonCore_1/JacksonCore_1_buggy/TextBufferTest.java",
+    "file_size_bytes": 12712,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6222,
+      "completion_tokens": 2964,
+      "total_tokens": 9186
+    },
+    "content_char_count": 12712,
+    "reasoning_char_count": 0,
+    "used_key": "sk_aGV...I9j8",
+    "elapsed_seconds": 36.73,
+    "model_quota": {
+      "daily_quota_tokens": 1000000,
+      "daily_usage_tokens": 270005,
+      "daily_remaining_tokens": 729995
+    },
+    "updated_at": "2026-09-26T10:29:24.853662"
+  }
+}
