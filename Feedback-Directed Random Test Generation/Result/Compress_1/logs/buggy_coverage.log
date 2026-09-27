@@ -1,0 +1,13 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Compress_1-q50882co/Compress_1-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 164
+     Lines covered: 48
+  Conditions total: 59
+Conditions covered: 17
+     Line coverage: 29.3%
+Condition coverage: 28.8%
+[exit 0]

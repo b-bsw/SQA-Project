@@ -1,0 +1,13 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_44-nxqhr8d1/Math_44-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 117
+     Lines covered: 0
+  Conditions total: 42
+Conditions covered: 0
+     Line coverage: 0.0%
+Condition coverage: 0.0%
+[exit 0]

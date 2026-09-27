@@ -1,0 +1,13 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JxPath_5-l8t0o2oq/JxPath_5-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 179
+     Lines covered: 75
+  Conditions total: 130
+Conditions covered: 26
+     Line coverage: 41.9%
+Condition coverage: 20.0%
+[exit 0]

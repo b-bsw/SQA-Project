@@ -1,0 +1,35 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Time_25-sa0y4zkv/Time_25-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 29
+  - org.joda.time.RegressionTest0::test10
+  - org.joda.time.RegressionTest0::test18
+  - org.joda.time.RegressionTest0::test22
+  - org.joda.time.RegressionTest0::test24
+  - org.joda.time.RegressionTest0::test25
+  - org.joda.time.RegressionTest0::test28
+  - org.joda.time.RegressionTest0::test29
+  - org.joda.time.RegressionTest0::test34
+  - org.joda.time.RegressionTest0::test38
+  - org.joda.time.RegressionTest0::test48
+  - org.joda.time.RegressionTest0::test51
+  - org.joda.time.RegressionTest0::test52
+  - org.joda.time.RegressionTest0::test53
+  - org.joda.time.RegressionTest0::test54
+  - org.joda.time.RegressionTest0::test04
+  - org.joda.time.RegressionTest0::test10
+  - org.joda.time.RegressionTest0::test18
+  - org.joda.time.RegressionTest0::test22
+  - org.joda.time.RegressionTest0::test24
+  - org.joda.time.RegressionTest0::test25
+  - org.joda.time.RegressionTest0::test28
+  - org.joda.time.RegressionTest0::test29
+  - org.joda.time.RegressionTest0::test34
+  - org.joda.time.RegressionTest0::test38
+  - org.joda.time.RegressionTest0::test48
+  - org.joda.time.RegressionTest0::test51
+  - org.joda.time.RegressionTest0::test52
+  - org.joda.time.RegressionTest0::test53
+  - org.joda.time.RegressionTest0::test54
+[exit 0]

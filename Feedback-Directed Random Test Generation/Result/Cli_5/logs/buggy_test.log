@@ -1,4 +1,4 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/randoop-Cli_5-7w8savc2/Cli_5-randoop.tar.bz2
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_5-ssleh46u/Cli_5-randoop.tar.bz2
 Extract test suite......................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK

@@ -1,0 +1,14 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonDatabind_26-bkk8yc5k/JacksonDatabind_26-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonDatabind_26-bkk8yc5k/buggy/failing_tests)!
+       Lines total: 267
+     Lines covered: 118
+  Conditions total: 148
+Conditions covered: 35
+     Line coverage: 44.2%
+Condition coverage: 23.6%
+[exit 0]

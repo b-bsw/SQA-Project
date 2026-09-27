@@ -1,7 +1,8 @@
 {
   "schema_version": "1.1",
   "algorithm": "Randoop",
-  "created_at": "2026-09-25T16:51:34.552349+00:00",
+  "created_at": "2026-09-27T11:41:14.126202+00:00",
+  "duration_seconds": 71.28,
   "project": "Chart",
   "bug_id": 15,
   "seed": 20260918,
@@ -22,7 +23,7 @@
   "fixed_result": "FAIL",
   "fixed_fails": 952,
   "verdict": "INCONCLUSIVE",
-  "source": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Chart_15_buggy",
+  "source": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Chart_15_buggy",
   "validations": [
     {
       "subject": "buggy",
@@ -41,7 +42,7 @@
       "total_goals": 1148,
       "covered_goals": 515,
       "coverage": 44.86,
-      "duration_seconds": 82.4
+      "duration_seconds": 42.89
     },
     {
       "subject": "fixed",
@@ -50,8 +51,7 @@
       "compile": "PASS",
       "test_compile": "PASS",
       "test_status": "FAIL",
-      "duration_seconds": 24.47
+      "duration_seconds": 26.88
     }
-  ],
-  "duration_seconds": 128.51
+  ]
 }

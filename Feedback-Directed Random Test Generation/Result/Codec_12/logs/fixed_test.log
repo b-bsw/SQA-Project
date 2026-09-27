@@ -1,0 +1,22 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Codec_12-91pdopxo/Codec_12-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 16
+  - org.apache.commons.codec.binary.RegressionTest0::test014
+  - org.apache.commons.codec.binary.RegressionTest0::test040
+  - org.apache.commons.codec.binary.RegressionTest0::test057
+  - org.apache.commons.codec.binary.RegressionTest0::test063
+  - org.apache.commons.codec.binary.RegressionTest0::test119
+  - org.apache.commons.codec.binary.RegressionTest0::test134
+  - org.apache.commons.codec.binary.RegressionTest0::test150
+  - org.apache.commons.codec.binary.RegressionTest0::test174
+  - org.apache.commons.codec.binary.RegressionTest0::test014
+  - org.apache.commons.codec.binary.RegressionTest0::test040
+  - org.apache.commons.codec.binary.RegressionTest0::test057
+  - org.apache.commons.codec.binary.RegressionTest0::test063
+  - org.apache.commons.codec.binary.RegressionTest0::test119
+  - org.apache.commons.codec.binary.RegressionTest0::test134
+  - org.apache.commons.codec.binary.RegressionTest0::test150
+  - org.apache.commons.codec.binary.RegressionTest0::test174
+[exit 0]

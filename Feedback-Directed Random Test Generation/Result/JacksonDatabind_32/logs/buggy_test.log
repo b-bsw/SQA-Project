@@ -1,0 +1,37 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonDatabind_32-g5t4u9fz/JacksonDatabind_32-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 31
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0003
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0008
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0009
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0010
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0013
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0014
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0015
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0016
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0017
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0018
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0019
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0020
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0021
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0024
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0026
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0027
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0028
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0030
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0033
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0034
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0035
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0036
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0038
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0039
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0040
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0041
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0042
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0043
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0044
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0045
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0046
+[exit 0]

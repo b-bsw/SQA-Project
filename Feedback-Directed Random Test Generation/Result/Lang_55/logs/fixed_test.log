@@ -1,0 +1,20 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_55-yflsvgcc/Lang_55-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 14
+  - org.apache.commons.lang.time.RegressionTest3::test1736
+  - org.apache.commons.lang.time.RegressionTest6::test3410
+  - org.apache.commons.lang.time.RegressionTest8::test4361
+  - org.apache.commons.lang.time.RegressionTest9::test4751
+  - org.apache.commons.lang.time.RegressionTest10::test5123
+  - org.apache.commons.lang.time.RegressionTest10::test5166
+  - org.apache.commons.lang.time.RegressionTest14::test7119
+  - org.apache.commons.lang.time.RegressionTest10::test5123
+  - org.apache.commons.lang.time.RegressionTest10::test5166
+  - org.apache.commons.lang.time.RegressionTest12::test6172
+  - org.apache.commons.lang.time.RegressionTest14::test7119
+  - org.apache.commons.lang.time.RegressionTest5::test2830
+  - org.apache.commons.lang.time.RegressionTest6::test3410
+  - org.apache.commons.lang.time.RegressionTest8::test4361
+[exit 0]

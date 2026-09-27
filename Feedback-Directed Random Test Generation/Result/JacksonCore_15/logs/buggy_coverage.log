@@ -1,0 +1,13 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonCore_15-jbppsmjj/JacksonCore_15-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 373
+     Lines covered: 28
+  Conditions total: 251
+Conditions covered: 3
+     Line coverage: 7.5%
+Condition coverage: 1.2%
+[exit 0]

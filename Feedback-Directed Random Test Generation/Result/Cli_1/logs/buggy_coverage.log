@@ -1,10 +1,10 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/randoop-Cli_1-4jpht41e/Cli_1-randoop.tar.bz2
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_1-6a9w5nff/Cli_1-randoop.tar.bz2
 Extract test suite......................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-WARNING: Some tests failed (see /tmp/randoop-Cli_1-4jpht41e/buggy/failing_tests)!
+WARNING: Some tests failed (see /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_1-6a9w5nff/buggy/failing_tests)!
        Lines total: 45
      Lines covered: 0
   Conditions total: 14

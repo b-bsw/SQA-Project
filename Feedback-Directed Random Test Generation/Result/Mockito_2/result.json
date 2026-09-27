@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "Randoop",
+  "created_at": "2026-09-27T14:36:51.813871+00:00",
+  "duration_seconds": 49.75,
+  "project": "Mockito",
+  "bug_id": 2,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 55,
+  "test_files": 2,
+  "coverage": null,
+  "line_cov": null,
+  "branch_cov": null,
+  "total_goals": 0,
+  "covered_goals": 0,
+  "lines": 0,
+  "covered_lines": 0,
+  "total_branches": 0,
+  "covered_branches": 0,
+  "buggy_result": "NOT_RUN",
+  "buggy_fails": null,
+  "fixed_result": "NOT_RUN",
+  "fixed_fails": null,
+  "verdict": "NOT_AVAILABLE",
+  "source": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_2_buggy",
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "NOT_RUN",
+      "fails": null,
+      "compile": "FAIL",
+      "status": "COMPILE_FAIL",
+      "duration_seconds": 24.66
+    },
+    {
+      "subject": "fixed",
+      "result": "NOT_RUN",
+      "fails": null,
+      "compile": "FAIL",
+      "status": "COMPILE_FAIL",
+      "duration_seconds": 24.75
+    }
+  ]
+}

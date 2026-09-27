@@ -1,0 +1,13 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_21-vwxrknv8/Jsoup_21-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 189
+     Lines covered: 67
+  Conditions total: 96
+Conditions covered: 31
+     Line coverage: 35.4%
+Condition coverage: 32.3%
+[exit 0]

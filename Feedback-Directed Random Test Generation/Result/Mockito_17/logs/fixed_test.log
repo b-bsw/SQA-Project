@@ -1,0 +1,22 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Mockito_17-ppp9cn_x/Mockito_17-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 16
+  - org.mockito.internal.creation.RegressionTest0::test40
+  - org.mockito.internal.creation.RegressionTest0::test43
+  - org.mockito.internal.creation.RegressionTest0::test44
+  - org.mockito.internal.creation.RegressionTest0::test45
+  - org.mockito.internal.creation.RegressionTest0::test51
+  - org.mockito.internal.creation.RegressionTest0::test53
+  - org.mockito.internal.creation.RegressionTest0::test59
+  - org.mockito.internal.creation.RegressionTest0::test64
+  - org.mockito.internal.creation.RegressionTest0::test40
+  - org.mockito.internal.creation.RegressionTest0::test43
+  - org.mockito.internal.creation.RegressionTest0::test44
+  - org.mockito.internal.creation.RegressionTest0::test45
+  - org.mockito.internal.creation.RegressionTest0::test51
+  - org.mockito.internal.creation.RegressionTest0::test53
+  - org.mockito.internal.creation.RegressionTest0::test59
+  - org.mockito.internal.creation.RegressionTest0::test64
+[exit 0]

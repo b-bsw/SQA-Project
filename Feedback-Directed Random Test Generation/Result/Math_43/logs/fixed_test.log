@@ -1,0 +1,24 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_43-k2_f2ijn/Math_43-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 18
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test01
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test02
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test03
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test04
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test05
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test06
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test07
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test08
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test09
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test01
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test02
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test03
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test04
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test05
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test06
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test07
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test08
+  - org.apache.commons.math.stat.descriptive.ErrorTest0::test09
+[exit 0]

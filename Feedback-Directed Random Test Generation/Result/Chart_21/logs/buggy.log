@@ -1,5 +1,5 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j checkout -p Chart -v 21b -w /tmp/randoop-Chart_21-dafnvm_l/buggy
-Checking out 231 to /tmp/randoop-Chart_21-dafnvm_l/buggy................... OK
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Chart -v 21b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_21-bal_clza/buggy
+Checking out 231 to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoo OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -14,7 +14,7 @@ Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Chart-21b....................................... OK
 [exit 0]
-$ /home/face/defect4j/defects4j/framework/bin/defects4j compile -w /tmp/randoop-Chart_21-dafnvm_l/buggy
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_21-bal_clza/buggy
 Running ant (compile)...................................................... OK
 Running ant (compile.tests)................................................ OK
 [exit 0]

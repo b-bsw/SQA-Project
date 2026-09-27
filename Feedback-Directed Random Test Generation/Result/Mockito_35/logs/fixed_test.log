@@ -1,0 +1,44 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Mockito_35-d0_cqlis/Mockito_35-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 38
+  - org.mockito.RegressionTest0::test056
+  - org.mockito.RegressionTest0::test058
+  - org.mockito.RegressionTest0::test067
+  - org.mockito.RegressionTest0::test118
+  - org.mockito.RegressionTest0::test148
+  - org.mockito.RegressionTest0::test155
+  - org.mockito.RegressionTest0::test163
+  - org.mockito.RegressionTest0::test200
+  - org.mockito.RegressionTest0::test201
+  - org.mockito.RegressionTest0::test202
+  - org.mockito.RegressionTest0::test204
+  - org.mockito.RegressionTest0::test213
+  - org.mockito.RegressionTest0::test232
+  - org.mockito.RegressionTest0::test241
+  - org.mockito.RegressionTest0::test246
+  - org.mockito.RegressionTest0::test248
+  - org.mockito.RegressionTest0::test261
+  - org.mockito.RegressionTest0::test266
+  - org.mockito.RegressionTest0::test269
+  - org.mockito.RegressionTest0::test056
+  - org.mockito.RegressionTest0::test058
+  - org.mockito.RegressionTest0::test067
+  - org.mockito.RegressionTest0::test118
+  - org.mockito.RegressionTest0::test148
+  - org.mockito.RegressionTest0::test155
+  - org.mockito.RegressionTest0::test163
+  - org.mockito.RegressionTest0::test200
+  - org.mockito.RegressionTest0::test201
+  - org.mockito.RegressionTest0::test202
+  - org.mockito.RegressionTest0::test204
+  - org.mockito.RegressionTest0::test213
+  - org.mockito.RegressionTest0::test232
+  - org.mockito.RegressionTest0::test241
+  - org.mockito.RegressionTest0::test246
+  - org.mockito.RegressionTest0::test248
+  - org.mockito.RegressionTest0::test261
+  - org.mockito.RegressionTest0::test266
+  - org.mockito.RegressionTest0::test269
+[exit 0]

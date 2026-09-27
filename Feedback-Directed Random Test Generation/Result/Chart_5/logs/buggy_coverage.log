@@ -1,4 +1,4 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/randoop-Chart_5-3a0bp4d_/Chart_5-randoop.tar.bz2
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_5-ykh801l_/Chart_5-randoop.tar.bz2
 Extract test suite......................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK

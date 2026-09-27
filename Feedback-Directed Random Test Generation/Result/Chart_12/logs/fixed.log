@@ -1,5 +1,5 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j checkout -p Chart -v 12f -w /tmp/randoop-Chart_12-iv_wo8aa/fixed
-Checking out 852 to /tmp/randoop-Chart_12-iv_wo8aa/fixed................... OK
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Chart -v 12f -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_12-3m9ypzhs/fixed
+Checking out 852 to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoo OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Excluding broken/flaky tests............................................... OK
@@ -12,7 +12,7 @@ Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Chart-12f....................................... OK
 [exit 0]
-$ /home/face/defect4j/defects4j/framework/bin/defects4j compile -w /tmp/randoop-Chart_12-iv_wo8aa/fixed
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_12-3m9ypzhs/fixed
 Running ant (compile)...................................................... OK
 Running ant (compile.tests)................................................ OK
 [exit 0]

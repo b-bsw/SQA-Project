@@ -1,0 +1,36 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_33-adcj5xac/Jsoup_33-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 30
+  - org.jsoup.parser.ErrorTest0::test01
+  - org.jsoup.parser.ErrorTest0::test02
+  - org.jsoup.parser.ErrorTest0::test03
+  - org.jsoup.parser.ErrorTest0::test04
+  - org.jsoup.parser.ErrorTest0::test05
+  - org.jsoup.parser.ErrorTest0::test06
+  - org.jsoup.parser.ErrorTest0::test07
+  - org.jsoup.parser.ErrorTest0::test08
+  - org.jsoup.parser.ErrorTest0::test09
+  - org.jsoup.parser.ErrorTest0::test10
+  - org.jsoup.parser.ErrorTest0::test11
+  - org.jsoup.parser.ErrorTest0::test12
+  - org.jsoup.parser.ErrorTest0::test13
+  - org.jsoup.parser.ErrorTest0::test14
+  - org.jsoup.parser.ErrorTest0::test15
+  - org.jsoup.parser.ErrorTest0::test01
+  - org.jsoup.parser.ErrorTest0::test02
+  - org.jsoup.parser.ErrorTest0::test03
+  - org.jsoup.parser.ErrorTest0::test04
+  - org.jsoup.parser.ErrorTest0::test05
+  - org.jsoup.parser.ErrorTest0::test06
+  - org.jsoup.parser.ErrorTest0::test07
+  - org.jsoup.parser.ErrorTest0::test08
+  - org.jsoup.parser.ErrorTest0::test09
+  - org.jsoup.parser.ErrorTest0::test10
+  - org.jsoup.parser.ErrorTest0::test11
+  - org.jsoup.parser.ErrorTest0::test12
+  - org.jsoup.parser.ErrorTest0::test13
+  - org.jsoup.parser.ErrorTest0::test14
+  - org.jsoup.parser.ErrorTest0::test15
+[exit 0]

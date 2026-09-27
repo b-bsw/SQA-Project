@@ -1,0 +1,9 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_2-ksos40a2/Math_2-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 3
+  - org.apache.commons.math3.distribution.RegressionTest11::test5813
+  - org.apache.commons.math3.distribution.RegressionTest11::test5852
+  - org.apache.commons.math3.distribution.RegressionTest11::test5852
+[exit 0]

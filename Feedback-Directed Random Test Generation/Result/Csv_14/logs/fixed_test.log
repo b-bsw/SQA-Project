@@ -1,0 +1,12 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Csv_14-2qp8rir_/Csv_14-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 6
+  - org.apache.commons.csv.ErrorTest0::test1
+  - org.apache.commons.csv.ErrorTest0::test2
+  - org.apache.commons.csv.ErrorTest0::test3
+  - org.apache.commons.csv.ErrorTest0::test1
+  - org.apache.commons.csv.ErrorTest0::test2
+  - org.apache.commons.csv.ErrorTest0::test3
+[exit 0]

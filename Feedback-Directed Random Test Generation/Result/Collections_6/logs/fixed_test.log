@@ -1,0 +1,16 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Collections_6-i6x48th_/Collections_6-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 10
+  - org.apache.commons.collections.map.ErrorTest0::test1
+  - org.apache.commons.collections.map.ErrorTest0::test2
+  - org.apache.commons.collections.map.ErrorTest0::test3
+  - org.apache.commons.collections.map.ErrorTest0::test4
+  - org.apache.commons.collections.map.ErrorTest0::test5
+  - org.apache.commons.collections.map.ErrorTest0::test1
+  - org.apache.commons.collections.map.ErrorTest0::test2
+  - org.apache.commons.collections.map.ErrorTest0::test3
+  - org.apache.commons.collections.map.ErrorTest0::test4
+  - org.apache.commons.collections.map.ErrorTest0::test5
+[exit 0]

@@ -1,5 +1,5 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j checkout -p Chart -v 7b -w /tmp/randoop-Chart_7-yrwkoir5/buggy
-Checking out 1087 to /tmp/randoop-Chart_7-yrwkoir5/buggy................... OK
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Chart -v 7b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_7-qdyyg5zl/buggy
+Checking out 1087 to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/rando OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -14,7 +14,7 @@ Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Chart-7b........................................ OK
 [exit 0]
-$ /home/face/defect4j/defects4j/framework/bin/defects4j compile -w /tmp/randoop-Chart_7-yrwkoir5/buggy
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_7-qdyyg5zl/buggy
 Running ant (compile)...................................................... OK
 Running ant (compile.tests)................................................ OK
 [exit 0]

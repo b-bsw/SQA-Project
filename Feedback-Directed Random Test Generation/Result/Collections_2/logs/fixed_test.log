@@ -1,0 +1,32 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Collections_2-wyh42uld/Collections_2-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 26
+  - org.apache.commons.collections.RegressionTest0::test030
+  - org.apache.commons.collections.RegressionTest0::test078
+  - org.apache.commons.collections.RegressionTest0::test107
+  - org.apache.commons.collections.RegressionTest0::test108
+  - org.apache.commons.collections.RegressionTest0::test193
+  - org.apache.commons.collections.RegressionTest0::test196
+  - org.apache.commons.collections.RegressionTest0::test202
+  - org.apache.commons.collections.RegressionTest0::test214
+  - org.apache.commons.collections.RegressionTest0::test227
+  - org.apache.commons.collections.RegressionTest0::test234
+  - org.apache.commons.collections.RegressionTest0::test247
+  - org.apache.commons.collections.RegressionTest0::test251
+  - org.apache.commons.collections.RegressionTest0::test285
+  - org.apache.commons.collections.RegressionTest0::test030
+  - org.apache.commons.collections.RegressionTest0::test078
+  - org.apache.commons.collections.RegressionTest0::test107
+  - org.apache.commons.collections.RegressionTest0::test108
+  - org.apache.commons.collections.RegressionTest0::test193
+  - org.apache.commons.collections.RegressionTest0::test196
+  - org.apache.commons.collections.RegressionTest0::test202
+  - org.apache.commons.collections.RegressionTest0::test214
+  - org.apache.commons.collections.RegressionTest0::test227
+  - org.apache.commons.collections.RegressionTest0::test234
+  - org.apache.commons.collections.RegressionTest0::test247
+  - org.apache.commons.collections.RegressionTest0::test251
+  - org.apache.commons.collections.RegressionTest0::test285
+[exit 0]

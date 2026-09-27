@@ -1,0 +1,42 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Compress_35-md3hjzv_/Compress_35-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 36
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test08
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test10
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test18
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test19
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test21
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test23
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test25
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test26
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test27
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test29
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test30
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test31
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test32
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test33
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test34
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test38
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test39
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test40
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test08
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test10
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test18
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test19
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test21
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test23
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test25
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test26
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test27
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test29
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test30
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test31
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test32
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test33
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test34
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test38
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test39
+  - org.apache.commons.compress.archivers.tar.RegressionTest0::test40
+[exit 0]

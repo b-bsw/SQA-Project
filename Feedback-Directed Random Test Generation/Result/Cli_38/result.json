@@ -1,7 +1,8 @@
 {
   "schema_version": "1.1",
   "algorithm": "Randoop",
-  "created_at": "2026-09-25T17:21:51.825929+00:00",
+  "created_at": "2026-09-27T12:02:47.965470+00:00",
+  "duration_seconds": 65.91,
   "project": "Cli",
   "bug_id": 38,
   "seed": 20260918,
@@ -22,7 +23,7 @@
   "fixed_result": "FAIL",
   "fixed_fails": 52,
   "verdict": "INCONCLUSIVE",
-  "source": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Cli_38_buggy",
+  "source": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Cli_38_buggy",
   "validations": [
     {
       "subject": "buggy",
@@ -40,7 +41,8 @@
       "branch_cov": 1.27,
       "total_goals": 349,
       "covered_goals": 15,
-      "coverage": 4.3
+      "coverage": 4.3,
+      "duration_seconds": 41.74
     },
     {
       "subject": "fixed",
@@ -48,7 +50,8 @@
       "fails": 52,
       "compile": "PASS",
       "test_compile": "PASS",
-      "test_status": "FAIL"
+      "test_status": "FAIL",
+      "duration_seconds": 22.81
     }
   ]
 }

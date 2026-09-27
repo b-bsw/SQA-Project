@@ -1,0 +1,64 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Compress_1-q50882co/Compress_1-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 58
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test30
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test31
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test32
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test33
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test41
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test42
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test43
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test44
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test46
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test47
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test48
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test49
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test52
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test53
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test54
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test55
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test56
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test60
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test62
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test63
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test64
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test65
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test66
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test68
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test69
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test70
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test72
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test74
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test75
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test30
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test31
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test32
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test33
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test41
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test42
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test43
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test44
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test46
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test47
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test48
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test49
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test52
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test53
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test54
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test55
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test56
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test60
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test62
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test63
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test64
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test65
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test66
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test68
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test69
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test70
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test72
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test74
+  - org.apache.commons.compress.archivers.cpio.RegressionTest0::test75
+[exit 0]

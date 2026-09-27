@@ -1,0 +1,19 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Closure -v 14b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_14-b6exlo4v/buggy
+Checking out 4b15b25f to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/r OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 4b15b25f:b7c2861b..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Closure-14b..................................... OK
+[exit 0]
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_14-b6exlo4v/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]

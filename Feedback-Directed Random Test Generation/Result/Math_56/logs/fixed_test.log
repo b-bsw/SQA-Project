@@ -1,0 +1,14 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_56-5sg0b_ud/Math_56-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 8
+  - org.apache.commons.math.util.RegressionTest0::test0143
+  - org.apache.commons.math.util.RegressionTest1::test0536
+  - org.apache.commons.math.util.RegressionTest2::test1110
+  - org.apache.commons.math.util.RegressionTest2::test1353
+  - org.apache.commons.math.util.RegressionTest0::test0143
+  - org.apache.commons.math.util.RegressionTest1::test0536
+  - org.apache.commons.math.util.RegressionTest2::test1110
+  - org.apache.commons.math.util.RegressionTest2::test1353
+[exit 0]

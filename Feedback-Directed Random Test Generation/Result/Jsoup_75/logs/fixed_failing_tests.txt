@@ -1,0 +1,145 @@
+--- org.jsoup.nodes.RegressionTest1::test0665
+java.lang.NullPointerException
+	at java.base/java.lang.String.compareTo(String.java:1196)
+	at java.base/java.lang.String.compareTo(String.java:125)
+	at java.base/java.util.Arrays.binarySearch0(Arrays.java:2442)
+	at java.base/java.util.Arrays.binarySearch(Arrays.java:2382)
+	at org.jsoup.nodes.Attribute.isBooleanAttribute(Attribute.java:179)
+	at org.jsoup.nodes.Attribute.shouldCollapseAttribute(Attribute.java:165)
+	at org.jsoup.nodes.Attributes.html(Attributes.java:319)
+	at org.jsoup.nodes.Attributes.html(Attributes.java:303)
+	at org.jsoup.nodes.Attributes.toString(Attributes.java:329)
+	at org.jsoup.nodes.RegressionTest1.test0665(RegressionTest1.java:7166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:884)
+--- org.jsoup.nodes.RegressionTest3::test1613
+java.lang.NullPointerException
+	at java.base/java.lang.String.compareTo(String.java:1196)
+	at java.base/java.lang.String.compareTo(String.java:125)
+	at java.base/java.util.Arrays.binarySearch0(Arrays.java:2442)
+	at java.base/java.util.Arrays.binarySearch(Arrays.java:2382)
+	at org.jsoup.nodes.Attribute.isBooleanAttribute(Attribute.java:179)
+	at org.jsoup.nodes.Attribute.shouldCollapseAttribute(Attribute.java:165)
+	at org.jsoup.nodes.Attributes.html(Attributes.java:319)
+	at org.jsoup.nodes.Attributes.html(Attributes.java:303)
+	at org.jsoup.nodes.Attributes.toString(Attributes.java:329)
+	at org.jsoup.nodes.RegressionTest3.test1613(RegressionTest3.java:5492)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:884)
+--- org.jsoup.nodes.RegressionTest4::test2421
+java.lang.NullPointerException
+	at java.base/java.lang.String.compareTo(String.java:1196)
+	at java.base/java.lang.String.compareTo(String.java:125)
+	at java.base/java.util.Arrays.binarySearch0(Arrays.java:2442)
+	at java.base/java.util.Arrays.binarySearch(Arrays.java:2382)
+	at org.jsoup.nodes.Attribute.isBooleanAttribute(Attribute.java:179)
+	at org.jsoup.nodes.Attribute.shouldCollapseAttribute(Attribute.java:165)
+	at org.jsoup.nodes.Attributes.html(Attributes.java:319)
+	at org.jsoup.nodes.Attributes.html(Attributes.java:303)
+	at org.jsoup.nodes.Attributes.toString(Attributes.java:329)
+	at org.jsoup.nodes.RegressionTest4.test2421(RegressionTest4.java:20187)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:884)
+--- org.jsoup.nodes.RegressionTest5::test2879
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest5::test2949
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest6::test3171
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest6::test3284
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest1::test0665
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest3::test1613
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest4::test2421
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest5::test2879
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest5::test2949
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest6::test3171
+java.lang.NullPointerException
+--- org.jsoup.nodes.RegressionTest6::test3284
+java.lang.NullPointerException

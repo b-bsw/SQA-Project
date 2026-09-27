@@ -1,0 +1,26 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Gson_17-3drtvw8y/Gson_17-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 20
+  - com.google.gson.RegressionTest0::test10
+  - com.google.gson.RegressionTest0::test13
+  - com.google.gson.RegressionTest0::test15
+  - com.google.gson.RegressionTest0::test21
+  - com.google.gson.RegressionTest0::test23
+  - com.google.gson.RegressionTest0::test31
+  - com.google.gson.RegressionTest0::test46
+  - com.google.gson.RegressionTest0::test47
+  - com.google.gson.RegressionTest0::test66
+  - com.google.gson.RegressionTest0::test74
+  - com.google.gson.RegressionTest0::test10
+  - com.google.gson.RegressionTest0::test13
+  - com.google.gson.RegressionTest0::test15
+  - com.google.gson.RegressionTest0::test21
+  - com.google.gson.RegressionTest0::test23
+  - com.google.gson.RegressionTest0::test31
+  - com.google.gson.RegressionTest0::test46
+  - com.google.gson.RegressionTest0::test47
+  - com.google.gson.RegressionTest0::test66
+  - com.google.gson.RegressionTest0::test74
+[exit 0]

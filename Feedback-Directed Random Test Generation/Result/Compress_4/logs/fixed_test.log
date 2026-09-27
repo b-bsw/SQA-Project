@@ -1,0 +1,10 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Compress_4-r86bvbwa/Compress_4-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 4
+  - org.apache.commons.compress.changes.RegressionTest0::test49
+  - org.apache.commons.compress.changes.RegressionTest0::test52
+  - org.apache.commons.compress.changes.RegressionTest0::test49
+  - org.apache.commons.compress.changes.RegressionTest0::test52
+[exit 0]

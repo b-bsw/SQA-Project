@@ -1,0 +1,20 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p JacksonCore -v 3f -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonCore_3-2g9uog21/fixed
+Checking out 911cca02 to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/r OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/ran OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 911cca02:7ee38785..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: JacksonCore-3f.................................. OK
+[exit 0]
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonCore_3-2g9uog21/fixed
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]

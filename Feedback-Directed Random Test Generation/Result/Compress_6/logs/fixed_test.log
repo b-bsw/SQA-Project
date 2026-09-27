@@ -1,0 +1,16 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Compress_6-ju1bhz6h/Compress_6-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 10
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test03
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test09
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test17
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test25
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test31
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test03
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test09
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test17
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test25
+  - org.apache.commons.compress.archivers.zip.RegressionTest0::test31
+[exit 0]

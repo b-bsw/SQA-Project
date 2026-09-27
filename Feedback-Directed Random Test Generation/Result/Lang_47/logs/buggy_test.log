@@ -1,0 +1,35 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_47-q0ygdews/Lang_47-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 29
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.ErrorTest0::test3
+  - org.apache.commons.lang.text.ErrorTest0::test4
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.ErrorTest0::test3
+  - org.apache.commons.lang.text.ErrorTest0::test4
+  - org.apache.commons.lang.text.RegressionTest1::test0747
+  - org.apache.commons.lang.text.RegressionTest1::test0879
+  - org.apache.commons.lang.text.RegressionTest2::test1016
+  - org.apache.commons.lang.text.RegressionTest2::test1038
+  - org.apache.commons.lang.text.RegressionTest3::test1548
+  - org.apache.commons.lang.text.RegressionTest3::test1597
+  - org.apache.commons.lang.text.RegressionTest3::test1656
+  - org.apache.commons.lang.text.RegressionTest3::test1840
+  - org.apache.commons.lang.text.RegressionTest3::test1848
+  - org.apache.commons.lang.text.RegressionTest3::test1921
+  - org.apache.commons.lang.text.RegressionTest4::test2005
+  - org.apache.commons.lang.text.RegressionTest6::test3183
+  - org.apache.commons.lang.text.RegressionTest0::test0099
+  - org.apache.commons.lang.text.RegressionTest0::test0212
+  - org.apache.commons.lang.text.RegressionTest1::test0515
+  - org.apache.commons.lang.text.RegressionTest2::test1147
+  - org.apache.commons.lang.text.RegressionTest2::test1286
+  - org.apache.commons.lang.text.RegressionTest3::test1524
+  - org.apache.commons.lang.text.RegressionTest3::test1573
+  - org.apache.commons.lang.text.RegressionTest4::test2046
+  - org.apache.commons.lang.text.RegressionTest4::test2123
+[exit 0]

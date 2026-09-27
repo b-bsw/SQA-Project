@@ -1,5 +1,5 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j checkout -p Cli -v 2b -w /tmp/randoop-Cli_2-r9v3l_mj/buggy
-Checking out 2ff9573f to /tmp/randoop-Cli_2-r9v3l_mj/buggy................. OK
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Cli -v 2b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_2-q8ijmc2e/buggy
+Checking out 2ff9573f to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/r OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -13,7 +13,7 @@ Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Cli-2b.......................................... OK
 [exit 0]
-$ /home/face/defect4j/defects4j/framework/bin/defects4j compile -w /tmp/randoop-Cli_2-r9v3l_mj/buggy
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_2-q8ijmc2e/buggy
 Running ant (compile)...................................................... OK
 Running ant (compile.tests)................................................ OK
 [exit 0]

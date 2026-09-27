@@ -1,12 +1,10 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j test -s /tmp/randoop-Chart_8-223rnev7/Chart_8-randoop.tar.bz2
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_8-tpn77mj8/Chart_8-randoop.tar.bz2
 Extract test suite......................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Failing tests: 3144
-  - org.jfree.data.time.RegressionTest0::test0019
+Failing tests: 3048
   - org.jfree.data.time.RegressionTest0::test0023
   - org.jfree.data.time.RegressionTest0::test0026
-  - org.jfree.data.time.RegressionTest0::test0027
   - org.jfree.data.time.RegressionTest0::test0029
   - org.jfree.data.time.RegressionTest0::test0030
   - org.jfree.data.time.RegressionTest0::test0031
@@ -18,7 +16,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0037
   - org.jfree.data.time.RegressionTest0::test0038
   - org.jfree.data.time.RegressionTest0::test0039
-  - org.jfree.data.time.RegressionTest0::test0040
   - org.jfree.data.time.RegressionTest0::test0041
   - org.jfree.data.time.RegressionTest0::test0042
   - org.jfree.data.time.RegressionTest0::test0043
@@ -28,7 +25,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0048
   - org.jfree.data.time.RegressionTest0::test0049
   - org.jfree.data.time.RegressionTest0::test0050
-  - org.jfree.data.time.RegressionTest0::test0052
   - org.jfree.data.time.RegressionTest0::test0053
   - org.jfree.data.time.RegressionTest0::test0055
   - org.jfree.data.time.RegressionTest0::test0056
@@ -36,8 +32,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0058
   - org.jfree.data.time.RegressionTest0::test0059
   - org.jfree.data.time.RegressionTest0::test0060
-  - org.jfree.data.time.RegressionTest0::test0061
-  - org.jfree.data.time.RegressionTest0::test0062
   - org.jfree.data.time.RegressionTest0::test0063
   - org.jfree.data.time.RegressionTest0::test0066
   - org.jfree.data.time.RegressionTest0::test0067
@@ -50,17 +44,14 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0075
   - org.jfree.data.time.RegressionTest0::test0076
   - org.jfree.data.time.RegressionTest0::test0077
-  - org.jfree.data.time.RegressionTest0::test0078
   - org.jfree.data.time.RegressionTest0::test0079
   - org.jfree.data.time.RegressionTest0::test0080
   - org.jfree.data.time.RegressionTest0::test0081
-  - org.jfree.data.time.RegressionTest0::test0082
   - org.jfree.data.time.RegressionTest0::test0083
   - org.jfree.data.time.RegressionTest0::test0085
   - org.jfree.data.time.RegressionTest0::test0086
   - org.jfree.data.time.RegressionTest0::test0087
   - org.jfree.data.time.RegressionTest0::test0088
-  - org.jfree.data.time.RegressionTest0::test0089
   - org.jfree.data.time.RegressionTest0::test0090
   - org.jfree.data.time.RegressionTest0::test0091
   - org.jfree.data.time.RegressionTest0::test0092
@@ -80,8 +71,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0108
   - org.jfree.data.time.RegressionTest0::test0109
   - org.jfree.data.time.RegressionTest0::test0111
-  - org.jfree.data.time.RegressionTest0::test0112
-  - org.jfree.data.time.RegressionTest0::test0113
   - org.jfree.data.time.RegressionTest0::test0114
   - org.jfree.data.time.RegressionTest0::test0115
   - org.jfree.data.time.RegressionTest0::test0116
@@ -112,7 +101,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0145
   - org.jfree.data.time.RegressionTest0::test0147
   - org.jfree.data.time.RegressionTest0::test0149
-  - org.jfree.data.time.RegressionTest0::test0151
   - org.jfree.data.time.RegressionTest0::test0155
   - org.jfree.data.time.RegressionTest0::test0156
   - org.jfree.data.time.RegressionTest0::test0157
@@ -125,7 +113,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0164
   - org.jfree.data.time.RegressionTest0::test0166
   - org.jfree.data.time.RegressionTest0::test0167
-  - org.jfree.data.time.RegressionTest0::test0168
   - org.jfree.data.time.RegressionTest0::test0170
   - org.jfree.data.time.RegressionTest0::test0171
   - org.jfree.data.time.RegressionTest0::test0172
@@ -158,6 +145,7 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0200
   - org.jfree.data.time.RegressionTest0::test0201
   - org.jfree.data.time.RegressionTest0::test0204
+  - org.jfree.data.time.RegressionTest0::test0205
   - org.jfree.data.time.RegressionTest0::test0206
   - org.jfree.data.time.RegressionTest0::test0207
   - org.jfree.data.time.RegressionTest0::test0208
@@ -183,7 +171,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0229
   - org.jfree.data.time.RegressionTest0::test0230
   - org.jfree.data.time.RegressionTest0::test0231
-  - org.jfree.data.time.RegressionTest0::test0232
   - org.jfree.data.time.RegressionTest0::test0233
   - org.jfree.data.time.RegressionTest0::test0235
   - org.jfree.data.time.RegressionTest0::test0236
@@ -274,22 +261,18 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0331
   - org.jfree.data.time.RegressionTest0::test0332
   - org.jfree.data.time.RegressionTest0::test0333
-  - org.jfree.data.time.RegressionTest0::test0334
   - org.jfree.data.time.RegressionTest0::test0335
   - org.jfree.data.time.RegressionTest0::test0336
   - org.jfree.data.time.RegressionTest0::test0337
   - org.jfree.data.time.RegressionTest0::test0339
   - org.jfree.data.time.RegressionTest0::test0340
-  - org.jfree.data.time.RegressionTest0::test0341
   - org.jfree.data.time.RegressionTest0::test0342
   - org.jfree.data.time.RegressionTest0::test0343
   - org.jfree.data.time.RegressionTest0::test0345
   - org.jfree.data.time.RegressionTest0::test0346
   - org.jfree.data.time.RegressionTest0::test0347
-  - org.jfree.data.time.RegressionTest0::test0348
   - org.jfree.data.time.RegressionTest0::test0349
   - org.jfree.data.time.RegressionTest0::test0350
-  - org.jfree.data.time.RegressionTest0::test0351
   - org.jfree.data.time.RegressionTest0::test0352
   - org.jfree.data.time.RegressionTest0::test0354
   - org.jfree.data.time.RegressionTest0::test0355
@@ -308,7 +291,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0372
   - org.jfree.data.time.RegressionTest0::test0373
   - org.jfree.data.time.RegressionTest0::test0374
-  - org.jfree.data.time.RegressionTest0::test0375
   - org.jfree.data.time.RegressionTest0::test0376
   - org.jfree.data.time.RegressionTest0::test0377
   - org.jfree.data.time.RegressionTest0::test0378
@@ -316,7 +298,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0380
   - org.jfree.data.time.RegressionTest0::test0381
   - org.jfree.data.time.RegressionTest0::test0382
-  - org.jfree.data.time.RegressionTest0::test0383
   - org.jfree.data.time.RegressionTest0::test0384
   - org.jfree.data.time.RegressionTest0::test0385
   - org.jfree.data.time.RegressionTest0::test0386
@@ -325,7 +306,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0389
   - org.jfree.data.time.RegressionTest0::test0391
   - org.jfree.data.time.RegressionTest0::test0392
-  - org.jfree.data.time.RegressionTest0::test0393
   - org.jfree.data.time.RegressionTest0::test0395
   - org.jfree.data.time.RegressionTest0::test0396
   - org.jfree.data.time.RegressionTest0::test0397
@@ -336,10 +316,8 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0404
   - org.jfree.data.time.RegressionTest0::test0405
   - org.jfree.data.time.RegressionTest0::test0406
-  - org.jfree.data.time.RegressionTest0::test0409
   - org.jfree.data.time.RegressionTest0::test0410
   - org.jfree.data.time.RegressionTest0::test0411
-  - org.jfree.data.time.RegressionTest0::test0412
   - org.jfree.data.time.RegressionTest0::test0414
   - org.jfree.data.time.RegressionTest0::test0416
   - org.jfree.data.time.RegressionTest0::test0417
@@ -358,7 +336,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0430
   - org.jfree.data.time.RegressionTest0::test0431
   - org.jfree.data.time.RegressionTest0::test0432
-  - org.jfree.data.time.RegressionTest0::test0433
   - org.jfree.data.time.RegressionTest0::test0434
   - org.jfree.data.time.RegressionTest0::test0435
   - org.jfree.data.time.RegressionTest0::test0436
@@ -452,7 +429,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0537
   - org.jfree.data.time.RegressionTest1::test0538
   - org.jfree.data.time.RegressionTest1::test0539
-  - org.jfree.data.time.RegressionTest1::test0540
   - org.jfree.data.time.RegressionTest1::test0541
   - org.jfree.data.time.RegressionTest1::test0542
   - org.jfree.data.time.RegressionTest1::test0543
@@ -488,7 +464,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0577
   - org.jfree.data.time.RegressionTest1::test0579
   - org.jfree.data.time.RegressionTest1::test0580
-  - org.jfree.data.time.RegressionTest1::test0581
   - org.jfree.data.time.RegressionTest1::test0582
   - org.jfree.data.time.RegressionTest1::test0583
   - org.jfree.data.time.RegressionTest1::test0584
@@ -498,7 +473,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0588
   - org.jfree.data.time.RegressionTest1::test0589
   - org.jfree.data.time.RegressionTest1::test0590
-  - org.jfree.data.time.RegressionTest1::test0591
   - org.jfree.data.time.RegressionTest1::test0592
   - org.jfree.data.time.RegressionTest1::test0593
   - org.jfree.data.time.RegressionTest1::test0594
@@ -534,7 +508,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0626
   - org.jfree.data.time.RegressionTest1::test0627
   - org.jfree.data.time.RegressionTest1::test0628
-  - org.jfree.data.time.RegressionTest1::test0629
   - org.jfree.data.time.RegressionTest1::test0630
   - org.jfree.data.time.RegressionTest1::test0631
   - org.jfree.data.time.RegressionTest1::test0632
@@ -558,7 +531,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0651
   - org.jfree.data.time.RegressionTest1::test0652
   - org.jfree.data.time.RegressionTest1::test0653
-  - org.jfree.data.time.RegressionTest1::test0654
   - org.jfree.data.time.RegressionTest1::test0655
   - org.jfree.data.time.RegressionTest1::test0656
   - org.jfree.data.time.RegressionTest1::test0657
@@ -579,7 +551,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0673
   - org.jfree.data.time.RegressionTest1::test0675
   - org.jfree.data.time.RegressionTest1::test0676
-  - org.jfree.data.time.RegressionTest1::test0679
   - org.jfree.data.time.RegressionTest1::test0680
   - org.jfree.data.time.RegressionTest1::test0682
   - org.jfree.data.time.RegressionTest1::test0683
@@ -623,7 +594,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0726
   - org.jfree.data.time.RegressionTest1::test0727
   - org.jfree.data.time.RegressionTest1::test0728
-  - org.jfree.data.time.RegressionTest1::test0729
   - org.jfree.data.time.RegressionTest1::test0730
   - org.jfree.data.time.RegressionTest1::test0731
   - org.jfree.data.time.RegressionTest1::test0732
@@ -638,7 +608,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0741
   - org.jfree.data.time.RegressionTest1::test0742
   - org.jfree.data.time.RegressionTest1::test0744
-  - org.jfree.data.time.RegressionTest1::test0745
   - org.jfree.data.time.RegressionTest1::test0746
   - org.jfree.data.time.RegressionTest1::test0747
   - org.jfree.data.time.RegressionTest1::test0748
@@ -650,7 +619,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0754
   - org.jfree.data.time.RegressionTest1::test0755
   - org.jfree.data.time.RegressionTest1::test0756
-  - org.jfree.data.time.RegressionTest1::test0757
   - org.jfree.data.time.RegressionTest1::test0758
   - org.jfree.data.time.RegressionTest1::test0760
   - org.jfree.data.time.RegressionTest1::test0761
@@ -699,7 +667,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0815
   - org.jfree.data.time.RegressionTest1::test0816
   - org.jfree.data.time.RegressionTest1::test0817
-  - org.jfree.data.time.RegressionTest1::test0818
   - org.jfree.data.time.RegressionTest1::test0819
   - org.jfree.data.time.RegressionTest1::test0820
   - org.jfree.data.time.RegressionTest1::test0821
@@ -766,7 +733,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0896
   - org.jfree.data.time.RegressionTest1::test0897
   - org.jfree.data.time.RegressionTest1::test0898
-  - org.jfree.data.time.RegressionTest1::test0899
   - org.jfree.data.time.RegressionTest1::test0900
   - org.jfree.data.time.RegressionTest1::test0901
   - org.jfree.data.time.RegressionTest1::test0902
@@ -777,7 +743,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0909
   - org.jfree.data.time.RegressionTest1::test0910
   - org.jfree.data.time.RegressionTest1::test0911
-  - org.jfree.data.time.RegressionTest1::test0913
   - org.jfree.data.time.RegressionTest1::test0914
   - org.jfree.data.time.RegressionTest1::test0915
   - org.jfree.data.time.RegressionTest1::test0916
@@ -819,14 +784,12 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0958
   - org.jfree.data.time.RegressionTest1::test0959
   - org.jfree.data.time.RegressionTest1::test0960
-  - org.jfree.data.time.RegressionTest1::test0961
   - org.jfree.data.time.RegressionTest1::test0962
   - org.jfree.data.time.RegressionTest1::test0963
   - org.jfree.data.time.RegressionTest1::test0964
   - org.jfree.data.time.RegressionTest1::test0965
   - org.jfree.data.time.RegressionTest1::test0966
   - org.jfree.data.time.RegressionTest1::test0967
-  - org.jfree.data.time.RegressionTest1::test0968
   - org.jfree.data.time.RegressionTest1::test0969
   - org.jfree.data.time.RegressionTest1::test0970
   - org.jfree.data.time.RegressionTest1::test0971
@@ -894,18 +857,19 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1040
   - org.jfree.data.time.RegressionTest2::test1041
   - org.jfree.data.time.RegressionTest2::test1042
+  - org.jfree.data.time.RegressionTest2::test1043
   - org.jfree.data.time.RegressionTest2::test1044
   - org.jfree.data.time.RegressionTest2::test1045
   - org.jfree.data.time.RegressionTest2::test1046
   - org.jfree.data.time.RegressionTest2::test1047
   - org.jfree.data.time.RegressionTest2::test1048
+  - org.jfree.data.time.RegressionTest2::test1049
   - org.jfree.data.time.RegressionTest2::test1050
   - org.jfree.data.time.RegressionTest2::test1051
   - org.jfree.data.time.RegressionTest2::test1052
   - org.jfree.data.time.RegressionTest2::test1053
   - org.jfree.data.time.RegressionTest2::test1054
   - org.jfree.data.time.RegressionTest2::test1055
-  - org.jfree.data.time.RegressionTest2::test1056
   - org.jfree.data.time.RegressionTest2::test1057
   - org.jfree.data.time.RegressionTest2::test1058
   - org.jfree.data.time.RegressionTest2::test1059
@@ -960,8 +924,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1114
   - org.jfree.data.time.RegressionTest2::test1115
   - org.jfree.data.time.RegressionTest2::test1116
-  - org.jfree.data.time.RegressionTest2::test1117
-  - org.jfree.data.time.RegressionTest2::test1118
   - org.jfree.data.time.RegressionTest2::test1119
   - org.jfree.data.time.RegressionTest2::test1120
   - org.jfree.data.time.RegressionTest2::test1121
@@ -974,7 +936,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1129
   - org.jfree.data.time.RegressionTest2::test1130
   - org.jfree.data.time.RegressionTest2::test1131
-  - org.jfree.data.time.RegressionTest2::test1132
   - org.jfree.data.time.RegressionTest2::test1133
   - org.jfree.data.time.RegressionTest2::test1134
   - org.jfree.data.time.RegressionTest2::test1135
@@ -1043,7 +1004,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1207
   - org.jfree.data.time.RegressionTest2::test1208
   - org.jfree.data.time.RegressionTest2::test1209
-  - org.jfree.data.time.RegressionTest2::test1210
   - org.jfree.data.time.RegressionTest2::test1211
   - org.jfree.data.time.RegressionTest2::test1212
   - org.jfree.data.time.RegressionTest2::test1213
@@ -1103,7 +1063,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1273
   - org.jfree.data.time.RegressionTest2::test1274
   - org.jfree.data.time.RegressionTest2::test1275
-  - org.jfree.data.time.RegressionTest2::test1277
   - org.jfree.data.time.RegressionTest2::test1278
   - org.jfree.data.time.RegressionTest2::test1279
   - org.jfree.data.time.RegressionTest2::test1280
@@ -1152,7 +1111,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1329
   - org.jfree.data.time.RegressionTest2::test1330
   - org.jfree.data.time.RegressionTest2::test1332
-  - org.jfree.data.time.RegressionTest2::test1333
   - org.jfree.data.time.RegressionTest2::test1335
   - org.jfree.data.time.RegressionTest2::test1336
   - org.jfree.data.time.RegressionTest2::test1337
@@ -1239,7 +1197,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1429
   - org.jfree.data.time.RegressionTest2::test1430
   - org.jfree.data.time.RegressionTest2::test1431
-  - org.jfree.data.time.RegressionTest2::test1432
   - org.jfree.data.time.RegressionTest2::test1433
   - org.jfree.data.time.RegressionTest2::test1434
   - org.jfree.data.time.RegressionTest2::test1435
@@ -1357,7 +1314,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1563
   - org.jfree.data.time.RegressionTest3::test1564
   - org.jfree.data.time.RegressionTest3::test1565
-  - org.jfree.data.time.RegressionTest3::test1566
   - org.jfree.data.time.RegressionTest3::test1568
   - org.jfree.data.time.RegressionTest3::test1569
   - org.jfree.data.time.RegressionTest3::test1570
@@ -1379,7 +1335,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1589
   - org.jfree.data.time.RegressionTest3::test1590
   - org.jfree.data.time.RegressionTest3::test1591
-  - org.jfree.data.time.RegressionTest3::test1592
   - org.jfree.data.time.RegressionTest3::test1593
   - org.jfree.data.time.RegressionTest3::test1594
   - org.jfree.data.time.RegressionTest3::test1595
@@ -1405,7 +1360,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1621
   - org.jfree.data.time.RegressionTest3::test1622
   - org.jfree.data.time.RegressionTest3::test1623
-  - org.jfree.data.time.RegressionTest3::test1624
   - org.jfree.data.time.RegressionTest3::test1625
   - org.jfree.data.time.RegressionTest3::test1626
   - org.jfree.data.time.RegressionTest3::test1627
@@ -1506,7 +1460,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1729
   - org.jfree.data.time.RegressionTest3::test1730
   - org.jfree.data.time.RegressionTest3::test1731
-  - org.jfree.data.time.RegressionTest3::test1733
   - org.jfree.data.time.RegressionTest3::test1734
   - org.jfree.data.time.RegressionTest3::test1735
   - org.jfree.data.time.RegressionTest3::test1736
@@ -1554,7 +1507,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1780
   - org.jfree.data.time.RegressionTest3::test1781
   - org.jfree.data.time.RegressionTest3::test1782
-  - org.jfree.data.time.RegressionTest3::test1784
   - org.jfree.data.time.RegressionTest3::test1785
   - org.jfree.data.time.RegressionTest3::test1786
   - org.jfree.data.time.RegressionTest3::test1787
@@ -1575,10 +1527,8 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1804
   - org.jfree.data.time.RegressionTest3::test1805
   - org.jfree.data.time.RegressionTest3::test1806
-  - org.jfree.data.time.RegressionTest0::test0019
   - org.jfree.data.time.RegressionTest0::test0023
   - org.jfree.data.time.RegressionTest0::test0026
-  - org.jfree.data.time.RegressionTest0::test0027
   - org.jfree.data.time.RegressionTest0::test0029
   - org.jfree.data.time.RegressionTest0::test0030
   - org.jfree.data.time.RegressionTest0::test0031
@@ -1590,7 +1540,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0037
   - org.jfree.data.time.RegressionTest0::test0038
   - org.jfree.data.time.RegressionTest0::test0039
-  - org.jfree.data.time.RegressionTest0::test0040
   - org.jfree.data.time.RegressionTest0::test0041
   - org.jfree.data.time.RegressionTest0::test0042
   - org.jfree.data.time.RegressionTest0::test0043
@@ -1600,7 +1549,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0048
   - org.jfree.data.time.RegressionTest0::test0049
   - org.jfree.data.time.RegressionTest0::test0050
-  - org.jfree.data.time.RegressionTest0::test0052
   - org.jfree.data.time.RegressionTest0::test0053
   - org.jfree.data.time.RegressionTest0::test0055
   - org.jfree.data.time.RegressionTest0::test0056
@@ -1608,8 +1556,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0058
   - org.jfree.data.time.RegressionTest0::test0059
   - org.jfree.data.time.RegressionTest0::test0060
-  - org.jfree.data.time.RegressionTest0::test0061
-  - org.jfree.data.time.RegressionTest0::test0062
   - org.jfree.data.time.RegressionTest0::test0063
   - org.jfree.data.time.RegressionTest0::test0066
   - org.jfree.data.time.RegressionTest0::test0067
@@ -1622,17 +1568,14 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0075
   - org.jfree.data.time.RegressionTest0::test0076
   - org.jfree.data.time.RegressionTest0::test0077
-  - org.jfree.data.time.RegressionTest0::test0078
   - org.jfree.data.time.RegressionTest0::test0079
   - org.jfree.data.time.RegressionTest0::test0080
   - org.jfree.data.time.RegressionTest0::test0081
-  - org.jfree.data.time.RegressionTest0::test0082
   - org.jfree.data.time.RegressionTest0::test0083
   - org.jfree.data.time.RegressionTest0::test0085
   - org.jfree.data.time.RegressionTest0::test0086
   - org.jfree.data.time.RegressionTest0::test0087
   - org.jfree.data.time.RegressionTest0::test0088
-  - org.jfree.data.time.RegressionTest0::test0089
   - org.jfree.data.time.RegressionTest0::test0090
   - org.jfree.data.time.RegressionTest0::test0091
   - org.jfree.data.time.RegressionTest0::test0092
@@ -1652,8 +1595,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0108
   - org.jfree.data.time.RegressionTest0::test0109
   - org.jfree.data.time.RegressionTest0::test0111
-  - org.jfree.data.time.RegressionTest0::test0112
-  - org.jfree.data.time.RegressionTest0::test0113
   - org.jfree.data.time.RegressionTest0::test0114
   - org.jfree.data.time.RegressionTest0::test0115
   - org.jfree.data.time.RegressionTest0::test0116
@@ -1684,7 +1625,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0145
   - org.jfree.data.time.RegressionTest0::test0147
   - org.jfree.data.time.RegressionTest0::test0149
-  - org.jfree.data.time.RegressionTest0::test0151
   - org.jfree.data.time.RegressionTest0::test0155
   - org.jfree.data.time.RegressionTest0::test0156
   - org.jfree.data.time.RegressionTest0::test0157
@@ -1697,7 +1637,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0164
   - org.jfree.data.time.RegressionTest0::test0166
   - org.jfree.data.time.RegressionTest0::test0167
-  - org.jfree.data.time.RegressionTest0::test0168
   - org.jfree.data.time.RegressionTest0::test0170
   - org.jfree.data.time.RegressionTest0::test0171
   - org.jfree.data.time.RegressionTest0::test0172
@@ -1730,6 +1669,7 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0200
   - org.jfree.data.time.RegressionTest0::test0201
   - org.jfree.data.time.RegressionTest0::test0204
+  - org.jfree.data.time.RegressionTest0::test0205
   - org.jfree.data.time.RegressionTest0::test0206
   - org.jfree.data.time.RegressionTest0::test0207
   - org.jfree.data.time.RegressionTest0::test0208
@@ -1755,7 +1695,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0229
   - org.jfree.data.time.RegressionTest0::test0230
   - org.jfree.data.time.RegressionTest0::test0231
-  - org.jfree.data.time.RegressionTest0::test0232
   - org.jfree.data.time.RegressionTest0::test0233
   - org.jfree.data.time.RegressionTest0::test0235
   - org.jfree.data.time.RegressionTest0::test0236
@@ -1846,22 +1785,18 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0331
   - org.jfree.data.time.RegressionTest0::test0332
   - org.jfree.data.time.RegressionTest0::test0333
-  - org.jfree.data.time.RegressionTest0::test0334
   - org.jfree.data.time.RegressionTest0::test0335
   - org.jfree.data.time.RegressionTest0::test0336
   - org.jfree.data.time.RegressionTest0::test0337
   - org.jfree.data.time.RegressionTest0::test0339
   - org.jfree.data.time.RegressionTest0::test0340
-  - org.jfree.data.time.RegressionTest0::test0341
   - org.jfree.data.time.RegressionTest0::test0342
   - org.jfree.data.time.RegressionTest0::test0343
   - org.jfree.data.time.RegressionTest0::test0345
   - org.jfree.data.time.RegressionTest0::test0346
   - org.jfree.data.time.RegressionTest0::test0347
-  - org.jfree.data.time.RegressionTest0::test0348
   - org.jfree.data.time.RegressionTest0::test0349
   - org.jfree.data.time.RegressionTest0::test0350
-  - org.jfree.data.time.RegressionTest0::test0351
   - org.jfree.data.time.RegressionTest0::test0352
   - org.jfree.data.time.RegressionTest0::test0354
   - org.jfree.data.time.RegressionTest0::test0355
@@ -1880,7 +1815,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0372
   - org.jfree.data.time.RegressionTest0::test0373
   - org.jfree.data.time.RegressionTest0::test0374
-  - org.jfree.data.time.RegressionTest0::test0375
   - org.jfree.data.time.RegressionTest0::test0376
   - org.jfree.data.time.RegressionTest0::test0377
   - org.jfree.data.time.RegressionTest0::test0378
@@ -1888,7 +1822,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0380
   - org.jfree.data.time.RegressionTest0::test0381
   - org.jfree.data.time.RegressionTest0::test0382
-  - org.jfree.data.time.RegressionTest0::test0383
   - org.jfree.data.time.RegressionTest0::test0384
   - org.jfree.data.time.RegressionTest0::test0385
   - org.jfree.data.time.RegressionTest0::test0386
@@ -1897,7 +1830,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0389
   - org.jfree.data.time.RegressionTest0::test0391
   - org.jfree.data.time.RegressionTest0::test0392
-  - org.jfree.data.time.RegressionTest0::test0393
   - org.jfree.data.time.RegressionTest0::test0395
   - org.jfree.data.time.RegressionTest0::test0396
   - org.jfree.data.time.RegressionTest0::test0397
@@ -1908,10 +1840,8 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0404
   - org.jfree.data.time.RegressionTest0::test0405
   - org.jfree.data.time.RegressionTest0::test0406
-  - org.jfree.data.time.RegressionTest0::test0409
   - org.jfree.data.time.RegressionTest0::test0410
   - org.jfree.data.time.RegressionTest0::test0411
-  - org.jfree.data.time.RegressionTest0::test0412
   - org.jfree.data.time.RegressionTest0::test0414
   - org.jfree.data.time.RegressionTest0::test0416
   - org.jfree.data.time.RegressionTest0::test0417
@@ -1930,7 +1860,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest0::test0430
   - org.jfree.data.time.RegressionTest0::test0431
   - org.jfree.data.time.RegressionTest0::test0432
-  - org.jfree.data.time.RegressionTest0::test0433
   - org.jfree.data.time.RegressionTest0::test0434
   - org.jfree.data.time.RegressionTest0::test0435
   - org.jfree.data.time.RegressionTest0::test0436
@@ -2024,7 +1953,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0537
   - org.jfree.data.time.RegressionTest1::test0538
   - org.jfree.data.time.RegressionTest1::test0539
-  - org.jfree.data.time.RegressionTest1::test0540
   - org.jfree.data.time.RegressionTest1::test0541
   - org.jfree.data.time.RegressionTest1::test0542
   - org.jfree.data.time.RegressionTest1::test0543
@@ -2060,7 +1988,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0577
   - org.jfree.data.time.RegressionTest1::test0579
   - org.jfree.data.time.RegressionTest1::test0580
-  - org.jfree.data.time.RegressionTest1::test0581
   - org.jfree.data.time.RegressionTest1::test0582
   - org.jfree.data.time.RegressionTest1::test0583
   - org.jfree.data.time.RegressionTest1::test0584
@@ -2070,7 +1997,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0588
   - org.jfree.data.time.RegressionTest1::test0589
   - org.jfree.data.time.RegressionTest1::test0590
-  - org.jfree.data.time.RegressionTest1::test0591
   - org.jfree.data.time.RegressionTest1::test0592
   - org.jfree.data.time.RegressionTest1::test0593
   - org.jfree.data.time.RegressionTest1::test0594
@@ -2106,7 +2032,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0626
   - org.jfree.data.time.RegressionTest1::test0627
   - org.jfree.data.time.RegressionTest1::test0628
-  - org.jfree.data.time.RegressionTest1::test0629
   - org.jfree.data.time.RegressionTest1::test0630
   - org.jfree.data.time.RegressionTest1::test0631
   - org.jfree.data.time.RegressionTest1::test0632
@@ -2130,7 +2055,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0651
   - org.jfree.data.time.RegressionTest1::test0652
   - org.jfree.data.time.RegressionTest1::test0653
-  - org.jfree.data.time.RegressionTest1::test0654
   - org.jfree.data.time.RegressionTest1::test0655
   - org.jfree.data.time.RegressionTest1::test0656
   - org.jfree.data.time.RegressionTest1::test0657
@@ -2151,7 +2075,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0673
   - org.jfree.data.time.RegressionTest1::test0675
   - org.jfree.data.time.RegressionTest1::test0676
-  - org.jfree.data.time.RegressionTest1::test0679
   - org.jfree.data.time.RegressionTest1::test0680
   - org.jfree.data.time.RegressionTest1::test0682
   - org.jfree.data.time.RegressionTest1::test0683
@@ -2195,7 +2118,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0726
   - org.jfree.data.time.RegressionTest1::test0727
   - org.jfree.data.time.RegressionTest1::test0728
-  - org.jfree.data.time.RegressionTest1::test0729
   - org.jfree.data.time.RegressionTest1::test0730
   - org.jfree.data.time.RegressionTest1::test0731
   - org.jfree.data.time.RegressionTest1::test0732
@@ -2210,7 +2132,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0741
   - org.jfree.data.time.RegressionTest1::test0742
   - org.jfree.data.time.RegressionTest1::test0744
-  - org.jfree.data.time.RegressionTest1::test0745
   - org.jfree.data.time.RegressionTest1::test0746
   - org.jfree.data.time.RegressionTest1::test0747
   - org.jfree.data.time.RegressionTest1::test0748
@@ -2222,7 +2143,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0754
   - org.jfree.data.time.RegressionTest1::test0755
   - org.jfree.data.time.RegressionTest1::test0756
-  - org.jfree.data.time.RegressionTest1::test0757
   - org.jfree.data.time.RegressionTest1::test0758
   - org.jfree.data.time.RegressionTest1::test0760
   - org.jfree.data.time.RegressionTest1::test0761
@@ -2271,7 +2191,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0815
   - org.jfree.data.time.RegressionTest1::test0816
   - org.jfree.data.time.RegressionTest1::test0817
-  - org.jfree.data.time.RegressionTest1::test0818
   - org.jfree.data.time.RegressionTest1::test0819
   - org.jfree.data.time.RegressionTest1::test0820
   - org.jfree.data.time.RegressionTest1::test0821
@@ -2338,7 +2257,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0896
   - org.jfree.data.time.RegressionTest1::test0897
   - org.jfree.data.time.RegressionTest1::test0898
-  - org.jfree.data.time.RegressionTest1::test0899
   - org.jfree.data.time.RegressionTest1::test0900
   - org.jfree.data.time.RegressionTest1::test0901
   - org.jfree.data.time.RegressionTest1::test0902
@@ -2349,7 +2267,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0909
   - org.jfree.data.time.RegressionTest1::test0910
   - org.jfree.data.time.RegressionTest1::test0911
-  - org.jfree.data.time.RegressionTest1::test0913
   - org.jfree.data.time.RegressionTest1::test0914
   - org.jfree.data.time.RegressionTest1::test0915
   - org.jfree.data.time.RegressionTest1::test0916
@@ -2391,14 +2308,12 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest1::test0958
   - org.jfree.data.time.RegressionTest1::test0959
   - org.jfree.data.time.RegressionTest1::test0960
-  - org.jfree.data.time.RegressionTest1::test0961
   - org.jfree.data.time.RegressionTest1::test0962
   - org.jfree.data.time.RegressionTest1::test0963
   - org.jfree.data.time.RegressionTest1::test0964
   - org.jfree.data.time.RegressionTest1::test0965
   - org.jfree.data.time.RegressionTest1::test0966
   - org.jfree.data.time.RegressionTest1::test0967
-  - org.jfree.data.time.RegressionTest1::test0968
   - org.jfree.data.time.RegressionTest1::test0969
   - org.jfree.data.time.RegressionTest1::test0970
   - org.jfree.data.time.RegressionTest1::test0971
@@ -2466,18 +2381,19 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1040
   - org.jfree.data.time.RegressionTest2::test1041
   - org.jfree.data.time.RegressionTest2::test1042
+  - org.jfree.data.time.RegressionTest2::test1043
   - org.jfree.data.time.RegressionTest2::test1044
   - org.jfree.data.time.RegressionTest2::test1045
   - org.jfree.data.time.RegressionTest2::test1046
   - org.jfree.data.time.RegressionTest2::test1047
   - org.jfree.data.time.RegressionTest2::test1048
+  - org.jfree.data.time.RegressionTest2::test1049
   - org.jfree.data.time.RegressionTest2::test1050
   - org.jfree.data.time.RegressionTest2::test1051
   - org.jfree.data.time.RegressionTest2::test1052
   - org.jfree.data.time.RegressionTest2::test1053
   - org.jfree.data.time.RegressionTest2::test1054
   - org.jfree.data.time.RegressionTest2::test1055
-  - org.jfree.data.time.RegressionTest2::test1056
   - org.jfree.data.time.RegressionTest2::test1057
   - org.jfree.data.time.RegressionTest2::test1058
   - org.jfree.data.time.RegressionTest2::test1059
@@ -2532,8 +2448,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1114
   - org.jfree.data.time.RegressionTest2::test1115
   - org.jfree.data.time.RegressionTest2::test1116
-  - org.jfree.data.time.RegressionTest2::test1117
-  - org.jfree.data.time.RegressionTest2::test1118
   - org.jfree.data.time.RegressionTest2::test1119
   - org.jfree.data.time.RegressionTest2::test1120
   - org.jfree.data.time.RegressionTest2::test1121
@@ -2546,7 +2460,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1129
   - org.jfree.data.time.RegressionTest2::test1130
   - org.jfree.data.time.RegressionTest2::test1131
-  - org.jfree.data.time.RegressionTest2::test1132
   - org.jfree.data.time.RegressionTest2::test1133
   - org.jfree.data.time.RegressionTest2::test1134
   - org.jfree.data.time.RegressionTest2::test1135
@@ -2615,7 +2528,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1207
   - org.jfree.data.time.RegressionTest2::test1208
   - org.jfree.data.time.RegressionTest2::test1209
-  - org.jfree.data.time.RegressionTest2::test1210
   - org.jfree.data.time.RegressionTest2::test1211
   - org.jfree.data.time.RegressionTest2::test1212
   - org.jfree.data.time.RegressionTest2::test1213
@@ -2675,7 +2587,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1273
   - org.jfree.data.time.RegressionTest2::test1274
   - org.jfree.data.time.RegressionTest2::test1275
-  - org.jfree.data.time.RegressionTest2::test1277
   - org.jfree.data.time.RegressionTest2::test1278
   - org.jfree.data.time.RegressionTest2::test1279
   - org.jfree.data.time.RegressionTest2::test1280
@@ -2724,7 +2635,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1329
   - org.jfree.data.time.RegressionTest2::test1330
   - org.jfree.data.time.RegressionTest2::test1332
-  - org.jfree.data.time.RegressionTest2::test1333
   - org.jfree.data.time.RegressionTest2::test1335
   - org.jfree.data.time.RegressionTest2::test1336
   - org.jfree.data.time.RegressionTest2::test1337
@@ -2811,7 +2721,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest2::test1429
   - org.jfree.data.time.RegressionTest2::test1430
   - org.jfree.data.time.RegressionTest2::test1431
-  - org.jfree.data.time.RegressionTest2::test1432
   - org.jfree.data.time.RegressionTest2::test1433
   - org.jfree.data.time.RegressionTest2::test1434
   - org.jfree.data.time.RegressionTest2::test1435
@@ -2929,7 +2838,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1563
   - org.jfree.data.time.RegressionTest3::test1564
   - org.jfree.data.time.RegressionTest3::test1565
-  - org.jfree.data.time.RegressionTest3::test1566
   - org.jfree.data.time.RegressionTest3::test1568
   - org.jfree.data.time.RegressionTest3::test1569
   - org.jfree.data.time.RegressionTest3::test1570
@@ -2951,7 +2859,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1589
   - org.jfree.data.time.RegressionTest3::test1590
   - org.jfree.data.time.RegressionTest3::test1591
-  - org.jfree.data.time.RegressionTest3::test1592
   - org.jfree.data.time.RegressionTest3::test1593
   - org.jfree.data.time.RegressionTest3::test1594
   - org.jfree.data.time.RegressionTest3::test1595
@@ -2977,7 +2884,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1621
   - org.jfree.data.time.RegressionTest3::test1622
   - org.jfree.data.time.RegressionTest3::test1623
-  - org.jfree.data.time.RegressionTest3::test1624
   - org.jfree.data.time.RegressionTest3::test1625
   - org.jfree.data.time.RegressionTest3::test1626
   - org.jfree.data.time.RegressionTest3::test1627
@@ -3078,7 +2984,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1729
   - org.jfree.data.time.RegressionTest3::test1730
   - org.jfree.data.time.RegressionTest3::test1731
-  - org.jfree.data.time.RegressionTest3::test1733
   - org.jfree.data.time.RegressionTest3::test1734
   - org.jfree.data.time.RegressionTest3::test1735
   - org.jfree.data.time.RegressionTest3::test1736
@@ -3126,7 +3031,6 @@ Failing tests: 3144
   - org.jfree.data.time.RegressionTest3::test1780
   - org.jfree.data.time.RegressionTest3::test1781
   - org.jfree.data.time.RegressionTest3::test1782
-  - org.jfree.data.time.RegressionTest3::test1784
   - org.jfree.data.time.RegressionTest3::test1785
   - org.jfree.data.time.RegressionTest3::test1786
   - org.jfree.data.time.RegressionTest3::test1787

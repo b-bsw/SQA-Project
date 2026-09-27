@@ -1,0 +1,44 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Time_26-96k3vl4n/Time_26-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 38
+  - org.joda.time.RegressionTest0::test02
+  - org.joda.time.RegressionTest0::test06
+  - org.joda.time.RegressionTest0::test09
+  - org.joda.time.RegressionTest0::test10
+  - org.joda.time.RegressionTest0::test15
+  - org.joda.time.RegressionTest0::test18
+  - org.joda.time.RegressionTest0::test22
+  - org.joda.time.RegressionTest0::test29
+  - org.joda.time.RegressionTest0::test35
+  - org.joda.time.RegressionTest0::test37
+  - org.joda.time.RegressionTest0::test45
+  - org.joda.time.RegressionTest0::test46
+  - org.joda.time.RegressionTest0::test48
+  - org.joda.time.RegressionTest0::test49
+  - org.joda.time.RegressionTest0::test52
+  - org.joda.time.RegressionTest0::test55
+  - org.joda.time.RegressionTest0::test59
+  - org.joda.time.RegressionTest0::test61
+  - org.joda.time.RegressionTest0::test62
+  - org.joda.time.RegressionTest0::test02
+  - org.joda.time.RegressionTest0::test06
+  - org.joda.time.RegressionTest0::test09
+  - org.joda.time.RegressionTest0::test10
+  - org.joda.time.RegressionTest0::test15
+  - org.joda.time.RegressionTest0::test18
+  - org.joda.time.RegressionTest0::test22
+  - org.joda.time.RegressionTest0::test29
+  - org.joda.time.RegressionTest0::test35
+  - org.joda.time.RegressionTest0::test37
+  - org.joda.time.RegressionTest0::test45
+  - org.joda.time.RegressionTest0::test46
+  - org.joda.time.RegressionTest0::test48
+  - org.joda.time.RegressionTest0::test49
+  - org.joda.time.RegressionTest0::test52
+  - org.joda.time.RegressionTest0::test55
+  - org.joda.time.RegressionTest0::test59
+  - org.joda.time.RegressionTest0::test61
+  - org.joda.time.RegressionTest0::test62
+[exit 0]

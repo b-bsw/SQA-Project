@@ -1,0 +1,8 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonCore_8-blw6s0eq/JacksonCore_8-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 2
+  - com.fasterxml.jackson.core.util.RegressionTest0::test04
+  - com.fasterxml.jackson.core.util.RegressionTest0::test04
+[exit 0]

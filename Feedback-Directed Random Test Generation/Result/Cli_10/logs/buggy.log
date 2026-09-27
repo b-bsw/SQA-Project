@@ -1,5 +1,5 @@
-$ /home/face/defect4j/defects4j/framework/bin/defects4j checkout -p Cli -v 10b -w /tmp/randoop-Cli_10-nfe9gvzv/buggy
-Checking out d72a578a to /tmp/randoop-Cli_10-nfe9gvzv/buggy................ OK
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Cli -v 10b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_10-73vv91ls/buggy
+Checking out d72a578a to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/r OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -12,7 +12,7 @@ Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Cli-10b......................................... OK
 [exit 0]
-$ /home/face/defect4j/defects4j/framework/bin/defects4j compile -w /tmp/randoop-Cli_10-nfe9gvzv/buggy
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_10-73vv91ls/buggy
 Running ant (compile)...................................................... OK
 Running ant (compile.tests)................................................ OK
 [exit 0]

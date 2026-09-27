@@ -1,0 +1,50 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_61-rqy_c524/Lang_61-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 44
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.ErrorTest0::test3
+  - org.apache.commons.lang.text.ErrorTest0::test4
+  - org.apache.commons.lang.text.ErrorTest0::test5
+  - org.apache.commons.lang.text.ErrorTest0::test6
+  - org.apache.commons.lang.text.ErrorTest0::test7
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.ErrorTest0::test3
+  - org.apache.commons.lang.text.ErrorTest0::test4
+  - org.apache.commons.lang.text.ErrorTest0::test5
+  - org.apache.commons.lang.text.ErrorTest0::test6
+  - org.apache.commons.lang.text.ErrorTest0::test7
+  - org.apache.commons.lang.text.RegressionTest0::test0231
+  - org.apache.commons.lang.text.RegressionTest1::test0910
+  - org.apache.commons.lang.text.RegressionTest1::test0985
+  - org.apache.commons.lang.text.RegressionTest2::test1094
+  - org.apache.commons.lang.text.RegressionTest2::test1231
+  - org.apache.commons.lang.text.RegressionTest2::test1312
+  - org.apache.commons.lang.text.RegressionTest2::test1470
+  - org.apache.commons.lang.text.RegressionTest3::test1594
+  - org.apache.commons.lang.text.RegressionTest3::test1758
+  - org.apache.commons.lang.text.RegressionTest4::test2078
+  - org.apache.commons.lang.text.RegressionTest4::test2252
+  - org.apache.commons.lang.text.RegressionTest4::test2267
+  - org.apache.commons.lang.text.RegressionTest4::test2482
+  - org.apache.commons.lang.text.RegressionTest5::test2523
+  - org.apache.commons.lang.text.RegressionTest5::test2675
+  - org.apache.commons.lang.text.RegressionTest0::test0231
+  - org.apache.commons.lang.text.RegressionTest1::test0910
+  - org.apache.commons.lang.text.RegressionTest1::test0985
+  - org.apache.commons.lang.text.RegressionTest2::test1094
+  - org.apache.commons.lang.text.RegressionTest2::test1231
+  - org.apache.commons.lang.text.RegressionTest2::test1312
+  - org.apache.commons.lang.text.RegressionTest2::test1470
+  - org.apache.commons.lang.text.RegressionTest3::test1594
+  - org.apache.commons.lang.text.RegressionTest3::test1758
+  - org.apache.commons.lang.text.RegressionTest4::test2078
+  - org.apache.commons.lang.text.RegressionTest4::test2252
+  - org.apache.commons.lang.text.RegressionTest4::test2267
+  - org.apache.commons.lang.text.RegressionTest4::test2482
+  - org.apache.commons.lang.text.RegressionTest5::test2523
+  - org.apache.commons.lang.text.RegressionTest5::test2675
+[exit 0]
