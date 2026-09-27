@@ -1,0 +1,32 @@
+{
+  "started_at": "2026-09-27T19:54:19.676944+00:00",
+  "status": "FAILED",
+  "script": "generate_randoop_tests",
+  "arguments": [
+    "--project",
+    "JacksonDatabind",
+    "--state-file",
+    "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/JacksonDatabind.json",
+    "--time-limit",
+    "60",
+    "--jvm-memory",
+    "3000m",
+    "--round",
+    "2",
+    "--seed",
+    "20260928",
+    "--output-dir",
+    "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+  ],
+  "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/JacksonDatabind.json",
+  "round": 2,
+  "seed": 20260928,
+  "time_limit": 60,
+  "project": "JacksonDatabind",
+  "run_id": "20260927T195419685840Z_20326",
+  "success": 108,
+  "skipped": 0,
+  "failed": 2,
+  "total_duration_seconds": 9980.332,
+  "finished_at": "2026-09-27T22:40:40.088784+00:00"
+}
