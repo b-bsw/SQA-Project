@@ -1,0 +1,933 @@
+{
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-27T18:46:17.062641+00:00",
+      "status": "FAILED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "Cli",
+        "--state-file",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Cli.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--round",
+        "2",
+        "--seed",
+        "20260928",
+        "--output-dir",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+      ],
+      "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Cli.json",
+      "round": 2,
+      "seed": 20260928,
+      "time_limit": 60,
+      "project": "Cli",
+      "run_id": "20260927T184617071647Z_3443",
+      "success": 38,
+      "skipped": 0,
+      "failed": 1,
+      "total_duration_seconds": 2929.796,
+      "finished_at": "2026-09-27T19:35:06.867140+00:00"
+    },
+    "history": {
+      "20260927T184617071647Z_3443": {
+        "started_at": "2026-09-27T18:46:17.062641+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Cli",
+          "--state-file",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Cli.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--round",
+          "2",
+          "--seed",
+          "20260928",
+          "--output-dir",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+        ],
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Cli.json",
+        "round": 2,
+        "seed": 20260928,
+        "time_limit": 60,
+        "project": "Cli",
+        "run_id": "20260927T184617071647Z_3443",
+        "success": 38,
+        "skipped": 0,
+        "failed": 1,
+        "total_duration_seconds": 2929.796,
+        "finished_at": "2026-09-27T19:35:06.867140+00:00"
+      }
+    }
+  },
+  "Cli_5": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_5_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_5",
+    "classes_tested": [
+      "org.apache.commons.cli.Util"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:47:18.055654+00:00"
+  },
+  "Cli_29": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_29_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_29",
+    "classes_tested": [
+      "org.apache.commons.cli.Util"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:48:18.788069+00:00"
+  },
+  "Cli_12": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_12_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_12",
+    "classes_tested": [
+      "org.apache.commons.cli.GnuParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:49:44.606765+00:00"
+  },
+  "Cli_27": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_27_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_27",
+    "classes_tested": [
+      "org.apache.commons.cli.OptionGroup"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:50:54.549509+00:00"
+  },
+  "Cli_7": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_7_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_7",
+    "classes_tested": [
+      "org.apache.commons.cli2.builder.PatternBuilder"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli2/builder/ErrorTest0.java",
+      "org/apache/commons/cli2/builder/RegressionTest6.java",
+      "org/apache/commons/cli2/builder/RegressionTest7.java",
+      "org/apache/commons/cli2/builder/ErrorTest1.java",
+      "org/apache/commons/cli2/builder/RegressionTest0.java",
+      "org/apache/commons/cli2/builder/ErrorTest.java",
+      "org/apache/commons/cli2/builder/RegressionTest1.java",
+      "org/apache/commons/cli2/builder/RegressionTest2.java",
+      "org/apache/commons/cli2/builder/RegressionTest3.java",
+      "org/apache/commons/cli2/builder/ErrorTest2.java",
+      "org/apache/commons/cli2/builder/RegressionTest8.java",
+      "org/apache/commons/cli2/builder/RegressionTest4.java",
+      "org/apache/commons/cli2/builder/RegressionTest5.java",
+      "org/apache/commons/cli2/builder/RegressionTest.java",
+      "org/apache/commons/cli2/builder/ErrorTest3.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:52:05.592406+00:00"
+  },
+  "Cli_3": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_3_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_3",
+    "classes_tested": [
+      "org.apache.commons.cli.TypeHandler"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:53:21.454983+00:00"
+  },
+  "Cli_39": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_39_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_39",
+    "classes_tested": [
+      "org.apache.commons.cli.TypeHandler"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:54:26.744136+00:00"
+  },
+  "Cli_40": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_40_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_40",
+    "classes_tested": [
+      "org.apache.commons.cli.TypeHandler"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:55:43.788617+00:00"
+  },
+  "Cli_1": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_1_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_1",
+    "classes_tested": [
+      "org.apache.commons.cli.CommandLine"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java",
+      "org/apache/commons/cli/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:56:56.796208+00:00"
+  },
+  "Cli_15": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_15_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_15",
+    "classes_tested": [
+      "org.apache.commons.cli2.commandline.WriteableCommandLineImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli2/commandline/RegressionTest0.java",
+      "org/apache/commons/cli2/commandline/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:58:02.288013+00:00"
+  },
+  "Cli_22": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_22_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_22",
+    "classes_tested": [
+      "org.apache.commons.cli.PosixParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java",
+      "org/apache/commons/cli/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T18:59:24.754823+00:00"
+  },
+  "Cli_35": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_35_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_35",
+    "classes_tested": [
+      "org.apache.commons.cli.Options"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:00:42.066749+00:00"
+  },
+  "Cli_26": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_26_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_26",
+    "classes_tested": [
+      "org.apache.commons.cli.OptionBuilder"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:01:53.770009+00:00"
+  },
+  "Cli_20": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_20_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_20",
+    "classes_tested": [
+      "org.apache.commons.cli.PosixParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest10.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java",
+      "org/apache/commons/cli/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:03:20.939486+00:00"
+  },
+  "Cli_19": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_19_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_19",
+    "classes_tested": [
+      "org.apache.commons.cli.PosixParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest10.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java",
+      "org/apache/commons/cli/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:04:48.058536+00:00"
+  },
+  "Cli_18": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_18_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_18",
+    "classes_tested": [
+      "org.apache.commons.cli.PosixParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java",
+      "org/apache/commons/cli/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:06:13.471234+00:00"
+  },
+  "Cli_2": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_2_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_2",
+    "classes_tested": [
+      "org.apache.commons.cli.PosixParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:07:36.244256+00:00"
+  },
+  "Cli_17": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_17_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_17",
+    "classes_tested": [
+      "org.apache.commons.cli.PosixParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest7.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest8.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:08:58.600275+00:00"
+  },
+  "Cli_4": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_4_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_4",
+    "classes_tested": [
+      "org.apache.commons.cli.Parser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:10:05.476281+00:00"
+  },
+  "Cli_28": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_28_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_28",
+    "classes_tested": [
+      "org.apache.commons.cli.Parser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:11:11.150540+00:00"
+  },
+  "Cli_9": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_9_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_9",
+    "classes_tested": [
+      "org.apache.commons.cli.Parser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:12:17.448633+00:00"
+  },
+  "Cli_10": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_10_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_10",
+    "classes_tested": [
+      "org.apache.commons.cli.Parser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:13:24.119653+00:00"
+  },
+  "Cli_36": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_36_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_36",
+    "classes_tested": [
+      "org.apache.commons.cli.OptionGroup",
+      "org.apache.commons.cli.Options"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:14:39.145639+00:00"
+  },
+  "Cli_14": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_14_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_14",
+    "classes_tested": [
+      "org.apache.commons.cli2.option.GroupImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli2/option/RegressionTest0.java",
+      "org/apache/commons/cli2/option/RegressionTest1.java",
+      "org/apache/commons/cli2/option/RegressionTest2.java",
+      "org/apache/commons/cli2/option/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:15:47.516834+00:00"
+  },
+  "Cli_37": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_37_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_37",
+    "classes_tested": [
+      "org.apache.commons.cli.DefaultParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:16:59.455663+00:00"
+  },
+  "Cli_38": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_38_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_38",
+    "classes_tested": [
+      "org.apache.commons.cli.DefaultParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:18:13.904499+00:00"
+  },
+  "Cli_13": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_13_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_13",
+    "classes_tested": [
+      "org.apache.commons.cli2.WriteableCommandLine",
+      "org.apache.commons.cli2.option.ArgumentImpl",
+      "org.apache.commons.cli2.commandline.WriteableCommandLineImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli2/RegressionTest0.java",
+      "org/apache/commons/cli2/RegressionTest1.java",
+      "org/apache/commons/cli2/RegressionTest2.java",
+      "org/apache/commons/cli2/RegressionTest3.java",
+      "org/apache/commons/cli2/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:19:35.072412+00:00"
+  },
+  "Cli_34": {
+    "status": "FAILED",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.main.Main.main(Main.java:31)\nCaused by: java.lang.NoClassDefFoundError: org/apache/commons/cli/Option\n\tat java.base/java.lang.Class.getDeclaredMethods0(Native Method)\n\tat java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)\n\tat java.base/java.lang.Class.privateGetPublicMethods(Class.java:3191)\n\tat java.base/java.lang.Class.getMethods(Class.java:1904)\n\tat randoop.org.plumelib.util.ClassDeterministic.getMethods(ClassDeterministic.java:144)\n\tat randoop.reflection.ReflectionManager.apply(ReflectionManager.java:133)\n\t... 6 more\nCaused by: java.lang.ClassNotFoundException: org.apache.commons.cli.Option\n\tat java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)\n\tat java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)\n\tat java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)\n\t... 12 more\n\n\nCould not load class org.apache.commons.cli.Option: Unable to load class \"org.apache.commons.cli.Option\" due to exception: java.lang.ClassNotFoundException: org.apache.commons.cli.Option\nClasspath:\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/sqa_randoop/Cli_34-vnp6s1w5/jars/randoop-all-4.3.4.jar\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_34",
+    "classes": [
+      "org.apache.commons.cli.OptionBuilder",
+      "org.apache.commons.cli.Option"
+    ],
+    "timestamp": "2026-09-27T19:19:37.220894+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Cli_8": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_8_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_8",
+    "classes_tested": [
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:20:53.003481+00:00"
+  },
+  "Cli_23": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_23_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_23",
+    "classes_tested": [
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:22:09.416489+00:00"
+  },
+  "Cli_25": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_25_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_25",
+    "classes_tested": [
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:23:24.872169+00:00"
+  },
+  "Cli_24": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_24_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_24",
+    "classes_tested": [
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:24:39.070421+00:00"
+  },
+  "Cli_11": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_11_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_11",
+    "classes_tested": [
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:27:08.836690+00:00"
+  },
+  "Cli_21": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_21_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_21",
+    "classes_tested": [
+      "org.apache.commons.cli2.WriteableCommandLine",
+      "org.apache.commons.cli2.option.GroupImpl",
+      "org.apache.commons.cli2.commandline.WriteableCommandLineImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli2/RegressionTest0.java",
+      "org/apache/commons/cli2/RegressionTest1.java",
+      "org/apache/commons/cli2/RegressionTest2.java",
+      "org/apache/commons/cli2/RegressionTest3.java",
+      "org/apache/commons/cli2/RegressionTest4.java",
+      "org/apache/commons/cli2/RegressionTest5.java",
+      "org/apache/commons/cli2/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:28:20.877320+00:00"
+  },
+  "Cli_32": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_32_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_32",
+    "classes_tested": [
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:29:37.848362+00:00"
+  },
+  "Cli_33": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_33_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_33",
+    "classes_tested": [
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:31:22.538237+00:00"
+  },
+  "Cli_30": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_30_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_30",
+    "classes_tested": [
+      "org.apache.commons.cli.Parser",
+      "org.apache.commons.cli.DefaultParser"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/ErrorTest0.java",
+      "org/apache/commons/cli/RegressionTest6.java",
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/ErrorTest.java",
+      "org/apache/commons/cli/RegressionTest1.java",
+      "org/apache/commons/cli/RegressionTest2.java",
+      "org/apache/commons/cli/RegressionTest3.java",
+      "org/apache/commons/cli/RegressionTest4.java",
+      "org/apache/commons/cli/RegressionTest5.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:32:37.091001+00:00"
+  },
+  "Cli_16": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_16_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_16",
+    "classes_tested": [
+      "org.apache.commons.cli2.Option",
+      "org.apache.commons.cli2.option.GroupImpl",
+      "org.apache.commons.cli2.option.OptionImpl",
+      "org.apache.commons.cli2.commandline.WriteableCommandLineImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli2/option/RegressionTest0.java",
+      "org/apache/commons/cli2/option/RegressionTest1.java",
+      "org/apache/commons/cli2/option/RegressionTest2.java",
+      "org/apache/commons/cli2/option/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:33:48.991645+00:00"
+  },
+  "Cli_31": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Cli_31_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Cli_31",
+    "classes_tested": [
+      "org.apache.commons.cli.OptionBuilder",
+      "org.apache.commons.cli.Option",
+      "org.apache.commons.cli.HelpFormatter"
+    ],
+    "generated_tests": [
+      "org/apache/commons/cli/RegressionTest0.java",
+      "org/apache/commons/cli/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-27T19:35:06.828112+00:00"
+  }
+}

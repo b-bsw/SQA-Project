@@ -1,0 +1,26 @@
+{
+  "entrypoint": "script/Randoop/round2/generate.py",
+  "phase": "generate",
+  "round": 2,
+  "arguments": [
+    "--round",
+    "2",
+    "--projects",
+    "Codec",
+    "--workers",
+    "1"
+  ],
+  "started_at": "2026-09-27T19:49:17.918251+00:00",
+  "status": "FAILED",
+  "script": "run_randoop_parallel",
+  "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/generation_state.json",
+  "seed": 20260928,
+  "time_limit": 60,
+  "workers": 1,
+  "projects": [
+    "Codec"
+  ],
+  "run_id": "20260927T194917946573Z_19350",
+  "total_duration_seconds": 0.304,
+  "finished_at": "2026-09-27T19:49:18.222616+00:00"
+}

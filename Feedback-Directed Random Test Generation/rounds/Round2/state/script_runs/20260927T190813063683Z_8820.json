@@ -1,0 +1,32 @@
+{
+  "started_at": "2026-09-27T19:08:13.041432+00:00",
+  "status": "FAILED",
+  "script": "generate_randoop_tests",
+  "arguments": [
+    "--project",
+    "Chart",
+    "--state-file",
+    "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Chart.json",
+    "--time-limit",
+    "60",
+    "--jvm-memory",
+    "3000m",
+    "--round",
+    "2",
+    "--seed",
+    "20260928",
+    "--output-dir",
+    "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+  ],
+  "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Chart.json",
+  "round": 2,
+  "seed": 20260928,
+  "time_limit": 60,
+  "project": "Chart",
+  "run_id": "20260927T190813063683Z_8820",
+  "success": 25,
+  "skipped": 0,
+  "failed": 1,
+  "total_duration_seconds": 2198.083,
+  "finished_at": "2026-09-27T19:44:51.124690+00:00"
+}

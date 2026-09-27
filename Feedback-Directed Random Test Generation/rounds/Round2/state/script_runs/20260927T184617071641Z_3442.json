@@ -1,0 +1,32 @@
+{
+  "started_at": "2026-09-27T18:46:17.062360+00:00",
+  "status": "FAILED",
+  "script": "generate_randoop_tests",
+  "arguments": [
+    "--project",
+    "Codec",
+    "--state-file",
+    "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Codec.json",
+    "--time-limit",
+    "60",
+    "--jvm-memory",
+    "3000m",
+    "--round",
+    "2",
+    "--seed",
+    "20260928",
+    "--output-dir",
+    "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+  ],
+  "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Codec.json",
+  "round": 2,
+  "seed": 20260928,
+  "time_limit": 60,
+  "project": "Codec",
+  "run_id": "20260927T184617071641Z_3442",
+  "success": 17,
+  "skipped": 0,
+  "failed": 1,
+  "total_duration_seconds": 1315.869,
+  "finished_at": "2026-09-27T19:08:12.933256+00:00"
+}
