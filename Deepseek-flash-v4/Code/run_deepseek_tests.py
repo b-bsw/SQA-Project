@@ -147,25 +147,45 @@ def test_result(workspace: Path, log: Path, rc: int):
     return ("FAIL" if count else "PASS"), count
 
 
-def read_coverage(workspace: Path):
+def coverage_counts(lines, covered_lines, branches, covered_branches):
+    return {"lines": lines, "covered_lines": covered_lines,
+            "line_cov": round(100 * covered_lines / lines, 2) if lines else None,
+            "branches": branches, "covered_branches": covered_branches,
+            "branch_cov": round(100 * covered_branches / branches, 2) if branches else None}
+
+
+def read_coverage_log(log: Path):
+    if not log.is_file():
+        return {}
+    output = log.read_text(encoding="utf-8", errors="replace")
+    # Recover only a completed successful coverage command, never partial output.
+    if not re.search(r"\[exit 0\]\s*$", output):
+        return {}
+    counts = []
+    for label in ("Lines total", "Lines covered", "Conditions total", "Conditions covered"):
+        matches = re.findall(r"(?m)^\s*" + label + r":\s*(\d+)\s*$", output)
+        if not matches:
+            return {}
+        counts.append(int(matches[-1]))
+    return coverage_counts(*counts)
+
+
+def read_coverage(workspace: Path, log=None):
     summary = workspace / "summary.csv"
     if not summary.is_file():
-        return {}
+        return read_coverage_log(log) if log else {}
     with summary.open(newline="", encoding="utf-8") as handle:
         row = next(csv.DictReader(handle), None)
     if not row:
-        return {}
+        return read_coverage_log(log) if log else {}
     try:
         lines = int(row["LinesTotal"])
         covered_lines = int(row["LinesCovered"])
         branches = int(row["ConditionsTotal"])
         covered_branches = int(row["ConditionsCovered"])
     except (KeyError, TypeError, ValueError):
-        return {}
-    return {"lines": lines, "covered_lines": covered_lines,
-            "line_cov": round(100 * covered_lines / lines, 2) if lines else None,
-            "branches": branches, "covered_branches": covered_branches,
-            "branch_cov": round(100 * covered_branches / branches, 2) if branches else None}
+        return read_coverage_log(log) if log else {}
+    return coverage_counts(lines, covered_lines, branches, covered_branches)
 
 
 def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
@@ -212,7 +232,7 @@ def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
         details["coverage_status"] = ("TIMEOUT" if coverage_rc == TIMEOUT_RC else
                                       "PASS" if coverage_rc == 0 else "FAIL")
         if coverage_rc == 0:
-            details.update(read_coverage(workspace))
+            details.update(read_coverage(workspace, coverage_log))
     return details
 
 
@@ -358,7 +378,9 @@ def collect_reports(result_root=None, update_summary=True):
     for path in sorted(result_root.glob("*/result.json")):
         with path.open(encoding="utf-8") as handle:
             report = json.load(handle)
-        if recover_test_times(report, path.parent):
+        changed = recover_test_times(report, path.parent)
+        changed = recover_coverage(report, path.parent) or changed
+        if changed:
             write_json_atomic(path, report)
         row = report_row(report)
         write_csv_atomic(path.parent / "result.csv", [row])
@@ -371,7 +393,22 @@ def collect_reports(result_root=None, update_summary=True):
 
 SUMMARY_FIELDS = ("row_type", "round", "target", "verdict", "line_coverage",
                  "revealed_count", "total_tokens", "generation_seconds",
-                 "result_count")
+                 "result_count", "lines_total", "lines_covered",
+                 "conditions_total", "conditions_covered", "condition_coverage")
+
+
+def recover_coverage(report, directory: Path):
+    buggy = report.get("buggy", {})
+    if buggy.get("coverage_status") in ("FAIL", "TIMEOUT"):
+        return False
+    changed = False
+    for key, value in read_coverage_log(directory / "logs" / "buggy_coverage.log").items():
+        if buggy.get(key) is None and value is not None:
+            buggy[key] = value
+            changed = True
+    if changed:
+        report["buggy"] = buggy
+    return changed
 
 
 XLSX_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
@@ -414,6 +451,10 @@ def dashboard_values(rows):
                    revealing, revealing / len(group) if group else None,
                    total("total_tokens"), total("generation_seconds"), len(coverage)]
         values.update({f"{column}{row}": value for row, value in enumerate(metrics, 6)})
+        for row, field in enumerate(("lines_total", "lines_covered", "conditions_total", "conditions_covered"), 13):
+            values[f"{column}{row}"] = total(field)
+        conditions = recorded("condition_coverage")
+        values[f"{column}22"] = sum(conditions) / len(conditions) / 100 if conditions else None
         for row, verdict in enumerate(("REVEALING", "NOT_REVEALING", "NOT_AVAILABLE", "INCONCLUSIVE"), 18):
             values[f"{column}{row}"] = sum(r["verdict"] == verdict for r in group)
     return values
@@ -431,17 +472,47 @@ def write_summary_workbook(destination: Path, rows):
             sheet_data.remove(row)
         for index, record in enumerate(rows, 2):
             row = ET.SubElement(sheet_data, xlsx_tag("row"), {"r": str(index), "ht": "24", "customHeight": "1"})
-            for column, field in zip("ABCDEFGHI", SUMMARY_FIELDS):
-                cell = ET.SubElement(row, xlsx_tag("c"), {"r": f"{column}{index}", "s": styles[column]})
+            for column, field in zip("ABCDEFGHIJKLMN", SUMMARY_FIELDS):
+                style = styles.get(column, styles["E"] if field == "condition_coverage" else styles["F"])
+                cell = ET.SubElement(row, xlsx_tag("c"), {"r": f"{column}{index}", "s": style})
                 value = record.get(field)
-                if field == "line_coverage" and isinstance(value, (int, float)):
+                if field in ("line_coverage", "condition_coverage") and isinstance(value, (int, float)):
                     value /= 100
                 set_xlsx_value(cell, value)
         dimension = data.find(xlsx_tag("dimension"))
         if dimension is not None:
-            dimension.set("ref", f"A1:I{end}")
+            dimension.set("ref", f"A1:N{end}")
+        header = sheet_data.find(f"{xlsx_tag('row')}[@r='1']")
+        for cell in list(header):
+            if cell.get("r") == "J1":
+                header.remove(cell)
+        for column, field in zip("JKLMN", SUMMARY_FIELDS[9:]):
+            cell = ET.SubElement(header, xlsx_tag("c"), {"r": f"{column}1", "s": "15"})
+            set_xlsx_value(cell, field)
+        cols = data.find(xlsx_tag("cols"))
+        for number in range(11, 15):
+            ET.SubElement(cols, xlsx_tag("col"), {"min": str(number), "max": str(number), "width": "24", "customWidth": "1"})
 
         dashboard = ET.fromstring(source.read("xl/worksheets/sheet1.xml"))
+        for row_number, label, data_column in (
+                (13, "Lines total", "J"), (14, "Lines covered", "K"),
+                (15, "Conditions total", "L"), (16, "Conditions covered", "M"),
+                (22, "Average condition coverage", "N")):
+            row = dashboard.find(f"{xlsx_tag('sheetData')}/{xlsx_tag('row')}[@r='{row_number}']")
+            for column in "BCDE":
+                cell = row.find(f"{xlsx_tag('c')}[@r='{column}{row_number}']")
+                cell.set("s", "9" if column == "B" else "5" if row_number == 22 else "4")
+                if column == "B":
+                    set_xlsx_value(cell, label)
+                    continue
+                metric_range = f"Data!${data_column}$2:${data_column}${end}"
+                if column == "E":
+                    formula_text = f'IF(COUNT({metric_range})=0,"",{"AVERAGE" if row_number == 22 else "SUM"}({metric_range}))'
+                else:
+                    round_name = "Round1" if column == "C" else "Round2"
+                    round_range = f"Data!$B$2:$B${end}"
+                    formula_text = f'IF(COUNTIFS({round_range},"{round_name}",{metric_range},"<>")=0,"",{"AVERAGEIF" if row_number == 22 else "SUMIF"}({round_range},"{round_name}",{metric_range}))'
+                ET.SubElement(cell, xlsx_tag("f")).text = formula_text
         cached = dashboard_values(rows)
         for cell in dashboard.iter(xlsx_tag("c")):
             formula = cell.find(xlsx_tag("f"))
@@ -453,11 +524,36 @@ def write_summary_workbook(destination: Path, rows):
             elif address == "B25":
                 set_xlsx_value(cell, "Updated: " + datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %z"))
 
+        # Keep the two coverage averages together in the metrics section.
+        dashboard_data = dashboard.find(xlsx_tag("sheetData"))
+        line_row = dashboard_data.find(f"{xlsx_tag('row')}[@r='7']")
+        condition_row = dashboard_data.find(f"{xlsx_tag('row')}[@r='22']")
+        for column in "BCDE":
+            style = line_row.find(f"{xlsx_tag('c')}[@r='{column}7']").get("s")
+            condition_row.find(f"{xlsx_tag('c')}[@r='{column}22']").set("s", style)
+        for row in dashboard_data:
+            old_number = int(row.get("r"))
+            new_number = 8 if old_number == 22 else old_number + 1 if 8 <= old_number <= 21 else old_number
+            row.set("r", str(new_number))
+            for cell in row:
+                cell.set("r", re.sub(r"\d+$", str(new_number), cell.get("r")))
+                formula = cell.find(xlsx_tag("f"))
+                if formula is not None:
+                    # Local dashboard references move with their source rows.
+                    formula.text = re.sub(
+                        r"(?<![\w!$])([A-Z]+)(8|9|1[0-9]|2[01])(?!\d)",
+                        lambda match: match[1] + str(int(match[2]) + 1), formula.text)
+        dashboard_data[:] = sorted(dashboard_data, key=lambda row: int(row.get("r")))
+
         table = ET.fromstring(source.read("xl/tables/table1.xml"))
-        table.set("ref", f"A1:I{end}")
+        table.set("ref", f"A1:N{end}")
+        table_columns = table.find(xlsx_tag("tableColumns"))
+        table_columns.set("count", str(len(SUMMARY_FIELDS)))
+        for number, field in enumerate(SUMMARY_FIELDS[9:], 10):
+            ET.SubElement(table_columns, xlsx_tag("tableColumn"), {"id": str(number), "name": field})
         auto_filter = table.find(xlsx_tag("autoFilter"))
         if auto_filter is not None:
-            auto_filter.set("ref", f"A1:I{end}")
+            auto_filter.set("ref", f"A1:N{end}")
         workbook = ET.fromstring(source.read("xl/workbook.xml"))
         calc = workbook.find(xlsx_tag("calcPr"))
         if calc is None:
@@ -548,6 +644,7 @@ def write_summary():
             except (OSError, json.JSONDecodeError):
                 continue
             target = path.parent.name
+            recover_coverage(report, path.parent)
             tokens, generation_seconds = generation_metrics(target, all_records)
             line_coverage = report.get("buggy", {}).get("line_cov")
             verdict = report.get("verdict")
@@ -557,6 +654,11 @@ def write_summary():
                 "revealed_count": int(verdict == "REVEALING"),
                 "total_tokens": tokens, "generation_seconds": generation_seconds,
                 "result_count": 1,
+                "lines_total": report.get("buggy", {}).get("lines"),
+                "lines_covered": report.get("buggy", {}).get("covered_lines"),
+                "conditions_total": report.get("buggy", {}).get("branches"),
+                "conditions_covered": report.get("buggy", {}).get("covered_branches"),
+                "condition_coverage": report.get("buggy", {}).get("branch_cov"),
             })
 
     write_summary_workbook(root / "summary.xlsx", detailed)

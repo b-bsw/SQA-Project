@@ -52,6 +52,16 @@ outermost Deepseek directory with exactly two sheets:
 
 Coverage averages use available per-target values. Durations are in seconds;
 missing metrics remain blank. Dashboard formulas update when Data values change.
+Data includes `lines_total`, `lines_covered`, `conditions_total`,
+`conditions_covered`, and `condition_coverage` alongside `line_coverage`.
+Dashboard shows all four count totals and both coverage averages. CSV reports
+retain their existing names: `lines`, `covered_lines`, `branches`,
+`covered_branches`, `line_cov`, and `branch_cov`; Defects4J conditions are
+stored in the branch columns. Percentages are calculated from the exact counts,
+so they can have more precision than the one-decimal console log.
+Missing coverage is recovered from successful `buggy_coverage.log` output
+during collection, preserving existing recorded values. New runs also use
+the log when Defects4J's temporary `summary.csv` is unavailable.
 The runner uses the bundled `Code/summary_template.xlsx` and Python's standard
 library, so updating the workbook needs no extra package. Workbook creation is
 included directly in `run_deepseek_tests.py`. `summary.xlsx` is the summary output;
