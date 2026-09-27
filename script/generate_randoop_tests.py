@@ -470,6 +470,7 @@ class MemoryStateManager:
             "classes": classes,
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
+        self.state_data[project_folder].update(getattr(self, "run_metadata", {}))
         self.save()
 
     def reset(self):
@@ -707,7 +708,8 @@ def _run_randoop_for_project(
     dry_run: bool = False,
     quiet: bool = False,
     data_dir: Optional[Path] = None,
-    staging_root: Optional[Path] = None
+    staging_root: Optional[Path] = None,
+    seed: int = 0,
 ) -> Tuple[bool, str, List[str]]:
     """
     ดำเนินการรัน Randoop gentests สำหรับโปรเจกต์ที่กำหนด:
@@ -796,6 +798,7 @@ def _run_randoop_for_project(
         f"--classlist={temp_classlist}",
         f"--junit-output-dir={exec_out_dir}",
         f"--time-limit={time_limit}",
+        f"--randomseed={seed}",
         f"--testsperfile={tests_per_file}"
     ]
 
@@ -901,13 +904,14 @@ def run_randoop_for_project(
     dry_run: bool = False,
     quiet: bool = False,
     data_dir: Optional[Path] = None,
+    seed: int = 0,
 ) -> Tuple[bool, str, List[str]]:
     """Isolate one run so failed or interrupted output is automatically discarded."""
     kwargs = dict(project_info=project_info, randoop_jar=randoop_jar,
                   classes_dir=classes_dir, output_dir=output_dir,
                   time_limit=time_limit, tests_per_file=tests_per_file,
                   jvm_max_memory=jvm_max_memory, workspace_dir=workspace_dir,
-                  dry_run=dry_run, quiet=quiet, data_dir=data_dir)
+                  dry_run=dry_run, quiet=quiet, data_dir=data_dir, seed=seed)
     temp_parent = randoop_temp_base(workspace_dir, "sqa_randoop")
     if dry_run:
         return _run_randoop_for_project(**kwargs, staging_root=temp_parent / "dry-run")
@@ -1037,6 +1041,8 @@ def main():
     )
 
     parser.add_argument("--project", "-p", help="ระบุโปรเจกต์เฉพาะ (เช่น Mockito_2) หรือทั้งกลุ่ม (เช่น Mockito)")
+    parser.add_argument("--round", type=int, choices=(1, 2), default=None)
+    parser.add_argument("--seed", type=int, default=None, help="Randoop random seed (round 1: 0, round 2: 20260928)")
     parser.add_argument("--time-limit", "-t", type=int, default=60, help="ระยะเวลาสร้างเทสต์ต่อโปรเจกต์ (วินาที, ค่าเริ่มต้น: 60)")
     parser.add_argument("--classes-dir", "-cp", help="ตำแหน่งโฟลเดอร์ compiled .class (เช่น target/classes หรือ build/classes)")
     parser.add_argument("--randoop-jar", help="พาธไฟล์ randoop-all-4.3.4.jar (หากไม่ระบุจะค้นหาอัตโนมัติ)")
@@ -1062,6 +1068,20 @@ def main():
     parser.add_argument("--skip-missing", action="store_true", help="ข้ามโปรเจกต์ที่ไม่พบ .class อัตโนมัติโดยไม่บันทึกล้มเหลว")
 
     args = parser.parse_args()
+    args.seed = args.seed if args.seed is not None else (20260928 if args.round == 2 else 0)
+    if not 0 <= args.seed <= 2147483647 or args.time_limit < 1:
+        parser.error("seed must be 0..2147483647 and time-limit must be positive")
+    if args.round:
+        from randoop_rounds import prepare_round, round_paths
+        root = workspace_dir / "Feedback-Directed Random Test Generation"
+        state_root, tests_root, _ = round_paths(root, args.round)
+        if not args.dry_run and not args.status:
+            try:
+                prepare_round(root, args.round, args.seed, args.time_limit)
+            except ValueError as exc:
+                parser.error(str(exc))
+        args.output_dir = args.output_dir or str(tests_root)
+        args.state_file = args.state_file or str(state_root / "generation_state.json")
 
     # 1. กำหนดค่าเส้นทางโฟลเดอร์
     resource_dir = Path(args.resource_dir) if args.resource_dir else (workspace_dir / "Resoucre")
@@ -1102,6 +1122,8 @@ def main():
 
     # โหลด Memory State
     memory_manager = MemoryStateManager(state_file)
+    memory_manager.run_metadata = {"round": args.round or 1, "seed": args.seed,
+                                   "time_limit": args.time_limit, "seed_source": "EXPLICIT"}
 
     if args.reset_state:
         memory_manager.reset()
@@ -1115,7 +1137,8 @@ def main():
         sys.exit(0)
 
     # ตรวจสอบ Pre-run Sync กับไฟล์ที่มีอยู่บนดิสก์
-    sync_existing_tests_to_memory(memory_manager, test_code_base, [p["project_name"] for p in all_projects])
+    if not args.round and not args.dry_run and not args.status:
+        sync_existing_tests_to_memory(memory_manager, test_code_base, [p["project_name"] for p in all_projects])
 
     # หากต้องการดู Status อย่างเดียว
     if args.status:
@@ -1155,7 +1178,9 @@ def main():
         print(f"\n[{idx}/{len(all_projects)}] 📦 Project: {pname} ({class_count} คลาส, {proj['total_bytes']:,} ไบต์)")
 
         # ตรวจสอบสถานะเดิม
-        if not args.overwrite and memory_manager.is_completed(pname):
+        saved = memory_manager.state_data.get(pname, {})
+        matches = (saved.get("seed", 0) == args.seed and saved.get("time_limit") == args.time_limit)
+        if not args.overwrite and memory_manager.is_completed(pname) and (not args.round or matches):
             print(f"  ⏭️ [MEMORY: SKIP] ข้าม: โปรเจกต์นี้สร้าง Test สำเร็จแล้วใน Memory")
             print(f"     (หากต้องการสร้างใหม่ให้ระบุ --overwrite)")
             skipped_count += 1
@@ -1200,7 +1225,8 @@ def main():
             jvm_max_memory=args.jvm_memory,
             workspace_dir=workspace_dir,
             dry_run=args.dry_run,
-            data_dir=data_dir
+            data_dir=data_dir,
+            seed=args.seed,
         )
 
         if success:
@@ -1219,6 +1245,9 @@ def main():
                     "classes_dir": str(classes_dir),
                     "classes_tested": proj["fqcns"],
                     "generated_tests": gen_files,
+                    "round": args.round or 1,
+                    "seed": args.seed,
+                    "seed_source": "EXPLICIT",
                     "time_limit": args.time_limit
                 })
                 cleanup_generated_artifacts(pname, workspace_dir, classes_dir, randoop_jar, dest_folder, bool(args.classes_dir))

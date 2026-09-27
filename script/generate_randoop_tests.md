@@ -1,5 +1,7 @@
 # คู่มือการใช้งาน Script สร้าง JUnit Test ด้วย Randoop (Feedback-Directed Random Testing)
 
+สำหรับการทดลองสอง seed ให้ใช้ [script/Randoop/README.md](Randoop/README.md) และสคริปต์ใน `Randoop/round1/` กับ `Randoop/round2/` ซึ่งแยก state และผลลัพธ์ของแต่ละรอบ คู่มือนี้อธิบาย generator ร่วมและคำสั่งเดิม
+
 สคริปต์นี้ถูกออกแบบมาเพื่อนำ Source Code ในโฟลเดอร์ **`Resoucre/`** (รองรับทั้ง 840+ โฟลเดอร์โปรเจกต์ เช่น `Codec_1`, `Chart_1` ฯลฯ) มาสร้างชุดทดสอบ **JUnit Test Suite** อัตโนมัติด้วยเครื่องมือ **Randoop (Feedback-Directed Random Test Generation)** แล้วจัดเก็บผลลัพธ์ลงในโฟลเดอร์ **`Feedback-Directed Random Test Generation/TestCode/<Project>_buggy/`**
 
 > ✅ **สคริปต์รันได้บนทุกเครื่อง** — ไม่ต้องมีโฟลเดอร์ `data/` ในเครื่อง สามารถระบุ path ของ Defects4J code ผ่าน `--data-dir` หรือ environment variable `D4J_DATA_DIR` หรือปล่อยให้ระบบ auto-checkout อัตโนมัติ

@@ -93,6 +93,11 @@ def worker_command(generator: Path, output_dir: Path, group: str, args) -> list[
     cmd = [sys.executable, "-u", str(generator), "--project", group,
            "--state-file", str(output_dir / "state" / f"{group}.json"),
            "--time-limit", str(args.time_limit), "--jvm-memory", args.jvm_memory]
+    if getattr(args, "round", None):
+        from randoop_rounds import round_paths
+        _, tests_root, _ = round_paths(generator.parent.parent / "Feedback-Directed Random Test Generation", args.round)
+        cmd.extend(["--round", str(args.round), "--seed", str(args.seed),
+                    "--output-dir", str(tests_root)])
     if args.data_dir:
         cmd.extend(["--data-dir", args.data_dir])
     if args.overwrite:
@@ -108,13 +113,21 @@ def group_status(output_dir: Path, resource_dir: Path, group: str) -> tuple[int,
             state[name] = entry
     projects = [p.name for p in resource_dir.iterdir() if p.is_dir()
                 and re.fullmatch(re.escape(group) + r"_\d+", p.name)]
-    completed = sum(state.get(name, {}).get("status") == "COMPLETED" for name in projects)
+    config = load_state(output_dir / "config.json")
+    def reusable(name):
+        record = state.get(name, {})
+        return record.get("status") == "COMPLETED" and (not config or (
+            record.get("seed") == config["seed"] and record.get("time_limit") == config["time_limit"]))
+    completed = sum(reusable(name) for name in projects)
     failed = sum(state.get(name, {}).get("status") == "FAILED" for name in projects)
     return completed, failed, len(projects) - completed - failed
 
 
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Run Randoop project groups in parallel")
+    parser.add_argument("--round", type=int, choices=(1, 2), default=None)
+    parser.add_argument("--seed", type=int, default=None)
+    parser.add_argument("--prepare-only", action="store_true", help="Initialize separate round states without generating tests")
     parser.add_argument("--projects", nargs="+", metavar="NAME",
                         help="Groups such as Cli Chart (default: all groups)")
     parser.add_argument("--workers", type=int, default=2,
@@ -128,6 +141,15 @@ def main(argv=None) -> int:
     parser.add_argument("--dry-run", action="store_true", help="Show assignments without writing")
     parser.add_argument("--status", action="store_true", help="Read group states without writing")
     args = parser.parse_args(argv)
+    if sum((args.prepare_only, args.dry_run, args.status)) > 1:
+        parser.error("Choose only one of --prepare-only, --dry-run, --status")
+    if args.seed is not None and not args.round:
+        parser.error("--seed requires --round so results from different seeds stay separate")
+    args.seed = args.seed if args.seed is not None else (20260928 if args.round == 2 else 0)
+    if not 0 <= args.seed <= 2147483647:
+        parser.error("--seed must be 0..2147483647")
+    if args.prepare_only and not args.round:
+        parser.error("--prepare-only requires --round")
     if args.workers < 1 or args.time_limit < 1:
         parser.error("--workers and --time-limit must be positive")
 
@@ -144,6 +166,19 @@ def main(argv=None) -> int:
         parser.error(f"Unknown project group(s): {', '.join(unknown)}")
     if not groups:
         parser.error("No Defects4J project groups found")
+    if args.round:
+        from randoop_rounds import prepare_round, round_paths
+        root = output_dir
+        output_dir, _, _ = round_paths(root, args.round)
+        if not args.dry_run and not args.status:
+            try:
+                prepare_round(root, args.round, args.seed, args.time_limit)
+            except ValueError as exc:
+                parser.error(str(exc))
+        if args.prepare_only:
+            seed_group_states(output_dir, groups)
+            print(f"Prepared Round{args.round}: seed={args.seed}, state={output_dir}")
+            return 0
 
     if args.status:
         total_completed = total_failed = total_pending = 0
@@ -158,6 +193,7 @@ def main(argv=None) -> int:
               f"total={total_completed + total_failed + total_pending}")
         return 0
     if args.dry_run:
+        print(f"round={args.round or 'legacy'} seed={args.seed} time_limit={args.time_limit} state={output_dir}")
         for index, group in enumerate(groups):
             print(f"worker {index % args.workers + 1}: {group} -> state/{group}.json")
         print(f"{len(groups)} groups, up to {min(args.workers, len(groups))} workers")

@@ -1,6 +1,8 @@
 # Feedback-Directed Random Test Generation (Randoop) Result Runner
 
-Directory นี้ประกอบด้วยสคริปต์สำหรับรันผลทดสอบ (Result Runner), วัด Code Coverage (Line & Branch) และบันทึกผลการทดสอบของ **Feedback-Directed Random Test Generation (Randoop)** บน Defects4J โดยอิงรูปแบบและ Workflow ตาม `GeneticAlgorithm/Code` (รันรอบเดียว ไม่มีคอลัมน์ Round):
+สำหรับการทดลองสองรอบ ให้ใช้ [คู่มือภาษาไทยและคำสั่งแยก round1/round2](../../script/Randoop/README.md) ซึ่งแยก state, TestCode และ Result ของแต่ละรอบ ส่วนคำสั่งด้านล่างยังใช้กับตำแหน่งเดิมได้
+
+Directory นี้ประกอบด้วยสคริปต์ร่วมสำหรับรันผลทดสอบ (Result Runner), วัด Code Coverage (Line & Branch) และบันทึกผลการทดสอบของ **Feedback-Directed Random Test Generation (Randoop)** บน Defects4J โดย CSV คง schema เดิม และแยกรอบตามชื่อโฟลเดอร์/ไฟล์รายงาน:
 
 ```text
 Code/
@@ -125,7 +127,7 @@ Header และ Schema ของ `result.csv` และ `report.csv` (ไม่
 |---|---|---|
 | `project` | String | ชื่อโปรเจกต์ Defects4J (เช่น `"Chart"`, `"Cli"`, `"Codec"`) |
 | `bug_id` | Integer | หมายเลขบั๊ก (เช่น `1`, `10`) |
-| `seed` | Integer | Random Seed ที่ใช้สร้างชุดทดสอบ (ค่าเริ่มต้น: `20260918`) |
+| `seed` | Integer / Empty | Seed จาก generation state; ว่างเมื่อไม่ทราบ ค่า `20260918` ในรายงานเก่าเป็น fallback และไม่ยืนยัน seed จริง |
 | `budget` | Integer | Search / Time budget ในหน่วยวินาทีที่ใช้สร้างเทสต์ (ดึงจาก `time_limit` ใน state หรือ CLI) |
 | `tests` | Integer | จำนวน test cases ทั้งหมดที่รัน (นับจาก `@Test` ใน suite) |
 | `coverage` | Float / Empty | เปอร์เซ็นต์ความครอบคลุมภาพรวม (`covered_goals / total_goals * 100`) |

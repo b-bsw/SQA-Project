@@ -1,0 +1,126 @@
+{
+  "JacksonXml_1": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonXml_1_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/JacksonXml_1",
+    "classes_tested": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser"
+    ],
+    "generated_tests": [
+      "com/fasterxml/jackson/dataformat/xml/deser/RegressionTest0.java",
+      "com/fasterxml/jackson/dataformat/xml/deser/RegressionTest.java"
+    ],
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-24T16:27:44.012037+00:00",
+    "round": 1,
+    "seed": 0,
+    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "JacksonXml_2": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonXml_2_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/JacksonXml_2",
+    "classes_tested": [
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStream"
+    ],
+    "generated_tests": [
+      "com/fasterxml/jackson/dataformat/xml/deser/RegressionTest0.java",
+      "com/fasterxml/jackson/dataformat/xml/deser/RegressionTest.java"
+    ],
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-24T16:28:48.900988+00:00",
+    "round": 1,
+    "seed": 0,
+    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "JacksonXml_3": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonXml_3_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/JacksonXml_3",
+    "classes_tested": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser"
+    ],
+    "generated_tests": [
+      "com/fasterxml/jackson/dataformat/xml/deser/RegressionTest0.java",
+      "com/fasterxml/jackson/dataformat/xml/deser/RegressionTest.java"
+    ],
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-24T16:29:53.982990+00:00",
+    "round": 1,
+    "seed": 0,
+    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "JacksonXml_4": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonXml_4_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/JacksonXml_4",
+    "classes_tested": [
+      "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider"
+    ],
+    "generated_tests": [
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest6.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest0.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest1.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest2.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest3.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest4.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest5.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest.java"
+    ],
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-24T16:31:09.462302+00:00",
+    "round": 1,
+    "seed": 0,
+    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "JacksonXml_5": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonXml_5_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/JacksonXml_5",
+    "classes_tested": [
+      "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider"
+    ],
+    "generated_tests": [
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest6.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest7.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest0.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest1.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest2.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest3.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest4.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest5.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest.java"
+    ],
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-24T16:32:27.519945+00:00",
+    "round": 1,
+    "seed": 0,
+    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "JacksonXml_6": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonXml_6_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/JacksonXml_6",
+    "classes_tested": [
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator"
+    ],
+    "generated_tests": [
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest6.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest7.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest0.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest1.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest2.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest3.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest8.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest4.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest5.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest.java",
+      "com/fasterxml/jackson/dataformat/xml/ser/RegressionTest9.java"
+    ],
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-24T16:33:42.265048+00:00",
+    "round": 1,
+    "seed": 0,
+    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  }
+}

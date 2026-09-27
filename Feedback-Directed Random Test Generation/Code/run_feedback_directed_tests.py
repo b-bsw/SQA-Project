@@ -55,6 +55,7 @@ RESULT_ROOT = PROJECT_ROOT / "Result"
 CONFIG_DIR = PROJECT_ROOT / "Configuration"
 STATE_DIR = PROJECT_ROOT / "state"
 GEN_STATE_FILE = PROJECT_ROOT / "generation_state.json"
+ACTIVE_ROUND = None
 
 TARGET_RE = re.compile(r"^([A-Za-z][A-Za-z0-9]*)_([1-9][0-9]*)_buggy$")
 PACKAGE_RE = re.compile(r"(?m)^\s*package\s+([A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)*)\s*;")
@@ -427,6 +428,8 @@ def format_csv_row(row_dict: dict) -> list:
 def write_target_reports(destination: Path, report_dict: dict) -> None:
     """Write result.json and result.csv atomically inside target directory."""
     destination.mkdir(parents=True, exist_ok=True)
+    if ACTIVE_ROUND:
+        report_dict["round"] = ACTIVE_ROUND
 
     # 1. result.json
     json_path = destination / "result.json"
@@ -511,8 +514,26 @@ def update_global_reports(result_root: Path) -> int:
     """Refresh both Result/report.csv and PROJECT_ROOT/report.csv."""
     with REPORT_LOCK:
         rows = collect_existing_reports(result_root)
+        if ACTIVE_ROUND:
+            current_rows = []
+            for row in rows:
+                original = dict(row)
+                metadata = load_metadata(str(row["project"]), int(row["bug_id"]))
+                if ("generation_timestamp" in row and
+                        row["generation_timestamp"] != metadata.get("timestamp")):
+                    continue  # Keep stale per-target evidence, exclude it from current aggregate.
+                current_rows.append(row)
+                if row.get("seed") != metadata.get("seed"):
+                    row.setdefault("previous_reported_seed", row.get("seed"))
+                row.update(round=ACTIVE_ROUND, seed=metadata.get("seed"),
+                           budget=metadata.get("time_limit"),
+                           seed_source=metadata.get("seed_source", "UNKNOWN"))
+                if row != original:
+                    write_target_reports(result_root / f"{row['project']}_{row['bug_id']}", row)
+            rows = current_rows
         write_aggregated_report(result_root / "report.csv", rows)
-        write_aggregated_report(PROJECT_ROOT / "report.csv", rows)
+        name = "report_Round2.csv" if result_root.name == "Result_Round2" else "report.csv"
+        write_aggregated_report(PROJECT_ROOT / name, rows)
         return len(rows)
 
 
@@ -541,7 +562,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
 
     metadata = load_metadata(project, bug_id)
     budget = budget_override if budget_override is not None else metadata.get("time_limit", 60)
-    seed = seed_override if seed_override is not None else metadata.get("seed", 20260918)
+    seed = seed_override if seed_override is not None else metadata.get("seed")
 
     start_time = time.time()
 
@@ -556,6 +577,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
         shutil.rmtree(temp_dir, ignore_errors=True)
         report = {
             "schema_version": "1.1",
+            "generation_timestamp": metadata.get("timestamp"),
             "algorithm": "Randoop",
             "created_at": datetime.now(timezone.utc).isoformat(),
             "duration_seconds": total_duration,
@@ -627,6 +649,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
 
     report = {
         "schema_version": "1.1",
+        "generation_timestamp": metadata.get("timestamp"),
         "algorithm": "Randoop",
         "created_at": datetime.now(timezone.utc).isoformat(),
         "duration_seconds": total_duration,
@@ -680,6 +703,7 @@ def parse_cli_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
         remainder = args_list[idx:]
         parser = argparse.ArgumentParser(description="Run Randoop Feedback-Directed test suites on Defects4J")
         parser.add_argument("--workers", "-w", type=int, default=int(os.environ.get("MAX_PARALLEL", 1)))
+        parser.add_argument("--round", type=int, choices=(1, 2), default=None)
         parser.add_argument("--seed", type=int, default=None)
         parser.add_argument("--test-timeout", type=int, default=600)
         parser.add_argument("--no-coverage", action="store_true")
@@ -711,12 +735,13 @@ Examples:
     )
     parser.add_argument("--projects", "-p", nargs="+",
                         help="Filter by project name(s), e.g., Chart Cli Math")
+    parser.add_argument("--round", type=int, choices=(1, 2), default=None)
     parser.add_argument("--targets", "-t", nargs="+",
                         help="Specific target(s) to run, e.g., Chart_1 Cli_10")
     parser.add_argument("--budget", "-b", type=int, default=None,
                         help="Override search/time budget in seconds")
     parser.add_argument("--seed", "-s", type=int, default=None,
-                        help="Override random seed (default: 20260918)")
+                        help="Override reported seed metadata only; does not generate tests")
     parser.add_argument("--workers", "-w", type=int,
                         default=int(os.environ.get("MAX_PARALLEL", 1)),
                         help="Maximum parallel test workers (default: 1 or MAX_PARALLEL)")
@@ -741,7 +766,21 @@ Examples:
 
 
 def main(argv: Optional[List[str]] = None) -> int:
+    global TEST_ROOT, RESULT_ROOT, GEN_STATE_FILE, STATE_DIR, ACTIVE_ROUND
     args = parse_cli_args(argv)
+    ACTIVE_ROUND = args.round
+    if args.round and (args.seed is not None or args.budget is not None):
+        print("Round reports use generation state; change seed/budget in generate.py, not results.py.", file=sys.stderr)
+        return 2
+    suffix = "_Round2" if args.round == 2 else ""
+    TEST_ROOT = PROJECT_ROOT / f"TestCode{suffix}"
+    RESULT_ROOT = PROJECT_ROOT / f"Result{suffix}"
+    state_root = PROJECT_ROOT / "rounds" / f"Round{args.round}" if args.round else PROJECT_ROOT
+    GEN_STATE_FILE = state_root / "generation_state.json"
+    STATE_DIR = state_root / "state"
+    if args.round and not GEN_STATE_FILE.exists():
+        print(f"Round state not initialized: {GEN_STATE_FILE}. Run --prepare-only first.", file=sys.stderr)
+        return 1
 
     # Determine result root directory
     if args.result_dir:
@@ -749,7 +788,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     else:
         result_root = RESULT_ROOT
 
-    result_root.mkdir(parents=True, exist_ok=True)
+    if not args.dry_run:
+        result_root.mkdir(parents=True, exist_ok=True)
 
     if args.collect_only:
         total = update_global_reports(result_root)
@@ -783,6 +823,16 @@ def main(argv: Optional[List[str]] = None) -> int:
             result_json = result_root / name / "result.json"
             if not result_json.is_file():
                 remaining[name] = path
+            elif args.round:
+                try:
+                    saved = json.loads(result_json.read_text(encoding="utf-8"))
+                    project, bug_id = name.rsplit("_", 1)
+                    metadata = load_metadata(project, int(bug_id))
+                    if ("generation_timestamp" in saved and
+                            saved["generation_timestamp"] != metadata.get("timestamp")):
+                        remaining[name] = path
+                except (OSError, ValueError, TypeError):
+                    remaining[name] = path
         selected = remaining
 
     if args.limit and args.limit > 0:
