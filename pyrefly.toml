@@ -1,0 +1,6 @@
+# Match the runtime import roots used by the Randoop scripts and tests.
+search-path = [
+    "script",
+    "script/Randoop",
+    "Feedback-Directed Random Test Generation/Code",
+]

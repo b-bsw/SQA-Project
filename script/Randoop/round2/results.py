@@ -2,11 +2,8 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[3] /
-                      "Feedback-Directed Random Test Generation" / "Code"))
-from run_feedback_directed_tests import main
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from round_runner import run_round
 
 if __name__ == "__main__":
-    if any(arg == "--round" or arg.startswith("--round=") for arg in sys.argv[1:]):
-        raise SystemExit("This script is for round 2")
-    raise SystemExit(main(["--round", "2", *sys.argv[1:]]))
+    raise SystemExit(run_round(2, "results"))

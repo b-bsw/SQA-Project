@@ -35,9 +35,13 @@ def prepare_round(root: Path, number: int, seed: int, budget: int):
         legacy = load_state(root / "generation_state.json")
         for shard in (root / "state").glob("*.json"):
             for name, entry in load_state(shard).items():
+                if name.startswith("_"):
+                    continue
                 if prefer_newer(legacy.get(name), entry):
                     legacy[name] = entry
         for name, entry in legacy.items():
+            if name.startswith("_"):
+                continue
             if name in combined:
                 continue
             entry = dict(entry, round=1)

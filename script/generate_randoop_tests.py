@@ -810,7 +810,7 @@ def _run_randoop_for_project(
         return True, f"[DRY-RUN] คำสั่งจำลอง:\n    {cmd_display}", []
 
     # 3. รัน subprocess
-    start_time = time.time()
+    start_time = time.perf_counter()
     process = None
     try:
         process = subprocess.Popen(
@@ -833,7 +833,7 @@ def _run_randoop_for_project(
             _stop_randoop_process(process)
         return False, f"เกิดข้อผิดพลาดในการเรียก Java: {e}", []
 
-    elapsed = time.time() - start_time
+    elapsed = time.perf_counter() - start_time
 
     # เผยแพร่เฉพาะผลลัพธ์จากรอบที่ Randoop สำเร็จ
     generated_files = list(exec_out_dir.glob("**/*Test*.java"))
@@ -857,7 +857,7 @@ def _run_randoop_for_project(
                     shutil.copy2(source_file, target_file)
             else:
                 publish_path.rename(output_dir)
-        msg = f"สำเร็จ (ใช้เวลา {elapsed:.1f}s, พบไฟล์ Test: {len(generated_files)} ไฟล์)"
+        msg = f"สำเร็จ (เวลา Java/Randoop {elapsed:.1f}s, พบไฟล์ Test: {len(generated_files)} ไฟล์)"
         return True, msg, rel_gen_files
     elif process.returncode == 0:
         return False, "Randoop ทำงานสำเร็จแต่ไม่พบไฟล์ Test ในโฟลเดอร์ปลายทาง", []
@@ -1015,7 +1015,7 @@ def print_status_report(
 # Main CLI Entry Point
 # ==============================================================================
 
-def main():
+def _main(run_summary):
     workspace_dir = Path(__file__).resolve().parent.parent
 
     parser = argparse.ArgumentParser(
@@ -1104,6 +1104,13 @@ def main():
         state_file = Path(args.state_file)
     else:
         state_file = workspace_dir / "Feedback-Directed Random Test Generation" / "generation_state.json"
+    run_summary.update(script="generate_randoop_tests", arguments=sys.argv[1:],
+                       state_file=str(state_file.resolve()), round=args.round,
+                       seed=args.seed, time_limit=args.time_limit, project=args.project)
+    if not args.dry_run and not args.status:
+        run_summary["log_dir"] = state_file.parent / "script_runs"
+        from randoop_timing import start_runtime_in_state
+        start_runtime_in_state(run_summary)
 
     # 2. ค้นหา Randoop JAR
     randoop_jar = find_randoop_jar(args.randoop_jar, workspace_dir)
@@ -1259,6 +1266,8 @@ def main():
             failed_count += 1
 
     # สรุปผลลัพธ์
+    run_summary.update(success=success_count, skipped=skipped_count, failed=failed_count,
+                       status="FAILED" if failed_count else "COMPLETED")
     print("\n" + "=" * 80)
     print("📊 สรุปผลการประมวลผล Randoop (Summary Report)")
     print("=" * 80)
@@ -1269,6 +1278,13 @@ def main():
     print(f"📄 Memory State บันทึกไว้ที่: {state_file}")
     print("=" * 80)
     print("✨ เสร็จสิ้นกระบวนการ!")
+
+
+def main():
+    from randoop_timing import track_script_run
+    summary = {}
+    with track_script_run(summary):
+        return _main(summary)
 
 
 if __name__ == "__main__":

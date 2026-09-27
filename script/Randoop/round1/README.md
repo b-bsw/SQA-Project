@@ -19,3 +19,13 @@ state อยู่ `Feedback-Directed Random Test Generation/rounds/Round1/` เ
 กรองกลุ่มด้วย `generate.py --projects Codec Cli` กรองผลด้วย `results.py --targets Codec_1 Cli_1` ใช้คำสั่งเดิมเพื่อ resume
 
 อ่าน [คู่มือตั้งแต่เริ่มต้น](../README.md) ก่อนรันเต็มชุด
+
+## เวลารวมของคำสั่ง
+
+ทั้ง generate.py และ results.py แสดงเวลารวมตั้งแต่เริ่มทำงานจนจบ และเก็บ JSON แยกครั้งใน `Feedback-Directed Random Test Generation/rounds/Round1/script_runs/` มี total_duration_seconds, started_at, finished_at, status และ phase เพื่อแยกเวลา generation ออกจาก results/collect-only
+
+บันทึกลง `rounds/Round1/generation_state.json` โดยตรงด้วย ดู `_script_runs.latest.total_duration_seconds` สำหรับครั้งล่าสุด และ `_script_runs.history` สำหรับประวัติทุกครั้ง หลังคำสั่งจบหรือ Ctrl+C
+
+เวลา Java/Randoop ที่แสดงต่อ bug เป็นเพียงช่วง subprocess ส่วนเวลารวม generate.py รวมสแกน, checkout, compile, สร้างเทสต์, บันทึก state, cleanup และรอ workers เวลารวม results.py รวมงานประเมินผลทุกเป้าหมายและรวม CSV เวลาสองคำสั่งนี้วัดแยกกัน และไม่ใช่ผลบวกเวลา workers
+
+`--status`/`--dry-run` แสดงเวลาแต่ไม่เขียนไฟล์เวลา หากต้องการวัดการสร้างซ้ำให้เติม `--overwrite` มิฉะนั้นเวลาจะเป็นการตรวจและข้ามงานที่เสร็จแล้ว

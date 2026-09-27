@@ -19,3 +19,13 @@ state อยู่ `Feedback-Directed Random Test Generation/rounds/Round2/` เ
 กด Ctrl+C แล้วใช้คำสั่งเดิมเพื่อ resume ห้ามรัน generator สองรอบพร้อมกัน อย่าเปลี่ยน seed/time limit หลังเริ่มรอบนี้ results.py อ่าน seed/budget จาก state และไม่สร้างเทสต์ใหม่
 
 อ่าน [คู่มือตั้งแต่เริ่มต้น](../README.md) สำหรับการติดตั้งและเปรียบเทียบผล
+
+## เวลารวมของคำสั่ง
+
+ทั้ง generate.py และ results.py แสดงเวลารวมตั้งแต่เริ่มทำงานจนจบ และเก็บ JSON แยกครั้งใน `Feedback-Directed Random Test Generation/rounds/Round2/script_runs/` มี total_duration_seconds, started_at, finished_at, status และ phase เพื่อแยกเวลา generation ออกจาก results/collect-only
+
+บันทึกลง `rounds/Round2/generation_state.json` โดยตรงด้วย ดู `_script_runs.latest.total_duration_seconds` สำหรับครั้งล่าสุด และ `_script_runs.history` สำหรับประวัติทุกครั้ง หลังคำสั่งจบหรือ Ctrl+C
+
+เวลา Java/Randoop ต่อ bug ไม่รวมทั้งสคริปต์ เวลารวม generate.py รวมการเตรียม, สร้างเทสต์, บันทึก state, cleanup และรอ workers ส่วน results.py วัดการประเมินผลและรวมรายงานทั้งหมดเป็นอีกคำสั่งหนึ่ง `--collect-only` วัดเฉพาะการรวมรายงาน
+
+`--status`/`--dry-run` แสดงเวลาแต่ไม่เขียนไฟล์เวลา หากต้องการวัดงานซ้ำให้เติม `--overwrite` เวลารวม batch ไม่ใช่ผลบวกเวลา workers ที่ทำพร้อมกัน

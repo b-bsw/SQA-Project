@@ -165,6 +165,21 @@ python3 script/Randoop/round2/results.py --collect-only
 
 ## 7. เปรียบเทียบผลอย่างไร
 
+### เวลาสร้างเทสต์กับเวลารวมของสคริปต์
+
+ข้อความ `เวลา Java/Randoop ...s` วัดเฉพาะ subprocess ของ Java ไม่ใช่เวลาทั้งหมด ส่วน `เวลารวมของสคริปต์: ...s` วัดตั้งแต่เริ่ม main จนงานจบ รวมสแกน source, checkout, compile, จัด dependencies, เรียก Randoop, เผยแพร่เทสต์, บันทึก state และ cleanup โดยใช้ monotonic clock ไม่รวมเวลารันทดสอบ/coverage ที่ต้องเรียก results.py แยก และไม่รวมการเปิด Python interpreter ก่อนเข้า main หรือการเขียนไฟล์สรุปเวลาตัวมันเอง
+
+ทุกการรันจริงบันทึกเวลาลงใน state_file โดยตรงที่ `_script_runs.latest` และเก็บประวัติที่ `_script_runs.history` มี `started_at`, `finished_at`, `total_duration_seconds`, `status` และพารามิเตอร์รัน พร้อมสำเนาแยกครั้งที่ `script_runs/<เวลา UTC>_<PID>.json` ข้าง state_file `_script_runs` เป็น metadata ที่ระบบ resume ไม่ถือเป็น project
+
+สำหรับคำสั่งใน round1/round2 เปิด `rounds/Round1/generation_state.json` หรือ `rounds/Round2/generation_state.json` แล้วดู `_script_runs.latest.total_duration_seconds` ตอนเริ่มบันทึก started_at และ status RUNNING โดยเวลารวมเป็น null จนคำสั่งจบหรือถูกหยุดด้วย Ctrl+C แล้วจึงบันทึกเวลารวมจริง รายงานครั้งเก่าที่ไม่มีการจับเวลารวมไม่สามารถคำนวณย้อนหลังได้ โปรเซสที่เริ่มก่อนแก้โค้ดจะยังใช้โค้ดเดิม ต้องใช้โค้ดรุ่นใหม่ในการรันครั้งถัดไป (resume ได้ ไม่จำเป็นต้อง overwrite ทั้งชุด)
+
+- คำสั่ง SmokeTest10 ที่ใช้ `--state-file .../SmokeTest10/generation_state.json` เก็บเวลาใน `SmokeTest10/script_runs/`
+- Launcher แยกรอบเก็บเวลารวมทั้ง batch ที่ `rounds/Round1/script_runs/` หรือ `rounds/Round2/script_runs/` รวมเวลารอ workers และรวม state ส่วน worker บันทึกเวลาของตัวเองที่ `rounds/RoundN/state/script_runs/`
+- เวลารวม batch เป็นเวลาที่ผ่านจริง ไม่ใช่ผลบวกเวลา workers ที่ทำงานพร้อมกัน
+- สคริปต์ใน round1/round2 เรียก `round_runner.py` เพื่อวัดเวลาทั้งคำสั่ง ทั้ง generate.py และ results.py (รวม --collect-only) โดย JSON มี phase/entrypoint ระบุคำสั่ง และไม่ซ้อน timer ของ batch
+- `--status` และ `--dry-run` แสดงเวลาบนหน้าจอโดยไม่บันทึกไฟล์เวลา
+- การกด Ctrl+C จะพยายามบันทึก status INTERRUPTED หลัง cleanup; การ kill แบบบังคับหรือไฟดับอาจไม่มีไฟล์สรุป
+
 จับคู่ด้วย project + bug_id และใช้เฉพาะรายการที่ประเมินครบทั้งสองรอบ มี generation budget เท่ากัน และทราบ seed ดู coverage รายรอบ/ค่าเฉลี่ย และจำนวน bug ที่ REVEALING ทั้งสองรอบหรือรอบใดรอบหนึ่ง อย่านับ NOT_AVAILABLE เป็น coverage 0 หรือเอาผลรอบที่ยังไม่เสร็จไปเทียบทั้งชุด การเปลี่ยน seed ช่วยตรวจความแปรปรวนจากการสุ่ม แต่สองรอบยังไม่เพียงพอสำหรับข้อสรุปทางสถิติที่มั่นคง
 
 การใช้ time-limit ทำให้จำนวน sequence อาจต่างแม้ใช้ seed เดิม ควรใช้ Java/Randoop เวอร์ชันเดียวกัน การตั้งค่าและจำนวน workers เท่ากันทั้งสองรอบ ดู [คู่มือ Randoop](https://randoop.github.io/randoop/manual/) สำหรับ randomseed และข้อจำกัดเรื่องเวลา

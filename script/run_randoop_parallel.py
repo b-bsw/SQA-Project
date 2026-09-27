@@ -123,7 +123,7 @@ def group_status(output_dir: Path, resource_dir: Path, group: str) -> tuple[int,
     return completed, failed, len(projects) - completed - failed
 
 
-def main(argv=None) -> int:
+def _main(argv, run_summary) -> int:
     parser = argparse.ArgumentParser(description="Run Randoop project groups in parallel")
     parser.add_argument("--round", type=int, choices=(1, 2), default=None)
     parser.add_argument("--seed", type=int, default=None)
@@ -179,6 +179,15 @@ def main(argv=None) -> int:
             seed_group_states(output_dir, groups)
             print(f"Prepared Round{args.round}: seed={args.seed}, state={output_dir}")
             return 0
+
+    run_summary.update(script="run_randoop_parallel", arguments=list(sys.argv[1:] if argv is None else argv),
+                       state_file=str((output_dir / "generation_state.json").resolve()),
+                       round=args.round, seed=args.seed, time_limit=args.time_limit,
+                       workers=args.workers, projects=groups)
+    if not args.dry_run and not args.status:
+        run_summary["log_dir"] = output_dir / "script_runs"
+        from randoop_timing import start_runtime_in_state
+        start_runtime_in_state(run_summary)
 
     if args.status:
         total_completed = total_failed = total_pending = 0
@@ -283,6 +292,15 @@ def main(argv=None) -> int:
         return 1
     say(f"Completed all {len(groups)} groups. Run generated JUnit tests and coverage separately.")
     return 0
+
+
+def main(argv=None) -> int:
+    from randoop_timing import track_script_run
+    summary = {}
+    with track_script_run(summary):
+        result = _main(argv, summary)
+        summary["status"] = "COMPLETED" if result == 0 else ("INTERRUPTED" if result == 130 else "FAILED")
+        return result
 
 
 if __name__ == "__main__":
