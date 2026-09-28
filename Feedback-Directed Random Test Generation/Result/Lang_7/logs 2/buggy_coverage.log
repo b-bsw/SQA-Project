@@ -1,0 +1,13 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_7-76xxy6f_/Lang_7-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 380
+     Lines covered: 262
+  Conditions total: 366
+Conditions covered: 177
+     Line coverage: 68.9%
+Condition coverage: 48.4%
+[exit 0]

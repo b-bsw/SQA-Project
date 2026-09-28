@@ -1,0 +1,66 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_86-m6xi6gpi/Jsoup_86-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 60
+  - org.jsoup.nodes.ErrorTest0::test01
+  - org.jsoup.nodes.ErrorTest0::test02
+  - org.jsoup.nodes.ErrorTest0::test03
+  - org.jsoup.nodes.ErrorTest0::test04
+  - org.jsoup.nodes.ErrorTest0::test05
+  - org.jsoup.nodes.ErrorTest0::test06
+  - org.jsoup.nodes.ErrorTest0::test07
+  - org.jsoup.nodes.ErrorTest0::test08
+  - org.jsoup.nodes.ErrorTest0::test09
+  - org.jsoup.nodes.ErrorTest0::test10
+  - org.jsoup.nodes.ErrorTest0::test11
+  - org.jsoup.nodes.ErrorTest0::test12
+  - org.jsoup.nodes.ErrorTest0::test13
+  - org.jsoup.nodes.ErrorTest0::test14
+  - org.jsoup.nodes.ErrorTest0::test15
+  - org.jsoup.nodes.ErrorTest0::test16
+  - org.jsoup.nodes.ErrorTest0::test17
+  - org.jsoup.nodes.ErrorTest0::test18
+  - org.jsoup.nodes.ErrorTest0::test19
+  - org.jsoup.nodes.ErrorTest0::test20
+  - org.jsoup.nodes.ErrorTest0::test01
+  - org.jsoup.nodes.ErrorTest0::test02
+  - org.jsoup.nodes.ErrorTest0::test03
+  - org.jsoup.nodes.ErrorTest0::test04
+  - org.jsoup.nodes.ErrorTest0::test05
+  - org.jsoup.nodes.ErrorTest0::test06
+  - org.jsoup.nodes.ErrorTest0::test07
+  - org.jsoup.nodes.ErrorTest0::test08
+  - org.jsoup.nodes.ErrorTest0::test09
+  - org.jsoup.nodes.ErrorTest0::test10
+  - org.jsoup.nodes.ErrorTest0::test11
+  - org.jsoup.nodes.ErrorTest0::test12
+  - org.jsoup.nodes.ErrorTest0::test13
+  - org.jsoup.nodes.ErrorTest0::test14
+  - org.jsoup.nodes.ErrorTest0::test15
+  - org.jsoup.nodes.ErrorTest0::test16
+  - org.jsoup.nodes.ErrorTest0::test17
+  - org.jsoup.nodes.ErrorTest0::test18
+  - org.jsoup.nodes.ErrorTest0::test19
+  - org.jsoup.nodes.ErrorTest0::test20
+  - org.jsoup.nodes.RegressionTest0::test0436
+  - org.jsoup.nodes.RegressionTest1::test0570
+  - org.jsoup.nodes.RegressionTest2::test1008
+  - org.jsoup.nodes.RegressionTest2::test1022
+  - org.jsoup.nodes.RegressionTest3::test1817
+  - org.jsoup.nodes.RegressionTest4::test2131
+  - org.jsoup.nodes.RegressionTest5::test2655
+  - org.jsoup.nodes.RegressionTest7::test3697
+  - org.jsoup.nodes.RegressionTest7::test3717
+  - org.jsoup.nodes.RegressionTest9::test4772
+  - org.jsoup.nodes.RegressionTest0::test0436
+  - org.jsoup.nodes.RegressionTest1::test0570
+  - org.jsoup.nodes.RegressionTest2::test1008
+  - org.jsoup.nodes.RegressionTest2::test1022
+  - org.jsoup.nodes.RegressionTest3::test1817
+  - org.jsoup.nodes.RegressionTest4::test2131
+  - org.jsoup.nodes.RegressionTest5::test2655
+  - org.jsoup.nodes.RegressionTest7::test3697
+  - org.jsoup.nodes.RegressionTest7::test3717
+  - org.jsoup.nodes.RegressionTest9::test4772
+[exit 0]

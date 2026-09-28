@@ -1,0 +1,29 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_59-pg5yy1y7/Lang_59-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 23
+  - org.apache.commons.lang.text.ErrorTest0::test01
+  - org.apache.commons.lang.text.ErrorTest0::test02
+  - org.apache.commons.lang.text.ErrorTest0::test03
+  - org.apache.commons.lang.text.ErrorTest0::test04
+  - org.apache.commons.lang.text.ErrorTest0::test05
+  - org.apache.commons.lang.text.ErrorTest0::test06
+  - org.apache.commons.lang.text.ErrorTest0::test07
+  - org.apache.commons.lang.text.ErrorTest0::test08
+  - org.apache.commons.lang.text.ErrorTest0::test09
+  - org.apache.commons.lang.text.ErrorTest0::test10
+  - org.apache.commons.lang.text.ErrorTest0::test11
+  - org.apache.commons.lang.text.ErrorTest0::test01
+  - org.apache.commons.lang.text.ErrorTest0::test02
+  - org.apache.commons.lang.text.ErrorTest0::test03
+  - org.apache.commons.lang.text.ErrorTest0::test04
+  - org.apache.commons.lang.text.ErrorTest0::test05
+  - org.apache.commons.lang.text.ErrorTest0::test06
+  - org.apache.commons.lang.text.ErrorTest0::test07
+  - org.apache.commons.lang.text.ErrorTest0::test08
+  - org.apache.commons.lang.text.ErrorTest0::test09
+  - org.apache.commons.lang.text.ErrorTest0::test10
+  - org.apache.commons.lang.text.ErrorTest0::test11
+  - org.apache.commons.lang.text.RegressionTest5::test2520
+[exit 0]

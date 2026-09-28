@@ -1,0 +1,1 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Jsoup -v 27b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_27-hgq14byb/buggy

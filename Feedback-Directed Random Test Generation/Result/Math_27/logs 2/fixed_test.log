@@ -1,0 +1,20 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_27-obl2rw8z/Math_27-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 14
+  - org.apache.commons.math3.fraction.RegressionTest1::test0601
+  - org.apache.commons.math3.fraction.RegressionTest2::test1113
+  - org.apache.commons.math3.fraction.RegressionTest3::test1561
+  - org.apache.commons.math3.fraction.RegressionTest4::test2121
+  - org.apache.commons.math3.fraction.RegressionTest5::test2562
+  - org.apache.commons.math3.fraction.RegressionTest5::test2603
+  - org.apache.commons.math3.fraction.RegressionTest5::test2875
+  - org.apache.commons.math3.fraction.RegressionTest1::test0601
+  - org.apache.commons.math3.fraction.RegressionTest2::test1113
+  - org.apache.commons.math3.fraction.RegressionTest3::test1561
+  - org.apache.commons.math3.fraction.RegressionTest4::test2121
+  - org.apache.commons.math3.fraction.RegressionTest5::test2562
+  - org.apache.commons.math3.fraction.RegressionTest5::test2603
+  - org.apache.commons.math3.fraction.RegressionTest5::test2875
+[exit 0]
