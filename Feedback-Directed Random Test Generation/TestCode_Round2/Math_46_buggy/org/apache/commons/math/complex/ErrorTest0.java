@@ -1,0 +1,4603 @@
+package org.apache.commons.math.complex;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class ErrorTest0 {
+
+    public static boolean debug = false;
+
+    public void assertBooleanArrayEquals(boolean[] expectedArray, boolean[] actualArray) {
+        if (expectedArray.length != actualArray.length) {
+            throw new AssertionError("Array lengths differ: " + expectedArray.length + " != " + actualArray.length);
+        }
+        for (int i = 0; i < expectedArray.length; i++) {
+            if (expectedArray[i] != actualArray[i]) {
+                throw new AssertionError("Arrays differ at index " + i + ": " + expectedArray[i] + " != " + actualArray[i]);
+            }
+        }
+    }
+
+    @Test
+    public void test001() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test001");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex3 = complex0.conjugate();
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex6 = complex4.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex7 = complex0.divide(complex4);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex3", complex0.equals(complex3) ? complex0.hashCode() == complex3.hashCode() : true);
+    }
+
+    @Test
+    public void test002() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test002");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.asin();
+        org.apache.commons.math.complex.Complex complex3 = complex2.tan();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test003() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test003");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex4 = complex2.sqrt1z();
+        boolean boolean5 = complex4.isInfinite();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex8.cosh();
+        double double10 = complex8.getArgument();
+        org.apache.commons.math.complex.Complex complex11 = complex8.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex11.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.negate();
+        boolean boolean15 = complex4.equals((java.lang.Object) complex14);
+        org.apache.commons.math.complex.Complex complex16 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex16.sinh();
+        org.apache.commons.math.complex.Complex complex18 = complex14.multiply(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex18.conjugate();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex16 and complex18", complex16.equals(complex18) ? complex16.hashCode() == complex18.hashCode() : true);
+    }
+
+    @Test
+    public void test004() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test004");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex1.conjugate();
+        org.apache.commons.math.complex.Complex complex5 = org.apache.commons.math.complex.Complex.valueOf((double) (byte) 0, (double) (-1));
+        java.lang.String str6 = complex5.toString();
+        org.apache.commons.math.complex.Complex complex7 = complex2.divide(complex5);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test005() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test005");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex4 = complex2.sqrt1z();
+        boolean boolean5 = complex4.isInfinite();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex8.cosh();
+        double double10 = complex8.getArgument();
+        org.apache.commons.math.complex.Complex complex11 = complex8.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex11.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.negate();
+        boolean boolean15 = complex4.equals((java.lang.Object) complex14);
+        org.apache.commons.math.complex.Complex complex16 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex16.sinh();
+        org.apache.commons.math.complex.Complex complex18 = complex14.multiply(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex18.divide(0.0d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex16 and complex18", complex16.equals(complex18) ? complex16.hashCode() == complex18.hashCode() : true);
+    }
+
+    @Test
+    public void test006() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test006");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex4 = complex2.pow(complex3);
+        org.apache.commons.math.complex.Complex complex7 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double8 = complex7.getReal();
+        org.apache.commons.math.complex.Complex complex9 = complex2.add(complex7);
+        org.apache.commons.math.complex.Complex complex10 = complex7.sqrt();
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex13.cosh();
+        org.apache.commons.math.complex.Complex complex16 = complex14.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex17 = complex10.subtract(complex14);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex16", complex3.equals(complex16) ? complex3.hashCode() == complex16.hashCode() : true);
+    }
+
+    @Test
+    public void test007() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test007");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.asin();
+        org.apache.commons.math.complex.Complex complex4 = complex0.add((double) 10.0f);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test008() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test008");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex12 = complex8.sin();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex12.subtract(complex16);
+        boolean boolean18 = complex12.isInfinite();
+        org.apache.commons.math.complex.Complex complex19 = complex5.pow(complex12);
+        org.apache.commons.math.complex.Complex complex21 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex23 = complex21.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex26 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex29 = complex26.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex31 = complex29.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex32 = complex23.pow(complex31);
+        org.apache.commons.math.complex.Complex complex33 = complex12.pow(complex32);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex19", complex5.equals(complex19) ? complex5.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test009() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test009");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        boolean boolean3 = complex0.equals((java.lang.Object) (short) 1);
+        org.apache.commons.math.complex.Complex complex4 = complex0.tan();
+        org.apache.commons.math.complex.Complex complex5 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex6 = complex5.sinh();
+        org.apache.commons.math.complex.Complex complex7 = complex5.asin();
+        org.apache.commons.math.complex.Complex complex8 = complex4.multiply(complex5);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex7", complex5.equals(complex7) ? complex5.hashCode() == complex7.hashCode() : true);
+    }
+
+    @Test
+    public void test010() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test010");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        org.apache.commons.math.complex.Complex complex15 = complex8.acos();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test011() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test011");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        org.apache.commons.math.complex.Complex complex15 = complex14.sinh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test012() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test012");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        java.lang.Object obj2 = complex1.readResolve();
+        double double3 = complex1.abs();
+        org.apache.commons.math.complex.Complex complex4 = complex1.sinh();
+        org.apache.commons.math.complex.Complex complex5 = complex4.cosh();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex15 = complex8.divide(complex14);
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex18.cosh();
+        org.apache.commons.math.complex.Complex complex20 = complex8.multiply(complex18);
+        org.apache.commons.math.complex.Complex complex22 = complex8.multiply((double) 100.0f);
+        org.apache.commons.math.complex.Complex complex24 = complex8.multiply((double) 0L);
+        org.apache.commons.math.complex.Complex complex25 = complex5.divide(complex8);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex24", complex0.equals(complex24) ? complex0.hashCode() == complex24.hashCode() : true);
+    }
+
+    @Test
+    public void test013() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test013");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex21 = complex20.tan();
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double25 = complex24.getReal();
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex31 = complex28.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex32 = complex24.subtract(complex31);
+        org.apache.commons.math.complex.Complex complex33 = complex24.sin();
+        org.apache.commons.math.complex.Complex complex34 = complex33.acos();
+        org.apache.commons.math.complex.Complex complex37 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex40 = complex37.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex41 = complex37.sin();
+        org.apache.commons.math.complex.Complex complex42 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex45 = complex42.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex46 = complex41.subtract(complex45);
+        boolean boolean47 = complex41.isInfinite();
+        org.apache.commons.math.complex.Complex complex48 = complex33.add(complex41);
+        org.apache.commons.math.complex.Complex complex49 = complex48.cosh();
+        org.apache.commons.math.complex.Complex complex51 = complex48.subtract(32.0d);
+        org.apache.commons.math.complex.Complex complex52 = complex48.cosh();
+        org.apache.commons.math.complex.Complex complex53 = complex21.multiply(complex48);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex20 and complex21", complex20.equals(complex21) ? complex20.hashCode() == complex21.hashCode() : true);
+    }
+
+    @Test
+    public void test014() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test014");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        double double7 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double11 = complex10.getReal();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex10.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex2.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex24 = complex23.cosh();
+        org.apache.commons.math.complex.Complex complex26 = complex24.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex27 = complex20.add(complex26);
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex30 = complex20.divide(complex29);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex26 and complex29", complex26.equals(complex29) ? complex26.hashCode() == complex29.hashCode() : true);
+    }
+
+    @Test
+    public void test015() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test015");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex6 = complex3.sin();
+        org.apache.commons.math.complex.Complex complex7 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex8 = complex7.sqrt1z();
+        org.apache.commons.math.complex.Complex complex10 = complex8.multiply((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.exp();
+        org.apache.commons.math.complex.Complex complex14 = complex11.createComplex(1.718281828459045d, (double) 1);
+        org.apache.commons.math.complex.Complex complex15 = complex6.subtract(complex14);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex7", complex5.equals(complex7) ? complex5.hashCode() == complex7.hashCode() : true);
+    }
+
+    @Test
+    public void test016() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test016");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex3 = complex1.add((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double7 = complex6.getReal();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex14 = complex6.subtract(complex13);
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex17.cosh();
+        double double19 = complex17.getArgument();
+        org.apache.commons.math.complex.Complex complex20 = complex17.negate();
+        double double21 = complex17.getArgument();
+        org.apache.commons.math.complex.Complex complex22 = complex14.multiply(complex17);
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex26 = complex25.cosh();
+        double double27 = complex25.getArgument();
+        org.apache.commons.math.complex.Complex complex28 = complex25.negate();
+        org.apache.commons.math.complex.Complex complex30 = complex28.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex31 = complex28.asin();
+        org.apache.commons.math.complex.Complex complex32 = complex28.tan();
+        org.apache.commons.math.complex.Complex complex33 = complex17.divide(complex28);
+        org.apache.commons.math.complex.Complex complex34 = complex3.add(complex17);
+        double double35 = complex3.getImaginary();
+        org.apache.commons.math.complex.Complex complex37 = org.apache.commons.math.complex.Complex.valueOf(10.0d);
+        org.apache.commons.math.complex.Complex complex40 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex43 = complex40.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex44 = complex40.sin();
+        double double45 = complex40.getArgument();
+        org.apache.commons.math.complex.Complex complex48 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double49 = complex48.getReal();
+        org.apache.commons.math.complex.Complex complex52 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex55 = complex52.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex56 = complex48.subtract(complex55);
+        org.apache.commons.math.complex.Complex complex57 = complex40.subtract(complex55);
+        org.apache.commons.math.complex.Complex complex58 = complex40.cos();
+        org.apache.commons.math.complex.Complex complex61 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex62 = complex61.cosh();
+        org.apache.commons.math.complex.Complex complex64 = complex62.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex65 = complex58.add(complex64);
+        org.apache.commons.math.complex.Complex complex66 = complex37.divide(complex65);
+        org.apache.commons.math.complex.Complex complex67 = complex3.pow(complex65);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex64", complex0.equals(complex64) ? complex0.hashCode() == complex64.hashCode() : true);
+    }
+
+    @Test
+    public void test017() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test017");
+        org.apache.commons.math.complex.Complex complex2 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 100, (double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex13 = complex5.add(complex12);
+        org.apache.commons.math.complex.Complex complex14 = complex2.subtract(complex13);
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex17.cosh();
+        org.apache.commons.math.complex.ComplexField complexField19 = complex17.getField();
+        org.apache.commons.math.complex.Complex complex21 = complex17.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex24 = complex21.createComplex((double) 0L, (double) '4');
+        boolean boolean25 = complex21.isInfinite();
+        org.apache.commons.math.complex.Complex complex26 = complex2.subtract(complex21);
+        org.apache.commons.math.complex.Complex complex29 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex32 = complex29.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex33 = complex29.sin();
+        org.apache.commons.math.complex.Complex complex36 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex39 = complex36.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex40 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex43 = complex40.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex44 = complex36.add(complex43);
+        org.apache.commons.math.complex.Complex complex45 = complex33.divide(complex44);
+        org.apache.commons.math.complex.Complex complex47 = complex44.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex48 = complex2.add(complex44);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex9 and complex47", complex9.equals(complex47) ? complex9.hashCode() == complex47.hashCode() : true);
+    }
+
+    @Test
+    public void test018() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test018");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.divide(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex17.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex22 = complex17.pow((double) (byte) 100);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex13 and complex20", complex13.equals(complex20) ? complex13.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test019() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test019");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.NaN;
+        org.apache.commons.math.complex.Complex complex2 = org.apache.commons.math.complex.Complex.valueOf((double) '4');
+        org.apache.commons.math.complex.Complex complex3 = complex0.pow(complex2);
+        org.apache.commons.math.complex.Complex complex4 = complex2.conjugate();
+        double double5 = complex2.abs();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex4", complex2.equals(complex4) ? complex2.hashCode() == complex4.hashCode() : true);
+    }
+
+    @Test
+    public void test020() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test020");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex22 = complex20.subtract(2.718281828459045d);
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex26 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex27 = complex25.pow(complex26);
+        org.apache.commons.math.complex.Complex complex30 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double31 = complex30.getReal();
+        org.apache.commons.math.complex.Complex complex32 = complex25.add(complex30);
+        org.apache.commons.math.complex.Complex complex33 = complex30.sqrt();
+        org.apache.commons.math.complex.Complex complex35 = complex30.add((double) 10);
+        org.apache.commons.math.complex.Complex complex36 = complex35.conjugate();
+        java.lang.String str37 = complex35.toString();
+        org.apache.commons.math.complex.Complex complex39 = complex35.pow((double) (short) -1);
+        org.apache.commons.math.complex.Complex complex40 = complex22.divide(complex39);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex26", complex5.equals(complex26) ? complex5.hashCode() == complex26.hashCode() : true);
+    }
+
+    @Test
+    public void test021() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test021");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex12 = complex8.sin();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex12.subtract(complex16);
+        boolean boolean18 = complex12.isInfinite();
+        org.apache.commons.math.complex.Complex complex19 = complex5.pow(complex12);
+        boolean boolean20 = complex12.isInfinite();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex19", complex5.equals(complex19) ? complex5.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test022() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test022");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex3 = complex1.multiply((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 100, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex1.subtract(complex18);
+        org.apache.commons.math.complex.Complex complex20 = complex1.cos();
+        org.apache.commons.math.complex.Complex complex21 = complex1.exp();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex20", complex0.equals(complex20) ? complex0.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test023() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test023");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        double double7 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double11 = complex10.getReal();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex10.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex2.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex24 = complex23.cosh();
+        org.apache.commons.math.complex.Complex complex26 = complex24.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex27 = complex20.add(complex26);
+        org.apache.commons.math.complex.Complex complex30 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex31 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex32 = complex30.pow(complex31);
+        org.apache.commons.math.complex.Complex complex35 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double36 = complex35.getReal();
+        org.apache.commons.math.complex.Complex complex37 = complex30.add(complex35);
+        org.apache.commons.math.complex.Complex complex38 = complex37.sqrt();
+        org.apache.commons.math.complex.Complex complex40 = complex38.pow(0.7861513777574233d);
+        org.apache.commons.math.complex.Complex complex41 = complex26.subtract(complex38);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex26 and complex31", complex26.equals(complex31) ? complex26.hashCode() == complex31.hashCode() : true);
+    }
+
+    @Test
+    public void test024() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test024");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex0.cos();
+        double double7 = complex0.abs();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex14 = complex10.sin();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex17.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex24 = complex21.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex25 = complex17.add(complex24);
+        org.apache.commons.math.complex.Complex complex26 = complex14.divide(complex25);
+        org.apache.commons.math.complex.Complex complex28 = complex25.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex29 = complex0.add(complex25);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex21 and complex28", complex21.equals(complex28) ? complex21.hashCode() == complex28.hashCode() : true);
+    }
+
+    @Test
+    public void test025() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test025");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        org.apache.commons.math.complex.Complex complex15 = complex8.conjugate();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test026() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test026");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        org.apache.commons.math.complex.Complex complex10 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean14 = complex8.equals((java.lang.Object) complex10);
+        org.apache.commons.math.complex.Complex complex15 = complex10.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex15.conjugate();
+        org.apache.commons.math.complex.Complex complex19 = complex15.createComplex(1.4453965766582497d, (double) (byte) -1);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex10 and complex16", complex10.equals(complex16) ? complex10.hashCode() == complex16.hashCode() : true);
+    }
+
+    @Test
+    public void test027() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test027");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.asin();
+        org.apache.commons.math.complex.Complex complex3 = complex2.acos();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test028() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test028");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.asin();
+        org.apache.commons.math.complex.Complex complex3 = complex0.acos();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test029() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test029");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex21 = complex20.tan();
+        org.apache.commons.math.complex.Complex complex22 = complex20.exp();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex20 and complex21", complex20.equals(complex21) ? complex20.hashCode() == complex21.hashCode() : true);
+    }
+
+    @Test
+    public void test030() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test030");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.NaN;
+        org.apache.commons.math.complex.Complex complex2 = org.apache.commons.math.complex.Complex.valueOf((double) '4');
+        org.apache.commons.math.complex.Complex complex3 = complex0.pow(complex2);
+        org.apache.commons.math.complex.Complex complex4 = complex2.conjugate();
+        java.lang.Object obj5 = complex4.readResolve();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex4", complex2.equals(complex4) ? complex2.hashCode() == complex4.hashCode() : true);
+    }
+
+    @Test
+    public void test031() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test031");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.divide(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex17.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex22 = complex17.divide(0.0d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex13 and complex20", complex13.equals(complex20) ? complex13.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test032() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test032");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex2 = complex1.conjugate();
+        java.lang.Class<?> wildcardClass3 = complex1.getClass();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex2", complex1.equals(complex2) ? complex1.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test033() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test033");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.divide(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex17.multiply(0.0d);
+        double double21 = complex20.abs();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex13 and complex20", complex13.equals(complex20) ? complex13.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test034() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test034");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.conjugate();
+        org.apache.commons.math.complex.Complex complex4 = complex3.acos();
+        org.apache.commons.math.complex.Complex complex6 = complex4.add((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex9.sin();
+        org.apache.commons.math.complex.Complex complex14 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex18 = complex13.subtract(complex17);
+        boolean boolean19 = complex13.isInfinite();
+        java.lang.String str20 = complex13.toString();
+        org.apache.commons.math.complex.Complex complex21 = complex6.multiply(complex13);
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex27 = complex24.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex28 = complex24.sqrt1z();
+        org.apache.commons.math.complex.Complex complex29 = complex28.atan();
+        org.apache.commons.math.complex.Complex complex30 = complex21.divide(complex28);
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex39 = complex36.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex40 = complex33.divide(complex39);
+        boolean boolean41 = complex33.isInfinite();
+        org.apache.commons.math.complex.Complex complex42 = complex33.asin();
+        org.apache.commons.math.complex.Complex complex43 = complex42.tan();
+        org.apache.commons.math.complex.Complex complex44 = complex28.subtract(complex42);
+        org.apache.commons.math.complex.Complex complex47 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex50 = complex47.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex51 = complex47.sin();
+        org.apache.commons.math.complex.Complex complex54 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex57 = complex54.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex58 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex61 = complex58.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex62 = complex54.add(complex61);
+        org.apache.commons.math.complex.Complex complex63 = complex51.divide(complex62);
+        org.apache.commons.math.complex.Complex complex65 = complex62.multiply(0.0d);
+        boolean boolean66 = complex28.equals((java.lang.Object) 0.0d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex14 and complex65", complex14.equals(complex65) ? complex14.hashCode() == complex65.hashCode() : true);
+    }
+
+    @Test
+    public void test035() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test035");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex3 = complex0.conjugate();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        boolean boolean10 = complex9.isInfinite();
+        org.apache.commons.math.complex.Complex complex12 = complex9.multiply((double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex0.add(complex12);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex3", complex0.equals(complex3) ? complex0.hashCode() == complex3.hashCode() : true);
+    }
+
+    @Test
+    public void test036() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test036");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        java.lang.Class<?> wildcardClass15 = complex14.getClass();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test037() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test037");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex4 = complex2.sqrt1z();
+        boolean boolean5 = complex4.isInfinite();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex8.cosh();
+        double double10 = complex8.getArgument();
+        org.apache.commons.math.complex.Complex complex11 = complex8.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex11.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.negate();
+        boolean boolean15 = complex4.equals((java.lang.Object) complex14);
+        org.apache.commons.math.complex.Complex complex16 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex16.sinh();
+        org.apache.commons.math.complex.Complex complex18 = complex14.multiply(complex17);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList20 = complex17.nthRoot((int) (short) 1);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex16 and complex18", complex16.equals(complex18) ? complex16.hashCode() == complex18.hashCode() : true);
+    }
+
+    @Test
+    public void test038() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test038");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        double double7 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double11 = complex10.getReal();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex10.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex2.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex24 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex25 = complex23.pow(complex24);
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double29 = complex28.getReal();
+        org.apache.commons.math.complex.Complex complex30 = complex23.add(complex28);
+        org.apache.commons.math.complex.Complex complex31 = complex28.sqrt();
+        org.apache.commons.math.complex.Complex complex33 = complex28.add((double) 10);
+        org.apache.commons.math.complex.Complex complex34 = complex33.conjugate();
+        org.apache.commons.math.complex.Complex complex36 = complex33.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex39 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex42 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex45 = complex42.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex46 = complex39.divide(complex45);
+        org.apache.commons.math.complex.Complex complex47 = complex45.sqrt();
+        org.apache.commons.math.complex.Complex complex50 = complex45.createComplex((double) (byte) 0, (double) ' ');
+        org.apache.commons.math.complex.Complex complex51 = complex50.log();
+        org.apache.commons.math.complex.Complex complex52 = complex36.subtract(complex50);
+        org.apache.commons.math.complex.Complex complex53 = complex20.divide(complex36);
+        org.apache.commons.math.complex.Complex complex56 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex59 = complex56.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex60 = complex56.sqrt1z();
+        org.apache.commons.math.complex.Complex complex62 = complex56.pow((double) 'a');
+        org.apache.commons.math.complex.Complex complex63 = complex53.multiply(complex56);
+        org.apache.commons.math.complex.Complex complex66 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex67 = complex66.cosh();
+        org.apache.commons.math.complex.Complex complex69 = complex67.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex70 = complex67.sin();
+        org.apache.commons.math.complex.Complex complex73 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex74 = complex73.cosh();
+        double double75 = complex73.getArgument();
+        org.apache.commons.math.complex.Complex complex76 = complex73.negate();
+        org.apache.commons.math.complex.Complex complex78 = complex76.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex79 = complex67.pow(complex76);
+        org.apache.commons.math.complex.Complex complex80 = complex79.sqrt();
+        double double81 = complex80.getReal();
+        org.apache.commons.math.complex.Complex complex84 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex87 = complex84.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex88 = complex84.sin();
+        org.apache.commons.math.complex.Complex complex89 = complex84.sqrt1z();
+        org.apache.commons.math.complex.Complex complex90 = complex89.sinh();
+        org.apache.commons.math.complex.Complex complex91 = complex80.divide(complex90);
+        org.apache.commons.math.complex.Complex complex92 = complex90.negate();
+        org.apache.commons.math.complex.Complex complex93 = complex56.subtract(complex92);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex24 and complex69", complex24.equals(complex69) ? complex24.hashCode() == complex69.hashCode() : true);
+    }
+
+    @Test
+    public void test039() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test039");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex4 = complex2.sqrt1z();
+        boolean boolean5 = complex4.isInfinite();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex8.cosh();
+        double double10 = complex8.getArgument();
+        org.apache.commons.math.complex.Complex complex11 = complex8.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex11.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.negate();
+        boolean boolean15 = complex4.equals((java.lang.Object) complex14);
+        org.apache.commons.math.complex.Complex complex16 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex16.sinh();
+        org.apache.commons.math.complex.Complex complex18 = complex14.multiply(complex17);
+        double double19 = complex17.getImaginary();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex16 and complex18", complex16.equals(complex18) ? complex16.hashCode() == complex18.hashCode() : true);
+    }
+
+    @Test
+    public void test040() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test040");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex5 = complex4.exp();
+        org.apache.commons.math.complex.Complex complex6 = complex4.sqrt1z();
+        org.apache.commons.math.complex.Complex complex7 = complex4.cos();
+        org.apache.commons.math.complex.ComplexField complexField8 = complex4.getField();
+        org.apache.commons.math.complex.Complex complex9 = complex4.sqrt1z();
+        org.apache.commons.math.complex.Complex complex11 = complex9.divide(2.0d);
+        org.apache.commons.math.complex.Complex complex12 = complex11.cos();
+        org.apache.commons.math.complex.Complex complex13 = complex2.add(complex11);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex12", complex4.equals(complex12) ? complex4.hashCode() == complex12.hashCode() : true);
+    }
+
+    @Test
+    public void test041() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test041");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex12 = complex8.sin();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex12.subtract(complex16);
+        boolean boolean18 = complex12.isInfinite();
+        org.apache.commons.math.complex.Complex complex19 = complex5.pow(complex12);
+        double double20 = complex12.getReal();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex19", complex5.equals(complex19) ? complex5.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test042() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test042");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex21 = complex5.exp();
+        org.apache.commons.math.complex.Complex complex22 = complex5.negate();
+        org.apache.commons.math.complex.Complex complex24 = complex5.pow((-2.0d));
+        org.apache.commons.math.complex.Complex complex25 = complex5.log();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex24", complex5.equals(complex24) ? complex5.hashCode() == complex24.hashCode() : true);
+    }
+
+    @Test
+    public void test043() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test043");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sinh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex10 = complex6.tanh();
+        org.apache.commons.math.complex.Complex complex11 = complex2.add(complex10);
+        org.apache.commons.math.complex.Complex complex12 = complex10.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex12.cosh();
+        org.apache.commons.math.complex.Complex complex14 = complex12.tanh();
+        org.apache.commons.math.complex.Complex complex16 = complex14.divide(3.79966999576974d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex14", complex6.equals(complex14) ? complex6.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test044() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test044");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = complex13.divide(complex19);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList22 = complex20.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex23 = complex2.pow(complex20);
+        org.apache.commons.math.complex.Complex complex25 = complex2.add((double) (short) 100);
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex31 = complex28.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex32 = complex28.sin();
+        org.apache.commons.math.complex.Complex complex35 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex38 = complex35.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex39 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex42 = complex39.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex43 = complex35.add(complex42);
+        org.apache.commons.math.complex.Complex complex44 = complex32.divide(complex43);
+        org.apache.commons.math.complex.Complex complex47 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex48 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex49 = complex47.pow(complex48);
+        org.apache.commons.math.complex.Complex complex50 = complex49.cosh();
+        boolean boolean51 = complex32.equals((java.lang.Object) complex50);
+        org.apache.commons.math.complex.Complex complex52 = complex25.subtract(complex32);
+        org.apache.commons.math.complex.Complex complex55 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex58 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex61 = complex58.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex62 = complex55.divide(complex61);
+        org.apache.commons.math.complex.Complex complex63 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex66 = complex63.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean67 = complex61.equals((java.lang.Object) complex63);
+        org.apache.commons.math.complex.Complex complex68 = complex63.atan();
+        org.apache.commons.math.complex.Complex complex69 = complex63.negate();
+        org.apache.commons.math.complex.Complex complex70 = complex63.cos();
+        org.apache.commons.math.complex.Complex complex71 = complex32.divide(complex70);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex48 and complex70", complex48.equals(complex70) ? complex48.hashCode() == complex70.hashCode() : true);
+    }
+
+    @Test
+    public void test045() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test045");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex2 = complex1.conjugate();
+        org.apache.commons.math.complex.Complex complex4 = complex1.divide((-3.141592653589793d));
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex2", complex1.equals(complex2) ? complex1.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test046() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test046");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.divide(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex17.multiply(0.0d);
+        boolean boolean21 = complex17.isNaN();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex13 and complex20", complex13.equals(complex20) ? complex13.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test047() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test047");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        double double4 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex5 = complex2.negate();
+        org.apache.commons.math.complex.Complex complex6 = complex2.negate();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex10 = complex9.cosh();
+        org.apache.commons.math.complex.Complex complex12 = complex10.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex13 = complex2.multiply(complex10);
+        org.apache.commons.math.complex.Complex complex14 = complex13.sqrt1z();
+        java.util.List<org.apache.commons.math.complex.Complex> complexList16 = complex14.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex18.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex21 = complex20.asin();
+        org.apache.commons.math.complex.Complex complex24 = complex21.createComplex((double) (short) 100, (double) 1);
+        org.apache.commons.math.complex.Complex complex25 = complex24.sin();
+        org.apache.commons.math.complex.Complex complex26 = complex14.add(complex25);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex12 and complex18", complex12.equals(complex18) ? complex12.hashCode() == complex18.hashCode() : true);
+    }
+
+    @Test
+    public void test048() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test048");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex3 = complex0.cos();
+        org.apache.commons.math.complex.ComplexField complexField4 = complex0.getField();
+        org.apache.commons.math.complex.Complex complex5 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex7 = complex5.divide(2.0d);
+        org.apache.commons.math.complex.Complex complex8 = complex7.cos();
+        org.apache.commons.math.complex.ComplexField complexField9 = complex8.getField();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex8", complex0.equals(complex8) ? complex0.hashCode() == complex8.hashCode() : true);
+    }
+
+    @Test
+    public void test049() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test049");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex21 = complex5.exp();
+        org.apache.commons.math.complex.Complex complex22 = complex5.negate();
+        org.apache.commons.math.complex.Complex complex24 = complex5.pow((-2.0d));
+        java.lang.String str25 = complex5.toString();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex24", complex5.equals(complex24) ? complex5.hashCode() == complex24.hashCode() : true);
+    }
+
+    @Test
+    public void test050() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test050");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.divide(complex17);
+        org.apache.commons.math.complex.Complex complex21 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex22 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex23 = complex21.pow(complex22);
+        org.apache.commons.math.complex.Complex complex24 = complex23.cosh();
+        boolean boolean25 = complex6.equals((java.lang.Object) complex24);
+        org.apache.commons.math.complex.Complex complex26 = complex6.asin();
+        org.apache.commons.math.complex.Complex complex27 = complex26.exp();
+        org.apache.commons.math.complex.Complex complex28 = complex26.cos();
+        org.apache.commons.math.complex.Complex complex29 = complex26.sinh();
+        org.apache.commons.math.complex.Complex complex32 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex33 = complex32.cosh();
+        org.apache.commons.math.complex.Complex complex35 = complex33.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex38 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex41 = complex38.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex43 = complex41.add((double) (byte) 1);
+        double double44 = complex41.getImaginary();
+        org.apache.commons.math.complex.Complex complex45 = complex41.atan();
+        org.apache.commons.math.complex.Complex complex46 = complex41.acos();
+        boolean boolean47 = complex35.equals((java.lang.Object) complex46);
+        org.apache.commons.math.complex.Complex complex50 = org.apache.commons.math.complex.Complex.valueOf((double) (byte) 0, (double) (-1));
+        org.apache.commons.math.complex.Complex complex53 = complex50.createComplex(32.0d, (double) (byte) 1);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList55 = complex53.nthRoot(10);
+        org.apache.commons.math.complex.Complex complex56 = complex46.multiply(complex53);
+        double double57 = complex56.getArgument();
+        org.apache.commons.math.complex.Complex complex58 = complex29.add(complex56);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex22 and complex35", complex22.equals(complex35) ? complex22.hashCode() == complex35.hashCode() : true);
+    }
+
+    @Test
+    public void test051() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test051");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sinh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex10 = complex6.tanh();
+        org.apache.commons.math.complex.Complex complex11 = complex2.add(complex10);
+        org.apache.commons.math.complex.Complex complex12 = complex10.negate();
+        org.apache.commons.math.complex.Complex complex14 = complex12.divide(0.6220932580717584d);
+        org.apache.commons.math.complex.Complex complex15 = complex12.sqrt1z();
+        org.apache.commons.math.complex.Complex complex16 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex16.sinh();
+        java.lang.Object obj18 = complex17.readResolve();
+        double double19 = complex17.abs();
+        org.apache.commons.math.complex.Complex complex20 = complex17.conjugate();
+        boolean boolean21 = complex15.equals((java.lang.Object) complex17);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex20", complex6.equals(complex20) ? complex6.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test052() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test052");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        boolean boolean10 = complex2.isInfinite();
+        org.apache.commons.math.complex.Complex complex11 = complex2.asin();
+        org.apache.commons.math.complex.Complex complex12 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex14 = complex13.exp();
+        org.apache.commons.math.complex.Complex complex15 = complex13.tan();
+        org.apache.commons.math.complex.Complex complex17 = complex15.divide((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex18 = complex2.divide(complex17);
+        org.apache.commons.math.complex.Complex complex21 = complex2.createComplex(0.4429679074828777d, 0.0d);
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) '4', (double) 1L);
+        org.apache.commons.math.complex.ComplexField complexField25 = complex24.getField();
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex29 = complex28.cosh();
+        org.apache.commons.math.complex.Complex complex31 = complex29.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex34 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex37 = complex34.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex39 = complex37.add((double) (byte) 1);
+        double double40 = complex37.getImaginary();
+        org.apache.commons.math.complex.Complex complex41 = complex37.atan();
+        org.apache.commons.math.complex.Complex complex42 = complex37.acos();
+        boolean boolean43 = complex31.equals((java.lang.Object) complex42);
+        org.apache.commons.math.complex.Complex complex44 = complex24.add(complex42);
+        org.apache.commons.math.complex.Complex complex45 = complex44.sqrt();
+        boolean boolean46 = complex21.equals((java.lang.Object) complex44);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex13 and complex31", complex13.equals(complex31) ? complex13.hashCode() == complex31.hashCode() : true);
+    }
+
+    @Test
+    public void test053() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test053");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex12 = complex8.sin();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex12.subtract(complex16);
+        boolean boolean18 = complex12.isInfinite();
+        org.apache.commons.math.complex.Complex complex19 = complex5.pow(complex12);
+        org.apache.commons.math.complex.Complex complex21 = complex5.subtract((-1.0d));
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex19", complex5.equals(complex19) ? complex5.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test054() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test054");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        org.apache.commons.math.complex.Complex complex10 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean14 = complex8.equals((java.lang.Object) complex10);
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex19 = complex17.pow(complex18);
+        org.apache.commons.math.complex.Complex complex20 = complex19.cosh();
+        org.apache.commons.math.complex.Complex complex21 = complex19.sqrt1z();
+        org.apache.commons.math.complex.Complex complex22 = complex10.multiply(complex21);
+        org.apache.commons.math.complex.Complex complex23 = complex22.log();
+        org.apache.commons.math.complex.Complex complex26 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double27 = complex26.getReal();
+        org.apache.commons.math.complex.Complex complex28 = complex26.atan();
+        org.apache.commons.math.complex.Complex complex29 = complex26.tan();
+        org.apache.commons.math.complex.Complex complex30 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex31 = complex30.sinh();
+        org.apache.commons.math.complex.Complex complex32 = complex30.tan();
+        org.apache.commons.math.complex.Complex complex33 = complex30.sin();
+        org.apache.commons.math.complex.Complex complex34 = complex30.tanh();
+        org.apache.commons.math.complex.Complex complex35 = complex26.add(complex34);
+        org.apache.commons.math.complex.Complex complex36 = complex34.negate();
+        org.apache.commons.math.complex.Complex complex38 = complex36.divide(0.6220932580717584d);
+        org.apache.commons.math.complex.Complex complex40 = org.apache.commons.math.complex.Complex.valueOf(10.0d);
+        org.apache.commons.math.complex.Complex complex43 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex46 = complex43.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex47 = complex43.sin();
+        double double48 = complex43.getArgument();
+        org.apache.commons.math.complex.Complex complex51 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double52 = complex51.getReal();
+        org.apache.commons.math.complex.Complex complex55 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex58 = complex55.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex59 = complex51.subtract(complex58);
+        org.apache.commons.math.complex.Complex complex60 = complex43.subtract(complex58);
+        org.apache.commons.math.complex.Complex complex61 = complex43.cos();
+        org.apache.commons.math.complex.Complex complex64 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex65 = complex64.cosh();
+        org.apache.commons.math.complex.Complex complex67 = complex65.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex68 = complex61.add(complex67);
+        org.apache.commons.math.complex.Complex complex69 = complex40.divide(complex68);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList71 = complex68.nthRoot((int) ' ');
+        org.apache.commons.math.complex.Complex complex72 = complex36.add(complex68);
+        org.apache.commons.math.complex.Complex complex73 = complex23.divide(complex68);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex18 and complex67", complex18.equals(complex67) ? complex18.hashCode() == complex67.hashCode() : true);
+    }
+
+    @Test
+    public void test055() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test055");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex1.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex4 = complex1.log();
+        org.apache.commons.math.complex.Complex complex5 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField9 = complex8.getField();
+        org.apache.commons.math.complex.Complex complex11 = complex8.multiply(10.0d);
+        org.apache.commons.math.complex.Complex complex12 = complex11.sin();
+        boolean boolean13 = complex4.equals((java.lang.Object) complex11);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex23 = complex16.divide(complex22);
+        boolean boolean24 = complex16.isInfinite();
+        org.apache.commons.math.complex.Complex complex25 = complex16.asin();
+        org.apache.commons.math.complex.Complex complex26 = complex25.tan();
+        org.apache.commons.math.complex.Complex complex28 = complex26.subtract((-0.0d));
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex30 = complex29.sinh();
+        java.lang.Object obj31 = complex30.readResolve();
+        double double32 = complex30.abs();
+        org.apache.commons.math.complex.Complex complex33 = complex26.subtract(complex30);
+        org.apache.commons.math.complex.Complex complex34 = complex11.multiply(complex30);
+        org.apache.commons.math.complex.Complex complex35 = complex30.log();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex34", complex4.equals(complex34) ? complex4.hashCode() == complex34.hashCode() : true);
+    }
+
+    @Test
+    public void test056() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test056");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) 0L);
+        org.apache.commons.math.complex.Complex complex4 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex4.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex8 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex12 = complex4.add(complex11);
+        org.apache.commons.math.complex.Complex complex13 = complex1.multiply(complex12);
+        org.apache.commons.math.complex.Complex complex14 = complex1.acos();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex13", complex1.equals(complex13) ? complex1.hashCode() == complex13.hashCode() : true);
+    }
+
+    @Test
+    public void test057() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test057");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex6 = complex3.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex10 = complex9.cosh();
+        double double11 = complex9.getArgument();
+        org.apache.commons.math.complex.Complex complex12 = complex9.negate();
+        org.apache.commons.math.complex.Complex complex14 = complex12.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex15 = complex3.pow(complex12);
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex21 = complex18.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex22 = complex18.sin();
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex25.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex32 = complex29.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex33 = complex25.add(complex32);
+        org.apache.commons.math.complex.Complex complex34 = complex22.divide(complex33);
+        org.apache.commons.math.complex.ComplexField complexField35 = complex33.getField();
+        org.apache.commons.math.complex.Complex complex36 = complex33.sqrt1z();
+        org.apache.commons.math.complex.Complex complex37 = complex36.log();
+        boolean boolean38 = complex12.equals((java.lang.Object) complex36);
+        java.lang.Object obj39 = complex36.readResolve();
+        org.apache.commons.math.complex.Complex complex40 = complex36.log();
+        org.apache.commons.math.complex.Complex complex43 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double44 = complex43.getReal();
+        org.apache.commons.math.complex.Complex complex47 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex50 = complex47.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex51 = complex43.subtract(complex50);
+        org.apache.commons.math.complex.Complex complex54 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex57 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex60 = complex57.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex61 = complex54.divide(complex60);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList63 = complex61.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex64 = complex43.pow(complex61);
+        org.apache.commons.math.complex.Complex complex66 = complex43.add((double) (short) 100);
+        org.apache.commons.math.complex.Complex complex69 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex72 = complex69.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex73 = complex69.sin();
+        org.apache.commons.math.complex.Complex complex76 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex79 = complex76.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex80 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex83 = complex80.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex84 = complex76.add(complex83);
+        org.apache.commons.math.complex.Complex complex85 = complex73.divide(complex84);
+        org.apache.commons.math.complex.Complex complex88 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex89 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex90 = complex88.pow(complex89);
+        org.apache.commons.math.complex.Complex complex91 = complex90.cosh();
+        boolean boolean92 = complex73.equals((java.lang.Object) complex91);
+        org.apache.commons.math.complex.Complex complex93 = complex66.subtract(complex73);
+        org.apache.commons.math.complex.Complex complex94 = complex40.divide(complex73);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex89", complex5.equals(complex89) ? complex5.hashCode() == complex89.hashCode() : true);
+    }
+
+    @Test
+    public void test058() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test058");
+        org.apache.commons.math.complex.Complex complex2 = org.apache.commons.math.complex.Complex.valueOf((double) (byte) 10, 0.0d);
+        org.apache.commons.math.complex.Complex complex4 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex6 = complex4.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex7 = complex4.tanh();
+        double double8 = complex7.getReal();
+        org.apache.commons.math.complex.Complex complex9 = complex7.atan();
+        org.apache.commons.math.complex.Complex complex10 = complex2.add(complex7);
+        org.apache.commons.math.complex.Complex complex12 = org.apache.commons.math.complex.Complex.valueOf(10.0d);
+        org.apache.commons.math.complex.Complex complex15 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex15.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex19 = complex15.sin();
+        double double20 = complex15.getArgument();
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double24 = complex23.getReal();
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex30 = complex27.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex31 = complex23.subtract(complex30);
+        org.apache.commons.math.complex.Complex complex32 = complex15.subtract(complex30);
+        org.apache.commons.math.complex.Complex complex33 = complex15.cos();
+        org.apache.commons.math.complex.Complex complex36 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex37 = complex36.cosh();
+        org.apache.commons.math.complex.Complex complex39 = complex37.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex40 = complex33.add(complex39);
+        org.apache.commons.math.complex.Complex complex41 = complex12.divide(complex40);
+        org.apache.commons.math.complex.Complex complex43 = complex12.divide((-0.9888977057628652d));
+        org.apache.commons.math.complex.Complex complex44 = complex7.add(complex12);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex39", complex4.equals(complex39) ? complex4.hashCode() == complex39.hashCode() : true);
+    }
+
+    @Test
+    public void test059() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test059");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        boolean boolean10 = complex2.isInfinite();
+        org.apache.commons.math.complex.Complex complex11 = complex2.asin();
+        org.apache.commons.math.complex.Complex complex12 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex14 = complex13.exp();
+        org.apache.commons.math.complex.Complex complex15 = complex13.tan();
+        org.apache.commons.math.complex.Complex complex17 = complex15.divide((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex18 = complex2.divide(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex17.conjugate();
+        org.apache.commons.math.complex.Complex complex20 = complex19.exp();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex17 and complex19", complex17.equals(complex19) ? complex17.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test060() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test060");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        org.apache.commons.math.complex.Complex complex3 = complex0.sin();
+        org.apache.commons.math.complex.Complex complex4 = complex0.tanh();
+        org.apache.commons.math.complex.Complex complex5 = complex4.exp();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sqrt1z();
+        org.apache.commons.math.complex.Complex complex9 = complex7.multiply((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex10 = complex7.exp();
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex(1.718281828459045d, (double) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex10.cosh();
+        org.apache.commons.math.complex.Complex complex15 = complex14.conjugate();
+        org.apache.commons.math.complex.Complex complex16 = complex4.multiply(complex15);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex14 and complex15", complex14.equals(complex15) ? complex14.hashCode() == complex15.hashCode() : true);
+    }
+
+    @Test
+    public void test061() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test061");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex21 = complex5.exp();
+        org.apache.commons.math.complex.Complex complex22 = complex5.negate();
+        org.apache.commons.math.complex.Complex complex24 = complex5.pow((-2.0d));
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex30 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex33 = complex30.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex34 = complex27.divide(complex33);
+        org.apache.commons.math.complex.Complex complex35 = complex34.conjugate();
+        org.apache.commons.math.complex.Complex complex36 = complex34.sqrt();
+        org.apache.commons.math.complex.Complex complex37 = complex36.tan();
+        org.apache.commons.math.complex.Complex complex38 = complex24.multiply(complex36);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex24", complex5.equals(complex24) ? complex5.hashCode() == complex24.hashCode() : true);
+    }
+
+    @Test
+    public void test062() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test062");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex1.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex4 = complex1.log();
+        org.apache.commons.math.complex.Complex complex5 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField9 = complex8.getField();
+        org.apache.commons.math.complex.Complex complex11 = complex8.multiply(10.0d);
+        org.apache.commons.math.complex.Complex complex12 = complex11.sin();
+        boolean boolean13 = complex4.equals((java.lang.Object) complex11);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex23 = complex16.divide(complex22);
+        boolean boolean24 = complex16.isInfinite();
+        org.apache.commons.math.complex.Complex complex25 = complex16.asin();
+        org.apache.commons.math.complex.Complex complex26 = complex25.tan();
+        org.apache.commons.math.complex.Complex complex28 = complex26.subtract((-0.0d));
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex30 = complex29.sinh();
+        java.lang.Object obj31 = complex30.readResolve();
+        double double32 = complex30.abs();
+        org.apache.commons.math.complex.Complex complex33 = complex26.subtract(complex30);
+        org.apache.commons.math.complex.Complex complex34 = complex11.multiply(complex30);
+        org.apache.commons.math.complex.Complex complex35 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex37 = complex35.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex40 = complex35.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex41 = complex35.cos();
+        org.apache.commons.math.complex.Complex complex43 = complex41.subtract(1.0000000000000002d);
+        org.apache.commons.math.complex.Complex complex44 = complex43.atan();
+        double double45 = complex43.getReal();
+        java.util.List<org.apache.commons.math.complex.Complex> complexList47 = complex43.nthRoot((int) (short) 1);
+        org.apache.commons.math.complex.Complex complex48 = complex34.divide(complex43);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex34", complex4.equals(complex34) ? complex4.hashCode() == complex34.hashCode() : true);
+    }
+
+    @Test
+    public void test063() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test063");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) 1);
+        org.apache.commons.math.complex.Complex complex2 = complex1.sin();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex6 = complex5.cosh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex13 = complex12.cosh();
+        double double14 = complex12.getArgument();
+        org.apache.commons.math.complex.Complex complex15 = complex12.negate();
+        org.apache.commons.math.complex.Complex complex17 = complex15.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex6.pow(complex15);
+        org.apache.commons.math.complex.Complex complex19 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex20 = complex2.add(complex19);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex8", complex1.equals(complex8) ? complex1.hashCode() == complex8.hashCode() : true);
+    }
+
+    @Test
+    public void test064() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test064");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = complex13.divide(complex19);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList22 = complex20.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex23 = complex2.pow(complex20);
+        double double24 = complex23.getImaginary();
+        org.apache.commons.math.complex.Complex complex25 = complex23.cos();
+        org.apache.commons.math.complex.Complex complex27 = complex23.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex28 = complex27.conjugate();
+        double double29 = complex28.getImaginary();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex27 and complex28", complex27.equals(complex28) ? complex27.hashCode() == complex28.hashCode() : true);
+    }
+
+    @Test
+    public void test065() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test065");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 10);
+        org.apache.commons.math.complex.Complex complex2 = complex1.sinh();
+        java.lang.Object obj3 = complex2.readResolve();
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex6 = complex4.multiply((double) 100.0f);
+        boolean boolean7 = complex2.equals((java.lang.Object) complex4);
+        org.apache.commons.math.complex.Complex complex8 = complex4.conjugate();
+        org.apache.commons.math.complex.Complex complex9 = complex8.sqrt1z();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex8", complex4.equals(complex8) ? complex4.hashCode() == complex8.hashCode() : true);
+    }
+
+    @Test
+    public void test066() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test066");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = complex13.divide(complex19);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList22 = complex20.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex23 = complex2.pow(complex20);
+        double double24 = complex23.getImaginary();
+        org.apache.commons.math.complex.Complex complex25 = complex23.cos();
+        org.apache.commons.math.complex.Complex complex27 = complex23.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex28 = complex27.conjugate();
+        org.apache.commons.math.complex.Complex complex29 = complex28.tanh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex27 and complex28", complex27.equals(complex28) ? complex27.hashCode() == complex28.hashCode() : true);
+    }
+
+    @Test
+    public void test067() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test067");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        boolean boolean3 = complex0.equals((java.lang.Object) (short) 1);
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex5 = complex4.sinh();
+        java.lang.Object obj6 = complex5.readResolve();
+        double double7 = complex5.abs();
+        org.apache.commons.math.complex.Complex complex8 = complex5.sinh();
+        org.apache.commons.math.complex.Complex complex9 = complex0.pow(complex5);
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex13 = complex12.cosh();
+        double double14 = complex12.getArgument();
+        org.apache.commons.math.complex.Complex complex15 = complex12.negate();
+        double double16 = complex12.getArgument();
+        org.apache.commons.math.complex.Complex complex18 = complex12.subtract(0.03024390243902439d);
+        org.apache.commons.math.complex.Complex complex21 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double22 = complex21.getReal();
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex25.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex29 = complex21.subtract(complex28);
+        org.apache.commons.math.complex.Complex complex30 = complex21.sin();
+        boolean boolean31 = complex30.isNaN();
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex33.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex38 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex41 = complex38.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex43 = complex41.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex44 = complex35.pow(complex43);
+        java.lang.Object obj45 = complex44.readResolve();
+        org.apache.commons.math.complex.Complex complex46 = complex30.multiply(complex44);
+        boolean boolean47 = complex46.isInfinite();
+        java.lang.String str48 = complex46.toString();
+        org.apache.commons.math.complex.Complex complex49 = complex18.divide(complex46);
+        org.apache.commons.math.complex.Complex complex50 = complex5.multiply(complex18);
+        org.apache.commons.math.complex.Complex complex51 = complex5.tanh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex50", complex0.equals(complex50) ? complex0.hashCode() == complex50.hashCode() : true);
+    }
+
+    @Test
+    public void test068() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test068");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 10);
+        org.apache.commons.math.complex.Complex complex2 = complex1.sinh();
+        java.lang.Object obj3 = complex2.readResolve();
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex6 = complex4.multiply((double) 100.0f);
+        boolean boolean7 = complex2.equals((java.lang.Object) complex4);
+        org.apache.commons.math.complex.Complex complex8 = complex4.conjugate();
+        double double9 = complex8.getImaginary();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex8", complex4.equals(complex8) ? complex4.hashCode() == complex8.hashCode() : true);
+    }
+
+    @Test
+    public void test069() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test069");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex(5.0990195135927845d);
+        org.apache.commons.math.complex.Complex complex2 = complex1.sqrt();
+        org.apache.commons.math.complex.Complex complex3 = complex1.conjugate();
+        java.lang.String str4 = complex3.toString();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex3", complex1.equals(complex3) ? complex1.hashCode() == complex3.hashCode() : true);
+    }
+
+    @Test
+    public void test070() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test070");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        double double3 = complex0.getArgument();
+        org.apache.commons.math.complex.Complex complex4 = complex0.negate();
+        org.apache.commons.math.complex.Complex complex7 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex7.cosh();
+        double double9 = complex7.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = complex7.sin();
+        java.lang.String str11 = complex10.toString();
+        org.apache.commons.math.complex.Complex complex12 = complex0.multiply(complex10);
+        org.apache.commons.math.complex.Complex complex15 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex21 = complex18.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex22 = complex15.divide(complex21);
+        org.apache.commons.math.complex.Complex complex23 = complex21.sin();
+        org.apache.commons.math.complex.Complex complex24 = complex10.subtract(complex23);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex12", complex0.equals(complex12) ? complex0.hashCode() == complex12.hashCode() : true);
+    }
+
+    @Test
+    public void test071() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test071");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        org.apache.commons.math.complex.Complex complex17 = complex8.createComplex(10.019331316097812d, 0.04417261042993862d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test072() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test072");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.asin();
+        double double3 = complex0.getArgument();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test073() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test073");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 10);
+        org.apache.commons.math.complex.Complex complex2 = complex1.sinh();
+        java.lang.Object obj3 = complex2.readResolve();
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex6 = complex4.multiply((double) 100.0f);
+        boolean boolean7 = complex2.equals((java.lang.Object) complex4);
+        org.apache.commons.math.complex.Complex complex8 = complex4.conjugate();
+        org.apache.commons.math.complex.Complex complex9 = complex8.sin();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex8", complex4.equals(complex8) ? complex4.hashCode() == complex8.hashCode() : true);
+    }
+
+    @Test
+    public void test074() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test074");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sinh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex10 = complex6.tanh();
+        org.apache.commons.math.complex.Complex complex11 = complex2.add(complex10);
+        org.apache.commons.math.complex.Complex complex12 = complex10.negate();
+        org.apache.commons.math.complex.Complex complex14 = complex12.divide(0.6220932580717584d);
+        org.apache.commons.math.complex.Complex complex15 = complex12.sqrt1z();
+        org.apache.commons.math.complex.Complex complex17 = org.apache.commons.math.complex.Complex.valueOf(10.0d);
+        org.apache.commons.math.complex.Complex complex20 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex23 = complex20.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex24 = complex20.sin();
+        double double25 = complex20.getArgument();
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double29 = complex28.getReal();
+        org.apache.commons.math.complex.Complex complex32 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex32.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex36 = complex28.subtract(complex35);
+        org.apache.commons.math.complex.Complex complex37 = complex20.subtract(complex35);
+        org.apache.commons.math.complex.Complex complex38 = complex20.cos();
+        org.apache.commons.math.complex.Complex complex41 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex42 = complex41.cosh();
+        org.apache.commons.math.complex.Complex complex44 = complex42.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex45 = complex38.add(complex44);
+        org.apache.commons.math.complex.Complex complex46 = complex17.divide(complex45);
+        org.apache.commons.math.complex.Complex complex47 = complex17.cosh();
+        org.apache.commons.math.complex.Complex complex49 = complex17.multiply(0.8891397050194616d);
+        org.apache.commons.math.complex.Complex complex50 = complex49.cosh();
+        org.apache.commons.math.complex.Complex complex51 = complex15.multiply(complex50);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex15 and complex44", complex15.equals(complex44) ? complex15.hashCode() == complex44.hashCode() : true);
+    }
+
+    @Test
+    public void test075() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test075");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) 0L);
+        org.apache.commons.math.complex.Complex complex4 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex4.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex8 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex12 = complex4.add(complex11);
+        org.apache.commons.math.complex.Complex complex13 = complex1.multiply(complex12);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex23 = complex16.divide(complex22);
+        boolean boolean24 = complex16.isInfinite();
+        org.apache.commons.math.complex.Complex complex25 = complex16.asin();
+        org.apache.commons.math.complex.Complex complex27 = complex16.multiply((double) (byte) -1);
+        org.apache.commons.math.complex.Complex complex28 = complex16.tanh();
+        org.apache.commons.math.complex.Complex complex30 = complex28.add((double) (-1L));
+        org.apache.commons.math.complex.Complex complex31 = complex12.pow(complex28);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex13", complex1.equals(complex13) ? complex1.hashCode() == complex13.hashCode() : true);
+    }
+
+    @Test
+    public void test076() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test076");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = complex13.divide(complex19);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList22 = complex20.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex23 = complex2.pow(complex20);
+        double double24 = complex23.getImaginary();
+        org.apache.commons.math.complex.Complex complex25 = complex23.cos();
+        org.apache.commons.math.complex.Complex complex27 = complex23.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex30 = new org.apache.commons.math.complex.Complex(0.06429984768735961d, (double) (-1L));
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = complex33.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex37 = complex33.sin();
+        double double38 = complex33.getArgument();
+        org.apache.commons.math.complex.Complex complex41 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double42 = complex41.getReal();
+        org.apache.commons.math.complex.Complex complex45 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex48 = complex45.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex49 = complex41.subtract(complex48);
+        org.apache.commons.math.complex.Complex complex50 = complex33.subtract(complex48);
+        org.apache.commons.math.complex.Complex complex51 = complex33.cos();
+        org.apache.commons.math.complex.Complex complex54 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex55 = complex54.cosh();
+        org.apache.commons.math.complex.Complex complex57 = complex55.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex58 = complex51.add(complex57);
+        org.apache.commons.math.complex.Complex complex59 = complex51.tan();
+        org.apache.commons.math.complex.Complex complex60 = complex59.sqrt();
+        org.apache.commons.math.complex.Complex complex62 = complex60.multiply((double) (short) 10);
+        org.apache.commons.math.complex.Complex complex63 = complex30.pow(complex60);
+        org.apache.commons.math.complex.Complex complex64 = complex27.pow(complex30);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex27 and complex57", complex27.equals(complex57) ? complex27.hashCode() == complex57.hashCode() : true);
+    }
+
+    @Test
+    public void test077() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test077");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        double double4 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex5 = complex2.negate();
+        org.apache.commons.math.complex.Complex complex7 = complex5.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.negate();
+        org.apache.commons.math.complex.Complex complex9 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex10 = complex9.exp();
+        org.apache.commons.math.complex.Complex complex12 = complex10.add((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex15 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex15.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex19 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex23 = complex15.add(complex22);
+        org.apache.commons.math.complex.ComplexField complexField24 = complex23.getField();
+        org.apache.commons.math.complex.Complex complex26 = complex23.multiply((double) '4');
+        org.apache.commons.math.complex.Complex complex27 = complex12.add(complex23);
+        org.apache.commons.math.complex.Complex complex28 = complex27.exp();
+        org.apache.commons.math.complex.Complex complex29 = complex27.cosh();
+        org.apache.commons.math.complex.Complex complex30 = complex27.conjugate();
+        org.apache.commons.math.complex.Complex complex31 = complex5.add(complex27);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex27 and complex30", complex27.equals(complex30) ? complex27.hashCode() == complex30.hashCode() : true);
+    }
+
+    @Test
+    public void test078() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test078");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        double double7 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double11 = complex10.getReal();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex10.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex2.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex24 = complex23.cosh();
+        org.apache.commons.math.complex.Complex complex26 = complex24.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex27 = complex20.add(complex26);
+        org.apache.commons.math.complex.Complex complex28 = complex20.tan();
+        org.apache.commons.math.complex.Complex complex29 = complex28.sqrt();
+        org.apache.commons.math.complex.Complex complex32 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex32.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex36 = complex32.sin();
+        org.apache.commons.math.complex.Complex complex39 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex42 = complex39.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex43 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex46 = complex43.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex47 = complex39.add(complex46);
+        org.apache.commons.math.complex.Complex complex48 = complex36.divide(complex47);
+        org.apache.commons.math.complex.Complex complex51 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex52 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex53 = complex51.pow(complex52);
+        org.apache.commons.math.complex.Complex complex54 = complex53.cosh();
+        boolean boolean55 = complex36.equals((java.lang.Object) complex54);
+        org.apache.commons.math.complex.Complex complex56 = complex36.asin();
+        org.apache.commons.math.complex.Complex complex57 = complex36.acos();
+        org.apache.commons.math.complex.Complex complex58 = complex36.sqrt1z();
+        boolean boolean59 = complex58.isInfinite();
+        org.apache.commons.math.complex.Complex complex61 = complex58.subtract((-0.9888977057628652d));
+        org.apache.commons.math.complex.Complex complex62 = complex28.subtract(complex61);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex26 and complex52", complex26.equals(complex52) ? complex26.hashCode() == complex52.hashCode() : true);
+    }
+
+    @Test
+    public void test079() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test079");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex6 = complex3.sin();
+        boolean boolean7 = complex6.isInfinite();
+        org.apache.commons.math.complex.Complex complex10 = org.apache.commons.math.complex.Complex.valueOf((double) (-1.0f), 1.0d);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex15 = complex13.pow(complex14);
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double19 = complex18.getReal();
+        org.apache.commons.math.complex.Complex complex20 = complex13.add(complex18);
+        double double21 = complex13.abs();
+        org.apache.commons.math.complex.Complex complex22 = complex10.divide(complex13);
+        org.apache.commons.math.complex.Complex complex23 = complex6.subtract(complex13);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex14", complex5.equals(complex14) ? complex5.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test080() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test080");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        double double2 = complex1.getReal();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double6 = complex5.getReal();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex5.subtract(complex12);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex16.cosh();
+        double double18 = complex16.getArgument();
+        org.apache.commons.math.complex.Complex complex19 = complex16.negate();
+        double double20 = complex16.getArgument();
+        org.apache.commons.math.complex.Complex complex21 = complex13.multiply(complex16);
+        org.apache.commons.math.complex.Complex complex22 = complex21.tanh();
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex31 = complex28.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex32 = complex25.divide(complex31);
+        org.apache.commons.math.complex.Complex complex34 = complex32.multiply((double) (short) 100);
+        org.apache.commons.math.complex.Complex complex36 = complex32.multiply((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex37 = complex22.add(complex36);
+        org.apache.commons.math.complex.Complex complex38 = complex37.tan();
+        org.apache.commons.math.complex.Complex complex39 = complex1.pow(complex37);
+        org.apache.commons.math.complex.Complex complex42 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex45 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex48 = complex45.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex49 = complex45.sin();
+        double double50 = complex45.getArgument();
+        org.apache.commons.math.complex.Complex complex53 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double54 = complex53.getReal();
+        org.apache.commons.math.complex.Complex complex57 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex60 = complex57.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex61 = complex53.subtract(complex60);
+        org.apache.commons.math.complex.Complex complex62 = complex45.subtract(complex60);
+        org.apache.commons.math.complex.Complex complex63 = complex42.divide(complex45);
+        org.apache.commons.math.complex.Complex complex64 = complex39.subtract(complex42);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex63", complex0.equals(complex63) ? complex0.hashCode() == complex63.hashCode() : true);
+    }
+
+    @Test
+    public void test081() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test081");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.asin();
+        org.apache.commons.math.complex.Complex complex3 = complex0.asin();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test082() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test082");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex3 = complex1.multiply((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex4 = complex1.exp();
+        org.apache.commons.math.complex.Complex complex7 = complex4.createComplex(1.718281828459045d, (double) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex4.cosh();
+        org.apache.commons.math.complex.Complex complex9 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex15 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex15.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex19 = complex12.divide(complex18);
+        org.apache.commons.math.complex.Complex complex21 = complex19.multiply((double) (short) 100);
+        double double22 = complex19.getReal();
+        double double23 = complex19.getImaginary();
+        org.apache.commons.math.complex.Complex complex24 = complex8.pow(complex19);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex8 and complex9", complex8.equals(complex9) ? complex8.hashCode() == complex9.hashCode() : true);
+    }
+
+    @Test
+    public void test083() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test083");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex3 = complex1.multiply((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex4 = complex1.exp();
+        org.apache.commons.math.complex.Complex complex7 = complex4.createComplex(1.718281828459045d, (double) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex4.cosh();
+        org.apache.commons.math.complex.Complex complex9 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex10 = complex9.cosh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex8 and complex9", complex8.equals(complex9) ? complex8.hashCode() == complex9.hashCode() : true);
+    }
+
+    @Test
+    public void test084() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test084");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex13.cosh();
+        double double15 = complex13.getArgument();
+        org.apache.commons.math.complex.Complex complex16 = complex13.negate();
+        double double17 = complex13.getArgument();
+        org.apache.commons.math.complex.Complex complex18 = complex10.multiply(complex13);
+        org.apache.commons.math.complex.Complex complex19 = complex18.tanh();
+        org.apache.commons.math.complex.Complex complex22 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex25.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex29 = complex22.divide(complex28);
+        org.apache.commons.math.complex.Complex complex31 = complex29.multiply((double) (short) 100);
+        org.apache.commons.math.complex.Complex complex33 = complex29.multiply((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex34 = complex19.add(complex33);
+        org.apache.commons.math.complex.Complex complex37 = complex33.createComplex((double) 0, 0.0d);
+        org.apache.commons.math.complex.Complex complex38 = complex37.exp();
+        boolean boolean39 = complex37.isInfinite();
+        org.apache.commons.math.complex.Complex complex40 = complex37.cos();
+        org.apache.commons.math.complex.Complex complex43 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex46 = complex43.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex47 = complex43.sin();
+        org.apache.commons.math.complex.Complex complex50 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex53 = complex50.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex54 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex57 = complex54.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex58 = complex50.add(complex57);
+        org.apache.commons.math.complex.Complex complex59 = complex47.divide(complex58);
+        org.apache.commons.math.complex.Complex complex60 = complex37.subtract(complex59);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex38 and complex40", complex38.equals(complex40) ? complex38.hashCode() == complex40.hashCode() : true);
+    }
+
+    @Test
+    public void test085() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test085");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.ComplexField complexField4 = complex2.getField();
+        org.apache.commons.math.complex.Complex complex5 = org.apache.commons.math.complex.Complex.ZERO;
+        boolean boolean6 = complex2.equals((java.lang.Object) complex5);
+        org.apache.commons.math.complex.Complex complex8 = complex5.add((double) '4');
+        org.apache.commons.math.complex.Complex complex9 = complex8.cosh();
+        org.apache.commons.math.complex.Complex complex10 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex11 = complex10.sin();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex8 and complex10", complex8.equals(complex10) ? complex8.hashCode() == complex10.hashCode() : true);
+    }
+
+    @Test
+    public void test086() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test086");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = org.apache.commons.math.complex.Complex.valueOf((double) (byte) 0, (double) (-1));
+        org.apache.commons.math.complex.Complex complex23 = complex20.createComplex(32.0d, (double) (byte) 1);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList25 = complex23.nthRoot(10);
+        org.apache.commons.math.complex.Complex complex26 = complex16.multiply(complex23);
+        org.apache.commons.math.complex.Complex complex29 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex30 = complex29.cosh();
+        double double31 = complex29.getArgument();
+        org.apache.commons.math.complex.Complex complex32 = complex29.sinh();
+        org.apache.commons.math.complex.Complex complex33 = complex32.tan();
+        org.apache.commons.math.complex.Complex complex34 = complex23.subtract(complex32);
+        org.apache.commons.math.complex.Complex complex37 = complex32.createComplex(2.7584404568273957d, 11013.232874703393d);
+        org.apache.commons.math.complex.Complex complex38 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex39 = complex38.exp();
+        org.apache.commons.math.complex.Complex complex41 = complex39.add((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex43 = complex39.subtract((double) 10.0f);
+        org.apache.commons.math.complex.Complex complex46 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex49 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex52 = complex49.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex53 = complex46.divide(complex52);
+        org.apache.commons.math.complex.Complex complex54 = complex46.acos();
+        org.apache.commons.math.complex.Complex complex55 = complex54.negate();
+        org.apache.commons.math.complex.Complex complex56 = complex39.pow(complex54);
+        org.apache.commons.math.complex.Complex complex57 = complex56.tan();
+        org.apache.commons.math.complex.Complex complex58 = complex56.cos();
+        boolean boolean59 = complex37.equals((java.lang.Object) complex58);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex38", complex5.equals(complex38) ? complex5.hashCode() == complex38.hashCode() : true);
+    }
+
+    @Test
+    public void test087() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test087");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        org.apache.commons.math.complex.Complex complex15 = complex14.atan();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test088() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test088");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex3 = complex0.multiply((double) (short) -1);
+        org.apache.commons.math.complex.Complex complex4 = complex0.log();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex6.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex11 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex16 = complex14.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex8.pow(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex17.sqrt1z();
+        org.apache.commons.math.complex.Complex complex19 = complex18.sinh();
+        org.apache.commons.math.complex.Complex complex20 = complex0.subtract(complex18);
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex24 = complex23.cosh();
+        double double25 = complex23.getArgument();
+        org.apache.commons.math.complex.Complex complex26 = complex23.negate();
+        org.apache.commons.math.complex.Complex complex27 = complex23.negate();
+        org.apache.commons.math.complex.Complex complex30 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex31 = complex30.cosh();
+        org.apache.commons.math.complex.Complex complex33 = complex31.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex34 = complex23.multiply(complex31);
+        org.apache.commons.math.complex.Complex complex35 = complex34.sqrt1z();
+        java.util.List<org.apache.commons.math.complex.Complex> complexList37 = complex35.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex38 = complex20.add(complex35);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex33", complex0.equals(complex33) ? complex0.hashCode() == complex33.hashCode() : true);
+    }
+
+    @Test
+    public void test089() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test089");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex6 = complex5.conjugate();
+        org.apache.commons.math.complex.Complex complex7 = complex5.sin();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex6", complex5.equals(complex6) ? complex5.hashCode() == complex6.hashCode() : true);
+    }
+
+    @Test
+    public void test090() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test090");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sqrt1z();
+        boolean boolean7 = complex6.isNaN();
+        org.apache.commons.math.complex.Complex complex8 = complex6.cosh();
+        org.apache.commons.math.complex.Complex complex10 = complex8.add(0.761594155955765d);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex13.cosh();
+        org.apache.commons.math.complex.Complex complex16 = complex14.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex17 = complex16.atan();
+        org.apache.commons.math.complex.Complex complex19 = complex16.subtract(0.25651428512162844d);
+        org.apache.commons.math.complex.Complex complex20 = complex16.sqrt1z();
+        org.apache.commons.math.complex.Complex complex21 = complex8.subtract(complex20);
+        org.apache.commons.math.complex.Complex complex22 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex23 = complex22.exp();
+        org.apache.commons.math.complex.Complex complex24 = complex22.sqrt1z();
+        org.apache.commons.math.complex.Complex complex25 = complex22.cos();
+        org.apache.commons.math.complex.Complex complex26 = complex25.conjugate();
+        org.apache.commons.math.complex.Complex complex27 = complex21.pow(complex26);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex16 and complex22", complex16.equals(complex22) ? complex16.hashCode() == complex22.hashCode() : true);
+    }
+
+    @Test
+    public void test091() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test091");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex21 = complex20.tan();
+        org.apache.commons.math.complex.Complex complex22 = complex21.sin();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex20 and complex21", complex20.equals(complex21) ? complex20.hashCode() == complex21.hashCode() : true);
+    }
+
+    @Test
+    public void test092() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test092");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sinh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex10 = complex6.tanh();
+        org.apache.commons.math.complex.Complex complex11 = complex2.add(complex10);
+        org.apache.commons.math.complex.Complex complex12 = complex10.negate();
+        double double13 = complex12.getImaginary();
+        org.apache.commons.math.complex.Complex complex14 = complex12.tan();
+        org.apache.commons.math.complex.Complex complex15 = complex12.sin();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex14", complex6.equals(complex14) ? complex6.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test093() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test093");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        java.lang.Object obj2 = complex1.readResolve();
+        double double3 = complex1.abs();
+        java.lang.Object obj4 = complex1.readResolve();
+        org.apache.commons.math.complex.Complex complex5 = complex1.atan();
+        boolean boolean6 = complex1.isInfinite();
+        org.apache.commons.math.complex.Complex complex7 = complex1.asin();
+        org.apache.commons.math.complex.Complex complex8 = complex7.acos();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex7", complex0.equals(complex7) ? complex0.hashCode() == complex7.hashCode() : true);
+    }
+
+    @Test
+    public void test094() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test094");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        boolean boolean4 = complex2.isNaN();
+        boolean boolean5 = complex2.isInfinite();
+        org.apache.commons.math.complex.Complex complex6 = complex2.acos();
+        org.apache.commons.math.complex.Complex complex7 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex8 = complex7.sinh();
+        org.apache.commons.math.complex.Complex complex9 = complex7.tan();
+        double double10 = complex7.getArgument();
+        org.apache.commons.math.complex.Complex complex11 = complex7.negate();
+        org.apache.commons.math.complex.Complex complex12 = complex7.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex7.sinh();
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = complex16.sin();
+        org.apache.commons.math.complex.Complex complex21 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex24 = complex21.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex25 = complex20.subtract(complex24);
+        boolean boolean26 = complex24.isNaN();
+        double double27 = complex24.abs();
+        org.apache.commons.math.complex.Complex complex28 = complex24.conjugate();
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex32 = complex29.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField33 = complex32.getField();
+        org.apache.commons.math.complex.Complex complex34 = complex32.cosh();
+        org.apache.commons.math.complex.Complex complex35 = complex34.asin();
+        org.apache.commons.math.complex.Complex complex36 = complex28.add(complex34);
+        org.apache.commons.math.complex.Complex complex37 = complex36.sinh();
+        org.apache.commons.math.complex.Complex complex38 = complex7.multiply(complex36);
+        boolean boolean39 = complex6.equals((java.lang.Object) complex36);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex7 and complex38", complex7.equals(complex38) ? complex7.hashCode() == complex38.hashCode() : true);
+    }
+
+    @Test
+    public void test095() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test095");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        double double3 = complex0.getArgument();
+        org.apache.commons.math.complex.Complex complex4 = complex0.negate();
+        org.apache.commons.math.complex.Complex complex7 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex7.cosh();
+        double double9 = complex7.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = complex7.sin();
+        java.lang.String str11 = complex10.toString();
+        org.apache.commons.math.complex.Complex complex12 = complex0.multiply(complex10);
+        org.apache.commons.math.complex.Complex complex14 = complex12.divide(0.06429984768735961d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex12", complex0.equals(complex12) ? complex0.hashCode() == complex12.hashCode() : true);
+    }
+
+    @Test
+    public void test096() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test096");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex(5.0990195135927845d);
+        org.apache.commons.math.complex.Complex complex2 = complex1.sqrt();
+        org.apache.commons.math.complex.Complex complex3 = complex1.conjugate();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex6.sin();
+        double double11 = complex6.getArgument();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double15 = complex14.getReal();
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex21 = complex18.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex22 = complex14.subtract(complex21);
+        org.apache.commons.math.complex.Complex complex23 = complex6.subtract(complex21);
+        org.apache.commons.math.complex.Complex complex24 = complex6.cos();
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex27.cosh();
+        org.apache.commons.math.complex.Complex complex30 = complex28.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex31 = complex24.add(complex30);
+        org.apache.commons.math.complex.Complex complex34 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex34.cosh();
+        org.apache.commons.math.complex.ComplexField complexField36 = complex34.getField();
+        org.apache.commons.math.complex.Complex complex38 = complex34.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex41 = new org.apache.commons.math.complex.Complex((double) (short) 100, 1.5726835322493407d);
+        org.apache.commons.math.complex.Complex complex42 = complex34.add(complex41);
+        org.apache.commons.math.complex.Complex complex43 = complex31.add(complex34);
+        org.apache.commons.math.complex.Complex complex44 = complex1.add(complex31);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex3", complex1.equals(complex3) ? complex1.hashCode() == complex3.hashCode() : true);
+    }
+
+    @Test
+    public void test097() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test097");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) 0L);
+        org.apache.commons.math.complex.Complex complex4 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex4.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex8 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex12 = complex4.add(complex11);
+        org.apache.commons.math.complex.Complex complex13 = complex1.multiply(complex12);
+        org.apache.commons.math.complex.Complex complex16 = complex12.createComplex(0.0d, 3.79966999576974d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex13", complex1.equals(complex13) ? complex1.hashCode() == complex13.hashCode() : true);
+    }
+
+    @Test
+    public void test098() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test098");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        boolean boolean10 = complex2.isInfinite();
+        org.apache.commons.math.complex.Complex complex11 = complex2.asin();
+        org.apache.commons.math.complex.Complex complex12 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex14 = complex13.exp();
+        org.apache.commons.math.complex.Complex complex15 = complex13.tan();
+        org.apache.commons.math.complex.Complex complex17 = complex15.divide((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex18 = complex2.divide(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex17.conjugate();
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) 10.0f, (-1.1719284454208705d));
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex17 and complex19", complex17.equals(complex19) ? complex17.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test099() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test099");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        double double7 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double11 = complex10.getReal();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex10.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex2.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex24 = complex23.cosh();
+        org.apache.commons.math.complex.Complex complex26 = complex24.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex27 = complex20.add(complex26);
+        org.apache.commons.math.complex.Complex complex28 = complex20.tan();
+        org.apache.commons.math.complex.Complex complex29 = complex28.tanh();
+        org.apache.commons.math.complex.Complex complex32 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex32.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex36 = complex32.sin();
+        org.apache.commons.math.complex.Complex complex39 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex42 = complex39.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex43 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex46 = complex43.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex47 = complex39.add(complex46);
+        org.apache.commons.math.complex.Complex complex48 = complex36.divide(complex47);
+        org.apache.commons.math.complex.Complex complex51 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex52 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex53 = complex51.pow(complex52);
+        org.apache.commons.math.complex.Complex complex54 = complex53.cosh();
+        boolean boolean55 = complex36.equals((java.lang.Object) complex54);
+        org.apache.commons.math.complex.Complex complex58 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex59 = complex58.cosh();
+        org.apache.commons.math.complex.ComplexField complexField60 = complex58.getField();
+        org.apache.commons.math.complex.Complex complex61 = org.apache.commons.math.complex.Complex.ZERO;
+        boolean boolean62 = complex58.equals((java.lang.Object) complex61);
+        double double63 = complex58.getArgument();
+        boolean boolean64 = complex36.equals((java.lang.Object) complex58);
+        org.apache.commons.math.complex.Complex complex66 = complex36.multiply(2.6867724202798433d);
+        org.apache.commons.math.complex.Complex complex68 = complex66.divide((-0.40059690294250294d));
+        org.apache.commons.math.complex.Complex complex69 = complex68.negate();
+        org.apache.commons.math.complex.Complex complex70 = complex29.divide(complex68);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex26 and complex52", complex26.equals(complex52) ? complex26.hashCode() == complex52.hashCode() : true);
+    }
+
+    @Test
+    public void test100() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test100");
+        org.apache.commons.math.complex.Complex complex2 = org.apache.commons.math.complex.Complex.valueOf((double) 1.0f, (double) (short) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.acos();
+        org.apache.commons.math.complex.Complex complex4 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex4.conjugate();
+        org.apache.commons.math.complex.Complex complex6 = complex4.sqrt();
+        org.apache.commons.math.complex.Complex complex7 = complex4.cosh();
+        org.apache.commons.math.complex.Complex complex8 = complex7.sqrt();
+        org.apache.commons.math.complex.Complex complex11 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex11.divide(complex17);
+        org.apache.commons.math.complex.Complex complex19 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean23 = complex17.equals((java.lang.Object) complex19);
+        org.apache.commons.math.complex.Complex complex24 = complex19.atan();
+        org.apache.commons.math.complex.Complex complex25 = complex24.conjugate();
+        org.apache.commons.math.complex.Complex complex26 = complex8.multiply(complex25);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex19 and complex25", complex19.equals(complex25) ? complex19.hashCode() == complex25.hashCode() : true);
+    }
+
+    @Test
+    public void test101() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test101");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = complex2.negate();
+        org.apache.commons.math.complex.ComplexField complexField7 = complex2.getField();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex17 = complex10.divide(complex16);
+        org.apache.commons.math.complex.Complex complex18 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex21 = complex18.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean22 = complex16.equals((java.lang.Object) complex18);
+        org.apache.commons.math.complex.Complex complex23 = complex18.atan();
+        org.apache.commons.math.complex.Complex complex24 = complex18.negate();
+        org.apache.commons.math.complex.Complex complex25 = complex24.exp();
+        org.apache.commons.math.complex.Complex complex26 = complex2.add(complex24);
+        org.apache.commons.math.complex.Complex complex27 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex28 = complex27.exp();
+        org.apache.commons.math.complex.Complex complex29 = complex27.sqrt1z();
+        org.apache.commons.math.complex.Complex complex30 = complex27.cos();
+        org.apache.commons.math.complex.ComplexField complexField31 = complex27.getField();
+        org.apache.commons.math.complex.Complex complex34 = complex27.createComplex(1.4453965766582497d, (double) (short) 0);
+        org.apache.commons.math.complex.Complex complex35 = complex34.acos();
+        org.apache.commons.math.complex.Complex complex36 = complex35.sqrt();
+        org.apache.commons.math.complex.Complex complex37 = complex24.subtract(complex36);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex25 and complex27", complex25.equals(complex27) ? complex25.hashCode() == complex27.hashCode() : true);
+    }
+
+    @Test
+    public void test102() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test102");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.ComplexField complexField4 = complex2.getField();
+        org.apache.commons.math.complex.Complex complex5 = org.apache.commons.math.complex.Complex.ZERO;
+        boolean boolean6 = complex2.equals((java.lang.Object) complex5);
+        double double7 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex10.cosh();
+        org.apache.commons.math.complex.Complex complex13 = complex11.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex19.add((double) (byte) 1);
+        double double22 = complex19.getImaginary();
+        org.apache.commons.math.complex.Complex complex23 = complex19.atan();
+        org.apache.commons.math.complex.Complex complex24 = complex19.acos();
+        boolean boolean25 = complex13.equals((java.lang.Object) complex24);
+        org.apache.commons.math.complex.Complex complex28 = complex13.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex29 = complex2.multiply(complex28);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex28", complex5.equals(complex28) ? complex5.hashCode() == complex28.hashCode() : true);
+    }
+
+    @Test
+    public void test103() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test103");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex22 = complex20.subtract(2.718281828459045d);
+        java.lang.Object obj23 = complex20.readResolve();
+        org.apache.commons.math.complex.Complex complex24 = complex20.asin();
+        org.apache.commons.math.complex.Complex complex25 = complex24.sin();
+        org.apache.commons.math.complex.Complex complex26 = complex25.sinh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex20 and complex25", complex20.equals(complex25) ? complex20.hashCode() == complex25.hashCode() : true);
+    }
+
+    @Test
+    public void test104() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test104");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        double double15 = complex2.getImaginary();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test105() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test105");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex3 = complex1.add((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex14 = complex6.add(complex13);
+        org.apache.commons.math.complex.ComplexField complexField15 = complex14.getField();
+        org.apache.commons.math.complex.Complex complex17 = complex14.multiply((double) '4');
+        org.apache.commons.math.complex.Complex complex18 = complex3.add(complex14);
+        org.apache.commons.math.complex.Complex complex19 = complex18.exp();
+        org.apache.commons.math.complex.Complex complex20 = complex18.cosh();
+        org.apache.commons.math.complex.Complex complex21 = complex18.conjugate();
+        org.apache.commons.math.complex.Complex complex22 = complex21.exp();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex18 and complex21", complex18.equals(complex21) ? complex18.hashCode() == complex21.hashCode() : true);
+    }
+
+    @Test
+    public void test106() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test106");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.ComplexField complexField4 = complex2.getField();
+        org.apache.commons.math.complex.Complex complex6 = complex2.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex14 = complex12.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex15 = complex14.tanh();
+        org.apache.commons.math.complex.Complex complex16 = complex2.subtract(complex14);
+        org.apache.commons.math.complex.Complex complex17 = complex2.conjugate();
+        org.apache.commons.math.complex.Complex complex18 = complex17.atan();
+        org.apache.commons.math.complex.Complex complex20 = complex17.pow((-0.32821152988188157d));
+        org.apache.commons.math.complex.Complex complex21 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex22 = complex21.exp();
+        org.apache.commons.math.complex.Complex complex23 = complex21.sqrt1z();
+        org.apache.commons.math.complex.Complex complex24 = complex17.multiply(complex23);
+        org.apache.commons.math.complex.Complex complex25 = complex17.negate();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex23 and complex24", complex23.equals(complex24) ? complex23.hashCode() == complex24.hashCode() : true);
+    }
+
+    @Test
+    public void test107() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test107");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex3 = complex2.tanh();
+        org.apache.commons.math.complex.Complex complex4 = complex2.sqrt1z();
+        org.apache.commons.math.complex.Complex complex6 = complex2.divide((double) 0);
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex10 = complex9.cosh();
+        org.apache.commons.math.complex.ComplexField complexField11 = complex9.getField();
+        org.apache.commons.math.complex.Complex complex13 = complex9.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) 0L, (double) '4');
+        boolean boolean17 = complex13.isInfinite();
+        org.apache.commons.math.complex.ComplexField complexField18 = complex13.getField();
+        org.apache.commons.math.complex.Complex complex21 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex27 = complex24.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex28 = complex21.divide(complex27);
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex32 = complex29.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean33 = complex27.equals((java.lang.Object) complex29);
+        org.apache.commons.math.complex.Complex complex34 = complex29.atan();
+        org.apache.commons.math.complex.Complex complex35 = complex29.sqrt1z();
+        org.apache.commons.math.complex.Complex complex36 = complex13.subtract(complex29);
+        org.apache.commons.math.complex.Complex complex37 = complex29.conjugate();
+        org.apache.commons.math.complex.Complex complex38 = complex2.divide(complex37);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex29 and complex37", complex29.equals(complex37) ? complex29.hashCode() == complex37.hashCode() : true);
+    }
+
+    @Test
+    public void test108() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test108");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        double double3 = complex0.getArgument();
+        org.apache.commons.math.complex.Complex complex4 = complex0.negate();
+        org.apache.commons.math.complex.Complex complex5 = complex0.atan();
+        org.apache.commons.math.complex.Complex complex6 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex9.sin();
+        org.apache.commons.math.complex.Complex complex14 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex18 = complex13.subtract(complex17);
+        boolean boolean19 = complex17.isNaN();
+        double double20 = complex17.abs();
+        org.apache.commons.math.complex.Complex complex21 = complex17.conjugate();
+        org.apache.commons.math.complex.Complex complex22 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex25 = complex22.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField26 = complex25.getField();
+        org.apache.commons.math.complex.Complex complex27 = complex25.cosh();
+        org.apache.commons.math.complex.Complex complex28 = complex27.asin();
+        org.apache.commons.math.complex.Complex complex29 = complex21.add(complex27);
+        org.apache.commons.math.complex.Complex complex30 = complex29.sinh();
+        org.apache.commons.math.complex.Complex complex31 = complex0.multiply(complex29);
+        org.apache.commons.math.complex.Complex complex33 = complex0.add(0.7861513777574233d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex31", complex0.equals(complex31) ? complex0.hashCode() == complex31.hashCode() : true);
+    }
+
+    @Test
+    public void test109() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test109");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        java.lang.Object obj2 = complex1.readResolve();
+        double double3 = complex1.abs();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex6.cosh();
+        double double8 = complex6.getArgument();
+        org.apache.commons.math.complex.Complex complex9 = complex6.negate();
+        org.apache.commons.math.complex.Complex complex10 = complex6.negate();
+        org.apache.commons.math.complex.Complex complex11 = complex10.tan();
+        org.apache.commons.math.complex.Complex complex12 = complex1.subtract(complex11);
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex14 = complex13.exp();
+        org.apache.commons.math.complex.Complex complex15 = complex13.sqrt1z();
+        org.apache.commons.math.complex.Complex complex16 = complex13.cos();
+        org.apache.commons.math.complex.Complex complex17 = complex16.conjugate();
+        boolean boolean18 = complex1.equals((java.lang.Object) complex16);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex16 and complex17", complex16.equals(complex17) ? complex16.hashCode() == complex17.hashCode() : true);
+    }
+
+    @Test
+    public void test110() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test110");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.divide(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex17.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex21 = complex17.negate();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex13 and complex20", complex13.equals(complex20) ? complex13.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test111() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test111");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.ComplexField complexField4 = complex2.getField();
+        org.apache.commons.math.complex.Complex complex6 = complex2.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex14 = complex12.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex15 = complex14.tanh();
+        org.apache.commons.math.complex.Complex complex16 = complex2.subtract(complex14);
+        org.apache.commons.math.complex.Complex complex17 = complex2.conjugate();
+        org.apache.commons.math.complex.Complex complex18 = complex17.atan();
+        org.apache.commons.math.complex.Complex complex20 = complex17.pow((-0.32821152988188157d));
+        org.apache.commons.math.complex.Complex complex21 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex22 = complex21.exp();
+        org.apache.commons.math.complex.Complex complex23 = complex21.sqrt1z();
+        org.apache.commons.math.complex.Complex complex24 = complex17.multiply(complex23);
+        double double25 = complex17.getArgument();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex23 and complex24", complex23.equals(complex24) ? complex23.hashCode() == complex24.hashCode() : true);
+    }
+
+    @Test
+    public void test112() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test112");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.asin();
+        double double3 = complex0.getImaginary();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex2", complex0.equals(complex2) ? complex0.hashCode() == complex2.hashCode() : true);
+    }
+
+    @Test
+    public void test113() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test113");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sinh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex10 = complex6.tanh();
+        org.apache.commons.math.complex.Complex complex11 = complex2.add(complex10);
+        org.apache.commons.math.complex.Complex complex12 = complex10.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex12.cosh();
+        org.apache.commons.math.complex.Complex complex14 = complex12.tanh();
+        org.apache.commons.math.complex.Complex complex15 = complex14.tanh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex14", complex6.equals(complex14) ? complex6.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test114() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test114");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex20 = complex5.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex22 = complex20.subtract(2.718281828459045d);
+        java.lang.Object obj23 = complex20.readResolve();
+        org.apache.commons.math.complex.Complex complex24 = complex20.asin();
+        org.apache.commons.math.complex.Complex complex25 = complex24.sin();
+        org.apache.commons.math.complex.Complex complex26 = complex24.conjugate();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex20 and complex25", complex20.equals(complex25) ? complex20.hashCode() == complex25.hashCode() : true);
+    }
+
+    @Test
+    public void test115() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test115");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        org.apache.commons.math.complex.Complex complex3 = complex0.log();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex6.cosh();
+        org.apache.commons.math.complex.Complex complex9 = complex7.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex10 = complex7.sin();
+        org.apache.commons.math.complex.Complex complex11 = complex3.add(complex7);
+        boolean boolean12 = complex3.isNaN();
+        double double13 = complex3.getReal();
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex23 = complex16.divide(complex22);
+        org.apache.commons.math.complex.Complex complex24 = complex23.conjugate();
+        double double25 = complex23.getImaginary();
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex29 = complex27.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex30 = complex29.atan();
+        org.apache.commons.math.complex.Complex complex31 = complex29.atan();
+        org.apache.commons.math.complex.Complex complex32 = complex23.add(complex29);
+        org.apache.commons.math.complex.Complex complex33 = complex29.sin();
+        java.lang.Object obj34 = complex29.readResolve();
+        org.apache.commons.math.complex.Complex complex35 = complex3.subtract(complex29);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex9 and complex27", complex9.equals(complex27) ? complex9.hashCode() == complex27.hashCode() : true);
+    }
+
+    @Test
+    public void test116() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test116");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex4 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex4.cosh();
+        org.apache.commons.math.complex.ComplexField complexField6 = complex4.getField();
+        org.apache.commons.math.complex.Complex complex8 = complex4.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex11 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex16 = complex14.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex16.tanh();
+        org.apache.commons.math.complex.Complex complex18 = complex4.subtract(complex16);
+        org.apache.commons.math.complex.Complex complex19 = complex4.conjugate();
+        org.apache.commons.math.complex.Complex complex20 = complex19.exp();
+        org.apache.commons.math.complex.Complex complex21 = complex20.atan();
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex25 = complex24.cosh();
+        org.apache.commons.math.complex.Complex complex26 = complex24.sqrt1z();
+        org.apache.commons.math.complex.Complex complex27 = complex26.tan();
+        org.apache.commons.math.complex.Complex complex28 = complex21.multiply(complex27);
+        org.apache.commons.math.complex.Complex complex29 = complex1.subtract(complex21);
+        org.apache.commons.math.complex.Complex complex31 = complex29.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex32 = complex31.conjugate();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex31", complex0.equals(complex31) ? complex0.hashCode() == complex31.hashCode() : true);
+    }
+
+    @Test
+    public void test117() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test117");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex12 = complex8.sin();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex12.subtract(complex16);
+        boolean boolean18 = complex12.isInfinite();
+        org.apache.commons.math.complex.Complex complex19 = complex5.pow(complex12);
+        double double20 = complex5.abs();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex19", complex5.equals(complex19) ? complex5.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test118() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test118");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        org.apache.commons.math.complex.Complex complex3 = complex0.log();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex6.cosh();
+        org.apache.commons.math.complex.Complex complex9 = complex7.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex10 = complex7.sin();
+        org.apache.commons.math.complex.Complex complex11 = complex3.add(complex7);
+        org.apache.commons.math.complex.Complex complex12 = complex7.exp();
+        org.apache.commons.math.complex.Complex complex15 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 100, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex21 = complex18.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex22 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex25 = complex22.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex26 = complex18.add(complex25);
+        org.apache.commons.math.complex.Complex complex27 = complex15.subtract(complex26);
+        org.apache.commons.math.complex.Complex complex29 = complex26.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex30 = complex7.subtract(complex29);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex9 and complex29", complex9.equals(complex29) ? complex9.hashCode() == complex29.hashCode() : true);
+    }
+
+    @Test
+    public void test119() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test119");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        java.lang.Object obj2 = complex1.readResolve();
+        double double3 = complex1.abs();
+        org.apache.commons.math.complex.Complex complex4 = complex1.tanh();
+        org.apache.commons.math.complex.Complex complex5 = complex1.conjugate();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex8.cosh();
+        org.apache.commons.math.complex.Complex complex10 = complex8.sqrt1z();
+        org.apache.commons.math.complex.Complex complex11 = complex10.tan();
+        boolean boolean12 = complex10.isNaN();
+        java.lang.Object obj13 = complex10.readResolve();
+        org.apache.commons.math.complex.Complex complex14 = complex10.acos();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex19 = complex17.pow(complex18);
+        org.apache.commons.math.complex.Complex complex22 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double23 = complex22.getReal();
+        org.apache.commons.math.complex.Complex complex24 = complex17.add(complex22);
+        org.apache.commons.math.complex.Complex complex25 = complex22.sqrt();
+        org.apache.commons.math.complex.Complex complex27 = complex22.add((double) 10);
+        org.apache.commons.math.complex.Complex complex28 = complex27.conjugate();
+        org.apache.commons.math.complex.Complex complex30 = complex27.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex31 = complex27.acos();
+        org.apache.commons.math.complex.Complex complex32 = complex14.add(complex31);
+        org.apache.commons.math.complex.Complex complex35 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double36 = complex35.getReal();
+        org.apache.commons.math.complex.Complex complex39 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex42 = complex39.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex43 = complex35.subtract(complex42);
+        org.apache.commons.math.complex.Complex complex44 = complex35.sin();
+        org.apache.commons.math.complex.Complex complex45 = complex32.multiply(complex44);
+        org.apache.commons.math.complex.Complex complex46 = complex44.tan();
+        org.apache.commons.math.complex.Complex complex47 = complex1.pow(complex44);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex5", complex0.equals(complex5) ? complex0.hashCode() == complex5.hashCode() : true);
+    }
+
+    @Test
+    public void test120() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test120");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex11 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex12 = complex11.acos();
+        boolean boolean13 = complex11.isNaN();
+        double double14 = complex11.getArgument();
+        org.apache.commons.math.complex.Complex complex15 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex18 = complex15.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField19 = complex18.getField();
+        org.apache.commons.math.complex.Complex complex21 = complex18.multiply(10.0d);
+        org.apache.commons.math.complex.Complex complex23 = complex21.add(2.356194490192345d);
+        org.apache.commons.math.complex.Complex complex24 = complex21.sinh();
+        java.util.List<org.apache.commons.math.complex.Complex> complexList26 = complex21.nthRoot((int) '4');
+        double double27 = complex21.getReal();
+        org.apache.commons.math.complex.Complex complex28 = complex21.sin();
+        org.apache.commons.math.complex.Complex complex29 = complex11.pow(complex28);
+        org.apache.commons.math.complex.Complex complex32 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex33 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex34 = complex32.pow(complex33);
+        org.apache.commons.math.complex.Complex complex35 = complex34.cosh();
+        double double36 = complex35.getImaginary();
+        org.apache.commons.math.complex.Complex complex37 = complex35.asin();
+        org.apache.commons.math.complex.Complex complex38 = complex28.subtract(complex37);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex15 and complex29", complex15.equals(complex29) ? complex15.hashCode() == complex29.hashCode() : true);
+    }
+
+    @Test
+    public void test121() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test121");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        boolean boolean10 = complex2.isInfinite();
+        org.apache.commons.math.complex.Complex complex11 = complex2.asin();
+        org.apache.commons.math.complex.Complex complex12 = complex2.cos();
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex14 = complex13.exp();
+        org.apache.commons.math.complex.Complex complex15 = complex13.tan();
+        org.apache.commons.math.complex.Complex complex17 = complex15.divide((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex18 = complex2.divide(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex17.conjugate();
+        org.apache.commons.math.complex.Complex complex21 = complex19.pow(2.5707963267948966d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex17 and complex19", complex17.equals(complex19) ? complex17.hashCode() == complex19.hashCode() : true);
+    }
+
+    @Test
+    public void test122() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test122");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 10);
+        org.apache.commons.math.complex.Complex complex2 = complex1.sinh();
+        java.lang.Object obj3 = complex2.readResolve();
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex6 = complex4.multiply((double) 100.0f);
+        boolean boolean7 = complex2.equals((java.lang.Object) complex4);
+        org.apache.commons.math.complex.Complex complex8 = complex4.conjugate();
+        java.lang.Class<?> wildcardClass9 = complex8.getClass();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex8", complex4.equals(complex8) ? complex4.hashCode() == complex8.hashCode() : true);
+    }
+
+    @Test
+    public void test123() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test123");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex3 = complex0.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField4 = complex3.getField();
+        org.apache.commons.math.complex.Complex complex6 = complex3.multiply(10.0d);
+        org.apache.commons.math.complex.Complex complex7 = complex6.acos();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex10.cosh();
+        org.apache.commons.math.complex.Complex complex13 = complex11.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex19.add((double) (byte) 1);
+        double double22 = complex19.getImaginary();
+        org.apache.commons.math.complex.Complex complex23 = complex19.atan();
+        org.apache.commons.math.complex.Complex complex24 = complex19.acos();
+        boolean boolean25 = complex13.equals((java.lang.Object) complex24);
+        org.apache.commons.math.complex.Complex complex26 = complex13.log();
+        org.apache.commons.math.complex.Complex complex27 = complex7.multiply(complex13);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex26", complex0.equals(complex26) ? complex0.hashCode() == complex26.hashCode() : true);
+    }
+
+    @Test
+    public void test124() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test124");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.conjugate();
+        org.apache.commons.math.complex.Complex complex4 = complex3.acos();
+        org.apache.commons.math.complex.Complex complex6 = complex4.add((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex9.sin();
+        org.apache.commons.math.complex.Complex complex14 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex18 = complex13.subtract(complex17);
+        boolean boolean19 = complex13.isInfinite();
+        java.lang.String str20 = complex13.toString();
+        org.apache.commons.math.complex.Complex complex21 = complex6.multiply(complex13);
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex27 = complex24.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex28 = complex24.sqrt1z();
+        org.apache.commons.math.complex.Complex complex29 = complex28.atan();
+        org.apache.commons.math.complex.Complex complex30 = complex21.divide(complex28);
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex39 = complex36.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex40 = complex33.divide(complex39);
+        org.apache.commons.math.complex.Complex complex41 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex44 = complex41.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean45 = complex39.equals((java.lang.Object) complex41);
+        org.apache.commons.math.complex.Complex complex46 = complex41.atan();
+        org.apache.commons.math.complex.Complex complex47 = complex41.sqrt1z();
+        org.apache.commons.math.complex.Complex complex48 = complex47.atan();
+        org.apache.commons.math.complex.Complex complex49 = complex21.add(complex47);
+        org.apache.commons.math.complex.Complex complex50 = complex47.acos();
+        org.apache.commons.math.complex.Complex complex51 = complex47.atan();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex14 and complex50", complex14.equals(complex50) ? complex14.hashCode() == complex50.hashCode() : true);
+    }
+
+    @Test
+    public void test125() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test125");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        org.apache.commons.math.complex.Complex complex3 = complex0.log();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex6.cosh();
+        org.apache.commons.math.complex.Complex complex9 = complex7.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex10 = complex7.sin();
+        org.apache.commons.math.complex.Complex complex11 = complex3.add(complex7);
+        boolean boolean12 = complex3.isNaN();
+        boolean boolean13 = complex3.isInfinite();
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double17 = complex16.getReal();
+        org.apache.commons.math.complex.Complex complex20 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex23 = complex20.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex24 = complex16.subtract(complex23);
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex27.cosh();
+        double double29 = complex27.getArgument();
+        org.apache.commons.math.complex.Complex complex30 = complex27.negate();
+        double double31 = complex27.getArgument();
+        org.apache.commons.math.complex.Complex complex32 = complex24.multiply(complex27);
+        org.apache.commons.math.complex.Complex complex33 = complex27.log();
+        org.apache.commons.math.complex.Complex complex34 = complex27.asin();
+        java.lang.String str35 = complex34.toString();
+        org.apache.commons.math.complex.Complex complex38 = complex34.createComplex(32.0d, 0.0d);
+        org.apache.commons.math.complex.Complex complex39 = complex34.exp();
+        org.apache.commons.math.complex.Complex complex41 = complex39.subtract(Double.NEGATIVE_INFINITY);
+        org.apache.commons.math.complex.Complex complex43 = complex41.pow(0.661006041483763d);
+        org.apache.commons.math.complex.Complex complex44 = complex3.subtract(complex43);
+        org.apache.commons.math.complex.Complex complex47 = new org.apache.commons.math.complex.Complex((-1.5707963267948966d), 100.0d);
+        org.apache.commons.math.complex.Complex complex49 = complex47.pow((double) 0);
+        org.apache.commons.math.complex.Complex complex50 = complex47.acos();
+        org.apache.commons.math.complex.Complex complex51 = complex43.pow(complex50);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex9 and complex49", complex9.equals(complex49) ? complex9.hashCode() == complex49.hashCode() : true);
+    }
+
+    @Test
+    public void test126() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test126");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        boolean boolean3 = complex0.equals((java.lang.Object) (short) 1);
+        org.apache.commons.math.complex.Complex complex4 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex5 = complex4.sinh();
+        java.lang.Object obj6 = complex5.readResolve();
+        double double7 = complex5.abs();
+        org.apache.commons.math.complex.Complex complex8 = complex5.sinh();
+        org.apache.commons.math.complex.Complex complex9 = complex0.pow(complex5);
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex13 = complex12.cosh();
+        double double14 = complex12.getArgument();
+        org.apache.commons.math.complex.Complex complex15 = complex12.negate();
+        double double16 = complex12.getArgument();
+        org.apache.commons.math.complex.Complex complex18 = complex12.subtract(0.03024390243902439d);
+        org.apache.commons.math.complex.Complex complex21 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double22 = complex21.getReal();
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex25.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex29 = complex21.subtract(complex28);
+        org.apache.commons.math.complex.Complex complex30 = complex21.sin();
+        boolean boolean31 = complex30.isNaN();
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex33.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex38 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex41 = complex38.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex43 = complex41.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex44 = complex35.pow(complex43);
+        java.lang.Object obj45 = complex44.readResolve();
+        org.apache.commons.math.complex.Complex complex46 = complex30.multiply(complex44);
+        boolean boolean47 = complex46.isInfinite();
+        java.lang.String str48 = complex46.toString();
+        org.apache.commons.math.complex.Complex complex49 = complex18.divide(complex46);
+        org.apache.commons.math.complex.Complex complex50 = complex5.multiply(complex18);
+        java.lang.String str51 = complex5.toString();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex50", complex0.equals(complex50) ? complex0.hashCode() == complex50.hashCode() : true);
+    }
+
+    @Test
+    public void test127() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test127");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.ComplexField complexField4 = complex2.getField();
+        org.apache.commons.math.complex.Complex complex6 = complex2.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) 0L, (double) '4');
+        boolean boolean10 = complex6.isInfinite();
+        org.apache.commons.math.complex.ComplexField complexField11 = complex6.getField();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex17.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex14.divide(complex20);
+        org.apache.commons.math.complex.Complex complex22 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex25 = complex22.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean26 = complex20.equals((java.lang.Object) complex22);
+        org.apache.commons.math.complex.Complex complex27 = complex22.atan();
+        org.apache.commons.math.complex.Complex complex28 = complex22.sqrt1z();
+        org.apache.commons.math.complex.Complex complex29 = complex6.subtract(complex22);
+        org.apache.commons.math.complex.Complex complex30 = complex22.conjugate();
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex34 = complex33.cosh();
+        org.apache.commons.math.complex.ComplexField complexField35 = complex33.getField();
+        org.apache.commons.math.complex.Complex complex37 = complex33.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex40 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex41 = complex40.cosh();
+        double double42 = complex40.getArgument();
+        boolean boolean43 = complex37.equals((java.lang.Object) double42);
+        org.apache.commons.math.complex.Complex complex44 = complex37.negate();
+        boolean boolean45 = complex44.isNaN();
+        org.apache.commons.math.complex.Complex complex48 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double49 = complex48.getReal();
+        org.apache.commons.math.complex.Complex complex52 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex55 = complex52.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex56 = complex48.subtract(complex55);
+        org.apache.commons.math.complex.Complex complex59 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex62 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex65 = complex62.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex66 = complex59.divide(complex65);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList68 = complex66.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex69 = complex48.pow(complex66);
+        double double70 = complex69.getImaginary();
+        org.apache.commons.math.complex.Complex complex71 = complex69.cos();
+        org.apache.commons.math.complex.Complex complex73 = complex69.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex74 = complex44.add(complex69);
+        org.apache.commons.math.complex.Complex complex77 = complex74.createComplex(Double.NaN, 0.8337300251311491d);
+        org.apache.commons.math.complex.Complex complex78 = complex74.sinh();
+        org.apache.commons.math.complex.Complex complex79 = complex22.subtract(complex74);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex22 and complex30", complex22.equals(complex30) ? complex22.hashCode() == complex30.hashCode() : true);
+    }
+
+    @Test
+    public void test128() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test128");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        java.lang.Object obj2 = complex1.readResolve();
+        double double3 = complex1.abs();
+        org.apache.commons.math.complex.Complex complex4 = complex1.sinh();
+        org.apache.commons.math.complex.Complex complex5 = complex4.sqrt1z();
+        org.apache.commons.math.complex.Complex complex8 = complex4.createComplex((double) 1.0f, 0.08120236107192619d);
+        org.apache.commons.math.complex.Complex complex9 = complex4.cosh();
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double13 = complex12.getReal();
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = complex12.subtract(complex19);
+        org.apache.commons.math.complex.Complex complex21 = complex12.sin();
+        org.apache.commons.math.complex.Complex complex22 = complex21.acos();
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex26 = complex25.cosh();
+        org.apache.commons.math.complex.Complex complex27 = complex25.sqrt1z();
+        org.apache.commons.math.complex.Complex complex28 = complex27.tan();
+        boolean boolean29 = complex27.isNaN();
+        org.apache.commons.math.complex.Complex complex32 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex33 = complex32.cosh();
+        org.apache.commons.math.complex.Complex complex35 = complex33.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex38 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex41 = complex38.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex43 = complex41.add((double) (byte) 1);
+        double double44 = complex41.getImaginary();
+        org.apache.commons.math.complex.Complex complex45 = complex41.atan();
+        org.apache.commons.math.complex.Complex complex46 = complex41.acos();
+        boolean boolean47 = complex35.equals((java.lang.Object) complex46);
+        org.apache.commons.math.complex.Complex complex50 = org.apache.commons.math.complex.Complex.valueOf((double) (byte) 0, (double) (-1));
+        org.apache.commons.math.complex.Complex complex53 = complex50.createComplex(32.0d, (double) (byte) 1);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList55 = complex53.nthRoot(10);
+        org.apache.commons.math.complex.Complex complex56 = complex46.multiply(complex53);
+        org.apache.commons.math.complex.Complex complex59 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex60 = complex59.cosh();
+        double double61 = complex59.getArgument();
+        org.apache.commons.math.complex.Complex complex62 = complex59.sinh();
+        org.apache.commons.math.complex.Complex complex63 = complex62.tan();
+        org.apache.commons.math.complex.Complex complex64 = complex53.subtract(complex62);
+        boolean boolean65 = complex27.equals((java.lang.Object) complex64);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList67 = complex64.nthRoot((int) (short) 10);
+        org.apache.commons.math.complex.Complex complex68 = complex22.divide(complex64);
+        org.apache.commons.math.complex.Complex complex69 = complex64.sin();
+        org.apache.commons.math.complex.Complex complex70 = complex4.divide(complex64);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex35", complex5.equals(complex35) ? complex5.hashCode() == complex35.hashCode() : true);
+    }
+
+    @Test
+    public void test129() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test129");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf(3.141592653589793d);
+        org.apache.commons.math.complex.Complex complex4 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double5 = complex4.getReal();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex12 = complex4.subtract(complex11);
+        org.apache.commons.math.complex.Complex complex15 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex16 = complex15.cosh();
+        double double17 = complex15.getArgument();
+        org.apache.commons.math.complex.Complex complex18 = complex15.negate();
+        double double19 = complex15.getArgument();
+        org.apache.commons.math.complex.Complex complex20 = complex12.multiply(complex15);
+        org.apache.commons.math.complex.Complex complex21 = complex20.tanh();
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex30 = complex27.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex31 = complex24.divide(complex30);
+        org.apache.commons.math.complex.Complex complex33 = complex31.multiply((double) (short) 100);
+        org.apache.commons.math.complex.Complex complex35 = complex31.multiply((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex36 = complex21.add(complex35);
+        org.apache.commons.math.complex.Complex complex38 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex40 = complex38.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex41 = complex40.atan();
+        org.apache.commons.math.complex.Complex complex42 = complex40.atan();
+        org.apache.commons.math.complex.Complex complex43 = complex40.sinh();
+        org.apache.commons.math.complex.Complex complex44 = complex35.add(complex40);
+        org.apache.commons.math.complex.Complex complex45 = complex1.add(complex40);
+        org.apache.commons.math.complex.Complex complex46 = complex1.conjugate();
+        org.apache.commons.math.complex.Complex complex48 = complex46.subtract((double) (short) 0);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex46", complex1.equals(complex46) ? complex1.hashCode() == complex46.hashCode() : true);
+    }
+
+    @Test
+    public void test130() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test130");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex8.add((double) (byte) 1);
+        double double11 = complex8.getImaginary();
+        org.apache.commons.math.complex.Complex complex12 = complex8.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex14 = complex2.multiply(complex8);
+        org.apache.commons.math.complex.ComplexField complexField15 = complex2.getField();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex14", complex2.equals(complex14) ? complex2.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test131() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test131");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex0.acos();
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex(0.0d, 0.9473574487656714d);
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex15 = complex12.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex17 = complex15.add((double) (byte) 1);
+        double double18 = complex15.getArgument();
+        org.apache.commons.math.complex.Complex complex19 = complex15.asin();
+        org.apache.commons.math.complex.Complex complex20 = complex6.multiply(complex15);
+        double double21 = complex6.getImaginary();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex20", complex6.equals(complex20) ? complex6.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test132() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test132");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex16 = complex13.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex17 = complex9.add(complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex6.divide(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex17.exp();
+        org.apache.commons.math.complex.Complex complex20 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex21 = complex20.exp();
+        org.apache.commons.math.complex.Complex complex22 = complex20.sqrt1z();
+        org.apache.commons.math.complex.Complex complex24 = complex20.divide(0.30689362367529766d);
+        org.apache.commons.math.complex.Complex complex25 = complex19.divide(complex20);
+        org.apache.commons.math.complex.Complex complex26 = complex25.sqrt();
+        org.apache.commons.math.complex.Complex complex29 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex30 = complex29.conjugate();
+        org.apache.commons.math.complex.Complex complex31 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex32 = complex31.exp();
+        org.apache.commons.math.complex.Complex complex33 = complex31.sqrt1z();
+        org.apache.commons.math.complex.Complex complex34 = complex31.cos();
+        org.apache.commons.math.complex.Complex complex35 = complex30.add(complex31);
+        org.apache.commons.math.complex.Complex complex36 = complex26.subtract(complex31);
+        org.apache.commons.math.complex.Complex complex37 = complex31.negate();
+        java.lang.String str38 = complex37.toString();
+        org.apache.commons.math.complex.Complex complex39 = complex37.exp();
+        org.apache.commons.math.complex.Complex complex40 = complex39.sqrt();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex26 and complex39", complex26.equals(complex39) ? complex26.hashCode() == complex39.hashCode() : true);
+    }
+
+    @Test
+    public void test133() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test133");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex4 = complex2.pow(complex3);
+        org.apache.commons.math.complex.Complex complex7 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double8 = complex7.getReal();
+        org.apache.commons.math.complex.Complex complex9 = complex2.add(complex7);
+        org.apache.commons.math.complex.Complex complex10 = complex7.sqrt();
+        org.apache.commons.math.complex.Complex complex12 = complex7.add((double) 10);
+        org.apache.commons.math.complex.Complex complex13 = complex12.conjugate();
+        double double14 = complex12.getArgument();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex17.cosh();
+        org.apache.commons.math.complex.Complex complex20 = complex18.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex21 = complex20.atan();
+        org.apache.commons.math.complex.Complex complex23 = complex20.subtract(0.25651428512162844d);
+        org.apache.commons.math.complex.Complex complex24 = complex20.sqrt1z();
+        org.apache.commons.math.complex.Complex complex25 = complex12.pow(complex20);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex20", complex3.equals(complex20) ? complex3.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test134() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test134");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex(0.06429984768735961d, (double) (-1L));
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex5.sin();
+        double double10 = complex5.getArgument();
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double14 = complex13.getReal();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex17.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex13.subtract(complex20);
+        org.apache.commons.math.complex.Complex complex22 = complex5.subtract(complex20);
+        org.apache.commons.math.complex.Complex complex23 = complex5.cos();
+        org.apache.commons.math.complex.Complex complex26 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex27 = complex26.cosh();
+        org.apache.commons.math.complex.Complex complex29 = complex27.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex30 = complex23.add(complex29);
+        org.apache.commons.math.complex.Complex complex31 = complex23.tan();
+        org.apache.commons.math.complex.Complex complex32 = complex31.sqrt();
+        org.apache.commons.math.complex.Complex complex34 = complex32.multiply((double) (short) 10);
+        org.apache.commons.math.complex.Complex complex35 = complex2.pow(complex32);
+        org.apache.commons.math.complex.Complex complex36 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex37 = complex36.exp();
+        org.apache.commons.math.complex.Complex complex39 = complex37.add((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex42 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double43 = complex42.getReal();
+        org.apache.commons.math.complex.Complex complex46 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex49 = complex46.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex50 = complex42.subtract(complex49);
+        org.apache.commons.math.complex.Complex complex53 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex54 = complex53.cosh();
+        double double55 = complex53.getArgument();
+        org.apache.commons.math.complex.Complex complex56 = complex53.negate();
+        double double57 = complex53.getArgument();
+        org.apache.commons.math.complex.Complex complex58 = complex50.multiply(complex53);
+        org.apache.commons.math.complex.Complex complex61 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex62 = complex61.cosh();
+        double double63 = complex61.getArgument();
+        org.apache.commons.math.complex.Complex complex64 = complex61.negate();
+        org.apache.commons.math.complex.Complex complex66 = complex64.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex67 = complex64.asin();
+        org.apache.commons.math.complex.Complex complex68 = complex64.tan();
+        org.apache.commons.math.complex.Complex complex69 = complex53.divide(complex64);
+        org.apache.commons.math.complex.Complex complex70 = complex39.add(complex53);
+        org.apache.commons.math.complex.Complex complex71 = complex39.sqrt();
+        org.apache.commons.math.complex.Complex complex72 = complex2.pow(complex71);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex29 and complex36", complex29.equals(complex36) ? complex29.hashCode() == complex36.hashCode() : true);
+    }
+
+    @Test
+    public void test135() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test135");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex4 = complex2.pow(complex3);
+        org.apache.commons.math.complex.Complex complex5 = complex4.cosh();
+        org.apache.commons.math.complex.Complex complex6 = complex4.sqrt1z();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex9.sin();
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex23 = complex20.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex24 = complex16.add(complex23);
+        org.apache.commons.math.complex.Complex complex25 = complex13.divide(complex24);
+        org.apache.commons.math.complex.ComplexField complexField26 = complex24.getField();
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.valueOf((double) (byte) 100, (double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex30 = complex24.subtract(complex29);
+        org.apache.commons.math.complex.Complex complex31 = complex24.tanh();
+        org.apache.commons.math.complex.Complex complex32 = complex6.divide(complex31);
+        org.apache.commons.math.complex.Complex complex35 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = complex35.cosh();
+        org.apache.commons.math.complex.Complex complex38 = complex36.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex39 = complex38.atan();
+        org.apache.commons.math.complex.ComplexField complexField40 = complex38.getField();
+        org.apache.commons.math.complex.Complex complex41 = complex38.atan();
+        org.apache.commons.math.complex.Complex complex42 = complex31.pow(complex41);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex38", complex3.equals(complex38) ? complex3.hashCode() == complex38.hashCode() : true);
+    }
+
+    @Test
+    public void test136() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test136");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sinh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex10 = complex6.tanh();
+        org.apache.commons.math.complex.Complex complex11 = complex2.add(complex10);
+        org.apache.commons.math.complex.Complex complex12 = complex10.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex12.cosh();
+        org.apache.commons.math.complex.Complex complex14 = complex12.tanh();
+        double double15 = complex14.getImaginary();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex14", complex6.equals(complex14) ? complex6.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test137() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test137");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf(2.6867724202798433d);
+        org.apache.commons.math.complex.Complex complex2 = complex1.negate();
+        org.apache.commons.math.complex.Complex complex3 = complex2.conjugate();
+        org.apache.commons.math.complex.Complex complex4 = complex3.sinh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex2 and complex3", complex2.equals(complex3) ? complex2.hashCode() == complex3.hashCode() : true);
+    }
+
+    @Test
+    public void test138() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test138");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex13.cosh();
+        double double15 = complex13.getArgument();
+        org.apache.commons.math.complex.Complex complex16 = complex13.negate();
+        double double17 = complex13.getArgument();
+        org.apache.commons.math.complex.Complex complex18 = complex10.multiply(complex13);
+        org.apache.commons.math.complex.Complex complex19 = complex18.tanh();
+        org.apache.commons.math.complex.Complex complex22 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex25.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex29 = complex22.divide(complex28);
+        org.apache.commons.math.complex.Complex complex31 = complex29.multiply((double) (short) 100);
+        org.apache.commons.math.complex.Complex complex33 = complex29.multiply((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex34 = complex19.add(complex33);
+        org.apache.commons.math.complex.Complex complex35 = complex34.atan();
+        org.apache.commons.math.complex.Complex complex38 = complex34.createComplex((double) 10, 2.0d);
+        org.apache.commons.math.complex.Complex complex39 = complex38.acos();
+        org.apache.commons.math.complex.Complex complex40 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex41 = complex40.sinh();
+        java.lang.Object obj42 = complex41.readResolve();
+        double double43 = complex41.abs();
+        org.apache.commons.math.complex.Complex complex44 = complex41.tanh();
+        org.apache.commons.math.complex.Complex complex45 = complex39.pow(complex41);
+        org.apache.commons.math.complex.Complex complex46 = complex41.cos();
+        boolean boolean47 = complex41.isInfinite();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex45 and complex46", complex45.equals(complex46) ? complex45.hashCode() == complex46.hashCode() : true);
+    }
+
+    @Test
+    public void test139() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test139");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex1.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex4 = complex3.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex3.atan();
+        org.apache.commons.math.complex.Complex complex6 = complex3.exp();
+        org.apache.commons.math.complex.Complex complex7 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double11 = complex10.getReal();
+        org.apache.commons.math.complex.Complex complex12 = complex10.atan();
+        org.apache.commons.math.complex.Complex complex13 = complex10.tan();
+        org.apache.commons.math.complex.Complex complex14 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex15 = complex14.sinh();
+        org.apache.commons.math.complex.Complex complex16 = complex14.tan();
+        org.apache.commons.math.complex.Complex complex17 = complex14.sin();
+        org.apache.commons.math.complex.Complex complex18 = complex14.tanh();
+        org.apache.commons.math.complex.Complex complex19 = complex10.add(complex18);
+        org.apache.commons.math.complex.Complex complex20 = complex18.negate();
+        org.apache.commons.math.complex.Complex complex22 = complex20.divide(0.6220932580717584d);
+        org.apache.commons.math.complex.Complex complex23 = complex6.pow(complex22);
+        org.apache.commons.math.complex.Complex complex26 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex27 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex28 = complex26.pow(complex27);
+        org.apache.commons.math.complex.Complex complex31 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double32 = complex31.getReal();
+        org.apache.commons.math.complex.Complex complex33 = complex26.add(complex31);
+        double double34 = complex26.abs();
+        org.apache.commons.math.complex.Complex complex35 = complex6.multiply(complex26);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex23", complex1.equals(complex23) ? complex1.hashCode() == complex23.hashCode() : true);
+    }
+
+    @Test
+    public void test140() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test140");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex4 = complex2.pow(complex3);
+        org.apache.commons.math.complex.Complex complex5 = complex4.cosh();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.exp();
+        java.lang.String str15 = complex14.toString();
+        org.apache.commons.math.complex.Complex complex16 = complex4.add(complex14);
+        org.apache.commons.math.complex.Complex complex17 = complex4.asin();
+        org.apache.commons.math.complex.Complex complex20 = new org.apache.commons.math.complex.Complex(0.06429984768735961d, (double) (-1L));
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex26 = complex23.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex27 = complex23.sin();
+        double double28 = complex23.getArgument();
+        org.apache.commons.math.complex.Complex complex31 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double32 = complex31.getReal();
+        org.apache.commons.math.complex.Complex complex35 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex38 = complex35.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex39 = complex31.subtract(complex38);
+        org.apache.commons.math.complex.Complex complex40 = complex23.subtract(complex38);
+        org.apache.commons.math.complex.Complex complex41 = complex23.cos();
+        org.apache.commons.math.complex.Complex complex44 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex45 = complex44.cosh();
+        org.apache.commons.math.complex.Complex complex47 = complex45.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex48 = complex41.add(complex47);
+        org.apache.commons.math.complex.Complex complex49 = complex41.tan();
+        org.apache.commons.math.complex.Complex complex50 = complex49.sqrt();
+        org.apache.commons.math.complex.Complex complex52 = complex50.multiply((double) (short) 10);
+        org.apache.commons.math.complex.Complex complex53 = complex20.pow(complex50);
+        org.apache.commons.math.complex.Complex complex54 = complex17.multiply(complex53);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex47", complex3.equals(complex47) ? complex3.hashCode() == complex47.hashCode() : true);
+    }
+
+    @Test
+    public void test141() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test141");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex3 = complex1.add((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex14 = complex6.add(complex13);
+        org.apache.commons.math.complex.ComplexField complexField15 = complex14.getField();
+        org.apache.commons.math.complex.Complex complex17 = complex14.multiply((double) '4');
+        org.apache.commons.math.complex.Complex complex18 = complex3.add(complex14);
+        org.apache.commons.math.complex.Complex complex19 = complex18.exp();
+        org.apache.commons.math.complex.Complex complex20 = complex18.cosh();
+        org.apache.commons.math.complex.Complex complex21 = complex18.conjugate();
+        org.apache.commons.math.complex.Complex complex23 = complex18.subtract(0.0d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex18 and complex21", complex18.equals(complex21) ? complex18.hashCode() == complex21.hashCode() : true);
+    }
+
+    @Test
+    public void test142() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test142");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex1.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex4 = complex1.log();
+        org.apache.commons.math.complex.Complex complex5 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField9 = complex8.getField();
+        org.apache.commons.math.complex.Complex complex11 = complex8.multiply(10.0d);
+        org.apache.commons.math.complex.Complex complex12 = complex11.sin();
+        boolean boolean13 = complex4.equals((java.lang.Object) complex11);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex23 = complex16.divide(complex22);
+        boolean boolean24 = complex16.isInfinite();
+        org.apache.commons.math.complex.Complex complex25 = complex16.asin();
+        org.apache.commons.math.complex.Complex complex26 = complex25.tan();
+        org.apache.commons.math.complex.Complex complex28 = complex26.subtract((-0.0d));
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex30 = complex29.sinh();
+        java.lang.Object obj31 = complex30.readResolve();
+        double double32 = complex30.abs();
+        org.apache.commons.math.complex.Complex complex33 = complex26.subtract(complex30);
+        org.apache.commons.math.complex.Complex complex34 = complex11.multiply(complex30);
+        java.lang.Object obj35 = complex11.readResolve();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex4 and complex34", complex4.equals(complex34) ? complex4.hashCode() == complex34.hashCode() : true);
+    }
+
+    @Test
+    public void test143() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test143");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sqrt1z();
+        boolean boolean7 = complex6.isNaN();
+        org.apache.commons.math.complex.Complex complex8 = complex6.cosh();
+        org.apache.commons.math.complex.Complex complex10 = complex8.add(0.761594155955765d);
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex(5.0990195135927845d);
+        org.apache.commons.math.complex.Complex complex13 = complex12.sqrt();
+        org.apache.commons.math.complex.Complex complex14 = complex12.conjugate();
+        org.apache.commons.math.complex.Complex complex15 = complex10.divide(complex12);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex12 and complex14", complex12.equals(complex14) ? complex12.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test144() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test144");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) 1);
+        org.apache.commons.math.complex.ComplexField complexField2 = complex1.getField();
+        org.apache.commons.math.complex.Complex complex3 = complex1.sinh();
+        org.apache.commons.math.complex.Complex complex4 = complex3.conjugate();
+        org.apache.commons.math.complex.Complex complex7 = new org.apache.commons.math.complex.Complex((double) (-1L), 100.0d);
+        double double8 = complex7.getReal();
+        boolean boolean9 = complex7.isInfinite();
+        org.apache.commons.math.complex.Complex complex11 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex13 = complex11.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex14 = complex13.asin();
+        org.apache.commons.math.complex.Complex complex15 = complex14.sqrt1z();
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double19 = complex18.getReal();
+        org.apache.commons.math.complex.Complex complex22 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex25 = complex22.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex26 = complex18.subtract(complex25);
+        org.apache.commons.math.complex.Complex complex27 = complex18.sin();
+        org.apache.commons.math.complex.Complex complex28 = complex27.acos();
+        boolean boolean29 = complex27.isNaN();
+        org.apache.commons.math.complex.Complex complex32 = complex27.createComplex((double) '4', (double) 100.0f);
+        org.apache.commons.math.complex.Complex complex33 = complex27.atan();
+        org.apache.commons.math.complex.Complex complex34 = complex15.add(complex27);
+        org.apache.commons.math.complex.Complex complex35 = complex34.tanh();
+        boolean boolean36 = complex7.equals((java.lang.Object) complex34);
+        org.apache.commons.math.complex.Complex complex37 = complex4.multiply(complex34);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex4", complex3.equals(complex4) ? complex3.hashCode() == complex4.hashCode() : true);
+    }
+
+    @Test
+    public void test145() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test145");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        org.apache.commons.math.complex.Complex complex11 = org.apache.commons.math.complex.Complex.valueOf(2.0256165601048464d);
+        boolean boolean12 = complex11.isInfinite();
+        org.apache.commons.math.complex.Complex complex13 = complex8.add(complex11);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex16.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex20 = complex16.sin();
+        org.apache.commons.math.complex.Complex complex23 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex26 = complex23.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex27 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex30 = complex27.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex31 = complex23.add(complex30);
+        org.apache.commons.math.complex.Complex complex32 = complex20.divide(complex31);
+        org.apache.commons.math.complex.Complex complex35 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex37 = complex35.pow(complex36);
+        org.apache.commons.math.complex.Complex complex38 = complex37.cosh();
+        boolean boolean39 = complex20.equals((java.lang.Object) complex38);
+        org.apache.commons.math.complex.Complex complex40 = complex20.cosh();
+        double double41 = complex40.getReal();
+        org.apache.commons.math.complex.Complex complex42 = complex40.asin();
+        org.apache.commons.math.complex.Complex complex44 = complex42.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex45 = complex8.divide(complex42);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex36 and complex44", complex36.equals(complex44) ? complex36.hashCode() == complex44.hashCode() : true);
+    }
+
+    @Test
+    public void test146() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test146");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.ComplexField complexField4 = complex2.getField();
+        org.apache.commons.math.complex.Complex complex6 = complex2.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex10 = complex9.cosh();
+        double double11 = complex9.getArgument();
+        boolean boolean12 = complex6.equals((java.lang.Object) double11);
+        org.apache.commons.math.complex.Complex complex13 = complex6.negate();
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex16.cosh();
+        double double18 = complex16.getArgument();
+        org.apache.commons.math.complex.Complex complex19 = complex16.negate();
+        org.apache.commons.math.complex.Complex complex21 = complex19.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex27 = complex24.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex28 = complex24.sin();
+        org.apache.commons.math.complex.Complex complex31 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex34 = complex31.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex35 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex38 = complex35.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex39 = complex31.add(complex38);
+        org.apache.commons.math.complex.Complex complex40 = complex28.divide(complex39);
+        org.apache.commons.math.complex.Complex complex43 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex44 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex45 = complex43.pow(complex44);
+        org.apache.commons.math.complex.Complex complex46 = complex45.cosh();
+        boolean boolean47 = complex28.equals((java.lang.Object) complex46);
+        org.apache.commons.math.complex.Complex complex48 = complex28.cosh();
+        org.apache.commons.math.complex.Complex complex49 = complex21.add(complex28);
+        org.apache.commons.math.complex.Complex complex50 = complex6.multiply(complex49);
+        org.apache.commons.math.complex.Complex complex51 = complex49.tanh();
+        org.apache.commons.math.complex.Complex complex52 = complex51.atan();
+        org.apache.commons.math.complex.Complex complex53 = complex52.sinh();
+        org.apache.commons.math.complex.Complex complex56 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex57 = complex56.cosh();
+        org.apache.commons.math.complex.Complex complex59 = complex57.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex62 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex65 = complex62.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex67 = complex65.add((double) (byte) 1);
+        double double68 = complex65.getImaginary();
+        org.apache.commons.math.complex.Complex complex69 = complex65.atan();
+        org.apache.commons.math.complex.Complex complex70 = complex65.acos();
+        boolean boolean71 = complex59.equals((java.lang.Object) complex70);
+        org.apache.commons.math.complex.Complex complex74 = complex59.createComplex(0.0d, (-0.0d));
+        org.apache.commons.math.complex.Complex complex76 = complex59.pow((double) '4');
+        double double77 = complex76.getArgument();
+        org.apache.commons.math.complex.Complex complex78 = complex52.subtract(complex76);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex35 and complex74", complex35.equals(complex74) ? complex35.hashCode() == complex74.hashCode() : true);
+    }
+
+    @Test
+    public void test147() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test147");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) 0L);
+        org.apache.commons.math.complex.Complex complex4 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex4.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex8 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex12 = complex4.add(complex11);
+        org.apache.commons.math.complex.Complex complex13 = complex1.multiply(complex12);
+        org.apache.commons.math.complex.Complex complex16 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double17 = complex16.getReal();
+        org.apache.commons.math.complex.Complex complex20 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex23 = complex20.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex24 = complex16.subtract(complex23);
+        double double25 = complex23.getReal();
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex29 = complex28.cosh();
+        double double30 = complex28.getArgument();
+        org.apache.commons.math.complex.Complex complex31 = complex28.negate();
+        org.apache.commons.math.complex.Complex complex32 = complex28.negate();
+        org.apache.commons.math.complex.Complex complex33 = complex32.tan();
+        boolean boolean34 = complex23.equals((java.lang.Object) complex33);
+        double double35 = complex23.getReal();
+        org.apache.commons.math.complex.Complex complex37 = complex23.pow(1.718281828459045d);
+        org.apache.commons.math.complex.Complex complex38 = complex12.add(complex37);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex13", complex1.equals(complex13) ? complex1.hashCode() == complex13.hashCode() : true);
+    }
+
+    @Test
+    public void test148() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test148");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) 1);
+        org.apache.commons.math.complex.ComplexField complexField2 = complex1.getField();
+        org.apache.commons.math.complex.Complex complex3 = complex1.sinh();
+        org.apache.commons.math.complex.Complex complex4 = complex3.conjugate();
+        org.apache.commons.math.complex.Complex complex6 = complex3.multiply(1.4453965766582497d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex4", complex3.equals(complex4) ? complex3.hashCode() == complex4.hashCode() : true);
+    }
+
+    @Test
+    public void test149() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test149");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex2.divide(complex8);
+        org.apache.commons.math.complex.Complex complex10 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex13 = complex10.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean14 = complex8.equals((java.lang.Object) complex10);
+        org.apache.commons.math.complex.Complex complex15 = complex10.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex10.negate();
+        org.apache.commons.math.complex.Complex complex17 = complex10.cos();
+        org.apache.commons.math.complex.ComplexField complexField18 = complex10.getField();
+        org.apache.commons.math.complex.Complex complex19 = complex10.log();
+        org.apache.commons.math.complex.Complex complex22 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex25.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex29 = complex22.divide(complex28);
+        org.apache.commons.math.complex.Complex complex30 = complex29.conjugate();
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = complex33.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex37 = complex33.sin();
+        org.apache.commons.math.complex.Complex complex40 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex43 = complex40.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex44 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex47 = complex44.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex48 = complex40.add(complex47);
+        org.apache.commons.math.complex.Complex complex49 = complex37.divide(complex48);
+        org.apache.commons.math.complex.Complex complex52 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex53 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex54 = complex52.pow(complex53);
+        org.apache.commons.math.complex.Complex complex55 = complex54.cosh();
+        boolean boolean56 = complex37.equals((java.lang.Object) complex55);
+        org.apache.commons.math.complex.Complex complex59 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex60 = complex59.cosh();
+        org.apache.commons.math.complex.ComplexField complexField61 = complex59.getField();
+        org.apache.commons.math.complex.Complex complex62 = org.apache.commons.math.complex.Complex.ZERO;
+        boolean boolean63 = complex59.equals((java.lang.Object) complex62);
+        double double64 = complex59.getArgument();
+        boolean boolean65 = complex37.equals((java.lang.Object) complex59);
+        org.apache.commons.math.complex.Complex complex66 = complex37.tanh();
+        org.apache.commons.math.complex.Complex complex67 = complex30.divide(complex66);
+        java.lang.String str68 = complex30.toString();
+        org.apache.commons.math.complex.Complex complex69 = complex30.negate();
+        org.apache.commons.math.complex.Complex complex70 = complex69.cosh();
+        org.apache.commons.math.complex.Complex complex73 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex76 = complex73.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex77 = complex73.sin();
+        org.apache.commons.math.complex.Complex complex80 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex83 = complex80.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex84 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex87 = complex84.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex88 = complex80.add(complex87);
+        org.apache.commons.math.complex.Complex complex89 = complex77.divide(complex88);
+        org.apache.commons.math.complex.Complex complex90 = complex88.exp();
+        org.apache.commons.math.complex.Complex complex93 = complex88.createComplex((double) (byte) -1, (double) 10L);
+        org.apache.commons.math.complex.Complex complex94 = complex88.sqrt();
+        org.apache.commons.math.complex.Complex complex95 = complex70.multiply(complex88);
+        org.apache.commons.math.complex.Complex complex96 = complex10.pow(complex95);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex17 and complex53", complex17.equals(complex53) ? complex17.hashCode() == complex53.hashCode() : true);
+    }
+
+    @Test
+    public void test150() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test150");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex4 = complex2.pow(complex3);
+        org.apache.commons.math.complex.Complex complex7 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double8 = complex7.getReal();
+        org.apache.commons.math.complex.Complex complex9 = complex2.add(complex7);
+        org.apache.commons.math.complex.Complex complex10 = complex7.sqrt();
+        org.apache.commons.math.complex.Complex complex12 = complex7.add((double) 10);
+        org.apache.commons.math.complex.Complex complex13 = complex7.sinh();
+        org.apache.commons.math.complex.Complex complex14 = complex7.sin();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex17.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex17.sin();
+        double double22 = complex17.getArgument();
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double26 = complex25.getReal();
+        org.apache.commons.math.complex.Complex complex29 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex32 = complex29.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex33 = complex25.subtract(complex32);
+        org.apache.commons.math.complex.Complex complex34 = complex17.subtract(complex32);
+        org.apache.commons.math.complex.Complex complex35 = complex17.cos();
+        org.apache.commons.math.complex.Complex complex38 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex39 = complex38.cosh();
+        org.apache.commons.math.complex.Complex complex41 = complex39.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex42 = complex35.add(complex41);
+        org.apache.commons.math.complex.Complex complex45 = complex41.createComplex((double) 1L, (-0.40059690294250294d));
+        org.apache.commons.math.complex.Complex complex46 = complex14.subtract(complex41);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex41", complex3.equals(complex41) ? complex3.hashCode() == complex41.hashCode() : true);
+    }
+
+    @Test
+    public void test151() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test151");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex10 = complex2.subtract(complex9);
+        org.apache.commons.math.complex.Complex complex11 = complex2.sin();
+        org.apache.commons.math.complex.Complex complex12 = complex11.acos();
+        boolean boolean13 = complex11.isNaN();
+        double double14 = complex11.getArgument();
+        org.apache.commons.math.complex.Complex complex15 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex18 = complex15.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField19 = complex18.getField();
+        org.apache.commons.math.complex.Complex complex21 = complex18.multiply(10.0d);
+        org.apache.commons.math.complex.Complex complex23 = complex21.add(2.356194490192345d);
+        org.apache.commons.math.complex.Complex complex24 = complex21.sinh();
+        java.util.List<org.apache.commons.math.complex.Complex> complexList26 = complex21.nthRoot((int) '4');
+        double double27 = complex21.getReal();
+        org.apache.commons.math.complex.Complex complex28 = complex21.sin();
+        org.apache.commons.math.complex.Complex complex29 = complex11.pow(complex28);
+        org.apache.commons.math.complex.Complex complex31 = complex28.subtract(0.5113252103366474d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex15 and complex29", complex15.equals(complex29) ? complex15.hashCode() == complex29.hashCode() : true);
+    }
+
+    @Test
+    public void test152() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test152");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex5.sqrt();
+        org.apache.commons.math.complex.Complex complex8 = complex5.divide(0.04417261042993862d);
+        org.apache.commons.math.complex.Complex complex10 = complex5.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double14 = complex13.getReal();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex17.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex13.subtract(complex20);
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1L), 100.0d);
+        org.apache.commons.math.complex.Complex complex25 = complex13.divide(complex24);
+        org.apache.commons.math.complex.Complex complex27 = complex24.pow((double) (byte) 10);
+        double double28 = complex27.getArgument();
+        org.apache.commons.math.complex.Complex complex29 = complex5.pow(complex27);
+        java.lang.Class<?> wildcardClass30 = complex29.getClass();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex10 and complex29", complex10.equals(complex29) ? complex10.hashCode() == complex29.hashCode() : true);
+    }
+
+    @Test
+    public void test153() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test153");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double3 = complex2.getReal();
+        org.apache.commons.math.complex.Complex complex4 = complex2.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex2.tan();
+        org.apache.commons.math.complex.Complex complex6 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex7 = complex6.sinh();
+        org.apache.commons.math.complex.Complex complex8 = complex6.tan();
+        org.apache.commons.math.complex.Complex complex9 = complex6.sin();
+        org.apache.commons.math.complex.Complex complex10 = complex6.tanh();
+        org.apache.commons.math.complex.Complex complex11 = complex2.add(complex10);
+        org.apache.commons.math.complex.Complex complex12 = complex10.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex12.cosh();
+        org.apache.commons.math.complex.Complex complex14 = complex12.tanh();
+        org.apache.commons.math.complex.Complex complex15 = complex12.sqrt1z();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex14", complex6.equals(complex14) ? complex6.hashCode() == complex14.hashCode() : true);
+    }
+
+    @Test
+    public void test154() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test154");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex12 = complex8.sin();
+        org.apache.commons.math.complex.Complex complex15 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex15.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex19 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex23 = complex15.add(complex22);
+        org.apache.commons.math.complex.Complex complex24 = complex12.divide(complex23);
+        org.apache.commons.math.complex.Complex complex25 = complex5.pow(complex23);
+        double double26 = complex23.getArgument();
+        org.apache.commons.math.complex.Complex complex27 = complex23.acos();
+        org.apache.commons.math.complex.Complex complex30 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = complex33.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex37 = complex30.divide(complex36);
+        org.apache.commons.math.complex.Complex complex38 = complex30.acos();
+        org.apache.commons.math.complex.Complex complex41 = new org.apache.commons.math.complex.Complex((double) '4', (double) 1L);
+        org.apache.commons.math.complex.ComplexField complexField42 = complex41.getField();
+        org.apache.commons.math.complex.Complex complex45 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex46 = complex45.cosh();
+        org.apache.commons.math.complex.Complex complex48 = complex46.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex51 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex54 = complex51.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex56 = complex54.add((double) (byte) 1);
+        double double57 = complex54.getImaginary();
+        org.apache.commons.math.complex.Complex complex58 = complex54.atan();
+        org.apache.commons.math.complex.Complex complex59 = complex54.acos();
+        boolean boolean60 = complex48.equals((java.lang.Object) complex59);
+        org.apache.commons.math.complex.Complex complex61 = complex41.add(complex59);
+        org.apache.commons.math.complex.Complex complex62 = complex30.pow(complex61);
+        org.apache.commons.math.complex.Complex complex65 = complex62.createComplex(0.648507588312288d, (double) 100.0f);
+        org.apache.commons.math.complex.Complex complex66 = complex62.log();
+        org.apache.commons.math.complex.Complex complex67 = complex23.add(complex66);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex48", complex0.equals(complex48) ? complex0.hashCode() == complex48.hashCode() : true);
+    }
+
+    @Test
+    public void test155() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test155");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex1 = complex0.sinh();
+        org.apache.commons.math.complex.Complex complex2 = complex0.tan();
+        org.apache.commons.math.complex.Complex complex3 = complex0.log();
+        org.apache.commons.math.complex.Complex complex6 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex7 = complex6.cosh();
+        org.apache.commons.math.complex.Complex complex9 = complex7.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex10 = complex7.sin();
+        org.apache.commons.math.complex.Complex complex11 = complex3.add(complex7);
+        boolean boolean12 = complex3.isNaN();
+        org.apache.commons.math.complex.Complex complex13 = complex3.sin();
+        double double14 = complex3.abs();
+        double double15 = complex3.getImaginary();
+        org.apache.commons.math.complex.Complex complex17 = complex3.multiply(5.2983923556150705d);
+        org.apache.commons.math.complex.Complex complex18 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex19 = complex18.exp();
+        org.apache.commons.math.complex.Complex complex21 = complex19.add((double) (-1.0f));
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double25 = complex24.getReal();
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex31 = complex28.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex32 = complex24.subtract(complex31);
+        org.apache.commons.math.complex.Complex complex35 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = complex35.cosh();
+        double double37 = complex35.getArgument();
+        org.apache.commons.math.complex.Complex complex38 = complex35.negate();
+        double double39 = complex35.getArgument();
+        org.apache.commons.math.complex.Complex complex40 = complex32.multiply(complex35);
+        org.apache.commons.math.complex.Complex complex43 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex44 = complex43.cosh();
+        double double45 = complex43.getArgument();
+        org.apache.commons.math.complex.Complex complex46 = complex43.negate();
+        org.apache.commons.math.complex.Complex complex48 = complex46.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex49 = complex46.asin();
+        org.apache.commons.math.complex.Complex complex50 = complex46.tan();
+        org.apache.commons.math.complex.Complex complex51 = complex35.divide(complex46);
+        org.apache.commons.math.complex.Complex complex52 = complex21.add(complex35);
+        org.apache.commons.math.complex.Complex complex53 = complex21.negate();
+        org.apache.commons.math.complex.Complex complex54 = complex21.cos();
+        org.apache.commons.math.complex.Complex complex55 = complex17.divide(complex21);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex9 and complex18", complex9.equals(complex18) ? complex9.hashCode() == complex18.hashCode() : true);
+    }
+
+    @Test
+    public void test156() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test156");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex1.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex4 = complex3.conjugate();
+        org.apache.commons.math.complex.Complex complex6 = complex3.divide((-1.2984575814159773d));
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex4", complex3.equals(complex4) ? complex3.hashCode() == complex4.hashCode() : true);
+    }
+
+    @Test
+    public void test157() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test157");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex1 = complex0.exp();
+        org.apache.commons.math.complex.Complex complex2 = complex0.sqrt1z();
+        org.apache.commons.math.complex.Complex complex3 = complex0.cos();
+        org.apache.commons.math.complex.Complex complex4 = complex3.conjugate();
+        org.apache.commons.math.complex.Complex complex5 = complex3.tan();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex3 and complex4", complex3.equals(complex4) ? complex3.hashCode() == complex4.hashCode() : true);
+    }
+
+    @Test
+    public void test158() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test158");
+        org.apache.commons.math.complex.Complex complex1 = org.apache.commons.math.complex.Complex.valueOf((double) (-1));
+        java.lang.Object obj2 = complex1.readResolve();
+        org.apache.commons.math.complex.Complex complex3 = complex1.conjugate();
+        org.apache.commons.math.complex.Complex complex5 = complex1.multiply(0.010309278350515464d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex1 and complex3", complex1.equals(complex3) ? complex1.hashCode() == complex3.hashCode() : true);
+    }
+
+    @Test
+    public void test159() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test159");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex6 = complex5.atan();
+        org.apache.commons.math.complex.Complex complex8 = complex5.subtract(0.25651428512162844d);
+        org.apache.commons.math.complex.Complex complex11 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex12 = complex11.cosh();
+        double double13 = complex11.getArgument();
+        org.apache.commons.math.complex.Complex complex14 = complex11.negate();
+        org.apache.commons.math.complex.Complex complex15 = complex11.negate();
+        org.apache.commons.math.complex.Complex complex18 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex19 = complex18.cosh();
+        org.apache.commons.math.complex.Complex complex21 = complex19.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex22 = complex11.multiply(complex19);
+        org.apache.commons.math.complex.Complex complex23 = complex22.sqrt1z();
+        org.apache.commons.math.complex.Complex complex24 = complex8.multiply(complex22);
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex27.cosh();
+        org.apache.commons.math.complex.ComplexField complexField29 = complex27.getField();
+        org.apache.commons.math.complex.Complex complex31 = complex27.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex34 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex34.cosh();
+        double double36 = complex34.getArgument();
+        boolean boolean37 = complex31.equals((java.lang.Object) double36);
+        org.apache.commons.math.complex.Complex complex38 = complex31.negate();
+        org.apache.commons.math.complex.Complex complex41 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex42 = complex41.cosh();
+        double double43 = complex41.getArgument();
+        org.apache.commons.math.complex.Complex complex44 = complex41.negate();
+        org.apache.commons.math.complex.Complex complex46 = complex44.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex49 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex52 = complex49.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex53 = complex49.sin();
+        org.apache.commons.math.complex.Complex complex56 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex59 = complex56.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex60 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex63 = complex60.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex64 = complex56.add(complex63);
+        org.apache.commons.math.complex.Complex complex65 = complex53.divide(complex64);
+        org.apache.commons.math.complex.Complex complex68 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex69 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex70 = complex68.pow(complex69);
+        org.apache.commons.math.complex.Complex complex71 = complex70.cosh();
+        boolean boolean72 = complex53.equals((java.lang.Object) complex71);
+        org.apache.commons.math.complex.Complex complex73 = complex53.cosh();
+        org.apache.commons.math.complex.Complex complex74 = complex46.add(complex53);
+        org.apache.commons.math.complex.Complex complex75 = complex31.multiply(complex74);
+        org.apache.commons.math.complex.Complex complex76 = complex74.tanh();
+        org.apache.commons.math.complex.Complex complex77 = complex76.atan();
+        org.apache.commons.math.complex.Complex complex79 = complex76.divide((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex80 = complex76.asin();
+        org.apache.commons.math.complex.Complex complex81 = complex22.add(complex80);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex69", complex5.equals(complex69) ? complex5.hashCode() == complex69.hashCode() : true);
+    }
+
+    @Test
+    public void test160() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test160");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex5 = complex3.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex11 = complex8.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex13 = complex11.add((double) (byte) 1);
+        double double14 = complex11.getImaginary();
+        org.apache.commons.math.complex.Complex complex15 = complex11.atan();
+        org.apache.commons.math.complex.Complex complex16 = complex11.acos();
+        boolean boolean17 = complex5.equals((java.lang.Object) complex16);
+        org.apache.commons.math.complex.Complex complex18 = complex5.log();
+        org.apache.commons.math.complex.Complex complex19 = complex18.exp();
+        org.apache.commons.math.complex.Complex complex22 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex23 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex24 = complex22.pow(complex23);
+        org.apache.commons.math.complex.Complex complex25 = complex24.cosh();
+        org.apache.commons.math.complex.Complex complex26 = complex24.sqrt1z();
+        org.apache.commons.math.complex.Complex complex29 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex32 = complex29.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex33 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex36 = complex33.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex37 = complex29.add(complex36);
+        org.apache.commons.math.complex.ComplexField complexField38 = complex37.getField();
+        org.apache.commons.math.complex.Complex complex39 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex42 = complex39.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.ComplexField complexField43 = complex42.getField();
+        org.apache.commons.math.complex.Complex complex44 = complex42.cosh();
+        org.apache.commons.math.complex.Complex complex45 = complex37.divide(complex42);
+        org.apache.commons.math.complex.Complex complex46 = complex24.subtract(complex45);
+        org.apache.commons.math.complex.Complex complex47 = complex24.negate();
+        double double48 = complex47.abs();
+        org.apache.commons.math.complex.Complex complex51 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex54 = complex51.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex56 = complex54.add((double) (byte) 1);
+        double double57 = complex54.getImaginary();
+        org.apache.commons.math.complex.Complex complex58 = complex54.atan();
+        org.apache.commons.math.complex.Complex complex59 = complex54.conjugate();
+        org.apache.commons.math.complex.Complex complex60 = complex47.multiply(complex59);
+        org.apache.commons.math.complex.Complex complex61 = complex47.cos();
+        org.apache.commons.math.complex.Complex complex62 = complex61.negate();
+        org.apache.commons.math.complex.Complex complex63 = complex18.multiply(complex62);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex5 and complex23", complex5.equals(complex23) ? complex5.hashCode() == complex23.hashCode() : true);
+    }
+
+    @Test
+    public void test161() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test161");
+        org.apache.commons.math.complex.Complex complex2 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 100, (double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex12 = complex9.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex13 = complex5.add(complex12);
+        org.apache.commons.math.complex.Complex complex14 = complex2.subtract(complex13);
+        org.apache.commons.math.complex.Complex complex16 = complex13.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex17 = complex13.negate();
+        org.apache.commons.math.complex.Complex complex20 = new org.apache.commons.math.complex.Complex((-1.5707963267948966d), 100.0d);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList22 = complex20.nthRoot((int) ' ');
+        org.apache.commons.math.complex.Complex complex23 = complex13.divide(complex20);
+        org.apache.commons.math.complex.Complex complex24 = complex23.sinh();
+        org.apache.commons.math.complex.Complex complex27 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex27.cosh();
+        org.apache.commons.math.complex.ComplexField complexField29 = complex27.getField();
+        org.apache.commons.math.complex.Complex complex31 = complex27.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex34 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex35 = complex34.cosh();
+        double double36 = complex34.getArgument();
+        boolean boolean37 = complex31.equals((java.lang.Object) double36);
+        org.apache.commons.math.complex.Complex complex38 = complex31.negate();
+        boolean boolean39 = complex38.isNaN();
+        org.apache.commons.math.complex.Complex complex42 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double43 = complex42.getReal();
+        org.apache.commons.math.complex.Complex complex46 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex49 = complex46.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex50 = complex42.subtract(complex49);
+        org.apache.commons.math.complex.Complex complex53 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex56 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex59 = complex56.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex60 = complex53.divide(complex59);
+        java.util.List<org.apache.commons.math.complex.Complex> complexList62 = complex60.nthRoot((int) (short) 100);
+        org.apache.commons.math.complex.Complex complex63 = complex42.pow(complex60);
+        double double64 = complex63.getImaginary();
+        org.apache.commons.math.complex.Complex complex65 = complex63.cos();
+        org.apache.commons.math.complex.Complex complex67 = complex63.pow(0.0d);
+        org.apache.commons.math.complex.Complex complex68 = complex38.add(complex63);
+        org.apache.commons.math.complex.Complex complex71 = complex68.createComplex(Double.NaN, 0.8337300251311491d);
+        org.apache.commons.math.complex.Complex complex72 = complex68.sinh();
+        org.apache.commons.math.complex.Complex complex73 = complex24.add(complex68);
+        org.apache.commons.math.complex.Complex complex75 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex77 = complex75.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex78 = complex77.atan();
+        org.apache.commons.math.complex.Complex complex79 = complex77.atan();
+        double double80 = complex77.abs();
+        org.apache.commons.math.complex.Complex complex81 = complex77.tan();
+        org.apache.commons.math.complex.Complex complex82 = complex81.sqrt1z();
+        org.apache.commons.math.complex.Complex complex83 = complex82.conjugate();
+        boolean boolean84 = complex68.equals((java.lang.Object) complex82);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex82 and complex83", complex82.equals(complex83) ? complex82.hashCode() == complex83.hashCode() : true);
+    }
+
+    @Test
+    public void test162() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test162");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        double double4 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex5 = complex2.negate();
+        org.apache.commons.math.complex.Complex complex6 = complex2.negate();
+        org.apache.commons.math.complex.Complex complex9 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex10 = complex9.cosh();
+        org.apache.commons.math.complex.Complex complex12 = complex10.pow((double) (short) 0);
+        org.apache.commons.math.complex.Complex complex13 = complex2.multiply(complex10);
+        org.apache.commons.math.complex.Complex complex14 = complex2.exp();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double18 = complex17.getReal();
+        org.apache.commons.math.complex.Complex complex19 = complex17.atan();
+        org.apache.commons.math.complex.Complex complex20 = complex17.tan();
+        org.apache.commons.math.complex.Complex complex21 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex22 = complex21.sinh();
+        org.apache.commons.math.complex.Complex complex23 = complex21.tan();
+        org.apache.commons.math.complex.Complex complex24 = complex21.sin();
+        org.apache.commons.math.complex.Complex complex25 = complex21.tanh();
+        org.apache.commons.math.complex.Complex complex26 = complex17.add(complex25);
+        org.apache.commons.math.complex.Complex complex27 = complex25.negate();
+        java.lang.Object obj28 = complex25.readResolve();
+        org.apache.commons.math.complex.Complex complex29 = complex14.divide(complex25);
+        org.apache.commons.math.complex.Complex complex30 = complex25.exp();
+        org.apache.commons.math.complex.Complex complex31 = complex25.cosh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex12 and complex30", complex12.equals(complex30) ? complex12.hashCode() == complex30.hashCode() : true);
+    }
+
+    @Test
+    public void test163() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test163");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex0.acos();
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex(0.0d, 0.9473574487656714d);
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex15 = complex12.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex17 = complex15.add((double) (byte) 1);
+        double double18 = complex15.getArgument();
+        org.apache.commons.math.complex.Complex complex19 = complex15.asin();
+        org.apache.commons.math.complex.Complex complex20 = complex6.multiply(complex15);
+        org.apache.commons.math.complex.Complex complex22 = complex6.add(6.954449503996019E-15d);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex20", complex6.equals(complex20) ? complex6.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test164() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test164");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex5.sqrt();
+        org.apache.commons.math.complex.Complex complex8 = complex5.divide(0.04417261042993862d);
+        org.apache.commons.math.complex.Complex complex9 = complex5.cos();
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex15 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex18 = complex15.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex19 = complex12.divide(complex18);
+        org.apache.commons.math.complex.Complex complex20 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex23 = complex20.createComplex((double) (-1), (double) (short) -1);
+        boolean boolean24 = complex18.equals((java.lang.Object) complex20);
+        org.apache.commons.math.complex.Complex complex25 = complex20.atan();
+        org.apache.commons.math.complex.Complex complex26 = complex20.negate();
+        org.apache.commons.math.complex.Complex complex27 = complex20.cos();
+        org.apache.commons.math.complex.ComplexField complexField28 = complex20.getField();
+        org.apache.commons.math.complex.Complex complex29 = complex20.log();
+        double double30 = complex29.getArgument();
+        org.apache.commons.math.complex.Complex complex31 = complex5.divide(complex29);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex27", complex0.equals(complex27) ? complex0.hashCode() == complex27.hashCode() : true);
+    }
+
+    @Test
+    public void test165() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test165");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex9 = complex5.sin();
+        double double10 = complex5.getArgument();
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double14 = complex13.getReal();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex17.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex13.subtract(complex20);
+        org.apache.commons.math.complex.Complex complex22 = complex5.subtract(complex20);
+        org.apache.commons.math.complex.Complex complex23 = complex2.divide(complex5);
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex27 = complex25.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex30 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex33 = complex30.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex35 = complex33.add((double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex36 = complex27.pow(complex35);
+        org.apache.commons.math.complex.Complex complex37 = complex27.tan();
+        org.apache.commons.math.complex.Complex complex40 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex43 = complex40.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex44 = complex40.sin();
+        org.apache.commons.math.complex.Complex complex47 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex50 = complex47.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex51 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex54 = complex51.createComplex((double) (-1), (double) (short) -1);
+        org.apache.commons.math.complex.Complex complex55 = complex47.add(complex54);
+        org.apache.commons.math.complex.Complex complex56 = complex44.divide(complex55);
+        org.apache.commons.math.complex.Complex complex59 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex60 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex61 = complex59.pow(complex60);
+        org.apache.commons.math.complex.Complex complex62 = complex61.cosh();
+        boolean boolean63 = complex44.equals((java.lang.Object) complex62);
+        org.apache.commons.math.complex.Complex complex64 = complex44.asin();
+        org.apache.commons.math.complex.Complex complex65 = complex64.tanh();
+        org.apache.commons.math.complex.Complex complex66 = complex37.add(complex65);
+        org.apache.commons.math.complex.Complex complex67 = complex65.asin();
+        org.apache.commons.math.complex.Complex complex68 = complex23.pow(complex65);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex23 and complex25", complex23.equals(complex25) ? complex23.hashCode() == complex25.hashCode() : true);
+    }
+
+    @Test
+    public void test166() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test166");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        double double4 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex5 = complex2.negate();
+        org.apache.commons.math.complex.Complex complex7 = complex5.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex8 = complex5.asin();
+        org.apache.commons.math.complex.Complex complex9 = complex5.exp();
+        org.apache.commons.math.complex.ComplexField complexField10 = complex9.getField();
+        org.apache.commons.math.complex.Complex complex12 = complex9.subtract((-3.0415959867231406d));
+        org.apache.commons.math.complex.Complex complex13 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex15 = complex13.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex13.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex19 = complex13.acos();
+        org.apache.commons.math.complex.Complex complex22 = complex19.createComplex(0.0d, 0.9473574487656714d);
+        org.apache.commons.math.complex.Complex complex25 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex28 = complex25.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex30 = complex28.add((double) (byte) 1);
+        double double31 = complex28.getArgument();
+        org.apache.commons.math.complex.Complex complex32 = complex28.asin();
+        org.apache.commons.math.complex.Complex complex33 = complex19.multiply(complex28);
+        boolean boolean34 = complex12.equals((java.lang.Object) complex28);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex19 and complex33", complex19.equals(complex33) ? complex19.hashCode() == complex33.hashCode() : true);
+    }
+
+    @Test
+    public void test167() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test167");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex5 = complex2.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex6 = complex2.sin();
+        double double7 = complex2.getArgument();
+        org.apache.commons.math.complex.Complex complex10 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double11 = complex10.getReal();
+        org.apache.commons.math.complex.Complex complex14 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex17 = complex14.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex18 = complex10.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex19 = complex2.subtract(complex17);
+        org.apache.commons.math.complex.Complex complex20 = complex17.negate();
+        org.apache.commons.math.complex.Complex complex21 = complex17.sin();
+        boolean boolean23 = complex21.equals((java.lang.Object) 9.0d);
+        org.apache.commons.math.complex.Complex complex25 = complex21.subtract((double) 0.0f);
+        org.apache.commons.math.complex.Complex complex28 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex29 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex30 = complex28.pow(complex29);
+        org.apache.commons.math.complex.Complex complex33 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double34 = complex33.getReal();
+        org.apache.commons.math.complex.Complex complex35 = complex28.add(complex33);
+        org.apache.commons.math.complex.Complex complex36 = complex33.sqrt();
+        org.apache.commons.math.complex.Complex complex38 = complex33.add((double) 10);
+        org.apache.commons.math.complex.Complex complex39 = complex38.conjugate();
+        org.apache.commons.math.complex.Complex complex40 = complex38.sqrt1z();
+        org.apache.commons.math.complex.Complex complex41 = complex21.multiply(complex38);
+        org.apache.commons.math.complex.Complex complex42 = complex38.sinh();
+        org.apache.commons.math.complex.Complex complex45 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex48 = complex45.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex49 = complex45.sin();
+        org.apache.commons.math.complex.Complex complex50 = complex45.sqrt1z();
+        org.apache.commons.math.complex.Complex complex51 = complex50.sinh();
+        org.apache.commons.math.complex.Complex complex53 = complex50.subtract(2.718281828459045d);
+        org.apache.commons.math.complex.ComplexField complexField54 = complex53.getField();
+        org.apache.commons.math.complex.Complex complex55 = complex42.add(complex53);
+        org.apache.commons.math.complex.Complex complex58 = org.apache.commons.math.complex.Complex.valueOf((double) (-1.0f), 1.0d);
+        org.apache.commons.math.complex.Complex complex61 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex62 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex63 = complex61.pow(complex62);
+        org.apache.commons.math.complex.Complex complex66 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double67 = complex66.getReal();
+        org.apache.commons.math.complex.Complex complex68 = complex61.add(complex66);
+        double double69 = complex61.abs();
+        org.apache.commons.math.complex.Complex complex70 = complex58.divide(complex61);
+        org.apache.commons.math.complex.Complex complex71 = complex42.divide(complex61);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex29 and complex70", complex29.equals(complex70) ? complex29.hashCode() == complex70.hashCode() : true);
+    }
+
+    @Test
+    public void test168() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test168");
+        org.apache.commons.math.complex.Complex complex2 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex2.cosh();
+        org.apache.commons.math.complex.Complex complex4 = complex2.sqrt1z();
+        boolean boolean5 = complex4.isInfinite();
+        org.apache.commons.math.complex.Complex complex8 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex9 = complex8.cosh();
+        double double10 = complex8.getArgument();
+        org.apache.commons.math.complex.Complex complex11 = complex8.negate();
+        org.apache.commons.math.complex.Complex complex13 = complex11.divide((double) 1);
+        org.apache.commons.math.complex.Complex complex14 = complex11.negate();
+        boolean boolean15 = complex4.equals((java.lang.Object) complex14);
+        org.apache.commons.math.complex.Complex complex16 = org.apache.commons.math.complex.Complex.ZERO;
+        org.apache.commons.math.complex.Complex complex17 = complex16.sinh();
+        org.apache.commons.math.complex.Complex complex18 = complex14.multiply(complex17);
+        boolean boolean19 = complex17.isNaN();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex16 and complex18", complex16.equals(complex18) ? complex16.hashCode() == complex18.hashCode() : true);
+    }
+
+    @Test
+    public void test169() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test169");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex0.acos();
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex(0.0d, 0.9473574487656714d);
+        org.apache.commons.math.complex.Complex complex12 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex15 = complex12.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex17 = complex15.add((double) (byte) 1);
+        double double18 = complex15.getArgument();
+        org.apache.commons.math.complex.Complex complex19 = complex15.asin();
+        org.apache.commons.math.complex.Complex complex20 = complex6.multiply(complex15);
+        org.apache.commons.math.complex.Complex complex21 = complex6.cosh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex6 and complex20", complex6.equals(complex20) ? complex6.hashCode() == complex20.hashCode() : true);
+    }
+
+    @Test
+    public void test170() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test170");
+        org.apache.commons.math.complex.Complex complex1 = new org.apache.commons.math.complex.Complex((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex3 = complex1.divide((double) 'a');
+        org.apache.commons.math.complex.Complex complex4 = complex3.atan();
+        org.apache.commons.math.complex.Complex complex5 = complex3.atan();
+        double double6 = complex3.abs();
+        org.apache.commons.math.complex.Complex complex7 = complex3.tan();
+        org.apache.commons.math.complex.Complex complex8 = complex7.sqrt1z();
+        org.apache.commons.math.complex.Complex complex9 = complex8.conjugate();
+        org.apache.commons.math.complex.Complex complex10 = complex8.tanh();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex8 and complex9", complex8.equals(complex9) ? complex8.hashCode() == complex9.hashCode() : true);
+    }
+
+    @Test
+    public void test171() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test171");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex5.sqrt();
+        org.apache.commons.math.complex.Complex complex8 = complex5.divide(0.04417261042993862d);
+        org.apache.commons.math.complex.Complex complex10 = complex5.multiply(0.0d);
+        org.apache.commons.math.complex.Complex complex13 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        double double14 = complex13.getReal();
+        org.apache.commons.math.complex.Complex complex17 = new org.apache.commons.math.complex.Complex((double) (-1), (double) (byte) 1);
+        org.apache.commons.math.complex.Complex complex20 = complex17.createComplex((double) (byte) -1, (double) ' ');
+        org.apache.commons.math.complex.Complex complex21 = complex13.subtract(complex20);
+        org.apache.commons.math.complex.Complex complex24 = new org.apache.commons.math.complex.Complex((double) (-1L), 100.0d);
+        org.apache.commons.math.complex.Complex complex25 = complex13.divide(complex24);
+        org.apache.commons.math.complex.Complex complex27 = complex24.pow((double) (byte) 10);
+        double double28 = complex27.getArgument();
+        org.apache.commons.math.complex.Complex complex29 = complex5.pow(complex27);
+        org.apache.commons.math.complex.Complex complex32 = org.apache.commons.math.complex.Complex.valueOf((double) (short) 100, (double) ' ');
+        org.apache.commons.math.complex.Complex complex33 = complex32.cos();
+        org.apache.commons.math.complex.Complex complex35 = complex33.pow((double) (short) 1);
+        org.apache.commons.math.complex.Complex complex36 = complex27.multiply(complex35);
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex10 and complex29", complex10.equals(complex29) ? complex10.hashCode() == complex29.hashCode() : true);
+    }
+
+    @Test
+    public void test172() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "ErrorTest0.test172");
+        org.apache.commons.math.complex.Complex complex0 = org.apache.commons.math.complex.Complex.ONE;
+        org.apache.commons.math.complex.Complex complex2 = complex0.divide((double) ' ');
+        org.apache.commons.math.complex.Complex complex5 = complex0.createComplex(0.0d, (-1.0d));
+        org.apache.commons.math.complex.Complex complex6 = complex0.acos();
+        org.apache.commons.math.complex.Complex complex9 = complex6.createComplex(0.0d, 0.9473574487656714d);
+        org.apache.commons.math.complex.Complex complex11 = complex6.subtract(0.0d);
+        org.apache.commons.math.complex.Complex complex12 = complex11.cos();
+        org.apache.commons.math.complex.Complex complex13 = complex12.sqrt1z();
+        org.junit.Assert.assertTrue("Contract failed: equals-hashcode on complex0 and complex12", complex0.equals(complex12) ? complex0.hashCode() == complex12.hashCode() : true);
+    }
+}
+
