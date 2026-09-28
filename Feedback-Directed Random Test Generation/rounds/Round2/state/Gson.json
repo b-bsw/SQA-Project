@@ -1,0 +1,417 @@
+{
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-28T03:32:08.585672+00:00",
+      "status": "COMPLETED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "Gson",
+        "--state-file",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Gson.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--round",
+        "2",
+        "--seed",
+        "20260928",
+        "--output-dir",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+      ],
+      "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Gson.json",
+      "round": 2,
+      "seed": 20260928,
+      "time_limit": 60,
+      "project": "Gson",
+      "run_id": "20260928T033208594723Z_5762",
+      "success": 18,
+      "skipped": 0,
+      "failed": 0,
+      "total_duration_seconds": 1237.244,
+      "finished_at": "2026-09-28T03:52:45.826992+00:00"
+    },
+    "history": {
+      "20260928T033208594723Z_5762": {
+        "started_at": "2026-09-28T03:32:08.585672+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Gson",
+          "--state-file",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Gson.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--round",
+          "2",
+          "--seed",
+          "20260928",
+          "--output-dir",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+        ],
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Gson.json",
+        "round": 2,
+        "seed": 20260928,
+        "time_limit": 60,
+        "project": "Gson",
+        "run_id": "20260928T033208594723Z_5762",
+        "success": 18,
+        "skipped": 0,
+        "failed": 0,
+        "total_duration_seconds": 1237.244,
+        "finished_at": "2026-09-28T03:52:45.826992+00:00"
+      }
+    }
+  },
+  "Gson_6": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_6_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_6",
+    "classes_tested": [
+      "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/bind/RegressionTest0.java",
+      "com/google/gson/internal/bind/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:33:14.274947+00:00"
+  },
+  "Gson_8": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_8_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_8",
+    "classes_tested": [
+      "com.google.gson.internal.UnsafeAllocator"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/RegressionTest0.java",
+      "com/google/gson/internal/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:34:15.180748+00:00"
+  },
+  "Gson_17": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_17_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_17",
+    "classes_tested": [
+      "com.google.gson.DefaultDateTypeAdapter"
+    ],
+    "generated_tests": [
+      "com/google/gson/ErrorTest0.java",
+      "com/google/gson/RegressionTest6.java",
+      "com/google/gson/RegressionTest7.java",
+      "com/google/gson/RegressionTest0.java",
+      "com/google/gson/ErrorTest.java",
+      "com/google/gson/RegressionTest10.java",
+      "com/google/gson/RegressionTest1.java",
+      "com/google/gson/RegressionTest2.java",
+      "com/google/gson/RegressionTest3.java",
+      "com/google/gson/RegressionTest8.java",
+      "com/google/gson/RegressionTest4.java",
+      "com/google/gson/RegressionTest5.java",
+      "com/google/gson/RegressionTest.java",
+      "com/google/gson/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:35:31.765359+00:00"
+  },
+  "Gson_1": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_1_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_1",
+    "classes_tested": [
+      "com.google.gson.TypeInfoFactory"
+    ],
+    "generated_tests": [
+      "com/google/gson/RegressionTest0.java",
+      "com/google/gson/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:36:38.007453+00:00"
+  },
+  "Gson_3": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_3_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_3",
+    "classes_tested": [
+      "com.google.gson.internal.ConstructorConstructor"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/RegressionTest0.java",
+      "com/google/gson/internal/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:37:44.881254+00:00"
+  },
+  "Gson_10": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_10_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_10",
+    "classes_tested": [
+      "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/bind/ErrorTest0.java",
+      "com/google/gson/internal/bind/RegressionTest0.java",
+      "com/google/gson/internal/bind/ErrorTest.java",
+      "com/google/gson/internal/bind/RegressionTest1.java",
+      "com/google/gson/internal/bind/RegressionTest2.java",
+      "com/google/gson/internal/bind/RegressionTest3.java",
+      "com/google/gson/internal/bind/RegressionTest4.java",
+      "com/google/gson/internal/bind/RegressionTest5.java",
+      "com/google/gson/internal/bind/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:39:04.757928+00:00"
+  },
+  "Gson_12": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_12_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_12",
+    "classes_tested": [
+      "com.google.gson.internal.bind.JsonTreeReader"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/bind/ErrorTest0.java",
+      "com/google/gson/internal/bind/RegressionTest6.java",
+      "com/google/gson/internal/bind/RegressionTest7.java",
+      "com/google/gson/internal/bind/ErrorTest1.java",
+      "com/google/gson/internal/bind/RegressionTest0.java",
+      "com/google/gson/internal/bind/ErrorTest.java",
+      "com/google/gson/internal/bind/RegressionTest1.java",
+      "com/google/gson/internal/bind/RegressionTest2.java",
+      "com/google/gson/internal/bind/RegressionTest3.java",
+      "com/google/gson/internal/bind/ErrorTest2.java",
+      "com/google/gson/internal/bind/RegressionTest4.java",
+      "com/google/gson/internal/bind/RegressionTest5.java",
+      "com/google/gson/internal/bind/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:40:17.618485+00:00"
+  },
+  "Gson_5": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_5_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_5",
+    "classes_tested": [
+      "com.google.gson.internal.bind.util.ISO8601Utils"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/bind/util/RegressionTest0.java",
+      "com/google/gson/internal/bind/util/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:41:18.821277+00:00"
+  },
+  "Gson_15": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_15_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_15",
+    "classes_tested": [
+      "com.google.gson.stream.JsonWriter"
+    ],
+    "generated_tests": [
+      "com/google/gson/stream/RegressionTest0.java",
+      "com/google/gson/stream/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:42:26.363749+00:00"
+  },
+  "Gson_14": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_14_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_14",
+    "classes_tested": [
+      "com.google.gson.internal.$Gson$Types"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/RegressionTest0.java",
+      "com/google/gson/internal/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:43:33.716816+00:00"
+  },
+  "Gson_16": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_16_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_16",
+    "classes_tested": [
+      "com.google.gson.internal.$Gson$Types"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/RegressionTest0.java",
+      "com/google/gson/internal/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:44:41.862012+00:00"
+  },
+  "Gson_18": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_18_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_18",
+    "classes_tested": [
+      "com.google.gson.internal.$Gson$Types"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/RegressionTest0.java",
+      "com/google/gson/internal/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:45:50.081985+00:00"
+  },
+  "Gson_2": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_2_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_2",
+    "classes_tested": [
+      "com.google.gson.internal.bind.TypeAdapters"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/bind/RegressionTest0.java",
+      "com/google/gson/internal/bind/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:46:57.362183+00:00"
+  },
+  "Gson_11": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_11_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_11",
+    "classes_tested": [
+      "com.google.gson.internal.bind.TypeAdapters"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/bind/RegressionTest0.java",
+      "com/google/gson/internal/bind/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:48:04.743052+00:00"
+  },
+  "Gson_13": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_13_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_13",
+    "classes_tested": [
+      "com.google.gson.stream.JsonReader"
+    ],
+    "generated_tests": [
+      "com/google/gson/stream/RegressionTest0.java",
+      "com/google/gson/stream/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:49:12.588891+00:00"
+  },
+  "Gson_7": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_7_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_7",
+    "classes_tested": [
+      "com.google.gson.stream.JsonReader"
+    ],
+    "generated_tests": [
+      "com/google/gson/stream/RegressionTest0.java",
+      "com/google/gson/stream/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:50:21.689454+00:00"
+  },
+  "Gson_9": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_9_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_9",
+    "classes_tested": [
+      "com.google.gson.stream.JsonWriter",
+      "com.google.gson.internal.bind.TypeAdapters",
+      "com.google.gson.internal.bind.JsonTreeWriter"
+    ],
+    "generated_tests": [
+      "com/google/gson/internal/bind/ErrorTest0.java",
+      "com/google/gson/internal/bind/RegressionTest6.java",
+      "com/google/gson/internal/bind/RegressionTest0.java",
+      "com/google/gson/internal/bind/ErrorTest.java",
+      "com/google/gson/internal/bind/RegressionTest1.java",
+      "com/google/gson/internal/bind/RegressionTest2.java",
+      "com/google/gson/internal/bind/RegressionTest3.java",
+      "com/google/gson/internal/bind/RegressionTest4.java",
+      "com/google/gson/internal/bind/RegressionTest5.java",
+      "com/google/gson/internal/bind/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:51:36.263361+00:00"
+  },
+  "Gson_4": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Gson_4_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Gson_4",
+    "classes_tested": [
+      "com.google.gson.stream.JsonReader",
+      "com.google.gson.stream.JsonWriter"
+    ],
+    "generated_tests": [
+      "com/google/gson/stream/RegressionTest0.java",
+      "com/google/gson/stream/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T03:52:45.705718+00:00"
+  }
+}

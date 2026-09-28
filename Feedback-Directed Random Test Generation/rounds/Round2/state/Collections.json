@@ -1,0 +1,651 @@
+{
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-28T04:01:15.873783+00:00",
+      "status": "COMPLETED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "Collections",
+        "--state-file",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Collections.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--round",
+        "2",
+        "--seed",
+        "20260928",
+        "--output-dir",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+      ],
+      "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Collections.json",
+      "round": 2,
+      "seed": 20260928,
+      "time_limit": 60,
+      "project": "Collections",
+      "run_id": "20260928T040115882523Z_11915",
+      "success": 28,
+      "skipped": 0,
+      "failed": 0,
+      "total_duration_seconds": 2187.808,
+      "finished_at": "2026-09-28T04:37:43.738483+00:00"
+    },
+    "history": {
+      "20260928T040115882523Z_11915": {
+        "started_at": "2026-09-28T04:01:15.873783+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Collections",
+          "--state-file",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Collections.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--round",
+          "2",
+          "--seed",
+          "20260928",
+          "--output-dir",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+        ],
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Collections.json",
+        "round": 2,
+        "seed": 20260928,
+        "time_limit": 60,
+        "project": "Collections",
+        "run_id": "20260928T040115882523Z_11915",
+        "success": 28,
+        "skipped": 0,
+        "failed": 0,
+        "total_duration_seconds": 2187.808,
+        "finished_at": "2026-09-28T04:37:43.738483+00:00"
+      }
+    }
+  },
+  "Collections_17": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_17_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_17",
+    "classes_tested": [
+      "org.apache.commons.collections.functors.EqualPredicate"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/functors/RegressionTest6.java",
+      "org/apache/commons/collections/functors/RegressionTest0.java",
+      "org/apache/commons/collections/functors/RegressionTest1.java",
+      "org/apache/commons/collections/functors/RegressionTest2.java",
+      "org/apache/commons/collections/functors/RegressionTest3.java",
+      "org/apache/commons/collections/functors/RegressionTest4.java",
+      "org/apache/commons/collections/functors/RegressionTest5.java",
+      "org/apache/commons/collections/functors/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:02:31.638230+00:00"
+  },
+  "Collections_14": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_14_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_14",
+    "classes_tested": [
+      "org.apache.commons.collections.map.CaseInsensitiveMap"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/map/RegressionTest0.java",
+      "org/apache/commons/collections/map/RegressionTest1.java",
+      "org/apache/commons/collections/map/RegressionTest2.java",
+      "org/apache/commons/collections/map/RegressionTest3.java",
+      "org/apache/commons/collections/map/RegressionTest4.java",
+      "org/apache/commons/collections/map/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:03:49.391610+00:00"
+  },
+  "Collections_23": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_23_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_23",
+    "classes_tested": [
+      "org.apache.commons.collections4.trie.UnmodifiableTrie"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/trie/RegressionTest0.java",
+      "org/apache/commons/collections4/trie/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:05:00.817122+00:00"
+  },
+  "Collections_24": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_24_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_24",
+    "classes_tested": [
+      "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/collection/RegressionTest0.java",
+      "org/apache/commons/collections4/collection/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:06:12.770435+00:00"
+  },
+  "Collections_11": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_11_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_11",
+    "classes_tested": [
+      "org.apache.commons.collections.keyvalue.MultiKey"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/keyvalue/RegressionTest0.java",
+      "org/apache/commons/collections/keyvalue/RegressionTest1.java",
+      "org/apache/commons/collections/keyvalue/RegressionTest2.java",
+      "org/apache/commons/collections/keyvalue/RegressionTest3.java",
+      "org/apache/commons/collections/keyvalue/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:07:22.846503+00:00"
+  },
+  "Collections_26": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_26_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_26",
+    "classes_tested": [
+      "org.apache.commons.collections4.keyvalue.MultiKey"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/keyvalue/RegressionTest0.java",
+      "org/apache/commons/collections4/keyvalue/RegressionTest1.java",
+      "org/apache/commons/collections4/keyvalue/RegressionTest2.java",
+      "org/apache/commons/collections4/keyvalue/RegressionTest3.java",
+      "org/apache/commons/collections4/keyvalue/RegressionTest4.java",
+      "org/apache/commons/collections4/keyvalue/RegressionTest5.java",
+      "org/apache/commons/collections4/keyvalue/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:09:27.505776+00:00"
+  },
+  "Collections_8": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_8_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_8",
+    "classes_tested": [
+      "org.apache.commons.collections.buffer.UnboundedFifoBuffer"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/buffer/RegressionTest0.java",
+      "org/apache/commons/collections/buffer/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:10:39.884662+00:00"
+  },
+  "Collections_5": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_5_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_5",
+    "classes_tested": [
+      "org.apache.commons.collections.list.SetUniqueList"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/list/RegressionTest0.java",
+      "org/apache/commons/collections/list/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:11:51.518504+00:00"
+  },
+  "Collections_15": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_15_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_15",
+    "classes_tested": [
+      "org.apache.commons.collections.list.SetUniqueList"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/list/RegressionTest0.java",
+      "org/apache/commons/collections/list/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:13:02.762708+00:00"
+  },
+  "Collections_16": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_16_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_16",
+    "classes_tested": [
+      "org.apache.commons.collections.list.SetUniqueList"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/list/RegressionTest0.java",
+      "org/apache/commons/collections/list/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:14:14.209033+00:00"
+  },
+  "Collections_18": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_18_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_18",
+    "classes_tested": [
+      "org.apache.commons.collections.set.ListOrderedSet"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/set/ErrorTest0.java",
+      "org/apache/commons/collections/set/RegressionTest0.java",
+      "org/apache/commons/collections/set/ErrorTest.java",
+      "org/apache/commons/collections/set/RegressionTest1.java",
+      "org/apache/commons/collections/set/RegressionTest2.java",
+      "org/apache/commons/collections/set/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:15:32.189446+00:00"
+  },
+  "Collections_19": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_19_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_19",
+    "classes_tested": [
+      "org.apache.commons.collections.list.SetUniqueList"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/list/RegressionTest0.java",
+      "org/apache/commons/collections/list/RegressionTest1.java",
+      "org/apache/commons/collections/list/RegressionTest2.java",
+      "org/apache/commons/collections/list/RegressionTest3.java",
+      "org/apache/commons/collections/list/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:16:51.220104+00:00"
+  },
+  "Collections_21": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_21_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_21",
+    "classes_tested": [
+      "org.apache.commons.collections4.list.SetUniqueList"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/list/RegressionTest0.java",
+      "org/apache/commons/collections4/list/RegressionTest1.java",
+      "org/apache/commons/collections4/list/RegressionTest2.java",
+      "org/apache/commons/collections4/list/RegressionTest3.java",
+      "org/apache/commons/collections4/list/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:18:09.445234+00:00"
+  },
+  "Collections_4": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_4_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_4",
+    "classes_tested": [
+      "org.apache.commons.collections.map.MultiValueMap"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/map/ErrorTest0.java",
+      "org/apache/commons/collections/map/RegressionTest0.java",
+      "org/apache/commons/collections/map/ErrorTest.java",
+      "org/apache/commons/collections/map/RegressionTest1.java",
+      "org/apache/commons/collections/map/RegressionTest2.java",
+      "org/apache/commons/collections/map/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:19:27.586129+00:00"
+  },
+  "Collections_10": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_10_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_10",
+    "classes_tested": [
+      "org.apache.commons.collections.map.MultiValueMap"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/map/RegressionTest0.java",
+      "org/apache/commons/collections/map/RegressionTest1.java",
+      "org/apache/commons/collections/map/RegressionTest2.java",
+      "org/apache/commons/collections/map/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:20:46.478267+00:00"
+  },
+  "Collections_27": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_27_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_27",
+    "classes_tested": [
+      "org.apache.commons.collections4.map.MultiValueMap"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/map/RegressionTest0.java",
+      "org/apache/commons/collections4/map/RegressionTest1.java",
+      "org/apache/commons/collections4/map/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:22:06.150486+00:00"
+  },
+  "Collections_22": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_22_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_22",
+    "classes_tested": [
+      "org.apache.commons.collections4.map.ListOrderedMap"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/map/RegressionTest0.java",
+      "org/apache/commons/collections4/map/RegressionTest1.java",
+      "org/apache/commons/collections4/map/RegressionTest2.java",
+      "org/apache/commons/collections4/map/RegressionTest3.java",
+      "org/apache/commons/collections4/map/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:23:29.204676+00:00"
+  },
+  "Collections_20": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_20_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_20",
+    "classes_tested": [
+      "org.apache.commons.collections.list.TreeList"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/list/ErrorTest0.java",
+      "org/apache/commons/collections/list/RegressionTest0.java",
+      "org/apache/commons/collections/list/ErrorTest.java",
+      "org/apache/commons/collections/list/RegressionTest1.java",
+      "org/apache/commons/collections/list/RegressionTest2.java",
+      "org/apache/commons/collections/list/RegressionTest3.java",
+      "org/apache/commons/collections/list/RegressionTest4.java",
+      "org/apache/commons/collections/list/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:24:52.163928+00:00"
+  },
+  "Collections_1": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_1_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_1",
+    "classes_tested": [
+      "org.apache.commons.collections.map.Flat3Map"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/map/ErrorTest0.java",
+      "org/apache/commons/collections/map/RegressionTest0.java",
+      "org/apache/commons/collections/map/ErrorTest.java",
+      "org/apache/commons/collections/map/RegressionTest1.java",
+      "org/apache/commons/collections/map/RegressionTest2.java",
+      "org/apache/commons/collections/map/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:26:10.344896+00:00"
+  },
+  "Collections_6": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_6_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_6",
+    "classes_tested": [
+      "org.apache.commons.collections.map.Flat3Map"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/map/ErrorTest0.java",
+      "org/apache/commons/collections/map/RegressionTest0.java",
+      "org/apache/commons/collections/map/ErrorTest.java",
+      "org/apache/commons/collections/map/RegressionTest1.java",
+      "org/apache/commons/collections/map/RegressionTest2.java",
+      "org/apache/commons/collections/map/RegressionTest3.java",
+      "org/apache/commons/collections/map/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:27:28.435217+00:00"
+  },
+  "Collections_3": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_3_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_3",
+    "classes_tested": [
+      "org.apache.commons.collections.CollectionUtils"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/ErrorTest0.java",
+      "org/apache/commons/collections/ErrorTest1.java",
+      "org/apache/commons/collections/RegressionTest0.java",
+      "org/apache/commons/collections/ErrorTest.java",
+      "org/apache/commons/collections/RegressionTest1.java",
+      "org/apache/commons/collections/RegressionTest2.java",
+      "org/apache/commons/collections/ErrorTest4.java",
+      "org/apache/commons/collections/RegressionTest3.java",
+      "org/apache/commons/collections/ErrorTest2.java",
+      "org/apache/commons/collections/RegressionTest.java",
+      "org/apache/commons/collections/ErrorTest3.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:28:49.484170+00:00"
+  },
+  "Collections_2": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_2_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_2",
+    "classes_tested": [
+      "org.apache.commons.collections.ExtendedProperties"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/RegressionTest6.java",
+      "org/apache/commons/collections/RegressionTest0.java",
+      "org/apache/commons/collections/RegressionTest1.java",
+      "org/apache/commons/collections/RegressionTest2.java",
+      "org/apache/commons/collections/RegressionTest3.java",
+      "org/apache/commons/collections/RegressionTest4.java",
+      "org/apache/commons/collections/RegressionTest5.java",
+      "org/apache/commons/collections/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:30:01.245556+00:00"
+  },
+  "Collections_7": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_7_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_7",
+    "classes_tested": [
+      "org.apache.commons.collections.ExtendedProperties"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/RegressionTest6.java",
+      "org/apache/commons/collections/RegressionTest0.java",
+      "org/apache/commons/collections/RegressionTest1.java",
+      "org/apache/commons/collections/RegressionTest2.java",
+      "org/apache/commons/collections/RegressionTest3.java",
+      "org/apache/commons/collections/RegressionTest4.java",
+      "org/apache/commons/collections/RegressionTest5.java",
+      "org/apache/commons/collections/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:31:21.186307+00:00"
+  },
+  "Collections_9": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_9_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_9",
+    "classes_tested": [
+      "org.apache.commons.collections.ExtendedProperties"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/RegressionTest6.java",
+      "org/apache/commons/collections/RegressionTest0.java",
+      "org/apache/commons/collections/RegressionTest1.java",
+      "org/apache/commons/collections/RegressionTest2.java",
+      "org/apache/commons/collections/RegressionTest3.java",
+      "org/apache/commons/collections/RegressionTest4.java",
+      "org/apache/commons/collections/RegressionTest5.java",
+      "org/apache/commons/collections/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:32:35.219767+00:00"
+  },
+  "Collections_12": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_12_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_12",
+    "classes_tested": [
+      "org.apache.commons.collections.ExtendedProperties"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/RegressionTest0.java",
+      "org/apache/commons/collections/RegressionTest1.java",
+      "org/apache/commons/collections/RegressionTest2.java",
+      "org/apache/commons/collections/RegressionTest3.java",
+      "org/apache/commons/collections/RegressionTest4.java",
+      "org/apache/commons/collections/RegressionTest5.java",
+      "org/apache/commons/collections/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:33:48.607792+00:00"
+  },
+  "Collections_13": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_13_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_13",
+    "classes_tested": [
+      "org.apache.commons.collections.ExtendedProperties"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections/RegressionTest6.java",
+      "org/apache/commons/collections/RegressionTest0.java",
+      "org/apache/commons/collections/RegressionTest1.java",
+      "org/apache/commons/collections/RegressionTest2.java",
+      "org/apache/commons/collections/RegressionTest3.java",
+      "org/apache/commons/collections/RegressionTest4.java",
+      "org/apache/commons/collections/RegressionTest5.java",
+      "org/apache/commons/collections/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:35:04.919405+00:00"
+  },
+  "Collections_25": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_25_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_25",
+    "classes_tested": [
+      "org.apache.commons.collections4.IteratorUtils"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/RegressionTest6.java",
+      "org/apache/commons/collections4/RegressionTest7.java",
+      "org/apache/commons/collections4/RegressionTest0.java",
+      "org/apache/commons/collections4/RegressionTest1.java",
+      "org/apache/commons/collections4/RegressionTest2.java",
+      "org/apache/commons/collections4/RegressionTest3.java",
+      "org/apache/commons/collections4/RegressionTest8.java",
+      "org/apache/commons/collections4/RegressionTest4.java",
+      "org/apache/commons/collections4/RegressionTest5.java",
+      "org/apache/commons/collections4/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:36:23.281966+00:00"
+  },
+  "Collections_28": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Collections_28_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Collections_28",
+    "classes_tested": [
+      "org.apache.commons.collections4.trie.AbstractPatriciaTrie"
+    ],
+    "generated_tests": [
+      "org/apache/commons/collections4/trie/RegressionTest6.java",
+      "org/apache/commons/collections4/trie/RegressionTest0.java",
+      "org/apache/commons/collections4/trie/RegressionTest1.java",
+      "org/apache/commons/collections4/trie/RegressionTest2.java",
+      "org/apache/commons/collections4/trie/RegressionTest3.java",
+      "org/apache/commons/collections4/trie/RegressionTest4.java",
+      "org/apache/commons/collections4/trie/RegressionTest5.java",
+      "org/apache/commons/collections4/trie/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T04:37:43.629420+00:00"
+  }
+}
