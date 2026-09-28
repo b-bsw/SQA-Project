@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "STANDARD_GA",
+  "created_at": "2569-09-28T16:30:38Z",
+  "round": 1,
+  "project": "JacksonDatabind",
+  "bug_id": 14,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 77,
+  "coverage": 72.06,
+  "line_cov": 75.79,
+  "branch_cov": 68.33,
+  "total_goals": 601,
+  "covered_goals": 436,
+  "lines": 109,
+  "covered_lines": 288,
+  "total_branches": 150,
+  "covered_branches": 82,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "targets": [
+    {
+      "target_class": "com.fasterxml.jackson.databind.ObjectReader",
+      "generation_result": "PASS",
+      "generation_seconds": 144,
+      "tests": 77,
+      "coverage": 72.06,
+      "line_cov": 75.79,
+      "branch_cov": 68.33,
+      "total_goals": 601,
+      "covered_goals": 436,
+      "lines": 109,
+      "covered_lines": 288,
+      "total_branches": 150,
+      "covered_branches": 82,
+      "total_methods": 109,
+      "covered_methods": 107,
+      "branchless_methods": 71,
+      "covered_branchless_methods": 69
+    }
+  ],
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "failures": 0
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "failures": 0
+    }
+  ]
+}

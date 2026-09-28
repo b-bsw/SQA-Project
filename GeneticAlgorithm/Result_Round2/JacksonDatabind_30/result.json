@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "STANDARD_GA",
+  "created_at": "2569-09-28T17:34:48Z",
+  "round": 2,
+  "project": "JacksonDatabind",
+  "bug_id": 30,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 267,
+  "coverage": 66.49,
+  "line_cov": 71.11,
+  "branch_cov": 62.11,
+  "total_goals": 2167,
+  "covered_goals": 1433,
+  "lines": 369,
+  "covered_lines": 931,
+  "total_branches": 598,
+  "covered_branches": 296,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "targets": [
+    {
+      "target_class": "com.fasterxml.jackson.databind.ObjectMapper",
+      "generation_result": "PASS",
+      "generation_seconds": 157,
+      "tests": 176,
+      "coverage": 73.92,
+      "line_cov": 76.95,
+      "branch_cov": 70.93,
+      "total_goals": 1067,
+      "covered_goals": 790,
+      "lines": 237,
+      "covered_lines": 513,
+      "total_branches": 212,
+      "covered_branches": 123,
+      "total_methods": 237,
+      "covered_methods": 207,
+      "branchless_methods": 187,
+      "covered_branchless_methods": 160
+    },
+    {
+      "target_class": "com.fasterxml.jackson.databind.util.TokenBuffer",
+      "generation_result": "PASS",
+      "generation_seconds": 242,
+      "tests": 91,
+      "coverage": 59.06,
+      "line_cov": 65.26,
+      "branch_cov": 53.28,
+      "total_goals": 1100,
+      "covered_goals": 643,
+      "lines": 132,
+      "covered_lines": 418,
+      "total_branches": 386,
+      "covered_branches": 173,
+      "total_methods": 132,
+      "covered_methods": 129,
+      "branchless_methods": 72,
+      "covered_branchless_methods": 71
+    }
+  ],
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "failures": 0
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "failures": 0
+    }
+  ]
+}

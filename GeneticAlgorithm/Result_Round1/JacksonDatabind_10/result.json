@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "STANDARD_GA",
+  "created_at": "2569-09-28T16:27:27Z",
+  "round": 1,
+  "project": "JacksonDatabind",
+  "bug_id": 10,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 20,
+  "coverage": 21.92,
+  "line_cov": 28.21,
+  "branch_cov": 15.64,
+  "total_goals": 447,
+  "covered_goals": 92,
+  "lines": 24,
+  "covered_lines": 66,
+  "total_branches": 166,
+  "covered_branches": 22,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "targets": [
+    {
+      "target_class": "com.fasterxml.jackson.databind.ser.AnyGetterWriter",
+      "generation_result": "PASS",
+      "generation_seconds": 73,
+      "tests": 3,
+      "coverage": 23.81,
+      "line_cov": 33.33,
+      "branch_cov": 14.29,
+      "total_goals": 41,
+      "covered_goals": 11,
+      "lines": 4,
+      "covered_lines": 9,
+      "total_branches": 12,
+      "covered_branches": 0,
+      "total_methods": 4,
+      "covered_methods": 4,
+      "branchless_methods": 2,
+      "covered_branchless_methods": 2
+    },
+    {
+      "target_class": "com.fasterxml.jackson.databind.ser.BeanSerializerFactory",
+      "generation_result": "PASS",
+      "generation_seconds": 88,
+      "tests": 17,
+      "coverage": 20.03,
+      "line_cov": 23.08,
+      "branch_cov": 16.98,
+      "total_goals": 406,
+      "covered_goals": 81,
+      "lines": 20,
+      "covered_lines": 57,
+      "total_branches": 154,
+      "covered_branches": 22,
+      "total_methods": 20,
+      "covered_methods": 20,
+      "branchless_methods": 5,
+      "covered_branchless_methods": 5
+    }
+  ],
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "failures": 0
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "failures": 0
+    }
+  ]
+}

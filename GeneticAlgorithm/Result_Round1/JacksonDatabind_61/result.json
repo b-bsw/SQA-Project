@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "STANDARD_GA",
+  "created_at": "2569-09-28T17:05:32Z",
+  "round": 1,
+  "project": "JacksonDatabind",
+  "bug_id": 61,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 209,
+  "coverage": 82.23,
+  "line_cov": 83.49,
+  "branch_cov": 80.98,
+  "total_goals": 1186,
+  "covered_goals": 871,
+  "lines": 255,
+  "covered_lines": 543,
+  "total_branches": 266,
+  "covered_branches": 170,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "targets": [
+    {
+      "target_class": "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder",
+      "generation_result": "PASS",
+      "generation_seconds": 86,
+      "tests": 27,
+      "coverage": 92.52,
+      "line_cov": 92.73,
+      "branch_cov": 92.31,
+      "total_goals": 120,
+      "covered_goals": 110,
+      "lines": 13,
+      "covered_lines": 51,
+      "total_branches": 58,
+      "covered_branches": 53,
+      "total_methods": 13,
+      "covered_methods": 13,
+      "branchless_methods": 7,
+      "covered_branchless_methods": 7
+    },
+    {
+      "target_class": "com.fasterxml.jackson.databind.ObjectMapper",
+      "generation_result": "PASS",
+      "generation_seconds": 154,
+      "tests": 182,
+      "coverage": 71.93,
+      "line_cov": 74.25,
+      "branch_cov": 69.65,
+      "total_goals": 1066,
+      "covered_goals": 761,
+      "lines": 242,
+      "covered_lines": 492,
+      "total_branches": 208,
+      "covered_branches": 117,
+      "total_methods": 242,
+      "covered_methods": 209,
+      "branchless_methods": 194,
+      "covered_branchless_methods": 163
+    }
+  ],
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "failures": 0
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "failures": 0
+    }
+  ]
+}
