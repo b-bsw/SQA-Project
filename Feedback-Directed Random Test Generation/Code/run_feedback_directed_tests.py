@@ -104,7 +104,7 @@ def find_defects4j(custom_path: Optional[str] = None) -> str:
 
     home = Path.home()
     candidates = [
-        home / "defect4j" / "defects4j" / "framework" / "bin" / "defects4j",
+        home / "defects4j" / "framework" / "bin" / "defects4j",
         home / "defects4j" / "framework" / "bin" / "defects4j",
         Path("/home/defects4j/framework/bin/defects4j"),
         Path("/Users/defects4j/framework/bin/defects4j"),

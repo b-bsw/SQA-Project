@@ -134,7 +134,7 @@ def find_defects4j_bin() -> Optional[str]:
     if which_d4j:
         return which_d4j
 
-    home_d4j = Path.home() / "defect4j" / "defects4j" / "framework" / "bin" / "defects4j"
+    home_d4j = Path.home() / "defects4j" / "framework" / "bin" / "defects4j"
     if home_d4j.is_file():
         return str(home_d4j)
 
@@ -197,7 +197,7 @@ def try_fast_javac_compile(
                 cp_entries.append(str(jar))
 
     # เพิ่ม jar libraries ใน Defects4J framework projects ถ้ามี
-    d4j_proj_lib = Path.home() / "defect4j" / "defects4j" / "framework" / "projects" / prefix / "lib"
+    d4j_proj_lib = Path.home() / "defects4j" / "framework" / "projects" / prefix / "lib"
     if d4j_proj_lib.is_dir():
         for jar in d4j_proj_lib.glob("**/*.jar"):
             cp_entries.append(str(jar))
@@ -663,7 +663,7 @@ def collect_project_classpath_entries(
                 pass
 
     # 2. Defect4J framework lib JARs ของโปรเจกต์นั้น
-    d4j_lib_dir = Path.home() / "defect4j" / "defects4j" / "framework" / "projects" / prefix / "lib"
+    d4j_lib_dir = Path.home() / "defects4j" / "framework" / "projects" / prefix / "lib"
     if d4j_lib_dir.is_dir():
         for jar in d4j_lib_dir.glob("**/*.jar"):
             s = str(jar)
