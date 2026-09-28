@@ -1,0 +1,40 @@
+{
+  "entrypoint": "script/Randoop/round1/generate.py",
+  "phase": "generate",
+  "round": 1,
+  "arguments": [
+    "--round",
+    "1",
+    "--workers",
+    "2"
+  ],
+  "started_at": "2026-09-28T13:34:28.238177+00:00",
+  "status": "FAILED",
+  "script": "run_randoop_parallel",
+  "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/generation_state.json",
+  "seed": 0,
+  "time_limit": 60,
+  "workers": 2,
+  "projects": [
+    "Chart",
+    "Cli",
+    "Closure",
+    "Codec",
+    "Collections",
+    "Compress",
+    "Csv",
+    "Gson",
+    "JacksonCore",
+    "JacksonDatabind",
+    "JacksonXml",
+    "Jsoup",
+    "JxPath",
+    "Lang",
+    "Math",
+    "Mockito",
+    "Time"
+  ],
+  "run_id": "20260928T133429994169Z_39",
+  "total_duration_seconds": 3405.378,
+  "finished_at": "2026-09-28T14:31:13.615929+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "Codec_1": {
-    "output_dir": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Feedback-Directed Random Test Generation\\TestCode\\Codec_1_buggy",
-    "classes_dir": "E:\\JavaEclipe\\defect4j\\SQA-Project\\data\\Codec1buggy\\target\\classes",
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Codec_1_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Codec_1",
     "classes_tested": [
       "org.apache.commons.codec.language.Caverphone",
       "org.apache.commons.codec.language.DoubleMetaphone",
@@ -9,31 +9,34 @@
       "org.apache.commons.codec.language.SoundexUtils"
     ],
     "generated_tests": [
-      "org\\apache\\commons\\codec\\language\\ErrorTest.java",
-      "org\\apache\\commons\\codec\\language\\ErrorTest0.java",
-      "org\\apache\\commons\\codec\\language\\RegressionTest.java",
-      "org\\apache\\commons\\codec\\language\\RegressionTest0.java"
+      "org/apache/commons/codec/language/ErrorTest.java",
+      "org/apache/commons/codec/language/ErrorTest0.java",
+      "org/apache/commons/codec/language/RegressionTest.java",
+      "org/apache/commons/codec/language/RegressionTest0.java"
     ],
-    "time_limit": 5,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T00:42:14.448166",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:22:16.119970+00:00"
   },
   "Mockito_2": {
-    "source": "DISK_SYNC",
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_2_buggy",
-    "generated_tests": [
-      "Mockito_2_buggy/org/mockito/internal/util/RegressionTest.java",
-      "Mockito_2_buggy/org/mockito/internal/util/RegressionTest0.java"
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Mockito_2",
+    "classes_tested": [
+      "org.mockito.internal.util.Timer"
     ],
-    "note": "ตรวจพบไฟล์ Test ที่มีอยู่แล้วบนดิสก์",
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T00:50:23.333507",
+    "generated_tests": [
+      "org/mockito/internal/util/RegressionTest.java",
+      "org/mockito/internal/util/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:56:35.327258+00:00"
   },
   "Mockito_12": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_12_buggy",
@@ -45,12 +48,12 @@
       "org/mockito/internal/util/reflection/RegressionTest.java",
       "org/mockito/internal/util/reflection/RegressionTest0.java"
     ],
-    "time_limit": 5,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T00:54:16.955793",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:57:38.493054+00:00"
   },
   "Mockito_22": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_22_buggy",
@@ -60,18 +63,19 @@
     ],
     "generated_tests": [
       "org/mockito/internal/matchers/RegressionTest.java",
-      "org/mockito/internal/matchers/RegressionTest0.java"
+      "org/mockito/internal/matchers/RegressionTest0.java",
+      "org/mockito/internal/matchers/RegressionTest1.java"
     ],
-    "time_limit": 5,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T00:54:41.258078",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:03:59.099526+00:00"
   },
   "Mockito_29": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_29_buggy",
-    "classes_dir": "/tmp/d4j_test/mockito_29/target/classes",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Mockito_29",
     "classes_tested": [
       "org.mockito.internal.matchers.Same"
     ],
@@ -79,12 +83,12 @@
       "org/mockito/internal/matchers/RegressionTest.java",
       "org/mockito/internal/matchers/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T00:58:38.322893",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:02:52.275890+00:00"
   },
   "Jsoup_16": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Jsoup_16_buggy",
@@ -93,15 +97,17 @@
       "org.jsoup.nodes.DocumentType"
     ],
     "generated_tests": [
+      "org/jsoup/nodes/ErrorTest.java",
+      "org/jsoup/nodes/ErrorTest0.java",
       "org/jsoup/nodes/RegressionTest.java",
       "org/jsoup/nodes/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:01:13.342285",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:25:58.577082+00:00"
   },
   "Jsoup_40": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Jsoup_40_buggy",
@@ -113,12 +119,12 @@
       "org/jsoup/nodes/RegressionTest.java",
       "org/jsoup/nodes/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:02:50.580886",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:27:07.132960+00:00"
   },
   "Mockito_15": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_15_buggy",
@@ -130,12 +136,12 @@
       "org/mockito/internal/configuration/injection/RegressionTest.java",
       "org/mockito/internal/configuration/injection/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:03:38.882010",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:05:05.224584+00:00"
   },
   "JacksonDatabind_9": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_9_buggy",
@@ -147,12 +153,12 @@
       "com/fasterxml/jackson/databind/ser/std/RegressionTest.java",
       "com/fasterxml/jackson/databind/ser/std/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:10:08.247848",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:24:13.938464+00:00"
   },
   "Mockito_11": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_11_buggy",
@@ -164,12 +170,12 @@
       "org/mockito/internal/creation/RegressionTest.java",
       "org/mockito/internal/creation/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:10:44.320764",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:06:11.694654+00:00"
   },
   "JacksonDatabind_39": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_39_buggy",
@@ -181,12 +187,12 @@
       "com/fasterxml/jackson/databind/deser/std/RegressionTest.java",
       "com/fasterxml/jackson/databind/deser/std/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:11:11.225274",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:25:23.149102+00:00"
   },
   "Mockito_21": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_21_buggy",
@@ -3303,15 +3309,23 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_83": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 254\nstderr (ท้าย 20 บรรทัด):\n\tat com.google.javascript.jscomp.AbstractCommandLineRunner.run(AbstractCommandLineRunner.java:257)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat randoop.util.MethodReflectionCode.runReflectionCodeRaw(MethodReflectionCode.java:55)\n\tat randoop.util.ReflectionCode.runReflectionCode(ReflectionCode.java:64)\n\tat randoop.util.ReflectionExecutor.executeReflectionCodeUnThreaded(ReflectionExecutor.java:205)\n\tat randoop.util.ReflectionExecutor.executeReflectionCode(ReflectionExecutor.java:136)\n\tat randoop.operation.MethodCall.execute(MethodCall.java:186)\n\tat randoop.operation.TypedOperation.execute(TypedOperation.java:406)\n\tat randoop.sequence.Statement.execute(Statement.java:164)\n\tat randoop.sequence.ExecutableSequence.executeStatement(ExecutableSequence.java:419)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:311)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:240)\n\tat randoop.generation.ForwardGenerator.step(ForwardGenerator.java:236)\n\tat randoop.generation.AbstractGenerator.createAndClassifySequences(AbstractGenerator.java:299)\n\tat randoop.main.GenTests.handle(GenTests.java:570)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\nstdout (ท้าย 9 บรรทัด):\nRandoop for Java version 4.3.4.\n\nWill try to generate tests for 1 classes.\nPUBLIC MEMBERS=10\nExplorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;\n    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;\n    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)\n\nProgress update: steps=1, test inputs generated=0, failing inputs=0      (2026-09-25T16:54:12.872600Z     56.6M used)",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_83_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_83",
+    "classes_tested": [
       "com.google.javascript.jscomp.CommandLineRunner"
     ],
-    "timestamp": "2026-09-25T16:54:13.404945+00:00",
+    "generated_tests": [
+      "com/google/javascript/jscomp/ErrorTest.java",
+      "com/google/javascript/jscomp/ErrorTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java",
+      "com/google/javascript/jscomp/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:23:16.792435+00:00"
   },
   "Closure_84": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_84_buggy",
@@ -3727,15 +3741,23 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_107": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 254\nstderr (ท้าย 20 บรรทัด):\n\tat com.google.javascript.jscomp.AbstractCommandLineRunner.run(AbstractCommandLineRunner.java:372)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat randoop.util.MethodReflectionCode.runReflectionCodeRaw(MethodReflectionCode.java:55)\n\tat randoop.util.ReflectionCode.runReflectionCode(ReflectionCode.java:64)\n\tat randoop.util.ReflectionExecutor.executeReflectionCodeUnThreaded(ReflectionExecutor.java:205)\n\tat randoop.util.ReflectionExecutor.executeReflectionCode(ReflectionExecutor.java:136)\n\tat randoop.operation.MethodCall.execute(MethodCall.java:186)\n\tat randoop.operation.TypedOperation.execute(TypedOperation.java:406)\n\tat randoop.sequence.Statement.execute(Statement.java:164)\n\tat randoop.sequence.ExecutableSequence.executeStatement(ExecutableSequence.java:419)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:311)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:240)\n\tat randoop.generation.ForwardGenerator.step(ForwardGenerator.java:236)\n\tat randoop.generation.AbstractGenerator.createAndClassifySequences(AbstractGenerator.java:299)\n\tat randoop.main.GenTests.handle(GenTests.java:570)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\nstdout (ท้าย 9 บรรทัด):\nRandoop for Java version 4.3.4.\n\nWill try to generate tests for 1 classes.\nPUBLIC MEMBERS=10\nExplorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;\n    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;\n    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)\n\nProgress update: steps=1, test inputs generated=0, failing inputs=0      (2026-09-25T16:55:18.814546Z     58.0M used)",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_107_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_107",
+    "classes_tested": [
       "com.google.javascript.jscomp.CommandLineRunner"
     ],
-    "timestamp": "2026-09-25T16:55:19.439897+00:00",
+    "generated_tests": [
+      "com/google/javascript/jscomp/ErrorTest.java",
+      "com/google/javascript/jscomp/ErrorTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java",
+      "com/google/javascript/jscomp/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:24:34.859016+00:00"
   },
   "Closure_108": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_108_buggy",
@@ -4569,15 +4591,23 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_151": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 254\nstderr (ท้าย 20 บรรทัด):\n\tat com.google.javascript.jscomp.AbstractCommandLineRunner.run(AbstractCommandLineRunner.java:249)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat randoop.util.MethodReflectionCode.runReflectionCodeRaw(MethodReflectionCode.java:55)\n\tat randoop.util.ReflectionCode.runReflectionCode(ReflectionCode.java:64)\n\tat randoop.util.ReflectionExecutor.executeReflectionCodeUnThreaded(ReflectionExecutor.java:205)\n\tat randoop.util.ReflectionExecutor.executeReflectionCode(ReflectionExecutor.java:136)\n\tat randoop.operation.MethodCall.execute(MethodCall.java:186)\n\tat randoop.operation.TypedOperation.execute(TypedOperation.java:406)\n\tat randoop.sequence.Statement.execute(Statement.java:164)\n\tat randoop.sequence.ExecutableSequence.executeStatement(ExecutableSequence.java:419)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:311)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:240)\n\tat randoop.generation.ForwardGenerator.step(ForwardGenerator.java:236)\n\tat randoop.generation.AbstractGenerator.createAndClassifySequences(AbstractGenerator.java:299)\n\tat randoop.main.GenTests.handle(GenTests.java:570)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\nstdout (ท้าย 9 บรรทัด):\nRandoop for Java version 4.3.4.\n\nWill try to generate tests for 1 classes.\nPUBLIC MEMBERS=10\nExplorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;\n    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;\n    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)\n\nProgress update: steps=1, test inputs generated=0, failing inputs=0      (2026-09-25T16:56:17.908058Z     56.2M used)",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_151_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_151",
+    "classes_tested": [
       "com.google.javascript.jscomp.CommandLineRunner"
     ],
-    "timestamp": "2026-09-25T16:56:18.450091+00:00",
+    "generated_tests": [
+      "com/google/javascript/jscomp/ErrorTest.java",
+      "com/google/javascript/jscomp/ErrorTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java",
+      "com/google/javascript/jscomp/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:21:50.295688+00:00"
   },
   "Closure_152": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_152_buggy",
@@ -5438,15 +5468,16 @@
   },
   "Mockito_14": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nThrowable thrown while handling command: randoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.internal.RegressionTest0\\E\\.\\Qtest21\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\nrandoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.internal.RegressionTest0\\E\\.\\Qtest21\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.MockHandlerInterface<org.mockito.stubbing.VoidMethodStubbable<java.lang.reflect.AnnotatedElement>> annotatedElementVoidMethodStubbableMockHandlerInterface0 = null;\norg.mockito.internal.MockHandler<org.mockito.stubbing.VoidMethodStubbable<java.lang.reflect.AnnotatedElement>> annotatedElementVoidMethodStubbableMockHandler1 = new org.mockito.internal.MockHandler<org.mockito.stubbing.VoidMethodStubbable<java.lang.reflect.AnnotatedElement>>(annotatedElementVoidMethodStubbableMockHandlerInterface0);",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.creation.MockSettingsImpl mockSettingsImpl0 = null;\norg.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement> annotatedElementMockHandler1 = new org.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement>(mockSettingsImpl0);\norg.mockito.internal.stubbing.InvocationContainer invocationContainer2 = annotatedElementMockHandler1.getInvocationContainer();\norg.mockito.internal.invocation.MatchersBinder matchersBinder3 = annotatedElementMockHandler1.matchersBinder;\norg.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement> annotatedElementMockHandler4 = new org.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement>((org.mockito.internal.MockHandlerInterface<java.lang.reflect.AnnotatedElement>)annotatedElementMockHandler1);\norg.mockito.internal.invocation.MatchersBinder matchersBinder5 = annotatedElementMockHandler1.matchersBinder;\norg.mockito.stubbing.Answer[] answerArray6 = new org.mockito.stubbing.Answer[] {  };\njava.util.ArrayList<org.mockito.stubbing.Answer> answerList7 = new java.util.ArrayList<org.mockito.stubbing.Answer>();\nboolean boolean8 = java.util.Collections.addAll((java.util.Collection<org.mockito.stubbing.Answer>) answerList7, answerArray6);\nannotatedElementMockHandler1.setAnswersForStubbing((java.util.List<org.mockito.stubbing.Answer>) answerList7);",
     "classes": [
       "org.mockito.internal.MockHandler",
       "org.mockito.internal.MockitoCore"
     ],
-    "timestamp": "2026-09-22T08:56:42.231007",
+    "timestamp": "2026-09-28T14:07:19.029784+00:00",
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   },
   "Mockito_35": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Mockito_35_buggy",
@@ -5557,15 +5588,16 @@
   },
   "Mockito_16": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nThrowable thrown while handling command: randoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\nrandoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \njava.lang.String str1 = org.mockito.Matchers.endsWith(\"\");",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nThrowable thrown while handling command: randoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\nrandoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.MockitoCore mockitoCore0 = new org.mockito.internal.MockitoCore();\norg.mockito.internal.MockitoCore mockitoCore1 = org.mockito.Matchers.eq(mockitoCore0);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer2 = org.mockito.Mockito.RETURNS_DEFAULTS;\norg.mockito.internal.verification.api.VerificationMode verificationMode4 = org.mockito.Mockito.atMost((int) (short)100);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer5 = mockitoCore0.verify(objAnswer2, verificationMode4);",
     "classes": [
       "org.mockito.Mockito",
       "org.mockito.internal.MockitoCore"
     ],
-    "timestamp": "2026-09-22T08:58:03.382358",
+    "timestamp": "2026-09-28T14:08:24.402826+00:00",
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   },
   "Time_15": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Time_15_buggy",
@@ -6381,16 +6413,17 @@
   },
   "Codec_14": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 8 บรรทัด):\nRandoop for Java version 4.3.4.\n\nCould not load class org.apache.commons.codec.language.bm.Lang: Unable to load class \"org.apache.commons.codec.language.bm.Lang\" due to exception: java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/bm/ash_languages.txt\nClasspath:\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/sqa_randoop/Codec_14-zp79d_af/jars/randoop-all-4.3.4.jar\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Codec_14\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/d4j_work/Codec_14_buggy/target/classes\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/d4j_work/Codec_14_buggy/src/main/resources/commons-lang3-3.8.1.jar",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 12 บรรทัด):\nRandoop for Java version 4.3.4.\n\nCould not load class org.apache.commons.codec.language.bm.Lang: Unable to load class \"org.apache.commons.codec.language.bm.Lang\" due to exception: java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/bm/ash_languages.txt\nClasspath:\n/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/sqa_randoop/Codec_14-8nv3_qaa/jars/randoop-all-4.3.4.jar\n/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Codec_14\n/tmp/sqa_d4j_work/Codec_14_buggy/target/classes\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/junit/junit/4.12/junit-4.12.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar\n/tmp/sqa_d4j_work/Codec_14_buggy/src/main/resources/commons-lang3-3.8.1.jar",
     "classes": [
       "org.apache.commons.codec.language.bm.Lang",
       "org.apache.commons.codec.language.bm.PhoneticEngine",
       "org.apache.commons.codec.language.bm.Rule"
     ],
-    "timestamp": "2026-09-25T16:57:55.835859+00:00",
+    "timestamp": "2026-09-28T13:34:40.565153+00:00",
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   },
   "Collections_26": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Collections_26_buggy",
@@ -10131,15 +10164,21 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "JacksonDatabind_87": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat29 = stdDateFormat27.withTimeZone(timeZone28);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat30 = new com.fasterxml.jackson.databind.util.StdDateFormat();\njava.text.NumberFormat numberFormat31 = stdDateFormat30.getNumberFormat();\njava.text.DateFormat dateFormat32 = stdDateFormat30._formatISO8601_z;\njava.util.TimeZone timeZone33 = stdDateFormat30.getTimeZone();\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat34 = new com.fasterxml.jackson.databind.util.StdDateFormat();\njava.text.NumberFormat numberFormat35 = stdDateFormat34.getNumberFormat();\njava.text.DateFormat dateFormat36 = stdDateFormat34._formatISO8601_z;\nstdDateFormat30._formatPlain = stdDateFormat34;\njava.text.DateFormat dateFormat38 = stdDateFormat30._formatRFC1123;\njava.util.TimeZone timeZone39 = null;\nstdDateFormat30._timezone = timeZone39;\njava.util.Locale locale41 = stdDateFormat30._locale;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat43 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone28, locale41, (java.lang.Boolean)false);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat44 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone26, locale41);\njava.text.DateFormat dateFormat45 = com.fasterxml.jackson.databind.util.StdDateFormat.getRFC1123Format(timeZone26);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat46 = stdDateFormat17.withTimeZone(timeZone26);\njava.util.TimeZone timeZone47 = stdDateFormat46.getTimeZone();\njava.util.Locale locale48 = stdDateFormat46._locale;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat50 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone3, locale48, (java.lang.Boolean)false);",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_87_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/JacksonDatabind_87",
+    "classes_tested": [
       "com.fasterxml.jackson.databind.util.StdDateFormat"
     ],
-    "timestamp": "2026-09-25T17:04:50.636628+00:00",
+    "generated_tests": [
+      "com/fasterxml/jackson/databind/util/RegressionTest.java",
+      "com/fasterxml/jackson/databind/util/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:26:32.678049+00:00"
   },
   "JacksonDatabind_40": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_40_buggy",
@@ -10726,14 +10765,15 @@
   },
   "JacksonDatabind_47": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\ncom.fasterxml.jackson.databind.introspect.AnnotatedClass annotatedClass73 = null;\njava.lang.Boolean boolean74 = annotationIntrospector70.isIgnorableType(annotatedClass73);\ncom.fasterxml.jackson.databind.introspect.Annotated annotated75 = null;\ncom.fasterxml.jackson.databind.JavaType javaType76 = null;\njava.lang.Class<?> wildcardClass77 = annotationIntrospector70.findSerializationContentType(annotated75, javaType76);\ncom.fasterxml.jackson.databind.introspect.Annotated annotated78 = null;\njava.lang.Class<?>[] wildcardClassArray79 = annotationIntrospector70.findViews(annotated78);\njava.lang.Class<Capture70> capture70Class80 = null;\njava.lang.Enum[] enumArray82 = new java.lang.Enum[ 0 ];\n@SuppressWarnings(\"unchecked\")\njava.lang.Enum<?>[] wildcardEnumArray83 = (java.lang.Enum<?>[])enumArray82;\njava.lang.String[] strArray90 = new java.lang.String[] { \"hi!\", \"\", \"\", \"hi!\", \"\", \"hi!\" };\njava.lang.String[] strArray91 = annotationIntrospector70.findEnumValues(capture70Class80, wildcardEnumArray83, strArray90);\njava.lang.String[] strArray92 = annotationIntrospector61.findEnumValues((java.lang.Class<Capture135>) wildcardClass66, (java.lang.Enum<?>[]) enumArray68, strArray91);\njava.lang.String[] strArray93 = annotationIntrospector6.findEnumValues((java.lang.Class<Capture183>) wildcardClass28, (java.lang.Enum<?>[]) enumArray36, strArray92);\njava.lang.Class[] classArray95 = new java.lang.Class[ 1 ];\n@SuppressWarnings(\"unchecked\")\njava.lang.Class<? extends java.lang.annotation.Annotation>[] wildcardClassArray96 = (java.lang.Class<? extends java.lang.annotation.Annotation>[])classArray95;\nwildcardClassArray96[0] = wildcardClass28;\nboolean boolean99 = annotationIntrospector0._hasOneOf(annotated5, wildcardClassArray96);",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
     "classes": [
       "com.fasterxml.jackson.databind.AnnotationIntrospector"
     ],
-    "timestamp": "2026-09-25T17:02:49.270150+00:00",
+    "timestamp": "2026-09-28T13:45:03.132887+00:00",
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   },
   "JacksonDatabind_7": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_7_buggy",
@@ -11162,15 +11202,16 @@
   },
   "JacksonDatabind_30": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\ncom.fasterxml.jackson.databind.cfg.ContextAttributes contextAttributes19 = null;\ncom.fasterxml.jackson.databind.ObjectWriter objectWriter20 = objectMapper18.writer(contextAttributes19);\ncom.fasterxml.jackson.core.Version version21 = objectMapper18.version();\ncom.fasterxml.jackson.databind.DeserializationConfig deserializationConfig22 = objectMapper18.getDeserializationConfig();\ncom.fasterxml.jackson.core.JsonFactory jsonFactory23 = null;\ncom.fasterxml.jackson.databind.ObjectMapper objectMapper24 = new com.fasterxml.jackson.databind.ObjectMapper(jsonFactory23);\ncom.fasterxml.jackson.databind.cfg.ContextAttributes contextAttributes25 = null;\ncom.fasterxml.jackson.databind.ObjectWriter objectWriter26 = objectMapper24.writer(contextAttributes25);\ncom.fasterxml.jackson.databind.jsontype.SubtypeResolver subtypeResolver27 = null;\nobjectMapper24._subtypeResolver = subtypeResolver27;\ncom.fasterxml.jackson.databind.AnnotationIntrospector annotationIntrospector29 = com.fasterxml.jackson.databind.ObjectMapper.DEFAULT_ANNOTATION_INTROSPECTOR;\ncom.fasterxml.jackson.databind.AnnotationIntrospector annotationIntrospector30 = com.fasterxml.jackson.databind.ObjectMapper.DEFAULT_ANNOTATION_INTROSPECTOR;\ncom.fasterxml.jackson.databind.ObjectMapper objectMapper31 = objectMapper24.setAnnotationIntrospectors(annotationIntrospector29, annotationIntrospector30);\ncom.fasterxml.jackson.databind.ObjectMapper objectMapper32 = objectMapper18.setAnnotationIntrospector(annotationIntrospector30);\ncom.fasterxml.jackson.databind.DeserializationConfig deserializationConfig33 = objectMapper18.getDeserializationConfig();\nobjectMapper16._deserializationConfig = deserializationConfig33;\ntokenBuffer1.writeTypeId((java.lang.Object) deserializationConfig33);\njava.math.BigInteger bigInteger36 = null;\ntokenBuffer1.writeNumber(bigInteger36);\ntokenBuffer1.writeStartArray();",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
     "classes": [
       "com.fasterxml.jackson.databind.ObjectMapper",
       "com.fasterxml.jackson.databind.util.TokenBuffer"
     ],
-    "timestamp": "2026-09-25T17:02:04.908931+00:00",
+    "timestamp": "2026-09-28T13:55:03.158619+00:00",
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   },
   "JacksonDatabind_103": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_103_buggy",
@@ -17410,5 +17451,262 @@
     "round": 1,
     "seed": 0,
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "_script_runs": {
+    "latest": {
+      "entrypoint": "script/Randoop/round1/results.py",
+      "phase": "results",
+      "round": 1,
+      "arguments": [
+        "--workers",
+        "2"
+      ],
+      "started_at": "2026-09-28T14:38:40.399284+00:00",
+      "status": "COMPLETED",
+      "script": "run_feedback_directed_tests",
+      "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/generation_state.json",
+      "run_id": "20260928T143840664410Z_3279",
+      "total_duration_seconds": 388.14,
+      "finished_at": "2026-09-28T14:45:08.539089+00:00"
+    },
+    "history": {
+      "20260928T132008405406Z_68": {
+        "entrypoint": "script/Randoop/round1/generate.py",
+        "phase": "generate",
+        "round": 1,
+        "arguments": [
+          "--round",
+          "1",
+          "--workers",
+          "2"
+        ],
+        "started_at": "2026-09-28T13:20:06.663227+00:00",
+        "status": "RUNNING",
+        "script": "run_randoop_parallel",
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/generation_state.json",
+        "seed": 0,
+        "time_limit": 60,
+        "workers": 2,
+        "projects": [
+          "Chart",
+          "Cli",
+          "Closure",
+          "Codec",
+          "Collections",
+          "Compress",
+          "Csv",
+          "Gson",
+          "JacksonCore",
+          "JacksonDatabind",
+          "JacksonXml",
+          "Jsoup",
+          "JxPath",
+          "Lang",
+          "Math",
+          "Mockito",
+          "Time"
+        ],
+        "run_id": "20260928T132008405406Z_68",
+        "total_duration_seconds": null,
+        "finished_at": null
+      },
+      "20260928T133429994169Z_39": {
+        "entrypoint": "script/Randoop/round1/generate.py",
+        "phase": "generate",
+        "round": 1,
+        "arguments": [
+          "--round",
+          "1",
+          "--workers",
+          "2"
+        ],
+        "started_at": "2026-09-28T13:34:28.238177+00:00",
+        "status": "FAILED",
+        "script": "run_randoop_parallel",
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/generation_state.json",
+        "seed": 0,
+        "time_limit": 60,
+        "workers": 2,
+        "projects": [
+          "Chart",
+          "Cli",
+          "Closure",
+          "Codec",
+          "Collections",
+          "Compress",
+          "Csv",
+          "Gson",
+          "JacksonCore",
+          "JacksonDatabind",
+          "JacksonXml",
+          "Jsoup",
+          "JxPath",
+          "Lang",
+          "Math",
+          "Mockito",
+          "Time"
+        ],
+        "run_id": "20260928T133429994169Z_39",
+        "total_duration_seconds": 3405.378,
+        "finished_at": "2026-09-28T14:31:13.615929+00:00"
+      },
+      "20260928T143603574999Z_3202": {
+        "entrypoint": "script/Randoop/round1/results.py",
+        "phase": "results",
+        "round": 1,
+        "arguments": [
+          "--collect-only"
+        ],
+        "started_at": "2026-09-28T14:36:03.245829+00:00",
+        "status": "COMPLETED",
+        "script": "run_feedback_directed_tests",
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/generation_state.json",
+        "run_id": "20260928T143603574999Z_3202",
+        "total_duration_seconds": 54.852,
+        "finished_at": "2026-09-28T14:36:58.097908+00:00"
+      },
+      "20260928T143840664410Z_3279": {
+        "entrypoint": "script/Randoop/round1/results.py",
+        "phase": "results",
+        "round": 1,
+        "arguments": [
+          "--workers",
+          "2"
+        ],
+        "started_at": "2026-09-28T14:38:40.399284+00:00",
+        "status": "COMPLETED",
+        "script": "run_feedback_directed_tests",
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/generation_state.json",
+        "run_id": "20260928T143840664410Z_3279",
+        "total_duration_seconds": 388.14,
+        "finished_at": "2026-09-28T14:45:08.539089+00:00"
+      }
+    }
+  },
+  "Lang_12": {
+    "status": "FAILED",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
+    "classes": [
+      "org.apache.commons.lang3.RandomStringUtils"
+    ],
+    "timestamp": "2026-09-28T13:45:22.527370+00:00",
+    "round": 1,
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Lang_11": {
+    "status": "FAILED",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
+    "classes": [
+      "org.apache.commons.lang3.RandomStringUtils"
+    ],
+    "timestamp": "2026-09-28T13:55:22.609746+00:00",
+    "round": 1,
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Math_60": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_60_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_60",
+    "classes_tested": [
+      "org.apache.commons.math.distribution.NormalDistributionImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/distribution/RegressionTest.java",
+      "org/apache/commons/math/distribution/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:02:06.795924+00:00"
+  },
+  "Math_61": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_61_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_61",
+    "classes_tested": [
+      "org.apache.commons.math.distribution.PoissonDistributionImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/distribution/RegressionTest.java",
+      "org/apache/commons/math/distribution/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:08:29.589520+00:00"
+  },
+  "Math_105": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_105_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_105",
+    "classes_tested": [
+      "org.apache.commons.math.stat.regression.SimpleRegression"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/stat/regression/RegressionTest.java",
+      "org/apache/commons/math/stat/regression/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:12:41.692018+00:00"
+  },
+  "Math_36": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_36_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_36",
+    "classes_tested": [
+      "org.apache.commons.math.fraction.BigFraction"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/fraction/RegressionTest.java",
+      "org/apache/commons/math/fraction/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:18:56.304424+00:00"
+  },
+  "Math_79": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_79_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_79",
+    "classes_tested": [
+      "org.apache.commons.math.util.MathUtils"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/util/RegressionTest.java",
+      "org/apache/commons/math/util/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:24:33.583431+00:00"
+  },
+  "Math_16": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_16_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_16",
+    "classes_tested": [
+      "org.apache.commons.math3.util.FastMath"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math3/util/RegressionTest.java",
+      "org/apache/commons/math3/util/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:31:04.890278+00:00"
   }
 }

@@ -1538,15 +1538,23 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_83": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 254\nstderr (ท้าย 20 บรรทัด):\n\tat com.google.javascript.jscomp.AbstractCommandLineRunner.run(AbstractCommandLineRunner.java:257)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat randoop.util.MethodReflectionCode.runReflectionCodeRaw(MethodReflectionCode.java:55)\n\tat randoop.util.ReflectionCode.runReflectionCode(ReflectionCode.java:64)\n\tat randoop.util.ReflectionExecutor.executeReflectionCodeUnThreaded(ReflectionExecutor.java:205)\n\tat randoop.util.ReflectionExecutor.executeReflectionCode(ReflectionExecutor.java:136)\n\tat randoop.operation.MethodCall.execute(MethodCall.java:186)\n\tat randoop.operation.TypedOperation.execute(TypedOperation.java:406)\n\tat randoop.sequence.Statement.execute(Statement.java:164)\n\tat randoop.sequence.ExecutableSequence.executeStatement(ExecutableSequence.java:419)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:311)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:240)\n\tat randoop.generation.ForwardGenerator.step(ForwardGenerator.java:236)\n\tat randoop.generation.AbstractGenerator.createAndClassifySequences(AbstractGenerator.java:299)\n\tat randoop.main.GenTests.handle(GenTests.java:570)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\nstdout (ท้าย 9 บรรทัด):\nRandoop for Java version 4.3.4.\n\nWill try to generate tests for 1 classes.\nPUBLIC MEMBERS=10\nExplorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;\n    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;\n    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)\n\nProgress update: steps=1, test inputs generated=0, failing inputs=0      (2026-09-25T16:54:12.872600Z     56.6M used)",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_83_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_83",
+    "classes_tested": [
       "com.google.javascript.jscomp.CommandLineRunner"
     ],
-    "timestamp": "2026-09-25T16:54:13.404945+00:00",
+    "generated_tests": [
+      "com/google/javascript/jscomp/ErrorTest.java",
+      "com/google/javascript/jscomp/ErrorTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java",
+      "com/google/javascript/jscomp/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:23:16.792435+00:00"
   },
   "Closure_84": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_84_buggy",
@@ -1962,15 +1970,23 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_107": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 254\nstderr (ท้าย 20 บรรทัด):\n\tat com.google.javascript.jscomp.AbstractCommandLineRunner.run(AbstractCommandLineRunner.java:372)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat randoop.util.MethodReflectionCode.runReflectionCodeRaw(MethodReflectionCode.java:55)\n\tat randoop.util.ReflectionCode.runReflectionCode(ReflectionCode.java:64)\n\tat randoop.util.ReflectionExecutor.executeReflectionCodeUnThreaded(ReflectionExecutor.java:205)\n\tat randoop.util.ReflectionExecutor.executeReflectionCode(ReflectionExecutor.java:136)\n\tat randoop.operation.MethodCall.execute(MethodCall.java:186)\n\tat randoop.operation.TypedOperation.execute(TypedOperation.java:406)\n\tat randoop.sequence.Statement.execute(Statement.java:164)\n\tat randoop.sequence.ExecutableSequence.executeStatement(ExecutableSequence.java:419)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:311)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:240)\n\tat randoop.generation.ForwardGenerator.step(ForwardGenerator.java:236)\n\tat randoop.generation.AbstractGenerator.createAndClassifySequences(AbstractGenerator.java:299)\n\tat randoop.main.GenTests.handle(GenTests.java:570)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\nstdout (ท้าย 9 บรรทัด):\nRandoop for Java version 4.3.4.\n\nWill try to generate tests for 1 classes.\nPUBLIC MEMBERS=10\nExplorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;\n    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;\n    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)\n\nProgress update: steps=1, test inputs generated=0, failing inputs=0      (2026-09-25T16:55:18.814546Z     58.0M used)",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_107_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_107",
+    "classes_tested": [
       "com.google.javascript.jscomp.CommandLineRunner"
     ],
-    "timestamp": "2026-09-25T16:55:19.439897+00:00",
+    "generated_tests": [
+      "com/google/javascript/jscomp/ErrorTest.java",
+      "com/google/javascript/jscomp/ErrorTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java",
+      "com/google/javascript/jscomp/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:24:34.859016+00:00"
   },
   "Closure_108": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_108_buggy",
@@ -2804,15 +2820,23 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_151": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 254\nstderr (ท้าย 20 บรรทัด):\n\tat com.google.javascript.jscomp.AbstractCommandLineRunner.run(AbstractCommandLineRunner.java:249)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat randoop.util.MethodReflectionCode.runReflectionCodeRaw(MethodReflectionCode.java:55)\n\tat randoop.util.ReflectionCode.runReflectionCode(ReflectionCode.java:64)\n\tat randoop.util.ReflectionExecutor.executeReflectionCodeUnThreaded(ReflectionExecutor.java:205)\n\tat randoop.util.ReflectionExecutor.executeReflectionCode(ReflectionExecutor.java:136)\n\tat randoop.operation.MethodCall.execute(MethodCall.java:186)\n\tat randoop.operation.TypedOperation.execute(TypedOperation.java:406)\n\tat randoop.sequence.Statement.execute(Statement.java:164)\n\tat randoop.sequence.ExecutableSequence.executeStatement(ExecutableSequence.java:419)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:311)\n\tat randoop.sequence.ExecutableSequence.execute(ExecutableSequence.java:240)\n\tat randoop.generation.ForwardGenerator.step(ForwardGenerator.java:236)\n\tat randoop.generation.AbstractGenerator.createAndClassifySequences(AbstractGenerator.java:299)\n\tat randoop.main.GenTests.handle(GenTests.java:570)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\nstdout (ท้าย 9 บรรทัด):\nRandoop for Java version 4.3.4.\n\nWill try to generate tests for 1 classes.\nPUBLIC MEMBERS=10\nExplorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;\n    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;\n    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)\n\nProgress update: steps=1, test inputs generated=0, failing inputs=0      (2026-09-25T16:56:17.908058Z     56.2M used)",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_151_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_151",
+    "classes_tested": [
       "com.google.javascript.jscomp.CommandLineRunner"
     ],
-    "timestamp": "2026-09-25T16:56:18.450091+00:00",
+    "generated_tests": [
+      "com/google/javascript/jscomp/ErrorTest.java",
+      "com/google/javascript/jscomp/ErrorTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java",
+      "com/google/javascript/jscomp/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:21:50.295688+00:00"
   },
   "Closure_152": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_152_buggy",
@@ -3291,5 +3315,111 @@
     "round": 1,
     "seed": 0,
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-28T13:34:35.240869+00:00",
+      "status": "COMPLETED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "Closure",
+        "--state-file",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--project-timeout",
+        "600",
+        "--round",
+        "1",
+        "--seed",
+        "0",
+        "--output-dir",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+      ],
+      "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+      "round": 1,
+      "seed": 0,
+      "time_limit": 60,
+      "project": "Closure",
+      "run_id": "20260928T133435469225Z_57",
+      "success": 0,
+      "skipped": 172,
+      "failed": 0,
+      "total_duration_seconds": 12.139,
+      "finished_at": "2026-09-28T13:34:47.379990+00:00"
+    },
+    "history": {
+      "20260928T132013495894Z_83": {
+        "started_at": "2026-09-28T13:20:13.223743+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Closure",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "600",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--output-dir",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Closure",
+        "run_id": "20260928T132013495894Z_83",
+        "success": 3,
+        "skipped": 169,
+        "failed": 0,
+        "total_duration_seconds": 264.039,
+        "finished_at": "2026-09-28T13:24:37.262704+00:00"
+      },
+      "20260928T133435469225Z_57": {
+        "started_at": "2026-09-28T13:34:35.240869+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Closure",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "600",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--output-dir",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Closure",
+        "run_id": "20260928T133435469225Z_57",
+        "success": 0,
+        "skipped": 172,
+        "failed": 0,
+        "total_duration_seconds": 12.139,
+        "finished_at": "2026-09-28T13:34:47.379990+00:00"
+      }
+    }
   }
 }

@@ -5,8 +5,8 @@
   "duration_seconds": 33.67,
   "project": "Jsoup",
   "bug_id": 16,
-  "seed": 20260918,
-  "budget": 10,
+  "seed": 0,
+  "budget": 60,
   "tests": 6,
   "test_files": 2,
   "coverage": 83.33,
@@ -53,5 +53,8 @@
       "test_status": "FAIL",
       "duration_seconds": 13.66
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "EXPLICIT"
 }

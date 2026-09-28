@@ -59,24 +59,14 @@ public class RegressionTest0 {
     public void test04() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test04");
-        org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
-        boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
-        metaphone0.setMaxCodeLen((int) (byte) 10);
-        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        int int2 = org.apache.commons.codec.language.SoundexUtils.differenceEncoded("hi!", "");
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
     }
 
     @Test
     public void test05() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test05");
-        int int2 = org.apache.commons.codec.language.SoundexUtils.differenceEncoded("hi!", "");
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-    }
-
-    @Test
-    public void test06() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test06");
         org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
         java.lang.String str2 = caverphone0.encode("");
         java.lang.Object obj3 = null;
@@ -91,9 +81,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test07() throws Throwable {
+    public void test06() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test07");
+            System.out.format("%n%s%n", "RegressionTest0.test06");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
         int int4 = metaphone0.getMaxCodeLen();
@@ -109,9 +99,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test08() throws Throwable {
+    public void test07() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test08");
+            System.out.format("%n%s%n", "RegressionTest0.test07");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("AA11111111", "");
         java.lang.String str5 = metaphone0.metaphone("hi!");
@@ -120,32 +110,32 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test08() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test08");
+        org.apache.commons.codec.language.SoundexUtils soundexUtils0 = new org.apache.commons.codec.language.SoundexUtils();
+    }
+
+    @Test
     public void test09() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test09");
-        org.apache.commons.codec.language.SoundexUtils soundexUtils0 = new org.apache.commons.codec.language.SoundexUtils();
+        java.lang.String str1 = org.apache.commons.codec.language.SoundexUtils.clean("hi!");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "HI" + "'", str1, "HI");
     }
 
     @Test
     public void test10() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test10");
-        java.lang.String str1 = org.apache.commons.codec.language.SoundexUtils.clean("hi!");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "HI" + "'", str1, "HI");
+        org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
+        doubleMetaphone0.setMaxCodeLen((int) (byte) 0);
     }
 
     @Test
     public void test11() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test11");
-        org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
-        doubleMetaphone0.setMaxCodeLen((int) (byte) 0);
-    }
-
-    @Test
-    public void test12() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test12");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
         int int4 = metaphone0.getMaxCodeLen();
@@ -157,35 +147,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test13() throws Throwable {
+    public void test12() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test13");
+            System.out.format("%n%s%n", "RegressionTest0.test12");
         java.lang.String str1 = org.apache.commons.codec.language.SoundexUtils.clean("H");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "H" + "'", str1, "H");
     }
 
     @Test
-    public void test14() throws Throwable {
+    public void test13() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test14");
+            System.out.format("%n%s%n", "RegressionTest0.test13");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         java.lang.String str2 = doubleMetaphone0.encode("hi!");
         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "H" + "'", str2, "H");
     }
 
     @Test
-    public void test15() throws Throwable {
+    public void test14() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test15");
-        org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
-        boolean boolean3 = caverphone0.isCaverphoneEqual("1111111111", "AA11111111");
-        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
-    }
-
-    @Test
-    public void test16() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test16");
+            System.out.format("%n%s%n", "RegressionTest0.test14");
         org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
         java.lang.String str2 = caverphone0.encode("");
         java.lang.String str4 = caverphone0.encode("1111111111");
@@ -198,17 +179,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test17() throws Throwable {
+    public void test15() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test17");
+            System.out.format("%n%s%n", "RegressionTest0.test15");
         java.lang.String str1 = org.apache.commons.codec.language.SoundexUtils.clean("HI");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "HI" + "'", str1, "HI");
     }
 
     @Test
-    public void test18() throws Throwable {
+    public void test16() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test18");
+            System.out.format("%n%s%n", "RegressionTest0.test16");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         char char3 = doubleMetaphone0.charAt("hi!", 10);
         java.lang.String str6 = doubleMetaphone0.doubleMetaphone("", false);
@@ -219,9 +200,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test19() throws Throwable {
+    public void test17() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test19");
+            System.out.format("%n%s%n", "RegressionTest0.test17");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
         int int4 = metaphone0.getMaxCodeLen();
@@ -238,9 +219,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test20() throws Throwable {
+    public void test18() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test20");
+            System.out.format("%n%s%n", "RegressionTest0.test18");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         char char3 = doubleMetaphone0.charAt("H", (int) (short) 1);
         boolean boolean6 = doubleMetaphone0.isDoubleMetaphoneEqual("hi!", "H");
@@ -249,17 +230,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test21() throws Throwable {
+    public void test19() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test21");
+            System.out.format("%n%s%n", "RegressionTest0.test19");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         doubleMetaphone0.setMaxCodeLen(1);
     }
 
     @Test
-    public void test22() throws Throwable {
+    public void test20() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test22");
+            System.out.format("%n%s%n", "RegressionTest0.test20");
         org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
         java.lang.String str2 = caverphone0.caverphone("hi!");
         boolean boolean5 = caverphone0.isCaverphoneEqual("hi!", "");
@@ -274,30 +255,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test23() throws Throwable {
+    public void test21() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test23");
+            System.out.format("%n%s%n", "RegressionTest0.test21");
         int int2 = org.apache.commons.codec.language.SoundexUtils.differenceEncoded("", "");
         org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
     }
 
     @Test
-    public void test24() throws Throwable {
+    public void test22() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test24");
-        org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
-        java.lang.String str2 = caverphone0.caverphone("hi!");
-        boolean boolean5 = caverphone0.isCaverphoneEqual("hi!", "");
-        java.lang.String str7 = caverphone0.encode("AA11111111");
-        org.junit.Assert.assertEquals("'" + str2 + "' != '" + "AA11111111" + "'", str2, "AA11111111");
-        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
-        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "AA11111111" + "'", str7, "AA11111111");
-    }
-
-    @Test
-    public void test25() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test25");
+            System.out.format("%n%s%n", "RegressionTest0.test22");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         org.apache.commons.codec.language.Caverphone caverphone1 = new org.apache.commons.codec.language.Caverphone();
         java.lang.String str3 = caverphone1.caverphone("hi!");
@@ -318,9 +286,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test26() throws Throwable {
+    public void test23() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test26");
+            System.out.format("%n%s%n", "RegressionTest0.test23");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         char char3 = doubleMetaphone0.charAt("hi!", 10);
         java.lang.String str6 = doubleMetaphone0.doubleMetaphone("", false);
@@ -334,9 +302,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test27() throws Throwable {
+    public void test24() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test27");
+            System.out.format("%n%s%n", "RegressionTest0.test24");
         org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
         java.lang.String str2 = caverphone0.encode("");
         java.lang.String str4 = caverphone0.encode("1111111111");
@@ -356,9 +324,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test28() throws Throwable {
+    public void test25() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test28");
+            System.out.format("%n%s%n", "RegressionTest0.test25");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
         boolean boolean6 = metaphone0.isMetaphoneEqual("", "hi!");
@@ -377,9 +345,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test29() throws Throwable {
+    public void test26() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test29");
+            System.out.format("%n%s%n", "RegressionTest0.test26");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
         boolean boolean6 = metaphone0.isMetaphoneEqual("", "hi!");
@@ -393,9 +361,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test30() throws Throwable {
+    public void test27() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test30");
+            System.out.format("%n%s%n", "RegressionTest0.test27");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         char char3 = doubleMetaphone0.charAt("hi!", 10);
         boolean boolean7 = doubleMetaphone0.isDoubleMetaphoneEqual("AA11111111", "hi!", true);
@@ -406,9 +374,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test31() throws Throwable {
+    public void test28() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test31");
+            System.out.format("%n%s%n", "RegressionTest0.test28");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
         java.lang.String str5 = metaphone0.metaphone("");
@@ -419,9 +387,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test32() throws Throwable {
+    public void test29() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test32");
+            System.out.format("%n%s%n", "RegressionTest0.test29");
         org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
         java.lang.String str2 = caverphone0.encode("");
         java.lang.String str4 = caverphone0.encode("1111111111");
@@ -439,9 +407,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test33() throws Throwable {
+    public void test30() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test33");
+            System.out.format("%n%s%n", "RegressionTest0.test30");
         org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
         boolean boolean3 = metaphone0.isMetaphoneEqual("AA11111111", "");
         int int6 = org.apache.commons.codec.language.SoundexUtils.difference((org.apache.commons.codec.StringEncoder) metaphone0, "", "HI");
@@ -450,9 +418,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test34() throws Throwable {
+    public void test31() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test34");
+            System.out.format("%n%s%n", "RegressionTest0.test31");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         char char3 = doubleMetaphone0.charAt("hi!", 10);
         int int4 = doubleMetaphone0.maxCodeLen;
@@ -465,9 +433,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test35() throws Throwable {
+    public void test32() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test35");
+            System.out.format("%n%s%n", "RegressionTest0.test32");
         java.lang.String[] strArray12 = new java.lang.String[] { "AA11111111", "", "hi!", "hi!", "hi!", "" };
         boolean boolean13 = org.apache.commons.codec.language.DoubleMetaphone.contains("hi!", (int) 'a', (int) (short) 0, strArray12);
         boolean boolean14 = org.apache.commons.codec.language.DoubleMetaphone.contains("", (int) '4', (-1), strArray12);
@@ -478,9 +446,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test36() throws Throwable {
+    public void test33() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test36");
+            System.out.format("%n%s%n", "RegressionTest0.test33");
         org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
         char char3 = doubleMetaphone0.charAt("hi!", 10);
         int int4 = doubleMetaphone0.maxCodeLen;
@@ -493,9 +461,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test37() throws Throwable {
+    public void test34() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test37");
+            System.out.format("%n%s%n", "RegressionTest0.test34");
         org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
         java.lang.String str2 = caverphone0.caverphone("hi!");
         boolean boolean5 = caverphone0.isCaverphoneEqual("hi!", "");
@@ -507,6 +475,103 @@ public class RegressionTest0 {
         org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "AA11111111" + "'", str10, "AA11111111");
         org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test35() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test35");
+        org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
+        boolean boolean3 = caverphone0.isCaverphoneEqual("1111111111", "AA11111111");
+        java.lang.String str5 = caverphone0.encode("HI");
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "AA11111111" + "'", str5, "AA11111111");
+    }
+
+    @Test
+    public void test36() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test36");
+        org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
+        char char3 = doubleMetaphone0.charAt("hi!", 10);
+        java.lang.String str6 = doubleMetaphone0.doubleMetaphone("", false);
+        doubleMetaphone0.setMaxCodeLen((int) (byte) 1);
+        doubleMetaphone0.setMaxCodeLen(1);
+        org.junit.Assert.assertTrue("'" + char3 + "' != '" + '\000' + "'", char3 == '\000');
+        org.junit.Assert.assertNull(str6);
+    }
+
+    @Test
+    public void test37() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test37");
+        org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
+        char char3 = doubleMetaphone0.charAt("hi!", 10);
+        java.lang.String str6 = doubleMetaphone0.doubleMetaphone("", false);
+        java.lang.String str9 = doubleMetaphone0.doubleMetaphone("1111111111", false);
+        org.junit.Assert.assertTrue("'" + char3 + "' != '" + '\000' + "'", char3 == '\000');
+        org.junit.Assert.assertNull(str6);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+    }
+
+    @Test
+    public void test38() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test38");
+        org.apache.commons.codec.language.Caverphone caverphone0 = new org.apache.commons.codec.language.Caverphone();
+        java.lang.String str2 = caverphone0.caverphone("hi!");
+        boolean boolean5 = caverphone0.isCaverphoneEqual("hi!", "");
+        java.lang.String str7 = caverphone0.encode("AA11111111");
+        java.lang.String str9 = caverphone0.caverphone("H");
+        org.junit.Assert.assertEquals("'" + str2 + "' != '" + "AA11111111" + "'", str2, "AA11111111");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "AA11111111" + "'", str7, "AA11111111");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "A111111111" + "'", str9, "A111111111");
+    }
+
+    @Test
+    public void test39() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test39");
+        org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone0 = new org.apache.commons.codec.language.DoubleMetaphone();
+        char char3 = doubleMetaphone0.charAt("hi!", 10);
+        boolean boolean7 = doubleMetaphone0.isDoubleMetaphoneEqual("AA11111111", "hi!", true);
+        java.lang.String str9 = doubleMetaphone0.doubleMetaphone("");
+        int int10 = doubleMetaphone0.getMaxCodeLen();
+        org.junit.Assert.assertTrue("'" + char3 + "' != '" + '\000' + "'", char3 == '\000');
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNull(str9);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 4 + "'", int10 == 4);
+    }
+
+    @Test
+    public void test40() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test40");
+        org.apache.commons.codec.language.Metaphone metaphone0 = new org.apache.commons.codec.language.Metaphone();
+        boolean boolean3 = metaphone0.isMetaphoneEqual("", "hi!");
+        metaphone0.setMaxCodeLen((int) (byte) 10);
+        org.apache.commons.codec.language.DoubleMetaphone doubleMetaphone6 = new org.apache.commons.codec.language.DoubleMetaphone();
+        char char9 = doubleMetaphone6.charAt("hi!", 10);
+        int int10 = doubleMetaphone6.maxCodeLen;
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.Object obj11 = metaphone0.encode((java.lang.Object) int10);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.codec.EncoderException; message: Parameter supplied to Metaphone encode is not of type java.lang.String");
+        } catch (org.apache.commons.codec.EncoderException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertTrue("'" + char9 + "' != '" + '\000' + "'", char9 == '\000');
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 4 + "'", int10 == 4);
+    }
+
+    @Test
+    public void test41() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test41");
+        java.lang.String str1 = org.apache.commons.codec.language.SoundexUtils.clean("A111111111");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "A" + "'", str1, "A");
     }
 }
 

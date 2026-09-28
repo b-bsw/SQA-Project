@@ -5,7 +5,7 @@
   "duration_seconds": 69.24,
   "project": "Chart",
   "bug_id": 12,
-  "seed": 20260918,
+  "seed": 0,
   "budget": 60,
   "tests": 2976,
   "test_files": 9,
@@ -53,5 +53,8 @@
       "test_status": "FAIL",
       "duration_seconds": 25.95
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "INFERRED_RANDOOP_DEFAULT"
 }

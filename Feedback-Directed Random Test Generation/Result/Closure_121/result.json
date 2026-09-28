@@ -5,7 +5,7 @@
   "duration_seconds": 142.73,
   "project": "Closure",
   "bug_id": 121,
-  "seed": 20260918,
+  "seed": 0,
   "budget": 60,
   "tests": 2317,
   "test_files": 6,
@@ -53,5 +53,8 @@
       "test_status": "PASS",
       "duration_seconds": 54.84
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "INFERRED_RANDOOP_DEFAULT"
 }

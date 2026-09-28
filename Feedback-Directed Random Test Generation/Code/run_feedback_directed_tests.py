@@ -515,7 +515,50 @@ def collect_existing_reports(result_root: Path) -> List[dict]:
     return records
 
 
-def update_global_reports(result_root: Path) -> int:
+def missing_test_code_reports() -> List[dict]:
+    """Represent round targets without generated Java code in the aggregate CSV."""
+    resource_root = PROJECT_ROOT.parent / "Resoucre"
+    if not resource_root.is_dir():
+        return []
+
+    test_root = PROJECT_ROOT / ("TestCode_Round2" if ACTIVE_ROUND == 2 else "TestCode")
+    generated = set(discover_targets(test_root))
+    config_file = GEN_STATE_FILE.parent / "config.json"
+    try:
+        config = json.loads(config_file.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        config = {}
+
+    missing = []
+    for resource in sorted(resource_root.iterdir()):
+        if not resource.is_dir():
+            continue
+        match = TARGET_RE.fullmatch(resource.name + "_buggy")
+        if not match or resource.name in generated:
+            continue
+        project, bug_id = match.group(1), int(match.group(2))
+        metadata = load_metadata(project, bug_id)
+        missing.append({
+            "project": project,
+            "bug_id": bug_id,
+            "round": ACTIVE_ROUND,
+            "seed": metadata.get("seed") if "seed" in metadata else config.get("seed"),
+            "budget": metadata.get("time_limit", config.get("time_limit")),
+            "tests": 0,
+            "coverage": None,
+            "line_cov": None,
+            "branch_cov": None,
+            "buggy_result": "NOT_RUN",
+            "fixed_result": "NOT_RUN",
+            "verdict": "FAIL",
+            "status": "FAIL",
+            "error": "No generated Java test code",
+        })
+    return missing
+
+
+def update_global_reports(result_root: Path, include_missing_code: bool = True,
+                          rewrite_target_reports: bool = True) -> int:
     """Refresh both Result/report.csv and PROJECT_ROOT/report.csv."""
     with REPORT_LOCK:
         rows = collect_existing_reports(result_root)
@@ -533,9 +576,15 @@ def update_global_reports(result_root: Path) -> int:
                 row.update(round=ACTIVE_ROUND, seed=metadata.get("seed"),
                            budget=metadata.get("time_limit"),
                            seed_source=metadata.get("seed_source", "UNKNOWN"))
-                if row != original:
+                if row != original and rewrite_target_reports:
                     write_target_reports(result_root / f"{row['project']}_{row['bug_id']}", row)
             rows = current_rows
+            if include_missing_code:
+                by_target = {(str(row["project"]), int(row["bug_id"])): row for row in rows}
+                for row in missing_test_code_reports():
+                    by_target[(row["project"], row["bug_id"])] = row
+                rows = sorted(by_target.values(),
+                              key=lambda row: (str(row["project"]), int(row["bug_id"])))
         write_aggregated_report(result_root / "report.csv", rows)
         name = "report_Round2.csv" if result_root.name == "Result_Round2" else "report.csv"
         write_aggregated_report(PROJECT_ROOT / name, rows)
@@ -610,7 +659,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
             "validations": []
         }
         write_target_reports(destination, report)
-        update_global_reports(result_root)
+        update_global_reports(result_root, include_missing_code=False)
         return report
 
     try:
@@ -686,7 +735,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
     }
 
     write_target_reports(destination, report)
-    update_global_reports(result_root)
+    update_global_reports(result_root, include_missing_code=False)
     return report
 
 
@@ -735,7 +784,7 @@ Examples:
   %(prog)s --projects Chart Cli --workers 4
   %(prog)s --targets Chart_1 Cli_1 --workers 2
   %(prog)s --workers 4                     # Run all available test suites
-  %(prog)s --collect-only                  # Rebuild report.csv from existing results
+  %(prog)s --collect-only                  # Rebuild report.csv, including missing-code FAIL rows
         """
     )
     parser.add_argument("--projects", "-p", nargs="+",
@@ -761,7 +810,7 @@ Examples:
     parser.add_argument("--dry-run", action="store_true",
                         help="List targets that would run without executing")
     parser.add_argument("--collect-only", action="store_true",
-                        help="Re-aggregate existing result.csv files into report.csv and exit")
+                        help="Re-aggregate results and FAIL rows for targets without test code")
     parser.add_argument("--defects4j-bin", type=str, default=None,
                         help="Path to defects4j executable")
     parser.add_argument("--result-dir", type=str, default=None,
@@ -797,12 +846,16 @@ def main(argv: Optional[List[str]] = None) -> int:
         result_root.mkdir(parents=True, exist_ok=True)
 
     if args.collect_only:
-        total = update_global_reports(result_root)
-        print(f"Collected {total} completed target reports into {result_root / 'report.csv'}")
+        total = update_global_reports(result_root, rewrite_target_reports=False)
+        print(f"Collected {total} target rows into {result_root / 'report.csv'}")
         return 0
 
     all_targets = discover_targets(TEST_ROOT)
     if not all_targets:
+        if args.round and not args.dry_run:
+            total = update_global_reports(result_root, rewrite_target_reports=False)
+            print(f"No test suites found; collected {total} target rows into {result_root / 'report.csv'}")
+            return 0
         print(f"No test suites found in {TEST_ROOT}", file=sys.stderr)
         return 1
 

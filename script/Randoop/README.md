@@ -163,7 +163,7 @@ python3 script/Randoop/round1/results.py --collect-only
 python3 script/Randoop/round2/results.py --collect-only
 ```
 
-รอบ 1 ได้ `Result/report.csv` และ `report.csv` รอบ 2 ได้ `Result_Round2/report.csv` และ `report_Round2.csv` คำสั่งนี้อ่านรายงานที่มีอยู่เท่านั้น ไม่เพิ่ม coverage หรือสร้างผลสำหรับเป้าหมายที่ยังไม่ได้ประเมิน
+รอบ 1 ได้ `Result/report.csv` และ `report.csv` รอบ 2 ได้ `Result_Round2/report.csv` และ `report_Round2.csv` คำสั่งนี้รวมผลที่ประเมินไว้และเพิ่มแถว `verdict=FAIL`, `tests=0`, `buggy_result=NOT_RUN`, `fixed_result=NOT_RUN` สำหรับเป้าหมายใน `Resoucre/` ที่ไม่มีไฟล์ Java ใน TestCode ของรอบนั้น โดยไม่รัน Defects4J หรือเพิ่ม coverage เมื่อสร้างเทสต์สำเร็จในภายหลัง แถว FAIL ชั่วคราวนี้จะหายไปตอนรวมรายงานใหม่ และใช้ผลการประเมินจริงแทนเมื่อรัน results.py
 
 รายงานใช้ seed/budget จาก state ของรอบนั้น JSON มี round และ seed_source ส่วน CSV คง schema เดิมเพื่อให้เครื่องมือเก่าอ่านได้ แยกรอบตามชื่อไฟล์ เมื่อรวมรายงานเก่าที่ seed เคยถูกเติมเป็น 20260918 จะปรับให้ตรงกับ state และเก็บค่าเดิมไว้ใน JSON เป็น previous_reported_seed; UNKNOWN แสดง seed ว่างใน CSV
 

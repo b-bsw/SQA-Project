@@ -1,2 +1,2 @@
 "project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
-"JacksonDatabind",6,20260918,60,4230,84.77,88.59,78.72,243,206,149,132,94,74,"FAIL",6721,"FAIL",6721,"INCONCLUSIVE"
+"JacksonDatabind",6,0,60,4230,84.77,88.59,78.72,243,206,149,132,94,74,"FAIL",6721,"FAIL",6721,"INCONCLUSIVE"

@@ -5,7 +5,7 @@
   "duration_seconds": 97.26,
   "project": "JacksonDatabind",
   "bug_id": 17,
-  "seed": 20260918,
+  "seed": 0,
   "budget": 60,
   "tests": 1888,
   "test_files": 5,
@@ -53,5 +53,8 @@
       "test_status": "FAIL",
       "duration_seconds": 36.61
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "INFERRED_RANDOOP_DEFAULT"
 }

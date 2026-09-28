@@ -5,8 +5,8 @@
   "duration_seconds": 195.88,
   "project": "Mockito",
   "bug_id": 11,
-  "seed": 20260918,
-  "budget": 10,
+  "seed": 0,
+  "budget": 60,
   "tests": 1,
   "test_files": 2,
   "coverage": 0.0,
@@ -53,5 +53,8 @@
       "test_status": "PASS",
       "duration_seconds": 87.44
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "EXPLICIT"
 }

@@ -1,0 +1,14 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/randoop-Closure_83-nfow79ib/Closure_83-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /tmp/randoop-Closure_83-nfow79ib/buggy/failing_tests)!
+       Lines total: 193
+     Lines covered: 98
+  Conditions total: 36
+Conditions covered: 7
+     Line coverage: 50.8%
+Condition coverage: 19.4%
+[exit 0]

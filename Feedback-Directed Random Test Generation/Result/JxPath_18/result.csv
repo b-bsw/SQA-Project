@@ -1,2 +1,2 @@
 "project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
-"JxPath",18,20260918,60,26,48.84,58.62,28.57,43,21,29,17,14,4,"PASS",0,"PASS",0,"NOT_REVEALING"
+"JxPath",18,0,60,26,48.84,58.62,28.57,43,21,29,17,14,4,"PASS",0,"PASS",0,"NOT_REVEALING"

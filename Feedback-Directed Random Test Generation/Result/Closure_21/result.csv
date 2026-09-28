@@ -1,2 +1,2 @@
 "project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
-"Closure",21,20260918,60,270,10.64,18.52,0.0,141,15,81,15,60,0,"PASS",0,"PASS",0,"NOT_REVEALING"
+"Closure",21,0,60,270,10.64,18.52,0.0,141,15,81,15,60,0,"PASS",0,"PASS",0,"NOT_REVEALING"

@@ -5,7 +5,7 @@
   "duration_seconds": 22.87,
   "project": "Compress",
   "bug_id": 8,
-  "seed": 20260918,
+  "seed": 0,
   "budget": 60,
   "tests": 345,
   "test_files": 2,
@@ -53,5 +53,8 @@
       "test_status": "FAIL",
       "duration_seconds": 7.68
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "INFERRED_RANDOOP_DEFAULT"
 }

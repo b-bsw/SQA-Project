@@ -1,2 +1,2 @@
 "project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
-"Csv",9,20260918,60,344,48.28,61.11,27.27,58,28,36,22,22,6,"PASS",0,"FAIL",92,"INCONCLUSIVE"
+"Csv",9,0,60,344,48.28,61.11,27.27,58,28,36,22,22,6,"PASS",0,"FAIL",92,"INCONCLUSIVE"

@@ -5,7 +5,7 @@
   "duration_seconds": 25.24,
   "project": "JacksonCore",
   "bug_id": 11,
-  "seed": 20260918,
+  "seed": 0,
   "budget": 60,
   "tests": 32,
   "test_files": 4,
@@ -53,5 +53,8 @@
       "test_status": "FAIL",
       "duration_seconds": 9.4
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "INFERRED_RANDOOP_DEFAULT"
 }

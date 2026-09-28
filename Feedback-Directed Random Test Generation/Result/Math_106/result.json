@@ -5,7 +5,7 @@
   "duration_seconds": 74.57,
   "project": "Math",
   "bug_id": 106,
-  "seed": 20260918,
+  "seed": 0,
   "budget": 60,
   "tests": 3449,
   "test_files": 8,
@@ -53,5 +53,8 @@
       "test_status": "PASS",
       "duration_seconds": 26.63
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "INFERRED_RANDOOP_DEFAULT"
 }

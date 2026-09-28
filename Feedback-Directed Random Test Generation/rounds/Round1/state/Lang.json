@@ -1641,5 +1641,132 @@
     "round": 1,
     "seed": 0,
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-28T13:35:14.888763+00:00",
+      "status": "FAILED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "Lang",
+        "--state-file",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Lang.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--project-timeout",
+        "600",
+        "--round",
+        "1",
+        "--seed",
+        "0",
+        "--output-dir",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+      ],
+      "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Lang.json",
+      "round": 1,
+      "seed": 0,
+      "time_limit": 60,
+      "project": "Lang",
+      "run_id": "20260928T133515341295Z_119",
+      "success": 0,
+      "skipped": 59,
+      "failed": 2,
+      "total_duration_seconds": 1207.747,
+      "finished_at": "2026-09-28T13:55:22.635571+00:00"
+    },
+    "history": {
+      "20260928T132719198355Z_854": {
+        "started_at": "2026-09-28T13:27:18.955921+00:00",
+        "status": "RUNNING",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Lang",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Lang.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "600",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--output-dir",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Lang.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Lang",
+        "run_id": "20260928T132719198355Z_854",
+        "total_duration_seconds": null,
+        "finished_at": null
+      },
+      "20260928T133515341295Z_119": {
+        "started_at": "2026-09-28T13:35:14.888763+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Lang",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Lang.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "600",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--output-dir",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Lang.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Lang",
+        "run_id": "20260928T133515341295Z_119",
+        "success": 0,
+        "skipped": 59,
+        "failed": 2,
+        "total_duration_seconds": 1207.747,
+        "finished_at": "2026-09-28T13:55:22.635571+00:00"
+      }
+    }
+  },
+  "Lang_12": {
+    "status": "FAILED",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
+    "classes": [
+      "org.apache.commons.lang3.RandomStringUtils"
+    ],
+    "timestamp": "2026-09-28T13:45:22.527370+00:00",
+    "round": 1,
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Lang_11": {
+    "status": "FAILED",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
+    "classes": [
+      "org.apache.commons.lang3.RandomStringUtils"
+    ],
+    "timestamp": "2026-09-28T13:55:22.609746+00:00",
+    "round": 1,
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   }
 }

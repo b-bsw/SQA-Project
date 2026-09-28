@@ -5,8 +5,8 @@
   "duration_seconds": 17.88,
   "project": "Codec",
   "bug_id": 1,
-  "seed": 20260918,
-  "budget": 5,
+  "seed": 0,
+  "budget": 60,
   "tests": 40,
   "test_files": 4,
   "coverage": 41.36,
@@ -53,5 +53,8 @@
       "test_status": "FAIL",
       "duration_seconds": 5.0
     }
-  ]
+  ],
+  "previous_reported_seed": 20260918,
+  "round": 1,
+  "seed_source": "EXPLICIT"
 }

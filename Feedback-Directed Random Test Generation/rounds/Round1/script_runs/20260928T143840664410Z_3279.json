@@ -1,0 +1,16 @@
+{
+  "entrypoint": "script/Randoop/round1/results.py",
+  "phase": "results",
+  "round": 1,
+  "arguments": [
+    "--workers",
+    "2"
+  ],
+  "started_at": "2026-09-28T14:38:40.399284+00:00",
+  "status": "COMPLETED",
+  "script": "run_feedback_directed_tests",
+  "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/generation_state.json",
+  "run_id": "20260928T143840664410Z_3279",
+  "total_duration_seconds": 388.14,
+  "finished_at": "2026-09-28T14:45:08.539089+00:00"
+}

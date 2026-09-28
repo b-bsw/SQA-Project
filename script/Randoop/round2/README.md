@@ -14,6 +14,8 @@ python3 script/Randoop/round2/results.py --collect-only
 
 state อยู่ `Feedback-Directed Random Test Generation/rounds/Round2/` เทสต์อยู่ TestCode_Round2 ผลอยู่ Result_Round2 และ CSV รวมอยู่ Result_Round2/report.csv กับ report_Round2.csv แยกจากรอบ 1
 
+`results.py --collect-only` รวมผลที่มีอยู่และใส่ `verdict=FAIL` สำหรับเป้าหมายใน `Resoucre/` ที่ไม่มีไฟล์ Java ใน TestCode_Round2 โดยไม่รันทดสอบใหม่
+
 ทดลองกลุ่มเดียวก่อน: `python3 script/Randoop/round2/generate.py --projects Codec --workers 1` แล้ว `python3 script/Randoop/round2/results.py --projects Codec --workers 1`
 
 กด Ctrl+C แล้วใช้คำสั่งเดิมเพื่อ resume ห้ามรัน generator สองรอบพร้อมกัน อย่าเปลี่ยน seed/time limit หลังเริ่มรอบนี้ results.py อ่าน seed/budget จาก state และไม่สร้างเทสต์ใหม่

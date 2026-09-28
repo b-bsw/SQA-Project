@@ -1,0 +1,13 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j coverage -s /tmp/randoop-Math_60-p7uk3kun/Math_60-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 47
+     Lines covered: 38
+  Conditions total: 18
+Conditions covered: 11
+     Line coverage: 80.9%
+Condition coverage: 61.1%
+[exit 0]

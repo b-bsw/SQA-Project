@@ -1,3 +1,4 @@
+import csv
 import json
 import tempfile
 import unittest
@@ -16,6 +17,50 @@ import run_feedback_directed_tests as runner
 
 
 class RoundTests(unittest.TestCase):
+    def test_both_round_reports_include_targets_without_test_code_as_fail(self):
+        for number in (1, 2):
+            with self.subTest(round=number), tempfile.TemporaryDirectory() as temporary:
+                workspace = Path(temporary)
+                root = workspace / "Feedback-Directed Random Test Generation"
+                state_root, test_root, result_root = rounds.round_paths(root, number)
+                for name in ("Codec_1", "Codec_2", "Codec_3"):
+                    (workspace / "Resoucre" / name).mkdir(parents=True)
+                rounds.write_json(state_root / "config.json", {
+                    "seed": 0 if number == 1 else 20260928, "time_limit": 60})
+                rounds.write_json(state_root / "generation_state.json", {
+                    "Codec_1": {"status": "FAILED", "seed": 0 if number == 1 else 20260928,
+                                "time_limit": 60}})
+                (test_root / "Codec_2_buggy").mkdir(parents=True)
+                (test_root / "Codec_2_buggy" / "RegressionTest.java").write_text("class RegressionTest {}")
+                rounds.write_json(result_root / "Codec_2" / "result.json", {
+                    "project": "Codec", "bug_id": 2, "verdict": "NOT_REVEALING"})
+                rounds.write_json(result_root / "Codec_3" / "result.json", {
+                    "project": "Codec", "bug_id": 3, "verdict": "NOT_REVEALING"})
+                saved_result = (result_root / "Codec_2" / "result.json").read_bytes()
+
+                with patch.object(runner, "PROJECT_ROOT", root), \
+                     patch.object(runner, "ACTIVE_ROUND", number), \
+                     patch.object(runner, "GEN_STATE_FILE", state_root / "generation_state.json"), \
+                     patch.object(runner, "STATE_DIR", state_root / "state"):
+                    self.assertEqual(runner.update_global_reports(
+                        result_root, rewrite_target_reports=False), 3)
+                    self.assertEqual((result_root / "Codec_2" / "result.json").read_bytes(), saved_result)
+                    with (result_root / "report.csv").open(newline="", encoding="utf-8") as stream:
+                        rows = {int(row["bug_id"]): row for row in csv.DictReader(stream)}
+                    self.assertEqual(rows[1]["verdict"], "FAIL")
+                    self.assertEqual(rows[1]["tests"], "0")
+                    self.assertEqual(rows[1]["seed"], str(0 if number == 1 else 20260928))
+                    self.assertEqual(rows[2]["verdict"], "NOT_REVEALING")
+                    self.assertEqual(rows[3]["verdict"], "FAIL")
+                    self.assertEqual(rows[3]["buggy_result"], "NOT_RUN")
+                    self.assertEqual((root / ("report_Round2.csv" if number == 2 else "report.csv")).read_bytes(),
+                                     (result_root / "report.csv").read_bytes())
+
+                    (test_root / "Codec_1_buggy").mkdir(parents=True)
+                    (test_root / "Codec_1_buggy" / "RegressionTest.java").write_text("class RegressionTest {}")
+                    self.assertEqual(runner.update_global_reports(
+                        result_root, rewrite_target_reports=False), 2)
+
     def test_import_is_non_destructive_idempotent_and_round2_is_empty(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

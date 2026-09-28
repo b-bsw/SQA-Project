@@ -2399,5 +2399,179 @@
     "round": 1,
     "seed": 0,
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-28T13:55:04.696688+00:00",
+      "status": "COMPLETED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "Math",
+        "--state-file",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Math.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--project-timeout",
+        "600",
+        "--round",
+        "1",
+        "--seed",
+        "0",
+        "--output-dir",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+      ],
+      "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Math.json",
+      "round": 1,
+      "seed": 0,
+      "time_limit": 60,
+      "project": "Math",
+      "run_id": "20260928T135504921453Z_384",
+      "success": 6,
+      "skipped": 100,
+      "failed": 0,
+      "total_duration_seconds": 2167.584,
+      "finished_at": "2026-09-28T14:31:12.281114+00:00"
+    },
+    "history": {
+      "20260928T135504921453Z_384": {
+        "started_at": "2026-09-28T13:55:04.696688+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Math",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Math.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "600",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--output-dir",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Math.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Math",
+        "run_id": "20260928T135504921453Z_384",
+        "success": 6,
+        "skipped": 100,
+        "failed": 0,
+        "total_duration_seconds": 2167.584,
+        "finished_at": "2026-09-28T14:31:12.281114+00:00"
+      }
+    }
+  },
+  "Math_60": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_60_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_60",
+    "classes_tested": [
+      "org.apache.commons.math.distribution.NormalDistributionImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/distribution/RegressionTest.java",
+      "org/apache/commons/math/distribution/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:02:06.795924+00:00"
+  },
+  "Math_61": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_61_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_61",
+    "classes_tested": [
+      "org.apache.commons.math.distribution.PoissonDistributionImpl"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/distribution/RegressionTest.java",
+      "org/apache/commons/math/distribution/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:08:29.589520+00:00"
+  },
+  "Math_105": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_105_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_105",
+    "classes_tested": [
+      "org.apache.commons.math.stat.regression.SimpleRegression"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/stat/regression/RegressionTest.java",
+      "org/apache/commons/math/stat/regression/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:12:41.692018+00:00"
+  },
+  "Math_36": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_36_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_36",
+    "classes_tested": [
+      "org.apache.commons.math.fraction.BigFraction"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/fraction/RegressionTest.java",
+      "org/apache/commons/math/fraction/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:18:56.304424+00:00"
+  },
+  "Math_79": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_79_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_79",
+    "classes_tested": [
+      "org.apache.commons.math.util.MathUtils"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math/util/RegressionTest.java",
+      "org/apache/commons/math/util/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:24:33.583431+00:00"
+  },
+  "Math_16": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Math_16_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Math_16",
+    "classes_tested": [
+      "org.apache.commons.math3.util.FastMath"
+    ],
+    "generated_tests": [
+      "org/apache/commons/math3/util/RegressionTest.java",
+      "org/apache/commons/math3/util/RegressionTest0.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T14:31:04.890278+00:00"
   }
 }

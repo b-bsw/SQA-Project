@@ -1,2 +1,2 @@
 "project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
-"Jsoup",87,20260918,60,4024,37.34,44.37,26.13,3265,1219,2006,890,1259,329,"FAIL",1018,"FAIL",1018,"INCONCLUSIVE"
+"Jsoup",87,0,60,4024,37.34,44.37,26.13,3265,1219,2006,890,1259,329,"FAIL",1018,"FAIL",1018,"INCONCLUSIVE"

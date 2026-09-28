@@ -9,12 +9,12 @@
       "com/fasterxml/jackson/databind/ser/std/RegressionTest.java",
       "com/fasterxml/jackson/databind/ser/std/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:10:08.247848",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:24:13.938464+00:00"
   },
   "JacksonDatabind_39": {
     "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_39_buggy",
@@ -26,12 +26,12 @@
       "com/fasterxml/jackson/databind/deser/std/RegressionTest.java",
       "com/fasterxml/jackson/databind/deser/std/RegressionTest0.java"
     ],
-    "time_limit": 10,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-19T01:11:11.225274",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:25:23.149102+00:00"
   },
   "JacksonDatabind_1": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_1_buggy",
@@ -1129,15 +1129,21 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "JacksonDatabind_87": {
-    "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat29 = stdDateFormat27.withTimeZone(timeZone28);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat30 = new com.fasterxml.jackson.databind.util.StdDateFormat();\njava.text.NumberFormat numberFormat31 = stdDateFormat30.getNumberFormat();\njava.text.DateFormat dateFormat32 = stdDateFormat30._formatISO8601_z;\njava.util.TimeZone timeZone33 = stdDateFormat30.getTimeZone();\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat34 = new com.fasterxml.jackson.databind.util.StdDateFormat();\njava.text.NumberFormat numberFormat35 = stdDateFormat34.getNumberFormat();\njava.text.DateFormat dateFormat36 = stdDateFormat34._formatISO8601_z;\nstdDateFormat30._formatPlain = stdDateFormat34;\njava.text.DateFormat dateFormat38 = stdDateFormat30._formatRFC1123;\njava.util.TimeZone timeZone39 = null;\nstdDateFormat30._timezone = timeZone39;\njava.util.Locale locale41 = stdDateFormat30._locale;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat43 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone28, locale41, (java.lang.Boolean)false);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat44 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone26, locale41);\njava.text.DateFormat dateFormat45 = com.fasterxml.jackson.databind.util.StdDateFormat.getRFC1123Format(timeZone26);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat46 = stdDateFormat17.withTimeZone(timeZone26);\njava.util.TimeZone timeZone47 = stdDateFormat46.getTimeZone();\njava.util.Locale locale48 = stdDateFormat46._locale;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat50 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone3, locale48, (java.lang.Boolean)false);",
-    "classes": [
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_87_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/JacksonDatabind_87",
+    "classes_tested": [
       "com.fasterxml.jackson.databind.util.StdDateFormat"
     ],
-    "timestamp": "2026-09-25T17:04:50.636628+00:00",
+    "generated_tests": [
+      "com/fasterxml/jackson/databind/util/RegressionTest.java",
+      "com/fasterxml/jackson/databind/util/RegressionTest0.java"
+    ],
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T13:26:32.678049+00:00"
   },
   "JacksonDatabind_40": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_40_buggy",
@@ -1724,14 +1730,15 @@
   },
   "JacksonDatabind_47": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\ncom.fasterxml.jackson.databind.introspect.AnnotatedClass annotatedClass73 = null;\njava.lang.Boolean boolean74 = annotationIntrospector70.isIgnorableType(annotatedClass73);\ncom.fasterxml.jackson.databind.introspect.Annotated annotated75 = null;\ncom.fasterxml.jackson.databind.JavaType javaType76 = null;\njava.lang.Class<?> wildcardClass77 = annotationIntrospector70.findSerializationContentType(annotated75, javaType76);\ncom.fasterxml.jackson.databind.introspect.Annotated annotated78 = null;\njava.lang.Class<?>[] wildcardClassArray79 = annotationIntrospector70.findViews(annotated78);\njava.lang.Class<Capture70> capture70Class80 = null;\njava.lang.Enum[] enumArray82 = new java.lang.Enum[ 0 ];\n@SuppressWarnings(\"unchecked\")\njava.lang.Enum<?>[] wildcardEnumArray83 = (java.lang.Enum<?>[])enumArray82;\njava.lang.String[] strArray90 = new java.lang.String[] { \"hi!\", \"\", \"\", \"hi!\", \"\", \"hi!\" };\njava.lang.String[] strArray91 = annotationIntrospector70.findEnumValues(capture70Class80, wildcardEnumArray83, strArray90);\njava.lang.String[] strArray92 = annotationIntrospector61.findEnumValues((java.lang.Class<Capture135>) wildcardClass66, (java.lang.Enum<?>[]) enumArray68, strArray91);\njava.lang.String[] strArray93 = annotationIntrospector6.findEnumValues((java.lang.Class<Capture183>) wildcardClass28, (java.lang.Enum<?>[]) enumArray36, strArray92);\njava.lang.Class[] classArray95 = new java.lang.Class[ 1 ];\n@SuppressWarnings(\"unchecked\")\njava.lang.Class<? extends java.lang.annotation.Annotation>[] wildcardClassArray96 = (java.lang.Class<? extends java.lang.annotation.Annotation>[])classArray95;\nwildcardClassArray96[0] = wildcardClass28;\nboolean boolean99 = annotationIntrospector0._hasOneOf(annotated5, wildcardClassArray96);",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
     "classes": [
       "com.fasterxml.jackson.databind.AnnotationIntrospector"
     ],
-    "timestamp": "2026-09-25T17:02:49.270150+00:00",
+    "timestamp": "2026-09-28T13:45:03.132887+00:00",
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   },
   "JacksonDatabind_7": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_7_buggy",
@@ -2160,15 +2167,16 @@
   },
   "JacksonDatabind_30": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\ncom.fasterxml.jackson.databind.cfg.ContextAttributes contextAttributes19 = null;\ncom.fasterxml.jackson.databind.ObjectWriter objectWriter20 = objectMapper18.writer(contextAttributes19);\ncom.fasterxml.jackson.core.Version version21 = objectMapper18.version();\ncom.fasterxml.jackson.databind.DeserializationConfig deserializationConfig22 = objectMapper18.getDeserializationConfig();\ncom.fasterxml.jackson.core.JsonFactory jsonFactory23 = null;\ncom.fasterxml.jackson.databind.ObjectMapper objectMapper24 = new com.fasterxml.jackson.databind.ObjectMapper(jsonFactory23);\ncom.fasterxml.jackson.databind.cfg.ContextAttributes contextAttributes25 = null;\ncom.fasterxml.jackson.databind.ObjectWriter objectWriter26 = objectMapper24.writer(contextAttributes25);\ncom.fasterxml.jackson.databind.jsontype.SubtypeResolver subtypeResolver27 = null;\nobjectMapper24._subtypeResolver = subtypeResolver27;\ncom.fasterxml.jackson.databind.AnnotationIntrospector annotationIntrospector29 = com.fasterxml.jackson.databind.ObjectMapper.DEFAULT_ANNOTATION_INTROSPECTOR;\ncom.fasterxml.jackson.databind.AnnotationIntrospector annotationIntrospector30 = com.fasterxml.jackson.databind.ObjectMapper.DEFAULT_ANNOTATION_INTROSPECTOR;\ncom.fasterxml.jackson.databind.ObjectMapper objectMapper31 = objectMapper24.setAnnotationIntrospectors(annotationIntrospector29, annotationIntrospector30);\ncom.fasterxml.jackson.databind.ObjectMapper objectMapper32 = objectMapper18.setAnnotationIntrospector(annotationIntrospector30);\ncom.fasterxml.jackson.databind.DeserializationConfig deserializationConfig33 = objectMapper18.getDeserializationConfig();\nobjectMapper16._deserializationConfig = deserializationConfig33;\ntokenBuffer1.writeTypeId((java.lang.Object) deserializationConfig33);\njava.math.BigInteger bigInteger36 = null;\ntokenBuffer1.writeNumber(bigInteger36);\ntokenBuffer1.writeStartArray();",
+    "error": "TIMEOUT: Project exceeded 600s wall-clock timeout",
     "classes": [
       "com.fasterxml.jackson.databind.ObjectMapper",
       "com.fasterxml.jackson.databind.util.TokenBuffer"
     ],
-    "timestamp": "2026-09-25T17:02:04.908931+00:00",
+    "timestamp": "2026-09-28T13:55:03.158619+00:00",
     "round": 1,
-    "seed": null,
-    "seed_source": "UNKNOWN"
+    "seed": 0,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
   },
   "JacksonDatabind_103": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/JacksonDatabind_103_buggy",
@@ -2208,5 +2216,108 @@
     "round": 1,
     "seed": 0,
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
+  },
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-28T13:34:54.309550+00:00",
+      "status": "FAILED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "JacksonDatabind",
+        "--state-file",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/JacksonDatabind.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--project-timeout",
+        "600",
+        "--round",
+        "1",
+        "--seed",
+        "0",
+        "--output-dir",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+      ],
+      "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/JacksonDatabind.json",
+      "round": 1,
+      "seed": 0,
+      "time_limit": 60,
+      "project": "JacksonDatabind",
+      "run_id": "20260928T133454531182Z_81",
+      "success": 0,
+      "skipped": 108,
+      "failed": 2,
+      "total_duration_seconds": 1208.869,
+      "finished_at": "2026-09-28T13:55:03.178660+00:00"
+    },
+    "history": {
+      "20260928T132250456299Z_455": {
+        "started_at": "2026-09-28T13:22:50.235535+00:00",
+        "status": "RUNNING",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "JacksonDatabind",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/JacksonDatabind.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "600",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--output-dir",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/JacksonDatabind.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "JacksonDatabind",
+        "run_id": "20260928T132250456299Z_455",
+        "total_duration_seconds": null,
+        "finished_at": null
+      },
+      "20260928T133454531182Z_81": {
+        "started_at": "2026-09-28T13:34:54.309550+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "JacksonDatabind",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/JacksonDatabind.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "600",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--output-dir",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/JacksonDatabind.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "JacksonDatabind",
+        "run_id": "20260928T133454531182Z_81",
+        "success": 0,
+        "skipped": 108,
+        "failed": 2,
+        "total_duration_seconds": 1208.869,
+        "finished_at": "2026-09-28T13:55:03.178660+00:00"
+      }
+    }
   }
 }

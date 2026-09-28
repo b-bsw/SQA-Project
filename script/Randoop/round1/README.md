@@ -14,6 +14,8 @@ python3 script/Randoop/round1/results.py --collect-only
 
 state อยู่ `Feedback-Directed Random Test Generation/rounds/Round1/` เทสต์อยู่ TestCode เดิม ผลอยู่ Result เดิม และ report.csv
 
+`results.py --collect-only` รวมผลที่มีอยู่และใส่ `verdict=FAIL` สำหรับเป้าหมายใน `Resoucre/` ที่ไม่มีไฟล์ Java ใน TestCode รอบ 1 โดยไม่รันทดสอบใหม่
+
 นำ state เก่าเข้ารอบนี้โดยไม่ลบของเดิม รายการ COMPLETED ที่ seed/เวลาไม่ตรงหรือไม่ทราบ seed จะสร้างใหม่ รายการที่ตรงแล้วจะข้าม หากเคยเก็บผลก่อนเทสต์เปลี่ยน ให้ใช้ `results.py --targets <เป้าหมายที่เปลี่ยน> --overwrite` เพื่อให้รายงานตรงกับเทสต์ใหม่
 
 กรองกลุ่มด้วย `generate.py --projects Codec Cli` กรองผลด้วย `results.py --targets Codec_1 Cli_1` ใช้คำสั่งเดิมเพื่อ resume
