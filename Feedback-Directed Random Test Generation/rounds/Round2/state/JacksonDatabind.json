@@ -1,7 +1,7 @@
 {
   "_script_runs": {
     "latest": {
-      "started_at": "2026-09-27T19:54:19.676944+00:00",
+      "started_at": "2026-09-28T19:34:29.188076+00:00",
       "status": "FAILED",
       "script": "generate_randoop_tests",
       "arguments": [
@@ -13,6 +13,8 @@
         "60",
         "--jvm-memory",
         "3000m",
+        "--project-timeout",
+        "300",
         "--round",
         "2",
         "--seed",
@@ -25,12 +27,12 @@
       "seed": 20260928,
       "time_limit": 60,
       "project": "JacksonDatabind",
-      "run_id": "20260927T195419685840Z_20326",
-      "success": 108,
-      "skipped": 0,
+      "run_id": "20260928T193429198565Z_14990",
+      "success": 0,
+      "skipped": 108,
       "failed": 2,
-      "total_duration_seconds": 9980.332,
-      "finished_at": "2026-09-27T22:40:40.088784+00:00"
+      "total_duration_seconds": 65.981,
+      "finished_at": "2026-09-28T19:35:35.168882+00:00"
     },
     "history": {
       "20260927T195419685840Z_20326": {
@@ -64,6 +66,40 @@
         "failed": 2,
         "total_duration_seconds": 9980.332,
         "finished_at": "2026-09-27T22:40:40.088784+00:00"
+      },
+      "20260928T193429198565Z_14990": {
+        "started_at": "2026-09-28T19:34:29.188076+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "JacksonDatabind",
+          "--state-file",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/JacksonDatabind.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "300",
+          "--round",
+          "2",
+          "--seed",
+          "20260928",
+          "--output-dir",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+        ],
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/JacksonDatabind.json",
+        "round": 2,
+        "seed": 20260928,
+        "time_limit": 60,
+        "project": "JacksonDatabind",
+        "run_id": "20260928T193429198565Z_14990",
+        "success": 0,
+        "skipped": 108,
+        "failed": 2,
+        "total_duration_seconds": 65.981,
+        "finished_at": "2026-09-28T19:35:35.168882+00:00"
       }
     }
   },
@@ -1194,11 +1230,11 @@
   },
   "JacksonDatabind_87": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat0 = com.fasterxml.jackson.databind.util.StdDateFormat.instance;\nboolean boolean1 = stdDateFormat0.isLenient();\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat2 = stdDateFormat0.clone();\njava.text.DateFormat dateFormat3 = java.text.DateFormat.getInstance();\njava.lang.String str5 = dateFormat3.format((java.lang.Object) 0L);\njava.text.NumberFormat numberFormat6 = dateFormat3.getNumberFormat();\nstdDateFormat0.setNumberFormat(numberFormat6);\njava.text.DateFormat dateFormat8 = stdDateFormat0._formatPlain;\njava.text.ParsePosition parsePosition10 = null;\njava.util.Date date12 = stdDateFormat0.parseAsISO8601(\"1970-01-01T00:00:00.010+0000\", parsePosition10, false);",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\njava.lang.Boolean boolean13 = stdDateFormat10._lenient;\njava.util.TimeZone timeZone14 = null;\njava.util.Locale locale15 = null;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat17 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone14, locale15, (java.lang.Boolean)false);\nstdDateFormat10._formatISO8601 = stdDateFormat17;\njava.text.DateFormat dateFormat19 = java.text.DateFormat.getDateInstance();\njava.util.Calendar calendar20 = dateFormat19.getCalendar();\nstdDateFormat17.setCalendar(calendar20);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat22 = stdDateFormat17.clone();\njava.util.TimeZone timeZone23 = null;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat24 = com.fasterxml.jackson.databind.util.StdDateFormat.instance;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat25 = stdDateFormat24.clone();\njava.text.DateFormat dateFormat26 = stdDateFormat24._formatRFC1123;\njava.util.TimeZone timeZone27 = stdDateFormat24._timezone;\njava.util.Locale locale28 = stdDateFormat24._locale;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat29 = new com.fasterxml.jackson.databind.util.StdDateFormat(timeZone23, locale28);\nstdDateFormat29._clearFormats();\njava.util.Locale locale31 = stdDateFormat29._locale;\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat32 = stdDateFormat22.withLocale(locale31);\ncom.fasterxml.jackson.databind.util.StdDateFormat stdDateFormat33 = stdDateFormat0.withLocale(locale31);",
     "classes": [
       "com.fasterxml.jackson.databind.util.StdDateFormat"
     ],
-    "timestamp": "2026-09-27T21:26:56.748405+00:00",
+    "timestamp": "2026-09-28T19:35:31.668137+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -1794,7 +1830,7 @@
     "classes": [
       "com.fasterxml.jackson.databind.AnnotationIntrospector"
     ],
-    "timestamp": "2026-09-27T22:08:53.657002+00:00",
+    "timestamp": "2026-09-28T19:35:35.167153+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,

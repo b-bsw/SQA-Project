@@ -1,7 +1,7 @@
 {
   "_script_runs": {
     "latest": {
-      "started_at": "2026-09-28T08:45:20.696505+00:00",
+      "started_at": "2026-09-28T19:34:28.858567+00:00",
       "status": "FAILED",
       "script": "generate_randoop_tests",
       "arguments": [
@@ -13,6 +13,8 @@
         "60",
         "--jvm-memory",
         "3000m",
+        "--project-timeout",
+        "300",
         "--round",
         "2",
         "--seed",
@@ -25,12 +27,12 @@
       "seed": 20260928,
       "time_limit": 60,
       "project": "Codec",
-      "run_id": "20260928T084520708235Z_56626",
+      "run_id": "20260928T193428870018Z_14988",
       "success": 0,
       "skipped": 17,
       "failed": 1,
-      "total_duration_seconds": 0.207,
-      "finished_at": "2026-09-28T08:45:20.903856+00:00"
+      "total_duration_seconds": 0.273,
+      "finished_at": "2026-09-28T19:34:29.131797+00:00"
     },
     "history": {
       "20260927T184617071641Z_3442": {
@@ -128,6 +130,40 @@
         "failed": 1,
         "total_duration_seconds": 0.207,
         "finished_at": "2026-09-28T08:45:20.903856+00:00"
+      },
+      "20260928T193428870018Z_14988": {
+        "started_at": "2026-09-28T19:34:28.858567+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Codec",
+          "--state-file",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Codec.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "300",
+          "--round",
+          "2",
+          "--seed",
+          "20260928",
+          "--output-dir",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+        ],
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Codec.json",
+        "round": 2,
+        "seed": 20260928,
+        "time_limit": 60,
+        "project": "Codec",
+        "run_id": "20260928T193428870018Z_14988",
+        "success": 0,
+        "skipped": 17,
+        "failed": 1,
+        "total_duration_seconds": 0.273,
+        "finished_at": "2026-09-28T19:34:29.131797+00:00"
       }
     }
   },
@@ -509,13 +545,13 @@
   },
   "Codec_14": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 8 บรรทัด):\nRandoop for Java version 4.3.4.\n\nCould not load class org.apache.commons.codec.language.bm.Lang: Unable to load class \"org.apache.commons.codec.language.bm.Lang\" due to exception: java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/bm/ash_languages.txt\nClasspath:\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/sqa_randoop/Codec_14-ie0_60di/jars/randoop-all-4.3.4.jar\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Codec_14\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/d4j_work/Codec_14_buggy/target/classes\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/d4j_work/Codec_14_buggy/src/main/resources/commons-lang3-3.8.1.jar",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 12 บรรทัด):\nRandoop for Java version 4.3.4.\n\nCould not load class org.apache.commons.codec.language.bm.Lang: Unable to load class \"org.apache.commons.codec.language.bm.Lang\" due to exception: java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/bm/ash_languages.txt\nClasspath:\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/sqa_randoop/Codec_14-xeu5bhyx/jars/randoop-all-4.3.4.jar\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Codec_14\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/d4j_work/Codec_14_buggy/target/classes\n/Users/piyadaketmala/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar\n/Users/piyadaketmala/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar\n/Users/piyadaketmala/defects4j/framework/projects/Codec/lib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar\n/Users/piyadaketmala/defects4j/framework/projects/Codec/lib/junit/junit/4.12/junit-4.12.jar\n/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/d4j_work/Codec_14_buggy/src/main/resources/commons-lang3-3.8.1.jar",
     "classes": [
       "org.apache.commons.codec.language.bm.Lang",
       "org.apache.commons.codec.language.bm.PhoneticEngine",
       "org.apache.commons.codec.language.bm.Rule"
     ],
-    "timestamp": "2026-09-28T08:45:20.903211+00:00",
+    "timestamp": "2026-09-28T19:34:29.130930+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,

@@ -1,8 +1,8 @@
 {
   "_script_runs": {
     "latest": {
-      "started_at": "2026-09-28T08:53:40.475271+00:00",
-      "status": "INTERRUPTED",
+      "started_at": "2026-09-28T19:45:07.131990+00:00",
+      "status": "FAILED",
       "script": "generate_randoop_tests",
       "arguments": [
         "--project",
@@ -13,6 +13,8 @@
         "60",
         "--jvm-memory",
         "3000m",
+        "--project-timeout",
+        "300",
         "--round",
         "2",
         "--seed",
@@ -25,9 +27,12 @@
       "seed": 20260928,
       "time_limit": 60,
       "project": "Mockito",
-      "run_id": "20260928T085340486064Z_61239",
-      "total_duration_seconds": 63.981,
-      "finished_at": "2026-09-28T08:54:44.456822+00:00"
+      "run_id": "20260928T194507148293Z_15126",
+      "success": 0,
+      "skipped": 25,
+      "failed": 13,
+      "total_duration_seconds": 358.294,
+      "finished_at": "2026-09-28T19:51:05.428753+00:00"
     },
     "history": {
       "20260928T054906748386Z_20630": {
@@ -148,6 +153,40 @@
         "run_id": "20260928T085340486064Z_61239",
         "total_duration_seconds": 63.981,
         "finished_at": "2026-09-28T08:54:44.456822+00:00"
+      },
+      "20260928T194507148293Z_15126": {
+        "started_at": "2026-09-28T19:45:07.131990+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Mockito",
+          "--state-file",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Mockito.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--project-timeout",
+          "300",
+          "--round",
+          "2",
+          "--seed",
+          "20260928",
+          "--output-dir",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+        ],
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Mockito.json",
+        "round": 2,
+        "seed": 20260928,
+        "time_limit": 60,
+        "project": "Mockito",
+        "run_id": "20260928T194507148293Z_15126",
+        "success": 0,
+        "skipped": 25,
+        "failed": 13,
+        "total_duration_seconds": 358.294,
+        "finished_at": "2026-09-28T19:51:05.428753+00:00"
       }
     }
   },
@@ -326,7 +365,7 @@
     "classes": [
       "org.mockito.internal.stubbing.answers.CallsRealMethods"
     ],
-    "timestamp": "2026-09-28T08:54:00.200298+00:00",
+    "timestamp": "2026-09-28T19:45:29.907316+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -515,7 +554,7 @@
     "classes": [
       "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues"
     ],
-    "timestamp": "2026-09-28T08:54:18.913086+00:00",
+    "timestamp": "2026-09-28T19:45:53.264272+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -544,7 +583,7 @@
     "classes": [
       "org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker"
     ],
-    "timestamp": "2026-09-28T08:54:36.183072+00:00",
+    "timestamp": "2026-09-28T19:46:14.521115+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -556,7 +595,7 @@
     "classes": [
       "org.mockito.internal.invocation.InvocationMatcher"
     ],
-    "timestamp": "2026-09-28T08:49:08.195379+00:00",
+    "timestamp": "2026-09-28T19:46:36.683239+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -588,7 +627,7 @@
     "classes": [
       "org.mockito.internal.verification.VerificationOverTimeImpl"
     ],
-    "timestamp": "2026-09-28T08:49:26.709233+00:00",
+    "timestamp": "2026-09-28T19:47:00.086026+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -623,7 +662,7 @@
     "classes": [
       "org.mockito.internal.invocation.InvocationMatcher"
     ],
-    "timestamp": "2026-09-28T08:49:48.493829+00:00",
+    "timestamp": "2026-09-28T19:47:21.300492+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -687,7 +726,7 @@
       "org.mockito.internal.configuration.injection.filter.FinalMockCandidateFilter",
       "org.mockito.internal.configuration.injection.filter.TypeBasedCandidateFilter"
     ],
-    "timestamp": "2026-09-28T08:50:11.213016+00:00",
+    "timestamp": "2026-09-28T19:47:41.306276+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -695,12 +734,12 @@
   },
   "Mockito_14": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstderr (ท้าย 5 บรรทัด):\nWARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/piyadaketmala/defects4j/framework/projects/Mockito/lib/cglib-and-asm-1.0.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)\nWARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\nstdout (ท้าย 20 บรรทัด):\norg.mockito.internal.progress.MockingProgress mockingProgress39 = serializableMockHandler38.mockingProgress;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler40 = new org.mockito.internal.MockHandler<java.io.Serializable>((org.mockito.internal.MockHandlerInterface<java.io.Serializable>)serializableMockHandler38);\norg.mockito.internal.invocation.MatchersBinder matchersBinder41 = null;\nserializableMockHandler40.matchersBinder = matchersBinder41;\norg.mockito.internal.creation.MockSettingsImpl mockSettingsImpl43 = null;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler44 = new org.mockito.internal.MockHandler<java.io.Serializable>(mockSettingsImpl43);\norg.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl45 = serializableMockHandler44.invocationContainerImpl;\norg.mockito.stubbing.VoidMethodStubbable<java.io.Serializable> serializableVoidMethodStubbable46 = serializableMockHandler40.voidMethodStubbable((java.io.Serializable) serializableMockHandler44);\norg.mockito.internal.creation.MockSettingsImpl mockSettingsImpl47 = null;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler48 = new org.mockito.internal.MockHandler<java.io.Serializable>(mockSettingsImpl47);\norg.mockito.internal.progress.MockingProgress mockingProgress49 = serializableMockHandler48.mockingProgress;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler50 = new org.mockito.internal.MockHandler<java.io.Serializable>((org.mockito.internal.MockHandlerInterface<java.io.Serializable>)serializableMockHandler48);\norg.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl51 = serializableMockHandler50.invocationContainerImpl;\norg.mockito.internal.progress.MockingProgress mockingProgress52 = serializableMockHandler50.mockingProgress;\norg.mockito.internal.progress.MockingProgress mockingProgress53 = serializableMockHandler50.mockingProgress;\nserializableMockHandler44.mockingProgress = mockingProgress53;\norg.mockito.internal.invocation.MatchersBinder matchersBinder55 = serializableMockHandler44.matchersBinder;\norg.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl56 = serializableMockHandler44.invocationContainerImpl;\norg.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl57 = serializableMockHandler44.invocationContainerImpl;\nserializableMockHandler1.invocationContainerImpl = invocationContainerImpl57;",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstderr (ท้าย 5 บรรทัด):\nWARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/piyadaketmala/defects4j/framework/projects/Mockito/lib/cglib-and-asm-1.0.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)\nWARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\nstdout (ท้าย 20 บรรทัด):\norg.mockito.internal.creation.MockSettingsImpl mockSettingsImpl46 = null;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler47 = new org.mockito.internal.MockHandler<java.io.Serializable>(mockSettingsImpl46);\norg.mockito.internal.progress.MockingProgress mockingProgress48 = serializableMockHandler47.mockingProgress;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler49 = new org.mockito.internal.MockHandler<java.io.Serializable>((org.mockito.internal.MockHandlerInterface<java.io.Serializable>)serializableMockHandler47);\norg.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl50 = serializableMockHandler49.invocationContainerImpl;\norg.mockito.internal.progress.MockingProgress mockingProgress51 = serializableMockHandler49.mockingProgress;\norg.mockito.internal.progress.MockingProgress mockingProgress52 = serializableMockHandler49.mockingProgress;\nserializableMockHandler43.mockingProgress = mockingProgress52;\norg.mockito.internal.invocation.MatchersBinder matchersBinder54 = serializableMockHandler43.matchersBinder;\norg.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl55 = serializableMockHandler43.invocationContainerImpl;\norg.mockito.internal.creation.MockSettingsImpl mockSettingsImpl56 = null;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler57 = new org.mockito.internal.MockHandler<java.io.Serializable>(mockSettingsImpl56);\norg.mockito.internal.progress.MockingProgress mockingProgress58 = serializableMockHandler57.mockingProgress;\norg.mockito.internal.MockHandler<java.io.Serializable> serializableMockHandler59 = new org.mockito.internal.MockHandler<java.io.Serializable>((org.mockito.internal.MockHandlerInterface<java.io.Serializable>)serializableMockHandler57);\norg.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl60 = serializableMockHandler59.invocationContainerImpl;\nserializableMockHandler43.invocationContainerImpl = invocationContainerImpl60;\norg.mockito.internal.stubbing.InvocationContainer invocationContainer62 = serializableMockHandler43.getInvocationContainer();\norg.mockito.internal.invocation.MatchersBinder matchersBinder63 = serializableMockHandler43.matchersBinder;\nserializableMockHandler20.matchersBinder = matchersBinder63;\nserializableMockHandler1.matchersBinder = matchersBinder63;",
     "classes": [
       "org.mockito.internal.MockHandler",
       "org.mockito.internal.MockitoCore"
     ],
-    "timestamp": "2026-09-28T08:51:14.108773+00:00",
+    "timestamp": "2026-09-28T19:48:43.690516+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -735,7 +774,7 @@
     "classes": [
       "org.mockito.internal.util.reflection.GenericMetadataSupport"
     ],
-    "timestamp": "2026-09-28T08:51:33.134803+00:00",
+    "timestamp": "2026-09-28T19:49:03.986323+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -747,7 +786,7 @@
     "classes": [
       "org.mockito.internal.util.reflection.GenericMetadataSupport"
     ],
-    "timestamp": "2026-09-28T08:51:52.812497+00:00",
+    "timestamp": "2026-09-28T19:49:23.643198+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -781,7 +820,7 @@
     "classes": [
       "org.mockito.Matchers"
     ],
-    "timestamp": "2026-09-28T08:52:12.307635+00:00",
+    "timestamp": "2026-09-28T19:49:43.456419+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -793,7 +832,7 @@
     "classes": [
       "org.mockito.exceptions.Reporter"
     ],
-    "timestamp": "2026-09-28T08:52:32.551215+00:00",
+    "timestamp": "2026-09-28T19:50:03.904528+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
@@ -801,12 +840,12 @@
   },
   "Mockito_16": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstderr (ท้าย 5 บรรทัด):\nWARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/piyadaketmala/defects4j/framework/projects/Mockito/lib/cglib-and-asm-1.0.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)\nWARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.MockitoCore mockitoCore0 = new org.mockito.internal.MockitoCore();\norg.mockito.stubbing.Stubber[] stubberArray1 = new org.mockito.stubbing.Stubber[] {  };\norg.mockito.Mockito.reset(stubberArray1);\nmockitoCore0.reset(stubberArray1);\norg.mockito.internal.MockitoCore mockitoCore4 = org.mockito.Mockito.spy(mockitoCore0);\njava.lang.Class[][][] classArray6 = new java.lang.Class[ 0 ][][];\n@SuppressWarnings(\"unchecked\")\njava.lang.Class<?>[][][] wildcardClassArray7 = (java.lang.Class<?>[][][])classArray6;\norg.mockito.Mockito.reset(wildcardClassArray7);\nmockitoCore4.reset((java.io.Serializable[]) wildcardClassArray7);\norg.mockito.internal.progress.IOngoingStubbing iOngoingStubbing10 = mockitoCore4.stub();\norg.mockito.internal.progress.IOngoingStubbing iOngoingStubbing11 = mockitoCore4.stub();\njava.lang.Object[] objArray12 = null;\nmockitoCore4.verifyNoMoreInteractions(objArray12);",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstderr (ท้าย 5 บรรทัด):\nWARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/piyadaketmala/defects4j/framework/projects/Mockito/lib/cglib-and-asm-1.0.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)\nWARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\nstdout (ท้าย 20 บรรทัด):\njava.lang.reflect.GenericDeclaration genericDeclaration62 = org.mockito.Matchers.refEq((java.lang.reflect.GenericDeclaration) wildcardClass51, strArray59);\norg.mockito.internal.verification.api.VerificationMode verificationMode64 = org.mockito.Mockito.atLeast((int) (byte)100);\njava.lang.Class<?> wildcardClass65 = verificationMode64.getClass();\njava.lang.Class[] classArray67 = new java.lang.Class[ 2 ];\n@SuppressWarnings(\"unchecked\")\njava.lang.Class<?>[] wildcardClassArray68 = (java.lang.Class<?>[])classArray67;\nwildcardClassArray68[0] = wildcardClass51;\nwildcardClassArray68[1] = wildcardClass65;\njava.lang.Class<?>[] wildcardClassArray73 = org.mockito.Matchers.eq(wildcardClassArray68);\njava.lang.Class<?>[] wildcardClassArray74 = org.mockito.Matchers.eq(wildcardClassArray68);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer75 = org.mockito.Mockito.RETURNS_DEFAULTS;\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer76 = org.mockito.Matchers.same(objAnswer75);\njava.util.List list77 = org.mockito.Matchers.anyList();\njava.util.List list78 = org.mockito.Matchers.eq(list77);\njava.lang.String[] strArray83 = new java.lang.String[] { \"hi!\", \"\", \"\" };\njava.lang.Object obj84 = org.mockito.Matchers.refEq((java.lang.Object) (-1L), strArray83);\njava.util.List list85 = org.mockito.Matchers.refEq(list77, strArray83);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer86 = org.mockito.Matchers.refEq(objAnswer76, strArray83);\njava.lang.Class<?>[] wildcardClassArray87 = org.mockito.Matchers.refEq(wildcardClassArray68, strArray83);\njava.util.Set[][] setArray88 = org.mockito.Matchers.refEq(setArray49, strArray83);",
     "classes": [
       "org.mockito.Mockito",
       "org.mockito.internal.MockitoCore"
     ],
-    "timestamp": "2026-09-28T06:30:14.141439+00:00",
+    "timestamp": "2026-09-28T19:51:05.427322+00:00",
     "round": 2,
     "seed": 20260928,
     "time_limit": 60,
