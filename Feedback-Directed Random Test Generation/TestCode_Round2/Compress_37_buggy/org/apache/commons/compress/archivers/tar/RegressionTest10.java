@@ -1,0 +1,8749 @@
+package org.apache.commons.compress.archivers.tar;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class RegressionTest10 {
+
+    public static boolean debug = false;
+
+    public void assertBooleanArrayEquals(boolean[] expectedArray, boolean[] actualArray) {
+        if (expectedArray.length != actualArray.length) {
+            throw new AssertionError("Array lengths differ: " + expectedArray.length + " != " + actualArray.length);
+        }
+        for (int i = 0; i < expectedArray.length; i++) {
+            if (expectedArray[i] != actualArray[i]) {
+                throw new AssertionError("Arrays differ at index " + i + ": " + expectedArray[i] + " != " + actualArray[i]);
+            }
+        }
+    }
+
+    @Test
+    public void test5001() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5001");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        byte[] byteArray27 = tarArchiveInputStream26.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26);
+        tarArchiveInputStream26.mark((-1));
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32, (int) (short) 1);
+        long long35 = tarArchiveInputStream32.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry36 = null;
+        tarArchiveInputStream32.setCurrentEntry(tarArchiveEntry36);
+        long long39 = tarArchiveInputStream32.skip((long) (short) -1);
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        long long44 = tarArchiveInputStream41.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry45 = null;
+        tarArchiveInputStream41.setCurrentEntry(tarArchiveEntry45);
+        java.util.Map<java.lang.String, java.lang.String> strMap47 = tarArchiveInputStream32.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream41);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry48 = tarArchiveInputStream41.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41);
+        int int50 = tarArchiveInputStream41.available();
+        int int51 = tarArchiveInputStream41.read();
+        boolean boolean52 = tarArchiveInputStream41.isAtEOF();
+        java.io.InputStream inputStream53 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream53);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream54, (int) (short) 1);
+        byte[] byteArray57 = tarArchiveInputStream56.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry58 = null;
+        boolean boolean59 = tarArchiveInputStream56.canReadEntryData(archiveEntry58);
+        int int60 = tarArchiveInputStream56.available();
+        byte[] byteArray61 = tarArchiveInputStream56.readAllBytes();
+        int int62 = tarArchiveInputStream41.read(byteArray61);
+        int int63 = tarArchiveInputStream26.read(byteArray61);
+        boolean boolean65 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray61, 0);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertTrue("'" + long35 + "' != '" + 0L + "'", long35 == 0L);
+        org.junit.Assert.assertTrue("'" + long39 + "' != '" + 0L + "'", long39 == 0L);
+        org.junit.Assert.assertTrue("'" + long44 + "' != '" + 0L + "'", long44 == 0L);
+        org.junit.Assert.assertNotNull(strMap47);
+        org.junit.Assert.assertNull(tarArchiveEntry48);
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + 0 + "'", int50 == 0);
+        org.junit.Assert.assertTrue("'" + int51 + "' != '" + (-1) + "'", int51 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+        org.junit.Assert.assertNull(byteArray57);
+        org.junit.Assert.assertTrue("'" + boolean59 + "' != '" + false + "'", boolean59 == false);
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + 0 + "'", int60 == 0);
+        org.junit.Assert.assertNotNull(byteArray61);
+        org.junit.Assert.assertArrayEquals(byteArray61, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int62 + "' != '" + (-1) + "'", int62 == (-1));
+        org.junit.Assert.assertTrue("'" + int63 + "' != '" + (-1) + "'", int63 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + false + "'", boolean65 == false);
+    }
+
+    @Test
+    public void test5002() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5002");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.isAtEOF();
+        int int14 = tarArchiveInputStream3.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '#', 1);
+        byte[] byteArray18 = tarArchiveInputStream17.getLongNameData();
+        byte[] byteArray19 = tarArchiveInputStream17.getLongNameData();
+        byte[] byteArray20 = tarArchiveInputStream17.readAllBytes();
+        byte[] byteArray21 = tarArchiveInputStream17.readRecord();
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        byte[] byteArray26 = tarArchiveInputStream25.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) '4');
+        int int32 = tarArchiveInputStream29.available();
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream34, (int) (short) 1);
+        byte[] byteArray37 = null;
+        int int40 = tarArchiveInputStream36.read(byteArray37, (int) '4', (int) '#');
+        java.io.InputStream inputStream41 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream41);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream42);
+        java.util.Map<java.lang.String, java.lang.String> strMap44 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream43);
+        byte[] byteArray46 = new byte[] { (byte) -1 };
+        int int47 = tarArchiveInputStream43.read(byteArray46);
+        int int48 = tarArchiveInputStream29.read(byteArray46);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry49 = tarArchiveInputStream29.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry50 = null;
+        tarArchiveInputStream29.setCurrentEntry(tarArchiveEntry50);
+        tarArchiveInputStream29.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry54 = tarArchiveInputStream53.getCurrentEntry();
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream17.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream53);
+        byte[] byteArray56 = tarArchiveInputStream53.readAllBytes();
+        int int57 = tarArchiveInputStream53.getCount();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertNull(byteArray18);
+        org.junit.Assert.assertNull(byteArray19);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] {});
+        org.junit.Assert.assertNull(byteArray21);
+        org.junit.Assert.assertNull(byteArray26);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + 0 + "'", int32 == 0);
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + (-1) + "'", int40 == (-1));
+        org.junit.Assert.assertNotNull(strMap44);
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + (-1) + "'", int48 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry49);
+        org.junit.Assert.assertNull(tarArchiveEntry54);
+        org.junit.Assert.assertNotNull(strMap55);
+        org.junit.Assert.assertNotNull(byteArray56);
+        org.junit.Assert.assertArrayEquals(byteArray56, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int57 + "' != '" + 0 + "'", int57 == 0);
+    }
+
+    @Test
+    public void test5003() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5003");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        tarArchiveInputStream1.setAtEOF(false);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry9 = null;
+        boolean boolean10 = tarArchiveInputStream1.canReadEntryData(archiveEntry9);
+        // The following exception was thrown during execution in test generation
+        try {
+            tarArchiveInputStream1.close();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+    }
+
+    @Test
+    public void test5004() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5004");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.lang.String str8 = tarArchiveInputStream7.encoding;
+        tarArchiveInputStream7.setAtEOF(true);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry11 = tarArchiveInputStream7.getCurrentEntry();
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (short) 1);
+        byte[] byteArray16 = tarArchiveInputStream15.readRecord();
+        tarArchiveInputStream15.mark((-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry19 = tarArchiveInputStream15.getNextEntry();
+        tarArchiveInputStream15.reset();
+        boolean boolean21 = tarArchiveInputStream15.markSupported();
+        java.lang.String str22 = tarArchiveInputStream15.encoding;
+        byte[] byteArray24 = tarArchiveInputStream15.readNBytes((int) (byte) 10);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray24, (int) (byte) -1);
+        int int29 = tarArchiveInputStream7.read(byteArray24, (int) (short) -1, (int) (short) 0);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(str8);
+        org.junit.Assert.assertNull(tarArchiveEntry11);
+        org.junit.Assert.assertNull(byteArray16);
+        org.junit.Assert.assertNull(archiveEntry19);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertNull(str22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
+    }
+
+    @Test
+    public void test5005() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5005");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '4', (int) (byte) 10);
+        byte[] byteArray11 = tarArchiveInputStream9.readNBytes((int) '#');
+        java.io.OutputStream outputStream12 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            long long13 = tarArchiveInputStream9.transferTo(outputStream12);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: out");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNotNull(byteArray11);
+        org.junit.Assert.assertArrayEquals(byteArray11, new byte[] {});
+    }
+
+    @Test
+    public void test5006() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5006");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        tarArchiveInputStream1.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry7 = tarArchiveInputStream1.getCurrentEntry();
+        boolean boolean8 = tarArchiveInputStream1.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) 'a');
+        tarArchiveInputStream1.reset();
+        tarArchiveInputStream1.reset();
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry7);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+    }
+
+    @Test
+    public void test5007() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5007");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        byte[] byteArray13 = new byte[] { (byte) -1 };
+        int int14 = tarArchiveInputStream10.read(byteArray13);
+        java.io.InputStream inputStream15 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream15);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, (int) (short) 1);
+        byte[] byteArray19 = null;
+        int int22 = tarArchiveInputStream18.read(byteArray19, (int) '4', (int) '#');
+        java.io.InputStream inputStream23 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24);
+        java.util.Map<java.lang.String, java.lang.String> strMap26 = tarArchiveInputStream18.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream25);
+        boolean boolean27 = tarArchiveInputStream18.isAtEOF();
+        boolean boolean28 = tarArchiveInputStream18.isAtEOF();
+        byte[] byteArray30 = tarArchiveInputStream18.readNBytes((int) '#');
+        int int33 = tarArchiveInputStream10.read(byteArray30, (int) '4', (int) (byte) -1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry34 = tarArchiveInputStream10.getNextEntry();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + (-1) + "'", int22 == (-1));
+        org.junit.Assert.assertNotNull(strMap26);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertNotNull(byteArray30);
+        org.junit.Assert.assertArrayEquals(byteArray30, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
+        org.junit.Assert.assertNull(archiveEntry34);
+    }
+
+    @Test
+    public void test5008() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5008");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        tarArchiveInputStream3.mark((-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry7 = tarArchiveInputStream3.getNextEntry();
+        boolean boolean8 = tarArchiveInputStream3.markSupported();
+        java.lang.String str9 = tarArchiveInputStream3.encoding;
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(archiveEntry7);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertNull(str9);
+    }
+
+    @Test
+    public void test5009() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5009");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = tarArchiveInputStream3.getNextEntry();
+        long long16 = tarArchiveInputStream3.skip((long) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream3.getNextTarEntry();
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        byte[] byteArray22 = null;
+        int int25 = tarArchiveInputStream21.read(byteArray22, (int) '4', (int) '#');
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream21.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream28);
+        boolean boolean30 = tarArchiveInputStream21.isAtEOF();
+        boolean boolean31 = tarArchiveInputStream21.markSupported();
+        byte[] byteArray32 = tarArchiveInputStream21.getLongNameData();
+        byte[] byteArray33 = tarArchiveInputStream21.readAllBytes();
+        byte[] byteArray35 = tarArchiveInputStream21.readNBytes((int) '#');
+        int int38 = tarArchiveInputStream3.read(byteArray35, (int) (short) 1, 0);
+        boolean boolean40 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray35, (int) '4');
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertNull(archiveEntry14);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertNull(byteArray32);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + (-1) + "'", int38 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+    }
+
+    @Test
+    public void test5010() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5010");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        tarArchiveInputStream4.reset();
+        int int8 = tarArchiveInputStream4.read();
+        java.lang.String str9 = tarArchiveInputStream4.encoding;
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        long long14 = tarArchiveInputStream11.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry15 = null;
+        boolean boolean16 = tarArchiveInputStream11.canReadEntryData(archiveEntry15);
+        int int17 = tarArchiveInputStream11.getCount();
+        byte[] byteArray18 = tarArchiveInputStream11.readAllBytes();
+        tarArchiveInputStream11.mark(100);
+        java.io.InputStream inputStream21 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream21);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22, (int) (short) 1);
+        long long25 = tarArchiveInputStream22.getBytesRead();
+        tarArchiveInputStream22.mark((int) (short) 100);
+        byte[] byteArray29 = tarArchiveInputStream22.readNBytes(35);
+        int int30 = tarArchiveInputStream11.read(byteArray29);
+        boolean boolean31 = tarArchiveInputStream11.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry32 = tarArchiveInputStream11.getCurrentEntry();
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream34, (int) (short) 1);
+        byte[] byteArray37 = tarArchiveInputStream36.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream40, (int) '4');
+        tarArchiveInputStream42.reset();
+        java.io.InputStream inputStream44 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream44);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream45);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry47 = null;
+        boolean boolean48 = tarArchiveInputStream45.canReadEntryData(archiveEntry47);
+        tarArchiveInputStream45.setAtEOF(false);
+        byte[] byteArray52 = tarArchiveInputStream45.readNBytes(0);
+        int int53 = tarArchiveInputStream42.read(byteArray52);
+        int int56 = tarArchiveInputStream11.read(byteArray52, (int) (byte) 1, (int) '#');
+        boolean boolean58 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray52, (int) (byte) -1);
+        boolean boolean60 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray52, (-1));
+        boolean boolean62 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray52, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean63 = tarArchiveInputStream4.isEOFRecord(byteArray52);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + (-1) + "'", int8 == (-1));
+        org.junit.Assert.assertNull(str9);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long25 + "' != '" + 0L + "'", long25 == 0L);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry32);
+        org.junit.Assert.assertNull(byteArray37);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int53 + "' != '" + (-1) + "'", int53 == (-1));
+        org.junit.Assert.assertTrue("'" + int56 + "' != '" + (-1) + "'", int56 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean58 + "' != '" + false + "'", boolean58 == false);
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertTrue("'" + boolean62 + "' != '" + false + "'", boolean62 == false);
+    }
+
+    @Test
+    public void test5011() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5011");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        tarArchiveInputStream4.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = tarArchiveInputStream4.getCurrentEntry();
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        byte[] byteArray13 = tarArchiveInputStream12.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = null;
+        boolean boolean15 = tarArchiveInputStream12.canReadEntryData(archiveEntry14);
+        int int16 = tarArchiveInputStream12.available();
+        java.io.InputStream inputStream17 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream17);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream17, (int) (short) 1, (int) '#');
+        tarArchiveInputStream21.mark((int) (short) 10);
+        tarArchiveInputStream21.reset();
+        int int25 = tarArchiveInputStream21.read();
+        java.util.Map<java.lang.String, java.lang.String> strMap26 = tarArchiveInputStream12.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        boolean boolean27 = tarArchiveInputStream12.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap28 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream12);
+        java.io.InputStream inputStream29 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream29);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream30, (int) (short) 1);
+        byte[] byteArray33 = null;
+        int int36 = tarArchiveInputStream32.read(byteArray33, (int) '4', (int) '#');
+        java.io.InputStream inputStream37 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream37);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38);
+        java.util.Map<java.lang.String, java.lang.String> strMap40 = tarArchiveInputStream32.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream39);
+        int int41 = tarArchiveInputStream32.getRecordSize();
+        byte[] byteArray43 = tarArchiveInputStream32.readNBytes((int) '4');
+        int int46 = tarArchiveInputStream4.read(byteArray43, (int) '4', (int) (short) 100);
+        java.lang.String str47 = tarArchiveInputStream4.encoding;
+        org.junit.Assert.assertNull(tarArchiveEntry8);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'", int16 == 0);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(strMap26);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNotNull(strMap28);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertNotNull(strMap40);
+        org.junit.Assert.assertTrue("'" + int41 + "' != '" + 512 + "'", int41 == 512);
+        org.junit.Assert.assertNotNull(byteArray43);
+        org.junit.Assert.assertArrayEquals(byteArray43, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int46 + "' != '" + (-1) + "'", int46 == (-1));
+        org.junit.Assert.assertNull(str47);
+    }
+
+    @Test
+    public void test5012() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5012");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        int int5 = tarArchiveInputStream3.available();
+        byte[] byteArray6 = tarArchiveInputStream3.readAllBytes();
+        tarArchiveInputStream3.mark(35);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry9 = tarArchiveInputStream3.getNextEntry();
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        long long14 = tarArchiveInputStream11.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry15 = null;
+        boolean boolean16 = tarArchiveInputStream11.canReadEntryData(archiveEntry15);
+        long long17 = tarArchiveInputStream11.getBytesRead();
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        byte[] byteArray22 = null;
+        int int25 = tarArchiveInputStream21.read(byteArray22, (int) '4', (int) '#');
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream21.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream28);
+        boolean boolean30 = tarArchiveInputStream21.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, 35);
+        tarArchiveInputStream21.mark((int) (byte) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21);
+        java.util.Map<java.lang.String, java.lang.String> strMap36 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        java.util.Map<java.lang.String, java.lang.String> strMap37 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        // The following exception was thrown during execution in test generation
+        try {
+            tarArchiveInputStream3.close();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] {});
+        org.junit.Assert.assertNull(archiveEntry9);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 0L + "'", long17 == 0L);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertNotNull(strMap36);
+        org.junit.Assert.assertNotNull(strMap37);
+    }
+
+    @Test
+    public void test5013() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5013");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry6 = null;
+        boolean boolean7 = tarArchiveInputStream3.canReadEntryData(archiveEntry6);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry8 = tarArchiveInputStream3.getNextEntry();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry9 = null;
+        boolean boolean10 = tarArchiveInputStream3.canReadEntryData(archiveEntry9);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry11 = tarArchiveInputStream3.getNextTarEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry12 = tarArchiveInputStream3.getNextTarEntry();
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNull(archiveEntry8);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry11);
+        org.junit.Assert.assertNull(tarArchiveEntry12);
+    }
+
+    @Test
+    public void test5014() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5014");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        int int3 = tarArchiveInputStream2.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream2, (int) (byte) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream2, (int) (byte) 100);
+        long long9 = tarArchiveInputStream7.skip((long) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (byte) 0);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + (-1) + "'", int3 == (-1));
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 0L + "'", long9 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+    }
+
+    @Test
+    public void test5015() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5015");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        int int15 = tarArchiveInputStream14.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry16 = tarArchiveInputStream14.getNextTarEntry();
+        java.io.InputStream inputStream17 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream17);
+        tarArchiveInputStream18.mark((int) (byte) 0);
+        int int21 = tarArchiveInputStream18.read();
+        tarArchiveInputStream18.reset();
+        java.io.InputStream inputStream23 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) 1);
+        int int29 = tarArchiveInputStream26.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry30 = null;
+        tarArchiveInputStream26.setCurrentEntry(tarArchiveEntry30);
+        java.io.InputStream inputStream32 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream32);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream32, (int) (short) 1, (int) '#');
+        int int37 = tarArchiveInputStream36.getRecordSize();
+        java.io.InputStream inputStream38 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream38);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39, (int) (short) 1);
+        long long42 = tarArchiveInputStream39.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap43 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream39);
+        byte[] byteArray44 = tarArchiveInputStream39.readAllBytes();
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray44, (int) (byte) 1);
+        int int49 = tarArchiveInputStream26.read(byteArray44, (int) '#', 1);
+        int int50 = tarArchiveInputStream18.read(byteArray44);
+        byte[] byteArray52 = tarArchiveInputStream18.readNBytes((int) (short) 100);
+        int int55 = tarArchiveInputStream14.read(byteArray52, 35, 35);
+        java.io.InputStream inputStream56 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream57 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream56);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream59 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream57, (int) (short) 1);
+        byte[] byteArray60 = tarArchiveInputStream59.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream63 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream59, 512, (-1));
+        java.io.InputStream inputStream64 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream65 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream64);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream67 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream65, (int) (short) 1);
+        byte[] byteArray68 = null;
+        int int71 = tarArchiveInputStream67.read(byteArray68, (int) '4', (int) '#');
+        java.io.InputStream inputStream72 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream73 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream72);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream74 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream73);
+        java.util.Map<java.lang.String, java.lang.String> strMap75 = tarArchiveInputStream67.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream74);
+        boolean boolean76 = tarArchiveInputStream67.isAtEOF();
+        boolean boolean77 = tarArchiveInputStream67.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap78 = tarArchiveInputStream59.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream67);
+        long long80 = tarArchiveInputStream67.skip((long) 100);
+        boolean boolean81 = tarArchiveInputStream67.markSupported();
+        tarArchiveInputStream67.setAtEOF(true);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry84 = null;
+        boolean boolean85 = tarArchiveInputStream67.canReadEntryData(archiveEntry84);
+        java.lang.String str86 = tarArchiveInputStream67.encoding;
+        int int87 = tarArchiveInputStream67.getCount();
+        java.util.Map<java.lang.String, java.lang.String> strMap88 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream67);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream90 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (byte) 10);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 0 + "'", int15 == 0);
+        org.junit.Assert.assertNull(tarArchiveEntry16);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + 0 + "'", int29 == 0);
+        org.junit.Assert.assertTrue("'" + int37 + "' != '" + 35 + "'", int37 == 35);
+        org.junit.Assert.assertTrue("'" + long42 + "' != '" + 0L + "'", long42 == 0L);
+        org.junit.Assert.assertNotNull(strMap43);
+        org.junit.Assert.assertNotNull(byteArray44);
+        org.junit.Assert.assertArrayEquals(byteArray44, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertTrue("'" + int49 + "' != '" + (-1) + "'", int49 == (-1));
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + (-1) + "'", int50 == (-1));
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + (-1) + "'", int55 == (-1));
+        org.junit.Assert.assertNull(byteArray60);
+        org.junit.Assert.assertTrue("'" + int71 + "' != '" + (-1) + "'", int71 == (-1));
+        org.junit.Assert.assertNotNull(strMap75);
+        org.junit.Assert.assertTrue("'" + boolean76 + "' != '" + false + "'", boolean76 == false);
+        org.junit.Assert.assertTrue("'" + boolean77 + "' != '" + false + "'", boolean77 == false);
+        org.junit.Assert.assertNotNull(strMap78);
+        org.junit.Assert.assertTrue("'" + long80 + "' != '" + 0L + "'", long80 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean81 + "' != '" + false + "'", boolean81 == false);
+        org.junit.Assert.assertTrue("'" + boolean85 + "' != '" + false + "'", boolean85 == false);
+        org.junit.Assert.assertNull(str86);
+        org.junit.Assert.assertTrue("'" + int87 + "' != '" + 0 + "'", int87 == 0);
+        org.junit.Assert.assertNotNull(strMap88);
+    }
+
+    @Test
+    public void test5016() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5016");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        int int13 = tarArchiveInputStream3.read();
+        java.lang.String str14 = tarArchiveInputStream3.encoding;
+        int int15 = tarArchiveInputStream3.getRecordSize();
+        java.lang.Class<?> wildcardClass16 = tarArchiveInputStream3.getClass();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertNull(str14);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 512 + "'", int15 == 512);
+        org.junit.Assert.assertNotNull(wildcardClass16);
+    }
+
+    @Test
+    public void test5017() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5017");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        byte[] byteArray13 = new byte[] { (byte) -1 };
+        int int14 = tarArchiveInputStream10.read(byteArray13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = null;
+        tarArchiveInputStream16.setCurrentEntry(tarArchiveEntry17);
+        long long20 = tarArchiveInputStream16.skip((long) (short) 10);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry21 = tarArchiveInputStream16.getNextEntry();
+        int int22 = tarArchiveInputStream16.getCount();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 0L + "'", long20 == 0L);
+        org.junit.Assert.assertNull(archiveEntry21);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'", int22 == 0);
+    }
+
+    @Test
+    public void test5018() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5018");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        int int27 = tarArchiveInputStream26.read();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = null;
+        int int35 = tarArchiveInputStream31.read(byteArray32, (int) '4', (int) '#');
+        java.io.InputStream inputStream36 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream36);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37);
+        java.util.Map<java.lang.String, java.lang.String> strMap39 = tarArchiveInputStream31.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream38);
+        byte[] byteArray41 = new byte[] { (byte) -1 };
+        int int42 = tarArchiveInputStream38.read(byteArray41);
+        java.io.InputStream inputStream43 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream43);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream44, (int) (short) 1);
+        byte[] byteArray47 = null;
+        int int50 = tarArchiveInputStream46.read(byteArray47, (int) '4', (int) '#');
+        java.io.InputStream inputStream51 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream51);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream52);
+        java.util.Map<java.lang.String, java.lang.String> strMap54 = tarArchiveInputStream46.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream53);
+        boolean boolean55 = tarArchiveInputStream46.isAtEOF();
+        boolean boolean56 = tarArchiveInputStream46.isAtEOF();
+        byte[] byteArray58 = tarArchiveInputStream46.readNBytes((int) '#');
+        int int61 = tarArchiveInputStream38.read(byteArray58, (int) '4', (int) (byte) -1);
+        int int64 = tarArchiveInputStream26.read(byteArray58, 10, (int) (byte) 1);
+        byte[] byteArray66 = tarArchiveInputStream26.readNBytes((int) (short) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry67 = tarArchiveInputStream26.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream70 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (-1), 0);
+        int int71 = tarArchiveInputStream26.getRecordSize();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + (-1) + "'", int27 == (-1));
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+        org.junit.Assert.assertNotNull(strMap39);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int42 + "' != '" + (-1) + "'", int42 == (-1));
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + (-1) + "'", int50 == (-1));
+        org.junit.Assert.assertNotNull(strMap54);
+        org.junit.Assert.assertTrue("'" + boolean55 + "' != '" + false + "'", boolean55 == false);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + (-1) + "'", int64 == (-1));
+        org.junit.Assert.assertNotNull(byteArray66);
+        org.junit.Assert.assertArrayEquals(byteArray66, new byte[] {});
+        org.junit.Assert.assertNull(tarArchiveEntry67);
+        org.junit.Assert.assertTrue("'" + int71 + "' != '" + 0 + "'", int71 == 0);
+    }
+
+    @Test
+    public void test5019() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5019");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        byte[] byteArray27 = tarArchiveInputStream26.getLongNameData();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = tarArchiveInputStream31.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry33 = null;
+        boolean boolean34 = tarArchiveInputStream31.canReadEntryData(archiveEntry33);
+        java.io.InputStream inputStream35 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36, (int) (short) 1);
+        int int39 = tarArchiveInputStream36.read();
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        byte[] byteArray44 = null;
+        int int47 = tarArchiveInputStream43.read(byteArray44, (int) '4', (int) '#');
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream49);
+        java.util.Map<java.lang.String, java.lang.String> strMap51 = tarArchiveInputStream43.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream50);
+        boolean boolean52 = tarArchiveInputStream43.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream43, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream54);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry56 = null;
+        boolean boolean57 = tarArchiveInputStream36.canReadEntryData(archiveEntry56);
+        byte[] byteArray58 = tarArchiveInputStream36.readAllBytes();
+        int int61 = tarArchiveInputStream31.read(byteArray58, (-1), (int) (byte) -1);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray58, (int) (byte) -1);
+        int int66 = tarArchiveInputStream26.read(byteArray58, (int) '#', (int) (short) 0);
+        int int67 = tarArchiveInputStream26.read();
+        int int68 = tarArchiveInputStream26.getRecordSize();
+        byte[] byteArray70 = tarArchiveInputStream26.readNBytes(0);
+        byte[] byteArray72 = tarArchiveInputStream26.readNBytes((int) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry73 = null;
+        tarArchiveInputStream26.setCurrentEntry(tarArchiveEntry73);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertNull(byteArray32);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
+        org.junit.Assert.assertNotNull(strMap51);
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+        org.junit.Assert.assertNotNull(strMap55);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + (-1) + "'", int66 == (-1));
+        org.junit.Assert.assertTrue("'" + int67 + "' != '" + (-1) + "'", int67 == (-1));
+        org.junit.Assert.assertTrue("'" + int68 + "' != '" + 0 + "'", int68 == 0);
+        org.junit.Assert.assertNotNull(byteArray70);
+        org.junit.Assert.assertArrayEquals(byteArray70, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray72);
+        org.junit.Assert.assertArrayEquals(byteArray72, new byte[] {});
+    }
+
+    @Test
+    public void test5020() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5020");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.isAtEOF();
+        int int14 = tarArchiveInputStream3.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '#', 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry20 = null;
+        boolean boolean21 = tarArchiveInputStream19.canReadEntryData(archiveEntry20);
+        long long23 = tarArchiveInputStream19.skip((-1L));
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 0L + "'", long23 == 0L);
+    }
+
+    @Test
+    public void test5021() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5021");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        tarArchiveInputStream4.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = tarArchiveInputStream4.getCurrentEntry();
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        byte[] byteArray13 = null;
+        int int16 = tarArchiveInputStream12.read(byteArray13, (int) '4', (int) '#');
+        java.io.InputStream inputStream17 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream17);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream12.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        int int21 = tarArchiveInputStream12.getRecordSize();
+        byte[] byteArray22 = tarArchiveInputStream12.getLongNameData();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry23 = tarArchiveInputStream12.getNextEntry();
+        java.io.InputStream inputStream24 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, (int) (short) 1);
+        byte[] byteArray28 = null;
+        int int31 = tarArchiveInputStream27.read(byteArray28, (int) '4', (int) '#');
+        java.io.InputStream inputStream32 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream32);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33);
+        java.util.Map<java.lang.String, java.lang.String> strMap35 = tarArchiveInputStream27.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream34);
+        int int36 = tarArchiveInputStream27.getRecordSize();
+        byte[] byteArray38 = tarArchiveInputStream27.readNBytes((int) '4');
+        int int39 = tarArchiveInputStream12.read(byteArray38);
+        byte[] byteArray40 = tarArchiveInputStream12.readAllBytes();
+        int int43 = tarArchiveInputStream4.read(byteArray40, 10, (int) '4');
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(tarArchiveEntry8);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 512 + "'", int21 == 512);
+        org.junit.Assert.assertNull(byteArray22);
+        org.junit.Assert.assertNull(archiveEntry23);
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + (-1) + "'", int31 == (-1));
+        org.junit.Assert.assertNotNull(strMap35);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + 512 + "'", int36 == 512);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int43 + "' != '" + (-1) + "'", int43 == (-1));
+    }
+
+    @Test
+    public void test5022() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5022");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        tarArchiveInputStream10.mark(100);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20, 10, (int) 'a');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, 512);
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26, (int) (short) 1, (int) '#');
+        int int31 = tarArchiveInputStream30.getRecordSize();
+        long long33 = tarArchiveInputStream30.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry34 = null;
+        tarArchiveInputStream30.setCurrentEntry(tarArchiveEntry34);
+        int int36 = tarArchiveInputStream30.read();
+        int int37 = tarArchiveInputStream30.available();
+        java.io.InputStream inputStream38 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream38);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39, (int) (short) 1);
+        byte[] byteArray42 = tarArchiveInputStream41.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream47 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream45, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream45, (-1));
+        boolean boolean50 = tarArchiveInputStream45.markSupported();
+        java.util.Map<java.lang.String, java.lang.String> strMap51 = tarArchiveInputStream30.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream45);
+        tarArchiveInputStream30.mark((int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream30);
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream23.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream30);
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + 35 + "'", int31 == 35);
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 0L + "'", long33 == 0L);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertTrue("'" + int37 + "' != '" + 0 + "'", int37 == 0);
+        org.junit.Assert.assertNull(byteArray42);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+        org.junit.Assert.assertNotNull(strMap51);
+        org.junit.Assert.assertNotNull(strMap55);
+    }
+
+    @Test
+    public void test5023() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5023");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        tarArchiveInputStream4.reset();
+        int int8 = tarArchiveInputStream4.read();
+        boolean boolean9 = tarArchiveInputStream4.markSupported();
+        long long11 = tarArchiveInputStream4.skip(0L);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4, 512);
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry17 = null;
+        boolean boolean18 = tarArchiveInputStream15.canReadEntryData(archiveEntry17);
+        tarArchiveInputStream15.setAtEOF(false);
+        byte[] byteArray22 = tarArchiveInputStream15.readNBytes(0);
+        int int23 = tarArchiveInputStream15.read();
+        java.io.InputStream inputStream24 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, (int) (short) 1);
+        byte[] byteArray28 = tarArchiveInputStream27.readRecord();
+        int int29 = tarArchiveInputStream27.available();
+        java.io.InputStream inputStream30 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream30);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, (int) (short) 1);
+        long long34 = tarArchiveInputStream31.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry35 = null;
+        tarArchiveInputStream31.setCurrentEntry(tarArchiveEntry35);
+        tarArchiveInputStream31.setAtEOF(false);
+        java.util.Map<java.lang.String, java.lang.String> strMap39 = tarArchiveInputStream27.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry40 = tarArchiveInputStream27.getCurrentEntry();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry41 = tarArchiveInputStream27.getNextEntry();
+        java.lang.String str42 = tarArchiveInputStream27.encoding;
+        java.io.InputStream inputStream43 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream43);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream44, (int) (short) 1);
+        byte[] byteArray47 = tarArchiveInputStream46.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry48 = null;
+        boolean boolean49 = tarArchiveInputStream46.canReadEntryData(archiveEntry48);
+        int int50 = tarArchiveInputStream46.available();
+        byte[] byteArray51 = tarArchiveInputStream46.readAllBytes();
+        boolean boolean53 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray51, 1);
+        int int56 = tarArchiveInputStream27.read(byteArray51, (int) (short) 0, 512);
+        int int59 = tarArchiveInputStream15.read(byteArray51, (int) (byte) -1, (int) (byte) -1);
+        int int60 = tarArchiveInputStream15.read();
+        java.util.Map<java.lang.String, java.lang.String> strMap61 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + (-1) + "'", int8 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 0L + "'", long11 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + (-1) + "'", int23 == (-1));
+        org.junit.Assert.assertNull(byteArray28);
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + 0 + "'", int29 == 0);
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 0L + "'", long34 == 0L);
+        org.junit.Assert.assertNotNull(strMap39);
+        org.junit.Assert.assertNull(tarArchiveEntry40);
+        org.junit.Assert.assertNull(archiveEntry41);
+        org.junit.Assert.assertNull(str42);
+        org.junit.Assert.assertNull(byteArray47);
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + 0 + "'", int50 == 0);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean53 + "' != '" + false + "'", boolean53 == false);
+        org.junit.Assert.assertTrue("'" + int56 + "' != '" + (-1) + "'", int56 == (-1));
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + (-1) + "'", int59 == (-1));
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + (-1) + "'", int60 == (-1));
+        org.junit.Assert.assertNotNull(strMap61);
+    }
+
+    @Test
+    public void test5024() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5024");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        boolean boolean3 = tarArchiveInputStream1.isAtEOF();
+        java.io.InputStream inputStream4 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream4);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream4, (int) (short) 1, (int) '#');
+        int int9 = tarArchiveInputStream8.getRecordSize();
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        long long14 = tarArchiveInputStream11.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap15 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        byte[] byteArray16 = tarArchiveInputStream11.readAllBytes();
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray16, (int) (short) 0);
+        int int19 = tarArchiveInputStream1.read(byteArray16);
+        boolean boolean20 = tarArchiveInputStream1.markSupported();
+        int int21 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        byte[] byteArray26 = null;
+        int int29 = tarArchiveInputStream25.read(byteArray26, (int) '4', (int) '#');
+        java.io.InputStream inputStream30 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream30);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31);
+        java.util.Map<java.lang.String, java.lang.String> strMap33 = tarArchiveInputStream25.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream32);
+        int int34 = tarArchiveInputStream25.getRecordSize();
+        byte[] byteArray35 = tarArchiveInputStream25.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25);
+        java.io.InputStream inputStream37 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream37);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38, (int) (short) 1);
+        int int41 = tarArchiveInputStream38.read();
+        int int42 = tarArchiveInputStream38.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry43 = tarArchiveInputStream38.getCurrentEntry();
+        byte[] byteArray45 = tarArchiveInputStream38.readNBytes((int) '#');
+        int int48 = tarArchiveInputStream36.read(byteArray45, (int) (short) 100, (int) (byte) 1);
+        java.util.Map<java.lang.String, java.lang.String> strMap49 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream36);
+        int int50 = tarArchiveInputStream36.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream51 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36);
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 35 + "'", int9 == 35);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertNotNull(strMap15);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + (-1) + "'", int19 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
+        org.junit.Assert.assertNotNull(strMap33);
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + 512 + "'", int34 == 512);
+        org.junit.Assert.assertNull(byteArray35);
+        org.junit.Assert.assertTrue("'" + int41 + "' != '" + (-1) + "'", int41 == (-1));
+        org.junit.Assert.assertTrue("'" + int42 + "' != '" + (-1) + "'", int42 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry43);
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + (-1) + "'", int48 == (-1));
+        org.junit.Assert.assertNotNull(strMap49);
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + (-1) + "'", int50 == (-1));
+    }
+
+    @Test
+    public void test5025() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5025");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        boolean boolean10 = tarArchiveInputStream4.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        java.lang.String str12 = tarArchiveInputStream4.encoding;
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (short) 1);
+        byte[] byteArray17 = tarArchiveInputStream16.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, 512, (-1));
+        java.lang.String str21 = tarArchiveInputStream20.encoding;
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22, (int) (short) 1, (int) '#');
+        int int27 = tarArchiveInputStream26.getRecordSize();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        long long32 = tarArchiveInputStream29.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap33 = tarArchiveInputStream26.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream29);
+        int int34 = tarArchiveInputStream29.available();
+        tarArchiveInputStream29.mark((int) (byte) 100);
+        java.io.InputStream inputStream37 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream37);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream40, (int) (short) 1);
+        int int43 = tarArchiveInputStream40.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry44 = null;
+        tarArchiveInputStream40.setCurrentEntry(tarArchiveEntry44);
+        java.io.InputStream inputStream46 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream47 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream46);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream46, (int) (short) 1, (int) '#');
+        int int51 = tarArchiveInputStream50.getRecordSize();
+        java.io.InputStream inputStream52 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream52);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream55 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream53, (int) (short) 1);
+        long long56 = tarArchiveInputStream53.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap57 = tarArchiveInputStream50.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream53);
+        byte[] byteArray58 = tarArchiveInputStream53.readAllBytes();
+        boolean boolean60 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray58, (int) (byte) 1);
+        int int63 = tarArchiveInputStream40.read(byteArray58, (int) '#', 1);
+        int int66 = tarArchiveInputStream29.read(byteArray58, (int) ' ', 100);
+        int int69 = tarArchiveInputStream20.read(byteArray58, (int) (byte) 1, (-1));
+        long long70 = tarArchiveInputStream20.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry71 = null;
+        boolean boolean72 = tarArchiveInputStream20.canReadEntryData(archiveEntry71);
+        java.util.Map<java.lang.String, java.lang.String> strMap73 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream20);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long75 = tarArchiveInputStream4.skip((long) 35);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNull(str12);
+        org.junit.Assert.assertNull(byteArray17);
+        org.junit.Assert.assertNull(str21);
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + 35 + "'", int27 == 35);
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 0L + "'", long32 == 0L);
+        org.junit.Assert.assertNotNull(strMap33);
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
+        org.junit.Assert.assertTrue("'" + int43 + "' != '" + 0 + "'", int43 == 0);
+        org.junit.Assert.assertTrue("'" + int51 + "' != '" + 35 + "'", int51 == 35);
+        org.junit.Assert.assertTrue("'" + long56 + "' != '" + 0L + "'", long56 == 0L);
+        org.junit.Assert.assertNotNull(strMap57);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertTrue("'" + int63 + "' != '" + (-1) + "'", int63 == (-1));
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + (-1) + "'", int66 == (-1));
+        org.junit.Assert.assertTrue("'" + int69 + "' != '" + (-1) + "'", int69 == (-1));
+        org.junit.Assert.assertTrue("'" + long70 + "' != '" + 0L + "'", long70 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean72 + "' != '" + false + "'", boolean72 == false);
+        org.junit.Assert.assertNotNull(strMap73);
+    }
+
+    @Test
+    public void test5026() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5026");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        int int8 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray9 = tarArchiveInputStream3.readRecord();
+        tarArchiveInputStream3.reset();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 512 + "'", int8 == 512);
+        org.junit.Assert.assertNull(byteArray9);
+    }
+
+    @Test
+    public void test5027() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5027");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        byte[] byteArray27 = tarArchiveInputStream26.getLongNameData();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = tarArchiveInputStream31.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry33 = null;
+        boolean boolean34 = tarArchiveInputStream31.canReadEntryData(archiveEntry33);
+        java.io.InputStream inputStream35 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36, (int) (short) 1);
+        int int39 = tarArchiveInputStream36.read();
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        byte[] byteArray44 = null;
+        int int47 = tarArchiveInputStream43.read(byteArray44, (int) '4', (int) '#');
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream49);
+        java.util.Map<java.lang.String, java.lang.String> strMap51 = tarArchiveInputStream43.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream50);
+        boolean boolean52 = tarArchiveInputStream43.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream43, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream54);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry56 = null;
+        boolean boolean57 = tarArchiveInputStream36.canReadEntryData(archiveEntry56);
+        byte[] byteArray58 = tarArchiveInputStream36.readAllBytes();
+        int int61 = tarArchiveInputStream31.read(byteArray58, (-1), (int) (byte) -1);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray58, (int) (byte) -1);
+        int int66 = tarArchiveInputStream26.read(byteArray58, (int) '#', (int) (short) 0);
+        int int67 = tarArchiveInputStream26.read();
+        long long68 = tarArchiveInputStream26.getBytesRead();
+        boolean boolean69 = tarArchiveInputStream26.isAtEOF();
+        java.lang.String str70 = tarArchiveInputStream26.encoding;
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertNull(byteArray32);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
+        org.junit.Assert.assertNotNull(strMap51);
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+        org.junit.Assert.assertNotNull(strMap55);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + (-1) + "'", int66 == (-1));
+        org.junit.Assert.assertTrue("'" + int67 + "' != '" + (-1) + "'", int67 == (-1));
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 0L + "'", long68 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean69 + "' != '" + true + "'", boolean69 == true);
+        org.junit.Assert.assertNull(str70);
+    }
+
+    @Test
+    public void test5028() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5028");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry27 = null;
+        boolean boolean28 = tarArchiveInputStream1.canReadEntryData(archiveEntry27);
+        byte[] byteArray29 = tarArchiveInputStream1.readAllBytes();
+        // The following exception was thrown during execution in test generation
+        try {
+            byte[] byteArray30 = tarArchiveInputStream1.getLongNameData();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+    }
+
+    @Test
+    public void test5029() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5029");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry4 = tarArchiveInputStream1.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, 35);
+        int int8 = tarArchiveInputStream7.getRecordSize();
+        tarArchiveInputStream7.setAtEOF(false);
+        org.junit.Assert.assertNull(tarArchiveEntry4);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 35 + "'", int8 == 35);
+    }
+
+    @Test
+    public void test5030() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5030");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        byte[] byteArray15 = tarArchiveInputStream3.readNBytes((int) '#');
+        tarArchiveInputStream3.mark((int) (byte) 1);
+        long long18 = tarArchiveInputStream3.getBytesRead();
+        java.lang.String str19 = tarArchiveInputStream3.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 0);
+        tarArchiveInputStream21.reset();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 0L + "'", long18 == 0L);
+        org.junit.Assert.assertNull(str19);
+    }
+
+    @Test
+    public void test5031() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5031");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.lang.String str8 = tarArchiveInputStream7.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 10, (int) ' ');
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        tarArchiveInputStream13.mark((int) (byte) 0);
+        int int16 = tarArchiveInputStream13.read();
+        tarArchiveInputStream13.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream13.canReadEntryData(archiveEntry18);
+        byte[] byteArray20 = tarArchiveInputStream13.readAllBytes();
+        int int23 = tarArchiveInputStream11.read(byteArray20, (int) (byte) 0, (-1));
+        byte[] byteArray24 = tarArchiveInputStream11.getLongNameData();
+        java.io.InputStream inputStream25 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream25);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry29 = tarArchiveInputStream26.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (byte) 1, 35);
+        boolean boolean33 = tarArchiveInputStream32.isAtEOF();
+        tarArchiveInputStream32.setAtEOF(true);
+        tarArchiveInputStream32.mark(100);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry38 = tarArchiveInputStream32.getNextTarEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry40 = tarArchiveInputStream32.getNextEntry();
+        java.util.Map<java.lang.String, java.lang.String> strMap41 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream32);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry42 = tarArchiveInputStream11.getNextEntry();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(str8);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + (-1) + "'", int23 == (-1));
+        org.junit.Assert.assertNull(byteArray24);
+        org.junit.Assert.assertNull(tarArchiveEntry29);
+        org.junit.Assert.assertTrue("'" + boolean33 + "' != '" + false + "'", boolean33 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry38);
+        org.junit.Assert.assertNull(archiveEntry40);
+        org.junit.Assert.assertNotNull(strMap41);
+        org.junit.Assert.assertNull(archiveEntry42);
+    }
+
+    @Test
+    public void test5032() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5032");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        long long16 = tarArchiveInputStream14.skip((long) 100);
+        java.lang.String str17 = tarArchiveInputStream14.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (byte) 100);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNull(str17);
+    }
+
+    @Test
+    public void test5033() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5033");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        int int5 = tarArchiveInputStream3.available();
+        byte[] byteArray6 = tarArchiveInputStream3.readAllBytes();
+        tarArchiveInputStream3.mark(35);
+        boolean boolean9 = tarArchiveInputStream3.markSupported();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = null;
+        boolean boolean11 = tarArchiveInputStream3.canReadEntryData(archiveEntry10);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry12 = null;
+        boolean boolean13 = tarArchiveInputStream3.canReadEntryData(archiveEntry12);
+        int int14 = tarArchiveInputStream3.available();
+        byte[] byteArray16 = tarArchiveInputStream3.readNBytes(0);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry17);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] {});
+    }
+
+    @Test
+    public void test5034() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5034");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        tarArchiveInputStream1.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry6 = null;
+        boolean boolean7 = tarArchiveInputStream1.canReadEntryData(archiveEntry6);
+        byte[] byteArray9 = tarArchiveInputStream1.readNBytes((int) (short) 10);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = tarArchiveInputStream1.getNextEntry();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] {});
+    }
+
+    @Test
+    public void test5035() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5035");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        tarArchiveInputStream3.reset();
+        byte[] byteArray14 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 1, (int) (byte) 100);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray14);
+    }
+
+    @Test
+    public void test5036() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5036");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.lang.String str8 = tarArchiveInputStream7.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 10, (int) ' ');
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        tarArchiveInputStream13.mark((int) (byte) 0);
+        int int16 = tarArchiveInputStream13.read();
+        tarArchiveInputStream13.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream13.canReadEntryData(archiveEntry18);
+        byte[] byteArray20 = tarArchiveInputStream13.readAllBytes();
+        int int23 = tarArchiveInputStream11.read(byteArray20, (int) (byte) 0, (-1));
+        int int24 = tarArchiveInputStream11.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry25 = tarArchiveInputStream11.getCurrentEntry();
+        long long27 = tarArchiveInputStream11.skip((long) (byte) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) -1);
+        tarArchiveInputStream11.reset();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(str8);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + (-1) + "'", int23 == (-1));
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + (-1) + "'", int24 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry25);
+        org.junit.Assert.assertTrue("'" + long27 + "' != '" + 0L + "'", long27 == 0L);
+    }
+
+    @Test
+    public void test5037() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5037");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry4 = tarArchiveInputStream1.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, (int) (byte) 100);
+        tarArchiveInputStream7.reset();
+        org.junit.Assert.assertNull(tarArchiveEntry4);
+    }
+
+    @Test
+    public void test5038() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5038");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (byte) 10);
+        java.io.InputStream inputStream20 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry24 = tarArchiveInputStream21.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) (short) -1, (int) (byte) 100);
+        byte[] byteArray29 = tarArchiveInputStream21.readNBytes(0);
+        java.util.Map<java.lang.String, java.lang.String> strMap30 = tarArchiveInputStream19.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        tarArchiveInputStream19.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry32 = null;
+        boolean boolean33 = tarArchiveInputStream19.canReadEntryData(archiveEntry32);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 100, 1);
+        java.lang.String str37 = tarArchiveInputStream36.encoding;
+        int int38 = tarArchiveInputStream36.getCount();
+        java.io.InputStream inputStream39 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream39);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream40, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry43 = tarArchiveInputStream40.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream40, (int) (byte) 1, 35);
+        byte[] byteArray48 = tarArchiveInputStream46.readNBytes((int) (byte) 100);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int51 = tarArchiveInputStream36.readNBytes(byteArray48, 1, (int) (short) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.IndexOutOfBoundsException; message: Range [1, 1 + 10) out of bounds for length 0");
+        } catch (java.lang.IndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertNull(tarArchiveEntry24);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertNotNull(strMap30);
+        org.junit.Assert.assertTrue("'" + boolean33 + "' != '" + false + "'", boolean33 == false);
+        org.junit.Assert.assertNull(str37);
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + 0 + "'", int38 == 0);
+        org.junit.Assert.assertNull(tarArchiveEntry43);
+        org.junit.Assert.assertNotNull(byteArray48);
+        org.junit.Assert.assertArrayEquals(byteArray48, new byte[] {});
+    }
+
+    @Test
+    public void test5039() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5039");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        int int8 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray9 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 10, 1);
+        long long13 = tarArchiveInputStream3.getBytesRead();
+        boolean boolean14 = tarArchiveInputStream3.markSupported();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 512 + "'", int8 == 512);
+        org.junit.Assert.assertNull(byteArray9);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test5040() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5040");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        int int27 = tarArchiveInputStream26.read();
+        byte[] byteArray28 = tarArchiveInputStream26.readAllBytes();
+        tarArchiveInputStream26.mark(512);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry31 = null;
+        tarArchiveInputStream26.setCurrentEntry(tarArchiveEntry31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26);
+        java.lang.Class<?> wildcardClass34 = tarArchiveInputStream33.getClass();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + (-1) + "'", int27 == (-1));
+        org.junit.Assert.assertNotNull(byteArray28);
+        org.junit.Assert.assertArrayEquals(byteArray28, new byte[] {});
+        org.junit.Assert.assertNotNull(wildcardClass34);
+    }
+
+    @Test
+    public void test5041() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5041");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        byte[] byteArray8 = tarArchiveInputStream4.readAllBytes();
+        boolean boolean9 = tarArchiveInputStream4.isAtEOF();
+        // The following exception was thrown during execution in test generation
+        try {
+            long long11 = tarArchiveInputStream4.skip(1L);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+    }
+
+    @Test
+    public void test5042() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5042");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        java.io.InputStream inputStream4 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream4);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream4, (int) (short) 1, (int) '#');
+        int int9 = tarArchiveInputStream8.getRecordSize();
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        long long14 = tarArchiveInputStream11.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap15 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        boolean boolean16 = tarArchiveInputStream8.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap17 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream8);
+        int int18 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry19 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry19);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 35 + "'", int9 == 35);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertNotNull(strMap15);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertNotNull(strMap17);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+    }
+
+    @Test
+    public void test5043() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5043");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        int int5 = tarArchiveInputStream3.available();
+        byte[] byteArray6 = tarArchiveInputStream3.readAllBytes();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry7 = tarArchiveInputStream3.getNextEntry();
+        long long8 = tarArchiveInputStream3.getBytesRead();
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry12 = null;
+        boolean boolean13 = tarArchiveInputStream11.canReadEntryData(archiveEntry12);
+        boolean boolean14 = tarArchiveInputStream11.isAtEOF();
+        java.io.InputStream inputStream15 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream15);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, (int) (short) 1);
+        byte[] byteArray19 = tarArchiveInputStream18.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (-1));
+        byte[] byteArray27 = tarArchiveInputStream24.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (int) ' ');
+        java.io.InputStream inputStream30 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream30);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, (int) (short) 1);
+        long long34 = tarArchiveInputStream31.getBytesRead();
+        byte[] byteArray35 = new byte[] {};
+        int int36 = tarArchiveInputStream31.read(byteArray35);
+        int int39 = tarArchiveInputStream29.read(byteArray35, (-1), 0);
+        int int40 = tarArchiveInputStream11.read(byteArray35);
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray35, (int) (short) -1);
+        int int43 = tarArchiveInputStream3.read(byteArray35);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry44 = tarArchiveInputStream3.getNextEntry();
+        java.io.InputStream inputStream45 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream45);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream48 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream46, (int) (short) 1);
+        long long49 = tarArchiveInputStream46.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry50 = null;
+        boolean boolean51 = tarArchiveInputStream46.canReadEntryData(archiveEntry50);
+        int int52 = tarArchiveInputStream46.getCount();
+        tarArchiveInputStream46.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry55 = null;
+        boolean boolean56 = tarArchiveInputStream46.canReadEntryData(archiveEntry55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream57 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream46);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream46);
+        tarArchiveInputStream46.mark((int) 'a');
+        int int61 = tarArchiveInputStream46.getRecordSize();
+        byte[] byteArray62 = tarArchiveInputStream46.readAllBytes();
+        // The following exception was thrown during execution in test generation
+        try {
+            int int65 = tarArchiveInputStream3.readNBytes(byteArray62, (int) (short) 10, 35);
+            org.junit.Assert.fail("Expected exception of type java.lang.IndexOutOfBoundsException; message: Range [10, 10 + 35) out of bounds for length 0");
+        } catch (java.lang.IndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] {});
+        org.junit.Assert.assertNull(archiveEntry7);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertNull(byteArray19);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 0L + "'", long34 == 0L);
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + (-1) + "'", int40 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertTrue("'" + int43 + "' != '" + (-1) + "'", int43 == (-1));
+        org.junit.Assert.assertNull(archiveEntry44);
+        org.junit.Assert.assertTrue("'" + long49 + "' != '" + 0L + "'", long49 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean51 + "' != '" + false + "'", boolean51 == false);
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + 0 + "'", int52 == 0);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + 512 + "'", int61 == 512);
+        org.junit.Assert.assertNotNull(byteArray62);
+        org.junit.Assert.assertArrayEquals(byteArray62, new byte[] {});
+    }
+
+    @Test
+    public void test5044() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5044");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, (int) (byte) 10);
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        long long12 = tarArchiveInputStream9.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry13 = null;
+        boolean boolean14 = tarArchiveInputStream9.canReadEntryData(archiveEntry13);
+        int int15 = tarArchiveInputStream9.getCount();
+        tarArchiveInputStream9.mark((int) (byte) 100);
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        byte[] byteArray22 = null;
+        int int25 = tarArchiveInputStream21.read(byteArray22, (int) '4', (int) '#');
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream21.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream28);
+        byte[] byteArray31 = new byte[] { (byte) -1 };
+        int int32 = tarArchiveInputStream28.read(byteArray31);
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream34, (int) (short) 1);
+        byte[] byteArray37 = null;
+        int int40 = tarArchiveInputStream36.read(byteArray37, (int) '4', (int) '#');
+        java.io.InputStream inputStream41 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream41);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream42);
+        java.util.Map<java.lang.String, java.lang.String> strMap44 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream43);
+        boolean boolean45 = tarArchiveInputStream36.isAtEOF();
+        boolean boolean46 = tarArchiveInputStream36.isAtEOF();
+        byte[] byteArray48 = tarArchiveInputStream36.readNBytes((int) '#');
+        int int51 = tarArchiveInputStream28.read(byteArray48, (int) '4', (int) (byte) -1);
+        int int52 = tarArchiveInputStream9.read(byteArray48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 100);
+        java.io.InputStream inputStream55 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream56, (int) (short) 1);
+        long long59 = tarArchiveInputStream56.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry60 = null;
+        boolean boolean61 = tarArchiveInputStream56.canReadEntryData(archiveEntry60);
+        int int62 = tarArchiveInputStream56.getCount();
+        byte[] byteArray63 = tarArchiveInputStream56.readAllBytes();
+        tarArchiveInputStream56.mark(100);
+        java.io.InputStream inputStream66 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream67 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream66);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream69 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream67, (int) (short) 1);
+        long long70 = tarArchiveInputStream67.getBytesRead();
+        tarArchiveInputStream67.mark((int) (short) 100);
+        byte[] byteArray74 = tarArchiveInputStream67.readNBytes(35);
+        int int75 = tarArchiveInputStream56.read(byteArray74);
+        int int76 = tarArchiveInputStream54.read(byteArray74);
+        int int77 = tarArchiveInputStream7.read(byteArray74);
+        byte[] byteArray79 = tarArchiveInputStream7.readNBytes((int) (byte) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry80 = tarArchiveInputStream7.getNextEntry();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 0 + "'", int15 == 0);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + (-1) + "'", int32 == (-1));
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + (-1) + "'", int40 == (-1));
+        org.junit.Assert.assertNotNull(strMap44);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertNotNull(byteArray48);
+        org.junit.Assert.assertArrayEquals(byteArray48, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int51 + "' != '" + (-1) + "'", int51 == (-1));
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
+        org.junit.Assert.assertTrue("'" + long59 + "' != '" + 0L + "'", long59 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean61 + "' != '" + false + "'", boolean61 == false);
+        org.junit.Assert.assertTrue("'" + int62 + "' != '" + 0 + "'", int62 == 0);
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long70 + "' != '" + 0L + "'", long70 == 0L);
+        org.junit.Assert.assertNotNull(byteArray74);
+        org.junit.Assert.assertArrayEquals(byteArray74, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int75 + "' != '" + (-1) + "'", int75 == (-1));
+        org.junit.Assert.assertTrue("'" + int76 + "' != '" + (-1) + "'", int76 == (-1));
+        org.junit.Assert.assertTrue("'" + int77 + "' != '" + (-1) + "'", int77 == (-1));
+        org.junit.Assert.assertNotNull(byteArray79);
+        org.junit.Assert.assertArrayEquals(byteArray79, new byte[] {});
+        org.junit.Assert.assertNull(archiveEntry80);
+    }
+
+    @Test
+    public void test5045() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5045");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry3 = null;
+        boolean boolean4 = tarArchiveInputStream2.canReadEntryData(archiveEntry3);
+        int int5 = tarArchiveInputStream2.getCount();
+        int int6 = tarArchiveInputStream2.available();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry7 = null;
+        boolean boolean8 = tarArchiveInputStream2.canReadEntryData(archiveEntry7);
+        tarArchiveInputStream2.reset();
+        int int10 = tarArchiveInputStream2.getRecordSize();
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 512 + "'", int10 == 512);
+    }
+
+    @Test
+    public void test5046() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5046");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        long long9 = tarArchiveInputStream3.skip((long) (byte) -1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = null;
+        boolean boolean11 = tarArchiveInputStream3.canReadEntryData(archiveEntry10);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry12 = null;
+        boolean boolean13 = tarArchiveInputStream3.canReadEntryData(archiveEntry12);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 0L + "'", long9 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test5047() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5047");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        java.io.InputStream inputStream6 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream6);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 1);
+        long long10 = tarArchiveInputStream7.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream7);
+        int int12 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (short) 1);
+        long long17 = tarArchiveInputStream14.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry18 = null;
+        tarArchiveInputStream14.setCurrentEntry(tarArchiveEntry18);
+        long long21 = tarArchiveInputStream14.skip((long) (short) -1);
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        long long26 = tarArchiveInputStream23.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = null;
+        tarArchiveInputStream23.setCurrentEntry(tarArchiveEntry27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry30 = tarArchiveInputStream23.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23);
+        java.util.Map<java.lang.String, java.lang.String> strMap32 = tarArchiveInputStream7.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry33 = tarArchiveInputStream23.getCurrentEntry();
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 0L + "'", long17 == 0L);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 0L + "'", long26 == 0L);
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertNull(tarArchiveEntry30);
+        org.junit.Assert.assertNotNull(strMap32);
+        org.junit.Assert.assertNull(tarArchiveEntry33);
+    }
+
+    @Test
+    public void test5048() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5048");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        boolean boolean15 = tarArchiveInputStream14.markSupported();
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry20 = tarArchiveInputStream17.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, (int) (short) -1, (int) (byte) 100);
+        java.io.InputStream inputStream24 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, (int) (short) 1);
+        long long28 = tarArchiveInputStream25.getBytesRead();
+        byte[] byteArray29 = new byte[] {};
+        int int30 = tarArchiveInputStream25.read(byteArray29);
+        int int33 = tarArchiveInputStream23.readNBytes(byteArray29, (int) (byte) 0, 0);
+        int int36 = tarArchiveInputStream14.read(byteArray29, (int) (byte) 100, (int) (short) 10);
+        boolean boolean37 = tarArchiveInputStream14.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry20);
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 0L + "'", long28 == 0L);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + 0 + "'", int33 == 0);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean37 + "' != '" + false + "'", boolean37 == false);
+    }
+
+    @Test
+    public void test5049() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5049");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        byte[] byteArray27 = tarArchiveInputStream26.getLongNameData();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = tarArchiveInputStream31.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry33 = null;
+        boolean boolean34 = tarArchiveInputStream31.canReadEntryData(archiveEntry33);
+        java.io.InputStream inputStream35 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36, (int) (short) 1);
+        int int39 = tarArchiveInputStream36.read();
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        byte[] byteArray44 = null;
+        int int47 = tarArchiveInputStream43.read(byteArray44, (int) '4', (int) '#');
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream49);
+        java.util.Map<java.lang.String, java.lang.String> strMap51 = tarArchiveInputStream43.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream50);
+        boolean boolean52 = tarArchiveInputStream43.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream43, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream54);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry56 = null;
+        boolean boolean57 = tarArchiveInputStream36.canReadEntryData(archiveEntry56);
+        byte[] byteArray58 = tarArchiveInputStream36.readAllBytes();
+        int int61 = tarArchiveInputStream31.read(byteArray58, (-1), (int) (byte) -1);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray58, (int) (byte) -1);
+        int int66 = tarArchiveInputStream26.read(byteArray58, (int) '#', (int) (short) 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream67 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26);
+        tarArchiveInputStream26.setAtEOF(false);
+        int int70 = tarArchiveInputStream26.getRecordSize();
+        java.lang.String str71 = tarArchiveInputStream26.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream74 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) 100, 0);
+        int int75 = tarArchiveInputStream26.getRecordSize();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertNull(byteArray32);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
+        org.junit.Assert.assertNotNull(strMap51);
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+        org.junit.Assert.assertNotNull(strMap55);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + (-1) + "'", int66 == (-1));
+        org.junit.Assert.assertTrue("'" + int70 + "' != '" + 0 + "'", int70 == 0);
+        org.junit.Assert.assertNull(str71);
+        org.junit.Assert.assertTrue("'" + int75 + "' != '" + 0 + "'", int75 == 0);
+    }
+
+    @Test
+    public void test5050() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5050");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.lang.String str8 = tarArchiveInputStream7.encoding;
+        tarArchiveInputStream7.setAtEOF(false);
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry15 = null;
+        boolean boolean16 = tarArchiveInputStream12.canReadEntryData(archiveEntry15);
+        long long18 = tarArchiveInputStream12.skip(0L);
+        tarArchiveInputStream12.mark(512);
+        long long21 = tarArchiveInputStream12.getBytesRead();
+        tarArchiveInputStream12.mark((int) (short) 10);
+        byte[] byteArray25 = tarArchiveInputStream12.readNBytes((int) ' ');
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray25, (int) (byte) -1);
+        int int28 = tarArchiveInputStream7.read(byteArray25);
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray25, (int) (short) 0);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(str8);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 0L + "'", long18 == 0L);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertNotNull(byteArray25);
+        org.junit.Assert.assertArrayEquals(byteArray25, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + (-1) + "'", int28 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+    }
+
+    @Test
+    public void test5051() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5051");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        int int10 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        byte[] byteArray24 = new byte[] { (byte) -1 };
+        int int25 = tarArchiveInputStream21.read(byteArray24);
+        int int26 = tarArchiveInputStream7.read(byteArray24);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = tarArchiveInputStream7.getCurrentEntry();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28, (int) (short) 1, (int) '#');
+        int int33 = tarArchiveInputStream32.getRecordSize();
+        java.io.InputStream inputStream34 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream34);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream35, (int) (short) 1);
+        long long38 = tarArchiveInputStream35.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap39 = tarArchiveInputStream32.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream35);
+        byte[] byteArray40 = tarArchiveInputStream35.readAllBytes();
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray40, (int) (byte) 1);
+        int int43 = tarArchiveInputStream7.read(byteArray40);
+        java.io.InputStream inputStream44 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream44);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream45);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry47 = tarArchiveInputStream46.getNextTarEntry();
+        byte[] byteArray48 = tarArchiveInputStream46.readAllBytes();
+        int int51 = tarArchiveInputStream7.read(byteArray48, (int) (byte) 10, (int) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 1);
+        java.io.InputStream inputStream55 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream56, (int) (short) 1);
+        int int59 = tarArchiveInputStream56.read();
+        int int60 = tarArchiveInputStream56.read();
+        java.lang.String str61 = tarArchiveInputStream56.encoding;
+        java.util.Map<java.lang.String, java.lang.String> strMap62 = tarArchiveInputStream54.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream56);
+        boolean boolean63 = tarArchiveInputStream56.markSupported();
+        int int64 = tarArchiveInputStream56.read();
+        java.io.InputStream inputStream65 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream66 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream65);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream69 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream65, (int) (short) 1, (int) '#');
+        int int70 = tarArchiveInputStream69.getRecordSize();
+        boolean boolean71 = tarArchiveInputStream69.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry72 = null;
+        tarArchiveInputStream69.setCurrentEntry(tarArchiveEntry72);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream74 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream69);
+        long long75 = tarArchiveInputStream74.getBytesRead();
+        long long76 = tarArchiveInputStream74.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap77 = tarArchiveInputStream56.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream74);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream79 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream74, 0);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry27);
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + 35 + "'", int33 == 35);
+        org.junit.Assert.assertTrue("'" + long38 + "' != '" + 0L + "'", long38 == 0L);
+        org.junit.Assert.assertNotNull(strMap39);
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertTrue("'" + int43 + "' != '" + (-1) + "'", int43 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry47);
+        org.junit.Assert.assertNotNull(byteArray48);
+        org.junit.Assert.assertArrayEquals(byteArray48, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int51 + "' != '" + (-1) + "'", int51 == (-1));
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + (-1) + "'", int59 == (-1));
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + (-1) + "'", int60 == (-1));
+        org.junit.Assert.assertNull(str61);
+        org.junit.Assert.assertNotNull(strMap62);
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + (-1) + "'", int64 == (-1));
+        org.junit.Assert.assertTrue("'" + int70 + "' != '" + 35 + "'", int70 == 35);
+        org.junit.Assert.assertTrue("'" + boolean71 + "' != '" + false + "'", boolean71 == false);
+        org.junit.Assert.assertTrue("'" + long75 + "' != '" + 0L + "'", long75 == 0L);
+        org.junit.Assert.assertTrue("'" + long76 + "' != '" + 0L + "'", long76 == 0L);
+        org.junit.Assert.assertNotNull(strMap77);
+    }
+
+    @Test
+    public void test5052() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5052");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        int int10 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        byte[] byteArray24 = new byte[] { (byte) -1 };
+        int int25 = tarArchiveInputStream21.read(byteArray24);
+        int int26 = tarArchiveInputStream7.read(byteArray24);
+        boolean boolean27 = tarArchiveInputStream7.markSupported();
+        tarArchiveInputStream7.mark((int) (byte) 100);
+        long long30 = tarArchiveInputStream7.getBytesRead();
+        byte[] byteArray32 = tarArchiveInputStream7.readNBytes((int) '#');
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream34, (int) (short) 1);
+        byte[] byteArray37 = tarArchiveInputStream36.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry38 = null;
+        boolean boolean39 = tarArchiveInputStream36.canReadEntryData(archiveEntry38);
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        byte[] byteArray44 = tarArchiveInputStream43.readRecord();
+        tarArchiveInputStream43.mark((-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry47 = tarArchiveInputStream43.getNextEntry();
+        tarArchiveInputStream43.reset();
+        java.lang.String str49 = tarArchiveInputStream43.encoding;
+        boolean boolean50 = tarArchiveInputStream43.markSupported();
+        java.io.InputStream inputStream51 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream51);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream52);
+        boolean boolean54 = tarArchiveInputStream52.isAtEOF();
+        java.io.InputStream inputStream55 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream59 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55, (int) (short) 1, (int) '#');
+        int int60 = tarArchiveInputStream59.getRecordSize();
+        java.io.InputStream inputStream61 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream62 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream61);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream64 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream62, (int) (short) 1);
+        long long65 = tarArchiveInputStream62.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap66 = tarArchiveInputStream59.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream62);
+        byte[] byteArray67 = tarArchiveInputStream62.readAllBytes();
+        boolean boolean69 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray67, (int) (short) 0);
+        int int70 = tarArchiveInputStream52.read(byteArray67);
+        java.io.InputStream inputStream71 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream72 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream71);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream75 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream71, (int) (short) 1, (int) '#');
+        int int76 = tarArchiveInputStream75.getRecordSize();
+        java.io.InputStream inputStream77 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream78 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream77);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream80 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream78, (int) (short) 1);
+        long long81 = tarArchiveInputStream78.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap82 = tarArchiveInputStream75.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream78);
+        byte[] byteArray83 = tarArchiveInputStream78.readAllBytes();
+        boolean boolean85 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray83, (int) (short) 0);
+        int int88 = tarArchiveInputStream52.read(byteArray83, (int) 'a', 10);
+        int int89 = tarArchiveInputStream43.read(byteArray83);
+        int int90 = tarArchiveInputStream36.read(byteArray83);
+        byte[] byteArray91 = tarArchiveInputStream36.readAllBytes();
+        // The following exception was thrown during execution in test generation
+        try {
+            int int94 = tarArchiveInputStream7.readNBytes(byteArray91, (int) (short) 100, (int) (byte) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IndexOutOfBoundsException; message: Range [100, 100 + 1) out of bounds for length 0");
+        } catch (java.lang.IndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 0L + "'", long30 == 0L);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] {});
+        org.junit.Assert.assertNull(byteArray37);
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + false + "'", boolean39 == false);
+        org.junit.Assert.assertNull(byteArray44);
+        org.junit.Assert.assertNull(archiveEntry47);
+        org.junit.Assert.assertNull(str49);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+        org.junit.Assert.assertTrue("'" + boolean54 + "' != '" + false + "'", boolean54 == false);
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + 35 + "'", int60 == 35);
+        org.junit.Assert.assertTrue("'" + long65 + "' != '" + 0L + "'", long65 == 0L);
+        org.junit.Assert.assertNotNull(strMap66);
+        org.junit.Assert.assertNotNull(byteArray67);
+        org.junit.Assert.assertArrayEquals(byteArray67, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean69 + "' != '" + false + "'", boolean69 == false);
+        org.junit.Assert.assertTrue("'" + int70 + "' != '" + (-1) + "'", int70 == (-1));
+        org.junit.Assert.assertTrue("'" + int76 + "' != '" + 35 + "'", int76 == 35);
+        org.junit.Assert.assertTrue("'" + long81 + "' != '" + 0L + "'", long81 == 0L);
+        org.junit.Assert.assertNotNull(strMap82);
+        org.junit.Assert.assertNotNull(byteArray83);
+        org.junit.Assert.assertArrayEquals(byteArray83, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean85 + "' != '" + false + "'", boolean85 == false);
+        org.junit.Assert.assertTrue("'" + int88 + "' != '" + (-1) + "'", int88 == (-1));
+        org.junit.Assert.assertTrue("'" + int89 + "' != '" + (-1) + "'", int89 == (-1));
+        org.junit.Assert.assertTrue("'" + int90 + "' != '" + (-1) + "'", int90 == (-1));
+        org.junit.Assert.assertNotNull(byteArray91);
+        org.junit.Assert.assertArrayEquals(byteArray91, new byte[] {});
+    }
+
+    @Test
+    public void test5053() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5053");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        byte[] byteArray12 = null;
+        int int15 = tarArchiveInputStream11.read(byteArray12, (int) '4', (int) '#');
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream18);
+        boolean boolean20 = tarArchiveInputStream11.isAtEOF();
+        boolean boolean21 = tarArchiveInputStream11.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        long long24 = tarArchiveInputStream11.skip((long) 100);
+        boolean boolean25 = tarArchiveInputStream11.markSupported();
+        tarArchiveInputStream11.setAtEOF(true);
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = null;
+        int int35 = tarArchiveInputStream31.read(byteArray32, (int) '4', (int) '#');
+        java.io.InputStream inputStream36 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream36);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37);
+        java.util.Map<java.lang.String, java.lang.String> strMap39 = tarArchiveInputStream31.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream38);
+        boolean boolean40 = tarArchiveInputStream31.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, 35);
+        tarArchiveInputStream31.mark((int) (byte) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream48 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, (int) (byte) 10, (int) (byte) 1);
+        java.io.InputStream inputStream49 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream49);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream50, (int) (short) 1);
+        byte[] byteArray53 = tarArchiveInputStream52.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry54 = null;
+        boolean boolean55 = tarArchiveInputStream52.canReadEntryData(archiveEntry54);
+        byte[] byteArray58 = new byte[] { (byte) 0, (byte) 1 };
+        int int61 = tarArchiveInputStream52.read(byteArray58, 1, 10);
+        int int64 = tarArchiveInputStream31.read(byteArray58, 0, (int) (short) -1);
+        java.util.Map<java.lang.String, java.lang.String> strMap65 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream31);
+        byte[] byteArray66 = tarArchiveInputStream31.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream69 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, (int) (short) 0, 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry70 = tarArchiveInputStream31.getCurrentEntry();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 0L + "'", long24 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+        org.junit.Assert.assertNotNull(strMap39);
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertNull(byteArray53);
+        org.junit.Assert.assertTrue("'" + boolean55 + "' != '" + false + "'", boolean55 == false);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] { (byte) 0, (byte) 1 });
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + (-1) + "'", int64 == (-1));
+        org.junit.Assert.assertNotNull(strMap65);
+        org.junit.Assert.assertNull(byteArray66);
+        org.junit.Assert.assertNull(tarArchiveEntry70);
+    }
+
+    @Test
+    public void test5054() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5054");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.isAtEOF();
+        int int14 = tarArchiveInputStream3.available();
+        tarArchiveInputStream3.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry16 = tarArchiveInputStream3.getCurrentEntry();
+        long long17 = tarArchiveInputStream3.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) 'a');
+        java.io.OutputStream outputStream20 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            long long21 = tarArchiveInputStream3.transferTo(outputStream20);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: out");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
+        org.junit.Assert.assertNull(tarArchiveEntry16);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 0L + "'", long17 == 0L);
+    }
+
+    @Test
+    public void test5055() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5055");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        tarArchiveInputStream3.mark((int) (byte) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 10, (int) (byte) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512);
+        tarArchiveInputStream3.setAtEOF(true);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry25 = tarArchiveInputStream3.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (-1), (int) '#');
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry25);
+    }
+
+    @Test
+    public void test5056() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5056");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        long long12 = tarArchiveInputStream9.getBytesRead();
+        tarArchiveInputStream9.mark((int) (short) 100);
+        int int15 = tarArchiveInputStream9.read();
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream9.getCurrentEntry();
+        int int18 = tarArchiveInputStream9.getCount();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+    }
+
+    @Test
+    public void test5057() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5057");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        tarArchiveInputStream10.mark(100);
+        boolean boolean20 = tarArchiveInputStream10.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22);
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+    }
+
+    @Test
+    public void test5058() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5058");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        int int24 = tarArchiveInputStream1.getRecordSize();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 0, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (int) (byte) 100, (-1));
+        int int31 = tarArchiveInputStream30.read();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 512 + "'", int24 == 512);
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + (-1) + "'", int31 == (-1));
+    }
+
+    @Test
+    public void test5059() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5059");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        byte[] byteArray9 = new byte[] { (byte) 0, (byte) 1 };
+        int int12 = tarArchiveInputStream3.read(byteArray9, 1, 10);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry13 = tarArchiveInputStream3.getNextEntry();
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14, (int) (short) 1, (int) '#');
+        int int19 = tarArchiveInputStream18.getRecordSize();
+        long long21 = tarArchiveInputStream18.skip((long) (-1));
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        long long26 = tarArchiveInputStream23.getBytesRead();
+        byte[] byteArray27 = new byte[] {};
+        int int28 = tarArchiveInputStream23.read(byteArray27);
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray27, (int) 'a');
+        int int33 = tarArchiveInputStream18.read(byteArray27, (int) 'a', (int) (byte) 0);
+        int int36 = tarArchiveInputStream3.read(byteArray27, 10, (int) (byte) 100);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry37 = tarArchiveInputStream3.getCurrentEntry();
+        long long39 = tarArchiveInputStream3.skip((long) (byte) 0);
+        int int40 = tarArchiveInputStream3.available();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] { (byte) 0, (byte) 1 });
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNull(archiveEntry13);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 35 + "'", int19 == 35);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 0L + "'", long26 == 0L);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + (-1) + "'", int28 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry37);
+        org.junit.Assert.assertTrue("'" + long39 + "' != '" + 0L + "'", long39 == 0L);
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + 0 + "'", int40 == 0);
+    }
+
+    @Test
+    public void test5060() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5060");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        byte[] byteArray12 = null;
+        int int15 = tarArchiveInputStream11.read(byteArray12, (int) '4', (int) '#');
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream18);
+        boolean boolean20 = tarArchiveInputStream11.isAtEOF();
+        boolean boolean21 = tarArchiveInputStream11.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        long long24 = tarArchiveInputStream11.skip((long) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry25 = tarArchiveInputStream11.getNextEntry();
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (int) (short) 1);
+        byte[] byteArray30 = null;
+        int int33 = tarArchiveInputStream29.read(byteArray30, (int) '4', (int) '#');
+        java.io.InputStream inputStream34 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream34);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream35);
+        java.util.Map<java.lang.String, java.lang.String> strMap37 = tarArchiveInputStream29.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream36);
+        int int38 = tarArchiveInputStream29.available();
+        tarArchiveInputStream29.mark((int) (byte) -1);
+        java.util.Map<java.lang.String, java.lang.String> strMap41 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream29);
+        int int42 = tarArchiveInputStream29.available();
+        tarArchiveInputStream29.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, 100);
+        java.io.InputStream inputStream47 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream48 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream47);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream48);
+        boolean boolean50 = tarArchiveInputStream48.isAtEOF();
+        java.io.InputStream inputStream51 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream51);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream55 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream51, (int) (short) 1, (int) '#');
+        int int56 = tarArchiveInputStream55.getRecordSize();
+        java.io.InputStream inputStream57 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream57);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream60 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream58, (int) (short) 1);
+        long long61 = tarArchiveInputStream58.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap62 = tarArchiveInputStream55.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream58);
+        byte[] byteArray63 = tarArchiveInputStream58.readAllBytes();
+        boolean boolean65 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray63, (int) (short) 0);
+        int int66 = tarArchiveInputStream48.read(byteArray63);
+        java.io.InputStream inputStream67 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream68 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream67);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream71 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream67, (int) (short) 1, (int) '#');
+        int int72 = tarArchiveInputStream71.getRecordSize();
+        java.io.InputStream inputStream73 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream74 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream73);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream76 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream74, (int) (short) 1);
+        long long77 = tarArchiveInputStream74.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap78 = tarArchiveInputStream71.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream74);
+        byte[] byteArray79 = tarArchiveInputStream74.readAllBytes();
+        boolean boolean81 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray79, (int) (short) 0);
+        int int84 = tarArchiveInputStream48.read(byteArray79, (int) 'a', 10);
+        boolean boolean85 = tarArchiveInputStream48.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap86 = tarArchiveInputStream29.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream48);
+        tarArchiveInputStream48.setAtEOF(true);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry89 = tarArchiveInputStream48.getNextEntry();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 0L + "'", long24 == 0L);
+        org.junit.Assert.assertNull(archiveEntry25);
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
+        org.junit.Assert.assertNotNull(strMap37);
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + 0 + "'", int38 == 0);
+        org.junit.Assert.assertNotNull(strMap41);
+        org.junit.Assert.assertTrue("'" + int42 + "' != '" + 0 + "'", int42 == 0);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+        org.junit.Assert.assertTrue("'" + int56 + "' != '" + 35 + "'", int56 == 35);
+        org.junit.Assert.assertTrue("'" + long61 + "' != '" + 0L + "'", long61 == 0L);
+        org.junit.Assert.assertNotNull(strMap62);
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + false + "'", boolean65 == false);
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + (-1) + "'", int66 == (-1));
+        org.junit.Assert.assertTrue("'" + int72 + "' != '" + 35 + "'", int72 == 35);
+        org.junit.Assert.assertTrue("'" + long77 + "' != '" + 0L + "'", long77 == 0L);
+        org.junit.Assert.assertNotNull(strMap78);
+        org.junit.Assert.assertNotNull(byteArray79);
+        org.junit.Assert.assertArrayEquals(byteArray79, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean81 + "' != '" + false + "'", boolean81 == false);
+        org.junit.Assert.assertTrue("'" + int84 + "' != '" + (-1) + "'", int84 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean85 + "' != '" + false + "'", boolean85 == false);
+        org.junit.Assert.assertNotNull(strMap86);
+        org.junit.Assert.assertNull(archiveEntry89);
+    }
+
+    @Test
+    public void test5061() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5061");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        byte[] byteArray15 = tarArchiveInputStream3.getLongNameData();
+        byte[] byteArray16 = tarArchiveInputStream3.readRecord();
+        tarArchiveInputStream3.mark((-1));
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20, (int) (short) 1);
+        byte[] byteArray23 = tarArchiveInputStream22.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (-1));
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31, (int) (short) 1, (int) '#');
+        int int36 = tarArchiveInputStream35.getRecordSize();
+        java.io.InputStream inputStream37 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream37);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38, (int) (short) 1);
+        long long41 = tarArchiveInputStream38.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap42 = tarArchiveInputStream35.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream38);
+        byte[] byteArray43 = tarArchiveInputStream38.readAllBytes();
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray43, (int) (short) 0);
+        int int46 = tarArchiveInputStream30.read(byteArray43);
+        int int49 = tarArchiveInputStream3.read(byteArray43, (int) (byte) 0, 512);
+        long long51 = tarArchiveInputStream3.skip((long) (byte) 10);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNull(byteArray15);
+        org.junit.Assert.assertNull(byteArray16);
+        org.junit.Assert.assertNull(byteArray23);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + 35 + "'", int36 == 35);
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 0L + "'", long41 == 0L);
+        org.junit.Assert.assertNotNull(strMap42);
+        org.junit.Assert.assertNotNull(byteArray43);
+        org.junit.Assert.assertArrayEquals(byteArray43, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertTrue("'" + int46 + "' != '" + (-1) + "'", int46 == (-1));
+        org.junit.Assert.assertTrue("'" + int49 + "' != '" + (-1) + "'", int49 == (-1));
+        org.junit.Assert.assertTrue("'" + long51 + "' != '" + 0L + "'", long51 == 0L);
+    }
+
+    @Test
+    public void test5062() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5062");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream1.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream1.getCount();
+        tarArchiveInputStream1.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = null;
+        boolean boolean11 = tarArchiveInputStream1.canReadEntryData(archiveEntry10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        int int13 = tarArchiveInputStream12.read();
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+    }
+
+    @Test
+    public void test5063() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5063");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry6 = null;
+        boolean boolean7 = tarArchiveInputStream1.canReadEntryData(archiveEntry6);
+        int int8 = tarArchiveInputStream1.read();
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + (-1) + "'", int8 == (-1));
+    }
+
+    @Test
+    public void test5064() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5064");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        long long7 = tarArchiveInputStream1.skip(0L);
+        tarArchiveInputStream1.mark(512);
+        int int10 = tarArchiveInputStream1.getCount();
+        int int11 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        int int13 = tarArchiveInputStream12.available();
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry17 = null;
+        boolean boolean18 = tarArchiveInputStream15.canReadEntryData(archiveEntry17);
+        tarArchiveInputStream15.setAtEOF(false);
+        byte[] byteArray22 = tarArchiveInputStream15.readNBytes(0);
+        int int23 = tarArchiveInputStream15.read();
+        java.io.InputStream inputStream24 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, (int) (short) 1);
+        byte[] byteArray28 = null;
+        int int31 = tarArchiveInputStream27.read(byteArray28, (int) '4', (int) '#');
+        java.io.InputStream inputStream32 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream32);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33);
+        java.util.Map<java.lang.String, java.lang.String> strMap35 = tarArchiveInputStream27.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream34);
+        byte[] byteArray37 = new byte[] { (byte) -1 };
+        int int38 = tarArchiveInputStream34.read(byteArray37);
+        int int41 = tarArchiveInputStream15.read(byteArray37, (int) (short) 10, 1);
+        byte[] byteArray42 = tarArchiveInputStream15.readAllBytes();
+        // The following exception was thrown during execution in test generation
+        try {
+            int int45 = tarArchiveInputStream12.readNBytes(byteArray42, 0, 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.IndexOutOfBoundsException; message: Range [0, 0 + 100) out of bounds for length 0");
+        } catch (java.lang.IndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + (-1) + "'", int23 == (-1));
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + (-1) + "'", int31 == (-1));
+        org.junit.Assert.assertNotNull(strMap35);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + (-1) + "'", int38 == (-1));
+        org.junit.Assert.assertTrue("'" + int41 + "' != '" + (-1) + "'", int41 == (-1));
+        org.junit.Assert.assertNotNull(byteArray42);
+        org.junit.Assert.assertArrayEquals(byteArray42, new byte[] {});
+    }
+
+    @Test
+    public void test5065() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5065");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        int int5 = tarArchiveInputStream1.getRecordSize();
+        int int6 = tarArchiveInputStream1.getCount();
+        java.io.InputStream inputStream7 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, (int) (short) 1);
+        byte[] byteArray11 = tarArchiveInputStream10.readRecord();
+        tarArchiveInputStream10.mark((-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = tarArchiveInputStream10.getNextEntry();
+        tarArchiveInputStream10.reset();
+        java.lang.String str16 = tarArchiveInputStream10.encoding;
+        long long18 = tarArchiveInputStream10.skip((long) (short) 10);
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20, (int) (short) 1);
+        byte[] byteArray23 = tarArchiveInputStream22.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22, 512, (-1));
+        java.io.InputStream inputStream27 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream27);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream28, (int) (short) 1);
+        byte[] byteArray31 = null;
+        int int34 = tarArchiveInputStream30.read(byteArray31, (int) '4', (int) '#');
+        java.io.InputStream inputStream35 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36);
+        java.util.Map<java.lang.String, java.lang.String> strMap38 = tarArchiveInputStream30.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream37);
+        boolean boolean39 = tarArchiveInputStream30.isAtEOF();
+        boolean boolean40 = tarArchiveInputStream30.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap41 = tarArchiveInputStream22.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream30);
+        long long42 = tarArchiveInputStream22.getBytesRead();
+        java.io.InputStream inputStream43 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream43);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream47 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream43, (int) (short) 1, (int) '#');
+        int int48 = tarArchiveInputStream47.getRecordSize();
+        java.io.InputStream inputStream49 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream49);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream50, (int) (short) 1);
+        long long53 = tarArchiveInputStream50.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap54 = tarArchiveInputStream47.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream50);
+        byte[] byteArray55 = tarArchiveInputStream50.readAllBytes();
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray55, (int) (short) 0);
+        int int60 = tarArchiveInputStream22.read(byteArray55, (int) (byte) 1, (int) (short) 1);
+        int int61 = tarArchiveInputStream10.read(byteArray55);
+        int int64 = tarArchiveInputStream1.read(byteArray55, 0, 0);
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 512 + "'", int5 == 512);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertNull(byteArray11);
+        org.junit.Assert.assertNull(archiveEntry14);
+        org.junit.Assert.assertNull(str16);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 0L + "'", long18 == 0L);
+        org.junit.Assert.assertNull(byteArray23);
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
+        org.junit.Assert.assertNotNull(strMap38);
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + false + "'", boolean39 == false);
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertNotNull(strMap41);
+        org.junit.Assert.assertTrue("'" + long42 + "' != '" + 0L + "'", long42 == 0L);
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + 35 + "'", int48 == 35);
+        org.junit.Assert.assertTrue("'" + long53 + "' != '" + 0L + "'", long53 == 0L);
+        org.junit.Assert.assertNotNull(strMap54);
+        org.junit.Assert.assertNotNull(byteArray55);
+        org.junit.Assert.assertArrayEquals(byteArray55, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + (-1) + "'", int60 == (-1));
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + (-1) + "'", int64 == (-1));
+    }
+
+    @Test
+    public void test5066() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5066");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        long long8 = tarArchiveInputStream7.getBytesRead();
+        long long10 = tarArchiveInputStream7.skip((long) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry11 = null;
+        tarArchiveInputStream7.setCurrentEntry(tarArchiveEntry11);
+        long long13 = tarArchiveInputStream7.getBytesRead();
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+    }
+
+    @Test
+    public void test5067() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5067");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        long long7 = tarArchiveInputStream1.skip(0L);
+        tarArchiveInputStream1.mark(512);
+        long long10 = tarArchiveInputStream1.getBytesRead();
+        tarArchiveInputStream1.mark((int) (short) 10);
+        tarArchiveInputStream1.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        byte[] byteArray15 = tarArchiveInputStream14.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry17 = tarArchiveInputStream14.getNextEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry18 = null;
+        tarArchiveInputStream14.setCurrentEntry(tarArchiveEntry18);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+        org.junit.Assert.assertNull(archiveEntry17);
+    }
+
+    @Test
+    public void test5068() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5068");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        byte[] byteArray8 = tarArchiveInputStream3.readAllBytes();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry9 = tarArchiveInputStream3.getNextEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '#', 512);
+        int int13 = tarArchiveInputStream3.getRecordSize();
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15, (int) (short) 1);
+        byte[] byteArray18 = tarArchiveInputStream17.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (-1));
+        byte[] byteArray26 = tarArchiveInputStream23.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) ' ');
+        java.io.InputStream inputStream29 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream29);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream30, (int) (short) 1);
+        long long33 = tarArchiveInputStream30.getBytesRead();
+        byte[] byteArray34 = new byte[] {};
+        int int35 = tarArchiveInputStream30.read(byteArray34);
+        int int38 = tarArchiveInputStream28.read(byteArray34, (-1), 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int41 = tarArchiveInputStream3.readNBytes(byteArray34, (int) '4', 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IndexOutOfBoundsException; message: Range [52, 52 + 0) out of bounds for length 0");
+        } catch (java.lang.IndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] {});
+        org.junit.Assert.assertNull(archiveEntry9);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 512 + "'", int13 == 512);
+        org.junit.Assert.assertNull(byteArray18);
+        org.junit.Assert.assertNull(byteArray26);
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 0L + "'", long33 == 0L);
+        org.junit.Assert.assertNotNull(byteArray34);
+        org.junit.Assert.assertArrayEquals(byteArray34, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + (-1) + "'", int38 == (-1));
+    }
+
+    @Test
+    public void test5069() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5069");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        long long7 = tarArchiveInputStream1.skip(0L);
+        tarArchiveInputStream1.mark(512);
+        long long10 = tarArchiveInputStream1.getBytesRead();
+        byte[] byteArray11 = tarArchiveInputStream1.readAllBytes();
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (short) 1);
+        byte[] byteArray16 = null;
+        int int19 = tarArchiveInputStream15.read(byteArray16, (int) '4', (int) '#');
+        java.io.InputStream inputStream20 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21);
+        java.util.Map<java.lang.String, java.lang.String> strMap23 = tarArchiveInputStream15.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream22);
+        int int24 = tarArchiveInputStream15.getRecordSize();
+        byte[] byteArray25 = tarArchiveInputStream15.getLongNameData();
+        byte[] byteArray27 = tarArchiveInputStream15.readNBytes((int) '#');
+        tarArchiveInputStream15.mark((int) (byte) 1);
+        java.util.Map<java.lang.String, java.lang.String> strMap30 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        tarArchiveInputStream1.setAtEOF(true);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry33 = tarArchiveInputStream1.getNextTarEntry();
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertNotNull(byteArray11);
+        org.junit.Assert.assertArrayEquals(byteArray11, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + (-1) + "'", int19 == (-1));
+        org.junit.Assert.assertNotNull(strMap23);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 512 + "'", int24 == 512);
+        org.junit.Assert.assertNull(byteArray25);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] {});
+        org.junit.Assert.assertNotNull(strMap30);
+        org.junit.Assert.assertNull(tarArchiveEntry33);
+    }
+
+    @Test
+    public void test5070() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5070");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0);
+        int int11 = tarArchiveInputStream10.read();
+        byte[] byteArray13 = tarArchiveInputStream10.readNBytes((int) (short) 10);
+        byte[] byteArray15 = tarArchiveInputStream10.readNBytes(100);
+        tarArchiveInputStream10.setAtEOF(true);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+    }
+
+    @Test
+    public void test5071() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5071");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 1);
+        int int6 = tarArchiveInputStream3.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry7 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        int int10 = tarArchiveInputStream9.available();
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+    }
+
+    @Test
+    public void test5072() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5072");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, 100);
+        byte[] byteArray8 = tarArchiveInputStream7.getLongNameData();
+        int int9 = tarArchiveInputStream7.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7);
+        byte[] byteArray11 = tarArchiveInputStream7.readRecord();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertNull(byteArray8);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+        org.junit.Assert.assertNull(byteArray11);
+    }
+
+    @Test
+    public void test5073() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5073");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        byte[] byteArray15 = tarArchiveInputStream3.readNBytes((int) '#');
+        tarArchiveInputStream3.mark(0);
+        int int18 = tarArchiveInputStream3.read();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry19 = null;
+        boolean boolean20 = tarArchiveInputStream3.canReadEntryData(archiveEntry19);
+        java.io.InputStream inputStream21 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream21);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22, (int) (short) 1);
+        byte[] byteArray25 = tarArchiveInputStream24.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry26 = null;
+        boolean boolean27 = tarArchiveInputStream24.canReadEntryData(archiveEntry26);
+        int int28 = tarArchiveInputStream24.available();
+        byte[] byteArray29 = tarArchiveInputStream24.readAllBytes();
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray29, 1);
+        int int32 = tarArchiveInputStream3.read(byteArray29);
+        int int33 = tarArchiveInputStream3.getRecordSize();
+        long long34 = tarArchiveInputStream3.getBytesRead();
+        tarArchiveInputStream3.mark((int) (byte) 0);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertNull(byteArray25);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + 0 + "'", int28 == 0);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + (-1) + "'", int32 == (-1));
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + 512 + "'", int33 == 512);
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 0L + "'", long34 == 0L);
+    }
+
+    @Test
+    public void test5074() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5074");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry3 = null;
+        boolean boolean4 = tarArchiveInputStream1.canReadEntryData(archiveEntry3);
+        tarArchiveInputStream1.setAtEOF(false);
+        byte[] byteArray8 = tarArchiveInputStream1.readNBytes(0);
+        int int9 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry10 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry10);
+        byte[] byteArray12 = tarArchiveInputStream1.readAllBytes();
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+        org.junit.Assert.assertNotNull(byteArray12);
+        org.junit.Assert.assertArrayEquals(byteArray12, new byte[] {});
+    }
+
+    @Test
+    public void test5075() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5075");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        tarArchiveInputStream4.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = tarArchiveInputStream4.getCurrentEntry();
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        byte[] byteArray13 = null;
+        int int16 = tarArchiveInputStream12.read(byteArray13, (int) '4', (int) '#');
+        java.io.InputStream inputStream17 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream17);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream12.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        int int21 = tarArchiveInputStream12.getRecordSize();
+        byte[] byteArray22 = tarArchiveInputStream12.getLongNameData();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry23 = tarArchiveInputStream12.getNextEntry();
+        java.io.InputStream inputStream24 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, (int) (short) 1);
+        byte[] byteArray28 = null;
+        int int31 = tarArchiveInputStream27.read(byteArray28, (int) '4', (int) '#');
+        java.io.InputStream inputStream32 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream32);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33);
+        java.util.Map<java.lang.String, java.lang.String> strMap35 = tarArchiveInputStream27.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream34);
+        int int36 = tarArchiveInputStream27.getRecordSize();
+        byte[] byteArray38 = tarArchiveInputStream27.readNBytes((int) '4');
+        int int39 = tarArchiveInputStream12.read(byteArray38);
+        byte[] byteArray40 = tarArchiveInputStream12.readAllBytes();
+        int int43 = tarArchiveInputStream4.read(byteArray40, 10, (int) '4');
+        int int44 = tarArchiveInputStream4.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry45 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry45);
+        long long47 = tarArchiveInputStream4.getBytesRead();
+        int int48 = tarArchiveInputStream4.getRecordSize();
+        org.junit.Assert.assertNull(tarArchiveEntry8);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 512 + "'", int21 == 512);
+        org.junit.Assert.assertNull(byteArray22);
+        org.junit.Assert.assertNull(archiveEntry23);
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + (-1) + "'", int31 == (-1));
+        org.junit.Assert.assertNotNull(strMap35);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + 512 + "'", int36 == 512);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int43 + "' != '" + (-1) + "'", int43 == (-1));
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 0 + "'", int44 == 0);
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 0L + "'", long47 == 0L);
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + 35 + "'", int48 == 35);
+    }
+
+    @Test
+    public void test5076() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5076");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = tarArchiveInputStream3.getCurrentEntry();
+        byte[] byteArray9 = tarArchiveInputStream3.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        int int11 = tarArchiveInputStream3.getRecordSize();
+        int int12 = tarArchiveInputStream3.available();
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (short) 1);
+        byte[] byteArray17 = tarArchiveInputStream16.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry21 = tarArchiveInputStream16.getCurrentEntry();
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        byte[] byteArray26 = null;
+        int int29 = tarArchiveInputStream25.read(byteArray26, (int) '4', (int) '#');
+        java.io.InputStream inputStream30 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream30);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31);
+        java.util.Map<java.lang.String, java.lang.String> strMap33 = tarArchiveInputStream25.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream32);
+        boolean boolean34 = tarArchiveInputStream25.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, 35);
+        boolean boolean37 = tarArchiveInputStream36.markSupported();
+        java.io.InputStream inputStream38 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream38);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry42 = tarArchiveInputStream39.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39, (int) (short) -1, (int) (byte) 100);
+        java.io.InputStream inputStream46 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream47 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream46);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream47, (int) (short) 1);
+        long long50 = tarArchiveInputStream47.getBytesRead();
+        byte[] byteArray51 = new byte[] {};
+        int int52 = tarArchiveInputStream47.read(byteArray51);
+        int int55 = tarArchiveInputStream45.readNBytes(byteArray51, (int) (byte) 0, 0);
+        int int58 = tarArchiveInputStream36.read(byteArray51, (int) (byte) 100, (int) (short) 10);
+        boolean boolean60 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray51, (int) ' ');
+        int int63 = tarArchiveInputStream16.readNBytes(byteArray51, (int) (byte) 0, 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream66 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, (-1), 0);
+        long long68 = tarArchiveInputStream16.skip((long) ' ');
+        java.util.Map<java.lang.String, java.lang.String> strMap69 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream16);
+        tarArchiveInputStream16.mark((int) (short) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry72 = null;
+        tarArchiveInputStream16.setCurrentEntry(tarArchiveEntry72);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(tarArchiveEntry8);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 512 + "'", int11 == 512);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertNull(byteArray17);
+        org.junit.Assert.assertNull(tarArchiveEntry21);
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
+        org.junit.Assert.assertNotNull(strMap33);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + boolean37 + "' != '" + false + "'", boolean37 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry42);
+        org.junit.Assert.assertTrue("'" + long50 + "' != '" + 0L + "'", long50 == 0L);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + 0 + "'", int55 == 0);
+        org.junit.Assert.assertTrue("'" + int58 + "' != '" + (-1) + "'", int58 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertTrue("'" + int63 + "' != '" + 0 + "'", int63 == 0);
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 0L + "'", long68 == 0L);
+        org.junit.Assert.assertNotNull(strMap69);
+    }
+
+    @Test
+    public void test5077() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5077");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry11 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry11);
+        int int13 = tarArchiveInputStream3.read();
+        int int14 = tarArchiveInputStream3.getRecordSize();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry15 = null;
+        boolean boolean16 = tarArchiveInputStream3.canReadEntryData(archiveEntry15);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry17);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '#', 512);
+        tarArchiveInputStream3.reset();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 512 + "'", int14 == 512);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test5078() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5078");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0);
+        boolean boolean11 = tarArchiveInputStream10.isAtEOF();
+        int int12 = tarArchiveInputStream10.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry13 = tarArchiveInputStream10.getNextTarEntry();
+        int int14 = tarArchiveInputStream10.getRecordSize();
+        long long16 = tarArchiveInputStream10.skip((long) (short) -1);
+        tarArchiveInputStream10.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream10.canReadEntryData(archiveEntry18);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertNull(tarArchiveEntry13);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test5079() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5079");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry15 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry15);
+        int int17 = tarArchiveInputStream3.available();
+        java.lang.String str18 = tarArchiveInputStream3.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry19 = tarArchiveInputStream3.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry21 = null;
+        boolean boolean22 = tarArchiveInputStream20.canReadEntryData(archiveEntry21);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry23 = tarArchiveInputStream20.getNextEntry();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
+        org.junit.Assert.assertNull(str18);
+        org.junit.Assert.assertNull(tarArchiveEntry19);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertNull(archiveEntry23);
+    }
+
+    @Test
+    public void test5080() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5080");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (byte) 10);
+        java.io.InputStream inputStream20 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry24 = tarArchiveInputStream21.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) (short) -1, (int) (byte) 100);
+        byte[] byteArray29 = tarArchiveInputStream21.readNBytes(0);
+        java.util.Map<java.lang.String, java.lang.String> strMap30 = tarArchiveInputStream19.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        tarArchiveInputStream19.reset();
+        long long33 = tarArchiveInputStream19.skip((long) (short) 0);
+        tarArchiveInputStream19.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry35 = tarArchiveInputStream19.getNextEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (byte) -1);
+        boolean boolean38 = tarArchiveInputStream37.markSupported();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertNull(tarArchiveEntry24);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertNotNull(strMap30);
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 0L + "'", long33 == 0L);
+        org.junit.Assert.assertNull(archiveEntry35);
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + false + "'", boolean38 == false);
+    }
+
+    @Test
+    public void test5081() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5081");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        long long12 = tarArchiveInputStream9.getBytesRead();
+        byte[] byteArray13 = new byte[] {};
+        int int14 = tarArchiveInputStream9.read(byteArray13);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray13, (int) 'a');
+        int int19 = tarArchiveInputStream4.read(byteArray13, (int) 'a', (int) (byte) 0);
+        tarArchiveInputStream4.reset();
+        int int21 = tarArchiveInputStream4.read();
+        byte[] byteArray23 = tarArchiveInputStream4.readNBytes((int) (short) 1);
+        long long25 = tarArchiveInputStream4.skip(0L);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4, (-1), (int) (byte) -1);
+        int int29 = tarArchiveInputStream28.available();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream28, 35, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + (-1) + "'", int19 == (-1));
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long25 + "' != '" + 0L + "'", long25 == 0L);
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + 0 + "'", int29 == 0);
+    }
+
+    @Test
+    public void test5082() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5082");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream1.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream1.getCount();
+        tarArchiveInputStream1.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        java.lang.String str12 = tarArchiveInputStream1.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        tarArchiveInputStream13.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry15 = null;
+        tarArchiveInputStream13.setCurrentEntry(tarArchiveEntry15);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (byte) -1);
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertNull(str12);
+    }
+
+    @Test
+    public void test5083() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5083");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = tarArchiveInputStream3.getNextEntry();
+        long long16 = tarArchiveInputStream3.skip((long) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream3.getNextTarEntry();
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        byte[] byteArray22 = null;
+        int int25 = tarArchiveInputStream21.read(byteArray22, (int) '4', (int) '#');
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream21.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream28);
+        boolean boolean30 = tarArchiveInputStream21.isAtEOF();
+        boolean boolean31 = tarArchiveInputStream21.markSupported();
+        byte[] byteArray32 = tarArchiveInputStream21.getLongNameData();
+        byte[] byteArray33 = tarArchiveInputStream21.readAllBytes();
+        byte[] byteArray35 = tarArchiveInputStream21.readNBytes((int) '#');
+        int int38 = tarArchiveInputStream3.read(byteArray35, (int) (short) 1, 0);
+        java.lang.String str39 = tarArchiveInputStream3.encoding;
+        tarArchiveInputStream3.reset();
+        int int41 = tarArchiveInputStream3.getCount();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertNull(archiveEntry14);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertNull(byteArray32);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + (-1) + "'", int38 == (-1));
+        org.junit.Assert.assertNull(str39);
+        org.junit.Assert.assertTrue("'" + int41 + "' != '" + 0 + "'", int41 == 0);
+    }
+
+    @Test
+    public void test5084() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5084");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        tarArchiveInputStream10.mark(100);
+        int int20 = tarArchiveInputStream10.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) '4');
+        java.io.InputStream inputStream23 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (int) (short) 1);
+        int int27 = tarArchiveInputStream24.read();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = null;
+        int int35 = tarArchiveInputStream31.read(byteArray32, (int) '4', (int) '#');
+        java.io.InputStream inputStream36 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream36);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37);
+        java.util.Map<java.lang.String, java.lang.String> strMap39 = tarArchiveInputStream31.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream38);
+        boolean boolean40 = tarArchiveInputStream31.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap43 = tarArchiveInputStream24.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream42);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, 512, 512);
+        int int47 = tarArchiveInputStream24.getRecordSize();
+        boolean boolean48 = tarArchiveInputStream24.markSupported();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry49 = null;
+        boolean boolean50 = tarArchiveInputStream24.canReadEntryData(archiveEntry49);
+        java.util.Map<java.lang.String, java.lang.String> strMap51 = tarArchiveInputStream22.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream24);
+        tarArchiveInputStream22.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22, (int) (byte) 1, 10);
+        java.lang.String str57 = tarArchiveInputStream56.encoding;
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + (-1) + "'", int27 == (-1));
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+        org.junit.Assert.assertNotNull(strMap39);
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertNotNull(strMap43);
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + 512 + "'", int47 == 512);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+        org.junit.Assert.assertNotNull(strMap51);
+        org.junit.Assert.assertNull(str57);
+    }
+
+    @Test
+    public void test5085() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5085");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        int int5 = tarArchiveInputStream3.available();
+        byte[] byteArray6 = tarArchiveInputStream3.readAllBytes();
+        tarArchiveInputStream3.mark(35);
+        boolean boolean9 = tarArchiveInputStream3.markSupported();
+        byte[] byteArray10 = null;
+        boolean boolean11 = tarArchiveInputStream3.isEOFRecord(byteArray10);
+        byte[] byteArray12 = tarArchiveInputStream3.getLongNameData();
+        int int13 = tarArchiveInputStream3.available();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = null;
+        boolean boolean15 = tarArchiveInputStream3.canReadEntryData(archiveEntry14);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+        org.junit.Assert.assertNull(byteArray12);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+    }
+
+    @Test
+    public void test5086() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5086");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream1.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream1.getCount();
+        tarArchiveInputStream1.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = null;
+        boolean boolean11 = tarArchiveInputStream1.canReadEntryData(archiveEntry10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        boolean boolean13 = tarArchiveInputStream12.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = tarArchiveInputStream12.getNextTarEntry();
+        java.io.InputStream inputStream15 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream15);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream15, (int) (short) 1, (int) '#');
+        int int20 = tarArchiveInputStream19.getRecordSize();
+        tarArchiveInputStream19.reset();
+        int int22 = tarArchiveInputStream19.read();
+        boolean boolean23 = tarArchiveInputStream19.markSupported();
+        tarArchiveInputStream19.reset();
+        java.util.Map<java.lang.String, java.lang.String> strMap25 = tarArchiveInputStream12.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry26 = tarArchiveInputStream12.getCurrentEntry();
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry14);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 35 + "'", int20 == 35);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + (-1) + "'", int22 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertNotNull(strMap25);
+        org.junit.Assert.assertNull(tarArchiveEntry26);
+    }
+
+    @Test
+    public void test5087() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5087");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        tarArchiveInputStream1.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry6 = null;
+        boolean boolean7 = tarArchiveInputStream1.canReadEntryData(archiveEntry6);
+        byte[] byteArray9 = tarArchiveInputStream1.readNBytes((int) (short) 10);
+        long long10 = tarArchiveInputStream1.getBytesRead();
+        boolean boolean11 = tarArchiveInputStream1.isAtEOF();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+    }
+
+    @Test
+    public void test5088() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5088");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        int int10 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        byte[] byteArray24 = new byte[] { (byte) -1 };
+        int int25 = tarArchiveInputStream21.read(byteArray24);
+        int int26 = tarArchiveInputStream7.read(byteArray24);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = tarArchiveInputStream7.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry28 = null;
+        tarArchiveInputStream7.setCurrentEntry(tarArchiveEntry28);
+        tarArchiveInputStream7.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31);
+        byte[] byteArray34 = tarArchiveInputStream32.readNBytes((int) (short) 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry27);
+        org.junit.Assert.assertNotNull(byteArray34);
+        org.junit.Assert.assertArrayEquals(byteArray34, new byte[] {});
+    }
+
+    @Test
+    public void test5089() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5089");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        long long8 = tarArchiveInputStream3.skip(0L);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 100);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream10.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry13 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry13);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+    }
+
+    @Test
+    public void test5090() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5090");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry4 = tarArchiveInputStream1.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, (int) (byte) 100);
+        byte[] byteArray9 = tarArchiveInputStream1.readNBytes(0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, (int) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry13 = null;
+        tarArchiveInputStream12.setCurrentEntry(tarArchiveEntry13);
+        long long15 = tarArchiveInputStream12.getBytesRead();
+        java.lang.String str16 = tarArchiveInputStream12.encoding;
+        org.junit.Assert.assertNull(tarArchiveEntry4);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertNull(str16);
+    }
+
+    @Test
+    public void test5091() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5091");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream1.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream1.getCount();
+        tarArchiveInputStream1.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        java.lang.String str12 = tarArchiveInputStream1.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 10);
+        java.io.OutputStream outputStream15 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            long long16 = tarArchiveInputStream1.transferTo(outputStream15);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: out");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertNull(str12);
+    }
+
+    @Test
+    public void test5092() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5092");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream1.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream1.getCount();
+        tarArchiveInputStream1.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = null;
+        boolean boolean11 = tarArchiveInputStream1.canReadEntryData(archiveEntry10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = null;
+        boolean boolean15 = tarArchiveInputStream1.canReadEntryData(archiveEntry14);
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16, (int) (short) 1, (int) '#');
+        int int21 = tarArchiveInputStream20.getRecordSize();
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        long long26 = tarArchiveInputStream23.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap27 = tarArchiveInputStream20.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream23);
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        tarArchiveInputStream29.mark((int) (byte) 0);
+        int int32 = tarArchiveInputStream29.read();
+        byte[] byteArray33 = tarArchiveInputStream29.readAllBytes();
+        int int34 = tarArchiveInputStream20.read(byteArray33);
+        int int35 = tarArchiveInputStream1.read(byteArray33);
+        java.io.InputStream inputStream36 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream36);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry40 = tarArchiveInputStream37.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37, (int) (byte) 1, 35);
+        int int44 = tarArchiveInputStream43.getRecordSize();
+        java.io.InputStream inputStream45 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream45);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream48 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream46, (int) (short) 1);
+        byte[] byteArray49 = tarArchiveInputStream48.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream48, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry53 = tarArchiveInputStream48.getCurrentEntry();
+        byte[] byteArray54 = tarArchiveInputStream48.readAllBytes();
+        int int57 = tarArchiveInputStream43.read(byteArray54, (int) (byte) 10, 1);
+        int int58 = tarArchiveInputStream1.read(byteArray54);
+        long long59 = tarArchiveInputStream1.getBytesRead();
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 35 + "'", int21 == 35);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 0L + "'", long26 == 0L);
+        org.junit.Assert.assertNotNull(strMap27);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + (-1) + "'", int32 == (-1));
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry40);
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 35 + "'", int44 == 35);
+        org.junit.Assert.assertNull(byteArray49);
+        org.junit.Assert.assertNull(tarArchiveEntry53);
+        org.junit.Assert.assertNotNull(byteArray54);
+        org.junit.Assert.assertArrayEquals(byteArray54, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int57 + "' != '" + (-1) + "'", int57 == (-1));
+        org.junit.Assert.assertTrue("'" + int58 + "' != '" + (-1) + "'", int58 == (-1));
+        org.junit.Assert.assertTrue("'" + long59 + "' != '" + 0L + "'", long59 == 0L);
+    }
+
+    @Test
+    public void test5093() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5093");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        tarArchiveInputStream1.mark((int) (short) 100);
+        int int7 = tarArchiveInputStream1.read();
+        byte[] byteArray9 = tarArchiveInputStream1.readNBytes((int) (short) 1);
+        tarArchiveInputStream1.reset();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        long long15 = tarArchiveInputStream12.getBytesRead();
+        byte[] byteArray16 = new byte[] {};
+        int int17 = tarArchiveInputStream12.read(byteArray16);
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        int int22 = tarArchiveInputStream19.read();
+        java.io.InputStream inputStream23 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (int) (short) 1);
+        byte[] byteArray27 = null;
+        int int30 = tarArchiveInputStream26.read(byteArray27, (int) '4', (int) '#');
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32);
+        java.util.Map<java.lang.String, java.lang.String> strMap34 = tarArchiveInputStream26.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream33);
+        boolean boolean35 = tarArchiveInputStream26.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap38 = tarArchiveInputStream19.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream37);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry39 = null;
+        boolean boolean40 = tarArchiveInputStream19.canReadEntryData(archiveEntry39);
+        byte[] byteArray41 = tarArchiveInputStream19.readAllBytes();
+        int int44 = tarArchiveInputStream12.read(byteArray41, (int) (short) 0, (int) (short) -1);
+        int int45 = tarArchiveInputStream1.read(byteArray41);
+        int int46 = tarArchiveInputStream1.getRecordSize();
+        tarArchiveInputStream1.reset();
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream51 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream49, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry52 = null;
+        boolean boolean53 = tarArchiveInputStream49.canReadEntryData(archiveEntry52);
+        long long55 = tarArchiveInputStream49.skip(0L);
+        tarArchiveInputStream49.mark(512);
+        long long58 = tarArchiveInputStream49.getBytesRead();
+        tarArchiveInputStream49.mark((int) (short) 10);
+        byte[] byteArray62 = tarArchiveInputStream49.readNBytes((int) ' ');
+        byte[] byteArray63 = tarArchiveInputStream49.readAllBytes();
+        byte[] byteArray65 = tarArchiveInputStream49.readNBytes((int) (byte) 0);
+        byte[] byteArray66 = tarArchiveInputStream49.readAllBytes();
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean67 = tarArchiveInputStream1.isEOFRecord(byteArray66);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + (-1) + "'", int17 == (-1));
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + (-1) + "'", int22 == (-1));
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertNotNull(strMap34);
+        org.junit.Assert.assertTrue("'" + boolean35 + "' != '" + false + "'", boolean35 == false);
+        org.junit.Assert.assertNotNull(strMap38);
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + (-1) + "'", int44 == (-1));
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + (-1) + "'", int45 == (-1));
+        org.junit.Assert.assertTrue("'" + int46 + "' != '" + 512 + "'", int46 == 512);
+        org.junit.Assert.assertTrue("'" + boolean53 + "' != '" + false + "'", boolean53 == false);
+        org.junit.Assert.assertTrue("'" + long55 + "' != '" + 0L + "'", long55 == 0L);
+        org.junit.Assert.assertTrue("'" + long58 + "' != '" + 0L + "'", long58 == 0L);
+        org.junit.Assert.assertNotNull(byteArray62);
+        org.junit.Assert.assertArrayEquals(byteArray62, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray65);
+        org.junit.Assert.assertArrayEquals(byteArray65, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray66);
+        org.junit.Assert.assertArrayEquals(byteArray66, new byte[] {});
+    }
+
+    @Test
+    public void test5094() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5094");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        byte[] byteArray15 = tarArchiveInputStream3.readNBytes((int) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 0);
+        byte[] byteArray19 = tarArchiveInputStream17.readNBytes((int) (short) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry20 = tarArchiveInputStream17.getNextTarEntry();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, (int) (byte) 0, (int) (short) 100, "");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: ");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] {});
+        org.junit.Assert.assertNull(tarArchiveEntry20);
+    }
+
+    @Test
+    public void test5095() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5095");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry4 = tarArchiveInputStream1.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, 35);
+        int int8 = tarArchiveInputStream7.getRecordSize();
+        byte[] byteArray9 = tarArchiveInputStream7.readRecord();
+        boolean boolean10 = tarArchiveInputStream7.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7);
+        org.junit.Assert.assertNull(tarArchiveEntry4);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 35 + "'", int8 == 35);
+        org.junit.Assert.assertNull(byteArray9);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+    }
+
+    @Test
+    public void test5096() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5096");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        java.lang.String str7 = tarArchiveInputStream1.encoding;
+        boolean boolean8 = tarArchiveInputStream1.isAtEOF();
+        byte[] byteArray9 = tarArchiveInputStream1.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) -1, (int) (byte) 10);
+        int int13 = tarArchiveInputStream12.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream12.setCurrentEntry(tarArchiveEntry14);
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertNull(str7);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+    }
+
+    @Test
+    public void test5097() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5097");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        tarArchiveInputStream4.reset();
+        long long10 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry11 = null;
+        boolean boolean12 = tarArchiveInputStream4.canReadEntryData(archiveEntry11);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long14 = tarArchiveInputStream4.skip((long) (byte) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+    }
+
+    @Test
+    public void test5098() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5098");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.isAtEOF();
+        int int14 = tarArchiveInputStream3.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '#', 1);
+        byte[] byteArray18 = tarArchiveInputStream17.getLongNameData();
+        byte[] byteArray19 = tarArchiveInputStream17.getLongNameData();
+        tarArchiveInputStream17.mark((int) (short) 10);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertNull(byteArray18);
+        org.junit.Assert.assertNull(byteArray19);
+    }
+
+    @Test
+    public void test5099() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5099");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = tarArchiveInputStream3.getCurrentEntry();
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        byte[] byteArray13 = null;
+        int int16 = tarArchiveInputStream12.read(byteArray13, (int) '4', (int) '#');
+        java.io.InputStream inputStream17 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream17);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream12.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        boolean boolean21 = tarArchiveInputStream12.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, 35);
+        boolean boolean24 = tarArchiveInputStream23.markSupported();
+        java.io.InputStream inputStream25 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream25);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry29 = tarArchiveInputStream26.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) -1, (int) (byte) 100);
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream34, (int) (short) 1);
+        long long37 = tarArchiveInputStream34.getBytesRead();
+        byte[] byteArray38 = new byte[] {};
+        int int39 = tarArchiveInputStream34.read(byteArray38);
+        int int42 = tarArchiveInputStream32.readNBytes(byteArray38, (int) (byte) 0, 0);
+        int int45 = tarArchiveInputStream23.read(byteArray38, (int) (byte) 100, (int) (short) 10);
+        boolean boolean47 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray38, (int) ' ');
+        int int50 = tarArchiveInputStream3.readNBytes(byteArray38, (int) (byte) 0, 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (-1), 0);
+        tarArchiveInputStream3.setAtEOF(true);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(tarArchiveEntry8);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry29);
+        org.junit.Assert.assertTrue("'" + long37 + "' != '" + 0L + "'", long37 == 0L);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertTrue("'" + int42 + "' != '" + 0 + "'", int42 == 0);
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + (-1) + "'", int45 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + false + "'", boolean47 == false);
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + 0 + "'", int50 == 0);
+    }
+
+    @Test
+    public void test5100() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5100");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        int int10 = tarArchiveInputStream4.read();
+        int int11 = tarArchiveInputStream4.available();
+        boolean boolean12 = tarArchiveInputStream4.markSupported();
+        boolean boolean13 = tarArchiveInputStream4.isAtEOF();
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15, (int) (short) 1);
+        byte[] byteArray18 = null;
+        int int21 = tarArchiveInputStream17.read(byteArray18, (int) '4', (int) '#');
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23);
+        java.util.Map<java.lang.String, java.lang.String> strMap25 = tarArchiveInputStream17.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream24);
+        int int26 = tarArchiveInputStream17.getRecordSize();
+        tarArchiveInputStream17.reset();
+        java.util.Map<java.lang.String, java.lang.String> strMap28 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream17);
+        long long29 = tarArchiveInputStream4.getBytesRead();
+        java.io.InputStream inputStream30 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream30);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry34 = tarArchiveInputStream31.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, (int) (short) -1, (int) (byte) 100);
+        java.io.InputStream inputStream38 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream38);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39, (int) (short) 1);
+        long long42 = tarArchiveInputStream39.getBytesRead();
+        byte[] byteArray43 = new byte[] {};
+        int int44 = tarArchiveInputStream39.read(byteArray43);
+        int int47 = tarArchiveInputStream37.readNBytes(byteArray43, (int) (byte) 0, 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream48 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream48, (int) 'a');
+        byte[] byteArray51 = tarArchiveInputStream48.readRecord();
+        java.util.Map<java.lang.String, java.lang.String> strMap52 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry53 = tarArchiveInputStream4.getCurrentEntry();
+        java.lang.String str54 = tarArchiveInputStream4.encoding;
+        java.io.InputStream inputStream55 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream56, (int) (short) 1);
+        byte[] byteArray59 = null;
+        int int62 = tarArchiveInputStream58.read(byteArray59, (int) '4', (int) '#');
+        java.io.InputStream inputStream63 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream64 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream63);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream65 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream64);
+        java.util.Map<java.lang.String, java.lang.String> strMap66 = tarArchiveInputStream58.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream65);
+        int int67 = tarArchiveInputStream58.getRecordSize();
+        byte[] byteArray68 = tarArchiveInputStream58.getLongNameData();
+        tarArchiveInputStream58.reset();
+        byte[] byteArray71 = tarArchiveInputStream58.readNBytes((int) (byte) 0);
+        int int72 = tarArchiveInputStream4.read(byteArray71);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream75 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4, (int) (byte) -1, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + (-1) + "'", int10 == (-1));
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 0 + "'", int11 == 0);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+        org.junit.Assert.assertNotNull(strMap25);
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + 512 + "'", int26 == 512);
+        org.junit.Assert.assertNotNull(strMap28);
+        org.junit.Assert.assertTrue("'" + long29 + "' != '" + 0L + "'", long29 == 0L);
+        org.junit.Assert.assertNull(tarArchiveEntry34);
+        org.junit.Assert.assertTrue("'" + long42 + "' != '" + 0L + "'", long42 == 0L);
+        org.junit.Assert.assertNotNull(byteArray43);
+        org.junit.Assert.assertArrayEquals(byteArray43, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + (-1) + "'", int44 == (-1));
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + 0 + "'", int47 == 0);
+        org.junit.Assert.assertNull(byteArray51);
+        org.junit.Assert.assertNotNull(strMap52);
+        org.junit.Assert.assertNull(tarArchiveEntry53);
+        org.junit.Assert.assertNull(str54);
+        org.junit.Assert.assertTrue("'" + int62 + "' != '" + (-1) + "'", int62 == (-1));
+        org.junit.Assert.assertNotNull(strMap66);
+        org.junit.Assert.assertTrue("'" + int67 + "' != '" + 512 + "'", int67 == 512);
+        org.junit.Assert.assertNull(byteArray68);
+        org.junit.Assert.assertNotNull(byteArray71);
+        org.junit.Assert.assertArrayEquals(byteArray71, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int72 + "' != '" + (-1) + "'", int72 == (-1));
+    }
+
+    @Test
+    public void test5101() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5101");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.isAtEOF();
+        int int14 = tarArchiveInputStream3.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '#', 1);
+        byte[] byteArray18 = tarArchiveInputStream17.getLongNameData();
+        byte[] byteArray19 = tarArchiveInputStream17.getLongNameData();
+        byte[] byteArray20 = tarArchiveInputStream17.readAllBytes();
+        byte[] byteArray21 = tarArchiveInputStream17.readRecord();
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        byte[] byteArray26 = tarArchiveInputStream25.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) '4');
+        int int32 = tarArchiveInputStream29.available();
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream34, (int) (short) 1);
+        byte[] byteArray37 = null;
+        int int40 = tarArchiveInputStream36.read(byteArray37, (int) '4', (int) '#');
+        java.io.InputStream inputStream41 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream41);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream42);
+        java.util.Map<java.lang.String, java.lang.String> strMap44 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream43);
+        byte[] byteArray46 = new byte[] { (byte) -1 };
+        int int47 = tarArchiveInputStream43.read(byteArray46);
+        int int48 = tarArchiveInputStream29.read(byteArray46);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry49 = tarArchiveInputStream29.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry50 = null;
+        tarArchiveInputStream29.setCurrentEntry(tarArchiveEntry50);
+        tarArchiveInputStream29.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry54 = tarArchiveInputStream53.getCurrentEntry();
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream17.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream53);
+        byte[] byteArray56 = tarArchiveInputStream53.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry57 = tarArchiveInputStream53.getNextTarEntry();
+        boolean boolean58 = tarArchiveInputStream53.isAtEOF();
+        byte[] byteArray60 = tarArchiveInputStream53.readNBytes(1);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertNull(byteArray18);
+        org.junit.Assert.assertNull(byteArray19);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] {});
+        org.junit.Assert.assertNull(byteArray21);
+        org.junit.Assert.assertNull(byteArray26);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + 0 + "'", int32 == 0);
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + (-1) + "'", int40 == (-1));
+        org.junit.Assert.assertNotNull(strMap44);
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + (-1) + "'", int48 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry49);
+        org.junit.Assert.assertNull(tarArchiveEntry54);
+        org.junit.Assert.assertNotNull(strMap55);
+        org.junit.Assert.assertNotNull(byteArray56);
+        org.junit.Assert.assertArrayEquals(byteArray56, new byte[] {});
+        org.junit.Assert.assertNull(tarArchiveEntry57);
+        org.junit.Assert.assertTrue("'" + boolean58 + "' != '" + true + "'", boolean58 == true);
+        org.junit.Assert.assertNotNull(byteArray60);
+        org.junit.Assert.assertArrayEquals(byteArray60, new byte[] {});
+    }
+
+    @Test
+    public void test5102() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5102");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        byte[] byteArray14 = tarArchiveInputStream13.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (byte) -1, (int) (short) 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry21 = null;
+        tarArchiveInputStream13.setCurrentEntry(tarArchiveEntry21);
+        int int23 = tarArchiveInputStream13.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13);
+        tarArchiveInputStream13.reset();
+        java.util.Map<java.lang.String, java.lang.String> strMap26 = tarArchiveInputStream9.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream13);
+        java.io.InputStream inputStream27 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream27);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream28, (int) (short) 1);
+        byte[] byteArray31 = null;
+        int int34 = tarArchiveInputStream30.read(byteArray31, (int) '4', (int) '#');
+        tarArchiveInputStream30.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry36 = null;
+        tarArchiveInputStream30.setCurrentEntry(tarArchiveEntry36);
+        java.util.Map<java.lang.String, java.lang.String> strMap38 = tarArchiveInputStream9.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream30);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(byteArray14);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + (-1) + "'", int23 == (-1));
+        org.junit.Assert.assertNotNull(strMap26);
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
+        org.junit.Assert.assertNotNull(strMap38);
+    }
+
+    @Test
+    public void test5103() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5103");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        byte[] byteArray12 = null;
+        int int15 = tarArchiveInputStream11.read(byteArray12, (int) '4', (int) '#');
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream18);
+        boolean boolean20 = tarArchiveInputStream11.isAtEOF();
+        boolean boolean21 = tarArchiveInputStream11.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        int int23 = tarArchiveInputStream11.getRecordSize();
+        int int24 = tarArchiveInputStream11.read();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry25 = null;
+        boolean boolean26 = tarArchiveInputStream11.canReadEntryData(archiveEntry25);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 512 + "'", int23 == 512);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + (-1) + "'", int24 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+    }
+
+    @Test
+    public void test5104() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5104");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry4 = tarArchiveInputStream1.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, (int) (byte) 100);
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        long long12 = tarArchiveInputStream9.getBytesRead();
+        byte[] byteArray13 = new byte[] {};
+        int int14 = tarArchiveInputStream9.read(byteArray13);
+        int int17 = tarArchiveInputStream7.readNBytes(byteArray13, (int) (byte) 0, 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7);
+        long long20 = tarArchiveInputStream18.skip(100L);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18);
+        boolean boolean22 = tarArchiveInputStream18.markSupported();
+        org.junit.Assert.assertNull(tarArchiveEntry4);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 0L + "'", long20 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+    }
+
+    @Test
+    public void test5105() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5105");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 1);
+        int int6 = tarArchiveInputStream3.getCount();
+        byte[] byteArray7 = tarArchiveInputStream3.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        tarArchiveInputStream8.reset();
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] {});
+    }
+
+    @Test
+    public void test5106() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5106");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry15 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry15);
+        byte[] byteArray17 = tarArchiveInputStream3.getLongNameData();
+        java.lang.String str18 = tarArchiveInputStream3.encoding;
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry19 = tarArchiveInputStream3.getNextEntry();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNull(byteArray17);
+        org.junit.Assert.assertNull(str18);
+        org.junit.Assert.assertNull(archiveEntry19);
+    }
+
+    @Test
+    public void test5107() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5107");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.getLongNameData();
+        boolean boolean5 = tarArchiveInputStream3.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry7 = tarArchiveInputStream3.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = tarArchiveInputStream3.getCurrentEntry();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry7);
+        org.junit.Assert.assertNull(tarArchiveEntry8);
+    }
+
+    @Test
+    public void test5108() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5108");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0);
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11, (int) (short) 1, (int) '#');
+        int int16 = tarArchiveInputStream15.getRecordSize();
+        long long18 = tarArchiveInputStream15.skip((long) (-1));
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20, (int) (short) 1);
+        long long23 = tarArchiveInputStream20.getBytesRead();
+        byte[] byteArray24 = new byte[] {};
+        int int25 = tarArchiveInputStream20.read(byteArray24);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray24, (int) 'a');
+        int int30 = tarArchiveInputStream15.read(byteArray24, (int) 'a', (int) (byte) 0);
+        int int31 = tarArchiveInputStream3.read(byteArray24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 100);
+        // The following exception was thrown during execution in test generation
+        try {
+            tarArchiveInputStream33.close();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 35 + "'", int16 == 35);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 0L + "'", long18 == 0L);
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 0L + "'", long23 == 0L);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + (-1) + "'", int31 == (-1));
+    }
+
+    @Test
+    public void test5109() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5109");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, (int) (byte) 10);
+        byte[] byteArray8 = tarArchiveInputStream7.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, 35, (-1));
+        tarArchiveInputStream7.reset();
+        byte[] byteArray13 = tarArchiveInputStream7.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '#');
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] {});
+    }
+
+    @Test
+    public void test5110() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5110");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        tarArchiveInputStream9.reset();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = null;
+        boolean boolean15 = tarArchiveInputStream12.canReadEntryData(archiveEntry14);
+        tarArchiveInputStream12.setAtEOF(false);
+        byte[] byteArray19 = tarArchiveInputStream12.readNBytes(0);
+        int int20 = tarArchiveInputStream9.read(byteArray19);
+        byte[] byteArray22 = tarArchiveInputStream9.readNBytes((int) 'a');
+        java.io.InputStream inputStream23 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (int) (short) 1);
+        byte[] byteArray27 = tarArchiveInputStream26.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry28 = null;
+        boolean boolean29 = tarArchiveInputStream26.canReadEntryData(archiveEntry28);
+        int int30 = tarArchiveInputStream26.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry31 = tarArchiveInputStream26.getCurrentEntry();
+        tarArchiveInputStream26.reset();
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream34, (int) (short) 1);
+        byte[] byteArray37 = tarArchiveInputStream36.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry38 = null;
+        boolean boolean39 = tarArchiveInputStream36.canReadEntryData(archiveEntry38);
+        int int40 = tarArchiveInputStream36.available();
+        byte[] byteArray41 = tarArchiveInputStream36.readAllBytes();
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray41, (int) (byte) 100);
+        int int46 = tarArchiveInputStream26.read(byteArray41, 100, (int) 'a');
+        byte[] byteArray47 = tarArchiveInputStream26.readAllBytes();
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        tarArchiveInputStream49.mark((int) (byte) 0);
+        int int52 = tarArchiveInputStream49.read();
+        tarArchiveInputStream49.mark((int) 'a');
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry55 = tarArchiveInputStream49.getCurrentEntry();
+        boolean boolean56 = tarArchiveInputStream49.markSupported();
+        java.io.InputStream inputStream57 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream57);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream60 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream58, (int) (short) 1);
+        byte[] byteArray61 = tarArchiveInputStream60.readRecord();
+        tarArchiveInputStream60.mark((-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry64 = tarArchiveInputStream60.getNextEntry();
+        tarArchiveInputStream60.reset();
+        boolean boolean66 = tarArchiveInputStream60.markSupported();
+        java.lang.String str67 = tarArchiveInputStream60.encoding;
+        byte[] byteArray69 = tarArchiveInputStream60.readNBytes((int) (byte) 10);
+        int int72 = tarArchiveInputStream49.read(byteArray69, 100, (int) (byte) 1);
+        int int73 = tarArchiveInputStream26.read(byteArray69);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int76 = tarArchiveInputStream9.readNBytes(byteArray69, 0, (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.IndexOutOfBoundsException; message: Range [0, 0 + -1) out of bounds for length 0");
+        } catch (java.lang.IndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + (-1) + "'", int20 == (-1));
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] {});
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + 0 + "'", int30 == 0);
+        org.junit.Assert.assertNull(tarArchiveEntry31);
+        org.junit.Assert.assertNull(byteArray37);
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + false + "'", boolean39 == false);
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + 0 + "'", int40 == 0);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + int46 + "' != '" + (-1) + "'", int46 == (-1));
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry55);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertNull(byteArray61);
+        org.junit.Assert.assertNull(archiveEntry64);
+        org.junit.Assert.assertTrue("'" + boolean66 + "' != '" + false + "'", boolean66 == false);
+        org.junit.Assert.assertNull(str67);
+        org.junit.Assert.assertNotNull(byteArray69);
+        org.junit.Assert.assertArrayEquals(byteArray69, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int72 + "' != '" + (-1) + "'", int72 == (-1));
+        org.junit.Assert.assertTrue("'" + int73 + "' != '" + (-1) + "'", int73 == (-1));
+    }
+
+    @Test
+    public void test5111() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5111");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        byte[] byteArray27 = tarArchiveInputStream26.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry29 = tarArchiveInputStream26.getNextTarEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) 0);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertNull(tarArchiveEntry29);
+    }
+
+    @Test
+    public void test5112() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5112");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        long long9 = tarArchiveInputStream3.skip((long) (byte) -1);
+        byte[] byteArray10 = tarArchiveInputStream3.getLongNameData();
+        tarArchiveInputStream3.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry13 = tarArchiveInputStream3.getCurrentEntry();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 0L + "'", long9 == 0L);
+        org.junit.Assert.assertNull(byteArray10);
+        org.junit.Assert.assertNull(tarArchiveEntry13);
+    }
+
+    @Test
+    public void test5113() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5113");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        tarArchiveInputStream4.mark(10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        long long13 = tarArchiveInputStream4.getBytesRead();
+        byte[] byteArray14 = tarArchiveInputStream4.readAllBytes();
+        java.io.OutputStream outputStream15 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            long long16 = tarArchiveInputStream4.transferTo(outputStream15);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: out");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] {});
+    }
+
+    @Test
+    public void test5114() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5114");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        byte[] byteArray5 = tarArchiveInputStream1.readAllBytes();
+        java.io.InputStream inputStream6 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream6);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 1);
+        int int10 = tarArchiveInputStream7.read();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        boolean boolean23 = tarArchiveInputStream14.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap26 = tarArchiveInputStream7.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream25);
+        java.util.Map<java.lang.String, java.lang.String> strMap27 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream7);
+        int int28 = tarArchiveInputStream1.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 1, (-1), "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + (-1) + "'", int10 == (-1));
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertNotNull(strMap26);
+        org.junit.Assert.assertNotNull(strMap27);
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + 0 + "'", int28 == 0);
+    }
+
+    @Test
+    public void test5115() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5115");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (-1));
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (short) 1);
+        long long16 = tarArchiveInputStream13.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = null;
+        tarArchiveInputStream13.setCurrentEntry(tarArchiveEntry17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream9.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream13);
+        tarArchiveInputStream13.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry23 = tarArchiveInputStream22.getNextTarEntry();
+        java.io.InputStream inputStream24 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, (int) (short) 1);
+        byte[] byteArray28 = tarArchiveInputStream27.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, 512, (-1));
+        java.io.InputStream inputStream32 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream32);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33, (int) (short) 1);
+        byte[] byteArray36 = null;
+        int int39 = tarArchiveInputStream35.read(byteArray36, (int) '4', (int) '#');
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41);
+        java.util.Map<java.lang.String, java.lang.String> strMap43 = tarArchiveInputStream35.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream42);
+        boolean boolean44 = tarArchiveInputStream35.isAtEOF();
+        boolean boolean45 = tarArchiveInputStream35.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap46 = tarArchiveInputStream27.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream35);
+        long long48 = tarArchiveInputStream35.skip((long) 100);
+        boolean boolean49 = tarArchiveInputStream35.markSupported();
+        tarArchiveInputStream35.setAtEOF(true);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry52 = null;
+        boolean boolean53 = tarArchiveInputStream35.canReadEntryData(archiveEntry52);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry54 = tarArchiveInputStream35.getNextEntry();
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream22.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry56 = tarArchiveInputStream35.getNextTarEntry();
+        java.lang.String str57 = tarArchiveInputStream35.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream35);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertNull(tarArchiveEntry23);
+        org.junit.Assert.assertNull(byteArray28);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertNotNull(strMap43);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertNotNull(strMap46);
+        org.junit.Assert.assertTrue("'" + long48 + "' != '" + 0L + "'", long48 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+        org.junit.Assert.assertTrue("'" + boolean53 + "' != '" + false + "'", boolean53 == false);
+        org.junit.Assert.assertNull(archiveEntry54);
+        org.junit.Assert.assertNotNull(strMap55);
+        org.junit.Assert.assertNull(tarArchiveEntry56);
+        org.junit.Assert.assertNull(str57);
+    }
+
+    @Test
+    public void test5116() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5116");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        byte[] byteArray13 = new byte[] { (byte) -1 };
+        int int14 = tarArchiveInputStream10.read(byteArray13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = null;
+        tarArchiveInputStream16.setCurrentEntry(tarArchiveEntry17);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, 10, (int) (byte) -1);
+        tarArchiveInputStream16.setAtEOF(true);
+        byte[] byteArray24 = tarArchiveInputStream16.readRecord();
+        int int25 = tarArchiveInputStream16.read();
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (int) (short) 1);
+        byte[] byteArray30 = tarArchiveInputStream29.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33, (int) '4');
+        tarArchiveInputStream33.reset();
+        java.io.InputStream inputStream37 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream37);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38, (int) (short) 1);
+        int int41 = tarArchiveInputStream38.read();
+        java.io.InputStream inputStream42 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream42);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream43, (int) (short) 1);
+        byte[] byteArray46 = null;
+        int int49 = tarArchiveInputStream45.read(byteArray46, (int) '4', (int) '#');
+        java.io.InputStream inputStream50 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream51 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream50);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream51);
+        java.util.Map<java.lang.String, java.lang.String> strMap53 = tarArchiveInputStream45.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream52);
+        boolean boolean54 = tarArchiveInputStream45.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream45, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap57 = tarArchiveInputStream38.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream56);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream60 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream63 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38, (int) (byte) 1, (int) (short) 0);
+        int int64 = tarArchiveInputStream63.read();
+        byte[] byteArray65 = tarArchiveInputStream63.readAllBytes();
+        boolean boolean66 = tarArchiveInputStream33.isEOFRecord(byteArray65);
+        int int69 = tarArchiveInputStream16.read(byteArray65, 512, 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry70 = null;
+        tarArchiveInputStream16.setCurrentEntry(tarArchiveEntry70);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertNull(byteArray24);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNull(byteArray30);
+        org.junit.Assert.assertTrue("'" + int41 + "' != '" + (-1) + "'", int41 == (-1));
+        org.junit.Assert.assertTrue("'" + int49 + "' != '" + (-1) + "'", int49 == (-1));
+        org.junit.Assert.assertNotNull(strMap53);
+        org.junit.Assert.assertTrue("'" + boolean54 + "' != '" + false + "'", boolean54 == false);
+        org.junit.Assert.assertNotNull(strMap57);
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + (-1) + "'", int64 == (-1));
+        org.junit.Assert.assertNotNull(byteArray65);
+        org.junit.Assert.assertArrayEquals(byteArray65, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean66 + "' != '" + true + "'", boolean66 == true);
+        org.junit.Assert.assertTrue("'" + int69 + "' != '" + (-1) + "'", int69 == (-1));
+    }
+
+    @Test
+    public void test5117() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5117");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) '4');
+        // The following exception was thrown during execution in test generation
+        try {
+            tarArchiveInputStream2.close();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+    }
+
+    @Test
+    public void test5118() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5118");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        long long7 = tarArchiveInputStream1.skip(0L);
+        tarArchiveInputStream1.mark(512);
+        long long10 = tarArchiveInputStream1.getBytesRead();
+        tarArchiveInputStream1.mark((int) (short) 10);
+        tarArchiveInputStream1.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry15 = null;
+        boolean boolean16 = tarArchiveInputStream1.canReadEntryData(archiveEntry15);
+        tarArchiveInputStream1.mark((int) (short) 0);
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        byte[] byteArray22 = tarArchiveInputStream21.getLongNameData();
+        java.util.Map<java.lang.String, java.lang.String> strMap23 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        int int24 = tarArchiveInputStream1.available();
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertNull(byteArray22);
+        org.junit.Assert.assertNotNull(strMap23);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 0 + "'", int24 == 0);
+    }
+
+    @Test
+    public void test5119() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5119");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        int int8 = tarArchiveInputStream3.getRecordSize();
+        int int9 = tarArchiveInputStream3.available();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = null;
+        boolean boolean11 = tarArchiveInputStream3.canReadEntryData(archiveEntry10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry12 = tarArchiveInputStream3.getNextTarEntry();
+        byte[] byteArray14 = tarArchiveInputStream3.readNBytes(35);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 512 + "'", int8 == 512);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry12);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] {});
+    }
+
+    @Test
+    public void test5120() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5120");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.markSupported();
+        byte[] byteArray15 = tarArchiveInputStream3.readNBytes((int) '#');
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0, "");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: ");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+    }
+
+    @Test
+    public void test5121() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5121");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry11 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry11);
+        int int13 = tarArchiveInputStream3.read();
+        int int14 = tarArchiveInputStream3.getRecordSize();
+        tarArchiveInputStream3.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        java.lang.Class<?> wildcardClass18 = tarArchiveInputStream3.getClass();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 512 + "'", int14 == 512);
+        org.junit.Assert.assertNotNull(wildcardClass18);
+    }
+
+    @Test
+    public void test5122() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5122");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (byte) 10);
+        java.io.InputStream inputStream20 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry24 = tarArchiveInputStream21.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) (short) -1, (int) (byte) 100);
+        byte[] byteArray29 = tarArchiveInputStream21.readNBytes(0);
+        java.util.Map<java.lang.String, java.lang.String> strMap30 = tarArchiveInputStream19.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        boolean boolean31 = tarArchiveInputStream21.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry32 = null;
+        tarArchiveInputStream21.setCurrentEntry(tarArchiveEntry32);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, 0, 512, "");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: ");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertNull(tarArchiveEntry24);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertNotNull(strMap30);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+    }
+
+    @Test
+    public void test5123() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5123");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        long long7 = tarArchiveInputStream1.skip(0L);
+        tarArchiveInputStream1.mark(512);
+        int int10 = tarArchiveInputStream1.getCount();
+        int int11 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (short) 1);
+        byte[] byteArray17 = tarArchiveInputStream16.readRecord();
+        int int18 = tarArchiveInputStream16.available();
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20, (int) (short) 1);
+        long long23 = tarArchiveInputStream20.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry24 = null;
+        tarArchiveInputStream20.setCurrentEntry(tarArchiveEntry24);
+        tarArchiveInputStream20.setAtEOF(false);
+        java.util.Map<java.lang.String, java.lang.String> strMap28 = tarArchiveInputStream16.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry29 = tarArchiveInputStream16.getCurrentEntry();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry30 = tarArchiveInputStream16.getNextEntry();
+        tarArchiveInputStream16.mark((int) (short) 1);
+        byte[] byteArray33 = tarArchiveInputStream16.readRecord();
+        int int34 = tarArchiveInputStream16.available();
+        java.util.Map<java.lang.String, java.lang.String> strMap35 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, 100, (int) (byte) 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38);
+        long long41 = tarArchiveInputStream38.skip(100L);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
+        org.junit.Assert.assertNull(byteArray17);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 0L + "'", long23 == 0L);
+        org.junit.Assert.assertNotNull(strMap28);
+        org.junit.Assert.assertNull(tarArchiveEntry29);
+        org.junit.Assert.assertNull(archiveEntry30);
+        org.junit.Assert.assertNull(byteArray33);
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
+        org.junit.Assert.assertNotNull(strMap35);
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 0L + "'", long41 == 0L);
+    }
+
+    @Test
+    public void test5124() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5124");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        tarArchiveInputStream4.reset();
+        int int7 = tarArchiveInputStream4.read();
+        boolean boolean8 = tarArchiveInputStream4.markSupported();
+        tarArchiveInputStream4.mark((int) '#');
+        boolean boolean11 = tarArchiveInputStream4.markSupported();
+        int int12 = tarArchiveInputStream4.available();
+        tarArchiveInputStream4.reset();
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream15.canReadEntryData(archiveEntry18);
+        byte[] byteArray21 = tarArchiveInputStream15.readNBytes(1);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray21, (int) '4');
+        int int24 = tarArchiveInputStream4.read(byteArray21);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + (-1) + "'", int24 == (-1));
+    }
+
+    @Test
+    public void test5125() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5125");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        int int24 = tarArchiveInputStream1.getRecordSize();
+        boolean boolean25 = tarArchiveInputStream1.markSupported();
+        byte[] byteArray27 = tarArchiveInputStream1.readNBytes((int) (short) 100);
+        tarArchiveInputStream1.mark(35);
+        boolean boolean30 = tarArchiveInputStream1.isAtEOF();
+        boolean boolean31 = tarArchiveInputStream1.markSupported();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 512 + "'", int24 == 512);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+    }
+
+    @Test
+    public void test5126() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5126");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, 100);
+        byte[] byteArray8 = tarArchiveInputStream7.getLongNameData();
+        byte[] byteArray9 = tarArchiveInputStream7.readRecord();
+        boolean boolean10 = tarArchiveInputStream7.markSupported();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertNull(byteArray8);
+        org.junit.Assert.assertNull(byteArray9);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+    }
+
+    @Test
+    public void test5127() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5127");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = tarArchiveInputStream3.getNextEntry();
+        java.io.InputStream inputStream15 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream15);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream16.canReadEntryData(archiveEntry18);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) -1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry23 = tarArchiveInputStream3.getNextEntry();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertNull(archiveEntry14);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNull(archiveEntry23);
+    }
+
+    @Test
+    public void test5128() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5128");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.isAtEOF();
+        int int14 = tarArchiveInputStream3.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '#', 1);
+        byte[] byteArray18 = tarArchiveInputStream17.getLongNameData();
+        byte[] byteArray19 = tarArchiveInputStream17.getLongNameData();
+        byte[] byteArray20 = tarArchiveInputStream17.readAllBytes();
+        byte[] byteArray21 = tarArchiveInputStream17.readRecord();
+        byte[] byteArray22 = tarArchiveInputStream17.getLongNameData();
+        int int23 = tarArchiveInputStream17.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry24 = tarArchiveInputStream17.getNextTarEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry25 = tarArchiveInputStream17.getNextTarEntry();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertNull(byteArray18);
+        org.junit.Assert.assertNull(byteArray19);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] {});
+        org.junit.Assert.assertNull(byteArray21);
+        org.junit.Assert.assertNull(byteArray22);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 0 + "'", int23 == 0);
+        org.junit.Assert.assertNull(tarArchiveEntry24);
+        org.junit.Assert.assertNull(tarArchiveEntry25);
+    }
+
+    @Test
+    public void test5129() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5129");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        int int10 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        byte[] byteArray24 = new byte[] { (byte) -1 };
+        int int25 = tarArchiveInputStream21.read(byteArray24);
+        int int26 = tarArchiveInputStream7.read(byteArray24);
+        byte[] byteArray28 = tarArchiveInputStream7.readNBytes((int) (byte) 0);
+        int int29 = tarArchiveInputStream7.read();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNotNull(byteArray28);
+        org.junit.Assert.assertArrayEquals(byteArray28, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
+    }
+
+    @Test
+    public void test5130() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5130");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry4 = tarArchiveInputStream1.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, (int) (byte) 100);
+        byte[] byteArray9 = tarArchiveInputStream1.readNBytes(0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) -1, (int) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, 1);
+        long long15 = tarArchiveInputStream14.getBytesRead();
+        byte[] byteArray17 = tarArchiveInputStream14.readNBytes((int) '#');
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream14.canReadEntryData(archiveEntry18);
+        org.junit.Assert.assertNull(tarArchiveEntry4);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertNotNull(byteArray17);
+        org.junit.Assert.assertArrayEquals(byteArray17, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test5131() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5131");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        boolean boolean3 = tarArchiveInputStream1.isAtEOF();
+        int int4 = tarArchiveInputStream1.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) '4');
+        java.io.InputStream inputStream7 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry11 = null;
+        boolean boolean12 = tarArchiveInputStream8.canReadEntryData(archiveEntry11);
+        long long14 = tarArchiveInputStream8.skip(0L);
+        tarArchiveInputStream8.mark(512);
+        long long17 = tarArchiveInputStream8.getBytesRead();
+        tarArchiveInputStream8.mark((int) (short) 10);
+        byte[] byteArray21 = tarArchiveInputStream8.readNBytes((int) ' ');
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray21, (int) (byte) -1);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray21, (int) (byte) 1);
+        int int28 = tarArchiveInputStream6.read(byteArray21, (int) ' ', (-1));
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean30 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray21, 512);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 257 out of bounds for length 0");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 0L + "'", long17 == 0L);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + (-1) + "'", int28 == (-1));
+    }
+
+    @Test
+    public void test5132() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5132");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        int int13 = tarArchiveInputStream3.getCount();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+    }
+
+    @Test
+    public void test5133() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5133");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry3 = null;
+        boolean boolean4 = tarArchiveInputStream1.canReadEntryData(archiveEntry3);
+        tarArchiveInputStream1.setAtEOF(false);
+        byte[] byteArray8 = tarArchiveInputStream1.readNBytes(0);
+        int int9 = tarArchiveInputStream1.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry10 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 10);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = tarArchiveInputStream1.getNextTarEntry();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+    }
+
+    @Test
+    public void test5134() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5134");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        tarArchiveInputStream3.mark((-1));
+        boolean boolean7 = tarArchiveInputStream3.markSupported();
+        int int8 = tarArchiveInputStream3.getRecordSize();
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        long long17 = tarArchiveInputStream10.skip((long) (short) -1);
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        long long22 = tarArchiveInputStream19.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry23 = null;
+        tarArchiveInputStream19.setCurrentEntry(tarArchiveEntry23);
+        java.util.Map<java.lang.String, java.lang.String> strMap25 = tarArchiveInputStream10.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry26 = tarArchiveInputStream19.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (byte) 10);
+        tarArchiveInputStream28.mark(0);
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32, (int) (short) 1);
+        int int35 = tarArchiveInputStream32.read();
+        int int36 = tarArchiveInputStream32.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry37 = tarArchiveInputStream32.getCurrentEntry();
+        java.io.InputStream inputStream38 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream38);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry42 = tarArchiveInputStream39.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39, (int) (short) -1, (int) (byte) 100);
+        java.io.InputStream inputStream46 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream47 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream46);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream47, (int) (short) 1);
+        long long50 = tarArchiveInputStream47.getBytesRead();
+        byte[] byteArray51 = new byte[] {};
+        int int52 = tarArchiveInputStream47.read(byteArray51);
+        int int55 = tarArchiveInputStream45.readNBytes(byteArray51, (int) (byte) 0, 0);
+        int int56 = tarArchiveInputStream32.read(byteArray51);
+        int int59 = tarArchiveInputStream28.read(byteArray51, (int) (short) 100, (int) (byte) 0);
+        int int60 = tarArchiveInputStream3.read(byteArray51);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 512 + "'", int8 == 512);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 0L + "'", long17 == 0L);
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 0L + "'", long22 == 0L);
+        org.junit.Assert.assertNotNull(strMap25);
+        org.junit.Assert.assertNull(tarArchiveEntry26);
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry37);
+        org.junit.Assert.assertNull(tarArchiveEntry42);
+        org.junit.Assert.assertTrue("'" + long50 + "' != '" + 0L + "'", long50 == 0L);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + 0 + "'", int55 == 0);
+        org.junit.Assert.assertTrue("'" + int56 + "' != '" + (-1) + "'", int56 == (-1));
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + (-1) + "'", int59 == (-1));
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + (-1) + "'", int60 == (-1));
+    }
+
+    @Test
+    public void test5135() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5135");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        int int3 = tarArchiveInputStream2.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream2, (int) (byte) -1);
+        java.lang.String str6 = tarArchiveInputStream5.encoding;
+        boolean boolean7 = tarArchiveInputStream5.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = tarArchiveInputStream5.getNextTarEntry();
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + (-1) + "'", int3 == (-1));
+        org.junit.Assert.assertNull(str6);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry8);
+    }
+
+    @Test
+    public void test5136() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5136");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        tarArchiveInputStream3.mark((int) (byte) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 10, (int) (byte) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512);
+        tarArchiveInputStream3.setAtEOF(true);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        int int26 = tarArchiveInputStream3.getRecordSize();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry27 = null;
+        boolean boolean28 = tarArchiveInputStream3.canReadEntryData(archiveEntry27);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + 512 + "'", int26 == 512);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+    }
+
+    @Test
+    public void test5137() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5137");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry15 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry15);
+        int int17 = tarArchiveInputStream3.available();
+        tarArchiveInputStream3.reset();
+        boolean boolean19 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 100, (int) (short) 1);
+        java.io.InputStream inputStream23 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (int) (short) 1);
+        byte[] byteArray27 = tarArchiveInputStream26.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, 512, (-1));
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32, (int) (short) 1);
+        byte[] byteArray35 = null;
+        int int38 = tarArchiveInputStream34.read(byteArray35, (int) '4', (int) '#');
+        java.io.InputStream inputStream39 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream39);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream40);
+        java.util.Map<java.lang.String, java.lang.String> strMap42 = tarArchiveInputStream34.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream41);
+        boolean boolean43 = tarArchiveInputStream34.isAtEOF();
+        boolean boolean44 = tarArchiveInputStream34.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap45 = tarArchiveInputStream26.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream34);
+        long long47 = tarArchiveInputStream34.skip((long) 100);
+        boolean boolean48 = tarArchiveInputStream34.markSupported();
+        tarArchiveInputStream34.setAtEOF(true);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry51 = tarArchiveInputStream34.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry52 = tarArchiveInputStream34.getCurrentEntry();
+        java.io.InputStream inputStream53 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream53);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream54, (int) (short) 1);
+        long long57 = tarArchiveInputStream54.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry58 = null;
+        tarArchiveInputStream54.setCurrentEntry(tarArchiveEntry58);
+        tarArchiveInputStream54.setAtEOF(false);
+        java.util.Map<java.lang.String, java.lang.String> strMap62 = tarArchiveInputStream34.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream54);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry63 = null;
+        tarArchiveInputStream34.setCurrentEntry(tarArchiveEntry63);
+        java.util.Map<java.lang.String, java.lang.String> strMap65 = tarArchiveInputStream22.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream34);
+        long long67 = tarArchiveInputStream22.skip((long) '4');
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + (-1) + "'", int38 == (-1));
+        org.junit.Assert.assertNotNull(strMap42);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertNotNull(strMap45);
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 0L + "'", long47 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry51);
+        org.junit.Assert.assertNull(tarArchiveEntry52);
+        org.junit.Assert.assertTrue("'" + long57 + "' != '" + 0L + "'", long57 == 0L);
+        org.junit.Assert.assertNotNull(strMap62);
+        org.junit.Assert.assertNotNull(strMap65);
+        org.junit.Assert.assertTrue("'" + long67 + "' != '" + 0L + "'", long67 == 0L);
+    }
+
+    @Test
+    public void test5138() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5138");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        boolean boolean10 = tarArchiveInputStream4.isAtEOF();
+        boolean boolean11 = tarArchiveInputStream4.isAtEOF();
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+    }
+
+    @Test
+    public void test5139() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5139");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        tarArchiveInputStream4.mark(10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        long long13 = tarArchiveInputStream4.getBytesRead();
+        byte[] byteArray14 = tarArchiveInputStream4.readAllBytes();
+        byte[] byteArray16 = tarArchiveInputStream4.readNBytes((int) (byte) 1);
+        java.io.InputStream inputStream17 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream17);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry21 = tarArchiveInputStream18.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18, (int) (short) -1, (int) (byte) 100);
+        byte[] byteArray26 = tarArchiveInputStream18.readNBytes(0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18, (int) (short) -1, (int) '#');
+        int int30 = tarArchiveInputStream18.getCount();
+        java.util.Map<java.lang.String, java.lang.String> strMap31 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream18);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] {});
+        org.junit.Assert.assertNull(tarArchiveEntry21);
+        org.junit.Assert.assertNotNull(byteArray26);
+        org.junit.Assert.assertArrayEquals(byteArray26, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + 0 + "'", int30 == 0);
+        org.junit.Assert.assertNotNull(strMap31);
+    }
+
+    @Test
+    public void test5140() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5140");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        byte[] byteArray12 = null;
+        int int15 = tarArchiveInputStream11.read(byteArray12, (int) '4', (int) '#');
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream18);
+        boolean boolean20 = tarArchiveInputStream11.isAtEOF();
+        boolean boolean21 = tarArchiveInputStream11.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry23 = null;
+        boolean boolean24 = tarArchiveInputStream11.canReadEntryData(archiveEntry23);
+        tarArchiveInputStream11.mark((int) (short) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 0);
+        java.io.InputStream inputStream29 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream29);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream30);
+        int int32 = tarArchiveInputStream31.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream31, (int) (byte) -1);
+        java.lang.String str35 = tarArchiveInputStream34.encoding;
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry36 = null;
+        boolean boolean37 = tarArchiveInputStream34.canReadEntryData(archiveEntry36);
+        tarArchiveInputStream34.mark((int) (short) 100);
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream43, (int) (short) 1);
+        int int46 = tarArchiveInputStream43.getCount();
+        byte[] byteArray47 = tarArchiveInputStream43.readAllBytes();
+        int int48 = tarArchiveInputStream34.read(byteArray47);
+        int int49 = tarArchiveInputStream11.read(byteArray47);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + (-1) + "'", int32 == (-1));
+        org.junit.Assert.assertNull(str35);
+        org.junit.Assert.assertTrue("'" + boolean37 + "' != '" + false + "'", boolean37 == false);
+        org.junit.Assert.assertTrue("'" + int46 + "' != '" + 0 + "'", int46 == 0);
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + (-1) + "'", int48 == (-1));
+        org.junit.Assert.assertTrue("'" + int49 + "' != '" + (-1) + "'", int49 == (-1));
+    }
+
+    @Test
+    public void test5141() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5141");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.markSupported();
+        byte[] byteArray15 = tarArchiveInputStream3.readNBytes((int) '#');
+        byte[] byteArray17 = tarArchiveInputStream3.readNBytes((int) ' ');
+        int int18 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray20 = tarArchiveInputStream3.readNBytes((int) (byte) 100);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray17);
+        org.junit.Assert.assertArrayEquals(byteArray17, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 512 + "'", int18 == 512);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] {});
+    }
+
+    @Test
+    public void test5142() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5142");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        tarArchiveInputStream10.mark(100);
+        int int20 = tarArchiveInputStream10.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) '4');
+        boolean boolean23 = tarArchiveInputStream22.isAtEOF();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry24 = tarArchiveInputStream22.getNextEntry();
+        boolean boolean25 = tarArchiveInputStream22.isAtEOF();
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertNull(archiveEntry24);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + true + "'", boolean25 == true);
+    }
+
+    @Test
+    public void test5143() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5143");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        boolean boolean15 = tarArchiveInputStream14.markSupported();
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry20 = tarArchiveInputStream17.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, (int) (short) -1, (int) (byte) 100);
+        java.io.InputStream inputStream24 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream24);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream25, (int) (short) 1);
+        long long28 = tarArchiveInputStream25.getBytesRead();
+        byte[] byteArray29 = new byte[] {};
+        int int30 = tarArchiveInputStream25.read(byteArray29);
+        int int33 = tarArchiveInputStream23.readNBytes(byteArray29, (int) (byte) 0, 0);
+        int int36 = tarArchiveInputStream14.read(byteArray29, (int) (byte) 100, (int) (short) 10);
+        tarArchiveInputStream14.reset();
+        boolean boolean38 = tarArchiveInputStream14.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry39 = tarArchiveInputStream14.getNextTarEntry();
+        tarArchiveInputStream14.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry42 = tarArchiveInputStream14.getCurrentEntry();
+        tarArchiveInputStream14.mark((int) (byte) 0);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry20);
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 0L + "'", long28 == 0L);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + 0 + "'", int33 == 0);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + false + "'", boolean38 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry39);
+        org.junit.Assert.assertNull(tarArchiveEntry42);
+    }
+
+    @Test
+    public void test5144() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5144");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry3 = null;
+        boolean boolean4 = tarArchiveInputStream1.canReadEntryData(archiveEntry3);
+        tarArchiveInputStream1.setAtEOF(false);
+        byte[] byteArray8 = tarArchiveInputStream1.readNBytes(0);
+        int int9 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        byte[] byteArray14 = null;
+        int int17 = tarArchiveInputStream13.read(byteArray14, (int) '4', (int) '#');
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19);
+        java.util.Map<java.lang.String, java.lang.String> strMap21 = tarArchiveInputStream13.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream20);
+        byte[] byteArray23 = new byte[] { (byte) -1 };
+        int int24 = tarArchiveInputStream20.read(byteArray23);
+        int int27 = tarArchiveInputStream1.read(byteArray23, (int) (short) 10, 1);
+        byte[] byteArray28 = tarArchiveInputStream1.readAllBytes();
+        tarArchiveInputStream1.setAtEOF(false);
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry35 = null;
+        boolean boolean36 = tarArchiveInputStream32.canReadEntryData(archiveEntry35);
+        long long38 = tarArchiveInputStream32.skip(0L);
+        tarArchiveInputStream32.mark(512);
+        long long41 = tarArchiveInputStream32.getBytesRead();
+        tarArchiveInputStream32.mark((int) (short) 10);
+        byte[] byteArray45 = tarArchiveInputStream32.readNBytes((int) ' ');
+        int int46 = tarArchiveInputStream1.read(byteArray45);
+        java.io.InputStream inputStream47 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream48 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream47);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream48, (int) (short) 1);
+        byte[] byteArray51 = null;
+        int int54 = tarArchiveInputStream50.read(byteArray51, (int) '4', (int) '#');
+        java.io.InputStream inputStream55 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream57 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream56);
+        java.util.Map<java.lang.String, java.lang.String> strMap58 = tarArchiveInputStream50.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream57);
+        boolean boolean59 = tarArchiveInputStream50.isAtEOF();
+        boolean boolean60 = tarArchiveInputStream50.isAtEOF();
+        java.lang.String str61 = tarArchiveInputStream50.encoding;
+        java.util.Map<java.lang.String, java.lang.String> strMap62 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream50);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry63 = tarArchiveInputStream50.getNextEntry();
+        long long65 = tarArchiveInputStream50.skip((long) 10);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + (-1) + "'", int17 == (-1));
+        org.junit.Assert.assertNotNull(strMap21);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + (-1) + "'", int24 == (-1));
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + (-1) + "'", int27 == (-1));
+        org.junit.Assert.assertNotNull(byteArray28);
+        org.junit.Assert.assertArrayEquals(byteArray28, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + false + "'", boolean36 == false);
+        org.junit.Assert.assertTrue("'" + long38 + "' != '" + 0L + "'", long38 == 0L);
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 0L + "'", long41 == 0L);
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int46 + "' != '" + (-1) + "'", int46 == (-1));
+        org.junit.Assert.assertTrue("'" + int54 + "' != '" + (-1) + "'", int54 == (-1));
+        org.junit.Assert.assertNotNull(strMap58);
+        org.junit.Assert.assertTrue("'" + boolean59 + "' != '" + false + "'", boolean59 == false);
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertNull(str61);
+        org.junit.Assert.assertNotNull(strMap62);
+        org.junit.Assert.assertNull(archiveEntry63);
+        org.junit.Assert.assertTrue("'" + long65 + "' != '" + 0L + "'", long65 == 0L);
+    }
+
+    @Test
+    public void test5145() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5145");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        int int5 = tarArchiveInputStream3.available();
+        byte[] byteArray6 = tarArchiveInputStream3.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) '4');
+        long long9 = tarArchiveInputStream3.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] {});
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 0L + "'", long9 == 0L);
+    }
+
+    @Test
+    public void test5146() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5146");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        tarArchiveInputStream1.setAtEOF(false);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry9 = null;
+        boolean boolean10 = tarArchiveInputStream1.canReadEntryData(archiveEntry9);
+        int int11 = tarArchiveInputStream1.getCount();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.ArchiveEntry archiveEntry12 = tarArchiveInputStream1.getNextEntry();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 0 + "'", int11 == 0);
+    }
+
+    @Test
+    public void test5147() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5147");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        tarArchiveInputStream4.reset();
+        int int7 = tarArchiveInputStream4.read();
+        long long9 = tarArchiveInputStream4.skip(0L);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry10 = tarArchiveInputStream4.getCurrentEntry();
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 0L + "'", long9 == 0L);
+        org.junit.Assert.assertNull(tarArchiveEntry10);
+    }
+
+    @Test
+    public void test5148() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5148");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 100, (int) (byte) -1);
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        long long12 = tarArchiveInputStream9.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry13 = null;
+        tarArchiveInputStream9.setCurrentEntry(tarArchiveEntry13);
+        long long16 = tarArchiveInputStream9.skip((long) (short) -1);
+        boolean boolean17 = tarArchiveInputStream9.isAtEOF();
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry22 = null;
+        boolean boolean23 = tarArchiveInputStream19.canReadEntryData(archiveEntry22);
+        long long25 = tarArchiveInputStream19.skip(0L);
+        tarArchiveInputStream19.mark(512);
+        long long28 = tarArchiveInputStream19.getBytesRead();
+        byte[] byteArray29 = tarArchiveInputStream19.readAllBytes();
+        int int30 = tarArchiveInputStream9.read(byteArray29);
+        boolean boolean32 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray29, (int) '4');
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean33 = tarArchiveInputStream3.isEOFRecord(byteArray29);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertTrue("'" + long25 + "' != '" + 0L + "'", long25 == 0L);
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 0L + "'", long28 == 0L);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
+    }
+
+    @Test
+    public void test5149() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5149");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        tarArchiveInputStream1.setAtEOF(false);
+        tarArchiveInputStream1.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 100, (int) (short) 0);
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14, (int) (short) 1, (int) '#');
+        int int19 = tarArchiveInputStream18.getRecordSize();
+        java.io.InputStream inputStream20 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21, (int) (short) 1);
+        long long24 = tarArchiveInputStream21.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap25 = tarArchiveInputStream18.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18);
+        byte[] byteArray28 = tarArchiveInputStream18.readNBytes((int) (byte) 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream18);
+        int int30 = tarArchiveInputStream29.getRecordSize();
+        boolean boolean31 = tarArchiveInputStream29.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap32 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream29);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, 1);
+        int int35 = tarArchiveInputStream29.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, 10);
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 35 + "'", int19 == 35);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 0L + "'", long24 == 0L);
+        org.junit.Assert.assertNotNull(strMap25);
+        org.junit.Assert.assertNotNull(byteArray28);
+        org.junit.Assert.assertArrayEquals(byteArray28, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + 512 + "'", int30 == 512);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertNotNull(strMap32);
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+    }
+
+    @Test
+    public void test5150() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5150");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        long long7 = tarArchiveInputStream1.skip(0L);
+        tarArchiveInputStream1.mark(512);
+        long long10 = tarArchiveInputStream1.getBytesRead();
+        tarArchiveInputStream1.mark((int) (short) 10);
+        byte[] byteArray14 = tarArchiveInputStream1.readNBytes((int) ' ');
+        byte[] byteArray15 = tarArchiveInputStream1.readAllBytes();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] {});
+    }
+
+    @Test
+    public void test5151() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5151");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (-1));
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (short) 1);
+        long long16 = tarArchiveInputStream13.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = null;
+        tarArchiveInputStream13.setCurrentEntry(tarArchiveEntry17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream9.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream13);
+        tarArchiveInputStream13.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13);
+        tarArchiveInputStream22.mark((int) (short) -1);
+        java.lang.Class<?> wildcardClass25 = tarArchiveInputStream22.getClass();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertNotNull(wildcardClass25);
+    }
+
+    @Test
+    public void test5152() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5152");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        long long13 = tarArchiveInputStream3.getBytesRead();
+        tarArchiveInputStream3.reset();
+        long long16 = tarArchiveInputStream3.skip((long) (short) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        java.io.OutputStream outputStream18 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            long long19 = tarArchiveInputStream3.transferTo(outputStream18);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: out");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+    }
+
+    @Test
+    public void test5153() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5153");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry4 = null;
+        boolean boolean5 = tarArchiveInputStream1.canReadEntryData(archiveEntry4);
+        long long7 = tarArchiveInputStream1.skip(0L);
+        tarArchiveInputStream1.mark(512);
+        int int10 = tarArchiveInputStream1.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry11 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry11);
+        boolean boolean13 = tarArchiveInputStream1.isAtEOF();
+        boolean boolean14 = tarArchiveInputStream1.markSupported();
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test5154() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5154");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        tarArchiveInputStream4.reset();
+        int int7 = tarArchiveInputStream4.read();
+        boolean boolean8 = tarArchiveInputStream4.markSupported();
+        java.lang.String str9 = tarArchiveInputStream4.encoding;
+        int int10 = tarArchiveInputStream4.getCount();
+        tarArchiveInputStream4.setAtEOF(false);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertNull(str9);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+    }
+
+    @Test
+    public void test5155() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5155");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.isAtEOF();
+        int int14 = tarArchiveInputStream3.available();
+        byte[] byteArray16 = tarArchiveInputStream3.readNBytes((int) (byte) 10);
+        byte[] byteArray18 = tarArchiveInputStream3.readNBytes(35);
+        byte[] byteArray19 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 0);
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        long long26 = tarArchiveInputStream23.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = null;
+        tarArchiveInputStream23.setCurrentEntry(tarArchiveEntry27);
+        long long30 = tarArchiveInputStream23.skip((long) (short) -1);
+        int int31 = tarArchiveInputStream23.getRecordSize();
+        byte[] byteArray32 = tarArchiveInputStream23.readAllBytes();
+        int int35 = tarArchiveInputStream3.read(byteArray32, (-1), (int) (byte) 100);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] {});
+        org.junit.Assert.assertNull(byteArray19);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 0L + "'", long26 == 0L);
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 0L + "'", long30 == 0L);
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + 512 + "'", int31 == 512);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+    }
+
+    @Test
+    public void test5156() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5156");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (-1));
+        long long13 = tarArchiveInputStream7.skip((long) 35);
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry17 = null;
+        boolean boolean18 = tarArchiveInputStream16.canReadEntryData(archiveEntry17);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry19 = tarArchiveInputStream16.getNextEntry();
+        long long21 = tarArchiveInputStream16.skip((long) 35);
+        byte[] byteArray23 = tarArchiveInputStream16.readNBytes((int) (short) 10);
+        int int26 = tarArchiveInputStream7.read(byteArray23, 1, 35);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = tarArchiveInputStream7.getCurrentEntry();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        long long32 = tarArchiveInputStream29.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry33 = null;
+        boolean boolean34 = tarArchiveInputStream29.canReadEntryData(archiveEntry33);
+        int int35 = tarArchiveInputStream29.getCount();
+        tarArchiveInputStream29.mark((int) (byte) 100);
+        boolean boolean38 = tarArchiveInputStream29.isAtEOF();
+        int int39 = tarArchiveInputStream29.getRecordSize();
+        int int40 = tarArchiveInputStream29.available();
+        boolean boolean41 = tarArchiveInputStream29.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap44 = tarArchiveInputStream7.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream29);
+        // The following exception was thrown during execution in test generation
+        try {
+            byte[] byteArray45 = tarArchiveInputStream7.readRecord();
+            org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: -1");
+        } catch (java.lang.NegativeArraySizeException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertNull(archiveEntry19);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry27);
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 0L + "'", long32 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + 0 + "'", int35 == 0);
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + false + "'", boolean38 == false);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + 512 + "'", int39 == 512);
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + 0 + "'", int40 == 0);
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + false + "'", boolean41 == false);
+        org.junit.Assert.assertNotNull(strMap44);
+    }
+
+    @Test
+    public void test5157() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5157");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        byte[] byteArray5 = tarArchiveInputStream1.readAllBytes();
+        java.io.InputStream inputStream6 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream6);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 1);
+        int int10 = tarArchiveInputStream7.read();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        boolean boolean23 = tarArchiveInputStream14.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap26 = tarArchiveInputStream7.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream25);
+        java.util.Map<java.lang.String, java.lang.String> strMap27 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream7);
+        int int28 = tarArchiveInputStream1.available();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        boolean boolean30 = tarArchiveInputStream29.markSupported();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + (-1) + "'", int10 == (-1));
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertNotNull(strMap26);
+        org.junit.Assert.assertNotNull(strMap27);
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + 0 + "'", int28 == 0);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+    }
+
+    @Test
+    public void test5158() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5158");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (-1));
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (short) 1);
+        long long16 = tarArchiveInputStream13.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = null;
+        tarArchiveInputStream13.setCurrentEntry(tarArchiveEntry17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream9.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream13);
+        tarArchiveInputStream13.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13);
+        tarArchiveInputStream22.setAtEOF(false);
+        java.io.InputStream inputStream25 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream25);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) 1);
+        byte[] byteArray29 = tarArchiveInputStream28.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry30 = null;
+        boolean boolean31 = tarArchiveInputStream28.canReadEntryData(archiveEntry30);
+        int int32 = tarArchiveInputStream28.available();
+        long long34 = tarArchiveInputStream28.skip((long) (byte) -1);
+        byte[] byteArray36 = tarArchiveInputStream28.readNBytes((int) '4');
+        int int39 = tarArchiveInputStream22.read(byteArray36, (int) (byte) 1, (int) (short) 10);
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry44 = tarArchiveInputStream41.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream47 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) -1, (int) (byte) 100);
+        byte[] byteArray49 = tarArchiveInputStream41.readNBytes(0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) -1, (int) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream52, 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry55 = null;
+        tarArchiveInputStream54.setCurrentEntry(tarArchiveEntry55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream57 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream54);
+        boolean boolean58 = tarArchiveInputStream54.markSupported();
+        java.util.Map<java.lang.String, java.lang.String> strMap59 = tarArchiveInputStream22.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream54);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertNull(byteArray29);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + 0 + "'", int32 == 0);
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 0L + "'", long34 == 0L);
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry44);
+        org.junit.Assert.assertNotNull(byteArray49);
+        org.junit.Assert.assertArrayEquals(byteArray49, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean58 + "' != '" + false + "'", boolean58 == false);
+        org.junit.Assert.assertNotNull(strMap59);
+    }
+
+    @Test
+    public void test5159() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5159");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        int int10 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        byte[] byteArray24 = new byte[] { (byte) -1 };
+        int int25 = tarArchiveInputStream21.read(byteArray24);
+        int int26 = tarArchiveInputStream7.read(byteArray24);
+        byte[] byteArray28 = tarArchiveInputStream7.readNBytes((int) (byte) 0);
+        java.io.InputStream inputStream29 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream29);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream30);
+        boolean boolean32 = tarArchiveInputStream30.isAtEOF();
+        java.io.InputStream inputStream33 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream33, (int) (short) 1, (int) '#');
+        int int38 = tarArchiveInputStream37.getRecordSize();
+        java.io.InputStream inputStream39 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream39);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream40, (int) (short) 1);
+        long long43 = tarArchiveInputStream40.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap44 = tarArchiveInputStream37.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream40);
+        byte[] byteArray45 = tarArchiveInputStream40.readAllBytes();
+        boolean boolean47 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray45, (int) (short) 0);
+        int int48 = tarArchiveInputStream30.read(byteArray45);
+        java.io.InputStream inputStream49 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream49);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream49, (int) (short) 1, (int) '#');
+        int int54 = tarArchiveInputStream53.getRecordSize();
+        java.io.InputStream inputStream55 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream56, (int) (short) 1);
+        long long59 = tarArchiveInputStream56.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap60 = tarArchiveInputStream53.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream56);
+        byte[] byteArray61 = tarArchiveInputStream56.readAllBytes();
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray61, (int) (short) 0);
+        int int66 = tarArchiveInputStream30.read(byteArray61, (int) 'a', 10);
+        int int69 = tarArchiveInputStream7.read(byteArray61, 0, (int) 'a');
+        long long70 = tarArchiveInputStream7.getBytesRead();
+        byte[] byteArray72 = tarArchiveInputStream7.readNBytes((int) (byte) 1);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNotNull(byteArray28);
+        org.junit.Assert.assertArrayEquals(byteArray28, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + 35 + "'", int38 == 35);
+        org.junit.Assert.assertTrue("'" + long43 + "' != '" + 0L + "'", long43 == 0L);
+        org.junit.Assert.assertNotNull(strMap44);
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + false + "'", boolean47 == false);
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + (-1) + "'", int48 == (-1));
+        org.junit.Assert.assertTrue("'" + int54 + "' != '" + 35 + "'", int54 == 35);
+        org.junit.Assert.assertTrue("'" + long59 + "' != '" + 0L + "'", long59 == 0L);
+        org.junit.Assert.assertNotNull(strMap60);
+        org.junit.Assert.assertNotNull(byteArray61);
+        org.junit.Assert.assertArrayEquals(byteArray61, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + (-1) + "'", int66 == (-1));
+        org.junit.Assert.assertTrue("'" + int69 + "' != '" + (-1) + "'", int69 == (-1));
+        org.junit.Assert.assertTrue("'" + long70 + "' != '" + 0L + "'", long70 == 0L);
+        org.junit.Assert.assertNotNull(byteArray72);
+        org.junit.Assert.assertArrayEquals(byteArray72, new byte[] {});
+    }
+
+    @Test
+    public void test5160() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5160");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        boolean boolean5 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 1, (int) (short) 100);
+        long long9 = tarArchiveInputStream3.getBytesRead();
+        int int10 = tarArchiveInputStream3.available();
+        long long11 = tarArchiveInputStream3.getBytesRead();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 0L + "'", long9 == 0L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 0L + "'", long11 == 0L);
+    }
+
+    @Test
+    public void test5161() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5161");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry5 = null;
+        tarArchiveInputStream1.setCurrentEntry(tarArchiveEntry5);
+        long long8 = tarArchiveInputStream1.skip((long) (short) -1);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) 1);
+        long long13 = tarArchiveInputStream10.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream10.getCurrentEntry();
+        tarArchiveInputStream10.mark(100);
+        int int20 = tarArchiveInputStream10.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) '4');
+        boolean boolean23 = tarArchiveInputStream22.isAtEOF();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22, 10, 10, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+    }
+
+    @Test
+    public void test5162() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5162");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        int int27 = tarArchiveInputStream26.read();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = null;
+        int int35 = tarArchiveInputStream31.read(byteArray32, (int) '4', (int) '#');
+        java.io.InputStream inputStream36 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream36);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream37);
+        java.util.Map<java.lang.String, java.lang.String> strMap39 = tarArchiveInputStream31.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream38);
+        byte[] byteArray41 = new byte[] { (byte) -1 };
+        int int42 = tarArchiveInputStream38.read(byteArray41);
+        java.io.InputStream inputStream43 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream43);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream44, (int) (short) 1);
+        byte[] byteArray47 = null;
+        int int50 = tarArchiveInputStream46.read(byteArray47, (int) '4', (int) '#');
+        java.io.InputStream inputStream51 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream51);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream52);
+        java.util.Map<java.lang.String, java.lang.String> strMap54 = tarArchiveInputStream46.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream53);
+        boolean boolean55 = tarArchiveInputStream46.isAtEOF();
+        boolean boolean56 = tarArchiveInputStream46.isAtEOF();
+        byte[] byteArray58 = tarArchiveInputStream46.readNBytes((int) '#');
+        int int61 = tarArchiveInputStream38.read(byteArray58, (int) '4', (int) (byte) -1);
+        int int64 = tarArchiveInputStream26.read(byteArray58, 10, (int) (byte) 1);
+        byte[] byteArray66 = tarArchiveInputStream26.readNBytes((int) (short) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry67 = tarArchiveInputStream26.getCurrentEntry();
+        long long68 = tarArchiveInputStream26.getBytesRead();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + (-1) + "'", int27 == (-1));
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+        org.junit.Assert.assertNotNull(strMap39);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int42 + "' != '" + (-1) + "'", int42 == (-1));
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + (-1) + "'", int50 == (-1));
+        org.junit.Assert.assertNotNull(strMap54);
+        org.junit.Assert.assertTrue("'" + boolean55 + "' != '" + false + "'", boolean55 == false);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + (-1) + "'", int64 == (-1));
+        org.junit.Assert.assertNotNull(byteArray66);
+        org.junit.Assert.assertArrayEquals(byteArray66, new byte[] {});
+        org.junit.Assert.assertNull(tarArchiveEntry67);
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 0L + "'", long68 == 0L);
+    }
+
+    @Test
+    public void test5163() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5163");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream1.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream1.getCount();
+        tarArchiveInputStream1.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry10 = null;
+        boolean boolean11 = tarArchiveInputStream1.canReadEntryData(archiveEntry10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        boolean boolean13 = tarArchiveInputStream1.isAtEOF();
+        int int14 = tarArchiveInputStream1.read();
+        tarArchiveInputStream1.setAtEOF(true);
+        tarArchiveInputStream1.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 0, (int) (byte) 0);
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        long long26 = tarArchiveInputStream23.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = null;
+        tarArchiveInputStream23.setCurrentEntry(tarArchiveEntry27);
+        long long30 = tarArchiveInputStream23.skip((long) (short) -1);
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32, (int) (short) 1);
+        long long35 = tarArchiveInputStream32.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry36 = null;
+        tarArchiveInputStream32.setCurrentEntry(tarArchiveEntry36);
+        java.util.Map<java.lang.String, java.lang.String> strMap38 = tarArchiveInputStream23.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream32);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry39 = tarArchiveInputStream32.getCurrentEntry();
+        tarArchiveInputStream32.mark(100);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream32);
+        java.util.Map<java.lang.String, java.lang.String> strMap43 = tarArchiveInputStream21.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream32);
+        tarArchiveInputStream21.reset();
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 0L + "'", long26 == 0L);
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 0L + "'", long30 == 0L);
+        org.junit.Assert.assertTrue("'" + long35 + "' != '" + 0L + "'", long35 == 0L);
+        org.junit.Assert.assertNotNull(strMap38);
+        org.junit.Assert.assertNull(tarArchiveEntry39);
+        org.junit.Assert.assertNotNull(strMap43);
+    }
+
+    @Test
+    public void test5164() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5164");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (-1));
+        boolean boolean12 = tarArchiveInputStream7.markSupported();
+        int int13 = tarArchiveInputStream7.getCount();
+        int int14 = tarArchiveInputStream7.available();
+        java.lang.String str15 = tarArchiveInputStream7.encoding;
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
+        org.junit.Assert.assertNull(str15);
+    }
+
+    @Test
+    public void test5165() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5165");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        long long12 = tarArchiveInputStream9.getBytesRead();
+        tarArchiveInputStream9.mark((int) (short) 100);
+        int int15 = tarArchiveInputStream9.read();
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream3.canReadEntryData(archiveEntry18);
+        boolean boolean20 = tarArchiveInputStream3.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry21 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry21);
+        byte[] byteArray23 = tarArchiveInputStream3.getLongNameData();
+        boolean boolean24 = tarArchiveInputStream3.isAtEOF();
+        byte[] byteArray25 = tarArchiveInputStream3.getLongNameData();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertNull(byteArray23);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + true + "'", boolean24 == true);
+        org.junit.Assert.assertNull(byteArray25);
+    }
+
+    @Test
+    public void test5166() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5166");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        boolean boolean3 = tarArchiveInputStream1.isAtEOF();
+        java.io.InputStream inputStream4 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream4);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream4, (int) (short) 1, (int) '#');
+        int int9 = tarArchiveInputStream8.getRecordSize();
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        long long14 = tarArchiveInputStream11.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap15 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        byte[] byteArray16 = tarArchiveInputStream11.readAllBytes();
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray16, (int) (short) 0);
+        int int19 = tarArchiveInputStream1.read(byteArray16);
+        java.io.InputStream inputStream20 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20, (int) (short) 1, (int) '#');
+        int int25 = tarArchiveInputStream24.getRecordSize();
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (int) (short) 1);
+        long long30 = tarArchiveInputStream27.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap31 = tarArchiveInputStream24.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream27);
+        byte[] byteArray32 = tarArchiveInputStream27.readAllBytes();
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray32, (int) (short) 0);
+        int int37 = tarArchiveInputStream1.read(byteArray32, (int) 'a', 10);
+        tarArchiveInputStream1.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (-1), (int) (short) 1);
+        int int42 = tarArchiveInputStream41.getCount();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (byte) -1, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 35 + "'", int9 == 35);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertNotNull(strMap15);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + (-1) + "'", int19 == (-1));
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + 35 + "'", int25 == 35);
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 0L + "'", long30 == 0L);
+        org.junit.Assert.assertNotNull(strMap31);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + int37 + "' != '" + (-1) + "'", int37 == (-1));
+        org.junit.Assert.assertTrue("'" + int42 + "' != '" + 0 + "'", int42 == 0);
+    }
+
+    @Test
+    public void test5167() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5167");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        int int10 = tarArchiveInputStream4.read();
+        int int11 = tarArchiveInputStream4.available();
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (short) 1);
+        byte[] byteArray16 = tarArchiveInputStream15.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (-1));
+        boolean boolean24 = tarArchiveInputStream19.markSupported();
+        java.util.Map<java.lang.String, java.lang.String> strMap25 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        tarArchiveInputStream4.mark((int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        int int29 = tarArchiveInputStream28.getCount();
+        byte[] byteArray30 = tarArchiveInputStream28.readRecord();
+        byte[] byteArray31 = tarArchiveInputStream28.getLongNameData();
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + (-1) + "'", int10 == (-1));
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 0 + "'", int11 == 0);
+        org.junit.Assert.assertNull(byteArray16);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertNotNull(strMap25);
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + 0 + "'", int29 == 0);
+        org.junit.Assert.assertNull(byteArray30);
+        org.junit.Assert.assertNull(byteArray31);
+    }
+
+    @Test
+    public void test5168() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5168");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 1);
+        int int6 = tarArchiveInputStream3.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry7 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry7);
+        java.io.InputStream inputStream9 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream9, (int) (short) 1, (int) '#');
+        int int14 = tarArchiveInputStream13.getRecordSize();
+        java.io.InputStream inputStream15 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream15);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream16, (int) (short) 1);
+        long long19 = tarArchiveInputStream16.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream13.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream16);
+        byte[] byteArray21 = tarArchiveInputStream16.readAllBytes();
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray21, (int) (byte) 1);
+        int int26 = tarArchiveInputStream3.read(byteArray21, (int) '#', 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        int int28 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray29 = tarArchiveInputStream3.getLongNameData();
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 35 + "'", int14 == 35);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 0L + "'", long19 == 0L);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + 512 + "'", int28 == 512);
+        org.junit.Assert.assertNull(byteArray29);
+    }
+
+    @Test
+    public void test5169() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5169");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        java.io.InputStream inputStream6 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream6);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 1);
+        long long10 = tarArchiveInputStream7.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream7);
+        int int12 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (short) 1);
+        long long17 = tarArchiveInputStream14.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry18 = null;
+        tarArchiveInputStream14.setCurrentEntry(tarArchiveEntry18);
+        long long21 = tarArchiveInputStream14.skip((long) (short) -1);
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) (short) 1);
+        long long26 = tarArchiveInputStream23.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = null;
+        tarArchiveInputStream23.setCurrentEntry(tarArchiveEntry27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry30 = tarArchiveInputStream23.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23);
+        java.util.Map<java.lang.String, java.lang.String> strMap32 = tarArchiveInputStream7.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream34 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, 10);
+        byte[] byteArray35 = tarArchiveInputStream34.getLongNameData();
+        // The following exception was thrown during execution in test generation
+        try {
+            tarArchiveInputStream34.close();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 0L + "'", long17 == 0L);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 0L + "'", long26 == 0L);
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertNull(tarArchiveEntry30);
+        org.junit.Assert.assertNotNull(strMap32);
+        org.junit.Assert.assertNull(byteArray35);
+    }
+
+    @Test
+    public void test5170() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5170");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        byte[] byteArray13 = new byte[] { (byte) -1 };
+        int int14 = tarArchiveInputStream10.read(byteArray13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) (short) -1);
+        byte[] byteArray17 = tarArchiveInputStream10.readAllBytes();
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray17, 100);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertNotNull(byteArray17);
+        org.junit.Assert.assertArrayEquals(byteArray17, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test5171() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5171");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        long long12 = tarArchiveInputStream9.getBytesRead();
+        tarArchiveInputStream9.mark((int) (short) 100);
+        int int15 = tarArchiveInputStream9.read();
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream9);
+        tarArchiveInputStream3.setAtEOF(true);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry19 = tarArchiveInputStream3.getCurrentEntry();
+        boolean boolean20 = tarArchiveInputStream3.markSupported();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry21 = tarArchiveInputStream3.getCurrentEntry();
+        tarArchiveInputStream3.mark((int) '#');
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertNull(tarArchiveEntry19);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry21);
+    }
+
+    @Test
+    public void test5172() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5172");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (byte) 1, (int) (short) 0);
+        byte[] byteArray27 = tarArchiveInputStream26.getLongNameData();
+        java.io.InputStream inputStream28 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream28);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 1);
+        byte[] byteArray32 = tarArchiveInputStream31.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry33 = null;
+        boolean boolean34 = tarArchiveInputStream31.canReadEntryData(archiveEntry33);
+        java.io.InputStream inputStream35 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36, (int) (short) 1);
+        int int39 = tarArchiveInputStream36.read();
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream43 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream41, (int) (short) 1);
+        byte[] byteArray44 = null;
+        int int47 = tarArchiveInputStream43.read(byteArray44, (int) '4', (int) '#');
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream49);
+        java.util.Map<java.lang.String, java.lang.String> strMap51 = tarArchiveInputStream43.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream50);
+        boolean boolean52 = tarArchiveInputStream43.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream43, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap55 = tarArchiveInputStream36.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream54);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry56 = null;
+        boolean boolean57 = tarArchiveInputStream36.canReadEntryData(archiveEntry56);
+        byte[] byteArray58 = tarArchiveInputStream36.readAllBytes();
+        int int61 = tarArchiveInputStream31.read(byteArray58, (-1), (int) (byte) -1);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray58, (int) (byte) -1);
+        int int66 = tarArchiveInputStream26.read(byteArray58, (int) '#', (int) (short) 0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream67 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26);
+        long long69 = tarArchiveInputStream26.skip((long) 0);
+        java.io.InputStream inputStream70 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream71 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream70);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream73 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream71, (int) (short) 1);
+        byte[] byteArray74 = tarArchiveInputStream73.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream77 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream73, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry78 = tarArchiveInputStream73.getCurrentEntry();
+        byte[] byteArray79 = tarArchiveInputStream73.readAllBytes();
+        boolean boolean81 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray79, 10);
+        int int84 = tarArchiveInputStream26.read(byteArray79, (int) ' ', (int) (short) -1);
+        boolean boolean86 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray79, 100);
+        boolean boolean88 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray79, 35);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertNull(byteArray27);
+        org.junit.Assert.assertNull(byteArray32);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
+        org.junit.Assert.assertNotNull(strMap51);
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+        org.junit.Assert.assertNotNull(strMap55);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + (-1) + "'", int66 == (-1));
+        org.junit.Assert.assertTrue("'" + long69 + "' != '" + 0L + "'", long69 == 0L);
+        org.junit.Assert.assertNull(byteArray74);
+        org.junit.Assert.assertNull(tarArchiveEntry78);
+        org.junit.Assert.assertNotNull(byteArray79);
+        org.junit.Assert.assertArrayEquals(byteArray79, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean81 + "' != '" + false + "'", boolean81 == false);
+        org.junit.Assert.assertTrue("'" + int84 + "' != '" + (-1) + "'", int84 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean86 + "' != '" + false + "'", boolean86 == false);
+        org.junit.Assert.assertTrue("'" + boolean88 + "' != '" + false + "'", boolean88 == false);
+    }
+
+    @Test
+    public void test5173() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5173");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        long long16 = tarArchiveInputStream3.skip((long) (byte) 0);
+        boolean boolean17 = tarArchiveInputStream3.isAtEOF();
+        byte[] byteArray18 = tarArchiveInputStream3.readRecord();
+        tarArchiveInputStream3.mark(0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) 1, (int) ' ');
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'", boolean17 == true);
+        org.junit.Assert.assertNull(byteArray18);
+    }
+
+    @Test
+    public void test5174() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5174");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        int int8 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray9 = tarArchiveInputStream3.readRecord();
+        java.io.OutputStream outputStream10 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            long long11 = tarArchiveInputStream3.transferTo(outputStream10);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: out");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 512 + "'", int8 == 512);
+        org.junit.Assert.assertNull(byteArray9);
+    }
+
+    @Test
+    public void test5175() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5175");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0);
+        boolean boolean11 = tarArchiveInputStream10.isAtEOF();
+        int int12 = tarArchiveInputStream10.available();
+        tarArchiveInputStream10.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry14 = null;
+        tarArchiveInputStream10.setCurrentEntry(tarArchiveEntry14);
+        byte[] byteArray16 = tarArchiveInputStream10.readRecord();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] {});
+    }
+
+    @Test
+    public void test5176() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5176");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        java.io.InputStream inputStream3 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream3);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4, (int) (short) 1);
+        byte[] byteArray7 = tarArchiveInputStream6.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, (int) '4');
+        int int13 = tarArchiveInputStream10.available();
+        java.io.InputStream inputStream14 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream14);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15, (int) (short) 1);
+        byte[] byteArray18 = null;
+        int int21 = tarArchiveInputStream17.read(byteArray18, (int) '4', (int) '#');
+        java.io.InputStream inputStream22 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream22);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23);
+        java.util.Map<java.lang.String, java.lang.String> strMap25 = tarArchiveInputStream17.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream24);
+        byte[] byteArray27 = new byte[] { (byte) -1 };
+        int int28 = tarArchiveInputStream24.read(byteArray27);
+        int int29 = tarArchiveInputStream10.read(byteArray27);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry30 = tarArchiveInputStream10.getCurrentEntry();
+        java.io.InputStream inputStream31 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream32 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream31, (int) (short) 1, (int) '#');
+        int int36 = tarArchiveInputStream35.getRecordSize();
+        java.io.InputStream inputStream37 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream38 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream37);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream38, (int) (short) 1);
+        long long41 = tarArchiveInputStream38.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap42 = tarArchiveInputStream35.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream38);
+        byte[] byteArray43 = tarArchiveInputStream38.readAllBytes();
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray43, (int) (byte) 1);
+        int int46 = tarArchiveInputStream10.read(byteArray43);
+        java.io.InputStream inputStream47 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream48 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream47);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry50 = tarArchiveInputStream49.getNextTarEntry();
+        byte[] byteArray51 = tarArchiveInputStream49.readAllBytes();
+        int int54 = tarArchiveInputStream10.read(byteArray51, (int) (byte) 10, (int) '#');
+        int int57 = tarArchiveInputStream2.read(byteArray51, 35, 0);
+        byte[] byteArray58 = tarArchiveInputStream2.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry59 = null;
+        tarArchiveInputStream2.setCurrentEntry(tarArchiveEntry59);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry61 = tarArchiveInputStream2.getNextTarEntry();
+        org.junit.Assert.assertNull(byteArray7);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+        org.junit.Assert.assertNotNull(strMap25);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + (-1) + "'", int28 == (-1));
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry30);
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + 35 + "'", int36 == 35);
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 0L + "'", long41 == 0L);
+        org.junit.Assert.assertNotNull(strMap42);
+        org.junit.Assert.assertNotNull(byteArray43);
+        org.junit.Assert.assertArrayEquals(byteArray43, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertTrue("'" + int46 + "' != '" + (-1) + "'", int46 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry50);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int54 + "' != '" + (-1) + "'", int54 == (-1));
+        org.junit.Assert.assertTrue("'" + int57 + "' != '" + (-1) + "'", int57 == (-1));
+        org.junit.Assert.assertNull(byteArray58);
+        org.junit.Assert.assertNull(tarArchiveEntry61);
+    }
+
+    @Test
+    public void test5177() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5177");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.lang.String str8 = tarArchiveInputStream7.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 10, (int) ' ');
+        tarArchiveInputStream7.setAtEOF(false);
+        // The following exception was thrown during execution in test generation
+        try {
+            tarArchiveInputStream7.close();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(str8);
+    }
+
+    @Test
+    public void test5178() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5178");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry5 = null;
+        boolean boolean6 = tarArchiveInputStream3.canReadEntryData(archiveEntry5);
+        int int7 = tarArchiveInputStream3.available();
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8, (int) (short) 1, (int) '#');
+        tarArchiveInputStream12.mark((int) (short) 10);
+        tarArchiveInputStream12.reset();
+        int int16 = tarArchiveInputStream12.read();
+        java.util.Map<java.lang.String, java.lang.String> strMap17 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream12);
+        int int18 = tarArchiveInputStream12.read();
+        boolean boolean19 = tarArchiveInputStream12.markSupported();
+        tarArchiveInputStream12.setAtEOF(true);
+        int int22 = tarArchiveInputStream12.getCount();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry23 = null;
+        tarArchiveInputStream12.setCurrentEntry(tarArchiveEntry23);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry25 = null;
+        boolean boolean26 = tarArchiveInputStream12.canReadEntryData(archiveEntry25);
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+        org.junit.Assert.assertNotNull(strMap17);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'", int22 == 0);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+    }
+
+    @Test
+    public void test5179() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5179");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        byte[] byteArray5 = tarArchiveInputStream1.readAllBytes();
+        int int6 = tarArchiveInputStream1.getRecordSize();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry7 = tarArchiveInputStream1.getCurrentEntry();
+        tarArchiveInputStream1.mark((int) (short) 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            byte[] byteArray10 = tarArchiveInputStream1.getLongNameData();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 512 + "'", int6 == 512);
+        org.junit.Assert.assertNull(tarArchiveEntry7);
+    }
+
+    @Test
+    public void test5180() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5180");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        tarArchiveInputStream4.mark((int) (short) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        tarArchiveInputStream4.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream4);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11);
+        byte[] byteArray13 = tarArchiveInputStream11.getLongNameData();
+        boolean boolean14 = tarArchiveInputStream11.isAtEOF();
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+    }
+
+    @Test
+    public void test5181() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5181");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        tarArchiveInputStream4.reset();
+        long long10 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry11 = null;
+        boolean boolean12 = tarArchiveInputStream4.canReadEntryData(archiveEntry11);
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) (short) 1);
+        byte[] byteArray17 = null;
+        int int20 = tarArchiveInputStream16.read(byteArray17, (int) '4', (int) '#');
+        java.io.InputStream inputStream21 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream21);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream22);
+        java.util.Map<java.lang.String, java.lang.String> strMap24 = tarArchiveInputStream16.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream23);
+        byte[] byteArray25 = tarArchiveInputStream23.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry26 = null;
+        tarArchiveInputStream23.setCurrentEntry(tarArchiveEntry26);
+        java.lang.String str28 = tarArchiveInputStream23.encoding;
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream4.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream23);
+        int int30 = tarArchiveInputStream4.available();
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + (-1) + "'", int20 == (-1));
+        org.junit.Assert.assertNotNull(strMap24);
+        org.junit.Assert.assertNull(byteArray25);
+        org.junit.Assert.assertNull(str28);
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + 0 + "'", int30 == 0);
+    }
+
+    @Test
+    public void test5182() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5182");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.lang.String str8 = tarArchiveInputStream7.encoding;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 10, (int) ' ');
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        tarArchiveInputStream13.mark((int) (byte) 0);
+        int int16 = tarArchiveInputStream13.read();
+        tarArchiveInputStream13.reset();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry18 = null;
+        boolean boolean19 = tarArchiveInputStream13.canReadEntryData(archiveEntry18);
+        byte[] byteArray20 = tarArchiveInputStream13.readAllBytes();
+        int int23 = tarArchiveInputStream11.read(byteArray20, (int) (byte) 0, (-1));
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry24 = null;
+        boolean boolean25 = tarArchiveInputStream11.canReadEntryData(archiveEntry24);
+        byte[] byteArray26 = tarArchiveInputStream11.getLongNameData();
+        int int27 = tarArchiveInputStream11.getCount();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(str8);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + (-1) + "'", int23 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertNull(byteArray26);
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + 0 + "'", int27 == 0);
+    }
+
+    @Test
+    public void test5183() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5183");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream4 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0, (int) (short) 1, (int) '#');
+        int int5 = tarArchiveInputStream4.getRecordSize();
+        long long7 = tarArchiveInputStream4.skip((long) (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry8 = null;
+        tarArchiveInputStream4.setCurrentEntry(tarArchiveEntry8);
+        int int10 = tarArchiveInputStream4.read();
+        int int11 = tarArchiveInputStream4.available();
+        boolean boolean12 = tarArchiveInputStream4.markSupported();
+        boolean boolean13 = tarArchiveInputStream4.isAtEOF();
+        tarArchiveInputStream4.mark((int) ' ');
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, (int) (short) 1);
+        byte[] byteArray20 = tarArchiveInputStream19.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) '4');
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (int) (short) 1);
+        byte[] byteArray30 = tarArchiveInputStream29.readRecord();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry31 = null;
+        boolean boolean32 = tarArchiveInputStream29.canReadEntryData(archiveEntry31);
+        byte[] byteArray35 = new byte[] { (byte) 0, (byte) 1 };
+        int int38 = tarArchiveInputStream29.read(byteArray35, 1, 10);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry39 = tarArchiveInputStream29.getNextEntry();
+        java.io.InputStream inputStream40 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream41 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream40, (int) (short) 1, (int) '#');
+        int int45 = tarArchiveInputStream44.getRecordSize();
+        long long47 = tarArchiveInputStream44.skip((long) (-1));
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream51 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream49, (int) (short) 1);
+        long long52 = tarArchiveInputStream49.getBytesRead();
+        byte[] byteArray53 = new byte[] {};
+        int int54 = tarArchiveInputStream49.read(byteArray53);
+        boolean boolean56 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray53, (int) 'a');
+        int int59 = tarArchiveInputStream44.read(byteArray53, (int) 'a', (int) (byte) 0);
+        int int62 = tarArchiveInputStream29.read(byteArray53, 10, (int) (byte) 100);
+        int int63 = tarArchiveInputStream23.read(byteArray53);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean64 = tarArchiveInputStream4.isEOFRecord(byteArray53);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 35 + "'", int5 == 35);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 0L + "'", long7 == 0L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + (-1) + "'", int10 == (-1));
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 0 + "'", int11 == 0);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNull(byteArray20);
+        org.junit.Assert.assertNull(byteArray30);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] { (byte) 0, (byte) 1 });
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + (-1) + "'", int38 == (-1));
+        org.junit.Assert.assertNull(archiveEntry39);
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + 35 + "'", int45 == 35);
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 0L + "'", long47 == 0L);
+        org.junit.Assert.assertTrue("'" + long52 + "' != '" + 0L + "'", long52 == 0L);
+        org.junit.Assert.assertNotNull(byteArray53);
+        org.junit.Assert.assertArrayEquals(byteArray53, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int54 + "' != '" + (-1) + "'", int54 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + (-1) + "'", int59 == (-1));
+        org.junit.Assert.assertTrue("'" + int62 + "' != '" + (-1) + "'", int62 == (-1));
+        org.junit.Assert.assertTrue("'" + int63 + "' != '" + (-1) + "'", int63 == (-1));
+    }
+
+    @Test
+    public void test5184() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5184");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        tarArchiveInputStream1.mark((int) 'a');
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry7 = tarArchiveInputStream1.getCurrentEntry();
+        boolean boolean8 = tarArchiveInputStream1.markSupported();
+        // The following exception was thrown during execution in test generation
+        try {
+            byte[] byteArray9 = tarArchiveInputStream1.readRecord();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry7);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+    }
+
+    @Test
+    public void test5185() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5185");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        tarArchiveInputStream7.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7);
+        org.junit.Assert.assertNull(byteArray4);
+    }
+
+    @Test
+    public void test5186() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5186");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        int int4 = tarArchiveInputStream1.read();
+        java.io.InputStream inputStream5 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream6 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream5);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream6, (int) (short) 1);
+        byte[] byteArray9 = null;
+        int int12 = tarArchiveInputStream8.read(byteArray9, (int) '4', (int) '#');
+        java.io.InputStream inputStream13 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream13);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14);
+        java.util.Map<java.lang.String, java.lang.String> strMap16 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream15);
+        boolean boolean17 = tarArchiveInputStream8.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap20 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 512, 512);
+        int int24 = tarArchiveInputStream1.getRecordSize();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 0, (int) (short) 1);
+        tarArchiveInputStream27.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry29 = tarArchiveInputStream27.getNextTarEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (-1));
+        byte[] byteArray32 = tarArchiveInputStream27.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (int) '4', (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27, (int) (short) 1);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertNotNull(strMap16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNotNull(strMap20);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 512 + "'", int24 == 512);
+        org.junit.Assert.assertNull(tarArchiveEntry29);
+        org.junit.Assert.assertNull(byteArray32);
+    }
+
+    @Test
+    public void test5187() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5187");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        int int13 = tarArchiveInputStream3.read();
+        byte[] byteArray14 = tarArchiveInputStream3.getLongNameData();
+        byte[] byteArray15 = tarArchiveInputStream3.getLongNameData();
+        long long16 = tarArchiveInputStream3.getBytesRead();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream3.getCurrentEntry();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertNull(byteArray14);
+        org.junit.Assert.assertNull(byteArray15);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+    }
+
+    @Test
+    public void test5188() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5188");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream5 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (short) 1);
+        int int6 = tarArchiveInputStream3.getCount();
+        byte[] byteArray7 = tarArchiveInputStream3.readAllBytes();
+        java.lang.String str8 = tarArchiveInputStream3.encoding;
+        int int9 = tarArchiveInputStream3.read();
+        java.io.InputStream inputStream10 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, (int) (short) 1);
+        byte[] byteArray14 = null;
+        int int17 = tarArchiveInputStream13.read(byteArray14, (int) '4', (int) '#');
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19);
+        java.util.Map<java.lang.String, java.lang.String> strMap21 = tarArchiveInputStream13.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream20);
+        int int22 = tarArchiveInputStream13.getRecordSize();
+        byte[] byteArray23 = tarArchiveInputStream13.getLongNameData();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13);
+        java.io.InputStream inputStream25 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream25);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, (int) (short) 1);
+        int int29 = tarArchiveInputStream26.read();
+        int int30 = tarArchiveInputStream26.read();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry31 = tarArchiveInputStream26.getCurrentEntry();
+        byte[] byteArray33 = tarArchiveInputStream26.readNBytes((int) '#');
+        int int36 = tarArchiveInputStream24.read(byteArray33, (int) (short) 100, (int) (byte) 1);
+        java.util.Map<java.lang.String, java.lang.String> strMap37 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream24);
+        int int38 = tarArchiveInputStream3.getRecordSize();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry39 = null;
+        tarArchiveInputStream3.setCurrentEntry(tarArchiveEntry39);
+        java.io.InputStream inputStream41 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream41);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream42, (int) (short) 1);
+        long long45 = tarArchiveInputStream42.getBytesRead();
+        byte[] byteArray46 = new byte[] {};
+        int int47 = tarArchiveInputStream42.read(byteArray46);
+        java.io.InputStream inputStream48 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream49 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream48);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream51 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream49, (int) (short) 1);
+        int int52 = tarArchiveInputStream49.read();
+        java.io.InputStream inputStream53 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream54 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream53);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream54, (int) (short) 1);
+        byte[] byteArray57 = null;
+        int int60 = tarArchiveInputStream56.read(byteArray57, (int) '4', (int) '#');
+        java.io.InputStream inputStream61 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream62 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream61);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream63 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream62);
+        java.util.Map<java.lang.String, java.lang.String> strMap64 = tarArchiveInputStream56.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream63);
+        boolean boolean65 = tarArchiveInputStream56.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream67 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream56, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap68 = tarArchiveInputStream49.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream67);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry69 = null;
+        boolean boolean70 = tarArchiveInputStream49.canReadEntryData(archiveEntry69);
+        byte[] byteArray71 = tarArchiveInputStream49.readAllBytes();
+        int int74 = tarArchiveInputStream42.read(byteArray71, (int) (short) 0, (int) (short) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream76 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream42, 0);
+        long long77 = tarArchiveInputStream42.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry78 = null;
+        boolean boolean79 = tarArchiveInputStream42.canReadEntryData(archiveEntry78);
+        java.util.Map<java.lang.String, java.lang.String> strMap80 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream42);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream82 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream42, 10);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] {});
+        org.junit.Assert.assertNull(str8);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + (-1) + "'", int17 == (-1));
+        org.junit.Assert.assertNotNull(strMap21);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 512 + "'", int22 == 512);
+        org.junit.Assert.assertNull(byteArray23);
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry31);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertNotNull(strMap37);
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + 512 + "'", int38 == 512);
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 0L + "'", long45 == 0L);
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + (-1) + "'", int60 == (-1));
+        org.junit.Assert.assertNotNull(strMap64);
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + false + "'", boolean65 == false);
+        org.junit.Assert.assertNotNull(strMap68);
+        org.junit.Assert.assertTrue("'" + boolean70 + "' != '" + false + "'", boolean70 == false);
+        org.junit.Assert.assertNotNull(byteArray71);
+        org.junit.Assert.assertArrayEquals(byteArray71, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int74 + "' != '" + (-1) + "'", int74 == (-1));
+        org.junit.Assert.assertTrue("'" + long77 + "' != '" + 0L + "'", long77 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean79 + "' != '" + false + "'", boolean79 == false);
+        org.junit.Assert.assertNotNull(strMap80);
+    }
+
+    @Test
+    public void test5189() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5189");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        long long4 = tarArchiveInputStream1.getBytesRead();
+        byte[] byteArray5 = new byte[] {};
+        int int6 = tarArchiveInputStream1.read(byteArray5);
+        java.io.InputStream inputStream7 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, (int) (short) 1);
+        int int11 = tarArchiveInputStream8.read();
+        java.io.InputStream inputStream12 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream13 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream12);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream13, (int) (short) 1);
+        byte[] byteArray16 = null;
+        int int19 = tarArchiveInputStream15.read(byteArray16, (int) '4', (int) '#');
+        java.io.InputStream inputStream20 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream20);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream21);
+        java.util.Map<java.lang.String, java.lang.String> strMap23 = tarArchiveInputStream15.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream22);
+        boolean boolean24 = tarArchiveInputStream15.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15, 35);
+        java.util.Map<java.lang.String, java.lang.String> strMap27 = tarArchiveInputStream8.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream26);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry28 = null;
+        boolean boolean29 = tarArchiveInputStream8.canReadEntryData(archiveEntry28);
+        byte[] byteArray30 = tarArchiveInputStream8.readAllBytes();
+        int int33 = tarArchiveInputStream1.read(byteArray30, (int) (short) 0, (int) (short) -1);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, 0);
+        long long36 = tarArchiveInputStream1.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry37 = null;
+        boolean boolean38 = tarArchiveInputStream1.canReadEntryData(archiveEntry37);
+        byte[] byteArray40 = tarArchiveInputStream1.readNBytes((int) 'a');
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 0L + "'", long4 == 0L);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + (-1) + "'", int19 == (-1));
+        org.junit.Assert.assertNotNull(strMap23);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertNotNull(strMap27);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertNotNull(byteArray30);
+        org.junit.Assert.assertArrayEquals(byteArray30, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
+        org.junit.Assert.assertTrue("'" + long36 + "' != '" + 0L + "'", long36 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + false + "'", boolean38 == false);
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] {});
+    }
+
+    @Test
+    public void test5190() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5190");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        int int10 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        byte[] byteArray24 = new byte[] { (byte) -1 };
+        int int25 = tarArchiveInputStream21.read(byteArray24);
+        int int26 = tarArchiveInputStream7.read(byteArray24);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = tarArchiveInputStream7.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry28 = null;
+        tarArchiveInputStream7.setCurrentEntry(tarArchiveEntry28);
+        boolean boolean30 = tarArchiveInputStream7.markSupported();
+        boolean boolean31 = tarArchiveInputStream7.isAtEOF();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry27);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+    }
+
+    @Test
+    public void test5191() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5191");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        int int10 = tarArchiveInputStream7.available();
+        java.io.InputStream inputStream11 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream12 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream11);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream12, (int) (short) 1);
+        byte[] byteArray15 = null;
+        int int18 = tarArchiveInputStream14.read(byteArray15, (int) '4', (int) '#');
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20);
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream14.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream21);
+        byte[] byteArray24 = new byte[] { (byte) -1 };
+        int int25 = tarArchiveInputStream21.read(byteArray24);
+        int int26 = tarArchiveInputStream7.read(byteArray24);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry27 = tarArchiveInputStream7.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) (short) 100);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream31 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream29, (int) (short) 0);
+        java.io.InputStream inputStream32 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream33 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream32);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream35 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33, (int) (short) 1);
+        long long36 = tarArchiveInputStream33.getBytesRead();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry37 = null;
+        boolean boolean38 = tarArchiveInputStream33.canReadEntryData(archiveEntry37);
+        int int39 = tarArchiveInputStream33.getCount();
+        tarArchiveInputStream33.mark((int) (byte) 100);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry42 = null;
+        boolean boolean43 = tarArchiveInputStream33.canReadEntryData(archiveEntry42);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream45 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream33);
+        tarArchiveInputStream33.mark((int) 'a');
+        int int48 = tarArchiveInputStream33.getRecordSize();
+        byte[] byteArray49 = tarArchiveInputStream33.readAllBytes();
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean50 = tarArchiveInputStream29.isEOFRecord(byteArray49);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry27);
+        org.junit.Assert.assertTrue("'" + long36 + "' != '" + 0L + "'", long36 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + false + "'", boolean38 == false);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + 0 + "'", int39 == 0);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + 512 + "'", int48 == 512);
+        org.junit.Assert.assertNotNull(byteArray49);
+        org.junit.Assert.assertArrayEquals(byteArray49, new byte[] {});
+    }
+
+    @Test
+    public void test5192() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5192");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, (int) (byte) -1, (int) (short) 0);
+        boolean boolean11 = tarArchiveInputStream10.isAtEOF();
+        int int12 = tarArchiveInputStream10.available();
+        long long14 = tarArchiveInputStream10.skip((long) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10);
+        byte[] byteArray16 = tarArchiveInputStream15.getLongNameData();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertNull(byteArray16);
+    }
+
+    @Test
+    public void test5193() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5193");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        byte[] byteArray12 = null;
+        int int15 = tarArchiveInputStream11.read(byteArray12, (int) '4', (int) '#');
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream18 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17);
+        java.util.Map<java.lang.String, java.lang.String> strMap19 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream18);
+        boolean boolean20 = tarArchiveInputStream11.isAtEOF();
+        boolean boolean21 = tarArchiveInputStream11.isAtEOF();
+        java.util.Map<java.lang.String, java.lang.String> strMap22 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream11);
+        java.io.InputStream inputStream23 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream24 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream23);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream26 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream24, (int) (short) 1);
+        byte[] byteArray27 = null;
+        int int30 = tarArchiveInputStream26.read(byteArray27, (int) '4', (int) '#');
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry31 = tarArchiveInputStream26.getNextTarEntry();
+        java.util.Map<java.lang.String, java.lang.String> strMap32 = tarArchiveInputStream11.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry33 = null;
+        tarArchiveInputStream26.setCurrentEntry(tarArchiveEntry33);
+        int int35 = tarArchiveInputStream26.available();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream26, "hi!");
+            org.junit.Assert.fail("Expected exception of type java.nio.charset.IllegalCharsetNameException; message: hi!");
+        } catch (java.nio.charset.IllegalCharsetNameException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertNotNull(strMap19);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertNotNull(strMap22);
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry31);
+        org.junit.Assert.assertNotNull(strMap32);
+        org.junit.Assert.assertTrue("'" + int35 + "' != '" + 0 + "'", int35 == 0);
+    }
+
+    @Test
+    public void test5194() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5194");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 35);
+        tarArchiveInputStream3.mark((int) (byte) 10);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3);
+        int int18 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray19 = tarArchiveInputStream3.readAllBytes();
+        int int20 = tarArchiveInputStream3.read();
+        int int21 = tarArchiveInputStream3.read();
+        byte[] byteArray22 = tarArchiveInputStream3.readAllBytes();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 512 + "'", int18 == 512);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + (-1) + "'", int20 == (-1));
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] {});
+    }
+
+    @Test
+    public void test5195() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5195");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        int int12 = tarArchiveInputStream3.getRecordSize();
+        byte[] byteArray13 = tarArchiveInputStream3.getLongNameData();
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry14 = tarArchiveInputStream3.getNextEntry();
+        long long16 = tarArchiveInputStream3.skip((long) (short) 1);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry17 = tarArchiveInputStream3.getNextTarEntry();
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        byte[] byteArray22 = null;
+        int int25 = tarArchiveInputStream21.read(byteArray22, (int) '4', (int) '#');
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream21.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream28);
+        boolean boolean30 = tarArchiveInputStream21.isAtEOF();
+        boolean boolean31 = tarArchiveInputStream21.markSupported();
+        byte[] byteArray32 = tarArchiveInputStream21.getLongNameData();
+        byte[] byteArray33 = tarArchiveInputStream21.readAllBytes();
+        byte[] byteArray35 = tarArchiveInputStream21.readNBytes((int) '#');
+        int int38 = tarArchiveInputStream3.read(byteArray35, (int) (short) 1, 0);
+        boolean boolean40 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray35, (int) (byte) 100);
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray35, 35);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 512 + "'", int12 == 512);
+        org.junit.Assert.assertNull(byteArray13);
+        org.junit.Assert.assertNull(archiveEntry14);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+        org.junit.Assert.assertNull(tarArchiveEntry17);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertNull(byteArray32);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] {});
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + (-1) + "'", int38 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+    }
+
+    @Test
+    public void test5196() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5196");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = tarArchiveInputStream3.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream7 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream3, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream7, (int) '4');
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (-1));
+        java.lang.String str12 = tarArchiveInputStream11.encoding;
+        int int13 = tarArchiveInputStream11.read();
+        org.junit.Assert.assertNull(byteArray4);
+        org.junit.Assert.assertNull(str12);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+    }
+
+    @Test
+    public void test5197() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5197");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream3 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1, (int) (short) 1);
+        byte[] byteArray4 = null;
+        int int7 = tarArchiveInputStream3.read(byteArray4, (int) '4', (int) '#');
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9);
+        java.util.Map<java.lang.String, java.lang.String> strMap11 = tarArchiveInputStream3.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream10);
+        boolean boolean12 = tarArchiveInputStream3.isAtEOF();
+        boolean boolean13 = tarArchiveInputStream3.markSupported();
+        long long15 = tarArchiveInputStream3.skip((long) (short) 0);
+        java.io.InputStream inputStream16 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream16);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream17, (int) (short) 1);
+        byte[] byteArray20 = tarArchiveInputStream19.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream23 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream25 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream23, (int) '4');
+        int int26 = tarArchiveInputStream23.available();
+        java.io.InputStream inputStream27 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream27);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream30 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream28, (int) (short) 1);
+        byte[] byteArray31 = null;
+        int int34 = tarArchiveInputStream30.read(byteArray31, (int) '4', (int) '#');
+        java.io.InputStream inputStream35 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream37 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream36);
+        java.util.Map<java.lang.String, java.lang.String> strMap38 = tarArchiveInputStream30.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream37);
+        byte[] byteArray40 = new byte[] { (byte) -1 };
+        int int41 = tarArchiveInputStream37.read(byteArray40);
+        int int42 = tarArchiveInputStream23.read(byteArray40);
+        byte[] byteArray44 = tarArchiveInputStream23.readNBytes((int) (byte) 0);
+        java.io.InputStream inputStream45 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream46 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream45);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream47 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream46);
+        boolean boolean48 = tarArchiveInputStream46.isAtEOF();
+        java.io.InputStream inputStream49 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream50 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream49);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream49, (int) (short) 1, (int) '#');
+        int int54 = tarArchiveInputStream53.getRecordSize();
+        java.io.InputStream inputStream55 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream56 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream55);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream58 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream56, (int) (short) 1);
+        long long59 = tarArchiveInputStream56.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap60 = tarArchiveInputStream53.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream56);
+        byte[] byteArray61 = tarArchiveInputStream56.readAllBytes();
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray61, (int) (short) 0);
+        int int64 = tarArchiveInputStream46.read(byteArray61);
+        java.io.InputStream inputStream65 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream66 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream65);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream69 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream65, (int) (short) 1, (int) '#');
+        int int70 = tarArchiveInputStream69.getRecordSize();
+        java.io.InputStream inputStream71 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream72 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream71);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream74 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream72, (int) (short) 1);
+        long long75 = tarArchiveInputStream72.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap76 = tarArchiveInputStream69.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream72);
+        byte[] byteArray77 = tarArchiveInputStream72.readAllBytes();
+        boolean boolean79 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray77, (int) (short) 0);
+        int int82 = tarArchiveInputStream46.read(byteArray77, (int) 'a', 10);
+        int int85 = tarArchiveInputStream23.read(byteArray77, 0, (int) 'a');
+        int int88 = tarArchiveInputStream3.read(byteArray77, (-1), (-1));
+        byte[] byteArray89 = tarArchiveInputStream3.readRecord();
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+        org.junit.Assert.assertNotNull(strMap11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertNull(byteArray20);
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + 0 + "'", int26 == 0);
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
+        org.junit.Assert.assertNotNull(strMap38);
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int41 + "' != '" + (-1) + "'", int41 == (-1));
+        org.junit.Assert.assertTrue("'" + int42 + "' != '" + (-1) + "'", int42 == (-1));
+        org.junit.Assert.assertNotNull(byteArray44);
+        org.junit.Assert.assertArrayEquals(byteArray44, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertTrue("'" + int54 + "' != '" + 35 + "'", int54 == 35);
+        org.junit.Assert.assertTrue("'" + long59 + "' != '" + 0L + "'", long59 == 0L);
+        org.junit.Assert.assertNotNull(strMap60);
+        org.junit.Assert.assertNotNull(byteArray61);
+        org.junit.Assert.assertArrayEquals(byteArray61, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + (-1) + "'", int64 == (-1));
+        org.junit.Assert.assertTrue("'" + int70 + "' != '" + 35 + "'", int70 == 35);
+        org.junit.Assert.assertTrue("'" + long75 + "' != '" + 0L + "'", long75 == 0L);
+        org.junit.Assert.assertNotNull(strMap76);
+        org.junit.Assert.assertNotNull(byteArray77);
+        org.junit.Assert.assertArrayEquals(byteArray77, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean79 + "' != '" + false + "'", boolean79 == false);
+        org.junit.Assert.assertTrue("'" + int82 + "' != '" + (-1) + "'", int82 == (-1));
+        org.junit.Assert.assertTrue("'" + int85 + "' != '" + (-1) + "'", int85 == (-1));
+        org.junit.Assert.assertTrue("'" + int88 + "' != '" + (-1) + "'", int88 == (-1));
+        org.junit.Assert.assertNull(byteArray89);
+    }
+
+    @Test
+    public void test5198() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5198");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        tarArchiveInputStream1.mark((int) (byte) 0);
+        int int4 = tarArchiveInputStream1.read();
+        tarArchiveInputStream1.reset();
+        boolean boolean6 = tarArchiveInputStream1.markSupported();
+        java.io.InputStream inputStream7 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream8 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream7);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream10 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream8, (int) (short) 1);
+        byte[] byteArray11 = tarArchiveInputStream10.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream14 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream10, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream16 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream14, (int) '4');
+        int int17 = tarArchiveInputStream14.available();
+        java.io.InputStream inputStream18 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream19 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream18);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream21 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream19, (int) (short) 1);
+        byte[] byteArray22 = null;
+        int int25 = tarArchiveInputStream21.read(byteArray22, (int) '4', (int) '#');
+        java.io.InputStream inputStream26 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream27 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream26);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream27);
+        java.util.Map<java.lang.String, java.lang.String> strMap29 = tarArchiveInputStream21.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream28);
+        byte[] byteArray31 = new byte[] { (byte) -1 };
+        int int32 = tarArchiveInputStream28.read(byteArray31);
+        int int33 = tarArchiveInputStream14.read(byteArray31);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry34 = tarArchiveInputStream14.getCurrentEntry();
+        java.io.InputStream inputStream35 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream36 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream35, (int) (short) 1, (int) '#');
+        int int40 = tarArchiveInputStream39.getRecordSize();
+        java.io.InputStream inputStream41 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream42 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream41);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream44 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream42, (int) (short) 1);
+        long long45 = tarArchiveInputStream42.getBytesRead();
+        java.util.Map<java.lang.String, java.lang.String> strMap46 = tarArchiveInputStream39.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream42);
+        byte[] byteArray47 = tarArchiveInputStream42.readAllBytes();
+        boolean boolean49 = org.apache.commons.compress.archivers.tar.TarArchiveInputStream.matches(byteArray47, (int) (byte) 1);
+        int int50 = tarArchiveInputStream14.read(byteArray47);
+        java.io.InputStream inputStream51 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream52 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream51);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream53 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream52);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry54 = tarArchiveInputStream53.getNextTarEntry();
+        byte[] byteArray55 = tarArchiveInputStream53.readAllBytes();
+        int int58 = tarArchiveInputStream14.read(byteArray55, (int) (byte) 10, (int) '#');
+        tarArchiveInputStream14.reset();
+        java.util.Map<java.lang.String, java.lang.String> strMap60 = tarArchiveInputStream1.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream14);
+        // The following exception was thrown during execution in test generation
+        try {
+            tarArchiveInputStream14.close();
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertNull(byteArray11);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(strMap29);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + (-1) + "'", int32 == (-1));
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry34);
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + 35 + "'", int40 == 35);
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 0L + "'", long45 == 0L);
+        org.junit.Assert.assertNotNull(strMap46);
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+        org.junit.Assert.assertTrue("'" + int50 + "' != '" + (-1) + "'", int50 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry54);
+        org.junit.Assert.assertNotNull(byteArray55);
+        org.junit.Assert.assertArrayEquals(byteArray55, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int58 + "' != '" + (-1) + "'", int58 == (-1));
+        org.junit.Assert.assertNotNull(strMap60);
+    }
+
+    @Test
+    public void test5199() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest10.test5199");
+        java.io.InputStream inputStream0 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream1 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream0);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream2 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream1);
+        org.apache.commons.compress.archivers.ArchiveEntry archiveEntry3 = null;
+        boolean boolean4 = tarArchiveInputStream1.canReadEntryData(archiveEntry3);
+        tarArchiveInputStream1.setAtEOF(false);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry7 = tarArchiveInputStream1.getCurrentEntry();
+        java.io.InputStream inputStream8 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream9 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream8);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream11 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream9, (int) (short) 1);
+        byte[] byteArray12 = tarArchiveInputStream11.readRecord();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream15 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream11, 512, (-1));
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream17 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15, (int) '4');
+        int int18 = tarArchiveInputStream15.available();
+        java.io.InputStream inputStream19 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream20 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream19);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream22 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream20, (int) (short) 1);
+        byte[] byteArray23 = null;
+        int int26 = tarArchiveInputStream22.read(byteArray23, (int) '4', (int) '#');
+        java.io.InputStream inputStream27 = null;
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream28 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream(inputStream27);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream29 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream28);
+        java.util.Map<java.lang.String, java.lang.String> strMap30 = tarArchiveInputStream22.parsePaxHeaders((java.io.InputStream) tarArchiveInputStream29);
+        byte[] byteArray32 = new byte[] { (byte) -1 };
+        int int33 = tarArchiveInputStream29.read(byteArray32);
+        int int34 = tarArchiveInputStream15.read(byteArray32);
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry35 = tarArchiveInputStream15.getCurrentEntry();
+        org.apache.commons.compress.archivers.tar.TarArchiveEntry tarArchiveEntry36 = null;
+        tarArchiveInputStream15.setCurrentEntry(tarArchiveEntry36);
+        tarArchiveInputStream15.reset();
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream39 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream15);
+        org.apache.commons.compress.archivers.tar.TarArchiveInputStream tarArchiveInputStream40 = new org.apache.commons.compress.archivers.tar.TarArchiveInputStream((java.io.InputStream) tarArchiveInputStream39);
+        byte[] byteArray42 = tarArchiveInputStream40.readNBytes((int) (short) 0);
+        int int45 = tarArchiveInputStream1.read(byteArray42, 0, (-1));
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNull(tarArchiveEntry7);
+        org.junit.Assert.assertNull(byteArray12);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNotNull(strMap30);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) -1 });
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
+        org.junit.Assert.assertNull(tarArchiveEntry35);
+        org.junit.Assert.assertNotNull(byteArray42);
+        org.junit.Assert.assertArrayEquals(byteArray42, new byte[] {});
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + (-1) + "'", int45 == (-1));
+    }
+}
+

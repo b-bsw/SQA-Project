@@ -1,0 +1,731 @@
+{
+  "_script_runs": {
+    "latest": {
+      "started_at": "2026-09-28T05:49:06.739120+00:00",
+      "status": "FAILED",
+      "script": "generate_randoop_tests",
+      "arguments": [
+        "--project",
+        "Mockito",
+        "--state-file",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Mockito.json",
+        "--time-limit",
+        "60",
+        "--jvm-memory",
+        "3000m",
+        "--round",
+        "2",
+        "--seed",
+        "20260928",
+        "--output-dir",
+        "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+      ],
+      "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Mockito.json",
+      "round": 2,
+      "seed": 20260928,
+      "time_limit": 60,
+      "project": "Mockito",
+      "run_id": "20260928T054906748386Z_20630",
+      "success": 25,
+      "skipped": 0,
+      "failed": 13,
+      "total_duration_seconds": 2467.375,
+      "finished_at": "2026-09-28T06:30:14.142332+00:00"
+    },
+    "history": {
+      "20260928T054906748386Z_20630": {
+        "started_at": "2026-09-28T05:49:06.739120+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Mockito",
+          "--state-file",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Mockito.json",
+          "--time-limit",
+          "60",
+          "--jvm-memory",
+          "3000m",
+          "--round",
+          "2",
+          "--seed",
+          "20260928",
+          "--output-dir",
+          "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2"
+        ],
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/state/Mockito.json",
+        "round": 2,
+        "seed": 20260928,
+        "time_limit": 60,
+        "project": "Mockito",
+        "run_id": "20260928T054906748386Z_20630",
+        "success": 25,
+        "skipped": 0,
+        "failed": 13,
+        "total_duration_seconds": 2467.375,
+        "finished_at": "2026-09-28T06:30:14.142332+00:00"
+      }
+    }
+  },
+  "Mockito_2": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_2_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_2",
+    "classes_tested": [
+      "org.mockito.internal.util.Timer"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/util/RegressionTest6.java",
+      "org/mockito/internal/util/RegressionTest7.java",
+      "org/mockito/internal/util/RegressionTest0.java",
+      "org/mockito/internal/util/RegressionTest10.java",
+      "org/mockito/internal/util/RegressionTest11.java",
+      "org/mockito/internal/util/RegressionTest1.java",
+      "org/mockito/internal/util/RegressionTest2.java",
+      "org/mockito/internal/util/RegressionTest3.java",
+      "org/mockito/internal/util/RegressionTest8.java",
+      "org/mockito/internal/util/RegressionTest4.java",
+      "org/mockito/internal/util/RegressionTest5.java",
+      "org/mockito/internal/util/RegressionTest.java",
+      "org/mockito/internal/util/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T05:50:45.822403+00:00"
+  },
+  "Mockito_12": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_12_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_12",
+    "classes_tested": [
+      "org.mockito.internal.util.reflection.GenericMaster"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/util/reflection/RegressionTest0.java",
+      "org/mockito/internal/util/reflection/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T05:51:46.642197+00:00"
+  },
+  "Mockito_29": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_29_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_29",
+    "classes_tested": [
+      "org.mockito.internal.matchers.Same"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/matchers/RegressionTest6.java",
+      "org/mockito/internal/matchers/RegressionTest0.java",
+      "org/mockito/internal/matchers/RegressionTest1.java",
+      "org/mockito/internal/matchers/RegressionTest2.java",
+      "org/mockito/internal/matchers/RegressionTest3.java",
+      "org/mockito/internal/matchers/RegressionTest4.java",
+      "org/mockito/internal/matchers/RegressionTest5.java",
+      "org/mockito/internal/matchers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T05:53:11.065186+00:00"
+  },
+  "Mockito_22": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_22_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_22",
+    "classes_tested": [
+      "org.mockito.internal.matchers.Equality"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/matchers/RegressionTest6.java",
+      "org/mockito/internal/matchers/RegressionTest7.java",
+      "org/mockito/internal/matchers/RegressionTest0.java",
+      "org/mockito/internal/matchers/RegressionTest1.java",
+      "org/mockito/internal/matchers/RegressionTest2.java",
+      "org/mockito/internal/matchers/RegressionTest3.java",
+      "org/mockito/internal/matchers/RegressionTest8.java",
+      "org/mockito/internal/matchers/RegressionTest4.java",
+      "org/mockito/internal/matchers/RegressionTest5.java",
+      "org/mockito/internal/matchers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T05:54:31.304079+00:00"
+  },
+  "Mockito_15": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_15_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_15",
+    "classes_tested": [
+      "org.mockito.internal.configuration.injection.FinalMockCandidateFilter"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/configuration/injection/RegressionTest0.java",
+      "org/mockito/internal/configuration/injection/RegressionTest1.java",
+      "org/mockito/internal/configuration/injection/RegressionTest2.java",
+      "org/mockito/internal/configuration/injection/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T05:55:51.258513+00:00"
+  },
+  "Mockito_11": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_11_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_11",
+    "classes_tested": [
+      "org.mockito.internal.creation.DelegatingMethod"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/creation/RegressionTest0.java",
+      "org/mockito/internal/creation/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T05:57:52.722241+00:00"
+  },
+  "Mockito_21": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_21_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_21",
+    "classes_tested": [
+      "org.mockito.internal.creation.instance.ConstructorInstantiator"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/creation/instance/RegressionTest0.java",
+      "org/mockito/internal/creation/instance/RegressionTest1.java",
+      "org/mockito/internal/creation/instance/RegressionTest2.java",
+      "org/mockito/internal/creation/instance/RegressionTest3.java",
+      "org/mockito/internal/creation/instance/RegressionTest4.java",
+      "org/mockito/internal/creation/instance/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T05:59:58.907214+00:00"
+  },
+  "Mockito_38": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_38_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_38",
+    "classes_tested": [
+      "org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/verification/argumentmatching/RegressionTest0.java",
+      "org/mockito/internal/verification/argumentmatching/RegressionTest1.java",
+      "org/mockito/internal/verification/argumentmatching/RegressionTest2.java",
+      "org/mockito/internal/verification/argumentmatching/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:01:28.978117+00:00"
+  },
+  "Mockito_9": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.stubbing.answers.CallsRealMethods"
+    ],
+    "timestamp": "2026-09-28T06:01:54.303114+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_37": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_37_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_37",
+    "classes_tested": [
+      "org.mockito.internal.stubbing.answers.AnswersValidator"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/stubbing/answers/RegressionTest0.java",
+      "org/mockito/internal/stubbing/answers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:03:10.561611+00:00"
+  },
+  "Mockito_26": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_26_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_26",
+    "classes_tested": [
+      "org.mockito.internal.util.Primitives"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/util/RegressionTest0.java",
+      "org/mockito/internal/util/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:04:11.619778+00:00"
+  },
+  "Mockito_32": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_32_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_32",
+    "classes_tested": [
+      "org.mockito.internal.configuration.SpyAnnotationEngine"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/configuration/RegressionTest0.java",
+      "org/mockito/internal/configuration/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:05:26.770295+00:00"
+  },
+  "Mockito_31": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_31_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_31",
+    "classes_tested": [
+      "org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest0.java",
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:06:41.902313+00:00"
+  },
+  "Mockito_34": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_34_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_34",
+    "classes_tested": [
+      "org.mockito.internal.invocation.InvocationMatcher"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/invocation/RegressionTest0.java",
+      "org/mockito/internal/invocation/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:07:56.721413+00:00"
+  },
+  "Mockito_25": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_25_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_25",
+    "classes_tested": [
+      "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest0.java",
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:09:18.298551+00:00"
+  },
+  "Mockito_28": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_28_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_28",
+    "classes_tested": [
+      "org.mockito.internal.configuration.DefaultInjectionEngine"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/configuration/RegressionTest0.java",
+      "org/mockito/internal/configuration/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:10:36.684659+00:00"
+  },
+  "Mockito_27": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_27_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_27",
+    "classes_tested": [
+      "org.mockito.internal.util.MockUtil"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/util/RegressionTest6.java",
+      "org/mockito/internal/util/RegressionTest7.java",
+      "org/mockito/internal/util/RegressionTest0.java",
+      "org/mockito/internal/util/RegressionTest1.java",
+      "org/mockito/internal/util/RegressionTest2.java",
+      "org/mockito/internal/util/RegressionTest3.java",
+      "org/mockito/internal/util/RegressionTest4.java",
+      "org/mockito/internal/util/RegressionTest5.java",
+      "org/mockito/internal/util/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:12:08.426011+00:00"
+  },
+  "Mockito_33": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_33_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_33",
+    "classes_tested": [
+      "org.mockito.internal.invocation.InvocationMatcher"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/invocation/RegressionTest0.java",
+      "org/mockito/internal/invocation/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:13:24.201845+00:00"
+  },
+  "Mockito_24": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_24_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_24",
+    "classes_tested": [
+      "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest0.java",
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:14:53.447498+00:00"
+  },
+  "Mockito_18": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues"
+    ],
+    "timestamp": "2026-09-28T06:15:10.434734+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_23": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_23_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_23",
+    "classes_tested": [
+      "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest0.java",
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:16:39.422023+00:00"
+  },
+  "Mockito_20": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker"
+    ],
+    "timestamp": "2026-09-28T06:16:56.702910+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_3": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.invocation.InvocationMatcher"
+    ],
+    "timestamp": "2026-09-28T06:17:12.929491+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_13": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_13_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_13",
+    "classes_tested": [
+      "org.mockito.internal.MockHandler"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/RegressionTest0.java",
+      "org/mockito/internal/RegressionTest1.java",
+      "org/mockito/internal/RegressionTest2.java",
+      "org/mockito/internal/RegressionTest3.java",
+      "org/mockito/internal/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:18:31.824176+00:00"
+  },
+  "Mockito_5": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.verification.VerificationOverTimeImpl"
+    ],
+    "timestamp": "2026-09-28T06:18:47.803042+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_17": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_17_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_17",
+    "classes_tested": [
+      "org.mockito.internal.util.MockUtil",
+      "org.mockito.internal.creation.MockSettingsImpl"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/util/RegressionTest0.java",
+      "org/mockito/internal/util/RegressionTest1.java",
+      "org/mockito/internal/util/RegressionTest2.java",
+      "org/mockito/internal/util/RegressionTest3.java",
+      "org/mockito/internal/util/RegressionTest4.java",
+      "org/mockito/internal/util/RegressionTest5.java",
+      "org/mockito/internal/util/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:20:11.454035+00:00"
+  },
+  "Mockito_1": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.invocation.InvocationMatcher"
+    ],
+    "timestamp": "2026-09-28T06:20:28.926488+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_10": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_10_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_10",
+    "classes_tested": [
+      "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest0.java",
+      "org/mockito/internal/stubbing/defaultanswers/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:22:20.951043+00:00"
+  },
+  "Mockito_36": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_36_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_36",
+    "classes_tested": [
+      "org.mockito.internal.invocation.Invocation"
+    ],
+    "generated_tests": [
+      "org/mockito/internal/invocation/RegressionTest6.java",
+      "org/mockito/internal/invocation/RegressionTest7.java",
+      "org/mockito/internal/invocation/RegressionTest0.java",
+      "org/mockito/internal/invocation/RegressionTest10.java",
+      "org/mockito/internal/invocation/RegressionTest11.java",
+      "org/mockito/internal/invocation/RegressionTest1.java",
+      "org/mockito/internal/invocation/RegressionTest2.java",
+      "org/mockito/internal/invocation/RegressionTest12.java",
+      "org/mockito/internal/invocation/RegressionTest13.java",
+      "org/mockito/internal/invocation/RegressionTest3.java",
+      "org/mockito/internal/invocation/RegressionTest8.java",
+      "org/mockito/internal/invocation/RegressionTest14.java",
+      "org/mockito/internal/invocation/RegressionTest4.java",
+      "org/mockito/internal/invocation/RegressionTest5.java",
+      "org/mockito/internal/invocation/RegressionTest.java",
+      "org/mockito/internal/invocation/RegressionTest9.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:23:40.259212+00:00"
+  },
+  "Mockito_19": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.configuration.injection.PropertyAndSetterInjection",
+      "org.mockito.internal.configuration.injection.filter.MockCandidateFilter",
+      "org.mockito.internal.configuration.injection.filter.NameBasedCandidateFilter",
+      "org.mockito.internal.configuration.injection.filter.FinalMockCandidateFilter",
+      "org.mockito.internal.configuration.injection.filter.TypeBasedCandidateFilter"
+    ],
+    "timestamp": "2026-09-28T06:23:56.974517+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_14": {
+    "status": "FAILED",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstderr (ท้าย 5 บรรทัด):\nWARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/piyadaketmala/defects4j/framework/projects/Mockito/lib/cglib-and-asm-1.0.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)\nWARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\nstdout (ท้าย 20 บรรทัด):\norg.mockito.internal.MockitoCore mockitoCore16 = new org.mockito.internal.MockitoCore();\nmockitoCore16.validateMockitoUsage();\njava.lang.CharSequence[] charSequenceArray18 = new java.lang.CharSequence[] {  };\nmockitoCore16.reset(charSequenceArray18);\nmockitoCore10.reset((java.lang.Object[]) charSequenceArray18);\njava.io.Serializable[] serializableArray21 = new java.io.Serializable[] {  };\nmockitoCore10.reset(serializableArray21);\nmockitoCore10.validateMockitoUsage();\nmockitoCore10.validateMockitoUsage();\njava.util.AbstractCollection[] abstractCollectionArray26 = new java.util.AbstractCollection[ 0 ];\n@SuppressWarnings(\"unchecked\")\njava.util.AbstractCollection<org.mockito.stubbing.Answer>[] answerCollectionArray27 = (java.util.AbstractCollection<org.mockito.stubbing.Answer>[])abstractCollectionArray26;\nmockitoCore10.reset(answerCollectionArray27);\nmockitoCore6.reset(answerCollectionArray27);\nmockitoCore0.reset(answerCollectionArray27);\nmockitoCore0.validateMockitoUsage();\norg.mockito.stubbing.Answer answer32 = null;\norg.mockito.stubbing.Stubber stubber33 = mockitoCore0.doAnswer(answer32);\norg.mockito.stubbing.Answer answer34 = null;\norg.mockito.stubbing.Stubber stubber35 = mockitoCore0.doAnswer(answer34);",
+    "classes": [
+      "org.mockito.internal.MockHandler",
+      "org.mockito.internal.MockitoCore"
+    ],
+    "timestamp": "2026-09-28T06:25:11.364275+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_35": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_35_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_35",
+    "classes_tested": [
+      "org.mockito.Matchers"
+    ],
+    "generated_tests": [
+      "org/mockito/RegressionTest6.java",
+      "org/mockito/RegressionTest0.java",
+      "org/mockito/RegressionTest1.java",
+      "org/mockito/RegressionTest2.java",
+      "org/mockito/RegressionTest3.java",
+      "org/mockito/RegressionTest4.java",
+      "org/mockito/RegressionTest5.java",
+      "org/mockito/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:26:36.593920+00:00"
+  },
+  "Mockito_8": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.util.reflection.GenericMetadataSupport"
+    ],
+    "timestamp": "2026-09-28T06:26:53.131354+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_7": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.internal.util.reflection.GenericMetadataSupport"
+    ],
+    "timestamp": "2026-09-28T06:27:11.291998+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_30": {
+    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Mockito_30_buggy",
+    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Mockito_30",
+    "classes_tested": [
+      "org.mockito.exceptions.Reporter",
+      "org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls"
+    ],
+    "generated_tests": [
+      "org/mockito/exceptions/ErrorTest0.java",
+      "org/mockito/exceptions/RegressionTest0.java",
+      "org/mockito/exceptions/ErrorTest.java",
+      "org/mockito/exceptions/RegressionTest1.java",
+      "org/mockito/exceptions/RegressionTest2.java",
+      "org/mockito/exceptions/RegressionTest.java"
+    ],
+    "round": 2,
+    "seed": 20260928,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-09-28T06:28:26.944255+00:00"
+  },
+  "Mockito_6": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.Matchers"
+    ],
+    "timestamp": "2026-09-28T06:28:43.206759+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_4": {
+    "status": "FAILED",
+    "error": "Missing compiled classes directory",
+    "classes": [
+      "org.mockito.exceptions.Reporter"
+    ],
+    "timestamp": "2026-09-28T06:28:59.460333+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  },
+  "Mockito_16": {
+    "status": "FAILED",
+    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstderr (ท้าย 5 บรรทัด):\nWARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/piyadaketmala/defects4j/framework/projects/Mockito/lib/cglib-and-asm-1.0.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)\nWARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.MockitoCore mockitoCore0 = new org.mockito.internal.MockitoCore();\norg.mockito.stubbing.Stubber[] stubberArray1 = new org.mockito.stubbing.Stubber[] {  };\norg.mockito.Mockito.reset(stubberArray1);\nmockitoCore0.reset(stubberArray1);\norg.mockito.internal.MockitoCore mockitoCore4 = org.mockito.Mockito.spy(mockitoCore0);\njava.lang.Class[][][] classArray6 = new java.lang.Class[ 0 ][][];\n@SuppressWarnings(\"unchecked\")\njava.lang.Class<?>[][][] wildcardClassArray7 = (java.lang.Class<?>[][][])classArray6;\norg.mockito.Mockito.reset(wildcardClassArray7);\nmockitoCore4.reset((java.io.Serializable[]) wildcardClassArray7);\norg.mockito.internal.progress.IOngoingStubbing iOngoingStubbing10 = mockitoCore4.stub();\norg.mockito.internal.progress.IOngoingStubbing iOngoingStubbing11 = mockitoCore4.stub();\njava.lang.Object[] objArray12 = null;\nmockitoCore4.verifyNoMoreInteractions(objArray12);",
+    "classes": [
+      "org.mockito.Mockito",
+      "org.mockito.internal.MockitoCore"
+    ],
+    "timestamp": "2026-09-28T06:30:14.141439+00:00",
+    "round": 2,
+    "seed": 20260928,
+    "time_limit": 60,
+    "seed_source": "EXPLICIT"
+  }
+}

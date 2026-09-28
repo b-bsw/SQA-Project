@@ -1,0 +1,9025 @@
+package org.apache.commons.compress.archivers.tar;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class RegressionTest9 {
+
+    public static boolean debug = false;
+
+    public void assertBooleanArrayEquals(boolean[] expectedArray, boolean[] actualArray) {
+        if (expectedArray.length != actualArray.length) {
+            throw new AssertionError("Array lengths differ: " + expectedArray.length + " != " + actualArray.length);
+        }
+        for (int i = 0; i < expectedArray.length; i++) {
+            if (expectedArray[i] != actualArray[i]) {
+                throw new AssertionError("Arrays differ at index " + i + ": " + expectedArray[i] + " != " + actualArray[i]);
+            }
+        }
+    }
+
+    @Test
+    public void test4501() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4501");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (int) (byte) -1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray24 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, (int) ' ', (-1));
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 0, (int) (short) 0, zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray5, (int) (byte) 1, 1, zipEncoding40);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (short) 0);
+        long long47 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean48 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long51 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 10);
+        long long52 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long53 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 104, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 2 + "'", int44 == 2);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 115L + "'", long47 == 115L);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertTrue("'" + long51 + "' != '" + 0L + "'", long51 == 0L);
+        org.junit.Assert.assertTrue("'" + long52 + "' != '" + 115L + "'", long52 == 115L);
+        org.junit.Assert.assertTrue("'" + long53 + "' != '" + 115L + "'", long53 == 115L);
+    }
+
+    @Test
+    public void test4502() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4502");
+        byte[] byteArray2 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding5 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str6 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 1, (int) (byte) 1, zipEncoding5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray2, 0);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) -1, (int) (byte) 0);
+        byte[] byteArray19 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        int int24 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray19, (int) (short) 0, (int) (byte) 1);
+        long long27 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray19, 0, (int) (byte) 100);
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, (int) ' ', (int) (byte) 0, zipEncoding40);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 10, (int) (byte) -1, zipEncoding40);
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        byte[] byteArray54 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean55 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        boolean boolean56 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        int int59 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray54, (int) (short) 0, (int) (byte) 1);
+        long long62 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray54, 0, (int) (byte) 100);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        int int66 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray54, (int) (short) 1, (int) (short) 0);
+        long long67 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray54);
+        byte[] byteArray72 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding75 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray72, 1, (int) (byte) 1, zipEncoding75);
+        boolean boolean77 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray72);
+        boolean boolean79 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray72, 0);
+        byte[] byteArray84 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding87 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str88 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray84, 1, (int) (byte) 1, zipEncoding87);
+        java.lang.String str89 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray72, 0, 1, zipEncoding87);
+        java.lang.String str90 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray54, 100, (int) (short) -1, zipEncoding87);
+        java.lang.String str91 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 100, 0, zipEncoding87);
+        java.lang.Class<?> wildcardClass92 = byteArray2.getClass();
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "\001" + "'", str6, "\001");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 1 + "'", int24 == 1);
+        org.junit.Assert.assertTrue("'" + long27 + "' != '" + 0L + "'", long27 == 0L);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 11L + "'", long45 == 11L);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertNotNull(byteArray54);
+        org.junit.Assert.assertArrayEquals(byteArray54, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean55 + "' != '" + false + "'", boolean55 == false);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + 1 + "'", int59 == 1);
+        org.junit.Assert.assertTrue("'" + long62 + "' != '" + 0L + "'", long62 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + true + "'", boolean63 == true);
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + 1 + "'", int66 == 1);
+        org.junit.Assert.assertTrue("'" + long67 + "' != '" + 256L + "'", long67 == 256L);
+        org.junit.Assert.assertNotNull(byteArray72);
+        org.junit.Assert.assertArrayEquals(byteArray72, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding75);
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "\001" + "'", str76, "\001");
+        org.junit.Assert.assertTrue("'" + boolean77 + "' != '" + false + "'", boolean77 == false);
+        org.junit.Assert.assertTrue("'" + boolean79 + "' != '" + false + "'", boolean79 == false);
+        org.junit.Assert.assertNotNull(byteArray84);
+        org.junit.Assert.assertArrayEquals(byteArray84, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding87);
+        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "\001" + "'", str88, "\001");
+        org.junit.Assert.assertEquals("'" + str89 + "' != '" + "\n" + "'", str89, "\n");
+        org.junit.Assert.assertEquals("'" + str90 + "' != '" + "" + "'", str90, "");
+        org.junit.Assert.assertEquals("'" + str91 + "' != '" + "" + "'", str91, "");
+        org.junit.Assert.assertNotNull(wildcardClass92);
+    }
+
+    @Test
+    public void test4503() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4503");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long12 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int16 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes((long) (byte) 0, byteArray5, (int) (short) 1, (int) 'a');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 95 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 21L + "'", long7 == 21L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 21L + "'", long8 == 21L);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 21L + "'", long12 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test4504() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4504");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 0);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        java.lang.Class<?> wildcardClass19 = byteArray5.getClass();
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 320L + "'", long17 == 320L);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 320L + "'", long18 == 320L);
+        org.junit.Assert.assertNotNull(wildcardClass19);
+    }
+
+    @Test
+    public void test4505() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4505");
+        byte[] byteArray2 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding5 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str6 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 1, (int) (byte) 1, zipEncoding5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray2, 0);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) -1, (int) (byte) 0);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long17 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray2, (int) (byte) 0, 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length 1 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "\001" + "'", str6, "\001");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 11L + "'", long13 == 11L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test4506() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4506");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int15 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd", byteArray5, (int) (byte) 0, 2);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 100, (byte) 100, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 21L + "'", long7 == 21L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 21L + "'", long8 == 21L);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 2 + "'", int15 == 2);
+    }
+
+    @Test
+    public void test4507() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4507");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray14 = new byte[] { (byte) 10 };
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray14);
+        byte[] byteArray20 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding23 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, 1, (int) (byte) 1, zipEncoding23);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray14, (int) (byte) 0, (int) (byte) -1, zipEncoding23);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 0, (-1), zipEncoding23);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, 0);
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        int int33 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(0L, byteArray4, (int) (short) 0, 3);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long36 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, 0, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length 0 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 48, (byte) 48, (byte) 32 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 10L + "'", long15 == 10L);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding23);
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "\001" + "'", str24, "\001");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + 3 + "'", int33 == 3);
+    }
+
+    @Test
+    public void test4508() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4508");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, (int) (byte) 0, (int) (byte) -1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 3);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 1);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 100, (int) (short) -1);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long27 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, (int) (short) 10, (int) (short) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length 1 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 21L + "'", long13 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+    }
+
+    @Test
+    public void test4509() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4509");
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, (int) ' ', (-1));
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, (int) (byte) -1, 0);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray8);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding18 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray8, 0, (int) (short) 0, zipEncoding18);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray8);
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 3, (int) (short) -1);
+        int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ufffd", byteArray8, 2, 1);
+        byte[] byteArray34 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean35 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray34);
+        java.lang.String str38 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray34, 1, (int) (byte) -1);
+        int int41 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray34, (int) (byte) 0, (int) (byte) -1);
+        long long42 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray34);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray34);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray34, 3);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray34);
+        boolean boolean48 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray34, 1);
+        byte[] byteArray54 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding57 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray54, (int) (short) -1, (int) (short) 0, zipEncoding57);
+        boolean boolean59 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        boolean boolean60 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        boolean boolean62 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray54, (int) (short) 0);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        long long64 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray54);
+        byte[] byteArray68 = new byte[] { (byte) 10 };
+        long long69 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray68);
+        byte[] byteArray74 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding77 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str78 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray74, 1, (int) (byte) 1, zipEncoding77);
+        java.lang.String str79 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray68, (int) (byte) 0, (int) (byte) -1, zipEncoding77);
+        long long80 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray68);
+        long long81 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray68);
+        byte[] byteArray86 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding89 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str90 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray86, 1, (int) (byte) 1, zipEncoding89);
+        java.lang.String str91 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray68, (int) (short) 1, (int) (byte) 0, zipEncoding89);
+        java.lang.String str92 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray54, (int) (short) 100, (-1), zipEncoding89);
+        java.lang.String str93 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray34, (-1), (int) (byte) 0, zipEncoding89);
+        int int94 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("01\n", byteArray8, (int) (short) 0, (int) (short) 1, zipEncoding89);
+        boolean boolean95 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray8);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 48, (byte) 100, (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(zipEncoding18);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 0 + "'", int19 == 0);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + 3 + "'", int26 == 3);
+        org.junit.Assert.assertNotNull(byteArray34);
+        org.junit.Assert.assertArrayEquals(byteArray34, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean35 + "' != '" + false + "'", boolean35 == false);
+        org.junit.Assert.assertEquals("'" + str38 + "' != '" + "" + "'", str38, "");
+        org.junit.Assert.assertTrue("'" + int41 + "' != '" + (-1) + "'", int41 == (-1));
+        org.junit.Assert.assertTrue("'" + long42 + "' != '" + 21L + "'", long42 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertNotNull(byteArray54);
+        org.junit.Assert.assertArrayEquals(byteArray54, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding57);
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+        org.junit.Assert.assertTrue("'" + boolean59 + "' != '" + false + "'", boolean59 == false);
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertTrue("'" + boolean62 + "' != '" + false + "'", boolean62 == false);
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + long64 + "' != '" + 110L + "'", long64 == 110L);
+        org.junit.Assert.assertNotNull(byteArray68);
+        org.junit.Assert.assertArrayEquals(byteArray68, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long69 + "' != '" + 10L + "'", long69 == 10L);
+        org.junit.Assert.assertNotNull(byteArray74);
+        org.junit.Assert.assertArrayEquals(byteArray74, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding77);
+        org.junit.Assert.assertEquals("'" + str78 + "' != '" + "\001" + "'", str78, "\001");
+        org.junit.Assert.assertEquals("'" + str79 + "' != '" + "" + "'", str79, "");
+        org.junit.Assert.assertTrue("'" + long80 + "' != '" + 10L + "'", long80 == 10L);
+        org.junit.Assert.assertTrue("'" + long81 + "' != '" + 10L + "'", long81 == 10L);
+        org.junit.Assert.assertNotNull(byteArray86);
+        org.junit.Assert.assertArrayEquals(byteArray86, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding89);
+        org.junit.Assert.assertEquals("'" + str90 + "' != '" + "\001" + "'", str90, "\001");
+        org.junit.Assert.assertEquals("'" + str91 + "' != '" + "" + "'", str91, "");
+        org.junit.Assert.assertEquals("'" + str92 + "' != '" + "" + "'", str92, "");
+        org.junit.Assert.assertEquals("'" + str93 + "' != '" + "" + "'", str93, "");
+        org.junit.Assert.assertTrue("'" + int94 + "' != '" + 1 + "'", int94 == 1);
+        org.junit.Assert.assertTrue("'" + boolean95 + "' != '" + false + "'", boolean95 == false);
+    }
+
+    @Test
+    public void test4510() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4510");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (short) 0);
+        byte[] byteArray21 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) ' ', (-1));
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) (byte) -1, 0);
+        byte[] byteArray35 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding38 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, (int) (short) -1, (int) (short) 0, zipEncoding38);
+        boolean boolean40 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        boolean boolean41 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        byte[] byteArray45 = new byte[] { (byte) 10 };
+        long long46 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray45);
+        byte[] byteArray51 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding54 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray51, 1, (int) (byte) 1, zipEncoding54);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray45, (int) (byte) 0, (int) (byte) -1, zipEncoding54);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, 0, (-1), zipEncoding54);
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, 1, 0);
+        boolean boolean61 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        java.lang.String str64 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray35, 0, 2);
+        byte[] byteArray72 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding75 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray72, 1, (int) (byte) 1, zipEncoding75);
+        boolean boolean77 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray72);
+        boolean boolean79 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray72, 0);
+        byte[] byteArray84 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding87 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str88 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray84, 1, (int) (byte) 1, zipEncoding87);
+        java.lang.String str89 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray72, 0, 1, zipEncoding87);
+        int int90 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray35, (int) (byte) 0, (int) (byte) -1, zipEncoding87);
+        int int91 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ufffd", byteArray21, (int) (short) 1, 1, zipEncoding87);
+        java.lang.String str92 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) 1, (int) (byte) 1, zipEncoding87);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (-1), byteArray4, (int) (short) 10, (int) (byte) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 19 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 10, (byte) -3, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] { (byte) 50, (byte) 53, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding38);
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "" + "'", str39, "");
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + false + "'", boolean41 == false);
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long46 + "' != '" + 10L + "'", long46 == 10L);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding54);
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "\001" + "'", str55, "\001");
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "" + "'", str60, "");
+        org.junit.Assert.assertTrue("'" + boolean61 + "' != '" + false + "'", boolean61 == false);
+        org.junit.Assert.assertEquals("'" + str64 + "' != '" + "" + "'", str64, "");
+        org.junit.Assert.assertNotNull(byteArray72);
+        org.junit.Assert.assertArrayEquals(byteArray72, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding75);
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "\001" + "'", str76, "\001");
+        org.junit.Assert.assertTrue("'" + boolean77 + "' != '" + false + "'", boolean77 == false);
+        org.junit.Assert.assertTrue("'" + boolean79 + "' != '" + false + "'", boolean79 == false);
+        org.junit.Assert.assertNotNull(byteArray84);
+        org.junit.Assert.assertArrayEquals(byteArray84, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding87);
+        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "\001" + "'", str88, "\001");
+        org.junit.Assert.assertEquals("'" + str89 + "' != '" + "\n" + "'", str89, "\n");
+        org.junit.Assert.assertTrue("'" + int90 + "' != '" + (-1) + "'", int90 == (-1));
+        org.junit.Assert.assertTrue("'" + int91 + "' != '" + 2 + "'", int91 == 2);
+        org.junit.Assert.assertEquals("'" + str92 + "' != '" + "\n" + "'", str92, "\n");
+    }
+
+    @Test
+    public void test4511() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4511");
+        byte[] byteArray3 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (short) -1, (int) (short) 0, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 10, (-1));
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 3, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long17 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray3, 100, (int) (byte) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length 1 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test4512() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4512");
+        byte[] byteArray3 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (short) -1, (int) (short) 0, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        byte[] byteArray13 = new byte[] { (byte) 10 };
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray13);
+        byte[] byteArray19 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding22 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 1, (int) (byte) 1, zipEncoding22);
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray13, (int) (byte) 0, (int) (byte) -1, zipEncoding22);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 0, (-1), zipEncoding22);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, 0);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long31 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        java.lang.Class<?> wildcardClass33 = byteArray3.getClass();
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding22);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "\001" + "'", str23, "\001");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + long31 + "' != '" + 110L + "'", long31 == 110L);
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 110L + "'", long32 == 110L);
+        org.junit.Assert.assertNotNull(wildcardClass33);
+    }
+
+    @Test
+    public void test4513() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4513");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long6 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, 4, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 4 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long6 + "' != '" + 21L + "'", long6 == 21L);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 21L + "'", long7 == 21L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 21L + "'", long8 == 21L);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+    }
+
+    @Test
+    public void test4514() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4514");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray19 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 1, (int) (byte) -1);
+        int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray19, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray34 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray34, (int) ' ', (-1));
+        byte[] byteArray41 = new byte[] { (byte) 10 };
+        long long42 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray41);
+        byte[] byteArray47 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding50 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray47, 1, (int) (byte) 1, zipEncoding50);
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, (int) (byte) 0, (int) (byte) -1, zipEncoding50);
+        java.lang.String str53 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray34, 0, (int) (short) 0, zipEncoding50);
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, (int) 'a', (int) (byte) -1, zipEncoding50);
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) '4', (int) (byte) 0, zipEncoding50);
+        boolean boolean56 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long57 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean58 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int61 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray5, (int) (byte) 100, (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 100 out of bounds for byte[4]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNotNull(byteArray34);
+        org.junit.Assert.assertArrayEquals(byteArray34, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "" + "'", str37, "");
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long42 + "' != '" + 10L + "'", long42 == 10L);
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding50);
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "\001" + "'", str51, "\001");
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "" + "'", str52, "");
+        org.junit.Assert.assertEquals("'" + str53 + "' != '" + "" + "'", str53, "");
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "" + "'", str54, "");
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "" + "'", str55, "");
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertTrue("'" + long57 + "' != '" + 21L + "'", long57 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean58 + "' != '" + false + "'", boolean58 == false);
+    }
+
+    @Test
+    public void test4515() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4515");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, (int) (byte) 0, (int) (byte) -1);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) -1, (-1));
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (short) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 100 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test4516() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4516");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, (int) (short) 0, (int) ' ');
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 3);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        byte[] byteArray28 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray28);
+        java.lang.String str32 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray28, 1, (int) (byte) -1);
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray28);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray28);
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray28, 2, (int) (short) -1);
+        byte[] byteArray45 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray45);
+        java.lang.String str49 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray45, 1, (int) (byte) -1);
+        int int52 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray45, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray60 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray60, (int) ' ', (-1));
+        byte[] byteArray67 = new byte[] { (byte) 10 };
+        long long68 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray67);
+        byte[] byteArray73 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding76 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str77 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray73, 1, (int) (byte) 1, zipEncoding76);
+        java.lang.String str78 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray67, (int) (byte) 0, (int) (byte) -1, zipEncoding76);
+        java.lang.String str79 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray60, 0, (int) (short) 0, zipEncoding76);
+        java.lang.String str80 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray45, (int) 'a', (int) (byte) -1, zipEncoding76);
+        int int81 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray28, 1, (int) (byte) 0, zipEncoding76);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str82 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 3, 3, zipEncoding76);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 21L + "'", long20 == 21L);
+        org.junit.Assert.assertNotNull(byteArray28);
+        org.junit.Assert.assertArrayEquals(byteArray28, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertEquals("'" + str32 + "' != '" + "" + "'", str32, "");
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 21L + "'", long33 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "" + "'", str37, "");
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertEquals("'" + str49 + "' != '" + "" + "'", str49, "");
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
+        org.junit.Assert.assertNotNull(byteArray60);
+        org.junit.Assert.assertArrayEquals(byteArray60, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "" + "'", str63, "");
+        org.junit.Assert.assertNotNull(byteArray67);
+        org.junit.Assert.assertArrayEquals(byteArray67, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 10L + "'", long68 == 10L);
+        org.junit.Assert.assertNotNull(byteArray73);
+        org.junit.Assert.assertArrayEquals(byteArray73, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding76);
+        org.junit.Assert.assertEquals("'" + str77 + "' != '" + "\001" + "'", str77, "\001");
+        org.junit.Assert.assertEquals("'" + str78 + "' != '" + "" + "'", str78, "");
+        org.junit.Assert.assertEquals("'" + str79 + "' != '" + "" + "'", str79, "");
+        org.junit.Assert.assertEquals("'" + str80 + "' != '" + "" + "'", str80, "");
+        org.junit.Assert.assertTrue("'" + int81 + "' != '" + 1 + "'", int81 == 1);
+    }
+
+    @Test
+    public void test4517() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4517");
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (-1));
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, 0);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray7, (int) (byte) 0);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray7, (int) (short) 1, 0);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        byte[] byteArray24 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding27 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 1, (int) (byte) 1, zipEncoding27);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray24);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray24, 0);
+        byte[] byteArray36 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding39 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 1, (int) (byte) 1, zipEncoding39);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 0, 1, zipEncoding39);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) 1, (int) (short) -1, zipEncoding39);
+        long long43 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int47 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes((long) (-1), byteArray7, 0, (int) ' ');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 29 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding27);
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "\001" + "'", str28, "\001");
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding39);
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "\001" + "'", str40, "\001");
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\n" + "'", str41, "\n");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertTrue("'" + long43 + "' != '" + 320L + "'", long43 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+    }
+
+    @Test
+    public void test4518() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4518");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        byte[] byteArray18 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray18, (int) (short) 0, (int) (byte) 1);
+        long long26 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray18, 0, (int) (byte) 100);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        int int30 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray18, (int) (short) 1, (int) (short) 0);
+        byte[] byteArray35 = new byte[] { (byte) 10 };
+        long long36 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray35);
+        byte[] byteArray41 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding44 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, 1, (int) (byte) 1, zipEncoding44);
+        java.lang.String str46 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, (int) (byte) 0, (int) (byte) -1, zipEncoding44);
+        long long47 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray35);
+        boolean boolean48 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        byte[] byteArray54 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding57 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray54, (int) (short) -1, (int) (short) 0, zipEncoding57);
+        boolean boolean59 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        boolean boolean60 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray54);
+        byte[] byteArray64 = new byte[] { (byte) 10 };
+        long long65 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray64);
+        byte[] byteArray70 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding73 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray70, 1, (int) (byte) 1, zipEncoding73);
+        java.lang.String str75 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray64, (int) (byte) 0, (int) (byte) -1, zipEncoding73);
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray54, 0, (-1), zipEncoding73);
+        int int77 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray35, (int) (byte) 0, (int) (byte) 1, zipEncoding73);
+        byte[] byteArray82 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding85 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str86 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray82, 1, (int) (byte) 1, zipEncoding85);
+        java.lang.String str87 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, (int) (short) 10, (int) (byte) -1, zipEncoding85);
+        int int88 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray18, (int) (short) 0, 2, zipEncoding85);
+        java.lang.String str89 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 0, (int) (short) 0, zipEncoding85);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int92 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray3, (int) (short) 1, 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 2 out of bounds for length 2");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 11L + "'", long9 == 11L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 1, (byte) 0, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 0L + "'", long26 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'", boolean27 == true);
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + 1 + "'", int30 == 1);
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long36 + "' != '" + 10L + "'", long36 == 10L);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding44);
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "\001" + "'", str45, "\001");
+        org.junit.Assert.assertEquals("'" + str46 + "' != '" + "" + "'", str46, "");
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 10L + "'", long47 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertNotNull(byteArray54);
+        org.junit.Assert.assertArrayEquals(byteArray54, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding57);
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+        org.junit.Assert.assertTrue("'" + boolean59 + "' != '" + false + "'", boolean59 == false);
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertNotNull(byteArray64);
+        org.junit.Assert.assertArrayEquals(byteArray64, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long65 + "' != '" + 10L + "'", long65 == 10L);
+        org.junit.Assert.assertNotNull(byteArray70);
+        org.junit.Assert.assertArrayEquals(byteArray70, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding73);
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "\001" + "'", str74, "\001");
+        org.junit.Assert.assertEquals("'" + str75 + "' != '" + "" + "'", str75, "");
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "" + "'", str76, "");
+        org.junit.Assert.assertTrue("'" + int77 + "' != '" + 1 + "'", int77 == 1);
+        org.junit.Assert.assertNotNull(byteArray82);
+        org.junit.Assert.assertArrayEquals(byteArray82, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding85);
+        org.junit.Assert.assertEquals("'" + str86 + "' != '" + "\001" + "'", str86, "\001");
+        org.junit.Assert.assertEquals("'" + str87 + "' != '" + "" + "'", str87, "");
+        org.junit.Assert.assertTrue("'" + int88 + "' != '" + 2 + "'", int88 == 2);
+        org.junit.Assert.assertEquals("'" + str89 + "' != '" + "" + "'", str89, "");
+    }
+
+    @Test
+    public void test4519() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4519");
+        byte[] byteArray6 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(0L, byteArray6, 0, 1);
+        int int14 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n\001", byteArray6, 2, (int) (byte) -1);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int20 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(60L, byteArray6, (int) (byte) 100, (int) (short) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 197 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 48, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 1 + "'", int14 == 1);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+    }
+
+    @Test
+    public void test4520() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4520");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int15 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(104L, byteArray5, 3, (int) (short) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 104=150 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 256L + "'", long11 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+    }
+
+    @Test
+    public void test4521() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4521");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (byte) 1);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 0, (int) (byte) -1);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str19 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 100, 0);
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) 0);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 21L + "'", long15 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+    }
+
+    @Test
+    public void test4522() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4522");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (byte) 1);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 0, (int) (byte) -1);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray4, (int) (byte) 0, (int) 'a');
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 0L + "'", long18 == 0L);
+    }
+
+    @Test
+    public void test4523() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4523");
+        byte[] byteArray8 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray8);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) -1);
+        int int15 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray8, (int) (byte) 0, (int) (byte) -1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray8);
+        byte[] byteArray24 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray24);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 1, (int) (byte) -1);
+        int int31 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray24, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray39 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray39, (int) ' ', (-1));
+        byte[] byteArray46 = new byte[] { (byte) 10 };
+        long long47 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray46);
+        byte[] byteArray52 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding55 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, 1, (int) (byte) 1, zipEncoding55);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray46, (int) (byte) 0, (int) (byte) -1, zipEncoding55);
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray39, 0, (int) (short) 0, zipEncoding55);
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, (int) 'a', (int) (byte) -1, zipEncoding55);
+        int int60 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray8, 2, (int) (byte) 1, zipEncoding55);
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, (int) (byte) 10, (-1));
+        boolean boolean65 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray8, (int) (short) 0);
+        boolean boolean66 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray8);
+        long long67 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray8);
+        int int70 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(304L, byteArray8, 0, 4);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (short) 100, byteArray8, (int) (short) 10, (int) ' ');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 41 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 52, (byte) 54, (byte) 48, (byte) 32 });
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertTrue("'" + int31 + "' != '" + (-1) + "'", int31 == (-1));
+        org.junit.Assert.assertNotNull(byteArray39);
+        org.junit.Assert.assertArrayEquals(byteArray39, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 10L + "'", long47 == 10L);
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding55);
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "\001" + "'", str56, "\001");
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "" + "'", str59, "");
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + 3 + "'", int60 == 3);
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "" + "'", str63, "");
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + false + "'", boolean65 == false);
+        org.junit.Assert.assertTrue("'" + boolean66 + "' != '" + false + "'", boolean66 == false);
+        org.junit.Assert.assertTrue("'" + long67 + "' != '" + 20L + "'", long67 == 20L);
+        org.junit.Assert.assertTrue("'" + int70 + "' != '" + 4 + "'", int70 == 4);
+    }
+
+    @Test
+    public void test4524() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4524");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long6 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 3);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long6 + "' != '" + 21L + "'", long6 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+    }
+
+    @Test
+    public void test4525() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4525");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray6, (int) (short) 0, (int) ' ');
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((long) (byte) -1, byteArray6, 0, 3);
+        byte[] byteArray29 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        int int34 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray29, (int) (short) 0, (int) (byte) 1);
+        long long37 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray29, 0, (int) (byte) 100);
+        byte[] byteArray44 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray44);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray44);
+        boolean boolean47 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray44);
+        boolean boolean48 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray44);
+        byte[] byteArray53 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding56 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray53, 1, (int) (byte) 1, zipEncoding56);
+        int int58 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray44, 2, (int) (byte) 1, zipEncoding56);
+        int int59 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000\n", byteArray29, (int) (byte) 0, 0, zipEncoding56);
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) 0, zipEncoding56);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int63 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(356L, byteArray6, (int) '#', (int) (short) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 42 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) -1, (byte) -1, (byte) -1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 21L + "'", long18 == 21L);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 3 + "'", int21 == 3);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertTrue("'" + int34 + "' != '" + 1 + "'", int34 == 1);
+        org.junit.Assert.assertTrue("'" + long37 + "' != '" + 0L + "'", long37 == 0L);
+        org.junit.Assert.assertNotNull(byteArray44);
+        org.junit.Assert.assertArrayEquals(byteArray44, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + false + "'", boolean47 == false);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertNotNull(byteArray53);
+        org.junit.Assert.assertArrayEquals(byteArray53, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding56);
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "\001" + "'", str57, "\001");
+        org.junit.Assert.assertTrue("'" + int58 + "' != '" + 3 + "'", int58 == 3);
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + 0 + "'", int59 == 0);
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "" + "'", str60, "");
+    }
+
+    @Test
+    public void test4526() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4526");
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (-1));
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray7, (int) (short) 1);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        int int22 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray7, (int) (short) 0, 0);
+        long long23 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes((long) (byte) 10, byteArray7, (int) (short) 10, (int) ' ');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 39 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 320L + "'", long18 == 320L);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 320L + "'", long19 == 320L);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'", int22 == 0);
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 320L + "'", long23 == 320L);
+    }
+
+    @Test
+    public void test4527() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4527");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (int) (byte) -1);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(1L, byteArray5, (int) (byte) -1, 3);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -1 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 21L + "'", long17 == 21L);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 21L + "'", long18 == 21L);
+    }
+
+    @Test
+    public void test4528() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4528");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray5, (int) (short) 0, (int) ' ');
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 3);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(160L, byteArray5, 0, (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 160=240 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 21L + "'", long15 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 21L + "'", long17 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 21L + "'", long20 == 21L);
+    }
+
+    @Test
+    public void test4529() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4529");
+        byte[] byteArray6 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int11 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 0, (int) (byte) 1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 0, (int) (byte) 100);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 1, (int) (short) 0);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) 100, (int) (short) 0);
+        long long22 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes(0L, byteArray6, 0, 4);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 3 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 48, (byte) 48, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 1 + "'", int11 == 1);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 256L + "'", long22 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'", boolean23 == true);
+    }
+
+    @Test
+    public void test4530() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4530");
+        byte[] byteArray3 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean4 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 2, (int) (byte) -1);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding15 = null;
+        java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) -1, (int) (byte) -1, zipEncoding15);
+        byte[] byteArray21 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 1, (int) (byte) 1, zipEncoding24);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray21, 0);
+        byte[] byteArray33 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding36 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, 1, (int) (byte) 1, zipEncoding36);
+        java.lang.String str38 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 0, 1, zipEncoding36);
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) '4', (int) (byte) 0, zipEncoding36);
+        boolean boolean40 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 356L + "'", long8 == 356L);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "\001" + "'", str25, "\001");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding36);
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "\001" + "'", str37, "\001");
+        org.junit.Assert.assertEquals("'" + str38 + "' != '" + "\n" + "'", str38, "\n");
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "" + "'", str39, "");
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+    }
+
+    @Test
+    public void test4531() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4531");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray13 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding16 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray13, 1, (int) (byte) 1, zipEncoding16);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, 2, (int) (byte) 1, zipEncoding16);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (byte) 0, 0);
+        long long23 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long24 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long25 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long26 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding16);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "\001" + "'", str17, "\001");
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 3 + "'", int18 == 3);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 101L + "'", long23 == 101L);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 101L + "'", long24 == 101L);
+        org.junit.Assert.assertTrue("'" + long25 + "' != '" + 101L + "'", long25 == 101L);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 101L + "'", long26 == 101L);
+    }
+
+    @Test
+    public void test4532() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4532");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 0);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) -1, (int) (byte) 0);
+        byte[] byteArray20 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray20);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray20);
+        int int25 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray20, (int) (short) 0, (int) (byte) 1);
+        long long28 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray20, 0, (int) (byte) 100);
+        byte[] byteArray32 = new byte[] { (byte) 10 };
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray32);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 1, (int) (byte) 1, zipEncoding41);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, (int) (byte) 0, (int) (byte) -1, zipEncoding41);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, (int) ' ', (int) (byte) 0, zipEncoding41);
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 10, (int) (byte) -1, zipEncoding41);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(0L, byteArray3, (int) (short) 1, (int) (short) 1);
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) ' ', (int) (byte) 0);
+        boolean boolean52 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean54 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 100 out of bounds for length 2");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 48 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + 1 + "'", int25 == 1);
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 0L + "'", long28 == 0L);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 10L + "'", long33 == 10L);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding41);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "\001" + "'", str42, "\001");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "" + "'", str45, "");
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "" + "'", str51, "");
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+    }
+
+    @Test
+    public void test4533() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4533");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int16 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes(100L, byteArray5, (int) (byte) 10, (int) (short) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 17 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 256L + "'", long11 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+    }
+
+    @Test
+    public void test4534() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4534");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (byte) -1, byteArray5, (int) (byte) 0, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: -1=1777777777777777777777 will not fit in octal number buffer of length 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 55, (byte) 55, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+    }
+
+    @Test
+    public void test4535() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4535");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, (int) (byte) 1);
+        java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 0, (int) (byte) -1);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        byte[] byteArray27 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, (int) ' ', (-1));
+        java.lang.String str33 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, (int) (byte) -1, 0);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray27);
+        long long35 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray27);
+        long long36 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray27);
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, (int) ' ', (int) (byte) -1);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, 1, (int) (short) -1);
+        long long43 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray27);
+        byte[] byteArray52 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean53 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, 1, (int) (byte) -1);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (short) 1, byteArray52, 0, 2);
+        byte[] byteArray66 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding69 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str70 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray66, (int) (short) -1, (int) (short) 0, zipEncoding69);
+        boolean boolean71 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray66);
+        boolean boolean72 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray66);
+        byte[] byteArray76 = new byte[] { (byte) 10 };
+        long long77 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray76);
+        byte[] byteArray82 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding85 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str86 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray82, 1, (int) (byte) 1, zipEncoding85);
+        java.lang.String str87 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray76, (int) (byte) 0, (int) (byte) -1, zipEncoding85);
+        java.lang.String str88 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray66, 0, (-1), zipEncoding85);
+        int int89 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray52, (int) (byte) 0, (int) (byte) 1, zipEncoding85);
+        int int90 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray27, 3, (-1), zipEncoding85);
+        int int91 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, 0, (int) (byte) 1, zipEncoding85);
+        long long92 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int95 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes((long) (short) 1, byteArray6, (int) (byte) 100, (int) (byte) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 107 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 21L + "'", long17 == 21L);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 21L + "'", long18 == 21L);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertEquals("'" + str33 + "' != '" + "" + "'", str33, "");
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + long35 + "' != '" + 320L + "'", long35 == 320L);
+        org.junit.Assert.assertTrue("'" + long36 + "' != '" + 320L + "'", long36 == 320L);
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "" + "'", str39, "");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertTrue("'" + long43 + "' != '" + 320L + "'", long43 == 320L);
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] { (byte) 100, (byte) 49, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean53 + "' != '" + false + "'", boolean53 == false);
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertNotNull(byteArray66);
+        org.junit.Assert.assertArrayEquals(byteArray66, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding69);
+        org.junit.Assert.assertEquals("'" + str70 + "' != '" + "" + "'", str70, "");
+        org.junit.Assert.assertTrue("'" + boolean71 + "' != '" + false + "'", boolean71 == false);
+        org.junit.Assert.assertTrue("'" + boolean72 + "' != '" + false + "'", boolean72 == false);
+        org.junit.Assert.assertNotNull(byteArray76);
+        org.junit.Assert.assertArrayEquals(byteArray76, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long77 + "' != '" + 10L + "'", long77 == 10L);
+        org.junit.Assert.assertNotNull(byteArray82);
+        org.junit.Assert.assertArrayEquals(byteArray82, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding85);
+        org.junit.Assert.assertEquals("'" + str86 + "' != '" + "\001" + "'", str86, "\001");
+        org.junit.Assert.assertEquals("'" + str87 + "' != '" + "" + "'", str87, "");
+        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "" + "'", str88, "");
+        org.junit.Assert.assertTrue("'" + int89 + "' != '" + 1 + "'", int89 == 1);
+        org.junit.Assert.assertTrue("'" + int90 + "' != '" + 2 + "'", int90 == 2);
+        org.junit.Assert.assertTrue("'" + int91 + "' != '" + 1 + "'", int91 == 1);
+        org.junit.Assert.assertTrue("'" + long92 + "' != '" + 21L + "'", long92 == 21L);
+    }
+
+    @Test
+    public void test4536() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4536");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 0);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) -1, (int) (byte) 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, (int) (short) 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(21L, byteArray3, 1, 5);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 3 out of bounds for length 2");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+    }
+
+    @Test
+    public void test4537() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4537");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (short) 1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long22 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, (int) (byte) -1, 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -1 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 320L + "'", long13 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 320L + "'", long19 == 320L);
+    }
+
+    @Test
+    public void test4538() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4538");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (byte) 1);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 0, (int) (byte) -1);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str19 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 100, 0);
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) 1, 0);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 2, 0);
+        java.lang.Class<?> wildcardClass26 = byteArray4.getClass();
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 21L + "'", long15 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertNotNull(wildcardClass26);
+    }
+
+    @Test
+    public void test4539() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4539");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 0, (int) (short) -1);
+        byte[] byteArray22 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding25 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, 1, (int) (byte) 1, zipEncoding25);
+        int int27 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, 2, (int) (short) -1, zipEncoding25);
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) 0, (int) (short) 0);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 256L + "'", long14 == 256L);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding25);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "\001" + "'", str26, "\001");
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + 1 + "'", int27 == 1);
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'", boolean31 == true);
+    }
+
+    @Test
+    public void test4540() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4540");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (int) (byte) -1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str20 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 100, 0);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long22 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int25 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes(320L, byteArray5, (int) '4', (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 320=500 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 21L + "'", long22 == 21L);
+    }
+
+    @Test
+    public void test4541() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4541");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 2, 1);
+        long long12 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        byte[] byteArray18 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        long long23 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray18);
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 2, (int) (byte) -1);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding30 = null;
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, (int) (byte) -1, (int) (byte) -1, zipEncoding30);
+        byte[] byteArray36 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding39 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 1, (int) (byte) 1, zipEncoding39);
+        boolean boolean41 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray36);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray36, 0);
+        byte[] byteArray48 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding51 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray48, 1, (int) (byte) 1, zipEncoding51);
+        java.lang.String str53 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 0, 1, zipEncoding51);
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, (int) '4', (int) (byte) 0, zipEncoding51);
+        int int55 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd", byteArray4, 0, 2, zipEncoding51);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 100 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 100, (byte) 100, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "\ufffd" + "'", str11, "\ufffd");
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 356L + "'", long12 == 356L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 356L + "'", long23 == 356L);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "" + "'", str31, "");
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding39);
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "\001" + "'", str40, "\001");
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + false + "'", boolean41 == false);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertNotNull(byteArray48);
+        org.junit.Assert.assertArrayEquals(byteArray48, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding51);
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "\001" + "'", str52, "\001");
+        org.junit.Assert.assertEquals("'" + str53 + "' != '" + "\n" + "'", str53, "\n");
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "" + "'", str54, "");
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + 2 + "'", int55 == 2);
+    }
+
+    @Test
+    public void test4542() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4542");
+        byte[] byteArray0 = new byte[] {};
+        boolean boolean1 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray0);
+        long long2 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray0);
+        boolean boolean3 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray0);
+        byte[] byteArray7 = new byte[] { (byte) 10 };
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        byte[] byteArray13 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding16 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray13, 1, (int) (byte) 1, zipEncoding16);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) 0, (int) (byte) -1, zipEncoding16);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        byte[] byteArray25 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding28 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray25, 1, (int) (byte) 1, zipEncoding28);
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (short) 1, (int) (byte) 0, zipEncoding28);
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray0, 10, 0, zipEncoding28);
+        org.junit.Assert.assertNotNull(byteArray0);
+        org.junit.Assert.assertArrayEquals(byteArray0, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + true + "'", boolean1 == true);
+        org.junit.Assert.assertTrue("'" + long2 + "' != '" + 0L + "'", long2 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + true + "'", boolean3 == true);
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 10L + "'", long8 == 10L);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding16);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "\001" + "'", str17, "\001");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 10L + "'", long19 == 10L);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 10L + "'", long20 == 10L);
+        org.junit.Assert.assertNotNull(byteArray25);
+        org.junit.Assert.assertArrayEquals(byteArray25, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding28);
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "\001" + "'", str29, "\001");
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "" + "'", str31, "");
+    }
+
+    @Test
+    public void test4543() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4543");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, (int) (byte) 0, (int) (byte) -1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 3);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 1);
+        byte[] byteArray27 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray27);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray27);
+        int int32 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray27, (int) (short) 0, (int) (byte) 1);
+        long long35 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray27, 0, (int) (byte) 100);
+        byte[] byteArray42 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray42);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray42);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray42);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray42);
+        byte[] byteArray51 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding54 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray51, 1, (int) (byte) 1, zipEncoding54);
+        int int56 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray42, 2, (int) (byte) 1, zipEncoding54);
+        int int57 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000\n", byteArray27, (int) (byte) 0, 0, zipEncoding54);
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 0, (int) (short) 0, zipEncoding54);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long61 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray5, 4, 4);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 4 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 21L + "'", long13 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + 1 + "'", int32 == 1);
+        org.junit.Assert.assertTrue("'" + long35 + "' != '" + 0L + "'", long35 == 0L);
+        org.junit.Assert.assertNotNull(byteArray42);
+        org.junit.Assert.assertArrayEquals(byteArray42, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding54);
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "\001" + "'", str55, "\001");
+        org.junit.Assert.assertTrue("'" + int56 + "' != '" + 3 + "'", int56 == 3);
+        org.junit.Assert.assertTrue("'" + int57 + "' != '" + 0 + "'", int57 == 0);
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+    }
+
+    @Test
+    public void test4544() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4544");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, (int) (short) 1);
+        int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(0L, byteArray6, 0, 3);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.Class<?> wildcardClass22 = byteArray6.getClass();
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 48, (byte) 48, (byte) 32, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 3 + "'", int19 == 3);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertNotNull(wildcardClass22);
+    }
+
+    @Test
+    public void test4545() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4545");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, (int) (byte) 0, (int) (byte) -1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding16 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, 2, zipEncoding16);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long23 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, (int) ' ', (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length 0 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 21L + "'", long13 == 21L);
+        org.junit.Assert.assertNotNull(zipEncoding16);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "\n\001" + "'", str17, "\n\001");
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 21L + "'", long18 == 21L);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 21L + "'", long19 == 21L);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 21L + "'", long20 == 21L);
+    }
+
+    @Test
+    public void test4546() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4546");
+        byte[] byteArray7 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) -1);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (short) 1, byteArray7, 0, 2);
+        byte[] byteArray21 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) (short) -1, (int) (short) 0, zipEncoding24);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 0, (-1), zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray7, (int) (byte) 0, (int) (byte) 1, zipEncoding40);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int47 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(320L, byteArray7, 10, (int) (short) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 18 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 100, (byte) 49, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 1 + "'", int44 == 1);
+    }
+
+    @Test
+    public void test4547() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4547");
+        byte[] byteArray1 = new byte[] { (byte) 10 };
+        long long2 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding10 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) 1, zipEncoding10);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, (int) (byte) 0, (int) (byte) -1, zipEncoding10);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, (int) (byte) 100, (int) (byte) 0);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray1);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        byte[] byteArray23 = new byte[] { (byte) 10 };
+        long long24 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray23);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray23);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray23);
+        long long27 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray23);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray23, 0);
+        byte[] byteArray35 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding38 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, (int) (short) -1, (int) (short) 0, zipEncoding38);
+        boolean boolean40 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        boolean boolean41 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        byte[] byteArray45 = new byte[] { (byte) 10 };
+        long long46 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray45);
+        byte[] byteArray51 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding54 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray51, 1, (int) (byte) 1, zipEncoding54);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray45, (int) (byte) 0, (int) (byte) -1, zipEncoding54);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, 0, (-1), zipEncoding54);
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, 1, 0);
+        long long63 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray35, (int) (byte) 0, 2);
+        byte[] byteArray67 = new byte[] { (byte) 10 };
+        long long68 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray67);
+        byte[] byteArray73 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding76 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str77 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray73, 1, (int) (byte) 1, zipEncoding76);
+        java.lang.String str78 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray67, (int) (byte) 0, (int) (byte) -1, zipEncoding76);
+        long long79 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray67);
+        long long80 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray67);
+        byte[] byteArray85 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding88 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str89 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray85, 1, (int) (byte) 1, zipEncoding88);
+        java.lang.String str90 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray67, (int) (short) 1, (int) (byte) 0, zipEncoding88);
+        java.lang.String str91 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, (-1), (int) (short) -1, zipEncoding88);
+        java.lang.String str92 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, (int) ' ', (-1), zipEncoding88);
+        java.lang.String str93 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, (-1), (int) (short) 0, zipEncoding88);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean95 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray1, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 2 out of bounds for length 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray1);
+        org.junit.Assert.assertArrayEquals(byteArray1, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long2 + "' != '" + 10L + "'", long2 == 10L);
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding10);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "\001" + "'", str11, "\001");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 10L + "'", long13 == 10L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 10L + "'", long19 == 10L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + long27 + "' != '" + 10L + "'", long27 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding38);
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "" + "'", str39, "");
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + false + "'", boolean41 == false);
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long46 + "' != '" + 10L + "'", long46 == 10L);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding54);
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "\001" + "'", str55, "\001");
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "" + "'", str60, "");
+        org.junit.Assert.assertTrue("'" + long63 + "' != '" + 0L + "'", long63 == 0L);
+        org.junit.Assert.assertNotNull(byteArray67);
+        org.junit.Assert.assertArrayEquals(byteArray67, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 10L + "'", long68 == 10L);
+        org.junit.Assert.assertNotNull(byteArray73);
+        org.junit.Assert.assertArrayEquals(byteArray73, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding76);
+        org.junit.Assert.assertEquals("'" + str77 + "' != '" + "\001" + "'", str77, "\001");
+        org.junit.Assert.assertEquals("'" + str78 + "' != '" + "" + "'", str78, "");
+        org.junit.Assert.assertTrue("'" + long79 + "' != '" + 10L + "'", long79 == 10L);
+        org.junit.Assert.assertTrue("'" + long80 + "' != '" + 10L + "'", long80 == 10L);
+        org.junit.Assert.assertNotNull(byteArray85);
+        org.junit.Assert.assertArrayEquals(byteArray85, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding88);
+        org.junit.Assert.assertEquals("'" + str89 + "' != '" + "\001" + "'", str89, "\001");
+        org.junit.Assert.assertEquals("'" + str90 + "' != '" + "" + "'", str90, "");
+        org.junit.Assert.assertEquals("'" + str91 + "' != '" + "" + "'", str91, "");
+        org.junit.Assert.assertEquals("'" + str92 + "' != '" + "" + "'", str92, "");
+        org.junit.Assert.assertEquals("'" + str93 + "' != '" + "" + "'", str93, "");
+    }
+
+    @Test
+    public void test4548() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4548");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        byte[] byteArray18 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding21 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 1, (int) (byte) 1, zipEncoding21);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray5, (int) (byte) 0, (int) (byte) 1, zipEncoding21);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 1, (int) (short) 1);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 1);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding21);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "\001" + "'", str22, "\001");
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "\001" + "'", str26, "\001");
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+    }
+
+    @Test
+    public void test4549() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4549");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray14 = new byte[] { (byte) 10 };
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray14);
+        byte[] byteArray20 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding23 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, 1, (int) (byte) 1, zipEncoding23);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray14, (int) (byte) 0, (int) (byte) -1, zipEncoding23);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 0, (-1), zipEncoding23);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, 0);
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, (int) (byte) 0, 2);
+        byte[] byteArray36 = new byte[] { (byte) 10 };
+        long long37 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray36);
+        byte[] byteArray42 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding45 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str46 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray42, 1, (int) (byte) 1, zipEncoding45);
+        java.lang.String str47 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, (int) (byte) 0, (int) (byte) -1, zipEncoding45);
+        long long48 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray36);
+        long long49 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray36);
+        byte[] byteArray54 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding57 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray54, 1, (int) (byte) 1, zipEncoding57);
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, (int) (short) 1, (int) (byte) 0, zipEncoding57);
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (-1), (int) (short) -1, zipEncoding57);
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int66 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes((long) (short) 10, byteArray4, 5, (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 10=12 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 10L + "'", long15 == 10L);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding23);
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "\001" + "'", str24, "\001");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 0L + "'", long32 == 0L);
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long37 + "' != '" + 10L + "'", long37 == 10L);
+        org.junit.Assert.assertNotNull(byteArray42);
+        org.junit.Assert.assertArrayEquals(byteArray42, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding45);
+        org.junit.Assert.assertEquals("'" + str46 + "' != '" + "\001" + "'", str46, "\001");
+        org.junit.Assert.assertEquals("'" + str47 + "' != '" + "" + "'", str47, "");
+        org.junit.Assert.assertTrue("'" + long48 + "' != '" + 10L + "'", long48 == 10L);
+        org.junit.Assert.assertTrue("'" + long49 + "' != '" + 10L + "'", long49 == 10L);
+        org.junit.Assert.assertNotNull(byteArray54);
+        org.junit.Assert.assertArrayEquals(byteArray54, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding57);
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "\001" + "'", str58, "\001");
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "" + "'", str59, "");
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "" + "'", str60, "");
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "" + "'", str63, "");
+    }
+
+    @Test
+    public void test4550() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4550");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (int) (byte) -1);
+        java.lang.String str20 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (short) -1);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) 0, 3);
+        long long26 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 320L + "'", long13 == 320L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 320L + "'", long21 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "\ndd" + "'", str25, "\ndd");
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 320L + "'", long26 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+    }
+
+    @Test
+    public void test4551() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4551");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        long long12 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray19 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding22 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, (int) (short) -1, (int) (short) 0, zipEncoding22);
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        byte[] byteArray29 = new byte[] { (byte) 10 };
+        long long30 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray29);
+        byte[] byteArray35 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding38 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, 1, (int) (byte) 1, zipEncoding38);
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) (byte) 0, (int) (byte) -1, zipEncoding38);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 0, (-1), zipEncoding38);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 1, 0);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        java.lang.String str48 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray19, 0, 2);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding54 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, (int) (short) 0, (int) (short) 0, zipEncoding54);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, 4, zipEncoding54);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 320L + "'", long12 == 320L);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 50, (byte) 53, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding22);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 10L + "'", long30 == 10L);
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding38);
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "\001" + "'", str39, "\001");
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "" + "'", str40, "");
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertEquals("'" + str48 + "' != '" + "" + "'", str48, "");
+        org.junit.Assert.assertNotNull(zipEncoding54);
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "" + "'", str55, "");
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "dd\nd" + "'", str56, "dd\nd");
+    }
+
+    @Test
+    public void test4552() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4552");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray19 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 1, (int) (byte) -1);
+        int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray19, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray34 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray34, (int) ' ', (-1));
+        byte[] byteArray41 = new byte[] { (byte) 10 };
+        long long42 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray41);
+        byte[] byteArray47 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding50 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray47, 1, (int) (byte) 1, zipEncoding50);
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, (int) (byte) 0, (int) (byte) -1, zipEncoding50);
+        java.lang.String str53 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray34, 0, (int) (short) 0, zipEncoding50);
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, (int) 'a', (int) (byte) -1, zipEncoding50);
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) '4', (int) (byte) 0, zipEncoding50);
+        long long56 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int60 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (byte) 0, 0);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + (-1) + "'", int26 == (-1));
+        org.junit.Assert.assertNotNull(byteArray34);
+        org.junit.Assert.assertArrayEquals(byteArray34, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "" + "'", str37, "");
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long42 + "' != '" + 10L + "'", long42 == 10L);
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding50);
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "\001" + "'", str51, "\001");
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "" + "'", str52, "");
+        org.junit.Assert.assertEquals("'" + str53 + "' != '" + "" + "'", str53, "");
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "" + "'", str54, "");
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "" + "'", str55, "");
+        org.junit.Assert.assertTrue("'" + long56 + "' != '" + 21L + "'", long56 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + 0 + "'", int60 == 0);
+    }
+
+    @Test
+    public void test4553() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4553");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding9 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) -1, (int) (short) 0, zipEncoding9);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        byte[] byteArray16 = new byte[] { (byte) 10 };
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray16);
+        byte[] byteArray22 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding25 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, 1, (int) (byte) 1, zipEncoding25);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray16, (int) (byte) 0, (int) (byte) -1, zipEncoding25);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 0, (-1), zipEncoding25);
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, 0);
+        boolean boolean32 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str35 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray6, 0, 2);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) 0, (int) (short) 0, zipEncoding41);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) 3, byteArray6, (int) (short) 1, (int) (short) 1);
+        int int48 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray6, (int) (short) 1, (int) (byte) 1);
+        boolean boolean49 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) 100, (int) (short) -1);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 50, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding9);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 10L + "'", long17 == 10L);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding25);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "\001" + "'", str26, "\001");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "" + "'", str31, "");
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
+        org.junit.Assert.assertEquals("'" + str35 + "' != '" + "" + "'", str35, "");
+        org.junit.Assert.assertNotNull(zipEncoding41);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + 2 + "'", int48 == 2);
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "" + "'", str52, "");
+    }
+
+    @Test
+    public void test4554() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4554");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, (int) (byte) 0, (int) (byte) -1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 3);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 1);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 100, (int) (short) -1);
+        java.lang.Class<?> wildcardClass25 = byteArray5.getClass();
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 21L + "'", long13 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertNotNull(wildcardClass25);
+    }
+
+    @Test
+    public void test4555() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4555");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(0L, byteArray4, 0, 1);
+        byte[] byteArray15 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding18 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str19 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray15, (int) (short) -1, (int) (short) 0, zipEncoding18);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str20 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) 10, (int) (short) 100, zipEncoding18);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 48, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding18);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+    }
+
+    @Test
+    public void test4556() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4556");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 100, (int) (byte) 0);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding21 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (short) -1, (int) (short) -1, zipEncoding21);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        byte[] byteArray29 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        boolean boolean32 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        boolean boolean33 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        long long34 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray29);
+        boolean boolean35 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        java.lang.String str38 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 2, (int) (byte) -1);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = null;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) (byte) -1, (int) (byte) -1, zipEncoding41);
+        byte[] byteArray47 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding50 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray47, 1, (int) (byte) 1, zipEncoding50);
+        boolean boolean52 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray47);
+        boolean boolean54 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray47, 0);
+        byte[] byteArray59 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding62 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray59, 1, (int) (byte) 1, zipEncoding62);
+        java.lang.String str64 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray47, 0, 1, zipEncoding62);
+        java.lang.String str65 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) '4', (int) (byte) 0, zipEncoding62);
+        java.lang.String str66 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) '#', (int) (short) 0, zipEncoding62);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int69 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(115L, byteArray2, 4, (int) (byte) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 115=163 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 10L + "'", long15 == 10L);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertNotNull(zipEncoding21);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
+        org.junit.Assert.assertTrue("'" + boolean33 + "' != '" + false + "'", boolean33 == false);
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 356L + "'", long34 == 356L);
+        org.junit.Assert.assertTrue("'" + boolean35 + "' != '" + false + "'", boolean35 == false);
+        org.junit.Assert.assertEquals("'" + str38 + "' != '" + "" + "'", str38, "");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding50);
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "\001" + "'", str51, "\001");
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+        org.junit.Assert.assertTrue("'" + boolean54 + "' != '" + false + "'", boolean54 == false);
+        org.junit.Assert.assertNotNull(byteArray59);
+        org.junit.Assert.assertArrayEquals(byteArray59, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding62);
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "\001" + "'", str63, "\001");
+        org.junit.Assert.assertEquals("'" + str64 + "' != '" + "\n" + "'", str64, "\n");
+        org.junit.Assert.assertEquals("'" + str65 + "' != '" + "" + "'", str65, "");
+        org.junit.Assert.assertEquals("'" + str66 + "' != '" + "" + "'", str66, "");
+    }
+
+    @Test
+    public void test4557() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4557");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding9 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) 1, zipEncoding9);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int14 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, 1, (int) (short) 1);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        int int20 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray6, (int) (byte) 1, 0);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("h", byteArray6, 0, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes((long) (short) 1, byteArray6, 0, 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 1=1 will not fit in octal number buffer of length -1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding9);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "\001" + "'", str10, "\001");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 2 + "'", int14 == 2);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 11L + "'", long16 == 11L);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 11L + "'", long17 == 11L);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 1 + "'", int20 == 1);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 0 + "'", int23 == 0);
+    }
+
+    @Test
+    public void test4558() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4558");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        byte[] byteArray25 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray25);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray25, 1, (int) (byte) -1);
+        int int32 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray25, (int) (byte) 0, (int) (byte) -1);
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray25);
+        byte[] byteArray41 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, 1, (int) (byte) -1);
+        int int48 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray41, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray56 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray56, (int) ' ', (-1));
+        byte[] byteArray63 = new byte[] { (byte) 10 };
+        long long64 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray63);
+        byte[] byteArray69 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding72 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str73 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray69, 1, (int) (byte) 1, zipEncoding72);
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray63, (int) (byte) 0, (int) (byte) -1, zipEncoding72);
+        java.lang.String str75 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray56, 0, (int) (short) 0, zipEncoding72);
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, (int) 'a', (int) (byte) -1, zipEncoding72);
+        int int77 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray25, 0, (-1), zipEncoding72);
+        int int78 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, 1, 1, zipEncoding72);
+        boolean boolean79 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long82 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 10, 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 10 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 0, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertNotNull(byteArray25);
+        org.junit.Assert.assertArrayEquals(byteArray25, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + (-1) + "'", int32 == (-1));
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 21L + "'", long33 == 21L);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "" + "'", str45, "");
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + (-1) + "'", int48 == (-1));
+        org.junit.Assert.assertNotNull(byteArray56);
+        org.junit.Assert.assertArrayEquals(byteArray56, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "" + "'", str59, "");
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long64 + "' != '" + 10L + "'", long64 == 10L);
+        org.junit.Assert.assertNotNull(byteArray69);
+        org.junit.Assert.assertArrayEquals(byteArray69, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding72);
+        org.junit.Assert.assertEquals("'" + str73 + "' != '" + "\001" + "'", str73, "\001");
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "" + "'", str74, "");
+        org.junit.Assert.assertEquals("'" + str75 + "' != '" + "" + "'", str75, "");
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "" + "'", str76, "");
+        org.junit.Assert.assertTrue("'" + int77 + "' != '" + (-1) + "'", int77 == (-1));
+        org.junit.Assert.assertTrue("'" + int78 + "' != '" + 2 + "'", int78 == 2);
+        org.junit.Assert.assertTrue("'" + boolean79 + "' != '" + false + "'", boolean79 == false);
+    }
+
+    @Test
+    public void test4559() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4559");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding9 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) -1, (int) (short) 0, zipEncoding9);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        byte[] byteArray16 = new byte[] { (byte) 10 };
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray16);
+        byte[] byteArray22 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding25 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, 1, (int) (byte) 1, zipEncoding25);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray16, (int) (byte) 0, (int) (byte) -1, zipEncoding25);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 0, (-1), zipEncoding25);
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, 0);
+        boolean boolean32 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str35 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray6, 0, 2);
+        byte[] byteArray43 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding46 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str47 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray43, 1, (int) (byte) 1, zipEncoding46);
+        boolean boolean48 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray43);
+        boolean boolean50 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray43, 0);
+        byte[] byteArray55 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding58 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray55, 1, (int) (byte) 1, zipEncoding58);
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray43, 0, 1, zipEncoding58);
+        int int61 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray6, (int) (byte) 0, (int) (byte) -1, zipEncoding58);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int64 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(0L, byteArray6, (int) (byte) 0, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -3 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 50, (byte) 53, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding9);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 10L + "'", long17 == 10L);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding25);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "\001" + "'", str26, "\001");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "" + "'", str31, "");
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
+        org.junit.Assert.assertEquals("'" + str35 + "' != '" + "" + "'", str35, "");
+        org.junit.Assert.assertNotNull(byteArray43);
+        org.junit.Assert.assertArrayEquals(byteArray43, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding46);
+        org.junit.Assert.assertEquals("'" + str47 + "' != '" + "\001" + "'", str47, "\001");
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+        org.junit.Assert.assertNotNull(byteArray55);
+        org.junit.Assert.assertArrayEquals(byteArray55, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding58);
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "\001" + "'", str59, "\001");
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "\n" + "'", str60, "\n");
+        org.junit.Assert.assertTrue("'" + int61 + "' != '" + (-1) + "'", int61 == (-1));
+    }
+
+    @Test
+    public void test4560() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4560");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) 100, byteArray6, 4, (int) (byte) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 100=144 will not fit in octal number buffer of length -1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test4561() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4561");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) -1, (int) (short) 0);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((long) ' ', byteArray6, (int) (short) -1, 3);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -1 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 48, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 320L + "'", long13 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test4562() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4562");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (int) (byte) 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int16 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(775L, byteArray5, 1, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 775=1407 will not fit in octal number buffer of length 1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 55, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test4563() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4563");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 1, (int) (short) 0);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray5, 0, (int) (byte) 10);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 1 + "'", int17 == 1);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 256L + "'", long18 == 256L);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + true + "'", boolean22 == true);
+    }
+
+    @Test
+    public void test4564() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4564");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, (int) (byte) 0, (int) (byte) -1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 3);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 1);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) -1, (int) (short) 0);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int28 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd\nd", byteArray6, (int) '4', (int) (byte) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 56 out of bounds for byte[4]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+    }
+
+    @Test
+    public void test4565() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4565");
+        byte[] byteArray3 = new byte[] { (byte) 10 };
+        long long4 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        byte[] byteArray9 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding12 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray9, 1, (int) (byte) 1, zipEncoding12);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 0, (int) (byte) -1, zipEncoding12);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        byte[] byteArray22 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding25 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, (int) (short) -1, (int) (short) 0, zipEncoding25);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray22);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray22);
+        byte[] byteArray32 = new byte[] { (byte) 10 };
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray32);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 1, (int) (byte) 1, zipEncoding41);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, (int) (byte) 0, (int) (byte) -1, zipEncoding41);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, 0, (-1), zipEncoding41);
+        int int45 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray3, (int) (byte) 0, (int) (byte) 1, zipEncoding41);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding48 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str49 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 0, (int) (byte) 0, zipEncoding48);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(101L, byteArray3, (int) (short) 0, (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 101=145 will not fit in octal number buffer of length -1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 10L + "'", long4 == 10L);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding12);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "\001" + "'", str13, "\001");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 10L + "'", long15 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding25);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 10L + "'", long33 == 10L);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding41);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "\001" + "'", str42, "\001");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + 1 + "'", int45 == 1);
+        org.junit.Assert.assertNotNull(zipEncoding48);
+        org.junit.Assert.assertEquals("'" + str49 + "' != '" + "" + "'", str49, "");
+    }
+
+    @Test
+    public void test4566() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4566");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (byte) 10, (-1));
+        // The following exception was thrown during execution in test generation
+        try {
+            int int15 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(256L, byteArray4, (-1), (int) (short) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 256=400 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+    }
+
+    @Test
+    public void test4567() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4567");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 0);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) -1, (int) (byte) 0);
+        byte[] byteArray20 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray20);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray20);
+        int int25 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray20, (int) (short) 0, (int) (byte) 1);
+        long long28 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray20, 0, (int) (byte) 100);
+        byte[] byteArray32 = new byte[] { (byte) 10 };
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray32);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 1, (int) (byte) 1, zipEncoding41);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, (int) (byte) 0, (int) (byte) -1, zipEncoding41);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, (int) ' ', (int) (byte) 0, zipEncoding41);
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 10, (int) (byte) -1, zipEncoding41);
+        long long46 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        boolean boolean47 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int50 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(115L, byteArray3, 5, 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 12 out of bounds for length 2");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + 1 + "'", int25 == 1);
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 0L + "'", long28 == 0L);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 10L + "'", long33 == 10L);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding41);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "\001" + "'", str42, "\001");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "" + "'", str45, "");
+        org.junit.Assert.assertTrue("'" + long46 + "' != '" + 11L + "'", long46 == 11L);
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + false + "'", boolean47 == false);
+    }
+
+    @Test
+    public void test4568() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4568");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 0);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) -1, (int) (byte) 0);
+        byte[] byteArray20 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray20);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray20);
+        int int25 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray20, (int) (short) 0, (int) (byte) 1);
+        long long28 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray20, 0, (int) (byte) 100);
+        byte[] byteArray32 = new byte[] { (byte) 10 };
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray32);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 1, (int) (byte) 1, zipEncoding41);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, (int) (byte) 0, (int) (byte) -1, zipEncoding41);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, (int) ' ', (int) (byte) 0, zipEncoding41);
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 10, (int) (byte) -1, zipEncoding41);
+        long long46 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        boolean boolean47 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        byte[] byteArray55 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean56 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray55);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray55);
+        int int60 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray55, (int) (short) 0, (int) (byte) 1);
+        long long63 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray55, 0, (int) (byte) 100);
+        boolean boolean64 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray55);
+        int int67 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray55, (int) (short) 1, (int) (short) 0);
+        long long68 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray55);
+        byte[] byteArray73 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding76 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str77 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray73, 1, (int) (byte) 1, zipEncoding76);
+        boolean boolean78 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray73);
+        boolean boolean80 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray73, 0);
+        byte[] byteArray85 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding88 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str89 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray85, 1, (int) (byte) 1, zipEncoding88);
+        java.lang.String str90 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray73, 0, 1, zipEncoding88);
+        java.lang.String str91 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray55, 100, (int) (short) -1, zipEncoding88);
+        java.lang.String str92 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 100, 0, zipEncoding88);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int95 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(186L, byteArray3, (int) (short) 1, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 186=272 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + 1 + "'", int25 == 1);
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 0L + "'", long28 == 0L);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 10L + "'", long33 == 10L);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding41);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "\001" + "'", str42, "\001");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "" + "'", str45, "");
+        org.junit.Assert.assertTrue("'" + long46 + "' != '" + 11L + "'", long46 == 11L);
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + false + "'", boolean47 == false);
+        org.junit.Assert.assertNotNull(byteArray55);
+        org.junit.Assert.assertArrayEquals(byteArray55, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + 1 + "'", int60 == 1);
+        org.junit.Assert.assertTrue("'" + long63 + "' != '" + 0L + "'", long63 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean64 + "' != '" + true + "'", boolean64 == true);
+        org.junit.Assert.assertTrue("'" + int67 + "' != '" + 1 + "'", int67 == 1);
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 256L + "'", long68 == 256L);
+        org.junit.Assert.assertNotNull(byteArray73);
+        org.junit.Assert.assertArrayEquals(byteArray73, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding76);
+        org.junit.Assert.assertEquals("'" + str77 + "' != '" + "\001" + "'", str77, "\001");
+        org.junit.Assert.assertTrue("'" + boolean78 + "' != '" + false + "'", boolean78 == false);
+        org.junit.Assert.assertTrue("'" + boolean80 + "' != '" + false + "'", boolean80 == false);
+        org.junit.Assert.assertNotNull(byteArray85);
+        org.junit.Assert.assertArrayEquals(byteArray85, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding88);
+        org.junit.Assert.assertEquals("'" + str89 + "' != '" + "\001" + "'", str89, "\001");
+        org.junit.Assert.assertEquals("'" + str90 + "' != '" + "\n" + "'", str90, "\n");
+        org.junit.Assert.assertEquals("'" + str91 + "' != '" + "" + "'", str91, "");
+        org.junit.Assert.assertEquals("'" + str92 + "' != '" + "" + "'", str92, "");
+    }
+
+    @Test
+    public void test4569() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4569");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, (int) (byte) 0, (int) (byte) -1);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (-1), (int) (short) -1);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 1);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000\n", byteArray6, (int) (short) 0, (int) (byte) 1);
+        long long24 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 21L + "'", long24 == 21L);
+    }
+
+    @Test
+    public void test4570() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4570");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 100, (int) (short) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test4571() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4571");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long6 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.Class<?> wildcardClass12 = byteArray4.getClass();
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long6 + "' != '" + 21L + "'", long6 == 21L);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 21L + "'", long7 == 21L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 21L + "'", long8 == 21L);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test4572() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4572");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (int) (byte) -1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray24 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, (int) ' ', (-1));
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 0, (int) (short) 0, zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray5, (int) (byte) 1, 1, zipEncoding40);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (short) 0);
+        long long47 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean48 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long51 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 10);
+        boolean boolean53 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 104, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 2 + "'", int44 == 2);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 115L + "'", long47 == 115L);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + false + "'", boolean48 == false);
+        org.junit.Assert.assertTrue("'" + long51 + "' != '" + 0L + "'", long51 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean53 + "' != '" + false + "'", boolean53 == false);
+    }
+
+    @Test
+    public void test4573() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4573");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray13 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding16 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray13, 1, (int) (byte) 1, zipEncoding16);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, 2, (int) (byte) 1, zipEncoding16);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 1);
+        java.lang.Class<?> wildcardClass22 = byteArray4.getClass();
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding16);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "\001" + "'", str17, "\001");
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 3 + "'", int18 == 3);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + true + "'", boolean21 == true);
+        org.junit.Assert.assertNotNull(wildcardClass22);
+    }
+
+    @Test
+    public void test4574() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4574");
+        byte[] byteArray2 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding5 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str6 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 1, (int) (byte) 1, zipEncoding5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray2, 0);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray2, 1);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 0, 0);
+        java.lang.Class<?> wildcardClass17 = byteArray2.getClass();
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "\001" + "'", str6, "\001");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 11L + "'", long13 == 11L);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test4575() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4575");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean4 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        long long6 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes((long) 5, byteArray2, (int) '#', 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 5=5 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long6 + "' != '" + 10L + "'", long6 == 10L);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 10L + "'", long7 == 10L);
+    }
+
+    @Test
+    public void test4576() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4576");
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, (int) ' ', (-1));
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, (int) (byte) -1, 0);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray8);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray8);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray8, (int) (short) 1);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, (int) (byte) 1, (-1));
+        int int24 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray8, 0, (int) (byte) 0);
+        byte[] byteArray33 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str36 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) ' ', (-1));
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (byte) -1, 0);
+        boolean boolean40 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray33);
+        long long41 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray33, (int) (short) 1);
+        java.lang.String str46 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (byte) 1, (-1));
+        int int49 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray33, 0, (int) (byte) 0);
+        boolean boolean50 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray33);
+        long long51 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        long long52 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        byte[] byteArray59 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean60 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray59);
+        boolean boolean61 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray59);
+        int int64 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray59, (int) (short) 0, (int) (byte) 1);
+        long long67 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray59, 0, (int) (byte) 100);
+        byte[] byteArray71 = new byte[] { (byte) 10 };
+        long long72 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray71);
+        byte[] byteArray77 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding80 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str81 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray77, 1, (int) (byte) 1, zipEncoding80);
+        java.lang.String str82 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray71, (int) (byte) 0, (int) (byte) -1, zipEncoding80);
+        java.lang.String str83 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray59, (int) ' ', (int) (byte) 0, zipEncoding80);
+        java.lang.String str84 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (byte) 10, (int) (byte) 0, zipEncoding80);
+        int int85 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000h", byteArray8, 0, (-1), zipEncoding80);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(104L, byteArray8, 0, (int) (byte) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 104=150 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 0 + "'", int24 == 0);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str36 + "' != '" + "" + "'", str36, "");
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "" + "'", str39, "");
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 320L + "'", long41 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertEquals("'" + str46 + "' != '" + "" + "'", str46, "");
+        org.junit.Assert.assertTrue("'" + int49 + "' != '" + 0 + "'", int49 == 0);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+        org.junit.Assert.assertTrue("'" + long51 + "' != '" + 320L + "'", long51 == 320L);
+        org.junit.Assert.assertTrue("'" + long52 + "' != '" + 320L + "'", long52 == 320L);
+        org.junit.Assert.assertNotNull(byteArray59);
+        org.junit.Assert.assertArrayEquals(byteArray59, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertTrue("'" + boolean61 + "' != '" + false + "'", boolean61 == false);
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + 1 + "'", int64 == 1);
+        org.junit.Assert.assertTrue("'" + long67 + "' != '" + 0L + "'", long67 == 0L);
+        org.junit.Assert.assertNotNull(byteArray71);
+        org.junit.Assert.assertArrayEquals(byteArray71, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long72 + "' != '" + 10L + "'", long72 == 10L);
+        org.junit.Assert.assertNotNull(byteArray77);
+        org.junit.Assert.assertArrayEquals(byteArray77, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding80);
+        org.junit.Assert.assertEquals("'" + str81 + "' != '" + "\001" + "'", str81, "\001");
+        org.junit.Assert.assertEquals("'" + str82 + "' != '" + "" + "'", str82, "");
+        org.junit.Assert.assertEquals("'" + str83 + "' != '" + "" + "'", str83, "");
+        org.junit.Assert.assertEquals("'" + str84 + "' != '" + "" + "'", str84, "");
+        org.junit.Assert.assertTrue("'" + int85 + "' != '" + (-1) + "'", int85 == (-1));
+    }
+
+    @Test
+    public void test4577() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4577");
+        byte[] byteArray0 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            long long3 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray0, 3, (int) '4');
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+    }
+
+    @Test
+    public void test4578() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4578");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (byte) 0);
+        java.lang.Class<?> wildcardClass14 = byteArray4.getClass();
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test4579() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4579");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        int int9 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, (int) (short) 0, (int) (byte) 1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) 10, (int) (short) 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 0);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 256L + "'", long10 == 256L);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 256L + "'", long15 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+    }
+
+    @Test
+    public void test4580() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4580");
+        byte[] byteArray1 = new byte[] { (byte) 1 };
+        long long2 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        byte[] byteArray10 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray10);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray10);
+        int int15 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray10, (int) (short) 0, (int) (byte) 1);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray10, 0, (int) (byte) 100);
+        byte[] byteArray23 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding26 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, 1, (int) (byte) 1, zipEncoding26);
+        int int28 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray10, (int) (byte) 0, (int) (byte) 1, zipEncoding26);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, 0, 5, zipEncoding26);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray1);
+        org.junit.Assert.assertArrayEquals(byteArray1, new byte[] { (byte) 1 });
+        org.junit.Assert.assertTrue("'" + long2 + "' != '" + 1L + "'", long2 == 1L);
+        org.junit.Assert.assertNotNull(byteArray10);
+        org.junit.Assert.assertArrayEquals(byteArray10, new byte[] { (byte) 10, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 1 + "'", int15 == 1);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 0L + "'", long18 == 0L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding26);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "\001" + "'", str27, "\001");
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + 1 + "'", int28 == 1);
+    }
+
+    @Test
+    public void test4581() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4581");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        int int9 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, (int) (short) 0, (int) (byte) 1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long14 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, 1, (int) (byte) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 100 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 256L + "'", long10 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+    }
+
+    @Test
+    public void test4582() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4582");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        byte[] byteArray21 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) (short) -1, (int) (short) 0, zipEncoding24);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 0, (-1), zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray2, (int) (byte) 0, (int) (byte) 1, zipEncoding40);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding47 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str48 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 0, (int) (byte) 0, zipEncoding47);
+        byte[] byteArray56 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray56);
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray56, 1, (int) (byte) -1);
+        long long61 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray56);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray56, (int) (byte) 1);
+        java.lang.String str66 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray56, 0, (int) (byte) -1);
+        long long67 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray56);
+        byte[] byteArray75 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str78 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray75, (int) ' ', (-1));
+        byte[] byteArray82 = new byte[] { (byte) 10 };
+        long long83 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray82);
+        byte[] byteArray88 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding91 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str92 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray88, 1, (int) (byte) 1, zipEncoding91);
+        java.lang.String str93 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray82, (int) (byte) 0, (int) (byte) -1, zipEncoding91);
+        java.lang.String str94 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray75, 0, (int) (short) 0, zipEncoding91);
+        int int95 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray56, (int) (byte) 1, 1, zipEncoding91);
+        java.lang.String str96 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (short) 100, 0, zipEncoding91);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long99 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray2, (int) (short) 1, 4);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 1 out of bounds for length 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 1 + "'", int44 == 1);
+        org.junit.Assert.assertNotNull(zipEncoding47);
+        org.junit.Assert.assertEquals("'" + str48 + "' != '" + "" + "'", str48, "");
+        org.junit.Assert.assertNotNull(byteArray56);
+        org.junit.Assert.assertArrayEquals(byteArray56, new byte[] { (byte) 0, (byte) 104, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "" + "'", str60, "");
+        org.junit.Assert.assertTrue("'" + long61 + "' != '" + 21L + "'", long61 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertEquals("'" + str66 + "' != '" + "" + "'", str66, "");
+        org.junit.Assert.assertTrue("'" + long67 + "' != '" + 21L + "'", long67 == 21L);
+        org.junit.Assert.assertNotNull(byteArray75);
+        org.junit.Assert.assertArrayEquals(byteArray75, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str78 + "' != '" + "" + "'", str78, "");
+        org.junit.Assert.assertNotNull(byteArray82);
+        org.junit.Assert.assertArrayEquals(byteArray82, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long83 + "' != '" + 10L + "'", long83 == 10L);
+        org.junit.Assert.assertNotNull(byteArray88);
+        org.junit.Assert.assertArrayEquals(byteArray88, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding91);
+        org.junit.Assert.assertEquals("'" + str92 + "' != '" + "\001" + "'", str92, "\001");
+        org.junit.Assert.assertEquals("'" + str93 + "' != '" + "" + "'", str93, "");
+        org.junit.Assert.assertEquals("'" + str94 + "' != '" + "" + "'", str94, "");
+        org.junit.Assert.assertTrue("'" + int95 + "' != '" + 2 + "'", int95 == 2);
+        org.junit.Assert.assertEquals("'" + str96 + "' != '" + "" + "'", str96, "");
+    }
+
+    @Test
+    public void test4583() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4583");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int24 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes((long) (byte) 0, byteArray6, (int) (short) -1, (int) '4');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 48 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+    }
+
+    @Test
+    public void test4584() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4584");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding8 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) -1, (int) (short) 0, zipEncoding8);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        byte[] byteArray15 = new byte[] { (byte) 10 };
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray15);
+        byte[] byteArray21 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 1, (int) (byte) 1, zipEncoding24);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray15, (int) (byte) 0, (int) (byte) -1, zipEncoding24);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (-1), zipEncoding24);
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, 0);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str34 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray5, 0, 2);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int40 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes(455L, byteArray5, (int) ' ', (int) (short) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 129 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 50, (byte) 53, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding8);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 10L + "'", long16 == 10L);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "\001" + "'", str25, "\001");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertEquals("'" + str34 + "' != '" + "" + "'", str34, "");
+    }
+
+    @Test
+    public void test4585() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4585");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(103L, byteArray2, 0, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 1 out of bounds for length 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+    }
+
+    @Test
+    public void test4586() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4586");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd\nd", byteArray5, (int) (byte) 0, 1);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 100, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 1 + "'", int17 == 1);
+    }
+
+    @Test
+    public void test4587() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4587");
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (-1));
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (short) -1, (int) (short) 0);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        byte[] byteArray19 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding22 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 1, (int) (byte) 1, zipEncoding22);
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray19);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray19, 0);
+        byte[] byteArray31 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding34 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str35 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, 1, (int) (byte) 1, zipEncoding34);
+        java.lang.String str36 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 0, 1, zipEncoding34);
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, 0, zipEncoding34);
+        long long38 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(0L, byteArray7, 0, (int) (short) 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((long) (short) 100, byteArray7, (int) (byte) 0, 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 100=144 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 48, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding22);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "\001" + "'", str23, "\001");
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding34);
+        org.junit.Assert.assertEquals("'" + str35 + "' != '" + "\001" + "'", str35, "\001");
+        org.junit.Assert.assertEquals("'" + str36 + "' != '" + "\n" + "'", str36, "\n");
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "" + "'", str37, "");
+        org.junit.Assert.assertTrue("'" + long38 + "' != '" + 320L + "'", long38 == 320L);
+    }
+
+    @Test
+    public void test4588() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4588");
+        byte[] byteArray1 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            int int4 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes(266L, byteArray1, (-1), (int) (byte) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 266=412 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+    }
+
+    @Test
+    public void test4589() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4589");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        byte[] byteArray18 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding21 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 1, (int) (byte) 1, zipEncoding21);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray5, (int) (byte) 0, (int) (byte) 1, zipEncoding21);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 1);
+        long long26 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long27 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long30 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 10, 4);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 10 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding21);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "\001" + "'", str22, "\001");
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + true + "'", boolean25 == true);
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 266L + "'", long26 == 266L);
+        org.junit.Assert.assertTrue("'" + long27 + "' != '" + 266L + "'", long27 == 266L);
+    }
+
+    @Test
+    public void test4590() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4590");
+        byte[] byteArray2 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding5 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str6 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 1, (int) (byte) 1, zipEncoding5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        java.lang.Class<?> wildcardClass9 = byteArray2.getClass();
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "\001" + "'", str6, "\001");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertNotNull(wildcardClass9);
+    }
+
+    @Test
+    public void test4591() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4591");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray13 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray13);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray13);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray13, (int) (short) 0, (int) (byte) 1);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray13, 0, (int) (byte) 100);
+        long long22 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray13);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray13);
+        byte[] byteArray29 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding32 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str33 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) (short) -1, (int) (short) 0, zipEncoding32);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        boolean boolean35 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        byte[] byteArray39 = new byte[] { (byte) 10 };
+        long long40 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray39);
+        byte[] byteArray45 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding48 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str49 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray45, 1, (int) (byte) 1, zipEncoding48);
+        java.lang.String str50 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray39, (int) (byte) 0, (int) (byte) -1, zipEncoding48);
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 0, (-1), zipEncoding48);
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 1, 0);
+        boolean boolean55 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding61 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str62 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 1, (int) (short) -1, zipEncoding61);
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray13, (int) (byte) 1, 1, zipEncoding61);
+        java.lang.String str64 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) ' ', 0, zipEncoding61);
+        boolean boolean66 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (short) 1);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 256L + "'", long22 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'", boolean23 == true);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding32);
+        org.junit.Assert.assertEquals("'" + str33 + "' != '" + "" + "'", str33, "");
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + boolean35 + "' != '" + false + "'", boolean35 == false);
+        org.junit.Assert.assertNotNull(byteArray39);
+        org.junit.Assert.assertArrayEquals(byteArray39, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long40 + "' != '" + 10L + "'", long40 == 10L);
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding48);
+        org.junit.Assert.assertEquals("'" + str49 + "' != '" + "\001" + "'", str49, "\001");
+        org.junit.Assert.assertEquals("'" + str50 + "' != '" + "" + "'", str50, "");
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "" + "'", str51, "");
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "" + "'", str54, "");
+        org.junit.Assert.assertTrue("'" + boolean55 + "' != '" + false + "'", boolean55 == false);
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+        org.junit.Assert.assertNotNull(zipEncoding61);
+        org.junit.Assert.assertEquals("'" + str62 + "' != '" + "" + "'", str62, "");
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "\001" + "'", str63, "\001");
+        org.junit.Assert.assertEquals("'" + str64 + "' != '" + "" + "'", str64, "");
+        org.junit.Assert.assertTrue("'" + boolean66 + "' != '" + false + "'", boolean66 == false);
+    }
+
+    @Test
+    public void test4592() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4592");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, (int) (byte) 0, (int) (byte) -1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding17 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, 2, zipEncoding17);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(101L, byteArray6, (int) (short) 100, (int) (byte) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 109 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertNotNull(zipEncoding17);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "\n\001" + "'", str18, "\n\001");
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 21L + "'", long19 == 21L);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 21L + "'", long20 == 21L);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 21L + "'", long21 == 21L);
+    }
+
+    @Test
+    public void test4593() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4593");
+        byte[] byteArray3 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean4 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long5 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        long long6 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (short) 0, (int) (short) -1);
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + long5 + "' != '" + 356L + "'", long5 == 356L);
+        org.junit.Assert.assertTrue("'" + long6 + "' != '" + 356L + "'", long6 == 356L);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 356L + "'", long7 == 356L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 356L + "'", long8 == 356L);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test4594() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4594");
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (-1));
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray7, 0);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes((long) (byte) 0, byteArray7, 4, 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((long) 0, byteArray7, (int) '4', (int) ' ');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 82 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 48, (byte) 32 });
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 320L + "'", long17 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 5 + "'", int23 == 5);
+    }
+
+    @Test
+    public void test4595() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4595");
+        byte[] byteArray7 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) -1);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (short) 1, byteArray7, 0, 2);
+        byte[] byteArray21 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) (short) -1, (int) (short) 0, zipEncoding24);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 0, (-1), zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray7, (int) (byte) 0, (int) (byte) 1, zipEncoding40);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int48 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000\n", byteArray7, (int) (byte) 100, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 100 out of bounds for byte[4]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 100, (byte) 49, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 1 + "'", int44 == 1);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+    }
+
+    @Test
+    public void test4596() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4596");
+        byte[] byteArray2 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding5 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str6 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 1, (int) (byte) 1, zipEncoding5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray2, 0);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) -1, (int) (byte) 0);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (short) -1, (-1));
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "\001" + "'", str6, "\001");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 11L + "'", long16 == 11L);
+    }
+
+    @Test
+    public void test4597() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4597");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, 0, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long20 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray5, (int) (short) 10, (int) 'a');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 10 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
+    }
+
+    @Test
+    public void test4598() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4598");
+        byte[] byteArray3 = new byte[] { (byte) 10 };
+        long long4 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        byte[] byteArray9 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding12 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray9, 1, (int) (byte) 1, zipEncoding12);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 0, (int) (byte) -1, zipEncoding12);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        byte[] byteArray22 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding25 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, (int) (short) -1, (int) (short) 0, zipEncoding25);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray22);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray22);
+        byte[] byteArray32 = new byte[] { (byte) 10 };
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray32);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 1, (int) (byte) 1, zipEncoding41);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, (int) (byte) 0, (int) (byte) -1, zipEncoding41);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, 0, (-1), zipEncoding41);
+        int int45 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray3, (int) (byte) 0, (int) (byte) 1, zipEncoding41);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding48 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str49 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 0, (int) (byte) 0, zipEncoding48);
+        long long50 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        long long51 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        boolean boolean52 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int55 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(41L, byteArray3, (int) ' ', (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 41=51 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long4 + "' != '" + 10L + "'", long4 == 10L);
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding12);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "\001" + "'", str13, "\001");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 10L + "'", long15 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding25);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 10L + "'", long33 == 10L);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding41);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "\001" + "'", str42, "\001");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + 1 + "'", int45 == 1);
+        org.junit.Assert.assertNotNull(zipEncoding48);
+        org.junit.Assert.assertEquals("'" + str49 + "' != '" + "" + "'", str49, "");
+        org.junit.Assert.assertTrue("'" + long50 + "' != '" + 104L + "'", long50 == 104L);
+        org.junit.Assert.assertTrue("'" + long51 + "' != '" + 104L + "'", long51 == 104L);
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + false + "'", boolean52 == false);
+    }
+
+    @Test
+    public void test4599() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4599");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) '#', byteArray6, (int) (short) -1, (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 35=43 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 320L + "'", long10 == 320L);
+    }
+
+    @Test
+    public void test4600() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4600");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        byte[] byteArray21 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) (short) -1, (int) (short) 0, zipEncoding24);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 0, (-1), zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray2, (int) (byte) 0, (int) (byte) 1, zipEncoding40);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding47 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str48 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 0, (int) (byte) 0, zipEncoding47);
+        long long49 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean50 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 1 + "'", int44 == 1);
+        org.junit.Assert.assertNotNull(zipEncoding47);
+        org.junit.Assert.assertEquals("'" + str48 + "' != '" + "" + "'", str48, "");
+        org.junit.Assert.assertTrue("'" + long49 + "' != '" + 104L + "'", long49 == 104L);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+    }
+
+    @Test
+    public void test4601() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4601");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 2, 1);
+        long long12 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        byte[] byteArray18 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        long long23 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray18);
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 2, (int) (byte) -1);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding30 = null;
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, (int) (byte) -1, (int) (byte) -1, zipEncoding30);
+        byte[] byteArray36 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding39 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 1, (int) (byte) 1, zipEncoding39);
+        boolean boolean41 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray36);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray36, 0);
+        byte[] byteArray48 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding51 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray48, 1, (int) (byte) 1, zipEncoding51);
+        java.lang.String str53 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 0, 1, zipEncoding51);
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, (int) '4', (int) (byte) 0, zipEncoding51);
+        int int55 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd", byteArray4, 0, 2, zipEncoding51);
+        long long56 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 100, (byte) 100, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "\ufffd" + "'", str11, "\ufffd");
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 356L + "'", long12 == 356L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 356L + "'", long23 == 356L);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "" + "'", str31, "");
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding39);
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "\001" + "'", str40, "\001");
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + false + "'", boolean41 == false);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertNotNull(byteArray48);
+        org.junit.Assert.assertArrayEquals(byteArray48, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding51);
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "\001" + "'", str52, "\001");
+        org.junit.Assert.assertEquals("'" + str53 + "' != '" + "\n" + "'", str53, "\n");
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "" + "'", str54, "");
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + 2 + "'", int55 == 2);
+        org.junit.Assert.assertTrue("'" + long56 + "' != '" + 455L + "'", long56 == 455L);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+    }
+
+    @Test
+    public void test4602() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4602");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, (int) (byte) 0);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(1L, byteArray6, 1, (int) (byte) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 8 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test4603() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4603");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 2);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 0);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) 1, byteArray5, 0, 3);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) ' ');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 32 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 48, (byte) 48, (byte) 49, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+    }
+
+    @Test
+    public void test4604() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4604");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (short) 1);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) 1, (-1));
+        // The following exception was thrown during execution in test generation
+        try {
+            long long21 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, (int) (byte) -1, 3);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -1 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 320L + "'", long13 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test4605() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4605");
+        byte[] byteArray0 = null;
+        byte[] byteArray4 = new byte[] { (byte) 10 };
+        long long5 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 0);
+        byte[] byteArray19 = new byte[] { (byte) 10, (byte) 10, (byte) 10, (byte) 10, (byte) 1 };
+        byte[] byteArray27 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray27);
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, 1, (int) (byte) -1);
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray27);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray27, (int) (byte) 1);
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, 0, (int) (byte) -1);
+        long long38 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray27);
+        byte[] byteArray46 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str49 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray46, (int) ' ', (-1));
+        byte[] byteArray53 = new byte[] { (byte) 10 };
+        long long54 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray53);
+        byte[] byteArray59 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding62 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray59, 1, (int) (byte) 1, zipEncoding62);
+        java.lang.String str64 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray53, (int) (byte) 0, (int) (byte) -1, zipEncoding62);
+        java.lang.String str65 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray46, 0, (int) (short) 0, zipEncoding62);
+        int int66 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray27, (int) (byte) 1, 1, zipEncoding62);
+        int int67 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray19, 0, (int) (short) -1, zipEncoding62);
+        java.lang.String str68 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 10, 0, zipEncoding62);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str69 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray0, 0, 2, zipEncoding62);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long5 + "' != '" + 10L + "'", long5 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 10L + "'", long8 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 10, (byte) 10, (byte) 10, (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] { (byte) 0, (byte) 104, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "" + "'", str31, "");
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 21L + "'", long32 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "" + "'", str37, "");
+        org.junit.Assert.assertTrue("'" + long38 + "' != '" + 21L + "'", long38 == 21L);
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str49 + "' != '" + "" + "'", str49, "");
+        org.junit.Assert.assertNotNull(byteArray53);
+        org.junit.Assert.assertArrayEquals(byteArray53, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long54 + "' != '" + 10L + "'", long54 == 10L);
+        org.junit.Assert.assertNotNull(byteArray59);
+        org.junit.Assert.assertArrayEquals(byteArray59, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding62);
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "\001" + "'", str63, "\001");
+        org.junit.Assert.assertEquals("'" + str64 + "' != '" + "" + "'", str64, "");
+        org.junit.Assert.assertEquals("'" + str65 + "' != '" + "" + "'", str65, "");
+        org.junit.Assert.assertTrue("'" + int66 + "' != '" + 2 + "'", int66 == 2);
+        org.junit.Assert.assertTrue("'" + int67 + "' != '" + (-1) + "'", int67 == (-1));
+        org.junit.Assert.assertEquals("'" + str68 + "' != '" + "" + "'", str68, "");
+    }
+
+    @Test
+    public void test4606() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4606");
+        byte[] byteArray6 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int11 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 0, (int) (byte) 1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 0, (int) (byte) 100);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 1, (int) (short) 0);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, (int) (short) 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int24 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ufffd", byteArray6, (int) ' ', 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 32 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 1 + "'", int11 == 1);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + true + "'", boolean19 == true);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+    }
+
+    @Test
+    public void test4607() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4607");
+        byte[] byteArray3 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (short) -1, (int) (short) 0, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        byte[] byteArray13 = new byte[] { (byte) 10 };
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray13);
+        byte[] byteArray19 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding22 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 1, (int) (byte) 1, zipEncoding22);
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray13, (int) (byte) 0, (int) (byte) -1, zipEncoding22);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 0, (-1), zipEncoding22);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, 0);
+        long long31 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray3, (int) (byte) 0, 2);
+        boolean boolean33 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 1);
+        long long34 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        byte[] byteArray41 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        byte[] byteArray50 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding53 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray50, 1, (int) (byte) 1, zipEncoding53);
+        int int55 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray41, 2, (int) (byte) 1, zipEncoding53);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 10, (int) (short) -1, zipEncoding53);
+        byte[] byteArray65 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str68 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray65, (int) ' ', (-1));
+        java.lang.String str71 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray65, (int) (byte) -1, 0);
+        boolean boolean73 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray65, (int) (byte) 0);
+        long long74 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray65);
+        boolean boolean75 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray65);
+        java.lang.String str78 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray65, 1, (int) (short) -1);
+        byte[] byteArray82 = new byte[] { (byte) 10 };
+        long long83 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray82);
+        byte[] byteArray88 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding91 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str92 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray88, 1, (int) (byte) 1, zipEncoding91);
+        java.lang.String str93 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray82, (int) (byte) 0, (int) (byte) -1, zipEncoding91);
+        int int94 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ndd\n", byteArray65, 0, (int) (byte) 0, zipEncoding91);
+        java.lang.String str95 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (-1), (int) (byte) -1, zipEncoding91);
+        boolean boolean97 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 0);
+        boolean boolean99 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 0);
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertNotNull(byteArray13);
+        org.junit.Assert.assertArrayEquals(byteArray13, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding22);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "\001" + "'", str23, "\001");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertTrue("'" + long31 + "' != '" + 0L + "'", long31 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean33 + "' != '" + false + "'", boolean33 == false);
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 110L + "'", long34 == 110L);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertNotNull(byteArray50);
+        org.junit.Assert.assertArrayEquals(byteArray50, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding53);
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "\001" + "'", str54, "\001");
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + 3 + "'", int55 == 3);
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertNotNull(byteArray65);
+        org.junit.Assert.assertArrayEquals(byteArray65, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str68 + "' != '" + "" + "'", str68, "");
+        org.junit.Assert.assertEquals("'" + str71 + "' != '" + "" + "'", str71, "");
+        org.junit.Assert.assertTrue("'" + boolean73 + "' != '" + false + "'", boolean73 == false);
+        org.junit.Assert.assertTrue("'" + long74 + "' != '" + 320L + "'", long74 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean75 + "' != '" + false + "'", boolean75 == false);
+        org.junit.Assert.assertEquals("'" + str78 + "' != '" + "" + "'", str78, "");
+        org.junit.Assert.assertNotNull(byteArray82);
+        org.junit.Assert.assertArrayEquals(byteArray82, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long83 + "' != '" + 10L + "'", long83 == 10L);
+        org.junit.Assert.assertNotNull(byteArray88);
+        org.junit.Assert.assertArrayEquals(byteArray88, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding91);
+        org.junit.Assert.assertEquals("'" + str92 + "' != '" + "\001" + "'", str92, "\001");
+        org.junit.Assert.assertEquals("'" + str93 + "' != '" + "" + "'", str93, "");
+        org.junit.Assert.assertTrue("'" + int94 + "' != '" + 0 + "'", int94 == 0);
+        org.junit.Assert.assertEquals("'" + str95 + "' != '" + "" + "'", str95, "");
+        org.junit.Assert.assertTrue("'" + boolean97 + "' != '" + false + "'", boolean97 == false);
+        org.junit.Assert.assertTrue("'" + boolean99 + "' != '" + false + "'", boolean99 == false);
+    }
+
+    @Test
+    public void test4608() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4608");
+        byte[] byteArray1 = new byte[] { (byte) 10 };
+        long long2 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        boolean boolean3 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray1);
+        boolean boolean4 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray1);
+        long long5 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray1, 0);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray1);
+        org.junit.Assert.assertNotNull(byteArray1);
+        org.junit.Assert.assertArrayEquals(byteArray1, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long2 + "' != '" + 10L + "'", long2 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + long5 + "' != '" + 10L + "'", long5 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 10L + "'", long8 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 10L + "'", long10 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+    }
+
+    @Test
+    public void test4609() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4609");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 0);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes((long) 10, byteArray5, (int) 'a', (int) ' ');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 126 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 256L + "'", long13 == 256L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 0L + "'", long16 == 0L);
+    }
+
+    @Test
+    public void test4610() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4610");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        byte[] byteArray21 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) (short) -1, (int) (short) 0, zipEncoding24);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 0, (-1), zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray2, (int) (byte) 0, (int) (byte) 1, zipEncoding40);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding47 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str48 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 0, (int) (byte) 0, zipEncoding47);
+        byte[] byteArray57 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray57, (int) ' ', (-1));
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray57, (int) (byte) -1, 0);
+        boolean boolean64 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray57);
+        long long65 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray57);
+        boolean boolean67 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray57, (int) (short) 1);
+        long long68 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray57);
+        long long69 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray57);
+        boolean boolean70 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray57);
+        byte[] byteArray74 = new byte[] { (byte) 10 };
+        long long75 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray74);
+        byte[] byteArray80 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding83 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str84 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray80, 1, (int) (byte) 1, zipEncoding83);
+        java.lang.String str85 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray74, (int) (byte) 0, (int) (byte) -1, zipEncoding83);
+        long long86 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray74);
+        long long87 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray74);
+        byte[] byteArray92 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding95 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str96 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray92, 1, (int) (byte) 1, zipEncoding95);
+        java.lang.String str97 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray74, (int) (short) 1, (int) (byte) 0, zipEncoding95);
+        int int98 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray57, (int) (short) 0, (-1), zipEncoding95);
+        java.lang.String str99 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 0, (int) (short) 0, zipEncoding95);
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 1 + "'", int44 == 1);
+        org.junit.Assert.assertNotNull(zipEncoding47);
+        org.junit.Assert.assertEquals("'" + str48 + "' != '" + "" + "'", str48, "");
+        org.junit.Assert.assertNotNull(byteArray57);
+        org.junit.Assert.assertArrayEquals(byteArray57, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "" + "'", str60, "");
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "" + "'", str63, "");
+        org.junit.Assert.assertTrue("'" + boolean64 + "' != '" + false + "'", boolean64 == false);
+        org.junit.Assert.assertTrue("'" + long65 + "' != '" + 320L + "'", long65 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean67 + "' != '" + false + "'", boolean67 == false);
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 320L + "'", long68 == 320L);
+        org.junit.Assert.assertTrue("'" + long69 + "' != '" + 320L + "'", long69 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean70 + "' != '" + false + "'", boolean70 == false);
+        org.junit.Assert.assertNotNull(byteArray74);
+        org.junit.Assert.assertArrayEquals(byteArray74, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long75 + "' != '" + 10L + "'", long75 == 10L);
+        org.junit.Assert.assertNotNull(byteArray80);
+        org.junit.Assert.assertArrayEquals(byteArray80, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding83);
+        org.junit.Assert.assertEquals("'" + str84 + "' != '" + "\001" + "'", str84, "\001");
+        org.junit.Assert.assertEquals("'" + str85 + "' != '" + "" + "'", str85, "");
+        org.junit.Assert.assertTrue("'" + long86 + "' != '" + 10L + "'", long86 == 10L);
+        org.junit.Assert.assertTrue("'" + long87 + "' != '" + 10L + "'", long87 == 10L);
+        org.junit.Assert.assertNotNull(byteArray92);
+        org.junit.Assert.assertArrayEquals(byteArray92, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding95);
+        org.junit.Assert.assertEquals("'" + str96 + "' != '" + "\001" + "'", str96, "\001");
+        org.junit.Assert.assertEquals("'" + str97 + "' != '" + "" + "'", str97, "");
+        org.junit.Assert.assertTrue("'" + int98 + "' != '" + (-1) + "'", int98 == (-1));
+        org.junit.Assert.assertEquals("'" + str99 + "' != '" + "" + "'", str99, "");
+    }
+
+    @Test
+    public void test4611() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4611");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        int int9 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, (int) (short) 0, (int) (byte) 1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 3, (-1));
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 0);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 256L + "'", long10 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test4612() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4612");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding8 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) -1, (int) (short) 0, zipEncoding8);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        byte[] byteArray15 = new byte[] { (byte) 10 };
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray15);
+        byte[] byteArray21 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 1, (int) (byte) 1, zipEncoding24);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray15, (int) (byte) 0, (int) (byte) -1, zipEncoding24);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (-1), zipEncoding24);
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, 0);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str34 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray5, 0, 2);
+        byte[] byteArray42 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding45 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str46 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray42, 1, (int) (byte) 1, zipEncoding45);
+        boolean boolean47 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray42);
+        boolean boolean49 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray42, 0);
+        byte[] byteArray54 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding57 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray54, 1, (int) (byte) 1, zipEncoding57);
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray42, 0, 1, zipEncoding57);
+        int int60 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray5, (int) (byte) 0, (int) (byte) -1, zipEncoding57);
+        java.lang.Class<?> wildcardClass61 = byteArray5.getClass();
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 50, (byte) 53, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding8);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 10L + "'", long16 == 10L);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "\001" + "'", str25, "\001");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertEquals("'" + str34 + "' != '" + "" + "'", str34, "");
+        org.junit.Assert.assertNotNull(byteArray42);
+        org.junit.Assert.assertArrayEquals(byteArray42, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding45);
+        org.junit.Assert.assertEquals("'" + str46 + "' != '" + "\001" + "'", str46, "\001");
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + false + "'", boolean47 == false);
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+        org.junit.Assert.assertNotNull(byteArray54);
+        org.junit.Assert.assertArrayEquals(byteArray54, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding57);
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "\001" + "'", str58, "\001");
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "\n" + "'", str59, "\n");
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + (-1) + "'", int60 == (-1));
+        org.junit.Assert.assertNotNull(wildcardClass61);
+    }
+
+    @Test
+    public void test4613() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4613");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray16 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray16, (int) (short) 0, (int) (byte) 1);
+        long long24 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray16, 0, (int) (byte) 100);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        int int28 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray16, (int) (short) 1, (int) (short) 0);
+        byte[] byteArray33 = new byte[] { (byte) 10 };
+        long long34 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        byte[] byteArray39 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding42 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray39, 1, (int) (byte) 1, zipEncoding42);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (byte) 0, (int) (byte) -1, zipEncoding42);
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray33);
+        byte[] byteArray52 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding55 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, (int) (short) -1, (int) (short) 0, zipEncoding55);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        boolean boolean58 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        byte[] byteArray62 = new byte[] { (byte) 10 };
+        long long63 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray62);
+        byte[] byteArray68 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding71 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str72 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray68, 1, (int) (byte) 1, zipEncoding71);
+        java.lang.String str73 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray62, (int) (byte) 0, (int) (byte) -1, zipEncoding71);
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, 0, (-1), zipEncoding71);
+        int int75 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray33, (int) (byte) 0, (int) (byte) 1, zipEncoding71);
+        byte[] byteArray80 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding83 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str84 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray80, 1, (int) (byte) 1, zipEncoding83);
+        java.lang.String str85 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (short) 10, (int) (byte) -1, zipEncoding83);
+        int int86 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray16, (int) (short) 0, 2, zipEncoding83);
+        int int87 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray5, 0, (int) (short) 0, zipEncoding83);
+        boolean boolean88 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int91 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ndd", byteArray5, (int) (short) 100, (int) (short) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 100 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 356L + "'", long7 == 356L);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] { (byte) 1, (byte) 0, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 1 + "'", int21 == 1);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 0L + "'", long24 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + true + "'", boolean25 == true);
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + 1 + "'", int28 == 1);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 10L + "'", long34 == 10L);
+        org.junit.Assert.assertNotNull(byteArray39);
+        org.junit.Assert.assertArrayEquals(byteArray39, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding42);
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "\001" + "'", str43, "\001");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 10L + "'", long45 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding55);
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertTrue("'" + boolean58 + "' != '" + false + "'", boolean58 == false);
+        org.junit.Assert.assertNotNull(byteArray62);
+        org.junit.Assert.assertArrayEquals(byteArray62, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long63 + "' != '" + 10L + "'", long63 == 10L);
+        org.junit.Assert.assertNotNull(byteArray68);
+        org.junit.Assert.assertArrayEquals(byteArray68, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding71);
+        org.junit.Assert.assertEquals("'" + str72 + "' != '" + "\001" + "'", str72, "\001");
+        org.junit.Assert.assertEquals("'" + str73 + "' != '" + "" + "'", str73, "");
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "" + "'", str74, "");
+        org.junit.Assert.assertTrue("'" + int75 + "' != '" + 1 + "'", int75 == 1);
+        org.junit.Assert.assertNotNull(byteArray80);
+        org.junit.Assert.assertArrayEquals(byteArray80, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding83);
+        org.junit.Assert.assertEquals("'" + str84 + "' != '" + "\001" + "'", str84, "\001");
+        org.junit.Assert.assertEquals("'" + str85 + "' != '" + "" + "'", str85, "");
+        org.junit.Assert.assertTrue("'" + int86 + "' != '" + 2 + "'", int86 == 2);
+        org.junit.Assert.assertTrue("'" + int87 + "' != '" + 0 + "'", int87 == 0);
+        org.junit.Assert.assertTrue("'" + boolean88 + "' != '" + false + "'", boolean88 == false);
+    }
+
+    @Test
+    public void test4614() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4614");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        int int9 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, (int) (short) 0, (int) (byte) 1);
+        byte[] byteArray16 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        java.lang.String str20 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray16, 1, (int) (byte) -1);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray16);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray16, (int) (byte) 1);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray16, 0, (int) (byte) -1);
+        long long27 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray16);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray16, 100, 0);
+        byte[] byteArray38 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean39 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray38);
+        boolean boolean40 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray38);
+        boolean boolean41 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray38);
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray38);
+        byte[] byteArray47 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding50 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray47, 1, (int) (byte) 1, zipEncoding50);
+        int int52 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray38, 2, (int) (byte) 1, zipEncoding50);
+        boolean boolean53 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray38);
+        byte[] byteArray60 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean61 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray60);
+        boolean boolean62 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray60);
+        int int65 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray60, (int) (short) 0, (int) (byte) 1);
+        long long68 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray60, 0, (int) (byte) 100);
+        byte[] byteArray72 = new byte[] { (byte) 10 };
+        long long73 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray72);
+        byte[] byteArray78 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding81 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str82 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray78, 1, (int) (byte) 1, zipEncoding81);
+        java.lang.String str83 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray72, (int) (byte) 0, (int) (byte) -1, zipEncoding81);
+        java.lang.String str84 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray60, (int) ' ', (int) (byte) 0, zipEncoding81);
+        java.lang.String str85 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, (int) (short) 0, (int) (short) 1, zipEncoding81);
+        java.lang.String str86 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray16, (int) '#', (int) (byte) -1, zipEncoding81);
+        java.lang.String str87 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (byte) -1, (int) (short) 0, zipEncoding81);
+        java.lang.Class<?> wildcardClass88 = zipEncoding81.getClass();
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 21L + "'", long21 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertTrue("'" + long27 + "' != '" + 21L + "'", long27 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "" + "'", str31, "");
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + false + "'", boolean39 == false);
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + false + "'", boolean40 == false);
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + false + "'", boolean41 == false);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding50);
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "\001" + "'", str51, "\001");
+        org.junit.Assert.assertTrue("'" + int52 + "' != '" + 3 + "'", int52 == 3);
+        org.junit.Assert.assertTrue("'" + boolean53 + "' != '" + false + "'", boolean53 == false);
+        org.junit.Assert.assertNotNull(byteArray60);
+        org.junit.Assert.assertArrayEquals(byteArray60, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean61 + "' != '" + false + "'", boolean61 == false);
+        org.junit.Assert.assertTrue("'" + boolean62 + "' != '" + false + "'", boolean62 == false);
+        org.junit.Assert.assertTrue("'" + int65 + "' != '" + 1 + "'", int65 == 1);
+        org.junit.Assert.assertTrue("'" + long68 + "' != '" + 0L + "'", long68 == 0L);
+        org.junit.Assert.assertNotNull(byteArray72);
+        org.junit.Assert.assertArrayEquals(byteArray72, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long73 + "' != '" + 10L + "'", long73 == 10L);
+        org.junit.Assert.assertNotNull(byteArray78);
+        org.junit.Assert.assertArrayEquals(byteArray78, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding81);
+        org.junit.Assert.assertEquals("'" + str82 + "' != '" + "\001" + "'", str82, "\001");
+        org.junit.Assert.assertEquals("'" + str83 + "' != '" + "" + "'", str83, "");
+        org.junit.Assert.assertEquals("'" + str84 + "' != '" + "" + "'", str84, "");
+        org.junit.Assert.assertEquals("'" + str85 + "' != '" + "d" + "'", str85, "d");
+        org.junit.Assert.assertEquals("'" + str86 + "' != '" + "" + "'", str86, "");
+        org.junit.Assert.assertEquals("'" + str87 + "' != '" + "" + "'", str87, "");
+        org.junit.Assert.assertNotNull(wildcardClass88);
+    }
+
+    @Test
+    public void test4615() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4615");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("h", byteArray3, 1, 0);
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 11L + "'", long9 == 11L);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
+    }
+
+    @Test
+    public void test4616() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4616");
+        byte[] byteArray6 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int11 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 0, (int) (byte) 1);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 0, (int) (byte) 100);
+        int int20 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray6, (int) (byte) 0, 3);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ufffd", byteArray6, (int) (short) 10, 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 13 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 50, (byte) 53, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 1 + "'", int11 == 1);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 256L + "'", long14 == 256L);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 0L + "'", long17 == 0L);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 3 + "'", int20 == 3);
+    }
+
+    @Test
+    public void test4617() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4617");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(0L, byteArray5, 0, 1);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(20L, byteArray5, 4, 4);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 6 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 48, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "\001" + "'", str14, "\001");
+    }
+
+    @Test
+    public void test4618() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4618");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        byte[] byteArray21 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 1, (int) (byte) -1);
+        long long26 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray21);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 2, (int) (short) -1);
+        byte[] byteArray38 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean39 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray38);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 1, (int) (byte) -1);
+        int int45 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray38, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray53 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray53, (int) ' ', (-1));
+        byte[] byteArray60 = new byte[] { (byte) 10 };
+        long long61 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray60);
+        byte[] byteArray66 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding69 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str70 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray66, 1, (int) (byte) 1, zipEncoding69);
+        java.lang.String str71 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray60, (int) (byte) 0, (int) (byte) -1, zipEncoding69);
+        java.lang.String str72 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray53, 0, (int) (short) 0, zipEncoding69);
+        java.lang.String str73 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, (int) 'a', (int) (byte) -1, zipEncoding69);
+        int int74 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray21, 1, (int) (byte) 0, zipEncoding69);
+        java.lang.String str75 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 0, (int) (short) 1, zipEncoding69);
+        long long76 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean77 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 21L + "'", long26 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + false + "'", boolean39 == false);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + (-1) + "'", int45 == (-1));
+        org.junit.Assert.assertNotNull(byteArray53);
+        org.junit.Assert.assertArrayEquals(byteArray53, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertNotNull(byteArray60);
+        org.junit.Assert.assertArrayEquals(byteArray60, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long61 + "' != '" + 10L + "'", long61 == 10L);
+        org.junit.Assert.assertNotNull(byteArray66);
+        org.junit.Assert.assertArrayEquals(byteArray66, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding69);
+        org.junit.Assert.assertEquals("'" + str70 + "' != '" + "\001" + "'", str70, "\001");
+        org.junit.Assert.assertEquals("'" + str71 + "' != '" + "" + "'", str71, "");
+        org.junit.Assert.assertEquals("'" + str72 + "' != '" + "" + "'", str72, "");
+        org.junit.Assert.assertEquals("'" + str73 + "' != '" + "" + "'", str73, "");
+        org.junit.Assert.assertTrue("'" + int74 + "' != '" + 1 + "'", int74 == 1);
+        org.junit.Assert.assertEquals("'" + str75 + "' != '" + "\n" + "'", str75, "\n");
+        org.junit.Assert.assertTrue("'" + long76 + "' != '" + 320L + "'", long76 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean77 + "' != '" + false + "'", boolean77 == false);
+    }
+
+    @Test
+    public void test4619() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4619");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray6, (int) (short) 0, (int) ' ');
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray6, 0, (int) (byte) 0);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        byte[] byteArray26 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray26);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray26);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray26);
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray26);
+        java.lang.String str33 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray26, 2, 1);
+        long long34 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray26);
+        byte[] byteArray40 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean41 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray40);
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray40);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray40);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray40);
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray40);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray40);
+        java.lang.String str49 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray40, 2, (int) (byte) -1);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding52 = null;
+        java.lang.String str53 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray40, (int) (byte) -1, (int) (byte) -1, zipEncoding52);
+        byte[] byteArray58 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding61 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str62 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray58, 1, (int) (byte) 1, zipEncoding61);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray58);
+        boolean boolean65 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray58, 0);
+        byte[] byteArray70 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding73 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray70, 1, (int) (byte) 1, zipEncoding73);
+        java.lang.String str75 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray58, 0, 1, zipEncoding73);
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray40, (int) '4', (int) (byte) 0, zipEncoding73);
+        int int77 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd", byteArray26, 0, 2, zipEncoding73);
+        int int78 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, 3, (int) (byte) -1, zipEncoding73);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 21L + "'", long19 == 21L);
+        org.junit.Assert.assertNotNull(byteArray26);
+        org.junit.Assert.assertArrayEquals(byteArray26, new byte[] { (byte) 100, (byte) 100, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertEquals("'" + str33 + "' != '" + "\ufffd" + "'", str33, "\ufffd");
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 356L + "'", long34 == 356L);
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + false + "'", boolean41 == false);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 356L + "'", long45 == 356L);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertEquals("'" + str49 + "' != '" + "" + "'", str49, "");
+        org.junit.Assert.assertEquals("'" + str53 + "' != '" + "" + "'", str53, "");
+        org.junit.Assert.assertNotNull(byteArray58);
+        org.junit.Assert.assertArrayEquals(byteArray58, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding61);
+        org.junit.Assert.assertEquals("'" + str62 + "' != '" + "\001" + "'", str62, "\001");
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + false + "'", boolean65 == false);
+        org.junit.Assert.assertNotNull(byteArray70);
+        org.junit.Assert.assertArrayEquals(byteArray70, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding73);
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "\001" + "'", str74, "\001");
+        org.junit.Assert.assertEquals("'" + str75 + "' != '" + "\n" + "'", str75, "\n");
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "" + "'", str76, "");
+        org.junit.Assert.assertTrue("'" + int77 + "' != '" + 2 + "'", int77 == 2);
+        org.junit.Assert.assertTrue("'" + int78 + "' != '" + 2 + "'", int78 == 2);
+    }
+
+    @Test
+    public void test4620() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4620");
+        byte[] byteArray1 = null;
+        byte[] byteArray10 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray10, (int) ' ', (-1));
+        java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray10, (int) (byte) -1, 0);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray10, (int) (byte) 0);
+        int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray10, (int) (short) 1, 0);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray10);
+        byte[] byteArray27 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding30 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str31 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, 1, (int) (byte) 1, zipEncoding30);
+        boolean boolean32 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray27);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray27, 0);
+        byte[] byteArray39 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding42 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray39, 1, (int) (byte) 1, zipEncoding42);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, 0, 1, zipEncoding42);
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray10, (int) (byte) 1, (int) (short) -1, zipEncoding42);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int46 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000h", byteArray1, 0, (int) (byte) 1, zipEncoding42);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray10);
+        org.junit.Assert.assertArrayEquals(byteArray10, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 1 + "'", int21 == 1);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding30);
+        org.junit.Assert.assertEquals("'" + str31 + "' != '" + "\001" + "'", str31, "\001");
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertNotNull(byteArray39);
+        org.junit.Assert.assertArrayEquals(byteArray39, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding42);
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "\001" + "'", str43, "\001");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "\n" + "'", str44, "\n");
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "" + "'", str45, "");
+    }
+
+    @Test
+    public void test4621() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4621");
+        byte[] byteArray4 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) 1, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, 0, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int16 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000h", byteArray4, (int) (byte) 10, 5);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 12 out of bounds for byte[2]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "\001" + "'", str8, "\001");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test4622() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4622");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        int int14 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (byte) 1, (int) (byte) -1);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes(186L, byteArray6, 2, 3);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 186=272 will not fit in octal number buffer of length 1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 50, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 21L + "'", long8 == 21L);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
+    }
+
+    @Test
+    public void test4623() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4623");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        byte[] byteArray14 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray14);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray14);
+        int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray14, (int) (short) 0, (int) (byte) 1);
+        long long22 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray14, 0, (int) (byte) 100);
+        long long23 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray14);
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray14);
+        byte[] byteArray30 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding33 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str34 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray30, (int) (short) -1, (int) (short) 0, zipEncoding33);
+        boolean boolean35 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray30);
+        boolean boolean36 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray30);
+        byte[] byteArray40 = new byte[] { (byte) 10 };
+        long long41 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray40);
+        byte[] byteArray46 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding49 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str50 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray46, 1, (int) (byte) 1, zipEncoding49);
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray40, (int) (byte) 0, (int) (byte) -1, zipEncoding49);
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray30, 0, (-1), zipEncoding49);
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray30, 1, 0);
+        boolean boolean56 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray30);
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray30, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding62 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray30, 1, (int) (short) -1, zipEncoding62);
+        java.lang.String str64 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray14, (int) (byte) 1, 1, zipEncoding62);
+        java.lang.String str65 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', 0, zipEncoding62);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int68 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(266L, byteArray5, 4, (int) (short) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 266=412 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 1 + "'", int19 == 1);
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 0L + "'", long22 == 0L);
+        org.junit.Assert.assertTrue("'" + long23 + "' != '" + 256L + "'", long23 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + true + "'", boolean24 == true);
+        org.junit.Assert.assertNotNull(byteArray30);
+        org.junit.Assert.assertArrayEquals(byteArray30, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding33);
+        org.junit.Assert.assertEquals("'" + str34 + "' != '" + "" + "'", str34, "");
+        org.junit.Assert.assertTrue("'" + boolean35 + "' != '" + false + "'", boolean35 == false);
+        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + false + "'", boolean36 == false);
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 10L + "'", long41 == 10L);
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding49);
+        org.junit.Assert.assertEquals("'" + str50 + "' != '" + "\001" + "'", str50, "\001");
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "" + "'", str51, "");
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "" + "'", str52, "");
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "" + "'", str55, "");
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "" + "'", str59, "");
+        org.junit.Assert.assertNotNull(zipEncoding62);
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "" + "'", str63, "");
+        org.junit.Assert.assertEquals("'" + str64 + "' != '" + "\001" + "'", str64, "\001");
+        org.junit.Assert.assertEquals("'" + str65 + "' != '" + "" + "'", str65, "");
+    }
+
+    @Test
+    public void test4624() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4624");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray6, (int) (short) 0, (int) ' ');
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray6, 0, (int) (byte) 0);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 0, (int) '4');
+        byte[] byteArray29 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str32 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) ' ', (-1));
+        java.lang.String str35 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) (byte) -1, 0);
+        boolean boolean36 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        long long37 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray29);
+        long long38 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray29);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) ' ', (int) (byte) -1);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) (byte) -1, (int) (byte) -1);
+        java.lang.String str47 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) (byte) 1, 2);
+        long long48 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray29);
+        byte[] byteArray52 = new byte[] { (byte) 10 };
+        long long53 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray52);
+        boolean boolean54 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, (int) (short) 0, (int) (byte) 0);
+        byte[] byteArray65 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean66 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray65);
+        java.lang.String str69 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray65, 1, (int) (byte) -1);
+        long long70 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray65);
+        boolean boolean72 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray65, (int) (byte) 1);
+        long long73 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray65);
+        byte[] byteArray80 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean81 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray80);
+        boolean boolean82 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray80);
+        boolean boolean83 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray80);
+        boolean boolean84 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray80);
+        byte[] byteArray89 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding92 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str93 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray89, 1, (int) (byte) 1, zipEncoding92);
+        int int94 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray80, 2, (int) (byte) 1, zipEncoding92);
+        int int95 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray65, 2, 0, zipEncoding92);
+        java.lang.String str96 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, (int) '4', (-1), zipEncoding92);
+        java.lang.String str97 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 0, (int) (byte) 0, zipEncoding92);
+        int int98 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("h", byteArray6, (int) (short) 1, 1, zipEncoding92);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 104, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str32 + "' != '" + "" + "'", str32, "");
+        org.junit.Assert.assertEquals("'" + str35 + "' != '" + "" + "'", str35, "");
+        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + false + "'", boolean36 == false);
+        org.junit.Assert.assertTrue("'" + long37 + "' != '" + 320L + "'", long37 == 320L);
+        org.junit.Assert.assertTrue("'" + long38 + "' != '" + 320L + "'", long38 == 320L);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertEquals("'" + str47 + "' != '" + "dd" + "'", str47, "dd");
+        org.junit.Assert.assertTrue("'" + long48 + "' != '" + 320L + "'", long48 == 320L);
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long53 + "' != '" + 10L + "'", long53 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean54 + "' != '" + false + "'", boolean54 == false);
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertNotNull(byteArray65);
+        org.junit.Assert.assertArrayEquals(byteArray65, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean66 + "' != '" + false + "'", boolean66 == false);
+        org.junit.Assert.assertEquals("'" + str69 + "' != '" + "" + "'", str69, "");
+        org.junit.Assert.assertTrue("'" + long70 + "' != '" + 21L + "'", long70 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean72 + "' != '" + false + "'", boolean72 == false);
+        org.junit.Assert.assertTrue("'" + long73 + "' != '" + 21L + "'", long73 == 21L);
+        org.junit.Assert.assertNotNull(byteArray80);
+        org.junit.Assert.assertArrayEquals(byteArray80, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean81 + "' != '" + false + "'", boolean81 == false);
+        org.junit.Assert.assertTrue("'" + boolean82 + "' != '" + false + "'", boolean82 == false);
+        org.junit.Assert.assertTrue("'" + boolean83 + "' != '" + false + "'", boolean83 == false);
+        org.junit.Assert.assertTrue("'" + boolean84 + "' != '" + false + "'", boolean84 == false);
+        org.junit.Assert.assertNotNull(byteArray89);
+        org.junit.Assert.assertArrayEquals(byteArray89, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding92);
+        org.junit.Assert.assertEquals("'" + str93 + "' != '" + "\001" + "'", str93, "\001");
+        org.junit.Assert.assertTrue("'" + int94 + "' != '" + 3 + "'", int94 == 3);
+        org.junit.Assert.assertTrue("'" + int95 + "' != '" + 2 + "'", int95 == 2);
+        org.junit.Assert.assertEquals("'" + str96 + "' != '" + "" + "'", str96, "");
+        org.junit.Assert.assertEquals("'" + str97 + "' != '" + "" + "'", str97, "");
+        org.junit.Assert.assertTrue("'" + int98 + "' != '" + 2 + "'", int98 == 2);
+    }
+
+    @Test
+    public void test4625() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4625");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        byte[] byteArray17 = new byte[] { (byte) 10 };
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray17);
+        byte[] byteArray23 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding26 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, 1, (int) (byte) 1, zipEncoding26);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, (int) (byte) 0, (int) (byte) -1, zipEncoding26);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (int) (byte) 0, zipEncoding26);
+        long long30 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray5, (int) (byte) 0, 2);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        byte[] byteArray41 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        byte[] byteArray50 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding53 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray50, 1, (int) (byte) 1, zipEncoding53);
+        int int55 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray41, 2, (int) (byte) 1, zipEncoding53);
+        boolean boolean56 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        byte[] byteArray63 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean64 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray63);
+        boolean boolean65 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray63);
+        int int68 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray63, (int) (short) 0, (int) (byte) 1);
+        long long71 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray63, 0, (int) (byte) 100);
+        byte[] byteArray75 = new byte[] { (byte) 10 };
+        long long76 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray75);
+        byte[] byteArray81 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding84 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str85 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray81, 1, (int) (byte) 1, zipEncoding84);
+        java.lang.String str86 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray75, (int) (byte) 0, (int) (byte) -1, zipEncoding84);
+        java.lang.String str87 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray63, (int) ' ', (int) (byte) 0, zipEncoding84);
+        java.lang.String str88 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, (int) (short) 0, (int) (short) 1, zipEncoding84);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int89 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd\nd", byteArray5, (int) '#', (-1), zipEncoding84);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 35 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(byteArray17);
+        org.junit.Assert.assertArrayEquals(byteArray17, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 10L + "'", long18 == 10L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding26);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "\001" + "'", str27, "\001");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 256L + "'", long30 == 256L);
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 0L + "'", long33 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + true + "'", boolean34 == true);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 100, (byte) 1, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertNotNull(byteArray50);
+        org.junit.Assert.assertArrayEquals(byteArray50, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding53);
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "\001" + "'", str54, "\001");
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + 3 + "'", int55 == 3);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + false + "'", boolean56 == false);
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean64 + "' != '" + false + "'", boolean64 == false);
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + false + "'", boolean65 == false);
+        org.junit.Assert.assertTrue("'" + int68 + "' != '" + 1 + "'", int68 == 1);
+        org.junit.Assert.assertTrue("'" + long71 + "' != '" + 0L + "'", long71 == 0L);
+        org.junit.Assert.assertNotNull(byteArray75);
+        org.junit.Assert.assertArrayEquals(byteArray75, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long76 + "' != '" + 10L + "'", long76 == 10L);
+        org.junit.Assert.assertNotNull(byteArray81);
+        org.junit.Assert.assertArrayEquals(byteArray81, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding84);
+        org.junit.Assert.assertEquals("'" + str85 + "' != '" + "\001" + "'", str85, "\001");
+        org.junit.Assert.assertEquals("'" + str86 + "' != '" + "" + "'", str86, "");
+        org.junit.Assert.assertEquals("'" + str87 + "' != '" + "" + "'", str87, "");
+        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "d" + "'", str88, "d");
+    }
+
+    @Test
+    public void test4626() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4626");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 10, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.Class<?> wildcardClass14 = byteArray4.getClass();
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test4627() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4627");
+        byte[] byteArray7 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) -1);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (short) 1, byteArray7, 0, 2);
+        byte[] byteArray21 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, (int) (short) -1, (int) (short) 0, zipEncoding24);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray21);
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 0, (-1), zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray7, (int) (byte) 0, (int) (byte) 1, zipEncoding40);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        boolean boolean47 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray7, (int) (byte) 1);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding50 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            int int51 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("01\n", byteArray7, (int) (byte) 0, (int) (short) 1, zipEncoding50);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 100, (byte) 49, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 1 + "'", int44 == 1);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + false + "'", boolean47 == false);
+    }
+
+    @Test
+    public void test4628() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4628");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long6 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes((long) 2, byteArray4, (int) (short) 0, 3);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (short) 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, 4, (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 4 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 50, (byte) 32, (byte) 0 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + long6 + "' != '" + 356L + "'", long6 == 356L);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 356L + "'", long7 == 356L);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 3 + "'", int10 == 3);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+    }
+
+    @Test
+    public void test4629() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4629");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (int) (byte) -1);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, (int) (byte) -1);
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) 1, 2);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 4, (int) (short) 1);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 4);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int32 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((-1L), byteArray6, (int) 'a', (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 96 out of bounds for byte[5]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "dd" + "'", str24, "dd");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "d" + "'", str27, "d");
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+    }
+
+    @Test
+    public void test4630() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4630");
+        byte[] byteArray3 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean4 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        byte[] byteArray11 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray11);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray11);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray11);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray11);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray11);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray11);
+        java.lang.String str20 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray11, 2, (int) (byte) -1);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding23 = null;
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray11, (int) (byte) -1, (int) (byte) -1, zipEncoding23);
+        byte[] byteArray29 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding32 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str33 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 1, (int) (byte) 1, zipEncoding32);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        boolean boolean36 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray29, 0);
+        byte[] byteArray41 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding44 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, 1, (int) (byte) 1, zipEncoding44);
+        java.lang.String str46 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 0, 1, zipEncoding44);
+        java.lang.String str47 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray11, (int) '4', (int) (byte) 0, zipEncoding44);
+        java.lang.String str48 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, 1, zipEncoding44);
+        boolean boolean49 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertNotNull(byteArray11);
+        org.junit.Assert.assertArrayEquals(byteArray11, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 356L + "'", long16 == 356L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding32);
+        org.junit.Assert.assertEquals("'" + str33 + "' != '" + "\001" + "'", str33, "\001");
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + false + "'", boolean36 == false);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding44);
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "\001" + "'", str45, "\001");
+        org.junit.Assert.assertEquals("'" + str46 + "' != '" + "\n" + "'", str46, "\n");
+        org.junit.Assert.assertEquals("'" + str47 + "' != '" + "" + "'", str47, "");
+        org.junit.Assert.assertEquals("'" + str48 + "' != '" + "\001" + "'", str48, "\001");
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+    }
+
+    @Test
+    public void test4631() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4631");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding16 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, 0, (int) (short) 0, zipEncoding16);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(zipEncoding16);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 320L + "'", long18 == 320L);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 320L + "'", long19 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+    }
+
+    @Test
+    public void test4632() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4632");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, (int) (byte) 0, (int) (byte) -1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        byte[] byteArray22 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray22);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, 1, (int) (byte) -1);
+        int int29 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray22, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, (int) ' ', (-1));
+        byte[] byteArray44 = new byte[] { (byte) 10 };
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray44);
+        byte[] byteArray50 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding53 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray50, 1, (int) (byte) 1, zipEncoding53);
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray44, (int) (byte) 0, (int) (byte) -1, zipEncoding53);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 0, (int) (short) 0, zipEncoding53);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, (int) 'a', (int) (byte) -1, zipEncoding53);
+        int int58 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, 2, (int) (byte) 1, zipEncoding53);
+        long long59 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long60 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean61 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean63 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, (int) (byte) 0);
+        java.lang.String str66 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) 1, (int) (short) 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long69 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray6, 3, 3);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 5 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 0, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "" + "'", str40, "");
+        org.junit.Assert.assertNotNull(byteArray44);
+        org.junit.Assert.assertArrayEquals(byteArray44, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 10L + "'", long45 == 10L);
+        org.junit.Assert.assertNotNull(byteArray50);
+        org.junit.Assert.assertArrayEquals(byteArray50, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding53);
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "\001" + "'", str54, "\001");
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "" + "'", str55, "");
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertTrue("'" + int58 + "' != '" + 3 + "'", int58 == 3);
+        org.junit.Assert.assertTrue("'" + long59 + "' != '" + 20L + "'", long59 == 20L);
+        org.junit.Assert.assertTrue("'" + long60 + "' != '" + 20L + "'", long60 == 20L);
+        org.junit.Assert.assertTrue("'" + boolean61 + "' != '" + false + "'", boolean61 == false);
+        org.junit.Assert.assertTrue("'" + boolean63 + "' != '" + false + "'", boolean63 == false);
+        org.junit.Assert.assertEquals("'" + str66 + "' != '" + "\n" + "'", str66, "\n");
+    }
+
+    @Test
+    public void test4633() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4633");
+        byte[] byteArray0 = null;
+        java.lang.String str3 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray0, (int) (short) 10, (-1));
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "" + "'", str3, "");
+    }
+
+    @Test
+    public void test4634() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4634");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray6, (int) (short) 0, (int) ' ');
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray6, 0, (int) (byte) 0);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 0, (int) 'a');
+        long long22 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) -1, (-1));
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (byte) -1, byteArray6, (int) (short) 10, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: -1=1777777777777777777777 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 0L + "'", long21 == 0L);
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 21L + "'", long22 == 21L);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+    }
+
+    @Test
+    public void test4635() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4635");
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (-1));
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, 0);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray7, (int) (byte) 0);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray7, (int) (short) 1, 0);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        byte[] byteArray24 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding27 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 1, (int) (byte) 1, zipEncoding27);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray24);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray24, 0);
+        byte[] byteArray36 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding39 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 1, (int) (byte) 1, zipEncoding39);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 0, 1, zipEncoding39);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) 1, (int) (short) -1, zipEncoding39);
+        long long43 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int47 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(186L, byteArray7, 5, 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 12 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding27);
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "\001" + "'", str28, "\001");
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding39);
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "\001" + "'", str40, "\001");
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\n" + "'", str41, "\n");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertTrue("'" + long43 + "' != '" + 320L + "'", long43 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+    }
+
+    @Test
+    public void test4636() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4636");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray5, (int) 'a', (int) (byte) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 97 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+    }
+
+    @Test
+    public void test4637() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4637");
+        byte[] byteArray3 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean4 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        byte[] byteArray17 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str20 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, (int) ' ', (-1));
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, (int) (short) -1, (int) (short) 0);
+        long long24 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray17);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray17);
+        byte[] byteArray30 = new byte[] { (byte) 10 };
+        long long31 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray30);
+        byte[] byteArray36 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding39 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 1, (int) (byte) 1, zipEncoding39);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray30, (int) (byte) 0, (int) (byte) -1, zipEncoding39);
+        long long42 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray30);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray30);
+        byte[] byteArray49 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding52 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str53 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray49, (int) (short) -1, (int) (short) 0, zipEncoding52);
+        boolean boolean54 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray49);
+        boolean boolean55 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray49);
+        byte[] byteArray59 = new byte[] { (byte) 10 };
+        long long60 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray59);
+        byte[] byteArray65 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding68 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str69 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray65, 1, (int) (byte) 1, zipEncoding68);
+        java.lang.String str70 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray59, (int) (byte) 0, (int) (byte) -1, zipEncoding68);
+        java.lang.String str71 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray49, 0, (-1), zipEncoding68);
+        int int72 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray30, (int) (byte) 0, (int) (byte) 1, zipEncoding68);
+        java.lang.String str73 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, 0, 0, zipEncoding68);
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 0, (int) (short) 1, zipEncoding68);
+        long long75 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        long long76 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 356L + "'", long8 == 356L);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertNotNull(byteArray17);
+        org.junit.Assert.assertArrayEquals(byteArray17, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 320L + "'", long24 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertNotNull(byteArray30);
+        org.junit.Assert.assertArrayEquals(byteArray30, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long31 + "' != '" + 10L + "'", long31 == 10L);
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding39);
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "\001" + "'", str40, "\001");
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertTrue("'" + long42 + "' != '" + 10L + "'", long42 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertNotNull(byteArray49);
+        org.junit.Assert.assertArrayEquals(byteArray49, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding52);
+        org.junit.Assert.assertEquals("'" + str53 + "' != '" + "" + "'", str53, "");
+        org.junit.Assert.assertTrue("'" + boolean54 + "' != '" + false + "'", boolean54 == false);
+        org.junit.Assert.assertTrue("'" + boolean55 + "' != '" + false + "'", boolean55 == false);
+        org.junit.Assert.assertNotNull(byteArray59);
+        org.junit.Assert.assertArrayEquals(byteArray59, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long60 + "' != '" + 10L + "'", long60 == 10L);
+        org.junit.Assert.assertNotNull(byteArray65);
+        org.junit.Assert.assertArrayEquals(byteArray65, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding68);
+        org.junit.Assert.assertEquals("'" + str69 + "' != '" + "\001" + "'", str69, "\001");
+        org.junit.Assert.assertEquals("'" + str70 + "' != '" + "" + "'", str70, "");
+        org.junit.Assert.assertEquals("'" + str71 + "' != '" + "" + "'", str71, "");
+        org.junit.Assert.assertTrue("'" + int72 + "' != '" + 1 + "'", int72 == 1);
+        org.junit.Assert.assertEquals("'" + str73 + "' != '" + "" + "'", str73, "");
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "d" + "'", str74, "d");
+        org.junit.Assert.assertTrue("'" + long75 + "' != '" + 356L + "'", long75 == 356L);
+        org.junit.Assert.assertTrue("'" + long76 + "' != '" + 356L + "'", long76 == 356L);
+    }
+
+    @Test
+    public void test4638() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4638");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (byte) 10, (-1));
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int16 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ufffd", byteArray4, 3, (int) '#');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 6 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test4639() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4639");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 10, (int) (byte) 0);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (short) 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(610L, byteArray4, (int) (short) 1, 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 610=1142 will not fit in octal number buffer of length 1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 50, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test4640() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4640");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (short) 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        byte[] byteArray18 = new byte[] { (byte) 10 };
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray18);
+        byte[] byteArray24 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding27 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 1, (int) (byte) 1, zipEncoding27);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, (int) (byte) 0, (int) (byte) -1, zipEncoding27);
+        long long30 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray18);
+        long long31 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray18);
+        byte[] byteArray36 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding39 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray36, 1, (int) (byte) 1, zipEncoding39);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, (int) (short) 1, (int) (byte) 0, zipEncoding39);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) 100, (-1), zipEncoding39);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (short) 0);
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int48 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, (int) (byte) 10, (int) (byte) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 10 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 110L + "'", long14 == 110L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 10L + "'", long19 == 10L);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding27);
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "\001" + "'", str28, "\001");
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 10L + "'", long30 == 10L);
+        org.junit.Assert.assertTrue("'" + long31 + "' != '" + 10L + "'", long31 == 10L);
+        org.junit.Assert.assertNotNull(byteArray36);
+        org.junit.Assert.assertArrayEquals(byteArray36, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding39);
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "\001" + "'", str40, "\001");
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 110L + "'", long45 == 110L);
+    }
+
+    @Test
+    public void test4641() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4641");
+        byte[] byteArray4 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        int int9 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, (int) (short) 0, (int) (byte) 1);
+        long long12 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray4, 0, (int) (byte) 100);
+        byte[] byteArray16 = new byte[] { (byte) 10 };
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray16);
+        byte[] byteArray22 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding25 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, 1, (int) (byte) 1, zipEncoding25);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray16, (int) (byte) 0, (int) (byte) -1, zipEncoding25);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) ' ', (int) (byte) 0, zipEncoding25);
+        byte[] byteArray37 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean38 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray37);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) -1);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray37, (int) (byte) 0, (int) (byte) -1);
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray37);
+        byte[] byteArray53 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean54 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray53);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray53, 1, (int) (byte) -1);
+        int int60 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray53, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray68 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str71 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray68, (int) ' ', (-1));
+        byte[] byteArray75 = new byte[] { (byte) 10 };
+        long long76 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray75);
+        byte[] byteArray81 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding84 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str85 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray81, 1, (int) (byte) 1, zipEncoding84);
+        java.lang.String str86 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray75, (int) (byte) 0, (int) (byte) -1, zipEncoding84);
+        java.lang.String str87 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray68, 0, (int) (short) 0, zipEncoding84);
+        java.lang.String str88 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray53, (int) 'a', (int) (byte) -1, zipEncoding84);
+        int int89 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray37, 0, (-1), zipEncoding84);
+        java.lang.String str90 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) '#', (-1), zipEncoding84);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+        org.junit.Assert.assertTrue("'" + long12 + "' != '" + 0L + "'", long12 == 0L);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 10L + "'", long17 == 10L);
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding25);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "\001" + "'", str26, "\001");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + false + "'", boolean38 == false);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + (-1) + "'", int44 == (-1));
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 21L + "'", long45 == 21L);
+        org.junit.Assert.assertNotNull(byteArray53);
+        org.junit.Assert.assertArrayEquals(byteArray53, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean54 + "' != '" + false + "'", boolean54 == false);
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertTrue("'" + int60 + "' != '" + (-1) + "'", int60 == (-1));
+        org.junit.Assert.assertNotNull(byteArray68);
+        org.junit.Assert.assertArrayEquals(byteArray68, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str71 + "' != '" + "" + "'", str71, "");
+        org.junit.Assert.assertNotNull(byteArray75);
+        org.junit.Assert.assertArrayEquals(byteArray75, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long76 + "' != '" + 10L + "'", long76 == 10L);
+        org.junit.Assert.assertNotNull(byteArray81);
+        org.junit.Assert.assertArrayEquals(byteArray81, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding84);
+        org.junit.Assert.assertEquals("'" + str85 + "' != '" + "\001" + "'", str85, "\001");
+        org.junit.Assert.assertEquals("'" + str86 + "' != '" + "" + "'", str86, "");
+        org.junit.Assert.assertEquals("'" + str87 + "' != '" + "" + "'", str87, "");
+        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "" + "'", str88, "");
+        org.junit.Assert.assertTrue("'" + int89 + "' != '" + (-1) + "'", int89 == (-1));
+        org.junit.Assert.assertEquals("'" + str90 + "' != '" + "" + "'", str90, "");
+    }
+
+    @Test
+    public void test4642() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4642");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((long) ' ', byteArray2, 0, (int) (short) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 32=40 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test4643() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4643");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding8 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) 1, zipEncoding8);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, 1, (int) (short) 1);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray5, (int) (byte) 1, 0);
+        int int22 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("h", byteArray5, 0, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 100, 4);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding8);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "\001" + "'", str9, "\001");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 2 + "'", int13 == 2);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 11L + "'", long15 == 11L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 11L + "'", long16 == 11L);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 1 + "'", int19 == 1);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'", int22 == 0);
+    }
+
+    @Test
+    public void test4644() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4644");
+        byte[] byteArray0 = null;
+        byte[] byteArray4 = new byte[] {};
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long6 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray15 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray15);
+        java.lang.String str19 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray15, 1, (int) (byte) -1);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray15);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray15);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray15);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray15);
+        byte[] byteArray31 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str34 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) ' ', (-1));
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (short) -1, (int) (short) 0);
+        long long38 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        boolean boolean39 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray31);
+        byte[] byteArray44 = new byte[] { (byte) 10 };
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray44);
+        byte[] byteArray50 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding53 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray50, 1, (int) (byte) 1, zipEncoding53);
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray44, (int) (byte) 0, (int) (byte) -1, zipEncoding53);
+        long long56 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray44);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray44);
+        byte[] byteArray63 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding66 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str67 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray63, (int) (short) -1, (int) (short) 0, zipEncoding66);
+        boolean boolean68 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray63);
+        boolean boolean69 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray63);
+        byte[] byteArray73 = new byte[] { (byte) 10 };
+        long long74 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray73);
+        byte[] byteArray79 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding82 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str83 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray79, 1, (int) (byte) 1, zipEncoding82);
+        java.lang.String str84 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray73, (int) (byte) 0, (int) (byte) -1, zipEncoding82);
+        java.lang.String str85 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray63, 0, (-1), zipEncoding82);
+        int int86 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray44, (int) (byte) 0, (int) (byte) 1, zipEncoding82);
+        java.lang.String str87 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, 0, 0, zipEncoding82);
+        java.lang.String str88 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray15, (int) (short) 100, (int) (short) -1, zipEncoding82);
+        int int89 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray4, (int) (short) 0, (int) (byte) -1, zipEncoding82);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str90 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray0, 5, 10, zipEncoding82);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] {});
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + true + "'", boolean5 == true);
+        org.junit.Assert.assertTrue("'" + long6 + "' != '" + 0L + "'", long6 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + true + "'", boolean7 == true);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 21L + "'", long20 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str34 + "' != '" + "" + "'", str34, "");
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "" + "'", str37, "");
+        org.junit.Assert.assertTrue("'" + long38 + "' != '" + 320L + "'", long38 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + false + "'", boolean39 == false);
+        org.junit.Assert.assertNotNull(byteArray44);
+        org.junit.Assert.assertArrayEquals(byteArray44, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 10L + "'", long45 == 10L);
+        org.junit.Assert.assertNotNull(byteArray50);
+        org.junit.Assert.assertArrayEquals(byteArray50, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding53);
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "\001" + "'", str54, "\001");
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "" + "'", str55, "");
+        org.junit.Assert.assertTrue("'" + long56 + "' != '" + 10L + "'", long56 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding66);
+        org.junit.Assert.assertEquals("'" + str67 + "' != '" + "" + "'", str67, "");
+        org.junit.Assert.assertTrue("'" + boolean68 + "' != '" + false + "'", boolean68 == false);
+        org.junit.Assert.assertTrue("'" + boolean69 + "' != '" + false + "'", boolean69 == false);
+        org.junit.Assert.assertNotNull(byteArray73);
+        org.junit.Assert.assertArrayEquals(byteArray73, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long74 + "' != '" + 10L + "'", long74 == 10L);
+        org.junit.Assert.assertNotNull(byteArray79);
+        org.junit.Assert.assertArrayEquals(byteArray79, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding82);
+        org.junit.Assert.assertEquals("'" + str83 + "' != '" + "\001" + "'", str83, "\001");
+        org.junit.Assert.assertEquals("'" + str84 + "' != '" + "" + "'", str84, "");
+        org.junit.Assert.assertEquals("'" + str85 + "' != '" + "" + "'", str85, "");
+        org.junit.Assert.assertTrue("'" + int86 + "' != '" + 1 + "'", int86 == 1);
+        org.junit.Assert.assertEquals("'" + str87 + "' != '" + "" + "'", str87, "");
+        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "" + "'", str88, "");
+        org.junit.Assert.assertTrue("'" + int89 + "' != '" + (-1) + "'", int89 == (-1));
+    }
+
+    @Test
+    public void test4645() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4645");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        int int11 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray3, 1, (int) (short) 1);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -1 out of bounds for length 2");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 2 + "'", int11 == 2);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 11L + "'", long13 == 11L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 11L + "'", long14 == 11L);
+    }
+
+    @Test
+    public void test4646() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4646");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray20 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, (int) ' ', (-1));
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, (int) (short) -1, (int) (short) 0);
+        long long27 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray20);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray20);
+        byte[] byteArray33 = new byte[] { (byte) 10 };
+        long long34 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        byte[] byteArray39 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding42 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray39, 1, (int) (byte) 1, zipEncoding42);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (byte) 0, (int) (byte) -1, zipEncoding42);
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray33);
+        byte[] byteArray52 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding55 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, (int) (short) -1, (int) (short) 0, zipEncoding55);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        boolean boolean58 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        byte[] byteArray62 = new byte[] { (byte) 10 };
+        long long63 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray62);
+        byte[] byteArray68 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding71 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str72 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray68, 1, (int) (byte) 1, zipEncoding71);
+        java.lang.String str73 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray62, (int) (byte) 0, (int) (byte) -1, zipEncoding71);
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, 0, (-1), zipEncoding71);
+        int int75 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray33, (int) (byte) 0, (int) (byte) 1, zipEncoding71);
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, 0, 0, zipEncoding71);
+        java.lang.String str77 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) 100, (int) (short) -1, zipEncoding71);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean79 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 100 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertTrue("'" + long27 + "' != '" + 320L + "'", long27 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 10L + "'", long34 == 10L);
+        org.junit.Assert.assertNotNull(byteArray39);
+        org.junit.Assert.assertArrayEquals(byteArray39, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding42);
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "\001" + "'", str43, "\001");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 10L + "'", long45 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding55);
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertTrue("'" + boolean58 + "' != '" + false + "'", boolean58 == false);
+        org.junit.Assert.assertNotNull(byteArray62);
+        org.junit.Assert.assertArrayEquals(byteArray62, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long63 + "' != '" + 10L + "'", long63 == 10L);
+        org.junit.Assert.assertNotNull(byteArray68);
+        org.junit.Assert.assertArrayEquals(byteArray68, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding71);
+        org.junit.Assert.assertEquals("'" + str72 + "' != '" + "\001" + "'", str72, "\001");
+        org.junit.Assert.assertEquals("'" + str73 + "' != '" + "" + "'", str73, "");
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "" + "'", str74, "");
+        org.junit.Assert.assertTrue("'" + int75 + "' != '" + 1 + "'", int75 == 1);
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "" + "'", str76, "");
+        org.junit.Assert.assertEquals("'" + str77 + "' != '" + "" + "'", str77, "");
+    }
+
+    @Test
+    public void test4647() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4647");
+        byte[] byteArray0 = null;
+        byte[] byteArray9 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray9, (int) ' ', (-1));
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray9, (int) (byte) -1, 0);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray9);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray9);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray9, (int) (short) 1);
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray9, (int) (byte) 1, (-1));
+        int int25 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("d", byteArray9, 0, (int) (byte) 0);
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray9);
+        long long27 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray9);
+        long long28 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray9);
+        byte[] byteArray35 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean36 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        boolean boolean37 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray35);
+        int int40 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray35, (int) (short) 0, (int) (byte) 1);
+        long long43 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray35, 0, (int) (byte) 100);
+        byte[] byteArray47 = new byte[] { (byte) 10 };
+        long long48 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray47);
+        byte[] byteArray53 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding56 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray53, 1, (int) (byte) 1, zipEncoding56);
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray47, (int) (byte) 0, (int) (byte) -1, zipEncoding56);
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, (int) ' ', (int) (byte) 0, zipEncoding56);
+        java.lang.String str60 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray9, (int) (byte) 10, (int) (byte) 0, zipEncoding56);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str61 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray0, 5, 10, zipEncoding56);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray9);
+        org.junit.Assert.assertArrayEquals(byteArray9, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 320L + "'", long17 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + 0 + "'", int25 == 0);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertTrue("'" + long27 + "' != '" + 320L + "'", long27 == 320L);
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 320L + "'", long28 == 320L);
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + false + "'", boolean36 == false);
+        org.junit.Assert.assertTrue("'" + boolean37 + "' != '" + false + "'", boolean37 == false);
+        org.junit.Assert.assertTrue("'" + int40 + "' != '" + 1 + "'", int40 == 1);
+        org.junit.Assert.assertTrue("'" + long43 + "' != '" + 0L + "'", long43 == 0L);
+        org.junit.Assert.assertNotNull(byteArray47);
+        org.junit.Assert.assertArrayEquals(byteArray47, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long48 + "' != '" + 10L + "'", long48 == 10L);
+        org.junit.Assert.assertNotNull(byteArray53);
+        org.junit.Assert.assertArrayEquals(byteArray53, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding56);
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "\001" + "'", str57, "\001");
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "" + "'", str59, "");
+        org.junit.Assert.assertEquals("'" + str60 + "' != '" + "" + "'", str60, "");
+    }
+
+    @Test
+    public void test4648() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4648");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (int) (byte) -1);
+        java.lang.String str20 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (short) -1);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) 0, 3);
+        boolean boolean27 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 0);
+        boolean boolean29 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 0);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 320L + "'", long13 == 320L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 320L + "'", long21 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "\ndd" + "'", str25, "\ndd");
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+    }
+
+    @Test
+    public void test4649() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4649");
+        byte[] byteArray6 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int11 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 0, (int) (byte) 1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 0, (int) (byte) 100);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 1, (int) (short) 0);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) 100, (int) (short) 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) 100, byteArray6, 3, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 100=144 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 1 + "'", int11 == 1);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+    }
+
+    @Test
+    public void test4650() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4650");
+        byte[] byteArray1 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(0L, byteArray1, 5, 3);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+    }
+
+    @Test
+    public void test4651() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4651");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding8 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) -1, (int) (short) 0, zipEncoding8);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        byte[] byteArray15 = new byte[] { (byte) 10 };
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray15);
+        byte[] byteArray21 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding24 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray21, 1, (int) (byte) 1, zipEncoding24);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray15, (int) (byte) 0, (int) (byte) -1, zipEncoding24);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (-1), zipEncoding24);
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, 0);
+        boolean boolean31 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str34 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray5, 0, 2);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 0, (int) (short) 0, zipEncoding40);
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int45 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes((long) 4, byteArray5, (int) (byte) 1, 2);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 50, (byte) 52, (byte) 32 });
+        org.junit.Assert.assertNotNull(zipEncoding8);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertNotNull(byteArray15);
+        org.junit.Assert.assertArrayEquals(byteArray15, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 10L + "'", long16 == 10L);
+        org.junit.Assert.assertNotNull(byteArray21);
+        org.junit.Assert.assertArrayEquals(byteArray21, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding24);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "\001" + "'", str25, "\001");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + false + "'", boolean31 == false);
+        org.junit.Assert.assertEquals("'" + str34 + "' != '" + "" + "'", str34, "");
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + 3 + "'", int45 == 3);
+    }
+
+    @Test
+    public void test4652() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4652");
+        byte[] byteArray3 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (short) -1, (int) (short) 0, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) 10, (-1));
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, (int) 'a');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 97 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 110L + "'", long14 == 110L);
+    }
+
+    @Test
+    public void test4653() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4653");
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (-1));
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        java.lang.String str19 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (int) (byte) -1);
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, (int) (byte) -1);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) 1, 2);
+        long long26 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        int int29 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray7, (int) (byte) 1, (int) (byte) 0);
+        int int32 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\nd", byteArray7, 3, (int) (byte) 1);
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "dd" + "'", str25, "dd");
+        org.junit.Assert.assertTrue("'" + long26 + "' != '" + 320L + "'", long26 == 320L);
+        org.junit.Assert.assertTrue("'" + int29 + "' != '" + 1 + "'", int29 == 1);
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + 4 + "'", int32 == 4);
+    }
+
+    @Test
+    public void test4654() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4654");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        byte[] byteArray25 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean26 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray25);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray25, 1, (int) (byte) -1);
+        int int32 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray25, (int) (byte) 0, (int) (byte) -1);
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray25);
+        byte[] byteArray41 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray41);
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, 1, (int) (byte) -1);
+        int int48 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray41, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray56 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str59 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray56, (int) ' ', (-1));
+        byte[] byteArray63 = new byte[] { (byte) 10 };
+        long long64 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray63);
+        byte[] byteArray69 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding72 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str73 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray69, 1, (int) (byte) 1, zipEncoding72);
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray63, (int) (byte) 0, (int) (byte) -1, zipEncoding72);
+        java.lang.String str75 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray56, 0, (int) (short) 0, zipEncoding72);
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray41, (int) 'a', (int) (byte) -1, zipEncoding72);
+        int int77 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray25, 0, (-1), zipEncoding72);
+        int int78 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, 1, 1, zipEncoding72);
+        java.lang.String str81 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) 1, 1);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 0, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertNotNull(byteArray25);
+        org.junit.Assert.assertArrayEquals(byteArray25, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertTrue("'" + int32 + "' != '" + (-1) + "'", int32 == (-1));
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 21L + "'", long33 == 21L);
+        org.junit.Assert.assertNotNull(byteArray41);
+        org.junit.Assert.assertArrayEquals(byteArray41, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "" + "'", str45, "");
+        org.junit.Assert.assertTrue("'" + int48 + "' != '" + (-1) + "'", int48 == (-1));
+        org.junit.Assert.assertNotNull(byteArray56);
+        org.junit.Assert.assertArrayEquals(byteArray56, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str59 + "' != '" + "" + "'", str59, "");
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long64 + "' != '" + 10L + "'", long64 == 10L);
+        org.junit.Assert.assertNotNull(byteArray69);
+        org.junit.Assert.assertArrayEquals(byteArray69, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding72);
+        org.junit.Assert.assertEquals("'" + str73 + "' != '" + "\001" + "'", str73, "\001");
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "" + "'", str74, "");
+        org.junit.Assert.assertEquals("'" + str75 + "' != '" + "" + "'", str75, "");
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "" + "'", str76, "");
+        org.junit.Assert.assertTrue("'" + int77 + "' != '" + (-1) + "'", int77 == (-1));
+        org.junit.Assert.assertTrue("'" + int78 + "' != '" + 2 + "'", int78 == 2);
+        org.junit.Assert.assertEquals("'" + str81 + "' != '" + "" + "'", str81, "");
+    }
+
+    @Test
+    public void test4655() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4655");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding7 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) (short) -1, (int) (short) 0, zipEncoding7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        byte[] byteArray14 = new byte[] { (byte) 10 };
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray14);
+        byte[] byteArray20 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding23 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray20, 1, (int) (byte) 1, zipEncoding23);
+        java.lang.String str25 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray14, (int) (byte) 0, (int) (byte) -1, zipEncoding23);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 0, (-1), zipEncoding23);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, 0);
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, (int) (byte) 0, 2);
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean34 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean36 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (short) 1);
+        boolean boolean37 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        boolean boolean39 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (byte) 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int42 = org.apache.commons.compress.archivers.tar.TarUtils.formatOctalBytes(303L, byteArray4, 1, (int) '4');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 50 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding7);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNotNull(byteArray14);
+        org.junit.Assert.assertArrayEquals(byteArray14, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 10L + "'", long15 == 10L);
+        org.junit.Assert.assertNotNull(byteArray20);
+        org.junit.Assert.assertArrayEquals(byteArray20, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding23);
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "\001" + "'", str24, "\001");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 0L + "'", long32 == 0L);
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 110L + "'", long33 == 110L);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + false + "'", boolean34 == false);
+        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + false + "'", boolean36 == false);
+        org.junit.Assert.assertTrue("'" + boolean37 + "' != '" + false + "'", boolean37 == false);
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + false + "'", boolean39 == false);
+    }
+
+    @Test
+    public void test4656() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4656");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 3, (-1));
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (byte) 10, (int) (byte) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 10 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 256L + "'", long11 == 256L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 256L + "'", long18 == 256L);
+    }
+
+    @Test
+    public void test4657() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4657");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding8 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) 1, zipEncoding8);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, 1, (int) (short) 1);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray5, (int) (byte) 1, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int22 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(103L, byteArray5, 1, (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 103=147 will not fit in octal number buffer of length -1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding8);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "\001" + "'", str9, "\001");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 2 + "'", int13 == 2);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 11L + "'", long15 == 11L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 11L + "'", long16 == 11L);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 1 + "'", int19 == 1);
+    }
+
+    @Test
+    public void test4658() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4658");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray6, (int) (short) 0, (int) ' ');
+        int int18 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray6, 0, (int) (byte) 0);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) (byte) 100, byteArray6, (int) ' ', (int) (byte) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 32 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 21L + "'", long19 == 21L);
+    }
+
+    @Test
+    public void test4659() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4659");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding8 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) 1, zipEncoding8);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 0);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, (int) (byte) 0);
+        byte[] byteArray22 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray22);
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray22);
+        int int27 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray22, (int) (short) 0, (int) (byte) 1);
+        long long30 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray22, 0, (int) (byte) 100);
+        byte[] byteArray34 = new byte[] { (byte) 10 };
+        long long35 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray34);
+        byte[] byteArray40 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding43 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray40, 1, (int) (byte) 1, zipEncoding43);
+        java.lang.String str45 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray34, (int) (byte) 0, (int) (byte) -1, zipEncoding43);
+        java.lang.String str46 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray22, (int) ' ', (int) (byte) 0, zipEncoding43);
+        java.lang.String str47 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) 10, (int) (byte) -1, zipEncoding43);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(0L, byteArray5, (int) (short) 1, (int) (short) 1);
+        int int53 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, 0, 0);
+        int int56 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("h", byteArray5, (int) (short) 0, (int) (short) -1);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 48 });
+        org.junit.Assert.assertNotNull(zipEncoding8);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "\001" + "'", str9, "\001");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertNotNull(byteArray22);
+        org.junit.Assert.assertArrayEquals(byteArray22, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + 1 + "'", int27 == 1);
+        org.junit.Assert.assertTrue("'" + long30 + "' != '" + 0L + "'", long30 == 0L);
+        org.junit.Assert.assertNotNull(byteArray34);
+        org.junit.Assert.assertArrayEquals(byteArray34, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long35 + "' != '" + 10L + "'", long35 == 10L);
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding43);
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "\001" + "'", str44, "\001");
+        org.junit.Assert.assertEquals("'" + str45 + "' != '" + "" + "'", str45, "");
+        org.junit.Assert.assertEquals("'" + str46 + "' != '" + "" + "'", str46, "");
+        org.junit.Assert.assertEquals("'" + str47 + "' != '" + "" + "'", str47, "");
+        org.junit.Assert.assertTrue("'" + int53 + "' != '" + 0 + "'", int53 == 0);
+        org.junit.Assert.assertTrue("'" + int56 + "' != '" + (-1) + "'", int56 == (-1));
+    }
+
+    @Test
+    public void test4660() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4660");
+        byte[] byteArray5 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) ' ', (-1));
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) -1, 0);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (short) 1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 1, (int) (short) 0);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 320L + "'", long13 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+    }
+
+    @Test
+    public void test4661() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4661");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) -1, (int) (short) 0);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        byte[] byteArray18 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding21 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 1, (int) (byte) 1, zipEncoding21);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray18, 0);
+        byte[] byteArray30 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding33 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str34 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray30, 1, (int) (byte) 1, zipEncoding33);
+        java.lang.String str35 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 0, 1, zipEncoding33);
+        java.lang.String str36 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0, zipEncoding33);
+        int int39 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\377", byteArray6, 2, 0);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 320L + "'", long13 == 320L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding21);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "\001" + "'", str22, "\001");
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertNotNull(byteArray30);
+        org.junit.Assert.assertArrayEquals(byteArray30, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding33);
+        org.junit.Assert.assertEquals("'" + str34 + "' != '" + "\001" + "'", str34, "\001");
+        org.junit.Assert.assertEquals("'" + str35 + "' != '" + "\n" + "'", str35, "\n");
+        org.junit.Assert.assertEquals("'" + str36 + "' != '" + "" + "'", str36, "");
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + 2 + "'", int39 == 2);
+    }
+
+    @Test
+    public void test4662() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4662");
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) ' ', (-1));
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) -1, 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray7, (int) (short) 1);
+        int int20 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(0L, byteArray7, 0, 3);
+        long long21 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int24 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(186L, byteArray7, (int) ' ', 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 186=272 will not fit in octal number buffer of length -1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 48, (byte) 48, (byte) 32, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 3 + "'", int20 == 3);
+        org.junit.Assert.assertTrue("'" + long21 + "' != '" + 238L + "'", long21 == 238L);
+    }
+
+    @Test
+    public void test4663() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4663");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, (int) (short) 0, (int) ' ');
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 3);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long21 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray4, (int) (short) 1, (int) ' ');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 32 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test4664() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4664");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (int) (byte) -1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int20 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(266L, byteArray5, 0, 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 266=412 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+    }
+
+    @Test
+    public void test4665() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4665");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (int) (byte) -1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray24 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, (int) ' ', (-1));
+        byte[] byteArray31 = new byte[] { (byte) 10 };
+        long long32 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray31);
+        byte[] byteArray37 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding40 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray37, 1, (int) (byte) 1, zipEncoding40);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray31, (int) (byte) 0, (int) (byte) -1, zipEncoding40);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray24, 0, (int) (short) 0, zipEncoding40);
+        int int44 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray5, (int) (byte) 1, 1, zipEncoding40);
+        boolean boolean45 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str48 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 0, (int) (byte) 0);
+        boolean boolean49 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean50 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 104, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertNotNull(byteArray24);
+        org.junit.Assert.assertArrayEquals(byteArray24, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertNotNull(byteArray31);
+        org.junit.Assert.assertArrayEquals(byteArray31, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long32 + "' != '" + 10L + "'", long32 == 10L);
+        org.junit.Assert.assertNotNull(byteArray37);
+        org.junit.Assert.assertArrayEquals(byteArray37, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding40);
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "\001" + "'", str41, "\001");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int44 + "' != '" + 2 + "'", int44 == 2);
+        org.junit.Assert.assertTrue("'" + boolean45 + "' != '" + false + "'", boolean45 == false);
+        org.junit.Assert.assertEquals("'" + str48 + "' != '" + "" + "'", str48, "");
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+    }
+
+    @Test
+    public void test4666() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4666");
+        byte[] byteArray7 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray7, (int) (short) 0, (int) (byte) 1);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray7, 0, (int) (byte) 100);
+        boolean boolean16 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray7, (int) (short) 1, (int) (short) 0);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n\001", byteArray7, (int) (byte) 0, 0);
+        byte[] byteArray32 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean33 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray32);
+        java.lang.String str36 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, 1, (int) (byte) -1);
+        int int39 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray32, (int) (byte) 0, (int) (byte) -1);
+        long long40 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray32);
+        byte[] byteArray48 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean49 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray48);
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray48, 1, (int) (byte) -1);
+        int int55 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray48, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray63 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str66 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray63, (int) ' ', (-1));
+        byte[] byteArray70 = new byte[] { (byte) 10 };
+        long long71 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray70);
+        byte[] byteArray76 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding79 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str80 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray76, 1, (int) (byte) 1, zipEncoding79);
+        java.lang.String str81 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray70, (int) (byte) 0, (int) (byte) -1, zipEncoding79);
+        java.lang.String str82 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray63, 0, (int) (short) 0, zipEncoding79);
+        java.lang.String str83 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray48, (int) 'a', (int) (byte) -1, zipEncoding79);
+        int int84 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray32, 0, (-1), zipEncoding79);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding87 = org.apache.commons.compress.archivers.tar.TarUtils.DEFAULT_ENCODING;
+        java.lang.String str88 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, (int) (byte) 100, (int) (short) -1, zipEncoding87);
+        java.lang.String str89 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) 0, zipEncoding87);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int92 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ndd", byteArray7, (int) (short) -1, (int) (byte) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: destination index -1 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 0L + "'", long15 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertTrue("'" + int19 + "' != '" + 1 + "'", int19 == 1);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 256L + "'", long20 == 256L);
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 0 + "'", int23 == 0);
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean33 + "' != '" + false + "'", boolean33 == false);
+        org.junit.Assert.assertEquals("'" + str36 + "' != '" + "" + "'", str36, "");
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + (-1) + "'", int39 == (-1));
+        org.junit.Assert.assertTrue("'" + long40 + "' != '" + 21L + "'", long40 == 21L);
+        org.junit.Assert.assertNotNull(byteArray48);
+        org.junit.Assert.assertArrayEquals(byteArray48, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + false + "'", boolean49 == false);
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "" + "'", str52, "");
+        org.junit.Assert.assertTrue("'" + int55 + "' != '" + (-1) + "'", int55 == (-1));
+        org.junit.Assert.assertNotNull(byteArray63);
+        org.junit.Assert.assertArrayEquals(byteArray63, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str66 + "' != '" + "" + "'", str66, "");
+        org.junit.Assert.assertNotNull(byteArray70);
+        org.junit.Assert.assertArrayEquals(byteArray70, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long71 + "' != '" + 10L + "'", long71 == 10L);
+        org.junit.Assert.assertNotNull(byteArray76);
+        org.junit.Assert.assertArrayEquals(byteArray76, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding79);
+        org.junit.Assert.assertEquals("'" + str80 + "' != '" + "\001" + "'", str80, "\001");
+        org.junit.Assert.assertEquals("'" + str81 + "' != '" + "" + "'", str81, "");
+        org.junit.Assert.assertEquals("'" + str82 + "' != '" + "" + "'", str82, "");
+        org.junit.Assert.assertEquals("'" + str83 + "' != '" + "" + "'", str83, "");
+        org.junit.Assert.assertTrue("'" + int84 + "' != '" + (-1) + "'", int84 == (-1));
+        org.junit.Assert.assertNotNull(zipEncoding87);
+        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "" + "'", str88, "");
+        org.junit.Assert.assertEquals("'" + str89 + "' != '" + "" + "'", str89, "");
+    }
+
+    @Test
+    public void test4667() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4667");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 100, (int) (byte) 0);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int22 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(201L, byteArray2, (int) 'a', (int) (byte) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 195 out of bounds for length 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 10L + "'", long15 == 10L);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test4668() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4668");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) 1);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 0, (int) (byte) -1);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int20 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (byte) -1, (int) '4');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: destination index -1 out of bounds for byte[4]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+    }
+
+    @Test
+    public void test4669() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4669");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, (int) (byte) 0, (int) (byte) -1);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long15 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 10, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length 0 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+    }
+
+    @Test
+    public void test4670() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4670");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        byte[] byteArray18 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray18);
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 1, (int) (byte) -1);
+        int int25 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray18, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray33 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str36 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) ' ', (-1));
+        byte[] byteArray40 = new byte[] { (byte) 10 };
+        long long41 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray40);
+        byte[] byteArray46 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding49 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str50 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray46, 1, (int) (byte) 1, zipEncoding49);
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray40, (int) (byte) 0, (int) (byte) -1, zipEncoding49);
+        java.lang.String str52 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, 0, (int) (short) 0, zipEncoding49);
+        java.lang.String str53 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, (int) 'a', (int) (byte) -1, zipEncoding49);
+        java.lang.String str54 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (int) '4', (int) (byte) 0, zipEncoding49);
+        long long55 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, (-1), (int) '#');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertTrue("'" + int25 + "' != '" + (-1) + "'", int25 == (-1));
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str36 + "' != '" + "" + "'", str36, "");
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 10L + "'", long41 == 10L);
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding49);
+        org.junit.Assert.assertEquals("'" + str50 + "' != '" + "\001" + "'", str50, "\001");
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "" + "'", str51, "");
+        org.junit.Assert.assertEquals("'" + str52 + "' != '" + "" + "'", str52, "");
+        org.junit.Assert.assertEquals("'" + str53 + "' != '" + "" + "'", str53, "");
+        org.junit.Assert.assertEquals("'" + str54 + "' != '" + "" + "'", str54, "");
+        org.junit.Assert.assertTrue("'" + long55 + "' != '" + 21L + "'", long55 == 21L);
+    }
+
+    @Test
+    public void test4671() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4671");
+        byte[] byteArray0 = null;
+        java.lang.String str3 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray0, (int) (byte) 10, (int) (byte) 0);
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "" + "'", str3, "");
+    }
+
+    @Test
+    public void test4672() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4672");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, (int) (byte) 1);
+        java.lang.String str14 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 0, (int) (byte) -1);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long19 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray4, (int) (short) 1, (int) (byte) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length -1 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 21L + "'", long16 == 21L);
+    }
+
+    @Test
+    public void test4673() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4673");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long8 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long9 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, 2);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        int int16 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((long) (byte) 0, byteArray5, 1, (int) (byte) 1);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 48, (byte) 32, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 21L + "'", long7 == 21L);
+        org.junit.Assert.assertTrue("'" + long8 + "' != '" + 21L + "'", long8 == 21L);
+        org.junit.Assert.assertTrue("'" + long9 + "' != '" + 21L + "'", long9 == 21L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 21L + "'", long13 == 21L);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 2 + "'", int16 == 2);
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 91L + "'", long17 == 91L);
+    }
+
+    @Test
+    public void test4674() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4674");
+        byte[] byteArray2 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding5 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str6 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, 1, (int) (byte) 1, zipEncoding5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        boolean boolean9 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray2, 0);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray2, (int) (short) 1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "\001" + "'", str6, "\001");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 11L + "'", long11 == 11L);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 11L + "'", long14 == 11L);
+    }
+
+    @Test
+    public void test4675() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4675");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes((long) (byte) 100, byteArray5, (int) '4', (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 100=144 will not fit in octal number buffer of length -1");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 21L + "'", long10 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test4676() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4676");
+        byte[] byteArray1 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            int int4 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(101L, byteArray1, (int) 'a', (int) '#');
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+    }
+
+    @Test
+    public void test4677() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4677");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 1, (int) (byte) -1);
+        int int12 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray5, (int) (byte) 0, (int) (byte) -1);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (-1), (int) (short) -1);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long20 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 5, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Length 0 must be at least 2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test4678() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4678");
+        byte[] byteArray4 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean5 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str8 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 1, (int) (byte) -1);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray4, 0);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray4);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray4);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray4, 3, (int) (byte) -1);
+        org.junit.Assert.assertNotNull(byteArray4);
+        org.junit.Assert.assertArrayEquals(byteArray4, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test4679() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4679");
+        byte[] byteArray3 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding6 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str7 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, 1, (int) (byte) 1, zipEncoding6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray3);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray3, 0);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray3, (int) (byte) -1, (int) (byte) 0);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray3);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes(0L, byteArray3, (int) 'a', 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 94 out of bounds for length 2");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray3);
+        org.junit.Assert.assertArrayEquals(byteArray3, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "\001" + "'", str7, "\001");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 11L + "'", long14 == 11L);
+    }
+
+    @Test
+    public void test4680() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4680");
+        byte[] byteArray2 = new byte[] { (byte) 10 };
+        long long3 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        byte[] byteArray8 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding11 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray8, 1, (int) (byte) 1, zipEncoding11);
+        java.lang.String str13 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray2, (int) (byte) 0, (int) (byte) -1, zipEncoding11);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray2);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray2);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int19 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((-1L), byteArray2, 100, (int) (short) 1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Value -1 is too large for 1 byte field.");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray2);
+        org.junit.Assert.assertArrayEquals(byteArray2, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
+        org.junit.Assert.assertNotNull(byteArray8);
+        org.junit.Assert.assertArrayEquals(byteArray8, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding11);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "\001" + "'", str12, "\001");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 10L + "'", long16 == 10L);
+    }
+
+    @Test
+    public void test4681() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4681");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, (int) (byte) 0, (int) (byte) -1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean15 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 3);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean20 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 1);
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (-1), (-1));
+        // The following exception was thrown during execution in test generation
+        try {
+            int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes((long) 0, byteArray6, (int) (short) -1, 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -4 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+    }
+
+    @Test
+    public void test4682() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4682");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        int int13 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, (int) (byte) 0, (int) (byte) -1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding17 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, 2, zipEncoding17);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long20 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(775L, byteArray6, 1, (int) (byte) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 775=1407 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 21L + "'", long14 == 21L);
+        org.junit.Assert.assertNotNull(zipEncoding17);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "\n\001" + "'", str18, "\n\001");
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 21L + "'", long19 == 21L);
+        org.junit.Assert.assertTrue("'" + long20 + "' != '" + 21L + "'", long20 == 21L);
+    }
+
+    @Test
+    public void test4683() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4683");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (int) (byte) -1);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (short) -1);
+        long long22 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int26 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(110L, byteArray6, (int) '4', (int) (byte) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 110=156 will not fit in octal number buffer of length -2");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 320L + "'", long22 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+    }
+
+    @Test
+    public void test4684() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4684");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 1, (int) (short) 0);
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray23 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding26 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, 1, (int) (byte) 1, zipEncoding26);
+        boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray23);
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray23, 0);
+        byte[] byteArray35 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding38 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray35, 1, (int) (byte) 1, zipEncoding38);
+        java.lang.String str40 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, 0, 1, zipEncoding38);
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 100, (int) (short) -1, zipEncoding38);
+        boolean boolean42 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long43 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        java.lang.String str46 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 0, 0);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 1 + "'", int17 == 1);
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 256L + "'", long18 == 256L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding26);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "\001" + "'", str27, "\001");
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + false + "'", boolean28 == false);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertNotNull(byteArray35);
+        org.junit.Assert.assertArrayEquals(byteArray35, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding38);
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "\001" + "'", str39, "\001");
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "\n" + "'", str40, "\n");
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + long43 + "' != '" + 256L + "'", long43 == 256L);
+        org.junit.Assert.assertEquals("'" + str46 + "' != '" + "" + "'", str46, "");
+    }
+
+    @Test
+    public void test4685() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4685");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (int) (byte) -1);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, (int) (byte) -1);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int25 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(41L, byteArray6, (int) 'a', (int) (byte) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 105 out of bounds for length 5");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+    }
+
+    @Test
+    public void test4686() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4686");
+        byte[] byteArray6 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        java.lang.String str10 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (byte) -1);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, (int) (byte) 1);
+        java.lang.String str16 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 0, (int) (byte) -1);
+        long long17 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        byte[] byteArray25 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray25, (int) ' ', (-1));
+        byte[] byteArray32 = new byte[] { (byte) 10 };
+        long long33 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray32);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding41 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 1, (int) (byte) 1, zipEncoding41);
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray32, (int) (byte) 0, (int) (byte) -1, zipEncoding41);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray25, 0, (int) (short) 0, zipEncoding41);
+        int int45 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray6, (int) (byte) 1, 1, zipEncoding41);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int49 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes(0L, byteArray6, 4, (int) (short) -1);
+        long long50 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long53 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray6, (int) (short) -1, (int) (short) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -1 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 0, (byte) 48, (byte) 32, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + long17 + "' != '" + 21L + "'", long17 == 21L);
+        org.junit.Assert.assertNotNull(byteArray25);
+        org.junit.Assert.assertArrayEquals(byteArray25, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertNotNull(byteArray32);
+        org.junit.Assert.assertArrayEquals(byteArray32, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long33 + "' != '" + 10L + "'", long33 == 10L);
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding41);
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "\001" + "'", str42, "\001");
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + int45 + "' != '" + 2 + "'", int45 == 2);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertTrue("'" + int49 + "' != '" + 3 + "'", int49 == 3);
+        org.junit.Assert.assertTrue("'" + long50 + "' != '" + 90L + "'", long50 == 90L);
+    }
+
+    @Test
+    public void test4687() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4687");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long10 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, (int) (short) 0, (int) (short) 100);
+        long long11 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, 3);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(610L, byteArray5, 5, (int) (short) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 13 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 21L + "'", long7 == 21L);
+        org.junit.Assert.assertTrue("'" + long10 + "' != '" + 0L + "'", long10 == 0L);
+        org.junit.Assert.assertTrue("'" + long11 + "' != '" + 21L + "'", long11 == 21L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+    }
+
+    @Test
+    public void test4688() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4688");
+        byte[] byteArray1 = new byte[] { (byte) 10 };
+        long long2 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        byte[] byteArray7 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding10 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) 1, zipEncoding10);
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, (int) (byte) 0, (int) (byte) -1, zipEncoding10);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray1);
+        java.lang.String str17 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, (int) (byte) 100, (int) (byte) 0);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding20 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, (int) (short) -1, (int) (short) -1, zipEncoding20);
+        java.lang.String str24 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray1, (int) (short) 100, 0);
+        // The following exception was thrown during execution in test generation
+        try {
+            long long27 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray1, (int) '#', (int) (byte) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 35 out of bounds for length 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray1);
+        org.junit.Assert.assertArrayEquals(byteArray1, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long2 + "' != '" + 10L + "'", long2 == 10L);
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding10);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "\001" + "'", str11, "\001");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 10L + "'", long13 == 10L);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 10L + "'", long14 == 10L);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertNotNull(zipEncoding20);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+    }
+
+    @Test
+    public void test4689() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4689");
+        byte[] byteArray7 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) -1);
+        int int14 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray7, (int) (byte) 0, (int) (byte) -1);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        byte[] byteArray23 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray23);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, 1, (int) (byte) -1);
+        int int30 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray23, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, (int) ' ', (-1));
+        byte[] byteArray45 = new byte[] { (byte) 10 };
+        long long46 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray45);
+        byte[] byteArray51 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding54 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray51, 1, (int) (byte) 1, zipEncoding54);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray45, (int) (byte) 0, (int) (byte) -1, zipEncoding54);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 0, (int) (short) 0, zipEncoding54);
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, (int) 'a', (int) (byte) -1, zipEncoding54);
+        int int59 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray7, 2, (int) (byte) 1, zipEncoding54);
+        java.lang.String str62 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (byte) 10, (-1));
+        long long65 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray7, 0, (int) (byte) 100);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int68 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes((long) 0, byteArray7, (int) (short) -1, (-1));
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -4 out of bounds for length 4");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 0, (byte) 10, (byte) 0, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 21L + "'", long15 == 21L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long46 + "' != '" + 10L + "'", long46 == 10L);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding54);
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "\001" + "'", str55, "\001");
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + 3 + "'", int59 == 3);
+        org.junit.Assert.assertEquals("'" + str62 + "' != '" + "" + "'", str62, "");
+        org.junit.Assert.assertTrue("'" + long65 + "' != '" + 0L + "'", long65 == 0L);
+    }
+
+    @Test
+    public void test4690() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4690");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long16 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        long long19 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean21 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 0);
+        long long22 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long24 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long25 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int28 = org.apache.commons.compress.archivers.tar.TarUtils.formatCheckSumOctalBytes((long) (short) 10, byteArray6, 1, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: 10=12 will not fit in octal number buffer of length 0");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertTrue("'" + long16 + "' != '" + 320L + "'", long16 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + long19 + "' != '" + 320L + "'", long19 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+        org.junit.Assert.assertTrue("'" + long22 + "' != '" + 320L + "'", long22 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 320L + "'", long24 == 320L);
+        org.junit.Assert.assertTrue("'" + long25 + "' != '" + 320L + "'", long25 == 320L);
+    }
+
+    @Test
+    public void test4691() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4691");
+        byte[] byteArray7 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, (int) (byte) -1);
+        int int14 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray7, (int) (byte) 0, (int) (byte) -1);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        byte[] byteArray23 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean24 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray23);
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, 1, (int) (byte) -1);
+        int int30 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray23, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray38 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str41 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, (int) ' ', (-1));
+        byte[] byteArray45 = new byte[] { (byte) 10 };
+        long long46 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray45);
+        byte[] byteArray51 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding54 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str55 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray51, 1, (int) (byte) 1, zipEncoding54);
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray45, (int) (byte) 0, (int) (byte) -1, zipEncoding54);
+        java.lang.String str57 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray38, 0, (int) (short) 0, zipEncoding54);
+        java.lang.String str58 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, (int) 'a', (int) (byte) -1, zipEncoding54);
+        int int59 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray7, 2, (int) (byte) 1, zipEncoding54);
+        long long60 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        long long61 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray7);
+        java.lang.String str64 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) 'a', (-1));
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding67 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            int int68 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\000h", byteArray7, 3, (int) (short) -1, zipEncoding67);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 0, (byte) 10, (byte) 0, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 21L + "'", long15 == 21L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "" + "'", str27, "");
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + (-1) + "'", int30 == (-1));
+        org.junit.Assert.assertNotNull(byteArray38);
+        org.junit.Assert.assertArrayEquals(byteArray38, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str41 + "' != '" + "" + "'", str41, "");
+        org.junit.Assert.assertNotNull(byteArray45);
+        org.junit.Assert.assertArrayEquals(byteArray45, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long46 + "' != '" + 10L + "'", long46 == 10L);
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding54);
+        org.junit.Assert.assertEquals("'" + str55 + "' != '" + "\001" + "'", str55, "\001");
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertEquals("'" + str57 + "' != '" + "" + "'", str57, "");
+        org.junit.Assert.assertEquals("'" + str58 + "' != '" + "" + "'", str58, "");
+        org.junit.Assert.assertTrue("'" + int59 + "' != '" + 3 + "'", int59 == 3);
+        org.junit.Assert.assertTrue("'" + long60 + "' != '" + 20L + "'", long60 == 20L);
+        org.junit.Assert.assertTrue("'" + long61 + "' != '" + 20L + "'", long61 == 20L);
+        org.junit.Assert.assertEquals("'" + str64 + "' != '" + "" + "'", str64, "");
+    }
+
+    @Test
+    public void test4692() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4692");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        long long7 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray5);
+        byte[] byteArray16 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean17 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        boolean boolean18 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray16, (int) (short) 0, (int) (byte) 1);
+        long long24 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray16, 0, (int) (byte) 100);
+        boolean boolean25 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray16);
+        int int28 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray16, (int) (short) 1, (int) (short) 0);
+        byte[] byteArray33 = new byte[] { (byte) 10 };
+        long long34 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        byte[] byteArray39 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding42 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray39, 1, (int) (byte) 1, zipEncoding42);
+        java.lang.String str44 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (byte) 0, (int) (byte) -1, zipEncoding42);
+        long long45 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray33);
+        boolean boolean46 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray33);
+        byte[] byteArray52 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding55 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str56 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, (int) (short) -1, (int) (short) 0, zipEncoding55);
+        boolean boolean57 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        boolean boolean58 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray52);
+        byte[] byteArray62 = new byte[] { (byte) 10 };
+        long long63 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray62);
+        byte[] byteArray68 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding71 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str72 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray68, 1, (int) (byte) 1, zipEncoding71);
+        java.lang.String str73 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray62, (int) (byte) 0, (int) (byte) -1, zipEncoding71);
+        java.lang.String str74 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray52, 0, (-1), zipEncoding71);
+        int int75 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray33, (int) (byte) 0, (int) (byte) 1, zipEncoding71);
+        byte[] byteArray80 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding83 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str84 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray80, 1, (int) (byte) 1, zipEncoding83);
+        java.lang.String str85 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, (int) (short) 10, (int) (byte) -1, zipEncoding83);
+        int int86 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray16, (int) (short) 0, 2, zipEncoding83);
+        int int87 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("25", byteArray5, 0, (int) (short) 0, zipEncoding83);
+        boolean boolean88 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int91 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes(58L, byteArray5, (int) '#', (int) '4');
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 85 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 100, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + long7 + "' != '" + 356L + "'", long7 == 356L);
+        org.junit.Assert.assertNotNull(byteArray16);
+        org.junit.Assert.assertArrayEquals(byteArray16, new byte[] { (byte) 1, (byte) 0, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 1 + "'", int21 == 1);
+        org.junit.Assert.assertTrue("'" + long24 + "' != '" + 0L + "'", long24 == 0L);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + true + "'", boolean25 == true);
+        org.junit.Assert.assertTrue("'" + int28 + "' != '" + 1 + "'", int28 == 1);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 10L + "'", long34 == 10L);
+        org.junit.Assert.assertNotNull(byteArray39);
+        org.junit.Assert.assertArrayEquals(byteArray39, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding42);
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "\001" + "'", str43, "\001");
+        org.junit.Assert.assertEquals("'" + str44 + "' != '" + "" + "'", str44, "");
+        org.junit.Assert.assertTrue("'" + long45 + "' != '" + 10L + "'", long45 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + false + "'", boolean46 == false);
+        org.junit.Assert.assertNotNull(byteArray52);
+        org.junit.Assert.assertArrayEquals(byteArray52, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding55);
+        org.junit.Assert.assertEquals("'" + str56 + "' != '" + "" + "'", str56, "");
+        org.junit.Assert.assertTrue("'" + boolean57 + "' != '" + false + "'", boolean57 == false);
+        org.junit.Assert.assertTrue("'" + boolean58 + "' != '" + false + "'", boolean58 == false);
+        org.junit.Assert.assertNotNull(byteArray62);
+        org.junit.Assert.assertArrayEquals(byteArray62, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long63 + "' != '" + 10L + "'", long63 == 10L);
+        org.junit.Assert.assertNotNull(byteArray68);
+        org.junit.Assert.assertArrayEquals(byteArray68, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding71);
+        org.junit.Assert.assertEquals("'" + str72 + "' != '" + "\001" + "'", str72, "\001");
+        org.junit.Assert.assertEquals("'" + str73 + "' != '" + "" + "'", str73, "");
+        org.junit.Assert.assertEquals("'" + str74 + "' != '" + "" + "'", str74, "");
+        org.junit.Assert.assertTrue("'" + int75 + "' != '" + 1 + "'", int75 == 1);
+        org.junit.Assert.assertNotNull(byteArray80);
+        org.junit.Assert.assertArrayEquals(byteArray80, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding83);
+        org.junit.Assert.assertEquals("'" + str84 + "' != '" + "\001" + "'", str84, "\001");
+        org.junit.Assert.assertEquals("'" + str85 + "' != '" + "" + "'", str85, "");
+        org.junit.Assert.assertTrue("'" + int86 + "' != '" + 2 + "'", int86 == 2);
+        org.junit.Assert.assertTrue("'" + int87 + "' != '" + 0 + "'", int87 == 0);
+        org.junit.Assert.assertTrue("'" + boolean88 + "' != '" + false + "'", boolean88 == false);
+    }
+
+    @Test
+    public void test4693() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4693");
+        byte[] byteArray7 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding10 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str11 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (short) -1, (int) (short) 0, zipEncoding10);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        byte[] byteArray17 = new byte[] { (byte) 10 };
+        long long18 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray17);
+        byte[] byteArray23 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding26 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str27 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray23, 1, (int) (byte) 1, zipEncoding26);
+        java.lang.String str28 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, (int) (byte) 0, (int) (byte) -1, zipEncoding26);
+        java.lang.String str29 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 0, (-1), zipEncoding26);
+        java.lang.String str32 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, 1, 0);
+        boolean boolean33 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        java.lang.String str36 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (short) 1, (-1));
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString(21L, byteArray7, 0, 2);
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding42 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str43 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray7, (int) (short) 0, (int) (short) 0, zipEncoding42);
+        org.apache.commons.compress.archivers.tar.TarUtils.formatUnsignedOctalString((long) 3, byteArray7, (int) (short) 1, (int) (short) 1);
+        int int49 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray7, (int) (short) 1, (int) (byte) 1);
+        boolean boolean50 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray7);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int53 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalOrBinaryBytes((long) '4', byteArray7, 4, 2);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 4 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray7);
+        org.junit.Assert.assertArrayEquals(byteArray7, new byte[] { (byte) 50, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding10);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(byteArray17);
+        org.junit.Assert.assertArrayEquals(byteArray17, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long18 + "' != '" + 10L + "'", long18 == 10L);
+        org.junit.Assert.assertNotNull(byteArray23);
+        org.junit.Assert.assertArrayEquals(byteArray23, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding26);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "\001" + "'", str27, "\001");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "" + "'", str28, "");
+        org.junit.Assert.assertEquals("'" + str29 + "' != '" + "" + "'", str29, "");
+        org.junit.Assert.assertEquals("'" + str32 + "' != '" + "" + "'", str32, "");
+        org.junit.Assert.assertTrue("'" + boolean33 + "' != '" + false + "'", boolean33 == false);
+        org.junit.Assert.assertEquals("'" + str36 + "' != '" + "" + "'", str36, "");
+        org.junit.Assert.assertNotNull(zipEncoding42);
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "" + "'", str43, "");
+        org.junit.Assert.assertTrue("'" + int49 + "' != '" + 2 + "'", int49 == 2);
+        org.junit.Assert.assertTrue("'" + boolean50 + "' != '" + false + "'", boolean50 == false);
+    }
+
+    @Test
+    public void test4694() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4694");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("01\n", byteArray5, 0, 1);
+        byte[] byteArray17 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding20 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, (int) (short) -1, (int) (short) 0, zipEncoding20);
+        boolean boolean22 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray17);
+        boolean boolean23 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray17);
+        byte[] byteArray27 = new byte[] { (byte) 10 };
+        long long28 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray27);
+        byte[] byteArray33 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding36 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str37 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray33, 1, (int) (byte) 1, zipEncoding36);
+        java.lang.String str38 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, (int) (byte) 0, (int) (byte) -1, zipEncoding36);
+        java.lang.String str39 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, 0, (-1), zipEncoding36);
+        java.lang.String str42 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, 1, 0);
+        boolean boolean43 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray17);
+        boolean boolean44 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray17);
+        long long47 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctalOrBinary(byteArray17, 0, 100);
+        java.lang.String str50 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray17, (int) (byte) -1, (int) (short) 0);
+        boolean boolean51 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray17);
+        byte[] byteArray59 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean60 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray59);
+        boolean boolean61 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray59);
+        int int64 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray59, (int) (short) 0, (int) (byte) 1);
+        long long67 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray59, 0, (int) (byte) 100);
+        byte[] byteArray72 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding75 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str76 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray72, 1, (int) (byte) 1, zipEncoding75);
+        int int77 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray59, (int) (byte) 0, (int) (byte) 1, zipEncoding75);
+        int int78 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\ufffd", byteArray17, (int) (short) 0, (-1), zipEncoding75);
+        java.lang.String str79 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) 'a', (int) (byte) 0, zipEncoding75);
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 48, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertNotNull(byteArray17);
+        org.junit.Assert.assertArrayEquals(byteArray17, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding20);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long28 + "' != '" + 10L + "'", long28 == 10L);
+        org.junit.Assert.assertNotNull(byteArray33);
+        org.junit.Assert.assertArrayEquals(byteArray33, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding36);
+        org.junit.Assert.assertEquals("'" + str37 + "' != '" + "\001" + "'", str37, "\001");
+        org.junit.Assert.assertEquals("'" + str38 + "' != '" + "" + "'", str38, "");
+        org.junit.Assert.assertEquals("'" + str39 + "' != '" + "" + "'", str39, "");
+        org.junit.Assert.assertEquals("'" + str42 + "' != '" + "" + "'", str42, "");
+        org.junit.Assert.assertTrue("'" + boolean43 + "' != '" + false + "'", boolean43 == false);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + false + "'", boolean44 == false);
+        org.junit.Assert.assertTrue("'" + long47 + "' != '" + 0L + "'", long47 == 0L);
+        org.junit.Assert.assertEquals("'" + str50 + "' != '" + "" + "'", str50, "");
+        org.junit.Assert.assertTrue("'" + boolean51 + "' != '" + false + "'", boolean51 == false);
+        org.junit.Assert.assertNotNull(byteArray59);
+        org.junit.Assert.assertArrayEquals(byteArray59, new byte[] { (byte) 10, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean60 + "' != '" + false + "'", boolean60 == false);
+        org.junit.Assert.assertTrue("'" + boolean61 + "' != '" + false + "'", boolean61 == false);
+        org.junit.Assert.assertTrue("'" + int64 + "' != '" + 1 + "'", int64 == 1);
+        org.junit.Assert.assertTrue("'" + long67 + "' != '" + 0L + "'", long67 == 0L);
+        org.junit.Assert.assertNotNull(byteArray72);
+        org.junit.Assert.assertArrayEquals(byteArray72, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding75);
+        org.junit.Assert.assertEquals("'" + str76 + "' != '" + "\001" + "'", str76, "\001");
+        org.junit.Assert.assertTrue("'" + int77 + "' != '" + 1 + "'", int77 == 1);
+        org.junit.Assert.assertTrue("'" + int78 + "' != '" + (-1) + "'", int78 == (-1));
+        org.junit.Assert.assertEquals("'" + str79 + "' != '" + "" + "'", str79, "");
+    }
+
+    @Test
+    public void test4695() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4695");
+        byte[] byteArray5 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding8 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) -1, (int) (short) 0, zipEncoding8);
+        boolean boolean10 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean11 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean12 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        java.lang.String str15 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, 10, (int) (byte) 0);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (byte) 1, (int) (byte) 1);
+        int int21 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd", byteArray5, (int) (byte) 0, (-1));
+        // The following exception was thrown during execution in test generation
+        try {
+            int int24 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("dd\nd", byteArray5, 100, (int) (short) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: arraycopy: last destination index 100 out of bounds for byte[3]");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding8);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "\n" + "'", str18, "\n");
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+    }
+
+    @Test
+    public void test4696() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4696");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean14 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, (int) (byte) 0);
+        int int17 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray6, (int) (short) 1, 0);
+        boolean boolean19 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray6, 3);
+        byte[] byteArray27 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str30 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, (int) ' ', (-1));
+        java.lang.String str33 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, (int) (short) -1, (int) (short) 0);
+        long long34 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray27);
+        boolean boolean35 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray27);
+        byte[] byteArray40 = new byte[] { (byte) 10 };
+        long long41 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray40);
+        byte[] byteArray46 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding49 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str50 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray46, 1, (int) (byte) 1, zipEncoding49);
+        java.lang.String str51 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray40, (int) (byte) 0, (int) (byte) -1, zipEncoding49);
+        long long52 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray40);
+        boolean boolean53 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray40);
+        byte[] byteArray59 = new byte[] { (byte) 0, (byte) 10, (byte) 100 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding62 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray59, (int) (short) -1, (int) (short) 0, zipEncoding62);
+        boolean boolean64 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray59);
+        boolean boolean65 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray59);
+        byte[] byteArray69 = new byte[] { (byte) 10 };
+        long long70 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray69);
+        byte[] byteArray75 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding78 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str79 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray75, 1, (int) (byte) 1, zipEncoding78);
+        java.lang.String str80 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray69, (int) (byte) 0, (int) (byte) -1, zipEncoding78);
+        java.lang.String str81 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray59, 0, (-1), zipEncoding78);
+        int int82 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("hi!", byteArray40, (int) (byte) 0, (int) (byte) 1, zipEncoding78);
+        java.lang.String str83 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray27, 0, 0, zipEncoding78);
+        java.lang.String str84 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (short) 100, (-1), zipEncoding78);
+        java.lang.String str87 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) 0, (int) (byte) -1);
+        long long88 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 1 + "'", int17 == 1);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(byteArray27);
+        org.junit.Assert.assertArrayEquals(byteArray27, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str30 + "' != '" + "" + "'", str30, "");
+        org.junit.Assert.assertEquals("'" + str33 + "' != '" + "" + "'", str33, "");
+        org.junit.Assert.assertTrue("'" + long34 + "' != '" + 320L + "'", long34 == 320L);
+        org.junit.Assert.assertTrue("'" + boolean35 + "' != '" + false + "'", boolean35 == false);
+        org.junit.Assert.assertNotNull(byteArray40);
+        org.junit.Assert.assertArrayEquals(byteArray40, new byte[] { (byte) 104 });
+        org.junit.Assert.assertTrue("'" + long41 + "' != '" + 10L + "'", long41 == 10L);
+        org.junit.Assert.assertNotNull(byteArray46);
+        org.junit.Assert.assertArrayEquals(byteArray46, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding49);
+        org.junit.Assert.assertEquals("'" + str50 + "' != '" + "\001" + "'", str50, "\001");
+        org.junit.Assert.assertEquals("'" + str51 + "' != '" + "" + "'", str51, "");
+        org.junit.Assert.assertTrue("'" + long52 + "' != '" + 10L + "'", long52 == 10L);
+        org.junit.Assert.assertTrue("'" + boolean53 + "' != '" + false + "'", boolean53 == false);
+        org.junit.Assert.assertNotNull(byteArray59);
+        org.junit.Assert.assertArrayEquals(byteArray59, new byte[] { (byte) 0, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertNotNull(zipEncoding62);
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "" + "'", str63, "");
+        org.junit.Assert.assertTrue("'" + boolean64 + "' != '" + false + "'", boolean64 == false);
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + false + "'", boolean65 == false);
+        org.junit.Assert.assertNotNull(byteArray69);
+        org.junit.Assert.assertArrayEquals(byteArray69, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long70 + "' != '" + 10L + "'", long70 == 10L);
+        org.junit.Assert.assertNotNull(byteArray75);
+        org.junit.Assert.assertArrayEquals(byteArray75, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding78);
+        org.junit.Assert.assertEquals("'" + str79 + "' != '" + "\001" + "'", str79, "\001");
+        org.junit.Assert.assertEquals("'" + str80 + "' != '" + "" + "'", str80, "");
+        org.junit.Assert.assertEquals("'" + str81 + "' != '" + "" + "'", str81, "");
+        org.junit.Assert.assertTrue("'" + int82 + "' != '" + 1 + "'", int82 == 1);
+        org.junit.Assert.assertEquals("'" + str83 + "' != '" + "" + "'", str83, "");
+        org.junit.Assert.assertEquals("'" + str84 + "' != '" + "" + "'", str84, "");
+        org.junit.Assert.assertEquals("'" + str87 + "' != '" + "" + "'", str87, "");
+        org.junit.Assert.assertTrue("'" + long88 + "' != '" + 320L + "'", long88 == 320L);
+    }
+
+    @Test
+    public void test4697() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4697");
+        byte[] byteArray6 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str9 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (-1));
+        java.lang.String str12 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) (byte) -1, 0);
+        boolean boolean13 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        long long15 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray6);
+        java.lang.String str18 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, (int) ' ', (int) (byte) -1);
+        java.lang.String str21 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray6, 1, (int) (short) -1);
+        byte[] byteArray29 = new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 };
+        boolean boolean30 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray29);
+        java.lang.String str33 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, 1, (int) (byte) -1);
+        int int36 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray29, (int) (byte) 0, (int) (byte) -1);
+        byte[] byteArray44 = new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 };
+        java.lang.String str47 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray44, (int) ' ', (-1));
+        byte[] byteArray51 = new byte[] { (byte) 10 };
+        long long52 = org.apache.commons.compress.archivers.tar.TarUtils.computeCheckSum(byteArray51);
+        byte[] byteArray57 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding60 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str61 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray57, 1, (int) (byte) 1, zipEncoding60);
+        java.lang.String str62 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray51, (int) (byte) 0, (int) (byte) -1, zipEncoding60);
+        java.lang.String str63 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray44, 0, (int) (short) 0, zipEncoding60);
+        java.lang.String str64 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray29, (int) 'a', (int) (byte) -1, zipEncoding60);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int65 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\001", byteArray6, (int) (short) 0, (int) '4', zipEncoding60);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0 });
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 320L + "'", long14 == 320L);
+        org.junit.Assert.assertTrue("'" + long15 + "' != '" + 320L + "'", long15 == 320L);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertNotNull(byteArray29);
+        org.junit.Assert.assertArrayEquals(byteArray29, new byte[] { (byte) 0, (byte) 10, (byte) 1, (byte) 10 });
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + false + "'", boolean30 == false);
+        org.junit.Assert.assertEquals("'" + str33 + "' != '" + "" + "'", str33, "");
+        org.junit.Assert.assertTrue("'" + int36 + "' != '" + (-1) + "'", int36 == (-1));
+        org.junit.Assert.assertNotNull(byteArray44);
+        org.junit.Assert.assertArrayEquals(byteArray44, new byte[] { (byte) 10, (byte) 100, (byte) 100, (byte) 10, (byte) 100 });
+        org.junit.Assert.assertEquals("'" + str47 + "' != '" + "" + "'", str47, "");
+        org.junit.Assert.assertNotNull(byteArray51);
+        org.junit.Assert.assertArrayEquals(byteArray51, new byte[] { (byte) 10 });
+        org.junit.Assert.assertTrue("'" + long52 + "' != '" + 10L + "'", long52 == 10L);
+        org.junit.Assert.assertNotNull(byteArray57);
+        org.junit.Assert.assertArrayEquals(byteArray57, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding60);
+        org.junit.Assert.assertEquals("'" + str61 + "' != '" + "\001" + "'", str61, "\001");
+        org.junit.Assert.assertEquals("'" + str62 + "' != '" + "" + "'", str62, "");
+        org.junit.Assert.assertEquals("'" + str63 + "' != '" + "" + "'", str63, "");
+        org.junit.Assert.assertEquals("'" + str64 + "' != '" + "" + "'", str64, "");
+    }
+
+    @Test
+    public void test4698() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4698");
+        byte[] byteArray6 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        boolean boolean8 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray6);
+        int int11 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray6, (int) (short) 0, (int) (byte) 1);
+        long long14 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray6, 0, (int) (byte) 100);
+        byte[] byteArray19 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding22 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str23 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray19, 1, (int) (byte) 1, zipEncoding22);
+        int int24 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray6, (int) (byte) 0, (int) (byte) 1, zipEncoding22);
+        // The following exception was thrown during execution in test generation
+        try {
+            int int27 = org.apache.commons.compress.archivers.tar.TarUtils.formatLongOctalBytes((long) (byte) 0, byteArray6, (int) 'a', 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 95 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray6);
+        org.junit.Assert.assertArrayEquals(byteArray6, new byte[] { (byte) 10, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 1 + "'", int11 == 1);
+        org.junit.Assert.assertTrue("'" + long14 + "' != '" + 0L + "'", long14 == 0L);
+        org.junit.Assert.assertNotNull(byteArray19);
+        org.junit.Assert.assertArrayEquals(byteArray19, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding22);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "\001" + "'", str23, "\001");
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 1 + "'", int24 == 1);
+    }
+
+    @Test
+    public void test4699() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest9.test4699");
+        byte[] byteArray5 = new byte[] { (byte) 100, (byte) 1, (byte) -1 };
+        boolean boolean6 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        boolean boolean7 = org.apache.commons.compress.archivers.tar.TarUtils.verifyCheckSum(byteArray5);
+        int int10 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("", byteArray5, (int) (short) 0, (int) (byte) 1);
+        long long13 = org.apache.commons.compress.archivers.tar.TarUtils.parseOctal(byteArray5, 0, (int) (byte) 100);
+        byte[] byteArray18 = new byte[] { (byte) 10, (byte) 1 };
+        org.apache.commons.compress.archivers.zip.ZipEncoding zipEncoding21 = org.apache.commons.compress.archivers.tar.TarUtils.FALLBACK_ENCODING;
+        java.lang.String str22 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray18, 1, (int) (byte) 1, zipEncoding21);
+        int int23 = org.apache.commons.compress.archivers.tar.TarUtils.formatNameBytes("\n", byteArray5, (int) (byte) 0, (int) (byte) 1, zipEncoding21);
+        java.lang.String str26 = org.apache.commons.compress.archivers.tar.TarUtils.parseName(byteArray5, (int) (short) 1, (int) (short) 1);
+        // The following exception was thrown during execution in test generation
+        try {
+            boolean boolean28 = org.apache.commons.compress.archivers.tar.TarUtils.parseBoolean(byteArray5, (int) (byte) -1);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index -1 out of bounds for length 3");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(byteArray5);
+        org.junit.Assert.assertArrayEquals(byteArray5, new byte[] { (byte) 10, (byte) 1, (byte) -1 });
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + long13 + "' != '" + 0L + "'", long13 == 0L);
+        org.junit.Assert.assertNotNull(byteArray18);
+        org.junit.Assert.assertArrayEquals(byteArray18, new byte[] { (byte) 10, (byte) 1 });
+        org.junit.Assert.assertNotNull(zipEncoding21);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "\001" + "'", str22, "\001");
+        org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "\001" + "'", str26, "\001");
+    }
+}
+
