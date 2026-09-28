@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "STANDARD_GA",
+  "created_at": "2569-09-25T12:21:34Z",
+  "round": 2,
+  "project": "Jsoup",
+  "bug_id": 48,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 32,
+  "coverage": 52.51,
+  "line_cov": 58.75,
+  "branch_cov": 46.46,
+  "total_goals": 717,
+  "covered_goals": 384,
+  "lines": 106,
+  "covered_lines": 270,
+  "total_branches": 178,
+  "covered_branches": 63,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "targets": [
+    {
+      "target_class": "org.jsoup.helper.HttpConnection",
+      "generation_result": "PASS",
+      "generation_seconds": 84,
+      "tests": 32,
+      "coverage": 52.51,
+      "line_cov": 58.75,
+      "branch_cov": 46.46,
+      "total_goals": 717,
+      "covered_goals": 384,
+      "lines": 106,
+      "covered_lines": 270,
+      "total_branches": 178,
+      "covered_branches": 63,
+      "total_methods": 103,
+      "covered_methods": 80,
+      "branchless_methods": 76,
+      "covered_branchless_methods": 55
+    }
+  ],
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "failures": 0
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "failures": 0
+    }
+  ]
+}

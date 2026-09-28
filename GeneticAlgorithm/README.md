@@ -82,7 +82,7 @@ generated `.java` files
 | JacksonCore     | jackson-core           |                    26 | 1-26                     | None                    | check      | 26 is Failed |
 | JacksonDatabind | jackson-databind       |                   110 | 1-64,66-88,90-112        | 65,89                   |            |              |
 | JacksonXml      | jackson-dataformat-xml |                     6 | 1-6                      | None                    | check      |              |
-| Jsoup           | jsoup                  |                    93 | 1-93                     | None                    |            |              |
+| Jsoup           | jsoup                  |                    93 | 1-93                     | None                    | check      |              |
 | JxPath          | commons-jxpath         |                    22 | 1-22                     | None                    | check      |              |
 | Lang            | commons-lang           |                    61 | 1,3-17,19-24,26-47,49-65 | 2,18,25,48              | check      |              |
 | Math            | commons-math           |                   106 | 1-106                    | None                    | check      |              |
