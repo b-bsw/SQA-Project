@@ -1,4 +1,8 @@
 import tempfile
+import subprocess
+import time
+import os
+import sys
 import unittest
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -28,6 +32,77 @@ class FakeRandoop:
 
 
 class CancelOutputTests(unittest.TestCase):
+    def test_timed_out_java_process_is_reaped(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            classes = root / "classes"
+            classes.mkdir()
+            jar = root / "randoop.jar"
+            jar.write_bytes(b"jar")
+            original_popen = subprocess.Popen
+            started = []
+            def start_stalled_java(_command, **kwargs):
+                process = original_popen([sys.executable, "-c", "import time; time.sleep(60)"], **kwargs)
+                started.append(process)
+                return process
+            output = root / "TestCode" / "Codec_13_buggy"
+            with patch.object(generator, "collect_project_classpath_entries", return_value=[]), \
+                 patch.object(generator.tempfile, "gettempdir", return_value=str(root)), \
+                 patch.object(generator.subprocess, "Popen", side_effect=start_stalled_java):
+                success, message, files = generator.run_randoop_for_project(
+                    {"project_name": "Codec_13", "fqcns": ["org.example.Codec"],
+                     "primary_package": "org.example"}, jar, classes, output, 60,
+                    workspace_dir=root, timeout=0.05)
+            self.assertFalse(success)
+            self.assertIn("TIMEOUT", message)
+            self.assertEqual(files, [])
+            self.assertFalse(output.exists())
+            self.assertEqual(len(started), 1)
+            self.assertIsNotNone(started[0].poll())
+
+    def test_java_timeout_stops_process_and_does_not_publish(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            classes = root / "classes"
+            classes.mkdir()
+            jar = root / "randoop.jar"
+            jar.write_bytes(b"jar")
+            output = root / "TestCode" / "Codec_13_buggy"
+            class HungRandoop:
+                returncode = None
+                terminated = False
+                def communicate(self, timeout=None):
+                    self.assert_timeout = timeout
+                    raise subprocess.TimeoutExpired("java", timeout)
+                def poll(self):
+                    return self.returncode
+                def terminate(self):
+                    self.terminated = True
+                    self.returncode = -15
+                def wait(self, timeout=None):
+                    return self.returncode
+            process = HungRandoop()
+            with patch.object(generator, "collect_project_classpath_entries", return_value=[]), \
+                 patch.object(generator.tempfile, "gettempdir", return_value=str(root)), \
+                 patch.object(generator.subprocess, "Popen", return_value=process), \
+                 patch.object(generator, "_stop_randoop_process", side_effect=lambda child: child.terminate()):
+                success, message, files = generator.run_randoop_for_project(
+                    {"project_name": "Codec_13", "fqcns": ["org.example.Codec"],
+                     "primary_package": "org.example"}, jar, classes, output, 60,
+                    workspace_dir=root, timeout=1)
+            self.assertFalse(success)
+            self.assertIn("TIMEOUT", message)
+            self.assertEqual(process.assert_timeout, 1)
+            self.assertTrue(process.terminated)
+            self.assertEqual(files, [])
+            self.assertFalse(output.exists())
+
+    @unittest.skipUnless(os.name == "posix", "SIGALRM per-project watchdog runs on WSL/POSIX")
+    def test_project_watchdog_interrupts_python_work(self):
+        with self.assertRaises(generator.ProjectTimedOut):
+            with generator.project_deadline(0.02):
+                time.sleep(0.2)
+
     def test_saved_status_uses_unambiguous_utc_timestamp(self):
         with tempfile.TemporaryDirectory() as directory:
             state = generator.MemoryStateManager(Path(directory) / "state.json")

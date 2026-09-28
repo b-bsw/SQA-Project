@@ -104,7 +104,7 @@ def find_defects4j(custom_path: Optional[str] = None) -> str:
 
     home = Path.home()
     candidates = [
-        home / "defects4j" / "framework" / "bin" / "defects4j",
+        home / "defect4j" / "defects4j" / "framework" / "bin" / "defects4j",
         home / "defects4j" / "framework" / "bin" / "defects4j",
         Path("/home/defects4j/framework/bin/defects4j"),
         Path("/Users/defects4j/framework/bin/defects4j"),
@@ -334,14 +334,19 @@ def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
 
     # 1. Checkout
     checkout_rc = run_command([d4j, "checkout", "-p", project, "-v",
-                               f"{bug_id}{suffix}", "-w", str(workspace)], log)
+                               f"{bug_id}{suffix}", "-w", str(workspace)], log,
+                              timeout=test_timeout)
     if checkout_rc != 0:
-        return {"result": "NOT_RUN", "fails": None, "compile": "NOT_RUN", "status": "CHECKOUT_FAIL"}
+        return {"result": "NOT_RUN", "fails": None, "compile": "NOT_RUN",
+                "status": "TIMEOUT" if checkout_rc == TIMEOUT_RC else "CHECKOUT_FAIL"}
 
     # 2. Compile
-    compile_rc = run_command([d4j, "compile", "-w", str(workspace)], log)
+    compile_rc = run_command([d4j, "compile", "-w", str(workspace)], log,
+                             timeout=test_timeout)
     if compile_rc != 0:
-        return {"result": "NOT_RUN", "fails": None, "compile": "FAIL", "status": "COMPILE_FAIL"}
+        return {"result": "NOT_RUN", "fails": None,
+                "compile": "NOT_RUN" if compile_rc == TIMEOUT_RC else "FAIL",
+                "status": "TIMEOUT" if compile_rc == TIMEOUT_RC else "COMPILE_FAIL"}
 
     # 3. Test
     failing = workspace / "failing_tests"
@@ -748,7 +753,7 @@ Examples:
     parser.add_argument("--limit", "-l", type=int, default=None,
                         help="Maximum number of targets to execute")
     parser.add_argument("--test-timeout", type=int, default=600,
-                        help="Timeout in seconds per defects4j test/coverage command (default: 600)")
+                        help="Timeout in seconds per defects4j checkout/compile/test/coverage command (default: 600)")
     parser.add_argument("--no-coverage", action="store_true",
                         help="Skip coverage measurement step")
     parser.add_argument("--overwrite", action="store_true",

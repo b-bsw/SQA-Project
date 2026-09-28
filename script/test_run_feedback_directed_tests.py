@@ -10,6 +10,7 @@ import sys
 import tarfile
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 # Import the runner module
@@ -20,6 +21,27 @@ import run_feedback_directed_tests as runner
 
 
 class TestFeedbackDirectedRunner(unittest.TestCase):
+    def test_checkout_and_compile_use_timeout(self):
+        checkout_calls = []
+        def timed_out(command, log, **kwargs):
+            checkout_calls.append((command, kwargs.get("timeout")))
+            return runner.TIMEOUT_RC
+        with patch.object(runner, "run_command", side_effect=timed_out):
+            result = runner.run_revision("defects4j", "Codec", 1, "b",
+                                         self.temp_dir / "tests.tar.bz2", self.temp_dir,
+                                         self.temp_dir, False, 7)
+        self.assertEqual(result["status"], "TIMEOUT")
+        self.assertEqual(checkout_calls[0][1], 7)
+
+        def compile_timeout(command, log, **kwargs):
+            return 0 if "checkout" in command else runner.TIMEOUT_RC
+        with patch.object(runner, "run_command", side_effect=compile_timeout) as invoked:
+            result = runner.run_revision("defects4j", "Codec", 1, "b",
+                                         self.temp_dir / "tests.tar.bz2", self.temp_dir,
+                                         self.temp_dir, False, 7)
+        self.assertEqual(result["status"], "TIMEOUT")
+        self.assertEqual(invoked.call_args.kwargs["timeout"], 7)
+
 
     def setUp(self):
         self.temp_dir = Path(tempfile.mkdtemp(prefix="test_fdr_"))

@@ -56,7 +56,8 @@ class RoundTests(unittest.TestCase):
             self.assertTrue(ok)
             self.assertIn("--randomseed=20260928", command)
             args = SimpleNamespace(round=2, seed=20260928, time_limit=60,
-                                   jvm_memory="3000m", data_dir=None, overwrite=False)
+                                   project_timeout=600, jvm_memory="3000m",
+                                   data_dir=None, overwrite=False)
             state_root, _, _ = rounds.round_paths(root, 2)
             command = parallel.worker_command(root / "script" / "generate_randoop_tests.py",
                                                state_root, "Codec", args)

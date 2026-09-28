@@ -31,9 +31,31 @@ import tempfile
 import argparse
 import subprocess
 import signal
+from contextlib import contextmanager
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import List, Dict, Optional, Tuple, Set
+
+
+class ProjectTimedOut(BaseException):
+    """One project exceeded its wall-clock budget on POSIX."""
+
+
+@contextmanager
+def project_deadline(seconds: int):
+    if os.name != "posix":
+        yield
+        return
+    previous = signal.getsignal(signal.SIGALRM)
+    def expired(_signum, _frame):
+        raise ProjectTimedOut(f"Project exceeded {seconds}s wall-clock timeout")
+    signal.signal(signal.SIGALRM, expired)
+    signal.setitimer(signal.ITIMER_REAL, seconds)
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous)
 
 # Fix UTF-8 output on Windows consoles
 if sys.platform == "win32":
@@ -134,9 +156,10 @@ def find_defects4j_bin() -> Optional[str]:
     if which_d4j:
         return which_d4j
 
-    home_d4j = Path.home() / "defects4j" / "framework" / "bin" / "defects4j"
-    if home_d4j.is_file():
-        return str(home_d4j)
+    for home_d4j in (Path.home() / "defect4j" / "defects4j" / "framework" / "bin" / "defects4j",
+                     Path.home() / "defects4j" / "framework" / "bin" / "defects4j"):
+        if home_d4j.is_file():
+            return str(home_d4j)
 
     return None
 
@@ -197,10 +220,11 @@ def try_fast_javac_compile(
                 cp_entries.append(str(jar))
 
     # เพิ่ม jar libraries ใน Defects4J framework projects ถ้ามี
-    d4j_proj_lib = Path.home() / "defects4j" / "framework" / "projects" / prefix / "lib"
-    if d4j_proj_lib.is_dir():
-        for jar in d4j_proj_lib.glob("**/*.jar"):
-            cp_entries.append(str(jar))
+    for d4j_proj_lib in (Path.home() / "defect4j" / "defects4j" / "framework" / "projects" / prefix / "lib",
+                         Path.home() / "defects4j" / "framework" / "projects" / prefix / "lib"):
+        if d4j_proj_lib.is_dir():
+            for jar in d4j_proj_lib.glob("**/*.jar"):
+                cp_entries.append(str(jar))
 
     # กรองเฉพาะ classpath ที่ไม่มี space หรือมีอยู่จริง
     valid_cp = [c for c in cp_entries if Path(c).exists()]
@@ -663,12 +687,13 @@ def collect_project_classpath_entries(
                 pass
 
     # 2. Defect4J framework lib JARs ของโปรเจกต์นั้น
-    d4j_lib_dir = Path.home() / "defects4j" / "framework" / "projects" / prefix / "lib"
-    if d4j_lib_dir.is_dir():
-        for jar in d4j_lib_dir.glob("**/*.jar"):
-            s = str(jar)
-            if s not in extra_cps:
-                extra_cps.append(s)
+    for d4j_lib_dir in (Path.home() / "defect4j" / "defects4j" / "framework" / "projects" / prefix / "lib",
+                        Path.home() / "defects4j" / "framework" / "projects" / prefix / "lib"):
+        if d4j_lib_dir.is_dir():
+            for jar in d4j_lib_dir.glob("**/*.jar"):
+                s = str(jar)
+                if s not in extra_cps:
+                    extra_cps.append(s)
 
     # 3. JARs ใน data_dir (หากระบุ)
     if data_dir and data_dir.is_dir():
@@ -710,6 +735,7 @@ def _run_randoop_for_project(
     data_dir: Optional[Path] = None,
     staging_root: Optional[Path] = None,
     seed: int = 0,
+    timeout: Optional[float] = None,
 ) -> Tuple[bool, str, List[str]]:
     """
     ดำเนินการรัน Randoop gentests สำหรับโปรเจกต์ที่กำหนด:
@@ -823,7 +849,15 @@ def _run_randoop_for_project(
             errors="replace",
             start_new_session=(os.name == "posix")
         )
-        stdout, stderr = process.communicate()
+        stdout, stderr = process.communicate(timeout=timeout) if timeout is not None else process.communicate()
+    except subprocess.TimeoutExpired:
+        if process is not None:
+            _stop_randoop_process(process)
+        return False, f"TIMEOUT: Java/Randoop exceeded {timeout:.1f}s", []
+    except ProjectTimedOut:
+        if process is not None:
+            _stop_randoop_process(process)
+        raise
     except KeyboardInterrupt:
         if process is not None:
             _stop_randoop_process(process)
@@ -905,13 +939,15 @@ def run_randoop_for_project(
     quiet: bool = False,
     data_dir: Optional[Path] = None,
     seed: int = 0,
+    timeout: Optional[float] = None,
 ) -> Tuple[bool, str, List[str]]:
     """Isolate one run so failed or interrupted output is automatically discarded."""
     kwargs = dict(project_info=project_info, randoop_jar=randoop_jar,
                   classes_dir=classes_dir, output_dir=output_dir,
                   time_limit=time_limit, tests_per_file=tests_per_file,
                   jvm_max_memory=jvm_max_memory, workspace_dir=workspace_dir,
-                  dry_run=dry_run, quiet=quiet, data_dir=data_dir, seed=seed)
+                  dry_run=dry_run, quiet=quiet, data_dir=data_dir, seed=seed,
+                  timeout=timeout)
     temp_parent = randoop_temp_base(workspace_dir, "sqa_randoop")
     if dry_run:
         return _run_randoop_for_project(**kwargs, staging_root=temp_parent / "dry-run")
@@ -1044,6 +1080,8 @@ def _main(run_summary):
     parser.add_argument("--round", type=int, choices=(1, 2), default=None)
     parser.add_argument("--seed", type=int, default=None, help="Randoop random seed (round 1: 0, round 2: 20260928)")
     parser.add_argument("--time-limit", "-t", type=int, default=60, help="ระยะเวลาสร้างเทสต์ต่อโปรเจกต์ (วินาที, ค่าเริ่มต้น: 60)")
+    parser.add_argument("--project-timeout", type=int, default=600,
+                        help="Hard wall-clock timeout ต่อโปรเจกต์รวมเตรียม/สร้างเทสต์ (ค่าเริ่มต้น: 600s)")
     parser.add_argument("--classes-dir", "-cp", help="ตำแหน่งโฟลเดอร์ compiled .class (เช่น target/classes หรือ build/classes)")
     parser.add_argument("--randoop-jar", help="พาธไฟล์ randoop-all-4.3.4.jar (หากไม่ระบุจะค้นหาอัตโนมัติ)")
     parser.add_argument("--output-dir", help="โฟลเดอร์ปลายทางสำหรับจัดเก็บ Test Code")
@@ -1069,8 +1107,8 @@ def _main(run_summary):
 
     args = parser.parse_args()
     args.seed = args.seed if args.seed is not None else (20260928 if args.round == 2 else 0)
-    if not 0 <= args.seed <= 2147483647 or args.time_limit < 1:
-        parser.error("seed must be 0..2147483647 and time-limit must be positive")
+    if not 0 <= args.seed <= 2147483647 or args.time_limit < 1 or args.project_timeout < 1:
+        parser.error("seed must be 0..2147483647; time-limit and project-timeout must be positive")
     if args.round:
         from randoop_rounds import prepare_round, round_paths
         root = workspace_dir / "Feedback-Directed Random Test Generation"
@@ -1181,88 +1219,98 @@ def _main(run_summary):
         pname = proj["project_name"]
         class_count = len(proj["class_infos"])
         dest_folder = test_code_base / f"{pname}_buggy"
+        project_started = time.monotonic()
+        try:
+            with project_deadline(args.project_timeout):
+                print(f"\n[{idx}/{len(all_projects)}] 📦 Project: {pname} ({class_count} คลาส, {proj['total_bytes']:,} ไบต์)")
 
-        print(f"\n[{idx}/{len(all_projects)}] 📦 Project: {pname} ({class_count} คลาส, {proj['total_bytes']:,} ไบต์)")
+                # ตรวจสอบสถานะเดิม
+                saved = memory_manager.state_data.get(pname, {})
+                matches = (saved.get("seed", 0) == args.seed and saved.get("time_limit") == args.time_limit)
+                if not args.overwrite and memory_manager.is_completed(pname) and (not args.round or matches):
+                    print(f"  ⏭️ [MEMORY: SKIP] ข้าม: โปรเจกต์นี้สร้าง Test สำเร็จแล้วใน Memory")
+                    print(f"     (หากต้องการสร้างใหม่ให้ระบุ --overwrite)")
+                    skipped_count += 1
+                    continue
 
-        # ตรวจสอบสถานะเดิม
-        saved = memory_manager.state_data.get(pname, {})
-        matches = (saved.get("seed", 0) == args.seed and saved.get("time_limit") == args.time_limit)
-        if not args.overwrite and memory_manager.is_completed(pname) and (not args.round or matches):
-            print(f"  ⏭️ [MEMORY: SKIP] ข้าม: โปรเจกต์นี้สร้าง Test สำเร็จแล้วใน Memory")
-            print(f"     (หากต้องการสร้างใหม่ให้ระบุ --overwrite)")
-            skipped_count += 1
-            continue
+                # ค้นหา Classes Directory (พร้อม Auto-Compile หากยังไม่มี .class)
+                classes_dir = resolve_project_classes_dir(
+                    project_folder=pname,
+                    workspace_dir=workspace_dir,
+                    custom_classes_dir=args.classes_dir,
+                    project_info=proj,
+                    auto_compile=not args.no_auto_compile,
+                    data_dir=data_dir
+                )
 
-        # ค้นหา Classes Directory (พร้อม Auto-Compile หากยังไม่มี .class)
-        classes_dir = resolve_project_classes_dir(
-            project_folder=pname,
-            workspace_dir=workspace_dir,
-            custom_classes_dir=args.classes_dir,
-            project_info=proj,
-            auto_compile=not args.no_auto_compile,
-            data_dir=data_dir
-        )
+                if not classes_dir:
+                    if args.dry_run:
+                        classes_dir = Path("target/classes")
+                    elif args.skip_missing:
+                        print(f"  ⏭️ [SKIP MISSING] ข้าม: ไม่พบ .class และไม่สามารถคอมไพล์ {pname} ได้")
+                        skipped_count += 1
+                        continue
+                    else:
+                        print(f"  ⚠️ [MISSING CLASSES] ไม่พบโฟลเดอร์ compiled .class สำหรับ {pname}")
+                        print(f"     💡 กำหนดพาธผ่าน --classes-dir หรือรัน 'defects4j compile' ในโฟลเดอร์ data/{pname.replace('_', '')}buggy")
+                        memory_manager.record_failed(pname, "Missing compiled classes directory", proj["fqcns"])
+                        failed_count += 1
+                        continue
 
-        if not classes_dir:
-            if args.dry_run:
-                classes_dir = Path("target/classes")
-            elif args.skip_missing:
-                print(f"  ⏭️ [SKIP MISSING] ข้าม: ไม่พบ .class และไม่สามารถคอมไพล์ {pname} ได้")
-                skipped_count += 1
-                continue
-            else:
-                print(f"  ⚠️ [MISSING CLASSES] ไม่พบโฟลเดอร์ compiled .class สำหรับ {pname}")
-                print(f"     💡 กำหนดพาธผ่าน --classes-dir หรือรัน 'defects4j compile' ในโฟลเดอร์ data/{pname.replace('_', '')}buggy")
-                memory_manager.record_failed(pname, "Missing compiled classes directory", proj["fqcns"])
-                failed_count += 1
-                continue
+                print(f"  🏷️ Package: {proj['primary_package'] or '(default)'}")
+                print(f"  📂 Target Classes: {classes_dir}")
+                print(f"  📁 Output Dir:     {dest_folder}")
 
-        print(f"  🏷️ Package: {proj['primary_package'] or '(default)'}")
-        print(f"  📂 Target Classes: {classes_dir}")
-        print(f"  📁 Output Dir:     {dest_folder}")
+                # รัน Randoop
+                remaining = max(0.01, args.project_timeout - (time.monotonic() - project_started))
+                success, msg, gen_files = run_randoop_for_project(
+                    project_info=proj,
+                    randoop_jar=randoop_jar,
+                    classes_dir=classes_dir,
+                    output_dir=dest_folder,
+                    time_limit=args.time_limit,
+                    tests_per_file=args.tests_per_file,
+                    jvm_max_memory=args.jvm_memory,
+                    workspace_dir=workspace_dir,
+                    dry_run=args.dry_run,
+                    data_dir=data_dir,
+                    seed=args.seed,
+                    timeout=remaining,
+                )
 
-        # รัน Randoop
-        success, msg, gen_files = run_randoop_for_project(
-            project_info=proj,
-            randoop_jar=randoop_jar,
-            classes_dir=classes_dir,
-            output_dir=dest_folder,
-            time_limit=args.time_limit,
-            tests_per_file=args.tests_per_file,
-            jvm_max_memory=args.jvm_memory,
-            workspace_dir=workspace_dir,
-            dry_run=args.dry_run,
-            data_dir=data_dir,
-            seed=args.seed,
-        )
+                if success:
+                    if args.dry_run:
+                        print(f"  {msg}")
+                        success_count += 1
+                    else:
+                        print(f"  ✨ {msg}")
+                        if gen_files:
+                            for gf in gen_files[:3]:
+                                print(f"     📄 {gf}")
+                            if len(gen_files) > 3:
+                                print(f"     ...และอีก {len(gen_files)-3} ไฟล์")
+                        memory_manager.record_completed(pname, {
+                            "output_dir": str(dest_folder),
+                            "classes_dir": str(classes_dir),
+                            "classes_tested": proj["fqcns"],
+                            "generated_tests": gen_files,
+                            "round": args.round or 1,
+                            "seed": args.seed,
+                            "seed_source": "EXPLICIT",
+                            "time_limit": args.time_limit
+                        })
+                        cleanup_generated_artifacts(pname, workspace_dir, classes_dir, randoop_jar, dest_folder, bool(args.classes_dir))
+                        success_count += 1
+                else:
+                    print(f"  ❌ ล้มเหลว: {msg}")
+                    if not args.dry_run:
+                        memory_manager.record_failed(pname, msg, proj["fqcns"])
+                    failed_count += 1
 
-        if success:
-            if args.dry_run:
-                print(f"  {msg}")
-                success_count += 1
-            else:
-                print(f"  ✨ {msg}")
-                if gen_files:
-                    for gf in gen_files[:3]:
-                        print(f"     📄 {gf}")
-                    if len(gen_files) > 3:
-                        print(f"     ...และอีก {len(gen_files)-3} ไฟล์")
-                memory_manager.record_completed(pname, {
-                    "output_dir": str(dest_folder),
-                    "classes_dir": str(classes_dir),
-                    "classes_tested": proj["fqcns"],
-                    "generated_tests": gen_files,
-                    "round": args.round or 1,
-                    "seed": args.seed,
-                    "seed_source": "EXPLICIT",
-                    "time_limit": args.time_limit
-                })
-                cleanup_generated_artifacts(pname, workspace_dir, classes_dir, randoop_jar, dest_folder, bool(args.classes_dir))
-                success_count += 1
-        else:
-            print(f"  ❌ ล้มเหลว: {msg}")
+        except ProjectTimedOut as exc:
+            print(f"  ❌ TIMEOUT: {exc}")
             if not args.dry_run:
-                memory_manager.record_failed(pname, msg, proj["fqcns"])
+                memory_manager.record_failed(pname, f"TIMEOUT: {exc}", proj["fqcns"])
             failed_count += 1
 
     # สรุปผลลัพธ์

@@ -10,6 +10,17 @@ import run_randoop_parallel as parallel
 
 
 class ParallelStateTests(unittest.TestCase):
+    def test_worker_forwards_project_timeout(self):
+        from types import SimpleNamespace
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            args = SimpleNamespace(time_limit=60, project_timeout=300,
+                                   jvm_memory="3000m", round=2, seed=20260928,
+                                   data_dir=None, overwrite=False)
+            command = parallel.worker_command(root / "script" / "generate_randoop_tests.py",
+                                              root / "rounds" / "Round2", "Codec", args)
+            self.assertEqual(command[command.index("--project-timeout") + 1], "300")
+
     def test_timezone_aware_timestamps_compare_actual_instants(self):
         bangkok_failure = {"status": "FAILED", "timestamp": "2026-09-23T17:58:56+07:00"}
         los_angeles_success = {"status": "COMPLETED", "timestamp": "2026-09-23T04:37:28-07:00"}

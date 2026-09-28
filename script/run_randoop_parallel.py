@@ -93,6 +93,7 @@ def worker_command(generator: Path, output_dir: Path, group: str, args) -> list[
     cmd = [sys.executable, "-u", str(generator), "--project", group,
            "--state-file", str(output_dir / "state" / f"{group}.json"),
            "--time-limit", str(args.time_limit), "--jvm-memory", args.jvm_memory]
+    cmd.extend(["--project-timeout", str(args.project_timeout)])
     if getattr(args, "round", None):
         from randoop_rounds import round_paths
         _, tests_root, _ = round_paths(generator.parent.parent / "Feedback-Directed Random Test Generation", args.round)
@@ -134,6 +135,8 @@ def _main(argv, run_summary) -> int:
                         help="Concurrent Randoop processes (default: 2)")
     parser.add_argument("--time-limit", type=int, default=60,
                         help="Seconds per Defects4J project (default: 60)")
+    parser.add_argument("--project-timeout", type=int, default=600,
+                        help="Hard wall-clock timeout per project including setup (default: 600)")
     parser.add_argument("--jvm-memory", default="3000m",
                         help="Maximum heap per worker (default: 3000m)")
     parser.add_argument("--data-dir", help="Existing Defects4J checkouts")
@@ -150,8 +153,8 @@ def _main(argv, run_summary) -> int:
         parser.error("--seed must be 0..2147483647")
     if args.prepare_only and not args.round:
         parser.error("--prepare-only requires --round")
-    if args.workers < 1 or args.time_limit < 1:
-        parser.error("--workers and --time-limit must be positive")
+    if args.workers < 1 or args.time_limit < 1 or args.project_timeout < 1:
+        parser.error("--workers, --time-limit and --project-timeout must be positive")
 
     workspace = Path(__file__).resolve().parent.parent
     resource_dir = workspace / "Resoucre"

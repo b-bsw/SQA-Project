@@ -29,3 +29,5 @@ state อยู่ `Feedback-Directed Random Test Generation/rounds/Round2/` เ
 เวลา Java/Randoop ต่อ bug ไม่รวมทั้งสคริปต์ เวลารวม generate.py รวมการเตรียม, สร้างเทสต์, บันทึก state, cleanup และรอ workers ส่วน results.py วัดการประเมินผลและรวมรายงานทั้งหมดเป็นอีกคำสั่งหนึ่ง `--collect-only` วัดเฉพาะการรวมรายงาน
 
 `--status`/`--dry-run` แสดงเวลาแต่ไม่เขียนไฟล์เวลา หากต้องการวัดงานซ้ำให้เติม `--overwrite` เวลารวม batch ไม่ใช่ผลบวกเวลา workers ที่ทำพร้อมกัน
+
+หากโปรเจกต์ค้างนาน ใช้ `--project-timeout 300` กับ generate.py (ค่าเริ่มต้น 600 วินาทีรวมการเตรียมโปรเจกต์) และ `--test-timeout 600` กับ results.py ซึ่งบังคับแต่ละคำสั่ง checkout/compile/test/coverage ดูรายละเอียดในคู่มือรวม

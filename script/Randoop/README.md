@@ -109,6 +109,12 @@ python3 script/Randoop/round1/generate.py --projects Codec --workers 1
 
 ## 4. สร้างเทสต์รอบ 2 ด้วยอีก seed
 
+### ป้องกันโปรเจกต์ค้าง
+
+`--time-limit 60` เป็นเวลาที่ส่งให้ Randoop เพื่อสร้างเทสต์ ส่วน `--project-timeout 600` เป็นเพดานเวลาจริงต่อ bug (เริ่มตั้งแต่ค้นหา/คอมไพล์ classes ไปจนบันทึกเทสต์และ cleanup) ค่าเริ่มต้น 600 วินาที ใน WSL/POSIX watchdog จะหยุดโปรเจกต์นั้นเมื่อครบเวลาและบันทึก FAILED จากนั้นทำโปรเจกต์ถัดไป Java/Randoop ยังถูกบังคับ timeout ตามเวลาที่เหลือบน Windows ด้วย แต่ Python ขั้นเตรียมอื่นบน Windows ไม่มี SIGALRM
+
+หาก class ถูกคอมไพล์และแคชไว้แล้ว จะตั้งเพดานสั้นกว่าได้ เช่น `python3 script/Randoop/round2/generate.py --projects Codec Cli --workers 2 --project-timeout 300` ค่า timeout นี้เปลี่ยนได้เมื่อ resume และไม่เปลี่ยน seed/time_limit ของการทดลอง โปรเจกต์ที่ timeout จะ retry ในการรันครั้งถัดไป; `--time-limit` ยังควรเท่ากันทั้งสองรอบ
+
 ```bash
 python3 script/Randoop/round2/generate.py --dry-run
 python3 script/Randoop/round2/generate.py --workers 2
@@ -131,7 +137,7 @@ python3 script/Randoop/round1/results.py --workers 2
 python3 script/Randoop/round2/results.py --workers 2
 ```
 
-results.py ไม่สร้างเทสต์ แต่ checkout/compile/test รุ่น buggy และ fixed พร้อม coverage ของ modified classes ค่า `--test-timeout` (default 600 วินาทีต่อคำสั่ง test/coverage) เป็น timeout การประเมินผล ไม่ใช่ generation time limit
+results.py ไม่สร้างเทสต์ แต่ checkout/compile/test รุ่น buggy และ fixed พร้อม coverage ของ modified classes ค่า `--test-timeout` (default 600 วินาทีต่อคำสั่ง checkout/compile/test/coverage) เป็น timeout การประเมินผล ไม่ใช่ generation time limit เมื่อขั้นใดเกินเวลา จะหยุด process group และรายงาน TIMEOUT
 
 เก็บเฉพาะบางเป้าหมายหรือดูแผนก่อน:
 
