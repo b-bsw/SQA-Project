@@ -1,0 +1,6 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Closure -v 162f -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_162-_n_fqs1n/fixed
+Java 11 is required!
+
+Compilation failed in require at /Users/piyadaketmala/defects4j/framework/bin/defects4j line 33.
+BEGIN failed--compilation aborted at /Users/piyadaketmala/defects4j/framework/bin/defects4j line 33.
+[exit 255]

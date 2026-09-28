@@ -1,0 +1,6 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Closure -v 140b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_140-dln706t8/buggy
+Java 11 is required!
+
+Compilation failed in require at /Users/piyadaketmala/defects4j/framework/bin/defects4j line 33.
+BEGIN failed--compilation aborted at /Users/piyadaketmala/defects4j/framework/bin/defects4j line 33.
+[exit 255]
