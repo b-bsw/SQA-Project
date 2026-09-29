@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "STANDARD_GA",
+  "created_at": "2569-09-29T16:59:16Z",
+  "round": 1,
+  "project": "JacksonDatabind",
+  "bug_id": 106,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 50,
+  "coverage": 90.9,
+  "line_cov": 93.33,
+  "branch_cov": 88.46,
+  "total_goals": 224,
+  "covered_goals": 203,
+  "lines": 34,
+  "covered_lines": 112,
+  "total_branches": 84,
+  "covered_branches": 72,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "targets": [
+    {
+      "target_class": "com.fasterxml.jackson.databind.node.TreeTraversingParser",
+      "generation_result": "PASS",
+      "generation_seconds": 112,
+      "tests": 50,
+      "coverage": 90.90,
+      "line_cov": 93.33,
+      "branch_cov": 88.46,
+      "total_goals": 224,
+      "covered_goals": 203,
+      "lines": 34,
+      "covered_lines": 112,
+      "total_branches": 84,
+      "covered_branches": 72,
+      "total_methods": 34,
+      "covered_methods": 34,
+      "branchless_methods": 20,
+      "covered_branchless_methods": 20
+    }
+  ],
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "failures": 0
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "failures": 0
+    }
+  ]
+}

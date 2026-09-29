@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.1",
+  "algorithm": "STANDARD_GA",
+  "created_at": "2569-09-29T17:26:36Z",
+  "round": 2,
+  "project": "JacksonDatabind",
+  "bug_id": 95,
+  "seed": 20260918,
+  "budget": 60,
+  "tests": 58,
+  "coverage": 82.82,
+  "line_cov": 84.63,
+  "branch_cov": 80.73,
+  "total_goals": 760,
+  "covered_goals": 594,
+  "lines": 82,
+  "covered_lines": 350,
+  "total_branches": 278,
+  "covered_branches": 198,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "targets": [
+    {
+      "target_class": "com.fasterxml.jackson.databind.type.TypeFactory",
+      "generation_result": "PASS",
+      "generation_seconds": 124,
+      "tests": 49,
+      "coverage": 76.71,
+      "line_cov": 78.87,
+      "branch_cov": 73.96,
+      "total_goals": 676,
+      "covered_goals": 519,
+      "lines": 69,
+      "covered_lines": 303,
+      "total_branches": 252,
+      "covered_branches": 176,
+      "total_methods": 68,
+      "covered_methods": 64,
+      "branchless_methods": 36,
+      "covered_branchless_methods": 36
+    },
+    {
+      "target_class": "com.fasterxml.jackson.databind.type.TypeParser",
+      "generation_result": "PASS",
+      "generation_seconds": 77,
+      "tests": 9,
+      "coverage": 88.94,
+      "line_cov": 90.38,
+      "branch_cov": 87.50,
+      "total_goals": 84,
+      "covered_goals": 75,
+      "lines": 13,
+      "covered_lines": 47,
+      "total_branches": 26,
+      "covered_branches": 22,
+      "total_methods": 13,
+      "covered_methods": 13,
+      "branchless_methods": 6,
+      "covered_branchless_methods": 6
+    }
+  ],
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "failures": 0
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "failures": 0
+    }
+  ]
+}
