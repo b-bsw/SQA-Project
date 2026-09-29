@@ -1,0 +1,37 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_155-1rg5vkhg/Closure_155-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 31
+  - com.google.javascript.jscomp.RegressionTest0::test0007
+  - com.google.javascript.jscomp.RegressionTest0::test0012
+  - com.google.javascript.jscomp.RegressionTest0::test0013
+  - com.google.javascript.jscomp.RegressionTest0::test0014
+  - com.google.javascript.jscomp.RegressionTest0::test0015
+  - com.google.javascript.jscomp.RegressionTest0::test0016
+  - com.google.javascript.jscomp.RegressionTest0::test0021
+  - com.google.javascript.jscomp.RegressionTest0::test0022
+  - com.google.javascript.jscomp.RegressionTest0::test0023
+  - com.google.javascript.jscomp.RegressionTest0::test0026
+  - com.google.javascript.jscomp.RegressionTest0::test0033
+  - com.google.javascript.jscomp.RegressionTest0::test0035
+  - com.google.javascript.jscomp.RegressionTest0::test0044
+  - com.google.javascript.jscomp.RegressionTest0::test0045
+  - com.google.javascript.jscomp.RegressionTest0::test0048
+  - com.google.javascript.jscomp.RegressionTest0::test0050
+  - com.google.javascript.jscomp.RegressionTest0::test0051
+  - com.google.javascript.jscomp.RegressionTest0::test0054
+  - com.google.javascript.jscomp.RegressionTest0::test0055
+  - com.google.javascript.jscomp.RegressionTest0::test0056
+  - com.google.javascript.jscomp.RegressionTest0::test0057
+  - com.google.javascript.jscomp.RegressionTest0::test0059
+  - com.google.javascript.jscomp.RegressionTest0::test0060
+  - com.google.javascript.jscomp.RegressionTest0::test0061
+  - com.google.javascript.jscomp.RegressionTest0::test0062
+  - com.google.javascript.jscomp.RegressionTest0::test0063
+  - com.google.javascript.jscomp.RegressionTest0::test0064
+  - com.google.javascript.jscomp.RegressionTest0::test0065
+  - com.google.javascript.jscomp.RegressionTest0::test0066
+  - com.google.javascript.jscomp.RegressionTest0::test0073
+  - com.google.javascript.jscomp.RegressionTest0::test0075
+[exit 0]

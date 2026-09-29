@@ -1,0 +1,38 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/Closure_154-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ FAIL
+Executed command:  cd /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed && ant -f /Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/piyadaketmala/defects4j -Dd4j.dir.projects=/Users/piyadaketmala/defects4j/framework/projects -Dbasedir=/private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed -Dd4j.test.dir=/private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/.test_suite compile.gen.tests 2>&1
+Buildfile: /Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/build.xml:182: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/build.xml:188: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile.gen.tests:
+     [echo] classes.dir: /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/build/classes
+     [echo] build.home: /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/build
+    [mkdir] Created dir: /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/.classes_testgen
+    [javac] /Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_154-szohaw8p/fixed/.test_suite/com/google/javascript/jscomp/RegressionTest0.java:453: error: cannot find symbol
+    [javac]         com.google.javascript.jscomp.DiagnosticType diagnosticType0 = com.google.javascript.jscomp.TypeCheck.HIDDEN_INTERFACE_PROPERTY_MISMATCH;
+    [javac]                                                                                                             ^
+    [javac]   symbol:   variable HIDDEN_INTERFACE_PROPERTY_MISMATCH
+    [javac]   location: class TypeCheck
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile extracted test suite! at /Users/piyadaketmala/defects4j/framework/bin/d4j/d4j-test line 126.
+Compilation failed in require at /Users/piyadaketmala/defects4j/framework/bin/defects4j line 195.
+[exit 1]

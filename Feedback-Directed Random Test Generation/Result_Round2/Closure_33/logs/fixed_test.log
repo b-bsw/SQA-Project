@@ -1,0 +1,18 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_33-2_n9gxd7/Closure_33-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 12
+  - com.google.javascript.rhino.jstype.RegressionTest0::test0048
+  - com.google.javascript.rhino.jstype.RegressionTest0::test0416
+  - com.google.javascript.rhino.jstype.RegressionTest0::test0423
+  - com.google.javascript.rhino.jstype.RegressionTest1::test0831
+  - com.google.javascript.rhino.jstype.RegressionTest2::test1432
+  - com.google.javascript.rhino.jstype.RegressionTest3::test1957
+  - com.google.javascript.rhino.jstype.RegressionTest0::test0048
+  - com.google.javascript.rhino.jstype.RegressionTest0::test0416
+  - com.google.javascript.rhino.jstype.RegressionTest0::test0423
+  - com.google.javascript.rhino.jstype.RegressionTest1::test0831
+  - com.google.javascript.rhino.jstype.RegressionTest2::test1432
+  - com.google.javascript.rhino.jstype.RegressionTest3::test1957
+[exit 0]

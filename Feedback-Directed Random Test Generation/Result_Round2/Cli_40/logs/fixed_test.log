@@ -1,0 +1,48 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Cli_40-2t7jkr_e/Cli_40-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 42
+  - org.apache.commons.cli.RegressionTest0::test0049
+  - org.apache.commons.cli.RegressionTest0::test0080
+  - org.apache.commons.cli.RegressionTest0::test0154
+  - org.apache.commons.cli.RegressionTest0::test0174
+  - org.apache.commons.cli.RegressionTest0::test0245
+  - org.apache.commons.cli.RegressionTest0::test0290
+  - org.apache.commons.cli.RegressionTest0::test0427
+  - org.apache.commons.cli.RegressionTest0::test0441
+  - org.apache.commons.cli.RegressionTest1::test0511
+  - org.apache.commons.cli.RegressionTest1::test0635
+  - org.apache.commons.cli.RegressionTest1::test0645
+  - org.apache.commons.cli.RegressionTest1::test0736
+  - org.apache.commons.cli.RegressionTest1::test0775
+  - org.apache.commons.cli.RegressionTest2::test1136
+  - org.apache.commons.cli.RegressionTest2::test1269
+  - org.apache.commons.cli.RegressionTest2::test1359
+  - org.apache.commons.cli.RegressionTest2::test1415
+  - org.apache.commons.cli.RegressionTest2::test1458
+  - org.apache.commons.cli.RegressionTest3::test1694
+  - org.apache.commons.cli.RegressionTest4::test2102
+  - org.apache.commons.cli.RegressionTest6::test3190
+  - org.apache.commons.cli.RegressionTest0::test0049
+  - org.apache.commons.cli.RegressionTest0::test0080
+  - org.apache.commons.cli.RegressionTest0::test0154
+  - org.apache.commons.cli.RegressionTest0::test0174
+  - org.apache.commons.cli.RegressionTest0::test0245
+  - org.apache.commons.cli.RegressionTest0::test0290
+  - org.apache.commons.cli.RegressionTest0::test0427
+  - org.apache.commons.cli.RegressionTest0::test0441
+  - org.apache.commons.cli.RegressionTest1::test0511
+  - org.apache.commons.cli.RegressionTest1::test0635
+  - org.apache.commons.cli.RegressionTest1::test0645
+  - org.apache.commons.cli.RegressionTest1::test0736
+  - org.apache.commons.cli.RegressionTest1::test0775
+  - org.apache.commons.cli.RegressionTest2::test1136
+  - org.apache.commons.cli.RegressionTest2::test1269
+  - org.apache.commons.cli.RegressionTest2::test1359
+  - org.apache.commons.cli.RegressionTest2::test1415
+  - org.apache.commons.cli.RegressionTest2::test1458
+  - org.apache.commons.cli.RegressionTest3::test1694
+  - org.apache.commons.cli.RegressionTest4::test2102
+  - org.apache.commons.cli.RegressionTest6::test3190
+[exit 0]

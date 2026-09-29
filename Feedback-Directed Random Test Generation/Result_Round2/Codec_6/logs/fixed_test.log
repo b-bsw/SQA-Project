@@ -1,0 +1,62 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Codec_6-eolw__yd/Codec_6-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 56
+  - org.apache.commons.codec.binary.RegressionTest2::test1377
+  - org.apache.commons.codec.binary.RegressionTest2::test1431
+  - org.apache.commons.codec.binary.RegressionTest3::test1517
+  - org.apache.commons.codec.binary.RegressionTest3::test1620
+  - org.apache.commons.codec.binary.RegressionTest3::test1630
+  - org.apache.commons.codec.binary.RegressionTest3::test1655
+  - org.apache.commons.codec.binary.RegressionTest3::test1768
+  - org.apache.commons.codec.binary.RegressionTest4::test2318
+  - org.apache.commons.codec.binary.RegressionTest4::test2433
+  - org.apache.commons.codec.binary.RegressionTest4::test2467
+  - org.apache.commons.codec.binary.RegressionTest5::test2506
+  - org.apache.commons.codec.binary.RegressionTest5::test2855
+  - org.apache.commons.codec.binary.RegressionTest5::test2974
+  - org.apache.commons.codec.binary.RegressionTest6::test3079
+  - org.apache.commons.codec.binary.RegressionTest6::test3179
+  - org.apache.commons.codec.binary.RegressionTest7::test3510
+  - org.apache.commons.codec.binary.RegressionTest7::test3619
+  - org.apache.commons.codec.binary.RegressionTest7::test3692
+  - org.apache.commons.codec.binary.RegressionTest7::test3735
+  - org.apache.commons.codec.binary.RegressionTest7::test3739
+  - org.apache.commons.codec.binary.RegressionTest7::test3866
+  - org.apache.commons.codec.binary.RegressionTest7::test3939
+  - org.apache.commons.codec.binary.RegressionTest7::test3977
+  - org.apache.commons.codec.binary.RegressionTest8::test4098
+  - org.apache.commons.codec.binary.RegressionTest8::test4150
+  - org.apache.commons.codec.binary.RegressionTest8::test4289
+  - org.apache.commons.codec.binary.RegressionTest8::test4339
+  - org.apache.commons.codec.binary.RegressionTest8::test4341
+  - org.apache.commons.codec.binary.RegressionTest2::test1377
+  - org.apache.commons.codec.binary.RegressionTest2::test1431
+  - org.apache.commons.codec.binary.RegressionTest3::test1517
+  - org.apache.commons.codec.binary.RegressionTest3::test1620
+  - org.apache.commons.codec.binary.RegressionTest3::test1630
+  - org.apache.commons.codec.binary.RegressionTest3::test1655
+  - org.apache.commons.codec.binary.RegressionTest3::test1768
+  - org.apache.commons.codec.binary.RegressionTest4::test2318
+  - org.apache.commons.codec.binary.RegressionTest4::test2433
+  - org.apache.commons.codec.binary.RegressionTest4::test2467
+  - org.apache.commons.codec.binary.RegressionTest5::test2506
+  - org.apache.commons.codec.binary.RegressionTest5::test2855
+  - org.apache.commons.codec.binary.RegressionTest5::test2974
+  - org.apache.commons.codec.binary.RegressionTest6::test3079
+  - org.apache.commons.codec.binary.RegressionTest6::test3179
+  - org.apache.commons.codec.binary.RegressionTest7::test3510
+  - org.apache.commons.codec.binary.RegressionTest7::test3619
+  - org.apache.commons.codec.binary.RegressionTest7::test3692
+  - org.apache.commons.codec.binary.RegressionTest7::test3735
+  - org.apache.commons.codec.binary.RegressionTest7::test3739
+  - org.apache.commons.codec.binary.RegressionTest7::test3866
+  - org.apache.commons.codec.binary.RegressionTest7::test3939
+  - org.apache.commons.codec.binary.RegressionTest7::test3977
+  - org.apache.commons.codec.binary.RegressionTest8::test4098
+  - org.apache.commons.codec.binary.RegressionTest8::test4150
+  - org.apache.commons.codec.binary.RegressionTest8::test4289
+  - org.apache.commons.codec.binary.RegressionTest8::test4339
+  - org.apache.commons.codec.binary.RegressionTest8::test4341
+[exit 0]

@@ -1,0 +1,28 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Codec_16-qih19j2_/Codec_16-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 22
+  - org.apache.commons.codec.binary.RegressionTest1::test0560
+  - org.apache.commons.codec.binary.RegressionTest1::test0561
+  - org.apache.commons.codec.binary.RegressionTest1::test0772
+  - org.apache.commons.codec.binary.RegressionTest1::test0872
+  - org.apache.commons.codec.binary.RegressionTest2::test1093
+  - org.apache.commons.codec.binary.RegressionTest2::test1117
+  - org.apache.commons.codec.binary.RegressionTest2::test1123
+  - org.apache.commons.codec.binary.RegressionTest2::test1316
+  - org.apache.commons.codec.binary.RegressionTest3::test1540
+  - org.apache.commons.codec.binary.RegressionTest3::test1556
+  - org.apache.commons.codec.binary.RegressionTest3::test1842
+  - org.apache.commons.codec.binary.RegressionTest1::test0560
+  - org.apache.commons.codec.binary.RegressionTest1::test0561
+  - org.apache.commons.codec.binary.RegressionTest1::test0772
+  - org.apache.commons.codec.binary.RegressionTest1::test0872
+  - org.apache.commons.codec.binary.RegressionTest2::test1093
+  - org.apache.commons.codec.binary.RegressionTest2::test1117
+  - org.apache.commons.codec.binary.RegressionTest2::test1123
+  - org.apache.commons.codec.binary.RegressionTest2::test1316
+  - org.apache.commons.codec.binary.RegressionTest3::test1540
+  - org.apache.commons.codec.binary.RegressionTest3::test1556
+  - org.apache.commons.codec.binary.RegressionTest3::test1842
+[exit 0]

@@ -1,0 +1,2 @@
+"project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
+"Codec",13,20260928,60,3079,22.79,29.52,15.72,939,214,481,142,458,72,"FAIL",48,"PASS",0,"REVEALING"

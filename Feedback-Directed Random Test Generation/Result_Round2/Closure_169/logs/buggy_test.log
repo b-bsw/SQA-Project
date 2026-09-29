@@ -1,0 +1,12 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Closure_169-bshlw7tq/Closure_169-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 6
+  - com.google.javascript.rhino.jstype.ErrorTest0::test1
+  - com.google.javascript.rhino.jstype.ErrorTest0::test2
+  - com.google.javascript.rhino.jstype.ErrorTest0::test3
+  - com.google.javascript.rhino.jstype.ErrorTest0::test1
+  - com.google.javascript.rhino.jstype.ErrorTest0::test2
+  - com.google.javascript.rhino.jstype.ErrorTest0::test3
+[exit 0]

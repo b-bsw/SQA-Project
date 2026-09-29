@@ -1,0 +1,34 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Chart_5-jphm4oq0/Chart_5-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 28
+  - org.jfree.data.xy.RegressionTest0::test0225
+  - org.jfree.data.xy.RegressionTest0::test0438
+  - org.jfree.data.xy.RegressionTest1::test0502
+  - org.jfree.data.xy.RegressionTest1::test0542
+  - org.jfree.data.xy.RegressionTest1::test0710
+  - org.jfree.data.xy.RegressionTest2::test1410
+  - org.jfree.data.xy.RegressionTest2::test1446
+  - org.jfree.data.xy.RegressionTest2::test1493
+  - org.jfree.data.xy.RegressionTest3::test1541
+  - org.jfree.data.xy.RegressionTest3::test1610
+  - org.jfree.data.xy.RegressionTest3::test1635
+  - org.jfree.data.xy.RegressionTest3::test1659
+  - org.jfree.data.xy.RegressionTest3::test1749
+  - org.jfree.data.xy.RegressionTest3::test1884
+  - org.jfree.data.xy.RegressionTest0::test0225
+  - org.jfree.data.xy.RegressionTest0::test0438
+  - org.jfree.data.xy.RegressionTest1::test0502
+  - org.jfree.data.xy.RegressionTest1::test0542
+  - org.jfree.data.xy.RegressionTest1::test0710
+  - org.jfree.data.xy.RegressionTest2::test1410
+  - org.jfree.data.xy.RegressionTest2::test1446
+  - org.jfree.data.xy.RegressionTest2::test1493
+  - org.jfree.data.xy.RegressionTest3::test1541
+  - org.jfree.data.xy.RegressionTest3::test1610
+  - org.jfree.data.xy.RegressionTest3::test1635
+  - org.jfree.data.xy.RegressionTest3::test1659
+  - org.jfree.data.xy.RegressionTest3::test1749
+  - org.jfree.data.xy.RegressionTest3::test1884
+[exit 0]
