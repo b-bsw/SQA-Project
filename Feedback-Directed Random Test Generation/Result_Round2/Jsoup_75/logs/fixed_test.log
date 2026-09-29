@@ -1,0 +1,10 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_75-6iao3_47/Jsoup_75-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 4
+  - org.jsoup.nodes.RegressionTest0::test0454
+  - org.jsoup.nodes.RegressionTest2::test1047
+  - org.jsoup.nodes.RegressionTest0::test0454
+  - org.jsoup.nodes.RegressionTest2::test1047
+[exit 0]

@@ -1,0 +1,23 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_59-wix17n0e/Lang_59-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 17
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.RegressionTest1::test0538
+  - org.apache.commons.lang.text.RegressionTest1::test0608
+  - org.apache.commons.lang.text.RegressionTest2::test1046
+  - org.apache.commons.lang.text.RegressionTest4::test2003
+  - org.apache.commons.lang.text.RegressionTest4::test2227
+  - org.apache.commons.lang.text.RegressionTest5::test2810
+  - org.apache.commons.lang.text.RegressionTest6::test3047
+  - org.apache.commons.lang.text.RegressionTest1::test0538
+  - org.apache.commons.lang.text.RegressionTest2::test1046
+  - org.apache.commons.lang.text.RegressionTest4::test2003
+  - org.apache.commons.lang.text.RegressionTest4::test2227
+  - org.apache.commons.lang.text.RegressionTest5::test2810
+  - org.apache.commons.lang.text.RegressionTest6::test3047
+[exit 0]

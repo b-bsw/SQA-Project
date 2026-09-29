@@ -1,0 +1,62 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_50-rn2d5c7z/Jsoup_50-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 56
+  - org.jsoup.helper.RegressionTest0::test005
+  - org.jsoup.helper.RegressionTest0::test008
+  - org.jsoup.helper.RegressionTest0::test022
+  - org.jsoup.helper.RegressionTest0::test028
+  - org.jsoup.helper.RegressionTest0::test030
+  - org.jsoup.helper.RegressionTest0::test050
+  - org.jsoup.helper.RegressionTest0::test060
+  - org.jsoup.helper.RegressionTest0::test068
+  - org.jsoup.helper.RegressionTest0::test069
+  - org.jsoup.helper.RegressionTest0::test072
+  - org.jsoup.helper.RegressionTest0::test074
+  - org.jsoup.helper.RegressionTest0::test075
+  - org.jsoup.helper.RegressionTest0::test077
+  - org.jsoup.helper.RegressionTest0::test079
+  - org.jsoup.helper.RegressionTest0::test080
+  - org.jsoup.helper.RegressionTest0::test083
+  - org.jsoup.helper.RegressionTest0::test091
+  - org.jsoup.helper.RegressionTest0::test094
+  - org.jsoup.helper.RegressionTest0::test098
+  - org.jsoup.helper.RegressionTest0::test100
+  - org.jsoup.helper.RegressionTest0::test101
+  - org.jsoup.helper.RegressionTest0::test103
+  - org.jsoup.helper.RegressionTest0::test105
+  - org.jsoup.helper.RegressionTest0::test106
+  - org.jsoup.helper.RegressionTest0::test107
+  - org.jsoup.helper.RegressionTest0::test109
+  - org.jsoup.helper.RegressionTest0::test110
+  - org.jsoup.helper.RegressionTest0::test112
+  - org.jsoup.helper.RegressionTest0::test005
+  - org.jsoup.helper.RegressionTest0::test008
+  - org.jsoup.helper.RegressionTest0::test022
+  - org.jsoup.helper.RegressionTest0::test028
+  - org.jsoup.helper.RegressionTest0::test030
+  - org.jsoup.helper.RegressionTest0::test050
+  - org.jsoup.helper.RegressionTest0::test060
+  - org.jsoup.helper.RegressionTest0::test068
+  - org.jsoup.helper.RegressionTest0::test069
+  - org.jsoup.helper.RegressionTest0::test072
+  - org.jsoup.helper.RegressionTest0::test074
+  - org.jsoup.helper.RegressionTest0::test075
+  - org.jsoup.helper.RegressionTest0::test077
+  - org.jsoup.helper.RegressionTest0::test079
+  - org.jsoup.helper.RegressionTest0::test080
+  - org.jsoup.helper.RegressionTest0::test083
+  - org.jsoup.helper.RegressionTest0::test091
+  - org.jsoup.helper.RegressionTest0::test094
+  - org.jsoup.helper.RegressionTest0::test098
+  - org.jsoup.helper.RegressionTest0::test100
+  - org.jsoup.helper.RegressionTest0::test101
+  - org.jsoup.helper.RegressionTest0::test103
+  - org.jsoup.helper.RegressionTest0::test105
+  - org.jsoup.helper.RegressionTest0::test106
+  - org.jsoup.helper.RegressionTest0::test107
+  - org.jsoup.helper.RegressionTest0::test109
+  - org.jsoup.helper.RegressionTest0::test110
+  - org.jsoup.helper.RegressionTest0::test112
+[exit 0]

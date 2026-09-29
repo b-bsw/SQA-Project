@@ -1,0 +1,10 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Time_5-8zw47mpv/Time_5-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 4
+  - org.joda.time.RegressionTest0::test0131
+  - org.joda.time.RegressionTest5::test2759
+  - org.joda.time.RegressionTest0::test0131
+  - org.joda.time.RegressionTest5::test2759
+[exit 0]

@@ -1,0 +1,64 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_102-28eu7qmr/Math_102-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 58
+  - org.apache.commons.math.stat.inference.RegressionTest2::test1418
+  - org.apache.commons.math.stat.inference.RegressionTest2::test1438
+  - org.apache.commons.math.stat.inference.RegressionTest2::test1492
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1604
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1640
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1678
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1680
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1702
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1738
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1759
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1813
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1843
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1859
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1927
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1952
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1959
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2003
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2028
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2164
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2212
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2228
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2244
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2268
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2284
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2360
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2364
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2388
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2402
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2441
+  - org.apache.commons.math.stat.inference.RegressionTest2::test1418
+  - org.apache.commons.math.stat.inference.RegressionTest2::test1438
+  - org.apache.commons.math.stat.inference.RegressionTest2::test1492
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1604
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1640
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1678
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1680
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1702
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1738
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1759
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1813
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1843
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1859
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1927
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1952
+  - org.apache.commons.math.stat.inference.RegressionTest3::test1959
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2003
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2028
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2164
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2212
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2228
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2244
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2268
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2284
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2360
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2364
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2388
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2402
+  - org.apache.commons.math.stat.inference.RegressionTest4::test2441
+[exit 0]

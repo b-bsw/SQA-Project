@@ -1,0 +1,50 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_105-3q7fbu_w/Math_105-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 44
+  - org.apache.commons.math.stat.regression.RegressionTest0::test0268
+  - org.apache.commons.math.stat.regression.RegressionTest0::test0375
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0536
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0638
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0840
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0860
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0892
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1002
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1004
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1024
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1159
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1362
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1449
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1502
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1593
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1654
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1770
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1811
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1884
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1896
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1964
+  - org.apache.commons.math.stat.regression.RegressionTest4::test2027
+  - org.apache.commons.math.stat.regression.RegressionTest0::test0268
+  - org.apache.commons.math.stat.regression.RegressionTest0::test0375
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0536
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0638
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0840
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0860
+  - org.apache.commons.math.stat.regression.RegressionTest1::test0892
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1002
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1004
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1024
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1159
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1362
+  - org.apache.commons.math.stat.regression.RegressionTest2::test1449
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1502
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1593
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1654
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1770
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1811
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1884
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1896
+  - org.apache.commons.math.stat.regression.RegressionTest3::test1964
+  - org.apache.commons.math.stat.regression.RegressionTest4::test2027
+[exit 0]

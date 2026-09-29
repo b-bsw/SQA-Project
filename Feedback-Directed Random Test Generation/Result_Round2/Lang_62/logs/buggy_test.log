@@ -1,0 +1,60 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_62-j7x0n021/Lang_62-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 54
+  - org.apache.commons.lang.ErrorTest0::test04
+  - org.apache.commons.lang.ErrorTest0::test10
+  - org.apache.commons.lang.ErrorTest0::test12
+  - org.apache.commons.lang.ErrorTest0::test14
+  - org.apache.commons.lang.ErrorTest0::test15
+  - org.apache.commons.lang.ErrorTest0::test17
+  - org.apache.commons.lang.ErrorTest0::test18
+  - org.apache.commons.lang.ErrorTest0::test19
+  - org.apache.commons.lang.ErrorTest0::test20
+  - org.apache.commons.lang.ErrorTest0::test21
+  - org.apache.commons.lang.ErrorTest0::test22
+  - org.apache.commons.lang.ErrorTest0::test23
+  - org.apache.commons.lang.ErrorTest0::test25
+  - org.apache.commons.lang.ErrorTest0::test27
+  - org.apache.commons.lang.ErrorTest0::test28
+  - org.apache.commons.lang.ErrorTest0::test29
+  - org.apache.commons.lang.ErrorTest0::test31
+  - org.apache.commons.lang.ErrorTest0::test32
+  - org.apache.commons.lang.ErrorTest0::test33
+  - org.apache.commons.lang.ErrorTest0::test34
+  - org.apache.commons.lang.ErrorTest0::test35
+  - org.apache.commons.lang.ErrorTest0::test36
+  - org.apache.commons.lang.ErrorTest0::test04
+  - org.apache.commons.lang.ErrorTest0::test10
+  - org.apache.commons.lang.ErrorTest0::test12
+  - org.apache.commons.lang.ErrorTest0::test14
+  - org.apache.commons.lang.ErrorTest0::test15
+  - org.apache.commons.lang.ErrorTest0::test17
+  - org.apache.commons.lang.ErrorTest0::test18
+  - org.apache.commons.lang.ErrorTest0::test19
+  - org.apache.commons.lang.ErrorTest0::test20
+  - org.apache.commons.lang.ErrorTest0::test21
+  - org.apache.commons.lang.ErrorTest0::test22
+  - org.apache.commons.lang.ErrorTest0::test23
+  - org.apache.commons.lang.ErrorTest0::test25
+  - org.apache.commons.lang.ErrorTest0::test27
+  - org.apache.commons.lang.ErrorTest0::test28
+  - org.apache.commons.lang.ErrorTest0::test29
+  - org.apache.commons.lang.ErrorTest0::test31
+  - org.apache.commons.lang.ErrorTest0::test32
+  - org.apache.commons.lang.ErrorTest0::test33
+  - org.apache.commons.lang.ErrorTest0::test34
+  - org.apache.commons.lang.ErrorTest0::test35
+  - org.apache.commons.lang.ErrorTest0::test36
+  - org.apache.commons.lang.RegressionTest2::test1002
+  - org.apache.commons.lang.RegressionTest2::test1003
+  - org.apache.commons.lang.RegressionTest2::test1010
+  - org.apache.commons.lang.RegressionTest2::test1019
+  - org.apache.commons.lang.RegressionTest0::test0002
+  - org.apache.commons.lang.RegressionTest0::test0032
+  - org.apache.commons.lang.RegressionTest2::test1002
+  - org.apache.commons.lang.RegressionTest2::test1003
+  - org.apache.commons.lang.RegressionTest2::test1010
+  - org.apache.commons.lang.RegressionTest2::test1019
+[exit 0]

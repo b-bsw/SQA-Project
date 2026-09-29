@@ -1,0 +1,42 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JxPath_13-yfnojg_1/JxPath_13-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 36
+  - org.apache.commons.jxpath.ri.ErrorTest0::test01
+  - org.apache.commons.jxpath.ri.ErrorTest0::test02
+  - org.apache.commons.jxpath.ri.ErrorTest0::test03
+  - org.apache.commons.jxpath.ri.ErrorTest0::test04
+  - org.apache.commons.jxpath.ri.ErrorTest0::test05
+  - org.apache.commons.jxpath.ri.ErrorTest0::test06
+  - org.apache.commons.jxpath.ri.ErrorTest0::test07
+  - org.apache.commons.jxpath.ri.ErrorTest0::test08
+  - org.apache.commons.jxpath.ri.ErrorTest0::test09
+  - org.apache.commons.jxpath.ri.ErrorTest0::test10
+  - org.apache.commons.jxpath.ri.ErrorTest0::test11
+  - org.apache.commons.jxpath.ri.ErrorTest0::test12
+  - org.apache.commons.jxpath.ri.ErrorTest0::test13
+  - org.apache.commons.jxpath.ri.ErrorTest0::test14
+  - org.apache.commons.jxpath.ri.ErrorTest0::test15
+  - org.apache.commons.jxpath.ri.ErrorTest0::test16
+  - org.apache.commons.jxpath.ri.ErrorTest0::test17
+  - org.apache.commons.jxpath.ri.ErrorTest0::test18
+  - org.apache.commons.jxpath.ri.ErrorTest0::test01
+  - org.apache.commons.jxpath.ri.ErrorTest0::test02
+  - org.apache.commons.jxpath.ri.ErrorTest0::test03
+  - org.apache.commons.jxpath.ri.ErrorTest0::test04
+  - org.apache.commons.jxpath.ri.ErrorTest0::test05
+  - org.apache.commons.jxpath.ri.ErrorTest0::test06
+  - org.apache.commons.jxpath.ri.ErrorTest0::test07
+  - org.apache.commons.jxpath.ri.ErrorTest0::test08
+  - org.apache.commons.jxpath.ri.ErrorTest0::test09
+  - org.apache.commons.jxpath.ri.ErrorTest0::test10
+  - org.apache.commons.jxpath.ri.ErrorTest0::test11
+  - org.apache.commons.jxpath.ri.ErrorTest0::test12
+  - org.apache.commons.jxpath.ri.ErrorTest0::test13
+  - org.apache.commons.jxpath.ri.ErrorTest0::test14
+  - org.apache.commons.jxpath.ri.ErrorTest0::test15
+  - org.apache.commons.jxpath.ri.ErrorTest0::test16
+  - org.apache.commons.jxpath.ri.ErrorTest0::test17
+  - org.apache.commons.jxpath.ri.ErrorTest0::test18
+[exit 0]

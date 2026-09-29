@@ -1,0 +1,2 @@
+"project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
+"Jsoup",15,20260928,60,23,4.0,6.77,0.0,1826,73,1079,73,747,0,"PASS",0,"PASS",0,"NOT_REVEALING"

@@ -1,0 +1,14 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_56-6i6rcn2i/Lang_56-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_56-6i6rcn2i/buggy/failing_tests)!
+       Lines total: 464
+     Lines covered: 350
+  Conditions total: 232
+Conditions covered: 164
+     Line coverage: 75.4%
+Condition coverage: 70.7%
+[exit 0]

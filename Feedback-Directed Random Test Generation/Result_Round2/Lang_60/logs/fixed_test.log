@@ -1,0 +1,17 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_60-a3m76v73/Lang_60-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 11
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.ErrorTest0::test1
+  - org.apache.commons.lang.text.ErrorTest0::test2
+  - org.apache.commons.lang.text.RegressionTest1::test0610
+  - org.apache.commons.lang.text.RegressionTest3::test1808
+  - org.apache.commons.lang.text.RegressionTest3::test1810
+  - org.apache.commons.lang.text.RegressionTest1::test0610
+  - org.apache.commons.lang.text.RegressionTest2::test1014
+  - org.apache.commons.lang.text.RegressionTest3::test1808
+  - org.apache.commons.lang.text.RegressionTest3::test1810
+[exit 0]

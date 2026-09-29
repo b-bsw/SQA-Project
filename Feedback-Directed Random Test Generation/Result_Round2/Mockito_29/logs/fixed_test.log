@@ -1,0 +1,10 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Mockito_29-sj9c5got/Mockito_29-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 4
+  - org.mockito.internal.matchers.RegressionTest0::test0193
+  - org.mockito.internal.matchers.RegressionTest2::test1163
+  - org.mockito.internal.matchers.RegressionTest0::test0193
+  - org.mockito.internal.matchers.RegressionTest2::test1163
+[exit 0]

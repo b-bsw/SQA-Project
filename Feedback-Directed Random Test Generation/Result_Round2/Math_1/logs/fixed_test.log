@@ -1,0 +1,42 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_1-d0gn851r/Math_1-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 36
+  - org.apache.commons.math3.fraction.RegressionTest0::test005
+  - org.apache.commons.math3.fraction.RegressionTest0::test026
+  - org.apache.commons.math3.fraction.RegressionTest0::test043
+  - org.apache.commons.math3.fraction.RegressionTest0::test046
+  - org.apache.commons.math3.fraction.RegressionTest0::test062
+  - org.apache.commons.math3.fraction.RegressionTest0::test098
+  - org.apache.commons.math3.fraction.RegressionTest0::test142
+  - org.apache.commons.math3.fraction.RegressionTest0::test144
+  - org.apache.commons.math3.fraction.RegressionTest0::test190
+  - org.apache.commons.math3.fraction.RegressionTest0::test201
+  - org.apache.commons.math3.fraction.RegressionTest0::test234
+  - org.apache.commons.math3.fraction.RegressionTest0::test254
+  - org.apache.commons.math3.fraction.RegressionTest0::test260
+  - org.apache.commons.math3.fraction.RegressionTest0::test262
+  - org.apache.commons.math3.fraction.RegressionTest0::test287
+  - org.apache.commons.math3.fraction.RegressionTest0::test345
+  - org.apache.commons.math3.fraction.RegressionTest1::test716
+  - org.apache.commons.math3.fraction.RegressionTest1::test742
+  - org.apache.commons.math3.fraction.RegressionTest0::test005
+  - org.apache.commons.math3.fraction.RegressionTest0::test026
+  - org.apache.commons.math3.fraction.RegressionTest0::test043
+  - org.apache.commons.math3.fraction.RegressionTest0::test046
+  - org.apache.commons.math3.fraction.RegressionTest0::test062
+  - org.apache.commons.math3.fraction.RegressionTest0::test098
+  - org.apache.commons.math3.fraction.RegressionTest0::test142
+  - org.apache.commons.math3.fraction.RegressionTest0::test144
+  - org.apache.commons.math3.fraction.RegressionTest0::test190
+  - org.apache.commons.math3.fraction.RegressionTest0::test201
+  - org.apache.commons.math3.fraction.RegressionTest0::test234
+  - org.apache.commons.math3.fraction.RegressionTest0::test254
+  - org.apache.commons.math3.fraction.RegressionTest0::test260
+  - org.apache.commons.math3.fraction.RegressionTest0::test262
+  - org.apache.commons.math3.fraction.RegressionTest0::test287
+  - org.apache.commons.math3.fraction.RegressionTest0::test345
+  - org.apache.commons.math3.fraction.RegressionTest1::test716
+  - org.apache.commons.math3.fraction.RegressionTest1::test742
+[exit 0]

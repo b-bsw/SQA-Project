@@ -1,0 +1,14 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_70-bsu_264d/Jsoup_70-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_70-bsu_264d/buggy/failing_tests)!
+       Lines total: 394
+     Lines covered: 357
+  Conditions total: 206
+Conditions covered: 144
+     Line coverage: 90.6%
+Condition coverage: 69.9%
+[exit 0]

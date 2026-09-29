@@ -1,0 +1,35 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/Jsoup_63-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ FAIL
+Executed command:  cd /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/fixed && ant -f /Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/piyadaketmala/defects4j -Dd4j.dir.projects=/Users/piyadaketmala/defects4j/framework/projects -Dbasedir=/private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/fixed -Dd4j.test.dir=/private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/fixed/.test_suite compile.gen.tests 2>&1
+Buildfile: /Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/fixed/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target/classes/..
+    [mkdir] Created dir: /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/fixed/.classes_testgen
+    [javac] /Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/fixed/.classes_testgen
+    [javac] /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_63-zlhgq17m/fixed/.test_suite/org/jsoup/parser/RegressionTest0.java:2798: error: cannot find symbol
+    [javac]         tokeniser2.acknowledgeSelfClosingFlag();
+    [javac]                   ^
+    [javac]   symbol:   method acknowledgeSelfClosingFlag()
+    [javac]   location: variable tokeniser2 of type Tokeniser
+    [javac] 1 error
+
+BUILD FAILED
+/Users/piyadaketmala/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile extracted test suite! at /Users/piyadaketmala/defects4j/framework/bin/d4j/d4j-test line 126.
+Compilation failed in require at /Users/piyadaketmala/defects4j/framework/bin/defects4j line 195.
+[exit 1]

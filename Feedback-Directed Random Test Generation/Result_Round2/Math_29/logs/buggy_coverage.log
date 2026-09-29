@@ -1,0 +1,14 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_29-zvy3gb2r/Math_29-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Math_29-zvy3gb2r/buggy/failing_tests)!
+       Lines total: 321
+     Lines covered: 314
+  Conditions total: 134
+Conditions covered: 127
+     Line coverage: 97.8%
+Condition coverage: 94.8%
+[exit 0]

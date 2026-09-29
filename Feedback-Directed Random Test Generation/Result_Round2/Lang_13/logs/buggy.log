@@ -1,0 +1,24 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j checkout -p Lang -v 13b -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_13-nmt4b28q/buggy
+Checking out e9429c05 to /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/r OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/ran OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff e9429c05:81797ed4..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-13b........................................ OK
+[exit 0]
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j compile -w /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Lang_13-nmt4b28q/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]

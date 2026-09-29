@@ -1,0 +1,42 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_60-lrae01l2/Jsoup_60-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 36
+  - org.jsoup.parser.RegressionTest0::test0030
+  - org.jsoup.parser.RegressionTest0::test0409
+  - org.jsoup.parser.RegressionTest1::test0639
+  - org.jsoup.parser.RegressionTest1::test0654
+  - org.jsoup.parser.RegressionTest1::test0672
+  - org.jsoup.parser.RegressionTest2::test1322
+  - org.jsoup.parser.RegressionTest3::test1580
+  - org.jsoup.parser.RegressionTest3::test1979
+  - org.jsoup.parser.RegressionTest4::test2040
+  - org.jsoup.parser.RegressionTest4::test2081
+  - org.jsoup.parser.RegressionTest4::test2098
+  - org.jsoup.parser.RegressionTest4::test2139
+  - org.jsoup.parser.RegressionTest5::test2652
+  - org.jsoup.parser.RegressionTest6::test3099
+  - org.jsoup.parser.RegressionTest7::test3549
+  - org.jsoup.parser.RegressionTest7::test3615
+  - org.jsoup.parser.RegressionTest7::test3979
+  - org.jsoup.parser.RegressionTest8::test4066
+  - org.jsoup.parser.RegressionTest0::test0030
+  - org.jsoup.parser.RegressionTest0::test0409
+  - org.jsoup.parser.RegressionTest1::test0639
+  - org.jsoup.parser.RegressionTest1::test0654
+  - org.jsoup.parser.RegressionTest1::test0672
+  - org.jsoup.parser.RegressionTest2::test1322
+  - org.jsoup.parser.RegressionTest3::test1580
+  - org.jsoup.parser.RegressionTest3::test1979
+  - org.jsoup.parser.RegressionTest4::test2040
+  - org.jsoup.parser.RegressionTest4::test2081
+  - org.jsoup.parser.RegressionTest4::test2098
+  - org.jsoup.parser.RegressionTest4::test2139
+  - org.jsoup.parser.RegressionTest5::test2652
+  - org.jsoup.parser.RegressionTest6::test3099
+  - org.jsoup.parser.RegressionTest7::test3549
+  - org.jsoup.parser.RegressionTest7::test3615
+  - org.jsoup.parser.RegressionTest7::test3979
+  - org.jsoup.parser.RegressionTest8::test4066
+[exit 0]

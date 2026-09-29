@@ -1,0 +1,22 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Jsoup_59-jf03eg35/Jsoup_59-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 16
+  - org.jsoup.parser.RegressionTest0::test0389
+  - org.jsoup.parser.RegressionTest0::test0408
+  - org.jsoup.parser.RegressionTest1::test0526
+  - org.jsoup.parser.RegressionTest1::test0842
+  - org.jsoup.parser.RegressionTest3::test1540
+  - org.jsoup.parser.RegressionTest5::test2882
+  - org.jsoup.parser.RegressionTest6::test3047
+  - org.jsoup.parser.RegressionTest8::test4176
+  - org.jsoup.parser.RegressionTest0::test0389
+  - org.jsoup.parser.RegressionTest0::test0408
+  - org.jsoup.parser.RegressionTest1::test0526
+  - org.jsoup.parser.RegressionTest1::test0842
+  - org.jsoup.parser.RegressionTest3::test1540
+  - org.jsoup.parser.RegressionTest5::test2882
+  - org.jsoup.parser.RegressionTest6::test3047
+  - org.jsoup.parser.RegressionTest8::test4176
+[exit 0]

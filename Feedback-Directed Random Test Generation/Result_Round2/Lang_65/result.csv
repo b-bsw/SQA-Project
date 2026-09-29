@@ -1,0 +1,2 @@
+"project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
+"Lang",65,20260928,60,2225,77.91,84.1,69.8,344,268,195,164,149,104,"FAIL",3826,"FAIL",3826,"INCONCLUSIVE"

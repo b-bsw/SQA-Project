@@ -1,0 +1,14 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Time_3-61d661kb/Time_3-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+WARNING: Some tests failed (see /private/var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Time_3-61d661kb/buggy/failing_tests)!
+       Lines total: 238
+     Lines covered: 215
+  Conditions total: 43
+Conditions covered: 33
+     Line coverage: 90.3%
+Condition coverage: 76.7%
+[exit 0]

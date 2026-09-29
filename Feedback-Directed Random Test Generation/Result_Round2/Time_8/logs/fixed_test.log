@@ -1,0 +1,47 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Time_8-xub_ifmg/Time_8-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 41
+  - org.joda.time.RegressionTest0::test0006
+  - org.joda.time.RegressionTest0::test0009
+  - org.joda.time.RegressionTest0::test0010
+  - org.joda.time.RegressionTest0::test0011
+  - org.joda.time.RegressionTest0::test0014
+  - org.joda.time.RegressionTest0::test0015
+  - org.joda.time.RegressionTest0::test0017
+  - org.joda.time.RegressionTest0::test0018
+  - org.joda.time.RegressionTest0::test0031
+  - org.joda.time.RegressionTest0::test0053
+  - org.joda.time.RegressionTest0::test0054
+  - org.joda.time.RegressionTest0::test0057
+  - org.joda.time.RegressionTest0::test0061
+  - org.joda.time.RegressionTest0::test0071
+  - org.joda.time.RegressionTest0::test0074
+  - org.joda.time.RegressionTest0::test0079
+  - org.joda.time.RegressionTest0::test0163
+  - org.joda.time.RegressionTest0::test0235
+  - org.joda.time.RegressionTest0::test0358
+  - org.joda.time.RegressionTest0::test0462
+  - org.joda.time.RegressionTest1::test0884
+  - org.joda.time.RegressionTest3::test1740
+  - org.joda.time.RegressionTest3::test1845
+  - org.joda.time.RegressionTest0::test0002
+  - org.joda.time.RegressionTest0::test0006
+  - org.joda.time.RegressionTest0::test0009
+  - org.joda.time.RegressionTest0::test0010
+  - org.joda.time.RegressionTest0::test0011
+  - org.joda.time.RegressionTest0::test0014
+  - org.joda.time.RegressionTest0::test0015
+  - org.joda.time.RegressionTest0::test0017
+  - org.joda.time.RegressionTest0::test0018
+  - org.joda.time.RegressionTest0::test0078
+  - org.joda.time.RegressionTest0::test0163
+  - org.joda.time.RegressionTest0::test0235
+  - org.joda.time.RegressionTest0::test0358
+  - org.joda.time.RegressionTest0::test0462
+  - org.joda.time.RegressionTest1::test0884
+  - org.joda.time.RegressionTest2::test1013
+  - org.joda.time.RegressionTest3::test1740
+  - org.joda.time.RegressionTest3::test1845
+[exit 0]

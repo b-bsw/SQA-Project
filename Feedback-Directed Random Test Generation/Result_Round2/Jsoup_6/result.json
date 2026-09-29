@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.1",
+  "generation_timestamp": "2026-09-28T01:41:39.008721+00:00",
+  "algorithm": "Randoop",
+  "created_at": "2026-09-29T14:29:44.101617+00:00",
+  "duration_seconds": 17.53,
+  "project": "Jsoup",
+  "bug_id": 6,
+  "seed": 20260928,
+  "budget": 60,
+  "tests": 142,
+  "test_files": 2,
+  "coverage": null,
+  "line_cov": null,
+  "branch_cov": null,
+  "total_goals": 0,
+  "covered_goals": 0,
+  "lines": 0,
+  "covered_lines": 0,
+  "total_branches": 0,
+  "covered_branches": 0,
+  "buggy_result": "PASS",
+  "buggy_fails": 0,
+  "fixed_result": "PASS",
+  "fixed_fails": 0,
+  "verdict": "NOT_REVEALING",
+  "source": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode_Round2/Jsoup_6_buggy",
+  "validations": [
+    {
+      "subject": "buggy",
+      "result": "PASS",
+      "fails": 0,
+      "compile": "PASS",
+      "test_compile": "PASS",
+      "test_status": "PASS",
+      "coverage_status": "FAIL",
+      "duration_seconds": 9.86
+    },
+    {
+      "subject": "fixed",
+      "result": "PASS",
+      "fails": 0,
+      "compile": "PASS",
+      "test_compile": "PASS",
+      "test_status": "PASS",
+      "duration_seconds": 7.54
+    }
+  ],
+  "round": 2,
+  "seed_source": "EXPLICIT"
+}
