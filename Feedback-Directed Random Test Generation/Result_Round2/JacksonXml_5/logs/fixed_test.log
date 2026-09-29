@@ -1,0 +1,34 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonXml_5-b5k57uhb/JacksonXml_5-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 28
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1054
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1113
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1171
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1218
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1439
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1470
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1479
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1487
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1583
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1664
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1696
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1714
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1768
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1799
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1054
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1113
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1171
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1218
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1439
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1470
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1479
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest2::test1487
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1583
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1664
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1696
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1714
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1768
+  - com.fasterxml.jackson.dataformat.xml.ser.RegressionTest3::test1799
+[exit 0]

@@ -1,0 +1,22 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Compress_45-_97tipnf/Compress_45-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 16
+  - org.apache.commons.compress.archivers.tar.RegressionTest1::test0544
+  - org.apache.commons.compress.archivers.tar.RegressionTest1::test0890
+  - org.apache.commons.compress.archivers.tar.RegressionTest3::test1885
+  - org.apache.commons.compress.archivers.tar.RegressionTest4::test2041
+  - org.apache.commons.compress.archivers.tar.RegressionTest6::test3331
+  - org.apache.commons.compress.archivers.tar.RegressionTest7::test3536
+  - org.apache.commons.compress.archivers.tar.RegressionTest7::test3942
+  - org.apache.commons.compress.archivers.tar.RegressionTest8::test4305
+  - org.apache.commons.compress.archivers.tar.RegressionTest1::test0544
+  - org.apache.commons.compress.archivers.tar.RegressionTest1::test0890
+  - org.apache.commons.compress.archivers.tar.RegressionTest3::test1885
+  - org.apache.commons.compress.archivers.tar.RegressionTest4::test2041
+  - org.apache.commons.compress.archivers.tar.RegressionTest6::test3331
+  - org.apache.commons.compress.archivers.tar.RegressionTest7::test3536
+  - org.apache.commons.compress.archivers.tar.RegressionTest7::test3942
+  - org.apache.commons.compress.archivers.tar.RegressionTest8::test4305
+[exit 0]

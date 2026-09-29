@@ -1,0 +1,11 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonDatabind_4-udr9f3rx/JacksonDatabind_4-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 5
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0011
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0016
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0019
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0020
+  - com.fasterxml.jackson.databind.deser.std.RegressionTest0::test0026
+[exit 0]

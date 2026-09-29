@@ -1,0 +1,13 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j coverage -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Csv_4-0eqlz9c8/Csv_4-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 100
+     Lines covered: 4
+  Conditions total: 50
+Conditions covered: 0
+     Line coverage: 4.0%
+Condition coverage: 0.0%
+[exit 0]

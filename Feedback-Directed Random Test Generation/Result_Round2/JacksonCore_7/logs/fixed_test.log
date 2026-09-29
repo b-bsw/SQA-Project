@@ -1,0 +1,38 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonCore_7-s3ybgtnj/JacksonCore_7-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 32
+  - com.fasterxml.jackson.core.json.RegressionTest0::test0354
+  - com.fasterxml.jackson.core.json.RegressionTest1::test0848
+  - com.fasterxml.jackson.core.json.RegressionTest1::test0869
+  - com.fasterxml.jackson.core.json.RegressionTest2::test1168
+  - com.fasterxml.jackson.core.json.RegressionTest2::test1397
+  - com.fasterxml.jackson.core.json.RegressionTest2::test1404
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1521
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1532
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1603
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1839
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1877
+  - com.fasterxml.jackson.core.json.RegressionTest4::test2072
+  - com.fasterxml.jackson.core.json.RegressionTest5::test2815
+  - com.fasterxml.jackson.core.json.RegressionTest5::test2984
+  - com.fasterxml.jackson.core.json.RegressionTest6::test3004
+  - com.fasterxml.jackson.core.json.RegressionTest6::test3067
+  - com.fasterxml.jackson.core.json.RegressionTest0::test0354
+  - com.fasterxml.jackson.core.json.RegressionTest1::test0848
+  - com.fasterxml.jackson.core.json.RegressionTest1::test0869
+  - com.fasterxml.jackson.core.json.RegressionTest2::test1168
+  - com.fasterxml.jackson.core.json.RegressionTest2::test1397
+  - com.fasterxml.jackson.core.json.RegressionTest2::test1404
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1521
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1532
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1603
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1839
+  - com.fasterxml.jackson.core.json.RegressionTest3::test1877
+  - com.fasterxml.jackson.core.json.RegressionTest4::test2072
+  - com.fasterxml.jackson.core.json.RegressionTest5::test2815
+  - com.fasterxml.jackson.core.json.RegressionTest5::test2984
+  - com.fasterxml.jackson.core.json.RegressionTest6::test3004
+  - com.fasterxml.jackson.core.json.RegressionTest6::test3067
+[exit 0]

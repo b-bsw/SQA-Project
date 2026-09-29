@@ -1,0 +1,2 @@
+"project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
+"JacksonDatabind",97,20260928,60,3501,73.33,80.49,64.71,75,55,41,33,34,22,"PASS",0,"PASS",0,"NOT_REVEALING"

@@ -1,0 +1,30 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonDatabind_17-4by5vhzs/JacksonDatabind_17-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 24
+  - com.fasterxml.jackson.databind.RegressionTest0::test0014
+  - com.fasterxml.jackson.databind.RegressionTest0::test0092
+  - com.fasterxml.jackson.databind.RegressionTest0::test0113
+  - com.fasterxml.jackson.databind.RegressionTest0::test0142
+  - com.fasterxml.jackson.databind.RegressionTest0::test0147
+  - com.fasterxml.jackson.databind.RegressionTest0::test0195
+  - com.fasterxml.jackson.databind.RegressionTest0::test0283
+  - com.fasterxml.jackson.databind.RegressionTest0::test0408
+  - com.fasterxml.jackson.databind.RegressionTest0::test0456
+  - com.fasterxml.jackson.databind.RegressionTest1::test0569
+  - com.fasterxml.jackson.databind.RegressionTest1::test0707
+  - com.fasterxml.jackson.databind.RegressionTest1::test0775
+  - com.fasterxml.jackson.databind.RegressionTest0::test0014
+  - com.fasterxml.jackson.databind.RegressionTest0::test0092
+  - com.fasterxml.jackson.databind.RegressionTest0::test0113
+  - com.fasterxml.jackson.databind.RegressionTest0::test0142
+  - com.fasterxml.jackson.databind.RegressionTest0::test0147
+  - com.fasterxml.jackson.databind.RegressionTest0::test0195
+  - com.fasterxml.jackson.databind.RegressionTest0::test0283
+  - com.fasterxml.jackson.databind.RegressionTest0::test0408
+  - com.fasterxml.jackson.databind.RegressionTest0::test0456
+  - com.fasterxml.jackson.databind.RegressionTest1::test0569
+  - com.fasterxml.jackson.databind.RegressionTest1::test0707
+  - com.fasterxml.jackson.databind.RegressionTest1::test0775
+[exit 0]

@@ -1,0 +1,2 @@
+"project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
+"Gson",8,20260928,60,2,25.81,25.81,0.0,31,8,31,8,0,0,"PASS",0,"PASS",0,"NOT_REVEALING"

@@ -6,21 +6,23 @@
       "round": 2,
       "arguments": [
         "--projects",
-        "Chart",
-        "Cli",
-        "Closure",
-        "Collections",
+        "Compress",
+        "Csv",
+        "Gson",
+        "JacksonCore",
+        "JacksonDatabind",
+        "JacksonXml",
         "--workers",
         "2",
         "--overwrite"
       ],
-      "started_at": "2026-09-29T08:29:45.236446+00:00",
+      "started_at": "2026-09-29T10:46:07.720542+00:00",
       "status": "COMPLETED",
       "script": "run_feedback_directed_tests",
       "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/generation_state.json",
-      "run_id": "20260929T082945267976Z_18140",
-      "total_duration_seconds": 6765.628,
-      "finished_at": "2026-09-29T10:22:30.908654+00:00"
+      "run_id": "20260929T104607774325Z_83821",
+      "total_duration_seconds": 6662.35,
+      "finished_at": "2026-09-29T12:37:10.132512+00:00"
     },
     "history": {
       "20260927T184617019194Z_3441": {
@@ -737,6 +739,30 @@
         "run_id": "20260929T082945267976Z_18140",
         "total_duration_seconds": 6765.628,
         "finished_at": "2026-09-29T10:22:30.908654+00:00"
+      },
+      "20260929T104607774325Z_83821": {
+        "entrypoint": "script/Randoop/round2/results.py",
+        "phase": "results",
+        "round": 2,
+        "arguments": [
+          "--projects",
+          "Compress",
+          "Csv",
+          "Gson",
+          "JacksonCore",
+          "JacksonDatabind",
+          "JacksonXml",
+          "--workers",
+          "2",
+          "--overwrite"
+        ],
+        "started_at": "2026-09-29T10:46:07.720542+00:00",
+        "status": "COMPLETED",
+        "script": "run_feedback_directed_tests",
+        "state_file": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round2/generation_state.json",
+        "run_id": "20260929T104607774325Z_83821",
+        "total_duration_seconds": 6662.35,
+        "finished_at": "2026-09-29T12:37:10.132512+00:00"
       }
     }
   },

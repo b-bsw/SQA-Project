@@ -1,0 +1,58 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-Csv_12-or3ea6mk/Csv_12-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 52
+  - org.apache.commons.csv.RegressionTest0::test0409
+  - org.apache.commons.csv.RegressionTest0::test0472
+  - org.apache.commons.csv.RegressionTest0::test0473
+  - org.apache.commons.csv.RegressionTest1::test0782
+  - org.apache.commons.csv.RegressionTest1::test0921
+  - org.apache.commons.csv.RegressionTest2::test1416
+  - org.apache.commons.csv.RegressionTest2::test1464
+  - org.apache.commons.csv.RegressionTest3::test1751
+  - org.apache.commons.csv.RegressionTest3::test1834
+  - org.apache.commons.csv.RegressionTest4::test2261
+  - org.apache.commons.csv.RegressionTest4::test2454
+  - org.apache.commons.csv.RegressionTest4::test2488
+  - org.apache.commons.csv.RegressionTest5::test2728
+  - org.apache.commons.csv.RegressionTest5::test2823
+  - org.apache.commons.csv.RegressionTest5::test2853
+  - org.apache.commons.csv.RegressionTest6::test3100
+  - org.apache.commons.csv.RegressionTest6::test3110
+  - org.apache.commons.csv.RegressionTest6::test3251
+  - org.apache.commons.csv.RegressionTest6::test3444
+  - org.apache.commons.csv.RegressionTest7::test3524
+  - org.apache.commons.csv.RegressionTest7::test3609
+  - org.apache.commons.csv.RegressionTest7::test3974
+  - org.apache.commons.csv.RegressionTest8::test4098
+  - org.apache.commons.csv.RegressionTest8::test4138
+  - org.apache.commons.csv.RegressionTest8::test4342
+  - org.apache.commons.csv.RegressionTest8::test4376
+  - org.apache.commons.csv.RegressionTest0::test0409
+  - org.apache.commons.csv.RegressionTest0::test0472
+  - org.apache.commons.csv.RegressionTest0::test0473
+  - org.apache.commons.csv.RegressionTest1::test0782
+  - org.apache.commons.csv.RegressionTest1::test0921
+  - org.apache.commons.csv.RegressionTest2::test1416
+  - org.apache.commons.csv.RegressionTest2::test1464
+  - org.apache.commons.csv.RegressionTest3::test1751
+  - org.apache.commons.csv.RegressionTest3::test1834
+  - org.apache.commons.csv.RegressionTest4::test2261
+  - org.apache.commons.csv.RegressionTest4::test2454
+  - org.apache.commons.csv.RegressionTest4::test2488
+  - org.apache.commons.csv.RegressionTest5::test2728
+  - org.apache.commons.csv.RegressionTest5::test2823
+  - org.apache.commons.csv.RegressionTest5::test2853
+  - org.apache.commons.csv.RegressionTest6::test3100
+  - org.apache.commons.csv.RegressionTest6::test3110
+  - org.apache.commons.csv.RegressionTest6::test3251
+  - org.apache.commons.csv.RegressionTest6::test3444
+  - org.apache.commons.csv.RegressionTest7::test3524
+  - org.apache.commons.csv.RegressionTest7::test3609
+  - org.apache.commons.csv.RegressionTest7::test3974
+  - org.apache.commons.csv.RegressionTest8::test4098
+  - org.apache.commons.csv.RegressionTest8::test4138
+  - org.apache.commons.csv.RegressionTest8::test4342
+  - org.apache.commons.csv.RegressionTest8::test4376
+[exit 0]

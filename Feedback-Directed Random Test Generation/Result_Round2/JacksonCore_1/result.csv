@@ -1,0 +1,2 @@
+"project","bug_id","seed","budget","tests","coverage","line_cov","branch_cov","total_goals","covered_goals","lines","covered_lines","total_branches","covered_branches","buggy_result","buggy_fails","fixed_result","fixed_fails","verdict"
+"JacksonCore",1,20260928,60,4549,71.86,76.13,64.71,636,457,398,303,238,154,"PASS",0,"FAIL",414,"INCONCLUSIVE"

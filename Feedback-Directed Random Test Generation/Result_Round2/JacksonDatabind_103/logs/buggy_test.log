@@ -1,0 +1,46 @@
+$ /Users/piyadaketmala/defects4j/framework/bin/defects4j test -s /var/folders/kf/rkm05cy96b9127snnvt_s1fw0000gn/T/randoop-JacksonDatabind_103-aup_03f2/JacksonDatabind_103-randoop.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 40
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test01
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test02
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test03
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test04
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test05
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test06
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test07
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test08
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test09
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test10
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test11
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test12
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test13
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test14
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test15
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test16
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test17
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test18
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test19
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test20
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test01
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test02
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test03
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test04
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test05
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test06
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test07
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test08
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test09
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test10
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test11
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test12
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test13
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test14
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test15
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test16
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test17
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test18
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test19
+  - com.fasterxml.jackson.databind.deser.ErrorTest0::test20
+[exit 0]
