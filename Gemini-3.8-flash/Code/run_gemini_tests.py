@@ -365,6 +365,7 @@ def run_target(name: str, source: Path, d4j: str, coverage: bool,
                          "NOT_AVAILABLE" if "NOT_RUN" in (a, b) else "INCONCLUSIVE")
     write_csv_atomic(destination / "result.csv", [report_row(report)])
     write_json_atomic(destination / "result.json", report)
+    shutil.rmtree(logs, ignore_errors=True)
     return name, report["verdict"]
 
 

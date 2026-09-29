@@ -1,8 +1,0 @@
-$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Cli_17-ptfs8ljq/Cli-17b-gemini.1.tar.bz2
-Extract test suite......................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Failing tests: 1
-  - org.apache.commons.cli.PosixParserTest
-[exit 0]
-[test_seconds: 2.68]
