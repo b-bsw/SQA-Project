@@ -1,0 +1,13 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j coverage -s /tmp/gemini-Chart_8-8g24re5d/Chart-8b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 162
+     Lines covered: 42
+  Conditions total: 68
+Conditions covered: 4
+     Line coverage: 25.9%
+Condition coverage: 5.9%
+[exit 0]

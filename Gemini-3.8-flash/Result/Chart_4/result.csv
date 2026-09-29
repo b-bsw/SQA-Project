@@ -1,0 +1,2 @@
+project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
+Chart,4,76,FAIL,1,FAIL,1,INCONCLUSIVE,1808,1543,85.34,964,636,65.98,5.35,8.79,14.14,measured_wall_clock,measured_wall_clock

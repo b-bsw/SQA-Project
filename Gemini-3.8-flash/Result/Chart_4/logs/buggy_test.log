@@ -1,0 +1,8 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Chart_4-qk9mordb/Chart-4b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 1
+  - org.jfree.chart.plot.XYPlotTest::datasetToAxesMapping_validIndices_shouldMapCorrectly
+[exit 0]
+[test_seconds: 5.35]

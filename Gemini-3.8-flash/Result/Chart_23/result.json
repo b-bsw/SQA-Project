@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "generator": "Gemini-3.8-Flash",
+  "created_at": "2026-09-29T22:22:30.227057+00:00",
+  "project": "Chart",
+  "bug_id": 23,
+  "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Chart_23_buggy",
+  "coverage_scope": "modified classes of buggy revision",
+  "tests": 22,
+  "test_files": 1,
+  "buggy": {
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 6.11,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 11.74,
+    "coverage_status": "PASS",
+    "lines": 144,
+    "covered_lines": 141,
+    "line_cov": 97.92,
+    "branches": 46,
+    "covered_branches": 41,
+    "branch_cov": 89.13
+  },
+  "fixed": {
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 8.58,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
+  },
+  "test_run_seconds": 14.69,
+  "verdict": "NOT_REVEALING"
+}

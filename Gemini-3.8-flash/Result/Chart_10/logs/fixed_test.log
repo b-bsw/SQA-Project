@@ -1,0 +1,9 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Chart_10-fwor0xo7/Chart-10b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 2
+  - org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorTest::generateToolTipFragment_givenNullText_shouldConcatenateNullLiteral
+  - org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorTest::generateToolTipFragment_givenHtmlTagsAndQuotes_shouldIncludeCharactersVerbatim
+[exit 0]
+[test_seconds: 1.82]
