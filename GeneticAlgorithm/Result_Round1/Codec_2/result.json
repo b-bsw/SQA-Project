@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1",
   "algorithm": "STANDARD_GA",
-  "created_at": "2026-09-29T20:16:14Z",
-  "round": 2,
+  "created_at": "2026-09-29T20:14:53Z",
+  "round": 1,
   "project": "Codec",
   "bug_id": 2,
   "seed": 20260918,
@@ -26,7 +26,7 @@
     {
       "target_class": "org.apache.commons.codec.binary.Base64",
       "generation_result": "PASS",
-      "generation_seconds": 69,
+      "generation_seconds": 70,
       "tests": 32,
       "coverage": 97.13,
       "line_cov": 97.62,
