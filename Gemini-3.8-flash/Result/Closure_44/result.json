@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "generator": "Gemini-3.8-Flash",
+  "created_at": "2026-09-29T22:42:12.535676+00:00",
+  "project": "Closure",
+  "bug_id": 44,
+  "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Closure_44_buggy",
+  "coverage_scope": "modified classes of buggy revision",
+  "tests": 35,
+  "test_files": 1,
+  "buggy": {
+    "result": "FAIL",
+    "fails": 7,
+    "compile": "PASS",
+    "test_seconds": 12.54,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 24.3,
+    "coverage_status": "PASS",
+    "lines": 109,
+    "covered_lines": 91,
+    "line_cov": 83.49,
+    "branches": 60,
+    "covered_branches": 53,
+    "branch_cov": 88.33
+  },
+  "error": "[Errno 2] No such file or directory: '/home/manamo/wan/SQA-Project/Gemini-3.8-flash/Result/Closure_44/logs/fixed_test.log'",
+  "test_run_seconds": null,
+  "verdict": "NOT_AVAILABLE"
+}
