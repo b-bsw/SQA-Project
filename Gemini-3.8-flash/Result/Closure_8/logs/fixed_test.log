@@ -1,0 +1,8 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Closure_8-2zz2lhsc/Closure-8b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 1
+  - com.google.javascript.jscomp.CollapseVariableDeclarationsTest::process_givenEmptyRoot_shouldCompleteGracefully
+[exit 0]
+[test_seconds: 17.32]

@@ -1,0 +1,8 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Cli_38-0vu4i4_q/Cli-38b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 1
+  - org.apache.commons.cli.DefaultParserTest::parse_givenSingleHyphenLongPrefixWithoutEqual_shouldExtractPrefixAndArgument
+[exit 0]
+[test_seconds: 5.65]

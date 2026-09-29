@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "generator": "Gemini-3.8-Flash",
+  "created_at": "2026-09-29T22:25:45.212533+00:00",
+  "project": "Cli",
+  "bug_id": 30,
+  "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Cli_30_buggy",
+  "coverage_scope": "modified classes of buggy revision",
+  "tests": 72,
+  "test_files": 2,
+  "buggy": {
+    "result": "FAIL",
+    "fails": 2,
+    "compile": "PASS",
+    "test_seconds": 4.91,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 8.39,
+    "coverage_status": "PASS",
+    "lines": 288,
+    "covered_lines": 0,
+    "line_cov": 0.0,
+    "branches": 218,
+    "covered_branches": 0,
+    "branch_cov": 0.0
+  },
+  "fixed": {
+    "result": "FAIL",
+    "fails": 2,
+    "compile": "PASS",
+    "test_seconds": 5.21,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
+  },
+  "test_run_seconds": 10.12,
+  "verdict": "INCONCLUSIVE"
+}

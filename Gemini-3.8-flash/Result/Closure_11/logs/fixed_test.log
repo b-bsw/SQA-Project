@@ -1,0 +1,10 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Closure_11-c0fsy_z0/Closure-11b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 3
+  - com.google.javascript.jscomp.TypeCheckTest::process_givenExternsNotInParent_shouldThrowIllegalStateException
+  - com.google.javascript.jscomp.TypeCheckTest::processForTesting_givenNoTypeCheckAnnotation_shouldSuppressTypeCheck
+  - com.google.javascript.jscomp.TypeCheckTest::processForTesting_givenBitwiseOpOnNonInt32_shouldReportWarning
+[exit 0]
+[test_seconds: 15.10]

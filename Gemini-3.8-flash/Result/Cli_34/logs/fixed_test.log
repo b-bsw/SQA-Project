@@ -1,0 +1,9 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Cli_34-nxcwseh1/Cli-34b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 2
+  - org.apache.commons.cli.OptionBuilderTest
+  - org.apache.commons.cli.OptionTest
+[exit 0]
+[test_seconds: 3.54]

@@ -1,0 +1,13 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Closure_12-g_kkagt8/Closure-12b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 6
+  - com.google.javascript.jscomp.MaybeReachingVariableUseTest::flowThrough_givenForInWithVar_shouldRemoveLhsAndComputeRhs
+  - com.google.javascript.jscomp.MaybeReachingVariableUseTest::flowThrough_givenNameNode_shouldAddLocalToUseMap
+  - com.google.javascript.jscomp.MaybeReachingVariableUseTest::reachingUses_equalsAndHashCode_shouldAdhereToContract
+  - com.google.javascript.jscomp.MaybeReachingVariableUseTest::flowThrough_givenForInWithoutVar_shouldRemoveLhsAndComputeRhs
+  - com.google.javascript.jscomp.MaybeReachingVariableUseTest::flowThrough_givenVarDeclarationWithInit_shouldRemoveVarAndComputeInit
+  - com.google.javascript.jscomp.MaybeReachingVariableUseTest::flowThrough_givenSimpleAssignment_shouldRemoveLhsAndComputeRhs
+[exit 0]
+[test_seconds: 13.66]

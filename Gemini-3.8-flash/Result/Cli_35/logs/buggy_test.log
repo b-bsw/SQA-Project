@@ -1,0 +1,8 @@
+$ /home/manamo/bb/defects4j/framework/bin/defects4j test -s /tmp/gemini-Cli_35-fnfprgjq/Cli-35b-gemini.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 1
+  - org.apache.commons.cli.OptionsTest::getMatchingOptions_givenPrefix_shouldReturnAllMatchingOptions
+[exit 0]
+[test_seconds: 4.34]
