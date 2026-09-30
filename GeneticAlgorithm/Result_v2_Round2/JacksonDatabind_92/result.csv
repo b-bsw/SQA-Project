@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+JacksonDatabind,92,JacksonDatabind_92,OK,343,73,21.28,204,19,9.31,0

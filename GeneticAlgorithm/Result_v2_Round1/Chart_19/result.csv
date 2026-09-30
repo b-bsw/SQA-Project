@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+Chart,19,Chart_19,OK,1136,786,69.19,594,330,55.56,0

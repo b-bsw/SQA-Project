@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+Closure,92,Closure_92,OK,409,71,17.36,258,24,9.3,0

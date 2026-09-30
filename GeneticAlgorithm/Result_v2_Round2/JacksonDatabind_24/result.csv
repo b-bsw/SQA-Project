@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+JacksonDatabind,24,JacksonDatabind_24,OK,67,0,0.0,26,0,0.0,0

@@ -1,0 +1,13 @@
+{
+  "project": "Csv",
+  "bug_id": 12,
+  "target": "Csv_12",
+  "coverage_status": "OK",
+  "lines_total": 184,
+  "lines_covered": 177,
+  "line_coverage": 96.2,
+  "conditions_total": 140,
+  "conditions_covered": 132,
+  "condition_coverage": 94.29,
+  "failing_tests": 0
+}

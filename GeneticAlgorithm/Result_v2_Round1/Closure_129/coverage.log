@@ -1,0 +1,32 @@
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Closure -v 129b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_129-bvtpv_kf/buggy
+Checking out 79a89065 to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/g OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 79a89065:4ff5d0b9..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Closure-129b.................................... OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_129-bvtpv_kf/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_129-bvtpv_kf/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_129-bvtpv_kf/Closure-129b-evosuite-ga.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 72
+     Lines covered: 29
+  Conditions total: 51
+Conditions covered: 15
+     Line coverage: 40.3%
+Condition coverage: 29.4%
+[exit 0]

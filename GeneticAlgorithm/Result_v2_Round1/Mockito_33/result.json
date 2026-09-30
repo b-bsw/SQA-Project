@@ -1,0 +1,13 @@
+{
+  "project": "Mockito",
+  "bug_id": 33,
+  "target": "Mockito_33",
+  "coverage_status": "OK",
+  "lines_total": 45,
+  "lines_covered": 17,
+  "line_coverage": 37.78,
+  "conditions_total": 32,
+  "conditions_covered": 3,
+  "condition_coverage": 9.38,
+  "failing_tests": 0
+}

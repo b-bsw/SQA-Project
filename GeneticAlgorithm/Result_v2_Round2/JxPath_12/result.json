@@ -1,0 +1,13 @@
+{
+  "project": "JxPath",
+  "bug_id": 12,
+  "target": "JxPath_12",
+  "coverage_status": "OK",
+  "lines_total": 361,
+  "lines_covered": 224,
+  "line_coverage": 62.05,
+  "conditions_total": 267,
+  "conditions_covered": 120,
+  "condition_coverage": 44.94,
+  "failing_tests": 0
+}

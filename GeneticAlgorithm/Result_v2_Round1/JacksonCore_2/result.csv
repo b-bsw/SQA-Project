@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+JacksonCore,2,JacksonCore_2,OK,2463,697,28.3,1698,388,22.85,0

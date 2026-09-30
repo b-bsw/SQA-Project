@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+Jsoup,76,Jsoup_76,OK,1105,0,0.0,787,0,0.0,0

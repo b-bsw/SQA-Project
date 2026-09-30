@@ -1,0 +1,32 @@
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Closure -v 77b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_77-hwbsy_hl/buggy
+Checking out b88400ce to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/g OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff b88400ce:25827942..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Closure-77b..................................... OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_77-hwbsy_hl/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_77-hwbsy_hl/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_77-hwbsy_hl/Closure-77b-evosuite-ga.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 568
+     Lines covered: 91
+  Conditions total: 434
+Conditions covered: 47
+     Line coverage: 16.0%
+Condition coverage: 10.8%
+[exit 0]

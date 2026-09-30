@@ -1,0 +1,13 @@
+{
+  "project": "Gson",
+  "bug_id": 16,
+  "target": "Gson_16",
+  "coverage_status": "OK",
+  "lines_total": 248,
+  "lines_covered": 0,
+  "line_coverage": 0.0,
+  "conditions_total": 194,
+  "conditions_covered": 0,
+  "condition_coverage": 0.0,
+  "failing_tests": 0
+}

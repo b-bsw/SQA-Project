@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+Lang,20,Lang_20,OK,1298,1211,93.3,1149,1057,91.99,0

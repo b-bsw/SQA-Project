@@ -1,0 +1,35 @@
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Mockito -v 24b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Mockito_24-0aww6qzz/buggy
+Checking out c17169c2 to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/g OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+sed: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Mockito_24-0aww6qzz/buggy/buildSrc/build.gradle: No such file or directory
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga- OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff c17169c2:585b06d8..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Mockito-24b..................................... OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Mockito_24-0aww6qzz/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Mockito_24-0aww6qzz/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Mockito_24-0aww6qzz/Mockito-24b-evosuite-ga.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 44
+     Lines covered: 20
+  Conditions total: 36
+Conditions covered: 15
+     Line coverage: 45.5%
+Condition coverage: 41.7%
+[exit 0]

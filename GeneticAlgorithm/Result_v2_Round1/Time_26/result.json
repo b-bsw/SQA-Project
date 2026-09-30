@@ -1,0 +1,13 @@
+{
+  "project": "Time",
+  "bug_id": 26,
+  "target": "Time_26",
+  "coverage_status": "OK",
+  "lines_total": 567,
+  "lines_covered": 494,
+  "line_coverage": 87.13,
+  "conditions_total": 240,
+  "conditions_covered": 183,
+  "condition_coverage": 76.25,
+  "failing_tests": 0
+}

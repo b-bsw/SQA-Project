@@ -1,0 +1,13 @@
+{
+  "project": "Cli",
+  "bug_id": 13,
+  "target": "Cli_13",
+  "coverage_status": "TESTS_FAILED",
+  "lines_total": 193,
+  "lines_covered": 0,
+  "line_coverage": 0.0,
+  "conditions_total": 116,
+  "conditions_covered": 0,
+  "condition_coverage": 0.0,
+  "failing_tests": 3
+}

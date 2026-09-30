@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+Mockito,33,Mockito_33,OK,45,17,37.78,32,3,9.38,0

@@ -1,0 +1,13 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 90,
+  "target": "JacksonDatabind_90",
+  "coverage_status": "OK",
+  "lines_total": 219,
+  "lines_covered": 155,
+  "line_coverage": 70.78,
+  "conditions_total": 104,
+  "conditions_covered": 58,
+  "condition_coverage": 55.77,
+  "failing_tests": 0
+}

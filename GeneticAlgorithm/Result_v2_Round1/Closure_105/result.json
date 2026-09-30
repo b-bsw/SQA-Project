@@ -1,0 +1,13 @@
+{
+  "project": "Closure",
+  "bug_id": 105,
+  "target": "Closure_105",
+  "coverage_status": "OK",
+  "lines_total": 993,
+  "lines_covered": 121,
+  "line_coverage": 12.19,
+  "conditions_total": 739,
+  "conditions_covered": 82,
+  "condition_coverage": 11.1,
+  "failing_tests": 0
+}
