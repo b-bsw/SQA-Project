@@ -5,6 +5,7 @@ Directory นี้เหลือเฉพาะไฟล์ที่จำเ�
 ```text
 Code/
 ├── run_evosuite_ga.sh       รัน experiment สำหรับหนึ่ง project/bug
+├── run_ga_results_v2.py     วัด Defects4J coverage ของเทสต์ GA ที่เก็บไว้
 ├── collect_ga_reports.sh    รวม per-bug report ของแต่ละ round
 ├── merge_round_reports.sh   รวม report ของ Round 1 และ Round 2
 ├── evosuite-1.2.0.jar       EvoSuite
@@ -86,3 +87,28 @@ class เพิ่มเติม โดยไม่มีไฟล์ statistic
 - `NOT_REVEALING`: buggy และ fixed pass ทั้งคู่
 - `INCONCLUSIVE`: ผลการทดสอบคู่อื่น
 - `NOT_AVAILABLE`: checkout, compile หรือ test ไม่สำเร็จ
+
+## V2: วัด Condition Coverage จากเทสต์ที่มีอยู่
+
+สคริปต์นี้ใช้ไฟล์ Java ใน `TestCode/PROJECT_BUG` โดยไม่เรียก EvoSuite เพื่อสร้าง
+เทสต์ใหม่ และไม่เปลี่ยน `Result_Round1`, `Result_Round2` หรือ `report.csv` เดิม
+ให้รันจากราก repository ใน WSL ที่ติดตั้ง Defects4J แล้ว:
+
+```bash
+export DEFECTS4J_BIN=/path/to/defects4j/framework/bin/defects4j
+export GA_JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+python3 GeneticAlgorithm/Code/run_ga_results_v2.py Time 27
+python3 GeneticAlgorithm/Code/run_ga_results_v2.py Time 26,27
+python3 GeneticAlgorithm/Code/run_ga_results_v2.py all
+```
+
+ผลอยู่ใน `Result_v2/PROJECT_BUG/result.csv`, `result.json`, `coverage.log`
+และรายงานรวม `Result_v2/report.csv` ค่า `line_coverage` และ
+`condition_coverage` เป็นเปอร์เซ็นต์ 0–100 ที่คำนวณจาก `summary.csv` ของ
+`defects4j coverage` บน buggy revision ค่า `TESTS_FAILED` หมายถึงวัด coverage
+สำเร็จแต่มีเทสต์ล้มเหลว; `NOT_AVAILABLE` เว้นค่า coverage ว่างและดูสาเหตุใน log
+
+`TestCode` เก็บเพียงชุดล่าสุดต่อ bug และไม่ได้แยกตาม round ดังนั้นผล V2
+อ้างถึงชุดเทสต์ปัจจุบันในโฟลเดอร์นั้น ไม่ควรนำไปติดป้าย Round 1 หรือ Round 2
+หากมีชุดเทสต์อีกชุดที่เก็บแยกไว้ ให้ระบุโฟลเดอร์นั้นด้วย `--tests-root PATH`
+ซึ่งต้องมีโฟลเดอร์ย่อยชื่อ `PROJECT_BUG` เหมือน `TestCode`
