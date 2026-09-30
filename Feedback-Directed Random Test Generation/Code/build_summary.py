@@ -25,12 +25,17 @@ CSV_FIELDS = ("project", "bug_id", "seed", "budget", "tests", "coverage",
               "line_cov", "branch_cov", "total_goals", "covered_goals", "lines",
               "covered_lines", "total_branches", "covered_branches", "buggy_result",
               "buggy_fails", "fixed_result", "fixed_fails", "verdict")
-SUMMARY_FIELDS = ("round",) + CSV_FIELDS + ("target", "execution_seconds")
+SUMMARY_RENAMES = {"branch_cov": "condition_coverage",
+                   "total_branches": "conditions_total",
+                   "covered_branches": "conditions_covered"}
+SUMMARY_FIELDS = ("round",) + tuple(SUMMARY_RENAMES.get(field, field) for field in CSV_FIELDS) + ("target", "execution_seconds")
 INT_FIELDS = {"bug_id", "seed", "budget", "tests", "total_goals", "covered_goals",
               "lines", "covered_lines", "total_branches", "covered_branches",
               "buggy_fails", "fixed_fails"}
+SUMMARY_INT_FIELDS = {SUMMARY_RENAMES.get(field, field) for field in INT_FIELDS}
 FLOAT_FIELDS = {"coverage", "line_cov", "branch_cov", "execution_seconds"}
 PERCENT_FIELDS = {"coverage", "line_cov", "branch_cov"}
+SUMMARY_PERCENT_FIELDS = {"coverage", "line_cov", "condition_coverage"}
 
 NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 ET.register_namespace("x", NS)
@@ -97,6 +102,8 @@ def read_reports() -> list[dict]:
                 for field in PERCENT_FIELDS:
                     if isinstance(row[field], (int, float)):
                         row[field] /= 100
+                for source_field, summary_field in SUMMARY_RENAMES.items():
+                    row[summary_field] = row.pop(source_field)
                 records.append(row)
     return records
 
@@ -160,7 +167,7 @@ def dashboard_metrics(records: list[dict]) -> tuple[dict[str, object], dict[str,
         6: ("result_count", "count"),
         7: ("coverage", "average"),
         8: ("line_cov", "average"),
-        9: ("branch_cov", "average"),
+        9: ("condition_coverage", "average"),
         10: ("revealing", "count"),
         12: ("tests", "sum"),
         13: ("execution_seconds", "sum"),
@@ -168,8 +175,8 @@ def dashboard_metrics(records: list[dict]) -> tuple[dict[str, object], dict[str,
         15: ("line_cov", "count"),
         16: ("lines", "sum"),
         17: ("covered_lines", "sum"),
-        18: ("total_branches", "sum"),
-        19: ("covered_branches", "sum"),
+        18: ("conditions_total", "sum"),
+        19: ("conditions_covered", "sum"),
     }
     verdicts = ("REVEALING", "NOT_REVEALING", "NOT_AVAILABLE", "INCONCLUSIVE", "FAIL")
     for output_column, round_name in rounds.items():
@@ -236,11 +243,11 @@ def render_workbook(destination: Path, records: list[dict]) -> None:
             row = ET.SubElement(sheet_data, tag("row"), {"r": str(row_index), "ht": "22", "customHeight": "1"})
             for col_index, field in enumerate(SUMMARY_FIELDS, 1):
                 col = column_name(col_index)
-                if field in PERCENT_FIELDS:
+                if field in SUMMARY_PERCENT_FIELDS:
                     style = styles.get("E", "5")
                 elif field == "execution_seconds":
                     style = styles.get("H", "6")
-                elif field in INT_FIELDS:
+                elif field in SUMMARY_INT_FIELDS:
                     style = styles.get("F", "4")
                 else:
                     style = styles.get("A", "1") if col_index == 1 else styles.get("B", "1")
@@ -279,11 +286,11 @@ def render_workbook(destination: Path, records: list[dict]) -> None:
         labels = {
             5: ("Metric", "Round1", "Round2", "All rounds"),
             6: ("Results",), 7: ("Average coverage",), 8: ("Average line coverage",),
-            9: ("Average branch coverage",), 10: ("Revealing results",),
+            9: ("Average condition coverage",), 10: ("Revealing results",),
             11: ("Revealing rate",), 12: ("Tests generated",),
             13: ("Execution time (seconds)",), 14: ("Execution time records",),
             15: ("Coverage records",), 16: ("Lines total",), 17: ("Lines covered",),
-            18: ("Branches total",), 19: ("Branches covered",),
+            18: ("Conditions total",), 19: ("Conditions covered",),
             21: ("Verdict", "Round1", "Round2", "All rounds"),
             28: ("Blank coverage and execution time mean the metric was not recorded.",),
             29: ("Source: Randoop report.csv files and per-target result.json files.",),

@@ -162,8 +162,8 @@ python3 "Feedback-Directed Random Test Generation/Code/build_summary.py"
 
 Workbook มีสองชีต:
 
-- **Dashboard** เปรียบเทียบ Round1, Round2 และผลรวม พร้อมค่าเฉลี่ย overall/line/branch coverage, จำนวนและอัตรา REVEALING, จำนวนเทสต์, execution time, coverage records, ยอด line/branch และ verdict counts
-- **Data** เก็บคอลัมน์ report เดิมทั้ง 19 คอลัมน์ พร้อม `round`, `target` และ `execution_seconds` มีตัวกรองและตรึงแถวหัวตาราง
+- **Dashboard** เปรียบเทียบ Round1, Round2 และผลรวม พร้อมค่าเฉลี่ย overall/line/condition coverage, จำนวนและอัตรา REVEALING, จำนวนเทสต์, execution time, coverage records, ยอด lines/conditions และ verdict counts
+- **Data** เก็บค่าจาก report เดิมทั้ง 19 คอลัมน์ พร้อม `round`, `target` และ `execution_seconds` โดยแสดง `branch_cov`, `total_branches`, `covered_branches` เป็น `condition_coverage`, `conditions_total`, `conditions_covered` ให้ตรงกับชื่อ metric ของ Defects4J มีตัวกรองและตรึงแถวหัวตาราง
 
 เปอร์เซ็นต์ในรายงานซึ่งเก็บเป็นค่า 0–100 จะถูกแปลงเป็นค่าเปอร์เซ็นต์ของ Excel ค่าเฉลี่ยใช้เฉพาะแถวที่มี coverage ส่วนข้อมูลที่ไม่มีจะเว้นว่าง `execution_seconds` มาจาก `result.json` และหมายถึงเวลาประเมินผลทั้งหมด ไม่ใช่ generation budget หรือเวลาสร้างเทสต์; ถ้าไม่มีไฟล์ผลหรือ duration จะเว้นว่าง
 
