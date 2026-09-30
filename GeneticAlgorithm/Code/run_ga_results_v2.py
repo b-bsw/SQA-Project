@@ -13,6 +13,7 @@ import subprocess
 import sys
 import tarfile
 import tempfile
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 
@@ -21,7 +22,7 @@ DEFAULT_TESTS_ROOT = GA_ROOT / "TestCode"
 DEFAULT_RESULTS_ROOT = GA_ROOT / "Result_v2"
 TARGET_RE = re.compile(r"^([A-Za-z][A-Za-z0-9]*)_([1-9][0-9]*)$")
 CSV_FIELDS = (
-    "project", "bug_id", "target", "test_source", "coverage_status",
+    "project", "bug_id", "target", "coverage_status",
     "lines_total", "lines_covered", "line_coverage",
     "conditions_total", "conditions_covered", "condition_coverage",
     "failing_tests",
@@ -134,7 +135,7 @@ def measure_target(project: str, bug_id: int, tests_root: Path,
     log.write_text("", encoding="utf-8")
     result = {
         "project": project, "bug_id": bug_id, "target": target,
-        "test_source": str(tests_dir), "coverage_status": "NOT_AVAILABLE",
+        "coverage_status": "NOT_AVAILABLE",
         "lines_total": None, "lines_covered": None, "line_coverage": None,
         "conditions_total": None, "conditions_covered": None,
         "condition_coverage": None, "failing_tests": None,
@@ -179,6 +180,8 @@ def main(argv: list[str] | None = None) -> int:
                         help="Directory containing saved PROJECT_BUG Java test folders")
     parser.add_argument("--results-root", type=Path, default=DEFAULT_RESULTS_ROOT,
                         help="V2 output directory")
+    parser.add_argument("--jobs", type=int, default=1,
+                        help="Number of targets to measure in parallel (default: 1)")
     parser.add_argument("--defects4j", default=os.environ.get("DEFECTS4J_BIN") or
                         shutil.which("defects4j"), help="Path to Defects4J executable")
     parser.add_argument("--java-home", type=Path,
@@ -189,6 +192,8 @@ def main(argv: list[str] | None = None) -> int:
         parser.error(f"Tests directory does not exist: {args.tests_root}")
     if not args.defects4j:
         parser.error("Set DEFECTS4J_BIN or add defects4j to PATH")
+    if args.jobs < 1:
+        parser.error("--jobs must be a positive integer")
     if args.java_home:
         java_bin = args.java_home / "bin" / "java"
         javac_bin = args.java_home / "bin" / "javac"
@@ -204,12 +209,15 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("No saved test folders found")
     args.results_root.mkdir(parents=True, exist_ok=True)
     failures = 0
-    for project, bug_id in targets:
-        result = measure_target(project, bug_id, args.tests_root,
-                                args.results_root, args.defects4j)
-        print(f"{result['target']}: {result['coverage_status']} "
-              f"condition={result['condition_coverage']}")
-        failures += result["coverage_status"] == "NOT_AVAILABLE"
+    with ThreadPoolExecutor(max_workers=args.jobs) as executor:
+        futures = [executor.submit(measure_target, project, bug_id, args.tests_root,
+                                   args.results_root, args.defects4j)
+                   for project, bug_id in targets]
+        for future in as_completed(futures):
+            result = future.result()
+            print(f"{result['target']}: {result['coverage_status']} "
+                  f"condition={result['condition_coverage']}", flush=True)
+            failures += result["coverage_status"] == "NOT_AVAILABLE"
     print(f"Report: {collect_report(args.results_root)}")
     return 1 if failures else 0
 
