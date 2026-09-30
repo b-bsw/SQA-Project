@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+Collections,12,Collections_12,TESTS_FAILED,489,375,76.69,278,179,64.39,6

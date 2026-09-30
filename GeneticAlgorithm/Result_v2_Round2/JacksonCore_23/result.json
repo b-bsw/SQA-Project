@@ -1,0 +1,13 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 23,
+  "target": "JacksonCore_23",
+  "coverage_status": "OK",
+  "lines_total": 106,
+  "lines_covered": 105,
+  "line_coverage": 99.06,
+  "conditions_total": 40,
+  "conditions_covered": 40,
+  "condition_coverage": 100.0,
+  "failing_tests": 0
+}

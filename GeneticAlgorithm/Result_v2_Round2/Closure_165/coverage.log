@@ -1,0 +1,91 @@
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Closure -v 165b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy
+Checking out 61336bdc to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/g OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 61336bdc:2e904fcd..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Closure-165b.................................... OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/Closure-165b-evosuite-ga.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ FAIL
+Executed command:  cd /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy && ant -f /Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/bb/Desktop/class/sqa/defects4j -Dd4j.dir.projects=/Users/bb/Desktop/class/sqa/defects4j/framework/projects -Dbasedir=/var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy -Dd4j.test.dir=/var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/.test_suite compile.gen.tests 2>&1
+Buildfile: /Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile.gen.tests:
+     [echo] classes.dir: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/build/classes
+     [echo] build.home: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/build
+    [mkdir] Created dir: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/.classes_testgen
+    [javac] /Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 8 source files to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/.test_suite/com/google/javascript/rhino/jstype/ObjectType_ESTest.java:482: error: static interface method invocations are not supported in -source 6
+    [javac]       List<JSType> list0 = List.of((JSType) prototypeObjectType0);
+    [javac]                                ^
+    [javac]   (use -source 8 or higher to enable static interface method invocations)
+    [javac] Note: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_165-cmnjd9n6/buggy/.test_suite/com/google/javascript/rhino/jstype/ObjectType_ESTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /Users/bb/Desktop/class/sqa/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j line 195.
+[exit 1]
+ERROR: Defects4J coverage failed; see ../Result_v2_Round2/Closure_165/coverage.log

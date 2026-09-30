@@ -1,0 +1,13 @@
+{
+  "project": "Lang",
+  "bug_id": 47,
+  "target": "Lang_47",
+  "coverage_status": "OK",
+  "lines_total": 696,
+  "lines_covered": 691,
+  "line_coverage": 99.28,
+  "conditions_total": 492,
+  "conditions_covered": 488,
+  "condition_coverage": 99.19,
+  "failing_tests": 0
+}

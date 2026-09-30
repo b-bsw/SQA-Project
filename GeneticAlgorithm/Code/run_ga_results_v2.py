@@ -182,6 +182,8 @@ def main(argv: list[str] | None = None) -> int:
                         help="V2 output directory")
     parser.add_argument("--jobs", type=int, default=1,
                         help="Number of targets to measure in parallel (default: 1)")
+    parser.add_argument("--resume", action="store_true",
+                        help="Skip targets with an existing result.json")
     parser.add_argument("--defects4j", default=os.environ.get("DEFECTS4J_BIN") or
                         shutil.which("defects4j"), help="Path to Defects4J executable")
     parser.add_argument("--java-home", type=Path,
@@ -208,6 +210,13 @@ def main(argv: list[str] | None = None) -> int:
     if not targets:
         parser.error("No saved test folders found")
     args.results_root.mkdir(parents=True, exist_ok=True)
+    if args.resume:
+        original_count = len(targets)
+        targets = [(project, bug_id) for project, bug_id in targets
+                   if not (args.results_root / f"{project}_{bug_id}" /
+                           "result.json").is_file()]
+        print(f"Resuming: {original_count - len(targets)} completed, "
+              f"{len(targets)} remaining", flush=True)
     failures = 0
     with ThreadPoolExecutor(max_workers=args.jobs) as executor:
         futures = [executor.submit(measure_target, project, bug_id, args.tests_root,

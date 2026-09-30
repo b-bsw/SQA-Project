@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+Cli,30,Cli_30,TESTS_FAILED,288,0,0.0,218,0,0.0,2

@@ -1,0 +1,13 @@
+{
+  "project": "JacksonXml",
+  "bug_id": 1,
+  "target": "JacksonXml_1",
+  "coverage_status": "OK",
+  "lines_total": 294,
+  "lines_covered": 13,
+  "line_coverage": 4.42,
+  "conditions_total": 147,
+  "conditions_covered": 1,
+  "condition_coverage": 0.68,
+  "failing_tests": 0
+}

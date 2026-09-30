@@ -1,0 +1,13 @@
+{
+  "project": "Chart",
+  "bug_id": 5,
+  "target": "Chart_5",
+  "coverage_status": "OK",
+  "lines_total": 172,
+  "lines_covered": 168,
+  "line_coverage": 97.67,
+  "conditions_total": 80,
+  "conditions_covered": 80,
+  "condition_coverage": 100.0,
+  "failing_tests": 0
+}
