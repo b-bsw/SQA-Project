@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "generator": "Gemini-3.8-Flash",
+  "created_at": "2026-09-30T10:58:53.126658+00:00",
+  "project": "Jsoup",
+  "bug_id": 89,
+  "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Jsoup_89_buggy",
+  "coverage_scope": "modified classes of buggy revision",
+  "tests": 16,
+  "test_files": 1,
+  "buggy": {
+    "result": "NOT_RUN",
+    "fails": null,
+    "compile": "NOT_RUN"
+  },
+  "fixed": {
+    "result": "NOT_RUN",
+    "fails": null,
+    "compile": "NOT_RUN"
+  },
+  "test_run_seconds": null,
+  "verdict": "NOT_AVAILABLE"
+}
