@@ -3,3 +3,7 @@ __pycache__/
 logs/
 **/logs/
 *.log
+TestCode2/
+Result2/
+state/
+
