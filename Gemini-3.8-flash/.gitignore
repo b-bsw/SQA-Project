@@ -5,3 +5,5 @@ logs/
 *.log
 TestCode2/
 Result2/
+state/
+

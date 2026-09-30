@@ -391,9 +391,9 @@ def collect_reports(result_root=None, update_summary=True):
         write_csv_atomic(path.parent / "result.csv", [row])
         rows.append(row)
     write_csv_atomic(result_root / "report.csv", rows)
-    # Also write root report.csv if result_root is RESULT_ROOT
-    if result_root == RESULT_ROOT:
-        write_csv_atomic(RESULT_ROOT.parent / "report.csv", rows)
+    # Also write root report.csv only if result_root is the Round 1 Result directory
+    if result_root.resolve() == (ROOT / "Result").resolve():
+        write_csv_atomic(ROOT / "report.csv", rows)
     if update_summary:
         write_summary()
     return len(rows)
