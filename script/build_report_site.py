@@ -2,8 +2,10 @@
 """Refresh the embedded CSV snapshot in the root report website."""
 
 import csv
+import argparse
 import json
 import re
+import shutil
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -91,6 +93,9 @@ def build_snapshot():
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--site-dir", type=Path, help="Package the HTML and linked CSV files for hosting")
+    args = parser.parse_args()
     page = PAGE.read_text(encoding="utf-8")
     snapshot = build_snapshot()
     data = json.dumps(snapshot, ensure_ascii=False, separators=(",", ":"))
@@ -100,6 +105,16 @@ def main():
     if count != 1:
         raise SystemExit("Could not find report data markers in index.html")
     PAGE.write_text(updated, encoding="utf-8")
+    if args.site_dir:
+        site_dir = args.site_dir.resolve()
+        site_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(PAGE, site_dir / "index.html")
+        shutil.copy2(ROOT / "README.md", site_dir / "README.md")
+        for _, _, sources in SOURCES:
+            for _, source in sources:
+                destination = site_dir / source
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(ROOT / source, destination)
     print(f"Updated {PAGE.relative_to(ROOT)} from {sum(m['summary']['results'] for m in snapshot['methods']):,} result rows")
 
 
