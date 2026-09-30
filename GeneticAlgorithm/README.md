@@ -11,12 +11,12 @@ cp Configuration/.env.example Configuration/.env
 
 ```bash
 cd GenericAlgorithm/Code
-./run_evosuite_ga.sh Chart 1 1 120
+./run_evosuite_ga.sh Chart 1 1 60
 ./collect_ga_reports.sh 1
 ./merge_round_reports.sh
 
 # รันหลาย target พร้อมกันและรวม report อัตโนมัติ
-./run_evosuite_ga.sh Chart 1,2,3 1 120
+./run_evosuite_ga.sh Chart 1,2,3 1 60
 ```
 
 Arguments ของสคริปต์หลัก:
@@ -28,7 +28,7 @@ run_evosuite_ga.sh PROJECT BUG_ID[,BUG_ID...] RESULT_ROUND [BUDGET_SECONDS]
 ตัวอย่าง Round 2:
 
 ```bash
-./run_evosuite_ga.sh Chart 1 2 120
+./run_evosuite_ga.sh Chart 1 2 60
 ./collect_ga_reports.sh 2
 ```
 
