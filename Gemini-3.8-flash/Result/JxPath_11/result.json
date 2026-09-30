@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:53.309916+00:00",
+  "created_at": "2026-09-30T12:38:14.512765+00:00",
   "project": "JxPath",
   "bug_id": 11,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/JxPath_11_buggy",
@@ -9,15 +9,29 @@
   "tests": 27,
   "test_files": 2,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 16,
+    "compile": "PASS",
+    "test_seconds": 5.06,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 10.33,
+    "coverage_status": "PASS",
+    "lines": 110,
+    "covered_lines": 44,
+    "line_cov": 40.0,
+    "branches": 84,
+    "covered_branches": 29,
+    "branch_cov": 34.52
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 16,
+    "compile": "PASS",
+    "test_seconds": 4.85,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 9.91,
+  "verdict": "INCONCLUSIVE"
 }

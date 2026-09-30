@@ -1,2 +1,2 @@
 project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
-Gson,16,64,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,,,,,
+Gson,16,64,FAIL,2,FAIL,2,INCONCLUSIVE,248,238,95.97,194,172,88.66,5.5,3.83,9.33,measured_wall_clock,measured_wall_clock

@@ -23,6 +23,14 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 TEST_ROOT = ROOT / "TestCode"
 RESULT_ROOT = ROOT / "Result"
+
+# Defects4J requires Java 11 (or 8)
+JAVA11_DIR = Path("/home/manamo/.sdkman/candidates/java/11.0.32+1-ms")
+if JAVA11_DIR.is_dir():
+    os.environ["JAVA_HOME"] = str(JAVA11_DIR)
+    if str(JAVA11_DIR / "bin") not in os.environ.get("PATH", ""):
+        os.environ["PATH"] = f"{JAVA11_DIR}/bin:{os.environ.get('PATH', '')}"
+
 DEFAULT_D4J = (
     os.environ.get("DEFECTS4J_BIN")
     or shutil.which("defects4j")

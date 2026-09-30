@@ -1,2 +1,2 @@
 project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
-Compress,33,42,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,,,,,
+Compress,33,42,FAIL,1,FAIL,1,INCONCLUSIVE,96,74,77.08,64,43,67.19,4.59,4.09,8.68,measured_wall_clock,measured_wall_clock

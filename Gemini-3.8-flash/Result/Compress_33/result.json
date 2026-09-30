@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:49.438410+00:00",
+  "created_at": "2026-09-30T11:58:50.292557+00:00",
   "project": "Compress",
   "bug_id": 33,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Compress_33_buggy",
@@ -9,15 +9,29 @@
   "tests": 42,
   "test_files": 2,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_seconds": 4.59,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 7.95,
+    "coverage_status": "PASS",
+    "lines": 96,
+    "covered_lines": 74,
+    "line_cov": 77.08,
+    "branches": 64,
+    "covered_branches": 43,
+    "branch_cov": 67.19
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_seconds": 4.09,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 8.68,
+  "verdict": "INCONCLUSIVE"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:56.452216+00:00",
+  "created_at": "2026-09-30T13:38:53.147088+00:00",
   "project": "Time",
   "bug_id": 12,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Time_12_buggy",
@@ -11,13 +11,19 @@
   "buggy": {
     "result": "NOT_RUN",
     "fails": null,
-    "compile": "NOT_RUN"
+    "compile": "PASS",
+    "test_seconds": 1.52,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "FAIL"
   },
   "fixed": {
     "result": "NOT_RUN",
     "fails": null,
-    "compile": "NOT_RUN"
+    "compile": "PASS",
+    "test_seconds": 2.13,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "FAIL"
   },
-  "test_run_seconds": null,
+  "test_run_seconds": 3.65,
   "verdict": "NOT_AVAILABLE"
 }

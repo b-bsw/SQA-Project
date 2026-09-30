@@ -1,2 +1,2 @@
 project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
-JxPath,11,27,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,,,,,
+JxPath,11,27,FAIL,16,FAIL,16,INCONCLUSIVE,110,44,40.0,84,29,34.52,5.06,4.85,9.91,measured_wall_clock,measured_wall_clock

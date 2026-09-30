@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:54.319180+00:00",
+  "created_at": "2026-09-30T12:47:52.030870+00:00",
   "project": "Math",
   "bug_id": 1,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Math_1_buggy",
@@ -9,15 +9,29 @@
   "tests": 10,
   "test_files": 2,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 9.32,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 15.31,
+    "coverage_status": "PASS",
+    "lines": 425,
+    "covered_lines": 158,
+    "line_cov": 37.18,
+    "branches": 192,
+    "covered_branches": 60,
+    "branch_cov": 31.25
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 8.62,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 17.94,
+  "verdict": "NOT_REVEALING"
 }

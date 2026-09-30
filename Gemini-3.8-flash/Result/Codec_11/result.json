@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:48.551163+00:00",
+  "created_at": "2026-09-30T11:51:02.902802+00:00",
   "project": "Codec",
   "bug_id": 11,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Codec_11_buggy",
@@ -9,15 +9,29 @@
   "tests": 11,
   "test_files": 1,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 4.99,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 8.81,
+    "coverage_status": "PASS",
+    "lines": 81,
+    "covered_lines": 64,
+    "line_cov": 79.01,
+    "branches": 36,
+    "covered_branches": 25,
+    "branch_cov": 69.44
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_seconds": 3.94,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 8.93,
+  "verdict": "INCONCLUSIVE"
 }

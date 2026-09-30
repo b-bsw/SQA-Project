@@ -1,2 +1,2 @@
 project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
-Jsoup,2,30,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,,,,,
+Jsoup,2,30,FAIL,5,FAIL,5,INCONCLUSIVE,162,160,98.77,86,78,90.7,3.17,3.69,6.86,measured_wall_clock,measured_wall_clock

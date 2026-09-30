@@ -1,2 +1,2 @@
 project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
-JacksonDatabind,57,11,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,,,,,
+JacksonDatabind,57,11,PASS,0,PASS,0,NOT_REVEALING,408,1,0.25,156,0,0.0,6.77,8.82,15.59,measured_wall_clock,measured_wall_clock

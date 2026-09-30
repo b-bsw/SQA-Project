@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:53.986404+00:00",
+  "created_at": "2026-09-30T12:44:27.301725+00:00",
   "project": "Lang",
   "bug_id": 39,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Lang_39_buggy",
@@ -11,13 +11,19 @@
   "buggy": {
     "result": "NOT_RUN",
     "fails": null,
-    "compile": "NOT_RUN"
+    "compile": "PASS",
+    "test_seconds": 2.59,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "FAIL"
   },
   "fixed": {
     "result": "NOT_RUN",
     "fails": null,
-    "compile": "NOT_RUN"
+    "compile": "PASS",
+    "test_seconds": 1.48,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "FAIL"
   },
-  "test_run_seconds": null,
+  "test_run_seconds": 4.07,
   "verdict": "NOT_AVAILABLE"
 }

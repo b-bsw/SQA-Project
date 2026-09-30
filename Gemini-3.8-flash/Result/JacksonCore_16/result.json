@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:50.248872+00:00",
+  "created_at": "2026-09-30T12:04:56.376270+00:00",
   "project": "JacksonCore",
   "bug_id": 16,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/JacksonCore_16_buggy",
@@ -9,15 +9,29 @@
   "tests": 18,
   "test_files": 1,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 4.54,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 11.16,
+    "coverage_status": "PASS",
+    "lines": 33,
+    "covered_lines": 33,
+    "line_cov": 100.0,
+    "branches": 22,
+    "covered_branches": 22,
+    "branch_cov": 100.0
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 18,
+    "compile": "PASS",
+    "test_seconds": 4.0,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 8.54,
+  "verdict": "INCONCLUSIVE"
 }

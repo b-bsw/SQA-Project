@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:53.160527+00:00",
+  "created_at": "2026-09-30T12:37:00.106857+00:00",
   "project": "Jsoup",
   "bug_id": 90,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Jsoup_90_buggy",
@@ -9,15 +9,29 @@
   "tests": 74,
   "test_files": 1,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 33.37,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 38.33,
+    "coverage_status": "PASS",
+    "lines": 596,
+    "covered_lines": 328,
+    "line_cov": 55.03,
+    "branches": 234,
+    "covered_branches": 79,
+    "branch_cov": 33.76
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 32.75,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 66.12,
+  "verdict": "NOT_REVEALING"
 }

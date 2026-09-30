@@ -1,2 +1,2 @@
 project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
-Mockito,20,13,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,,,,,
+Mockito,20,13,PASS,0,FAIL,8,INCONCLUSIVE,40,36,90.0,10,8,80.0,50.2,28.88,79.08,measured_wall_clock,measured_wall_clock

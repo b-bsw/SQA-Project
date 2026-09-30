@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:50.076744+00:00",
+  "created_at": "2026-09-30T12:03:26.752374+00:00",
   "project": "Gson",
   "bug_id": 18,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Gson_18_buggy",
@@ -9,15 +9,29 @@
   "tests": 29,
   "test_files": 1,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_seconds": 6.51,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 9.11,
+    "coverage_status": "PASS",
+    "lines": 251,
+    "covered_lines": 216,
+    "line_cov": 86.06,
+    "branches": 196,
+    "covered_branches": 136,
+    "branch_cov": 69.39
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_seconds": 3.85,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 10.36,
+  "verdict": "INCONCLUSIVE"
 }

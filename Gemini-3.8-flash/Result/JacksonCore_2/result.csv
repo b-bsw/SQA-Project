@@ -1,2 +1,2 @@
 project,bug_id,tests,buggy_result,buggy_fails,fixed_result,fixed_fails,verdict,lines,covered_lines,line_cov,branches,covered_branches,branch_cov,buggy_test_seconds,fixed_test_seconds,test_run_seconds,buggy_test_time_source,fixed_test_time_source
-JacksonCore,2,8,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,,,,,
+JacksonCore,2,8,PASS,0,PASS,0,NOT_REVEALING,2463,531,21.56,1698,255,15.02,7.32,6.0,13.32,measured_wall_clock,measured_wall_clock

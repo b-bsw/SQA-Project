@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:47.836368+00:00",
+  "created_at": "2026-09-30T11:38:11.005667+00:00",
   "project": "Closure",
   "bug_id": 131,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Closure_131_buggy",
@@ -9,15 +9,29 @@
   "tests": 13,
   "test_files": 1,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 1,
+    "compile": "PASS",
+    "test_seconds": 11.08,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 26.16,
+    "coverage_status": "PASS",
+    "lines": 113,
+    "covered_lines": 112,
+    "line_cov": 99.12,
+    "branches": 165,
+    "covered_branches": 138,
+    "branch_cov": 83.64
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 10.66,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 21.74,
+  "verdict": "REVEALING"
 }

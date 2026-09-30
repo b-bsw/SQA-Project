@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:56.099679+00:00",
+  "created_at": "2026-09-30T13:28:32.214890+00:00",
   "project": "Mockito",
   "bug_id": 21,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/Mockito_21_buggy",
@@ -9,15 +9,29 @@
   "tests": 8,
   "test_files": 1,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 36.34,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 37.04,
+    "coverage_status": "PASS",
+    "lines": 16,
+    "covered_lines": 16,
+    "line_cov": 100.0,
+    "branches": 2,
+    "covered_branches": 2,
+    "branch_cov": 100.0
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "FAIL",
+    "fails": 2,
+    "compile": "PASS",
+    "test_seconds": 29.78,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 66.12,
+  "verdict": "INCONCLUSIVE"
 }

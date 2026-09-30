@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator": "Gemini-3.8-Flash",
-  "created_at": "2026-09-30T10:58:50.783112+00:00",
+  "created_at": "2026-09-30T12:12:01.477620+00:00",
   "project": "JacksonDatabind",
   "bug_id": 31,
   "source": "/home/manamo/wan/SQA-Project/Gemini-3.8-flash/TestCode/JacksonDatabind_31_buggy",
@@ -9,15 +9,29 @@
   "tests": 4,
   "test_files": 1,
   "buggy": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 5.2,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS",
+    "coverage_seconds": 9.83,
+    "coverage_status": "PASS",
+    "lines": 655,
+    "covered_lines": 201,
+    "line_cov": 30.69,
+    "branches": 342,
+    "covered_branches": 68,
+    "branch_cov": 19.88
   },
   "fixed": {
-    "result": "NOT_RUN",
-    "fails": null,
-    "compile": "NOT_RUN"
+    "result": "PASS",
+    "fails": 0,
+    "compile": "PASS",
+    "test_seconds": 5.71,
+    "test_time_source": "measured_wall_clock",
+    "test_compile": "PASS"
   },
-  "test_run_seconds": null,
-  "verdict": "NOT_AVAILABLE"
+  "test_run_seconds": 10.91,
+  "verdict": "NOT_REVEALING"
 }
