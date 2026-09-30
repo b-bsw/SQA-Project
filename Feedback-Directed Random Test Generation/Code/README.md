@@ -9,6 +9,7 @@ Code/
 ├── run_feedback_directed_tests.py     Main Python runner (รองรับ multi-worker, auto-resume, coverage, logs)
 ├── run_feedback_directed.sh           Bash wrapper script (ตรวจหา Defects4J & SDKMAN อัตโนมัติ)
 ├── collect_feedback_directed_reports.sh รวม per-bug result.csv เป็น report.csv
+├── build_summary.py                   สร้าง summary.xlsx จากรายงานทั้งสองรอบ
 └── README.md                          คู่มือการใช้งานและคำอธิบาย Format Report
 ```
 
@@ -148,6 +149,23 @@ Header และ Schema ของ `result.csv` และ `report.csv` (ไม่
 > **หมายเหตุเกี่ยวกับเวลา (Execution Time vs Budget):**
 > - **`budget` (ใน CSV และ JSON)**: คือ Time Limit ที่ตั้งค่าไว้ให้ Randoop ตอนสร้างชุดทดสอบ (Generation Budget)
 > - **`duration_seconds` (ใน `result.json`)**: คือ เวลาจริง (Execution Time) ที่ใช้ในการรันทั้งกระบวนการบน Defects4J (Checkout, Compile, Test, และ Coverage) รวมถึงแยกย่อยเวลาของฝั่ง `buggy` และ `fixed` ในฟิลด์ `validations[].duration_seconds`
+
+---
+
+## สร้าง Summary Workbook
+
+สร้างหรืออัปเดต `summary.xlsx` จาก `report.csv` และ `report_Round2.csv` โดยไม่รัน Defects4J:
+
+```bash
+python3 "Feedback-Directed Random Test Generation/Code/build_summary.py"
+```
+
+Workbook มีสองชีต:
+
+- **Dashboard** เปรียบเทียบ Round1, Round2 และผลรวม พร้อมค่าเฉลี่ย overall/line/branch coverage, จำนวนและอัตรา REVEALING, จำนวนเทสต์, execution time, coverage records, ยอด line/branch และ verdict counts
+- **Data** เก็บคอลัมน์ report เดิมทั้ง 19 คอลัมน์ พร้อม `round`, `target` และ `execution_seconds` มีตัวกรองและตรึงแถวหัวตาราง
+
+เปอร์เซ็นต์ในรายงานซึ่งเก็บเป็นค่า 0–100 จะถูกแปลงเป็นค่าเปอร์เซ็นต์ของ Excel ค่าเฉลี่ยใช้เฉพาะแถวที่มี coverage ส่วนข้อมูลที่ไม่มีจะเว้นว่าง `execution_seconds` มาจาก `result.json` และหมายถึงเวลาประเมินผลทั้งหมด ไม่ใช่ generation budget หรือเวลาสร้างเทสต์; ถ้าไม่มีไฟล์ผลหรือ duration จะเว้นว่าง
 
 ---
 
