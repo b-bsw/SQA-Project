@@ -1,0 +1,13 @@
+{
+  "project": "Math",
+  "bug_id": 3,
+  "target": "Math_3",
+  "coverage_status": "OK",
+  "lines_total": 421,
+  "lines_covered": 412,
+  "line_coverage": 97.86,
+  "conditions_total": 234,
+  "conditions_covered": 233,
+  "condition_coverage": 99.57,
+  "failing_tests": 0
+}

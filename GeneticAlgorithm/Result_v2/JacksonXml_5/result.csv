@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+JacksonXml,5,JacksonXml_5,OK,96,67,69.79,48,28,58.33,0

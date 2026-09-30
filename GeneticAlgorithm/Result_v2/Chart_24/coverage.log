@@ -1,4 +1,4 @@
-$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Chart -v 24b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-1pkg6x55/buggy
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Chart -v 24b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-kc0lpbs6/buggy
 Checking out 190 to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-cov OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
@@ -14,11 +14,11 @@ Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Chart-24b....................................... OK
 [exit 0]
-$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-1pkg6x55/buggy
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-kc0lpbs6/buggy
 Running ant (compile)...................................................... OK
 Running ant (compile.tests)................................................ OK
 [exit 0]
-$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-1pkg6x55/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-1pkg6x55/Chart-24b-evosuite-ga.1.tar.bz2
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-kc0lpbs6/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Chart_24-kc0lpbs6/Chart-24b-evosuite-ga.1.tar.bz2
 Extract test suite......................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK

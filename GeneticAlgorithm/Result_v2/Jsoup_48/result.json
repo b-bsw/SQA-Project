@@ -1,0 +1,13 @@
+{
+  "project": "Jsoup",
+  "bug_id": 48,
+  "target": "Jsoup_48",
+  "coverage_status": "OK",
+  "lines_total": 469,
+  "lines_covered": 274,
+  "line_coverage": 58.42,
+  "conditions_total": 170,
+  "conditions_covered": 61,
+  "condition_coverage": 35.88,
+  "failing_tests": 0
+}

@@ -1,0 +1,33 @@
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Jsoup -v 33b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Jsoup_33-y9ovlx42/buggy
+Checking out 2518e92a to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/g OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga- OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 2518e92a:834d3142..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Jsoup-33b....................................... OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Jsoup_33-y9ovlx42/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Jsoup_33-y9ovlx42/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Jsoup_33-y9ovlx42/Jsoup-33b-evosuite-ga.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+       Lines total: 393
+     Lines covered: 344
+  Conditions total: 202
+Conditions covered: 155
+     Line coverage: 87.5%
+Condition coverage: 76.7%
+[exit 0]

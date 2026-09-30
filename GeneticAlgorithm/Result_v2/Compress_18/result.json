@@ -1,0 +1,13 @@
+{
+  "project": "Compress",
+  "bug_id": 18,
+  "target": "Compress_18",
+  "coverage_status": "OK",
+  "lines_total": 202,
+  "lines_covered": 156,
+  "line_coverage": 77.23,
+  "conditions_total": 84,
+  "conditions_covered": 59,
+  "condition_coverage": 70.24,
+  "failing_tests": 0
+}

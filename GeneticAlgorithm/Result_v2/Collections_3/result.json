@@ -1,0 +1,13 @@
+{
+  "project": "Collections",
+  "bug_id": 3,
+  "target": "Collections_3",
+  "coverage_status": "OK",
+  "lines_total": 329,
+  "lines_covered": 316,
+  "line_coverage": 96.05,
+  "conditions_total": 244,
+  "conditions_covered": 228,
+  "condition_coverage": 93.44,
+  "failing_tests": 0
+}

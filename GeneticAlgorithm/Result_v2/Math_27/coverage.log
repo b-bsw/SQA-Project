@@ -1,0 +1,9 @@
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Math -v 27b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Math_27-c4nrpx6b/buggy
+Checking out 63a48705 to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/g OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... [exit -2]
+ERROR: Defects4J checkout failed; see /Users/bb/Desktop/class/SQA/SQA-Project/GeneticAlgorithm/Result_v2/Math_27/coverage.log

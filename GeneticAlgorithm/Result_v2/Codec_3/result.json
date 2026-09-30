@@ -1,0 +1,13 @@
+{
+  "project": "Codec",
+  "bug_id": 3,
+  "target": "Codec_3",
+  "coverage_status": "OK",
+  "lines_total": 453,
+  "lines_covered": 399,
+  "line_coverage": 88.08,
+  "conditions_total": 450,
+  "conditions_covered": 348,
+  "condition_coverage": 77.33,
+  "failing_tests": 0
+}

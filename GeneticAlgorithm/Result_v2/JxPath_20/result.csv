@@ -1,0 +1,2 @@
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
+JxPath,20,JxPath_20,OK,43,41,95.35,36,34,94.44,0

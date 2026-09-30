@@ -1,0 +1,58 @@
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j checkout -p Closure -v 80b -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy
+Checking out 58786c3f to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/g OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 58786c3f:a2153e74..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Closure-80b..................................... OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j compile -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]
+$ /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j coverage -w /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy -s /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/Closure-80b-evosuite-ga.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ FAIL
+Executed command:  cd /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy && ant -f /Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/bb/Desktop/class/sqa/defects4j -Dd4j.dir.projects=/Users/bb/Desktop/class/sqa/defects4j/framework/projects -Dbasedir=/var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy -Dd4j.test.dir=/var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/.test_suite compile.gen.tests 2>&1
+Buildfile: /Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/build.xml:182: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/build.xml:188: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile.gen.tests:
+     [echo] classes.dir: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/build/classes
+     [echo] build.home: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/build
+    [mkdir] Created dir: /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/.classes_testgen
+    [javac] /Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /var/folders/_c/bhfq_dq542v3xgprq8g8_qxc0000gn/T/ga-coverage-v2-Closure_80-99f5kaqr/buggy/.test_suite/com/google/javascript/jscomp/NodeUtil_ESTest.java:393: error: static interface method invocations are not supported in -source 6
+    [javac]       List<Node> list0 = List.of(node0, node0, node0, node0, node0, node0, node0, node0);
+    [javac]                              ^
+    [javac]   (use -source 8 or higher to enable static interface method invocations)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/bb/Desktop/class/sqa/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile extracted test suite! at /Users/bb/Desktop/class/sqa/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /Users/bb/Desktop/class/sqa/defects4j/framework/bin/defects4j line 195.
+[exit 1]
+ERROR: Defects4J coverage failed; see /Users/bb/Desktop/class/SQA/SQA-Project/GeneticAlgorithm/Result_v2/Closure_80/coverage.log
