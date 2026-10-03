@@ -51,6 +51,8 @@ def summarize(rows):
         "verdicts": {key: verdicts[key] for key in VERDICTS},
         "lineCoverage": sum(line) / len(line) if line else None,
         "branchCoverage": sum(branch) / len(branch) if branch else None,
+        "lineCoverageAllResults": sum(line) / len(rows) if rows else None,
+        "branchCoverageAllResults": sum(branch) / len(rows) if rows else None,
         "coverageRecords": len(line),
         "branchCoverageRecords": len(branch),
         "tests": int(sum(tests)),

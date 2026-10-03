@@ -221,7 +221,7 @@ def dashboard_metrics(records: list[dict]) -> tuple[dict[str, object], dict[str,
     return cached, formulas
 
 
-def render_workbook(destination: Path, records: list[dict]) -> None:
+def render_workbook(destination: Path, records: list[dict], paired=True) -> None:
     if not TEMPLATE.is_file():
         raise FileNotFoundError(f"Workbook template is missing: {TEMPLATE}")
     end = max(len(records) + 1, 2)
@@ -360,6 +360,10 @@ def render_workbook(destination: Path, records: list[dict]) -> None:
     except PermissionError as exc:
         staged.unlink(missing_ok=True)
         raise PermissionError(f"Cannot replace {destination}; close it in Excel and retry.") from exc
+    if paired:
+        sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "script"))
+        from coverage_summaries import augment
+        augment(destination)
 
 
 def main(argv=None) -> int:

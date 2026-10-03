@@ -630,7 +630,7 @@ def generation_metrics(target: str, records: dict):
             round(generation_seconds, 2) if found_time else None)
 
 
-def write_summary():
+def write_summary(paired=True):
     """Collect both generation rounds and test reports into the outer summary."""
     root = RESULT_ROOT.parent
     state_root = root
@@ -662,6 +662,11 @@ def write_summary():
             })
 
     write_summary_workbook(root / "summary.xlsx", detailed)
+    if paired:
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "script"))
+        from coverage_summaries import augment
+        augment(root / "summary.xlsx")
 
 
 

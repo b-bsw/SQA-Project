@@ -7,3 +7,4 @@ BuildClasses
 .DS_Store
 AGENTS.md
 SQA_Project_Instruction.pdf
+/.coverage-build/

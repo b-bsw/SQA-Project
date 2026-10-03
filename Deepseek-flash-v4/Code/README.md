@@ -62,11 +62,13 @@ so they can have more precision than the one-decimal console log.
 Missing coverage is recovered from successful `buggy_coverage.log` output
 during collection, preserving existing recorded values. New runs also use
 the log when Defects4J's temporary `summary.csv` is unavailable.
-The runner uses the bundled `Code/summary_template.xlsx` and Python's standard
-library, so updating the workbook needs no extra package. Workbook creation is
-included directly in `run_deepseek_tests.py`. `summary.xlsx` is the summary output;
-`--summary-only` refreshes both sheets without running tests or rewriting
-`Result/report.csv`.
+The runner uses `Code/summary_template.xlsx` for the existing Dashboard and Data
+sheets. The paired coverage views use Node and `@oai/artifact-tool` from Codex's
+bundled runtime. `summary.xlsx` also contains Coverage, with recorded-only and
+all-results averages for every project and round. `--summary-only` refreshes the
+workbook without running tests or rewriting `Result/report.csv`.
+See [coverage summary rebuild instructions](../../script/coverage_summaries.md)
+for runtime configuration on other hosts and rebuilding all four groups.
 
 ## Recover historical test times
 
