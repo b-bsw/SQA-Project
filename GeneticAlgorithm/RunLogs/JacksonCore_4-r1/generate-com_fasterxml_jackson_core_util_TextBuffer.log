@@ -1,0 +1,38 @@
+* EvoSuite 1.2.0
+* Going to generate test cases for class: com.fasterxml.jackson.core.util.TextBuffer
+* Starting Client-0
+* Connecting to master process on port 13047
+* Analyzing classpath: 
+  - /tmp/evosuite-ga-JacksonCore_4-r1.jzEi2t/buggy-checkout/target/classes
+  - /tmp/evosuite-ga-JacksonCore_4-r1.jzEi2t/buggy-checkout/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.util.TextBuffer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+* Setting up search algorithm for whole suite generation
+* Total number of test goals: 
+  - Line 261
+  - Branch 141
+* Using seed 20260918
+* Starting evolution
+* Search finished after 121s and 410 generations, 166461 statements, best individual has fitness: 3.1666666666666665
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 99%
+* Total number of goals: 261
+* Number of covered goals: 259
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 98%
+* Total number of goals: 141
+* Number of covered goals: 138
+* Generated 56 tests with total length 244
+* Resulting test suite's coverage: 99% (average coverage for all fitness functions)
+* Generating assertions
+* Compiling and checking tests
+* Writing tests to file
+* Writing JUnit test case 'TextBuffer_ESTest' to /tmp/evosuite-ga-JacksonCore_4-r1.jzEi2t/generated-com_fasterxml_jackson_core_util_TextBuffer
+* Done!
+
+* Computation finished

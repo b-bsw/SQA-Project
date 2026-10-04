@@ -28,6 +28,25 @@ const {chromium} = require(path.join(modules,'playwright'));
         assert.deepEqual(state.actual,state.expected,`${method}/${round}`);
         assert.ok(state.rows.every(count=>count===(state.count?10:1)));
         assert.ok(state.projects.every(count=>count===10));
+        const averages=await page.evaluate(()=>({
+          actual:[...el('method-table').rows].filter(row=>row.cells.length===10).map(row=>[...row.cells].slice(4,8).map(cell=>cell.textContent)),
+          expected:selectedEntries().map(({summary:s})=>[
+            [s.lineCoverage,s.coverageRecords],[s.lineCoverageAllResults,s.results-s.metrics.line.notApplicable],
+            [s.branchCoverage,s.branchCoverageRecords],[s.branchCoverageAllResults,s.results-s.metrics.condition.notApplicable]
+          ].map(([value,n])=>value==null?'—':`${percent(value)} (n=${integer(n)})`))
+        }));
+        assert.deepEqual(averages.actual,averages.expected,'Average denominators differ');
+        const classification=await page.evaluate(()=>[...el('coverage-classification').rows].map(row=>[...row.cells].map(cell=>cell.textContent)));
+        assert.equal(classification.length,state.count*2);
+        for(const row of classification){
+          assert.equal(row.length,11);
+          const counts=row.slice(2,7).map(value=>Number(value.replaceAll(',','')));
+          assert.equal(counts[0],counts.slice(1).reduce((a,b)=>a+b,0),'Classification counts do not reconcile');
+          assert.equal(Number(row[10].replaceAll(',','')),counts[0]-counts[3],'Applicable denominator differs');
+        }
+        const shared=await page.evaluate(()=>[...el('intersection-table').rows].map(row=>[...row.cells].map(cell=>cell.textContent)));
+        assert.equal(shared.length,2);
+        if(round==='Round 2')for(const row of shared){assert.equal(row[1],'0');assert.ok(row.slice(2).every(value=>value==='—'));}
         selections++;
       }
     }

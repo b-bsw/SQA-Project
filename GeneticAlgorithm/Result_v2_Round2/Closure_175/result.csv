@@ -1,2 +1,2 @@
-project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
-Closure,175,Closure_175,TESTS_FAILED,303,0,0.0,218,0,0.0,1
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests,generation_status,failure_reason,round,paired_validation,buggy_result,fixed_result,verdict,suite_hash,test_run_seconds
+Closure,175,Closure_175,TESTS_FAILED,303,0,0.0,218,0,0.0,1,PASS,,2,True,PASS,PASS,NOT_REVEALING,dd9dcbbefb195014f0cdd6894064eddb7ee3d87c779b3a635cb6d41c1e7fdef8,27.27

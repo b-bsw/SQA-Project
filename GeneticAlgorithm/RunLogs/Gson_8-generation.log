@@ -1,0 +1,52 @@
+[Gson_8 round 1] defects4j checkout 8b
+[Gson_8 round 1] defects4j compile
+Running ant (export.dir.bin.classes)....................................... OK
+
+Running ant (export.cp.compile)............................................ OK
+
+Running ant (export.classes.modified)...................................... OK
+
+[Gson_8 round 1] EvoSuite STANDARD_GA: com.google.gson.internal.UnsafeAllocator
+GeneticAlgorithm/Code/run_evosuite_ga.sh: line 263:  1189 Aborted                    (core dumped) ( cd "$temp_root" && java ${EVOSUITE_JAVA_OPTS:--Xmx2g} -cp "$evosuite_jar:$project_classpath" org.evosuite.EvoSuite -mem "$client_memory_mb" -class "$target_class" -projectCP "$project_classpath" -seed "$seed" -criterion LINE:BRANCH -generateSuite -Dalgorithm=STANDARD_GA -Dlocal_search_rate=0 -Dclient_on_thread=true -Dstopping_condition=MaxTime -Dsearch_budget="$budget" -Dshow_progress=false -Doutput_variables=TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals,LineCoverage,Lines,Covered_Lines,BranchCoverage,Total_Branches,Covered_Branches,Total_Methods,Covered_Methods,Branchless_Methods,Covered_Branchless_Methods -Dtest_dir="$generated" -Dreport_dir="$statistics_dir" ) > "$generation_log" 2>&1
+EvoSuite generated no tests for com.google.gson.internal.UnsafeAllocator (exit 134):
+WARNING: All illegal access operations will be denied in a future release
+* Connecting to master process on port 13047
+* Analyzing classpath: 
+  - /tmp/evosuite-ga-Gson_8-r1.Nln00g/buggy-checkout/target/classes
+  - /tmp/evosuite-ga-Gson_8-r1.Nln00g/buggy-checkout/target/classes
+[MASTER] 00:19:58.902 [pool-3-thread-1] WARN  InheritanceTree - Class not in inheritance graph: java.io.ObjectInputFilter
+[MASTER] 00:19:59.093 [pool-3-thread-1] WARN  InheritanceTree - Class not in inheritance graph: java.util.Locale$IsoCountryCode
+* Finished analyzing classpath
+* Generating tests for class com.google.gson.internal.UnsafeAllocator
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+* Setting up search algorithm for whole suite generation
+* Total number of test goals: 
+  - Line 27
+  - Branch 10
+* Using seed 20260918
+* Starting evolution
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000073da23f832d4, pid=1189, tid=1484
+#
+# JRE version: OpenJDK Runtime Environment (11.0.32+9) (build 11.0.32+9-post-1ubuntu1-26.04-Ubuntu)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.32+9-post-1ubuntu1-26.04-Ubuntu, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# V  [libjvm.so+0x5832d4]  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<1097844ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 1097844ul>::oop_access_barrier(void*)+0x4
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/wsl-capture-crash %t %E %p %s" (or dumping to /tmp/evosuite-ga-Gson_8-r1.Nln00g/core.1189)
+#
+# An error report file with more information is saved as:
+# /tmp/evosuite-ga-Gson_8-r1.Nln00g/hs_err_pid1189.log
+Compiled method (nm)   14255 2034     n 0       jdk.internal.misc.Unsafe::allocateInstance (native)
+ total in heap  [0x000073da0c1c9a10,0x000073da0c1c9e40] = 1072
+ relocation     [0x000073da0c1c9b88,0x000073da0c1c9bc0] = 56
+ main code      [0x000073da0c1c9bc0,0x000073da0c1c9e40] = 640
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+EvoSuite generated no usable tests.

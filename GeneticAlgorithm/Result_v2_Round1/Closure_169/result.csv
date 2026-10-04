@@ -1,2 +1,2 @@
-project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests
-Closure,169,Closure_169,NOT_AVAILABLE,,,,,,,
+project,bug_id,target,coverage_status,lines_total,lines_covered,line_coverage,conditions_total,conditions_covered,condition_coverage,failing_tests,generation_status,failure_reason,round,paired_validation,buggy_result,fixed_result,verdict,suite_hash,test_run_seconds
+Closure,169,Closure_169,NOT_AVAILABLE,,,,,,,,PASS,Generated tests did not compile/run,1,True,NOT_RUN,NOT_RUN,NOT_AVAILABLE,5637dde87cce69e0a427272d5e4ad655a3def49bc9c260b6c15f724f4092f97d,12.36

@@ -1,0 +1,19 @@
+{
+  "target_class": "com.fasterxml.jackson.core.util.TextBuffer",
+  "generation_result": "PASS",
+  "generation_seconds": 150,
+  "tests": 56,
+  "coverage": 98.55,
+  "line_cov": 99.23,
+  "branch_cov": 97.87,
+  "total_goals": 402,
+  "covered_goals": 396,
+  "lines": 32,
+  "covered_lines": 259,
+  "total_branches": 134,
+  "covered_branches": 131,
+  "total_methods": 32,
+  "covered_methods": 32,
+  "branchless_methods": 7,
+  "covered_branchless_methods": 7
+}

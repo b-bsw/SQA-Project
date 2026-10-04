@@ -5018,28 +5018,25 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_169": {
-    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_169_buggy",
-    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Closure_169",
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_169_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_169",
     "classes_tested": [
-      "com.google.javascript.rhino.jstype.RecordType",
+      "com.google.javascript.rhino.jstype.ArrowType",
+      "com.google.javascript.rhino.jstype.FunctionType",
       "com.google.javascript.rhino.jstype.JSType",
-      "com.google.javascript.rhino.jstype.UnionType",
-      "com.google.javascript.rhino.jstype.ArrowType"
+      "com.google.javascript.rhino.jstype.RecordType",
+      "com.google.javascript.rhino.jstype.UnionType"
     ],
     "generated_tests": [
       "com/google/javascript/rhino/jstype/RegressionTest0.java",
-      "com/google/javascript/rhino/jstype/RegressionTest1.java",
-      "com/google/javascript/rhino/jstype/RegressionTest2.java",
-      "com/google/javascript/rhino/jstype/RegressionTest3.java",
-      "com/google/javascript/rhino/jstype/RegressionTest4.java",
       "com/google/javascript/rhino/jstype/RegressionTest.java"
     ],
-    "time_limit": 60,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-21T16:01:26.513694",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-10-03T22:39:53.733739+00:00"
   },
   "Closure_166": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_166_buggy",
@@ -5468,7 +5465,7 @@
   },
   "Mockito_14": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.creation.MockSettingsImpl mockSettingsImpl0 = null;\norg.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement> annotatedElementMockHandler1 = new org.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement>(mockSettingsImpl0);\norg.mockito.internal.stubbing.InvocationContainer invocationContainer2 = annotatedElementMockHandler1.getInvocationContainer();\norg.mockito.internal.invocation.MatchersBinder matchersBinder3 = annotatedElementMockHandler1.matchersBinder;\norg.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement> annotatedElementMockHandler4 = new org.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement>((org.mockito.internal.MockHandlerInterface<java.lang.reflect.AnnotatedElement>)annotatedElementMockHandler1);\norg.mockito.internal.invocation.MatchersBinder matchersBinder5 = annotatedElementMockHandler1.matchersBinder;\norg.mockito.stubbing.Answer[] answerArray6 = new org.mockito.stubbing.Answer[] {  };\njava.util.ArrayList<org.mockito.stubbing.Answer> answerList7 = new java.util.ArrayList<org.mockito.stubbing.Answer>();\nboolean boolean8 = java.util.Collections.addAll((java.util.Collection<org.mockito.stubbing.Answer>) answerList7, answerArray6);\nannotatedElementMockHandler1.setAnswersForStubbing((java.util.List<org.mockito.stubbing.Answer>) answerList7);",
+    "error": "Randoop \u0e2d\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e23\u0e30\u0e1a\u0e1a\u0e14\u0e49\u0e27\u0e22\u0e23\u0e2b\u0e31\u0e2a 1\nstdout (\u0e17\u0e49\u0e32\u0e22 20 \u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14):\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.creation.MockSettingsImpl mockSettingsImpl0 = null;\norg.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement> annotatedElementMockHandler1 = new org.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement>(mockSettingsImpl0);\norg.mockito.internal.stubbing.InvocationContainer invocationContainer2 = annotatedElementMockHandler1.getInvocationContainer();\norg.mockito.internal.invocation.MatchersBinder matchersBinder3 = annotatedElementMockHandler1.matchersBinder;\norg.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement> annotatedElementMockHandler4 = new org.mockito.internal.MockHandler<java.lang.reflect.AnnotatedElement>((org.mockito.internal.MockHandlerInterface<java.lang.reflect.AnnotatedElement>)annotatedElementMockHandler1);\norg.mockito.internal.invocation.MatchersBinder matchersBinder5 = annotatedElementMockHandler1.matchersBinder;\norg.mockito.stubbing.Answer[] answerArray6 = new org.mockito.stubbing.Answer[] {  };\njava.util.ArrayList<org.mockito.stubbing.Answer> answerList7 = new java.util.ArrayList<org.mockito.stubbing.Answer>();\nboolean boolean8 = java.util.Collections.addAll((java.util.Collection<org.mockito.stubbing.Answer>) answerList7, answerArray6);\nannotatedElementMockHandler1.setAnswersForStubbing((java.util.List<org.mockito.stubbing.Answer>) answerList7);",
     "classes": [
       "org.mockito.internal.MockHandler",
       "org.mockito.internal.MockitoCore"
@@ -5588,7 +5585,7 @@
   },
   "Mockito_16": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 20 บรรทัด):\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nThrowable thrown while handling command: randoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\nrandoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.MockitoCore mockitoCore0 = new org.mockito.internal.MockitoCore();\norg.mockito.internal.MockitoCore mockitoCore1 = org.mockito.Matchers.eq(mockitoCore0);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer2 = org.mockito.Mockito.RETURNS_DEFAULTS;\norg.mockito.internal.verification.api.VerificationMode verificationMode4 = org.mockito.Mockito.atMost((int) (short)100);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer5 = mockitoCore0.verify(objAnswer2, verificationMode4);",
+    "error": "Randoop \u0e2d\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e23\u0e30\u0e1a\u0e1a\u0e14\u0e49\u0e27\u0e22\u0e23\u0e2b\u0e31\u0e2a 1\nstdout (\u0e17\u0e49\u0e32\u0e22 20 \u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14):\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nThrowable thrown while handling command: randoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\nrandoop.output.FailingAssertionCommentWriter$NotMatchedException: NotMatchedException(\\s+at\\s+\\Qorg.mockito.RegressionTest0\\E\\.\\Qtest050\\E\\(\\QRegressionTest0\\E\\.java:(\\d+)\\))\n\tat randoop.output.FailingAssertionCommentWriter.readUntilMatch(FailingAssertionCommentWriter.java:551)\n\tat randoop.output.FailingAssertionCommentWriter.commentFailingAssertions(FailingAssertionCommentWriter.java:354)\n\tat randoop.output.FailingAssertionCommentWriter.writeClassCode(FailingAssertionCommentWriter.java:176)\n\tat randoop.main.GenTests.writeTestFiles(GenTests.java:1003)\n\tat randoop.main.GenTests.handle(GenTests.java:635)\n\tat randoop.main.Main.nonStaticMain(Main.java:69)\n\tat randoop.main.Main.main(Main.java:31)\n\nRandoop failed.\nLast sequence under execution: \norg.mockito.internal.MockitoCore mockitoCore0 = new org.mockito.internal.MockitoCore();\norg.mockito.internal.MockitoCore mockitoCore1 = org.mockito.Matchers.eq(mockitoCore0);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer2 = org.mockito.Mockito.RETURNS_DEFAULTS;\norg.mockito.internal.verification.api.VerificationMode verificationMode4 = org.mockito.Mockito.atMost((int) (short)100);\norg.mockito.stubbing.Answer<java.lang.Object> objAnswer5 = mockitoCore0.verify(objAnswer2, verificationMode4);",
     "classes": [
       "org.mockito.Mockito",
       "org.mockito.internal.MockitoCore"
@@ -6413,7 +6410,7 @@
   },
   "Codec_14": {
     "status": "FAILED",
-    "error": "Randoop ออกจากระบบด้วยรหัส 1\nstdout (ท้าย 12 บรรทัด):\nRandoop for Java version 4.3.4.\n\nCould not load class org.apache.commons.codec.language.bm.Lang: Unable to load class \"org.apache.commons.codec.language.bm.Lang\" due to exception: java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/bm/ash_languages.txt\nClasspath:\n/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/sqa_randoop/Codec_14-8nv3_qaa/jars/randoop-all-4.3.4.jar\n/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Codec_14\n/tmp/sqa_d4j_work/Codec_14_buggy/target/classes\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/junit/junit/4.12/junit-4.12.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar\n/tmp/sqa_d4j_work/Codec_14_buggy/src/main/resources/commons-lang3-3.8.1.jar",
+    "error": "Randoop \u0e2d\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e23\u0e30\u0e1a\u0e1a\u0e14\u0e49\u0e27\u0e22\u0e23\u0e2b\u0e31\u0e2a 1\nstdout (\u0e17\u0e49\u0e32\u0e22 12 \u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14):\nRandoop for Java version 4.3.4.\n\nCould not load class org.apache.commons.codec.language.bm.Lang: Unable to load class \"org.apache.commons.codec.language.bm.Lang\" due to exception: java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/bm/ash_languages.txt\nClasspath:\n/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/sqa_randoop/Codec_14-8nv3_qaa/jars/randoop-all-4.3.4.jar\n/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Codec_14\n/tmp/sqa_d4j_work/Codec_14_buggy/target/classes\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/junit/junit/4.12/junit-4.12.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar\n/home/face/defect4j/defects4j/framework/projects/Codec/lib/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar\n/tmp/sqa_d4j_work/Codec_14_buggy/src/main/resources/commons-lang3-3.8.1.jar",
     "classes": [
       "org.apache.commons.codec.language.bm.Lang",
       "org.apache.commons.codec.language.bm.PhoneticEngine",
@@ -17708,5 +17705,39 @@
     "time_limit": 60,
     "status": "COMPLETED",
     "timestamp": "2026-09-28T14:31:04.890278+00:00"
+  },
+  "Closure_175": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_175_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_175",
+    "classes_tested": [
+      "com.google.javascript.jscomp.FunctionInjector"
+    ],
+    "generated_tests": [
+      "com/google/javascript/jscomp/RegressionTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-10-03T22:27:32.645875+00:00"
+  },
+  "Closure_176": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_176_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_176",
+    "classes_tested": [
+      "com.google.javascript.jscomp.TypeInference"
+    ],
+    "generated_tests": [
+      "com/google/javascript/jscomp/RegressionTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-10-03T22:30:16.870496+00:00"
   }
 }

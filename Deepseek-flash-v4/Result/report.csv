@@ -141,13 +141,15 @@ Closure,165,129,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,5.0,5.0,10.0,log_ant_total
 Closure,166,50,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,4.0,5.0,9.0,log_ant_total,log_ant_total
 Closure,167,76,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,7.0,6.0,13.0,log_ant_total,log_ant_total
 Closure,168,23,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,5.0,6.0,11.0,log_ant_total,log_ant_total
-Closure,169,140,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,6.0,4.0,10.0,log_ant_total,log_ant_total
+Closure,169,218,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,2.89,4.04,6.93,measured_wall_clock,measured_wall_clock
 Closure,17,21,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,3.0,4.0,7.0,log_ant_total,log_ant_total
 Closure,170,15,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,5.0,4.0,9.0,log_ant_total,log_ant_total
 Closure,171,30,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,5.0,5.0,10.0,log_ant_total,log_ant_total
 Closure,172,39,FAIL,39,FAIL,39,INCONCLUSIVE,947,0,0.0,762,0,0.0,,,,,
 Closure,173,95,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,5.0,6.0,11.0,log_ant_total,log_ant_total
 Closure,174,126,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,5.0,4.0,9.0,log_ant_total,log_ant_total
+Closure,175,29,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,2.73,3.19,5.92,measured_wall_clock,measured_wall_clock
+Closure,176,50,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,3.24,3.05,6.29,measured_wall_clock,measured_wall_clock
 Closure,18,42,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,2.0,3.0,5.0,log_ant_total,log_ant_total
 Closure,19,26,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,3.0,4.0,7.0,log_ant_total,log_ant_total
 Closure,2,45,NOT_RUN,,NOT_RUN,,NOT_AVAILABLE,,,,,,,3.0,4.0,7.0,log_ant_total,log_ant_total

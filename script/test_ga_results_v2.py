@@ -39,7 +39,7 @@ class SavedGACoverageTest(unittest.TestCase):
             test_file.write_text("class Sample_ESTest {}", encoding="utf-8")
             commands = []
 
-            def fake_run(command, log):
+            def fake_run(command, log, timeout_seconds=None):
                 commands.append(command[1])
                 if command[1] == "coverage":
                     workspace = Path(command[command.index("-w") + 1])

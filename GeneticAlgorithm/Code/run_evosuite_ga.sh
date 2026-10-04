@@ -10,8 +10,8 @@ usage() {
   exit 2
 }
 
-# run .env
-source ../Configuration/.env
+code_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+[[ ! -f "$code_dir/../Configuration/.env" ]] || source "$code_dir/../Configuration/.env"
 
 [[ $# -ge 3 && $# -le 4 ]] || usage
 project_input=$1
@@ -55,6 +55,14 @@ project=$project_input
 bug_id=${bug_ids[0]}
 project_target="${project}_${bug_id}"
 
+# Bound the entire target (checkout, generation, compilation and validation).
+target_timeout=${GA_TARGET_TIMEOUT_SECONDS:-1800}
+[[ "$target_timeout" =~ ^[1-9][0-9]*$ ]] || { echo "Invalid GA_TARGET_TIMEOUT_SECONDS" >&2; exit 2; }
+if [[ ${GA_TIMEOUT_ACTIVE:-0} != 1 ]]; then
+  export GA_TIMEOUT_ACTIVE=1
+  exec timeout --signal=TERM --kill-after=30s "${target_timeout}s" bash "$0" "$@"
+fi
+
 ga_root=$(cd "$code_dir/.." && pwd)
 defects4j_bin=${DEFECTS4J_BIN:-/Users/defects4j/framework/bin/defects4j}
 evosuite_jar=${EVOSUITE_JAR:-$code_dir/evosuite-1.2.0.jar}
@@ -71,14 +79,21 @@ command -v rg >/dev/null || { echo "rg is required." >&2; exit 2; }
 
 # SDKMAN exposes sdk as a shell function.
 sdkman_init=${SDKMAN_INIT:-${SDKMAN_DIR:-$HOME/.sdkman}/bin/sdkman-init.sh}
-[[ -s "$sdkman_init" ]] || { echo "SDKMAN init not found: $sdkman_init" >&2; exit 2; }
+if [[ -n ${GA_JAVA_HOME:-} ]]; then
+  export JAVA_HOME="$GA_JAVA_HOME"
+  export PATH="$JAVA_HOME/bin:$PATH"
+else
+[[ -s "$sdkman_init" ]] || { echo "SDKMAN init not found: $sdkman_init; alternatively set GA_JAVA_HOME." >&2; exit 2; }
 set +u
 # shellcheck source=/dev/null
 source "$sdkman_init"
 sdk use java "$sdk_java" >/dev/null
 set -u
+fi
 java_major=$(java -version 2>&1 | awk -F'[\".]' '/version/ {print $2; exit}')
-[[ "$java_major" == 11 ]] || { echo "Java 11 is required." >&2; exit 2; }
+[[ "$java_major" != 1 ]] || java_major=$(java -version 2>&1 | awk -F'[\".]' '/version/ {print $3; exit}')
+required_java=${GA_JAVA_MAJOR:-11}
+[[ "$required_java" =~ ^(8|11)$ && "$java_major" == "$required_java" ]] || { echo "Java $required_java is required." >&2; exit 2; }
 
 # Resolve the canonical Defects4J project name.
 requested=$(printf '%s' "$project" | tr '[:upper:]' '[:lower:]')
@@ -93,6 +108,9 @@ project_target="${project}_${bug_id}"
 
 temp_root=$(mktemp -d "/tmp/evosuite-ga-${project_target}-r${round}.XXXXXX")
 cleanup() {
+  local logs="$ga_root/RunLogs/${project_target}-r${round}"
+  mkdir -p "$logs"
+  find "$temp_root" -maxdepth 1 -type f \( -name '*.log' -o -name 'hs_err*' -o -name '*jsonl' \) -exec cp {} "$logs/" \;
   case "$temp_root" in /tmp/evosuite-ga-*) rm -rf "$temp_root" ;; esac
 }
 trap cleanup EXIT INT TERM
@@ -194,7 +212,8 @@ while IFS= read -r target_class; do
       -mem "$client_memory_mb" -class "$target_class" \
       -projectCP "$project_classpath" -seed "$seed" \
       -criterion LINE:BRANCH -generateSuite -Dalgorithm=STANDARD_GA \
-      -Dlocal_search_rate=0 -Dclient_on_thread=true \
+      -Dlocal_search_rate=0 -Dclient_on_thread=${EVOSUITE_CLIENT_ON_THREAD:-true} \
+      -Dassertion_strategy=${EVOSUITE_ASSERTION_STRATEGY:-MUTATION} \
       -Dstopping_condition=MaxTime -Dsearch_budget="$budget" \
       -Dshow_progress=false \
       -Doutput_variables=TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals,LineCoverage,Lines,Covered_Lines,BranchCoverage,Total_Branches,Covered_Branches,Total_Methods,Covered_Methods,Branchless_Methods,Covered_Branchless_Methods \
@@ -253,6 +272,12 @@ test_count=$( (rg --no-filename '@Test' "$stage_tests" -g '*_ESTest.java' 2>/dev
 [[ $test_count -gt 0 ]] || { echo "EvoSuite generated no usable tests." >&2; exit 1; }
 suite_archive="$temp_root/evosuite-tests.tar.bz2"
 tar -cjf "$suite_archive" -C "$stage_tests" .
+
+# Keep generated source even if subsequent validation reaches its deadline.
+if [[ ! -e "$ga_root/TestCode/$project_target" ]]; then
+  mkdir -p "$ga_root/TestCode/$project_target"
+  cp -pR "$stage_tests"/. "$ga_root/TestCode/$project_target/"
+fi
 
 # Test buggy, record its result, then delete the buggy checkout.
 run_suite buggy "$buggy_checkout" "$buggy_log"

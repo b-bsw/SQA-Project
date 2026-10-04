@@ -49,6 +49,8 @@ STOP_REQUESTED = threading.Event()
 ACTIVE_COMMANDS = set()
 ACTIVE_COMMANDS_LOCK = threading.Lock()
 TIMEOUT_RC = 124
+PRESERVE_RESULTS = False
+UPDATE_SUMMARY = True
 
 
 class TargetInterrupted(Exception):
@@ -202,22 +204,33 @@ def read_coverage(workspace: Path, log=None):
 
 def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
                  archive: Path, temporary: Path, logs: Path, coverage: bool,
-                 test_timeout: int):
+                 test_timeout: int, deadline=None):
+    def execute(args, log, cwd=None, timeout=None):
+        allowed = test_timeout if timeout is None else timeout
+        if deadline is not None:
+            remaining = deadline-time.monotonic()
+            if remaining <= 0:
+                with log.open("a", encoding="utf-8") as stream:
+                    stream.write("[TIMEOUT: target deadline exceeded]\n")
+                return TIMEOUT_RC
+            allowed = min(allowed,remaining)
+        return run_command(args,log,cwd=cwd,timeout=allowed)
+
     label = "buggy" if suffix == "b" else "fixed"
     workspace = temporary / label
     log = logs / f"{label}.log"
-    checkout = run_command([d4j, "checkout", "-p", project, "-v",
+    checkout = execute([d4j, "checkout", "-p", project, "-v",
                             f"{bug_id}{suffix}", "-w", str(workspace)], log)
     if checkout:
         return {"result": "NOT_RUN", "fails": None, "compile": "NOT_RUN"}
-    compile_rc = run_command([d4j, "compile", "-w", str(workspace)], log)
+    compile_rc = execute([d4j, "compile", "-w", str(workspace)], log)
     if compile_rc:
         return {"result": "NOT_RUN", "fails": None, "compile": "FAIL"}
     failing = workspace / "failing_tests"
     failing.unlink(missing_ok=True)
     test_log = logs / f"{label}_test.log"
     test_started = time.monotonic()
-    rc = run_command([d4j, "test", "-s", str(archive)], test_log,
+    rc = execute([d4j, "test", "-s", str(archive)], test_log,
                      cwd=workspace, timeout=test_timeout)
     test_elapsed = round(time.monotonic() - test_started, 2)
     with test_log.open("a", encoding="utf-8") as output:
@@ -238,7 +251,7 @@ def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
     if coverage and label == "buggy" and result != "NOT_RUN":
         coverage_log = logs / "buggy_coverage.log"
         coverage_started = time.monotonic()
-        coverage_rc = run_command([d4j, "coverage", "-s", str(archive)],
+        coverage_rc = execute([d4j, "coverage", "-s", str(archive)],
                                   coverage_log, cwd=workspace, timeout=test_timeout)
         details["coverage_seconds"] = round(time.monotonic() - coverage_started, 2)
         details["coverage_status"] = ("TIMEOUT" if coverage_rc == TIMEOUT_RC else
@@ -348,16 +361,17 @@ def run_target(name: str, source: Path, d4j: str, coverage: bool,
               "created_at": datetime.now(timezone.utc).isoformat(),
               "project": project, "bug_id": bug_id,
               "source": str(source), "coverage_scope": "modified classes of buggy revision"}
+    deadline = time.monotonic()+1800
     try:
         with tempfile.TemporaryDirectory(prefix=f"gemini-{name}-") as temporary_name:
             temporary = Path(temporary_name)
             archive = temporary / f"{project}-{bug_id}b-gemini.1.tar.bz2"
             report["tests"], report["test_files"] = make_archive(source, archive)
             report["buggy"] = run_revision(d4j, project, bug_id, "b", archive,
-                                           temporary, logs, coverage, test_timeout)
+                                           temporary, logs, coverage, test_timeout, deadline)
             shutil.rmtree(temporary / "buggy", ignore_errors=True)
             report["fixed"] = run_revision(d4j, project, bug_id, "f", archive,
-                                           temporary, logs, False, test_timeout)
+                                           temporary, logs, False, test_timeout, deadline)
     except TargetInterrupted:
         return name, "INTERRUPTED"
     except (OSError, UnicodeError, ValueError, tarfile.TarError) as exc:
@@ -368,13 +382,33 @@ def run_target(name: str, source: Path, d4j: str, coverage: bool,
     fixed = report.get("fixed", {})
     report["test_run_seconds"] = total_test_seconds(report)
     a, b = buggy.get("result", "NOT_RUN"), fixed.get("result", "NOT_RUN")
-    report["verdict"] = ("REVEALING" if (a, b) == ("FAIL", "PASS") else
+    unavailable = ("NOT_RUN" in (a, b) or
+                   any(side.get("test_compile") == "FAIL" for side in (buggy, fixed)) or
+                   (coverage and (buggy.get("coverage_status") != "PASS" or
+                                  buggy.get("line_cov") is None and buggy.get("branch_cov") is None)))
+    report["verdict"] = ("NOT_AVAILABLE" if unavailable else
+                         "REVEALING" if (a, b) == ("FAIL", "PASS") else
                          "NOT_REVEALING" if (a, b) == ("PASS", "PASS") else
                          "NOT_AVAILABLE" if "NOT_RUN" in (a, b) else "INCONCLUSIVE")
     write_csv_atomic(destination / "result.csv", [report_row(report)])
     write_json_atomic(destination / "result.json", report)
-    shutil.rmtree(logs, ignore_errors=True)
     return name, report["verdict"]
+
+
+def record_generation_failure(name, reason):
+    """Record a real failed generation attempt when no runnable suite exists."""
+    project,bug = name.rsplit("_",1)
+    destination=RESULT_ROOT/name
+    destination.mkdir(parents=True,exist_ok=True)
+    report={"schema_version":"1.0", "generator":'Gemini-3.8-Flash',
+            "created_at":datetime.now(timezone.utc).isoformat(),
+            "project":project,"bug_id":int(bug),"tests":0,"test_files":0,
+            "generation_status":"FAIL","failure_reason":reason,"verdict":"FAIL",
+            "buggy":{"result":"NOT_RUN","compile":"NOT_RUN","fails":None},
+            "fixed":{"result":"NOT_RUN","compile":"NOT_RUN","fails":None}}
+    write_json_atomic(destination/"result.json",report)
+    write_csv_atomic(destination/"result.csv",[report_row(report)])
+    return report
 
 
 def collect_reports(result_root=None, update_summary=True):
@@ -383,18 +417,20 @@ def collect_reports(result_root=None, update_summary=True):
     for path in sorted(result_root.glob("*/result.json")):
         with path.open(encoding="utf-8") as handle:
             report = json.load(handle)
-        changed = recover_test_times(report, path.parent)
-        changed = recover_coverage(report, path.parent) or changed
-        if changed:
-            write_json_atomic(path, report)
+        if not PRESERVE_RESULTS:
+            changed = recover_test_times(report, path.parent)
+            changed = recover_coverage(report, path.parent) or changed
+            if changed:
+                write_json_atomic(path, report)
         row = report_row(report)
-        write_csv_atomic(path.parent / "result.csv", [row])
+        if not PRESERVE_RESULTS:
+            write_csv_atomic(path.parent / "result.csv", [row])
         rows.append(row)
     write_csv_atomic(result_root / "report.csv", rows)
     # Also write root report.csv only if result_root is the Round 1 Result directory
     if result_root.resolve() == (ROOT / "Result").resolve():
         write_csv_atomic(ROOT / "report.csv", rows)
-    if update_summary:
+    if update_summary and UPDATE_SUMMARY:
         write_summary()
     return len(rows)
 
@@ -657,9 +693,14 @@ def generation_metrics(target: str, records: dict):
             round(generation_seconds, 2) if found_time else None)
 
 
-def write_summary(paired=True):
+def write_summary(paired=True, destination=None):
     """Collect test reports and metrics into the outer summary."""
+    import sys
     root = RESULT_ROOT.parent
+    summary_repository = Path(__file__).resolve().parents[2]
+    sys.path.insert(0, str(summary_repository / 'script'))
+    from summary.metrics import resource_targets
+    allowed = resource_targets(summary_repository)
     state_root = root
     detailed = []
     result_roots = [("Round1", root / "Result")]
@@ -675,6 +716,8 @@ def write_summary(paired=True):
             except (OSError, json.JSONDecodeError):
                 continue
             target = path.parent.name
+            if target not in allowed:
+                continue
             recover_coverage(report, path.parent)
             tokens, generation_seconds = generation_metrics(target, all_records)
             line_coverage = report.get("buggy", {}).get("line_cov")
@@ -692,7 +735,8 @@ def write_summary(paired=True):
                 "condition_coverage": report.get("buggy", {}).get("branch_cov"),
             })
 
-    write_summary_workbook(root / "summary.xlsx", detailed)
+    destination = Path(destination) if destination else root / "summary.xlsx"
+    write_summary_workbook(destination, detailed)
     if paired:
         import sys
         sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "script"))
@@ -701,7 +745,7 @@ def write_summary(paired=True):
 
 
 def main(argv=None):
-    global TEST_ROOT, RESULT_ROOT
+    global TEST_ROOT, RESULT_ROOT, PRESERVE_RESULTS, UPDATE_SUMMARY
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--test-root", type=Path, default=TEST_ROOT,
                         help="Directory containing <target>_buggy test folders")
@@ -720,7 +764,12 @@ def main(argv=None):
     parser.add_argument("--collect-only", action="store_true", help="Rebuild combined report without running tests")
     parser.add_argument("--summary-only", action="store_true",
                         help="Rebuild summary.xlsx (Dashboard + Data)")
+
+    parser.add_argument("--preserve-results",action="store_true",help="Collect without recovering or rewriting existing per-target JSON/CSV")
+    parser.add_argument("--no-summary",action="store_true",help="Collect CSV only; rebuild workbooks separately")
     args = parser.parse_args(argv)
+    PRESERVE_RESULTS = args.preserve_results
+    UPDATE_SUMMARY = not args.no_summary
     TEST_ROOT = args.test_root.resolve()
     RESULT_ROOT = args.result_root.resolve()
     if args.workers < 1 or args.test_timeout < 1 or (args.limit is not None and args.limit < 1):
@@ -735,7 +784,8 @@ def main(argv=None):
         RESULT_ROOT.mkdir(exist_ok=True)
         count = collect_reports()
         print(f"Combined {count} reports: {RESULT_ROOT / 'report.csv'}", flush=True)
-        print(f"Updated summary: {RESULT_ROOT.parent / 'summary.xlsx'}", flush=True)
+        if UPDATE_SUMMARY:
+            print(f"Updated summary: {RESULT_ROOT.parent / 'summary.xlsx'}", flush=True)
         return 0
     if not TEST_ROOT.is_dir():
         parser.error(f"Test directory is missing: {TEST_ROOT}")
@@ -804,7 +854,8 @@ def main(argv=None):
         pool.shutdown(wait=True, cancel_futures=interrupted)
     count = collect_reports()
     print(f"Combined {count} reports: {RESULT_ROOT / 'report.csv'}", flush=True)
-    print(f"Updated summary: {RESULT_ROOT.parent / 'summary.xlsx'}", flush=True)
+    if UPDATE_SUMMARY:
+        print(f"Updated summary: {RESULT_ROOT.parent / 'summary.xlsx'}", flush=True)
     if interrupted:
         return 130
     return 1 if failures else 0

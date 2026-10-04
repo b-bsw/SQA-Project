@@ -88,7 +88,7 @@ class CoverageReportsTests(unittest.TestCase):
             self.assertEqual(table.find(runner.xlsx_tag("tableColumns")).get("count"), "14")
             cells = {c.get("r"): c for c in dashboard.iter(runner.xlsx_tag("c"))}
             self.assertAlmostEqual(float(cells["E8"].find(runner.xlsx_tag("v")).text), .5112)
-            self.assertIn("AVERAGE(Data!$N$2:$N$2)", cells["E8"].find(runner.xlsx_tag("f")).text)
+            self.assertEqual(cells["E8"].find(runner.xlsx_tag("f")).text, "'Coverage'!J8")
             self.assertEqual(cells["B8"].find(f"{runner.xlsx_tag('is')}/{runner.xlsx_tag('t')}").text,
                              "Average condition coverage")
             self.assertEqual(cells["E8"].get("s"), cells["E7"].get("s"))

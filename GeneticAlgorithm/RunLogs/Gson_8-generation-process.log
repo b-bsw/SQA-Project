@@ -1,0 +1,51 @@
+[Gson_8 round 1] defects4j checkout 8b
+[Gson_8 round 1] defects4j compile
+Running ant (export.dir.bin.classes)....................................... OK
+
+Running ant (export.cp.compile)............................................ OK
+
+Running ant (export.classes.modified)...................................... OK
+
+[Gson_8 round 1] EvoSuite STANDARD_GA: com.google.gson.internal.UnsafeAllocator
+EvoSuite generated no tests for com.google.gson.internal.UnsafeAllocator (exit 0):
+[MASTER] 00:24:05.647 [main] ERROR ExternalProcessGroupHandler - The JVM of the client process crashed:
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000079513c3832d4, pid=1329, tid=1549
+#
+# JRE version: OpenJDK Runtime Environment (11.0.32+9) (build 11.0.32+9-post-1ubuntu1-26.04-Ubuntu)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.32+9-post-1ubuntu1-26.04-Ubuntu, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# V  [libjvm.so+0x5832d4]  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<1097844ul, G1BarrierSet>, (AccessInternal::BarrierType)2, 1097844ul>::oop_access_barrier(void*)+0x4
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/wsl-capture-crash %t %E %p %s" (or dumping to /tmp/evosuite-ga-Gson_8-r1.7jxmrW/core.1329)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+
+[MASTER] 00:24:05.681 [main] ERROR ExternalProcessGroupHandler - Class com.google.gson.internal.UnsafeAllocator. Lost connection with clients.
+Client-0: SEARCH
+
+java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
+	java.io.EOFException
+	at java.rmi/sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:254)
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:217)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:162)
+	at com.sun.proxy.$Proxy7.waitUntilFinished(Unknown Source)
+	at org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:690)
+	at org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:524)
+	at org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:83)
+	at org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:335)
+	at org.evosuite.EvoSuite.main(EvoSuite.java:103)
+Caused by: java.io.EOFException: null
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:272)
+	at java.rmi/sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
+	... 9 common frames omitted
+* Computation finished
+[MASTER] 00:24:05.783 [main] ERROR SearchStatistics - No obtained value for output variable: Total_Goals
+[MASTER] 00:24:06.784 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:24:06.887 [main] ERROR TestGeneration - failed to write statistics data
+EvoSuite generated no usable tests.

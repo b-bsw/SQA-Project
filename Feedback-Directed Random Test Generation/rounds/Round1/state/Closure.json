@@ -3247,28 +3247,25 @@
     "seed_source": "INFERRED_RANDOOP_DEFAULT"
   },
   "Closure_169": {
-    "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_169_buggy",
-    "classes_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/BuildClasses/Closure_169",
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_169_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_169",
     "classes_tested": [
-      "com.google.javascript.rhino.jstype.RecordType",
+      "com.google.javascript.rhino.jstype.ArrowType",
+      "com.google.javascript.rhino.jstype.FunctionType",
       "com.google.javascript.rhino.jstype.JSType",
-      "com.google.javascript.rhino.jstype.UnionType",
-      "com.google.javascript.rhino.jstype.ArrowType"
+      "com.google.javascript.rhino.jstype.RecordType",
+      "com.google.javascript.rhino.jstype.UnionType"
     ],
     "generated_tests": [
       "com/google/javascript/rhino/jstype/RegressionTest0.java",
-      "com/google/javascript/rhino/jstype/RegressionTest1.java",
-      "com/google/javascript/rhino/jstype/RegressionTest2.java",
-      "com/google/javascript/rhino/jstype/RegressionTest3.java",
-      "com/google/javascript/rhino/jstype/RegressionTest4.java",
       "com/google/javascript/rhino/jstype/RegressionTest.java"
     ],
-    "time_limit": 60,
-    "status": "COMPLETED",
-    "timestamp": "2026-09-21T16:01:26.513694",
     "round": 1,
     "seed": 0,
-    "seed_source": "INFERRED_RANDOOP_DEFAULT"
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-10-03T22:39:53.733739+00:00"
   },
   "Closure_166": {
     "output_dir": "/Users/piyadaketmala/Documents/Year3_Sem1/SQA/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_166_buggy",
@@ -3318,38 +3315,35 @@
   },
   "_script_runs": {
     "latest": {
-      "started_at": "2026-09-28T13:34:35.240869+00:00",
+      "started_at": "2026-10-03T22:37:58.284895+00:00",
       "status": "COMPLETED",
       "script": "generate_randoop_tests",
       "arguments": [
         "--project",
-        "Closure",
-        "--state-file",
-        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
-        "--time-limit",
-        "60",
-        "--jvm-memory",
-        "3000m",
-        "--project-timeout",
-        "600",
+        "Closure_169",
         "--round",
         "1",
         "--seed",
         "0",
-        "--output-dir",
-        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode"
+        "--time-limit",
+        "60",
+        "--project-timeout",
+        "600",
+        "--state-file",
+        "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "--overwrite"
       ],
       "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
       "round": 1,
       "seed": 0,
       "time_limit": 60,
-      "project": "Closure",
-      "run_id": "20260928T133435469225Z_57",
-      "success": 0,
-      "skipped": 172,
+      "project": "Closure_169",
+      "run_id": "20261003T223758460277Z_12958",
+      "success": 1,
+      "skipped": 0,
       "failed": 0,
-      "total_duration_seconds": 12.139,
-      "finished_at": "2026-09-28T13:34:47.379990+00:00"
+      "total_duration_seconds": 117.018,
+      "finished_at": "2026-10-03T22:39:55.296592+00:00"
     },
     "history": {
       "20260928T132013495894Z_83": {
@@ -3419,7 +3413,165 @@
         "failed": 0,
         "total_duration_seconds": 12.139,
         "finished_at": "2026-09-28T13:34:47.379990+00:00"
+      },
+      "20261003T221544755353Z_5805": {
+        "started_at": "2026-10-03T22:15:44.437437+00:00",
+        "status": "FAILED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Closure_169",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--time-limit",
+          "60",
+          "--project-timeout",
+          "600",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+          "--overwrite"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Closure_169",
+        "run_id": "20261003T221544755353Z_5805",
+        "success": 0,
+        "skipped": 0,
+        "failed": 1,
+        "total_duration_seconds": 466.613,
+        "finished_at": "2026-10-03T22:23:31.024216+00:00"
+      },
+      "20261003T222332028023Z_9162": {
+        "started_at": "2026-10-03T22:23:31.709953+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Closure_175",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--time-limit",
+          "60",
+          "--project-timeout",
+          "600",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+          "--overwrite"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Closure_175",
+        "run_id": "20261003T222332028023Z_9162",
+        "success": 1,
+        "skipped": 0,
+        "failed": 0,
+        "total_duration_seconds": 244.772,
+        "finished_at": "2026-10-03T22:27:36.465016+00:00"
+      },
+      "20261003T222737094466Z_11495": {
+        "started_at": "2026-10-03T22:27:36.814236+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Closure_176",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--time-limit",
+          "60",
+          "--project-timeout",
+          "600",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+          "--overwrite"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Closure_176",
+        "run_id": "20261003T222737094466Z_11495",
+        "success": 1,
+        "skipped": 0,
+        "failed": 0,
+        "total_duration_seconds": 164.2,
+        "finished_at": "2026-10-03T22:30:21.007571+00:00"
+      },
+      "20261003T223758460277Z_12958": {
+        "started_at": "2026-10-03T22:37:58.284895+00:00",
+        "status": "COMPLETED",
+        "script": "generate_randoop_tests",
+        "arguments": [
+          "--project",
+          "Closure_169",
+          "--round",
+          "1",
+          "--seed",
+          "0",
+          "--time-limit",
+          "60",
+          "--project-timeout",
+          "600",
+          "--state-file",
+          "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+          "--overwrite"
+        ],
+        "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+        "round": 1,
+        "seed": 0,
+        "time_limit": 60,
+        "project": "Closure_169",
+        "run_id": "20261003T223758460277Z_12958",
+        "success": 1,
+        "skipped": 0,
+        "failed": 0,
+        "total_duration_seconds": 117.018,
+        "finished_at": "2026-10-03T22:39:55.296592+00:00"
       }
     }
+  },
+  "Closure_175": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_175_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_175",
+    "classes_tested": [
+      "com.google.javascript.jscomp.FunctionInjector"
+    ],
+    "generated_tests": [
+      "com/google/javascript/jscomp/RegressionTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-10-03T22:27:32.645875+00:00"
+  },
+  "Closure_176": {
+    "output_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/TestCode/Closure_176_buggy",
+    "classes_dir": "/mnt/e/JavaEclipe/defect4j/SQA-Project/BuildClasses/Closure_176",
+    "classes_tested": [
+      "com.google.javascript.jscomp.TypeInference"
+    ],
+    "generated_tests": [
+      "com/google/javascript/jscomp/RegressionTest0.java",
+      "com/google/javascript/jscomp/RegressionTest.java"
+    ],
+    "round": 1,
+    "seed": 0,
+    "seed_source": "EXPLICIT",
+    "time_limit": 60,
+    "status": "COMPLETED",
+    "timestamp": "2026-10-03T22:30:16.870496+00:00"
   }
 }

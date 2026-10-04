@@ -1,0 +1,26 @@
+$ /home/face/defect4j/defects4j/framework/bin/defects4j checkout -p Closure -v 175f -w /tmp/ga-paired-Closure_175-af6i46lk/fixed
+Checking out 038da211 to /tmp/ga-paired-Closure_175-af6i46lk/fixed......... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 038da211:94623ace..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Closure-175f.................................... OK
+[exit 0]
+$ /home/face/defect4j/defects4j/framework/bin/defects4j compile -w /tmp/ga-paired-Closure_175-af6i46lk/fixed
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ OK
+[exit 0]
+$ /home/face/defect4j/defects4j/framework/bin/defects4j test -w /tmp/ga-paired-Closure_175-af6i46lk/fixed -s /tmp/ga-paired-Closure_175-af6i46lk/Closure-175b-evosuite-ga.1.tar.bz2
+Extract test suite......................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Failing tests: 0
+[exit 0]

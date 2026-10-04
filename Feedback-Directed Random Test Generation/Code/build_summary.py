@@ -66,6 +66,10 @@ def number(value):
 
 
 def read_reports() -> list[dict]:
+    summary_repository = Path(__file__).resolve().parents[2]
+    sys.path.insert(0, str(summary_repository / 'script'))
+    from summary.metrics import resource_targets
+    allowed = resource_targets(summary_repository)
     records = []
     for round_name, report_name, result_folder in ROUND_SOURCES:
         report_path = PROJECT_ROOT / report_name
@@ -83,6 +87,8 @@ def read_reports() -> list[dict]:
                 if not project or bug_id is None:
                     raise ValueError(f"Invalid project/bug_id row in {report_path}: {source}")
                 target = f"{project}_{int(bug_id)}"
+                if target not in allowed:
+                    continue
                 if target in seen:
                     raise ValueError(f"Duplicate target {target} in {report_path}")
                 seen.add(target)

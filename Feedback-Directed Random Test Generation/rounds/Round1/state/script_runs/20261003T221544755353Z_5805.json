@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-10-03T22:15:44.437437+00:00",
+  "status": "FAILED",
+  "script": "generate_randoop_tests",
+  "arguments": [
+    "--project",
+    "Closure_169",
+    "--round",
+    "1",
+    "--seed",
+    "0",
+    "--time-limit",
+    "60",
+    "--project-timeout",
+    "600",
+    "--state-file",
+    "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+    "--overwrite"
+  ],
+  "state_file": "/mnt/e/JavaEclipe/defect4j/SQA-Project/Feedback-Directed Random Test Generation/rounds/Round1/state/Closure.json",
+  "round": 1,
+  "seed": 0,
+  "time_limit": 60,
+  "project": "Closure_169",
+  "run_id": "20261003T221544755353Z_5805",
+  "success": 0,
+  "skipped": 0,
+  "failed": 1,
+  "total_duration_seconds": 466.613,
+  "finished_at": "2026-10-03T22:23:31.024216+00:00"
+}

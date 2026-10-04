@@ -115,3 +115,39 @@ python3 GeneticAlgorithm/Code/run_ga_results_v2.py all \
 `--resume` ข้ามรายการที่มี `result.json` แล้วเมื่อรันต่อหลังหยุดงาน
 หากต้องการวัดจากเทสต์คนละชุด ให้ระบุโฟลเดอร์นั้นด้วย `--tests-root PATH`
 ซึ่งต้องมีโฟลเดอร์ย่อยชื่อ `PROJECT_BUG` เหมือน `TestCode`
+# Target deadlines and summary inventory
+
+Generation has a whole-target deadline: `GA_TARGET_TIMEOUT_SECONDS=1800`
+(30 minutes, including checkout, generation and validation). Timeout exits with
+code 124; it does not imply test success. `GA_JAVA_HOME` selects an installed
+JDK 11 without SDKMAN. Configuration `.env` is optional and resolved relative
+to this script rather than the current directory.
+
+Troubleshooting options are explicit: `EVOSUITE_CLIENT_ON_THREAD=false`
+isolates the client JVM; `EVOSUITE_ASSERTION_STRATEGY=ALL` avoids mutation-based
+assertion generation. Both preserve STANDARD_GA, LINE:BRANCH, the seed and
+search budget. `GA_JAVA_MAJOR=8` enables a deliberate JDK 8 compatibility trial;
+the default remains 11. Generation logs are retained in `RunLogs`.
+
+V2 measurements accept `--timeout-seconds 1800`, covering checkout, compilation
+and coverage together per target. Timeout terminates the command process group,
+writes its reason to `coverage.log` and `result.json`, and records
+`coverage_status=NOT_AVAILABLE` (failure A).
+If no generated Java tests exist, the status is `FAIL` with
+`generation_status=FAIL`; `NOT_AVAILABLE` is reserved for a suite that exists
+but could not be run/measured. Both are failure A for coverage averaging.
+
+`python script/coverage_summaries.py` checks the `Resoucre` target folders before
+writing workbooks. The `ResourceCheck` sheet lists missing/extra saved results and Java test
+folders per round. Only targets present in `Resoucre` enter summary averages,
+counts and intersections. Extra saved results are preserved but excluded.
+Missing results are not fabricated. A bug with two saved rounds counts twice.
+
+GA verdicts are derived from saved buggy/fixed validations in the corresponding
+`Result_Round1` or `Result_Round2`: buggy FAIL + fixed PASS = REVEALING;
+both PASS = NOT_REVEALING; fixed FAIL = INCONCLUSIVE; missing/non-running paired
+validation = NOT_AVAILABLE; generation failure = FAIL. V2 assertion failures
+alone do not establish REVEALING. Coverage still uses V2 measurements. Historical
+paired validation may use a different suite than the current saved TestCode;
+Data records the validation source and reason, and Verdicts labels this distinction.
+

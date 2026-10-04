@@ -1,0 +1,43 @@
+* EvoSuite 1.2.0
+* Going to generate test cases for class: com.fasterxml.jackson.core.json.async.NonBlockingJsonParser
+* Starting Client-0
+* Connecting to master process on port 13049
+* Analyzing classpath: 
+  - /tmp/evosuite-ga-JacksonCore_26-r1.xlNCHB/buggy-checkout/target/classes
+  - /tmp/evosuite-ga-JacksonCore_26-r1.xlNCHB/buggy-checkout/target/classes
+[MASTER] 00:28:36.822 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: java.util.Locale$IsoCountryCode
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.json.async.NonBlockingJsonParser
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+* Setting up search algorithm for whole suite generation
+* Total number of test goals: 
+  - Line 1472
+  - Branch 1324
+* Using seed 20260918
+* Starting evolution
+[MASTER] 00:28:44.747 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.core.io.IOContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.core.json.async.NonBlockingJsonParser due to org.evosuite.ga.ConstructionFailedException: Have no generator for class com.fasterxml.jackson.core.io.IOContext canUseFunctionalMocks=false, canBeMocked: true
+* Search finished after 122s and 53 generations, 30227 statements, best individual has fitness: 1821.9604089343457
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 18%
+* Total number of goals: 1472
+* Number of covered goals: 265
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 19%
+* Total number of goals: 1324
+* Number of covered goals: 246
+* Generated 54 tests with total length 320
+* Resulting test suite's coverage: 18% (average coverage for all fitness functions)
+* Generating assertions
+* Compiling and checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 2
+* Writing tests to file
+* Writing JUnit test case 'NonBlockingJsonParser_ESTest' to /tmp/evosuite-ga-JacksonCore_26-r1.xlNCHB/generated-com_fasterxml_jackson_core_json_async_NonBlockingJsonParser
+* Done!
+
+* Computation finished

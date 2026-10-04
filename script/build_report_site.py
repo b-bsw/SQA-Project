@@ -10,6 +10,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from summary.metrics import load_records, metric_summary, intersection, evidence, classify
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,8 +28,8 @@ SOURCES = [
         ("Round 2", "Feedback-Directed Random Test Generation/report_Round2.csv"),
     ]),
     ("ga", "Genetic Algorithm", [
-        ("Round 1", "GeneticAlgorithm/Result_Round1/report.csv"),
-        ("Round 2", "GeneticAlgorithm/Result_Round2/report.csv"),
+        ("Round 1", "GeneticAlgorithm/Result_v2_Round1/report.csv"),
+        ("Round 2", "GeneticAlgorithm/Result_v2_Round2/report.csv"),
     ]),
 ]
 VERDICTS = ("REVEALING", "NOT_REVEALING", "INCONCLUSIVE", "NOT_AVAILABLE", "FAIL")
@@ -43,18 +44,22 @@ def to_number(value):
 
 def summarize(rows):
     verdicts = Counter(row["verdict"] for row in rows)
-    line = [value for row in rows if (value := to_number(row.get("line_cov"))) is not None]
-    branch = [value for row in rows if (value := to_number(row.get("branch_cov"))) is not None]
+    records = []
+    for row in rows:
+        records.append({'metrics':row.get('coverageMetrics') or {metric:classify(evidence(row),metric) for metric in ('line','condition')},'details':row})
+    line = metric_summary(records,'line')
+    branch = metric_summary(records,'condition')
     tests = [value for row in rows if (value := to_number(row.get("tests"))) is not None]
     return {
         "results": len(rows),
         "verdicts": {key: verdicts[key] for key in VERDICTS},
-        "lineCoverage": sum(line) / len(line) if line else None,
-        "branchCoverage": sum(branch) / len(branch) if branch else None,
-        "lineCoverageAllResults": sum(line) / len(rows) if rows else None,
-        "branchCoverageAllResults": sum(branch) / len(rows) if rows else None,
-        "coverageRecords": len(line),
-        "branchCoverageRecords": len(branch),
+        "lineCoverage": line['recordedOnly'],
+        "branchCoverage": branch['recordedOnly'],
+        "lineCoverageAllResults": line['allResults'],
+        "branchCoverageAllResults": branch['allResults'],
+        "coverageRecords": line['recorded'],
+        "branchCoverageRecords": branch['recorded'],
+        "metrics": {'line':line,'condition':branch},
         "tests": int(sum(tests)),
     }
 
@@ -68,12 +73,24 @@ def by_project(rows):
 
 def build_snapshot():
     methods = []
+    all_records = {}
     for method_id, name, sources in SOURCES:
         combined = []
         rounds = []
+        all_records[method_id] = load_records(method_id)
+        classified = {(r['round'],r['target']):r['metrics'] for r in all_records[method_id]}
+        bug_verdicts = {(r['round'],r['target']):r['verdict'] for r in all_records[method_id]}
         for round_name, source in sources:
             with (ROOT / source).open(newline="", encoding="utf-8-sig") as stream:
                 rows = list(csv.DictReader(stream))
+            rows = [row for row in rows if (round_name.replace(' ',''),f"{row['project']}_{int(row['bug_id'])}") in classified]
+            for row in rows:
+                row['coverageMetrics'] = classified[(round_name.replace(' ',''),f"{row['project']}_{int(row['bug_id'])}")]
+                if bug_verdicts:
+                    row['verdict']=bug_verdicts[(round_name.replace(' ',''),f"{row['project']}_{int(row['bug_id'])}")]
+                if method_id=='ga':
+                    row['line_cov']=row.get('line_coverage')
+                    row['branch_cov']=row.get('condition_coverage')
             combined.extend(rows)
             rounds.append({
                 "name": round_name,
@@ -91,6 +108,7 @@ def build_snapshot():
     return {
         "generatedAt": datetime.now(ZoneInfo("Asia/Bangkok")).strftime("%d %b %Y · %H:%M ICT"),
         "methods": methods,
+        "intersection": {scope:intersection(all_records,None if scope=='All rounds' else scope) for scope in ('All rounds','Round1','Round2')},
     }
 
 

@@ -1,0 +1,10 @@
+{
+  "subject": "buggy",
+  "result": "PASS",
+  "failures": 0
+}
+{
+  "subject": "fixed",
+  "result": "PASS",
+  "failures": 0
+}

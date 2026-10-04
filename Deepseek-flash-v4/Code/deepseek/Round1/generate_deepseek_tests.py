@@ -42,6 +42,7 @@ import json
 import argparse
 import hashlib
 import threading
+import socket
 import xml.etree.ElementTree as ET
 from contextlib import contextmanager
 from datetime import datetime
@@ -60,6 +61,9 @@ if hasattr(sys.stderr, 'reconfigure'):
         pass
 
 try:
+    import urllib3.util.connection as urllib3_cn
+    # Match the working IPv4 route used by curl -4 on this API host.
+    urllib3_cn.allowed_gai_family = lambda: socket.AF_INET
     import requests
 except ImportError:
     print("Error: ไม่พบโมดูล 'requests' กรุณาติดตั้งด้วยคำสั่ง: pip install requests")

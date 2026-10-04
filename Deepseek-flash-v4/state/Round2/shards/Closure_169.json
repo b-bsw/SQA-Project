@@ -106,5 +106,26 @@
       "daily_remaining_tokens": 29289
     },
     "updated_at": "2026-09-24T18:13:05.567297"
+  },
+  "Closure_169/com/google/javascript/rhino/jstype/FunctionType.java": {
+    "project": "Closure_169",
+    "source_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Resoucre\\Closure_169\\com\\google\\javascript\\rhino\\jstype\\FunctionType.java",
+    "status": "GENERATED",
+    "test_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Deepseek-flash-v4\\TestCode2\\Closure_169_buggy\\FunctionTypeTest.java",
+    "file_size_bytes": 23245,
+    "updated_at": "2026-10-03T23:37:17.755991+00:00",
+    "round": 2,
+    "generation_mode": "manual",
+    "model": null,
+    "usage": null,
+    "elapsed_seconds": null,
+    "finish_reason": null,
+    "attribution": "Method and round supplied by user; exact model, generation duration and token usage not supplied",
+    "response_sha256": "3e327f7e23a23f1a05da957716c81cd47e5627ee64f01cbea73e9d5078759786",
+    "test_sha256": "229e1c4a7ee652ee922b398ebe460b1c6745ffcc2494fd663e33c964ea48eae5",
+    "removed_markdown_fences": 0,
+    "removed_outer_inline_fence": false,
+    "response_backup": ".coverage-build/closure-backfill-20261004/manual-imports/20261003T233717755991Z/response.txt",
+    "test_annotations": 74
   }
 }

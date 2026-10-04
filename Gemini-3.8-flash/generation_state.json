@@ -11493,7 +11493,7 @@
     "project": "JacksonDatabind_111",
     "source_file": "/home/manamo/wan/SQA-Project/Resoucre/JacksonDatabind_111/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java",
     "status": "FAILED",
-    "error": "\u0e04\u0e35\u0e22\u0e4c API \u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14\u0e43\u0e19\u0e23\u0e30\u0e1a\u0e1a\u0e42\u0e04\u0e27\u0e15\u0e49\u0e32\u0e2b\u0e21\u0e14\u0e41\u0e25\u0e49\u0e27 \u0e2b\u0e23\u0e37\u0e2d\u0e44\u0e21\u0e48\u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16\u0e40\u0e0a\u0e37\u0e48\u0e2d\u0e21\u0e15\u0e48\u0e2d\u0e44\u0e14\u0e49",
+    "error": "คีย์ API ทั้งหมดในระบบโควต้าหมดแล้ว หรือไม่สามารถเชื่อมต่อได้",
     "updated_at": "2026-09-23T02:28:41.805960"
   },
   "Math_82/org/apache/commons/math/optimization/linear/SimplexSolver.java": {
@@ -14897,5 +14897,25 @@
     "file_size_bytes": 6144,
     "note": "MANUAL_DETECTED",
     "updated_at": "2026-09-23T19:23:52.009242"
+  },
+  "Closure_169/com/google/javascript/rhino/jstype/FunctionType.java": {
+    "project": "Closure_169",
+    "source_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Resoucre\\Closure_169\\com\\google\\javascript\\rhino\\jstype\\FunctionType.java",
+    "status": "GENERATED",
+    "test_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Gemini-3.8-flash\\TestCode\\Closure_169_buggy\\FunctionTypeTest.java",
+    "file_size_bytes": 32666,
+    "updated_at": "2026-10-03T23:22:03.662078+00:00",
+    "round": 1,
+    "generation_mode": "manual",
+    "model": null,
+    "usage": null,
+    "elapsed_seconds": null,
+    "finish_reason": null,
+    "attribution": "Method and round supplied by user; exact model, generation duration and token usage not supplied",
+    "response_sha256": "354c7457cdd971ab21c9c2abbaee6301262fe04f4180e9caba25d080c67f6c15",
+    "test_sha256": "afab5c101a49e3f752bdae4d988d4660bee046127d091b3fc8212a92ab5dcd4b",
+    "removed_markdown_fences": 92,
+    "response_backup": ".coverage-build/closure-backfill-20261004/manual-imports/20261003T232203662078Z/response.txt",
+    "test_annotations": 68
   }
 }

@@ -1,0 +1,23 @@
+{
+  "Closure_176/com/google/javascript/jscomp/TypeInference.java": {
+    "project": "Closure_176",
+    "source_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Resoucre\\Closure_176\\com\\google\\javascript\\jscomp\\TypeInference.java",
+    "status": "GENERATED",
+    "test_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Deepseek-flash-v4\\TestCode2\\Closure_176_buggy\\TypeInferenceTest.java",
+    "file_size_bytes": 34667,
+    "updated_at": "2026-10-03T23:30:25.198646+00:00",
+    "round": 2,
+    "generation_mode": "manual",
+    "model": null,
+    "usage": null,
+    "elapsed_seconds": null,
+    "finish_reason": null,
+    "attribution": "Method and round supplied by user; exact model, generation duration and token usage not supplied",
+    "response_sha256": "6c6617197acdd564036cef7af106a0d7ee5fc2ab036ce584539029dfd7818bde",
+    "test_sha256": "5509953b4a192ce16d2ad0bb82eff03a242225c9464b29bf6d677ea45c967275",
+    "removed_markdown_fences": 0,
+    "removed_outer_inline_fence": false,
+    "response_backup": ".coverage-build/closure-backfill-20261004/manual-imports/20261003T233025198646Z/response.txt",
+    "test_annotations": 73
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "target_class": "com.google.gson.internal.UnsafeAllocator",
+  "generation_result": "FAIL",
+  "generation_seconds": 11,
+  "tests": 0,
+  "coverage": null,
+  "line_cov": null,
+  "branch_cov": null,
+  "total_goals": null,
+  "covered_goals": null,
+  "lines": null,
+  "covered_lines": null,
+  "total_branches": null,
+  "covered_branches": null,
+  "total_methods": null,
+  "covered_methods": null,
+  "branchless_methods": null,
+  "covered_branchless_methods": null
+}

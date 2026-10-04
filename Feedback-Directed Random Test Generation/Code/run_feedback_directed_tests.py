@@ -326,14 +326,23 @@ def read_coverage(workspace: Path, log_text: str = "") -> dict:
 
 def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
                  archive: Path, temporary_root: Path, logs_dir: Path,
-                 run_cov: bool, test_timeout: int) -> dict:
+                 run_cov: bool, test_timeout: int, deadline=None) -> dict:
     """Checkout, compile, test, and measure coverage on a single revision."""
+    def execute(command, log, cwd=None, timeout=None):
+        allowed = test_timeout if timeout is None else timeout
+        if deadline is not None:
+            remaining = deadline-time.monotonic()
+            if remaining <= 0:
+                with log.open('a',encoding='utf-8') as stream: stream.write('[TIMEOUT: target deadline exceeded]\n')
+                return TIMEOUT_RC
+            allowed=min(allowed,remaining)
+        return run_command(command,log,cwd=cwd,timeout=allowed)
     label = "buggy" if suffix == "b" else "fixed"
     workspace = temporary_root / label
     log = logs_dir / f"{label}.log"
 
     # 1. Checkout
-    checkout_rc = run_command([d4j, "checkout", "-p", project, "-v",
+    checkout_rc = execute([d4j, "checkout", "-p", project, "-v",
                                f"{bug_id}{suffix}", "-w", str(workspace)], log,
                               timeout=test_timeout)
     if checkout_rc != 0:
@@ -341,7 +350,7 @@ def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
                 "status": "TIMEOUT" if checkout_rc == TIMEOUT_RC else "CHECKOUT_FAIL"}
 
     # 2. Compile
-    compile_rc = run_command([d4j, "compile", "-w", str(workspace)], log,
+    compile_rc = execute([d4j, "compile", "-w", str(workspace)], log,
                              timeout=test_timeout)
     if compile_rc != 0:
         return {"result": "NOT_RUN", "fails": None,
@@ -354,7 +363,7 @@ def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
         failing.unlink()
 
     test_log = logs_dir / f"{label}_test.log"
-    test_rc = run_command([d4j, "test", "-s", str(archive)], test_log,
+    test_rc = execute([d4j, "test", "-s", str(archive)], test_log,
                           cwd=workspace, timeout=test_timeout)
     test_output = test_log.read_text(encoding="utf-8", errors="replace") if test_log.is_file() else ""
 
@@ -383,7 +392,7 @@ def run_revision(d4j: str, project: str, bug_id: int, suffix: str,
     # 4. Coverage (buggy revision only, when test executed)
     if run_cov and label == "buggy" and result != "NOT_RUN":
         cov_log = logs_dir / "buggy_coverage.log"
-        cov_rc = run_command([d4j, "coverage", "-s", str(archive)],
+        cov_rc = execute([d4j, "coverage", "-s", str(archive)],
                              cov_log, cwd=workspace, timeout=test_timeout)
         cov_output = cov_log.read_text(encoding="utf-8", errors="replace") if cov_log.is_file() else ""
         details["coverage_status"] = ("TIMEOUT" if cov_rc == TIMEOUT_RC else
@@ -558,7 +567,7 @@ def missing_test_code_reports() -> List[dict]:
 
 
 def update_global_reports(result_root: Path, include_missing_code: bool = True,
-                          rewrite_target_reports: bool = True) -> int:
+                          rewrite_target_reports: bool = False) -> int:
     """Refresh both Result/report.csv and PROJECT_ROOT/report.csv."""
     with REPORT_LOCK:
         rows = collect_existing_reports(result_root)
@@ -619,6 +628,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
     seed = seed_override if seed_override is not None else metadata.get("seed")
 
     start_time = time.time()
+    deadline = time.monotonic()+1800
 
     # Create temporary scratch space
     temp_dir = Path(tempfile.mkdtemp(prefix=f"randoop-{target_name}-"))
@@ -668,7 +678,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
         buggy_details = run_revision(
             d4j=d4j, project=project, bug_id=bug_id, suffix="b",
             archive=archive_path, temporary_root=temp_dir,
-            logs_dir=logs_dir, run_cov=run_cov, test_timeout=test_timeout
+            logs_dir=logs_dir, run_cov=run_cov, test_timeout=test_timeout, deadline=deadline
         )
         buggy_details["duration_seconds"] = round(time.time() - buggy_start, 2)
 
@@ -685,7 +695,7 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
         fixed_details = run_revision(
             d4j=d4j, project=project, bug_id=bug_id, suffix="f",
             archive=archive_path, temporary_root=temp_dir,
-            logs_dir=logs_dir, run_cov=False, test_timeout=test_timeout
+            logs_dir=logs_dir, run_cov=False, test_timeout=test_timeout, deadline=deadline
         )
         fixed_details["duration_seconds"] = round(time.time() - fixed_start, 2)
 
@@ -700,6 +710,10 @@ def run_target(name: str, source: Path, d4j: str, result_root: Path,
     total_duration = round(time.time() - start_time, 2)
     verdict = evaluate_verdict(buggy_details.get("result", "NOT_RUN"),
                                fixed_details.get("result", "NOT_RUN"))
+    if (any(side.get("test_compile") == "FAIL" for side in (buggy_details, fixed_details)) or
+        run_cov and (buggy_details.get("coverage_status") != "PASS" or
+                     buggy_details.get("line_cov") is None and buggy_details.get("branch_cov") is None)):
+        verdict = "NOT_AVAILABLE"
 
     report = {
         "schema_version": "1.1",

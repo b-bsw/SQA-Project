@@ -1,0 +1,35 @@
+Batch JacksonCore Round 1: 2 bugs, MAX_PARALLEL=2
+[JacksonCore_26 round 1] defects4j checkout 26b
+[JacksonCore_4 round 1] defects4j checkout 4b
+[JacksonCore_4 round 1] defects4j compile
+[JacksonCore_26 round 1] defects4j compile
+Running ant (export.dir.bin.classes)....................................... OK
+
+Running ant (export.cp.compile)............................................ OK
+
+Running ant (export.classes.modified)...................................... OK
+
+[JacksonCore_4 round 1] EvoSuite STANDARD_GA: com.fasterxml.jackson.core.util.TextBuffer
+Running ant (export.dir.bin.classes)....................................... OK
+
+Running ant (export.cp.compile)............................................ OK
+
+Running ant (export.classes.modified)...................................... OK
+
+[JacksonCore_26 round 1] EvoSuite STANDARD_GA: com.fasterxml.jackson.core.json.async.NonBlockingJsonParser
+[JacksonCore_4 round 1] test buggy
+[JacksonCore_4 round 1] defects4j checkout 4f
+[JacksonCore_4 round 1] defects4j compile
+[JacksonCore_26 round 1] test buggy
+[JacksonCore_4 round 1] test fixed
+[JacksonCore_26 round 1] defects4j checkout 26f
+Generated tests: /mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/TestCode/JacksonCore_4
+Report         : /mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/Result_Round1/JacksonCore_4/result.csv
+/mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/Result_Round1/JacksonCore_4/result.csv
+[JacksonCore_26 round 1] defects4j compile
+[JacksonCore_26 round 1] test fixed
+Generated tests: /mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/TestCode/JacksonCore_26
+Report         : /mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/Result_Round1/JacksonCore_26/result.csv
+/mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/Result_Round1/JacksonCore_26/result.csv
+Batch complete: 2 succeeded, 0 failed
+Combined report: /mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/Result_Round1/report.csv

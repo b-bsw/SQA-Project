@@ -6,6 +6,8 @@ import hashlib
 import json
 import os
 import queue
+import re
+import shutil
 import signal
 import subprocess
 import sys
@@ -32,6 +34,49 @@ MANIFEST = REGEN / "manifest.json"
 STOP = threading.Event()
 ACTIVE = set()
 ACTIVE_LOCK = threading.Lock()
+SUPPLEMENT_MODE = False
+
+
+def supplement_manifest(targets, write=False):
+    """Explicit Resource supplements do not change the frozen experiment cohort."""
+    entries = []
+    for target in sorted(set(targets)):
+        if not re.fullmatch(r'[A-Za-z]+_[1-9][0-9]*', target):
+            raise ValueError(f'Invalid supplemental target: {target}')
+        tasks = source_files(target)
+        if not tasks: raise ValueError(f'Resource sources missing: {target}')
+        entries.append({'target':target,'sources':[t['rel_path'] for t in tasks]})
+    manifest = {'schema_version':1,'mode':'supplement','targets':entries}
+    if write: gen.save_atomic_json(REGEN/'supplement_manifest.json',manifest)
+    return manifest
+
+
+def recorded_test_name(record):
+    # Generation/import metadata can originate on Windows and resume in WSL.
+    return Path(record.get('test_file', '').replace('\\', '/')).name
+
+
+def supplemental_complete(entry):
+    state = gen.load_state(generator_state_path(entry['target']), read_only=True)
+    current = TEST_CODE/f"{entry['target']}_buggy"
+    return all(state.get(f"{entry['target']}/{source}",{}).get('status')=='GENERATED'
+               and gen.is_valid_complete_java_test(current/recorded_test_name(state[f"{entry['target']}/{source}"]))
+               for source in entry['sources'])
+
+
+def seed_supplement_stage(entry):
+    """Reuse recorded, complete files; never regenerate or relabel old classes."""
+    target=entry['target']
+    state=gen.load_state(generator_state_path(target),read_only=True)
+    current=TEST_CODE/f'{target}_buggy'
+    stage=stage_root(target)/f'{target}_buggy'
+    stage.mkdir(parents=True,exist_ok=True)
+    for relative in entry['sources']:
+        record=state.get(f'{target}/{relative}',{})
+        name=recorded_test_name(record)
+        path=current/name
+        if name and record.get('status')=='GENERATED' and path.is_file() and gen.is_valid_complete_java_test(path):
+            shutil.copy2(path,stage/name)
 
 
 def read_json(path: Path, default=None):
@@ -132,7 +177,7 @@ def ready_files(target, sources):
         record = state.get(task_id, {})
         if record.get("status") != "GENERATED":
             return None
-        recorded_name = Path(record.get("test_file", "").replace("\\", "/")).name
+        recorded_name = recorded_test_name(record)
         candidate = stage / recorded_name
         if not recorded_name or not candidate.is_file():
             return None
@@ -170,7 +215,7 @@ def recovered_commit(target, sources):
         record = state.get(f"{target}/{relative}", {})
         if record.get("status") != "GENERATED":
             return False
-        expected.append(Path(record.get("test_file", "")).name)
+        expected.append(recorded_test_name(record))
     if {p.name for p in current.glob("*.java")} != set(expected):
         return False
     save_status(target, "COMMITTED", generated_files=expected,
@@ -182,11 +227,20 @@ def commit_target(target, files):
     """Publish a complete candidate in TestCode2 without changing TestCode."""
     new_code = TEST_CODE / f"{target}_buggy"
     stage = stage_root(target) / f"{target}_buggy"
-    if new_code.exists():
+    if new_code.exists() and not SUPPLEMENT_MODE:
         raise RuntimeError(f"Refusing to replace existing TestCode2: {new_code}")
     if not stage.is_dir():
         raise RuntimeError(f"Staged TestCode missing: {stage}")
-    stage.rename(new_code)
+    new_code.parent.mkdir(parents=True,exist_ok=True)
+    if new_code.exists():
+        backup=REGEN/'backups'/f"{target}-{time.time_ns()}"
+        backup.parent.mkdir(parents=True,exist_ok=True)
+        new_code.rename(backup)
+        try: stage.rename(new_code)
+        except BaseException:
+            backup.rename(new_code)
+            raise
+    else: stage.rename(new_code)
     if {p.name for p in new_code.glob("*.java")} != {p.name for p in files}:
         raise RuntimeError(f"Generated files missing after swap: {target}")
     save_status(target, "COMMITTED", generated_files=[p.name for p in files],
@@ -245,7 +299,24 @@ def run_generator(target, slot, key, args):
         with ACTIVE_LOCK:
             ACTIVE.add(process)
         try:
-            return process.wait()
+            try:
+                return process.wait(timeout=getattr(args,'target_timeout',600))
+            except subprocess.TimeoutExpired:
+                if os.name=='posix': os.killpg(process.pid,signal.SIGTERM)
+                else: process.terminate()
+                try: process.wait(timeout=3)
+                except subprocess.TimeoutExpired:
+                    if os.name=='posix': os.killpg(process.pid,signal.SIGKILL)
+                    else: process.kill()
+                    process.wait()
+                state=gen.load_state(generator_state_path(target),read_only=True)
+                for task in source_files(target):
+                    task_id=f"{target}/{task['rel_path']}"
+                    if state.get(task_id,{}).get('status')!='GENERATED':
+                        state[task_id]={'status':'TIMEOUT','error':'Generation target deadline exceeded',
+                                        'updated_at':datetime.now(timezone.utc).isoformat()}
+                gen.save_atomic_json(generator_state_path(target),state)
+                return 124
         finally:
             with ACTIVE_LOCK:
                 ACTIVE.discard(process)
@@ -253,6 +324,9 @@ def run_generator(target, slot, key, args):
 
 def process_target(entry, slot, key, args):
     target, sources = entry["target"], entry["sources"]
+    if SUPPLEMENT_MODE:
+        if supplemental_complete(entry): return 'COMMITTED'
+        seed_supplement_stage(entry)
     if STOP.is_set():
         return "STOPPED"
     if recovered_commit(target, sources):
@@ -267,9 +341,10 @@ def process_target(entry, slot, key, args):
             save_status(target, "PAUSED", reason="API key quota exhausted")
             return "PAUSED"
         if files is None:
-            save_status(target, "FAILED", reason=generation_failure_reason(target, sources),
+            partial = SUPPLEMENT_MODE and any((TEST_CODE/f'{target}_buggy').glob('*.java'))
+            save_status(target, "PARTIAL" if partial else "FAILED", reason=generation_failure_reason(target, sources),
                         generator_exit=code)
-            return "FAILED"
+            return "PARTIAL" if partial else "FAILED"
     if STOP.is_set():
         return "STOPPED"
     commit_target(target, files)
@@ -311,6 +386,9 @@ def print_status_report(manifest, targets=None, limit=None):
         target = entry["target"]
         record = read_json(status_path(target), {})
         status = record.get("status", "PENDING")
+        if SUPPLEMENT_MODE:
+            if supplemental_complete(entry): status = "COMMITTED"
+            elif status == "COMMITTED": status = "PENDING"
         counts[status] += 1
         if status != "COMMITTED":
             remaining_targets.append(f"{target} [{status}]")
@@ -363,6 +441,7 @@ def print_status_report(manifest, targets=None, limit=None):
 
 
 def main(argv=None):
+    global SUPPLEMENT_MODE
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--execute", action="store_true", help="Generate dependency-informed tests into TestCode2 only")
     parser.add_argument("--publish-ready", action="store_true",
@@ -373,6 +452,8 @@ def main(argv=None):
     parser.add_argument("--limit", type=int,
                         help="Process first N pending targets; with --status, cap target list and detail rows")
     parser.add_argument("--targets", nargs="+", help="Restrict generation or status to these cohort targets")
+    parser.add_argument('--supplement-targets',nargs='+',help='Generate missing Resource classes for explicit targets, outside the frozen cohort')
+    parser.add_argument('--target-timeout',type=int,default=600,help='Hard generation deadline per bug in seconds')
     parser.add_argument("--project", metavar="NAME",
                         help="Select all bug IDs in a project family, e.g. JacksonDatabind")
     parser.add_argument("--partition", choices=["all", "front", "back"], default="all",
@@ -399,7 +480,12 @@ def main(argv=None):
         parser.error("Choose only one of --execute, --publish-ready, --status, or --preview-prompt")
     if args.key_index is not None and (args.workers != 1 or args.key_index < 1):
         parser.error("--key-index requires --workers 1 and a positive key index")
-    full_manifest = manifest_for_run(write=args.execute)
+    SUPPLEMENT_MODE = bool(args.supplement_targets)
+    if args.target_timeout<1: parser.error('--target-timeout must be positive')
+    try:
+        full_manifest = (supplement_manifest(args.supplement_targets,write=args.execute)
+                         if SUPPLEMENT_MODE else manifest_for_run(write=args.execute))
+    except ValueError as exc: parser.error(str(exc))
     try:
         project_manifest = filter_project(full_manifest, args.project)
     except ValueError as exc:
@@ -415,7 +501,8 @@ def main(argv=None):
         return 0
     source_count = sum(len(entry["sources"]) for entry in manifest["targets"])
     pending = [entry for entry in manifest["targets"]
-               if read_json(status_path(entry["target"]), {}).get("status") != "COMMITTED"]
+               if (not supplemental_complete(entry) if SUPPLEMENT_MODE else
+                   read_json(status_path(entry["target"]), {}).get("status") != "COMMITTED")]
     if args.targets:
         requested = set(args.targets)
         available = {entry["target"] for entry in manifest["targets"]}

@@ -1,0 +1,61 @@
+Batch JacksonCore Round 1: 2 bugs, MAX_PARALLEL=2
+[JacksonCore_26 round 1] defects4j checkout 26b
+[JacksonCore_4 round 1] defects4j checkout 4b
+[JacksonCore_4 round 1] defects4j compile
+[JacksonCore_26 round 1] defects4j compile
+Running ant (export.dir.bin.classes)....................................... OK
+
+Running ant (export.cp.compile)............................................ OK
+
+Running ant (export.classes.modified)...................................... Running ant (export.dir.bin.classes)....................................... OK
+
+[JacksonCore_4 round 1] EvoSuite STANDARD_GA: com.fasterxml.jackson.core.util.TextBuffer
+OK
+
+Running ant (export.cp.compile)............................................ OK
+
+Running ant (export.classes.modified)...................................... OK
+
+[JacksonCore_26 round 1] EvoSuite STANDARD_GA: com.fasterxml.jackson.core.json.async.NonBlockingJsonParser
+EvoSuite generated no tests for com.fasterxml.jackson.core.util.TextBuffer (exit 0):
+* EvoSuite 1.2.0
+* Going to generate test cases for class: com.fasterxml.jackson.core.util.TextBuffer
+* Starting Client-0
+* Connecting to master process on port 13048
+* Analyzing classpath: 
+  - /tmp/evosuite-ga-JacksonCore_4-r1.Lq7RZe/buggy-checkout/target/classes
+  - /tmp/evosuite-ga-JacksonCore_4-r1.Lq7RZe/buggy-checkout/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.util.TextBuffer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+* Setting up search algorithm for whole suite generation
+* Total number of test goals: 
+  - Line 261
+  - Branch 141
+* Using seed 20260918
+* Starting evolution
+* Search finished after 121s and 416 generations, 166655 statements, best individual has fitness: 2.1666666666666665
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 99%
+* Total number of goals: 261
+* Number of covered goals: 259
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 99%
+* Total number of goals: 141
+* Number of covered goals: 139
+* Generated 59 tests with total length 254
+* Resulting test suite's coverage: 99% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 00:26:08.304 [logback-2] ERROR TestRunnable - Suppressed/ignored exception during test case execution on class com.fasterxml.jackson.core.util.TextBuffer: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+[MASTER] 00:26:11.630 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.fasterxml.jackson.core.util.TextBuffer with seed 20260918. Configuration id : null
+java.lang.OutOfMemoryError: Java heap space
+* Computation finished
+EvoSuite generated no usable tests.
+GeneticAlgorithm/Code/run_evosuite_ga.sh: line 292: syntax error near unexpected token `('
+Batch complete: 0 succeeded, 2 failed
+Combined report: /mnt/e/JavaEclipe/defect4j/SQA-Project/GeneticAlgorithm/Result_Round1/report.csv

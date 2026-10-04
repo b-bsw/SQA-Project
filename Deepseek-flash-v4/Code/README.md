@@ -67,7 +67,7 @@ sheets. The paired coverage views use Node and `@oai/artifact-tool` from Codex's
 bundled runtime. `summary.xlsx` also contains Coverage, with recorded-only and
 all-results averages for every project and round. `--summary-only` refreshes the
 workbook without running tests or rewriting `Result/report.csv`.
-See [coverage summary rebuild instructions](../../script/coverage_summaries.md)
+See [coverage summary rebuild instructions](../../script/summary/README.md)
 for runtime configuration on other hosts and rebuilding all four groups.
 
 ## Recover historical test times

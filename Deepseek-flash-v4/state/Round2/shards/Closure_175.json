@@ -1,0 +1,22 @@
+{
+  "Closure_175/com/google/javascript/jscomp/FunctionInjector.java": {
+    "project": "Closure_175",
+    "source_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Resoucre\\Closure_175\\com\\google\\javascript\\jscomp\\FunctionInjector.java",
+    "status": "GENERATED",
+    "test_file": "E:\\JavaEclipe\\defect4j\\SQA-Project\\Deepseek-flash-v4\\TestCode2\\Closure_175_buggy\\FunctionInjectorTest.java",
+    "file_size_bytes": 14926,
+    "updated_at": "2026-10-03T23:25:49.575573+00:00",
+    "round": 2,
+    "generation_mode": "manual",
+    "model": null,
+    "usage": null,
+    "elapsed_seconds": null,
+    "finish_reason": null,
+    "attribution": "Method and round supplied by user; exact model, generation duration and token usage not supplied",
+    "response_sha256": "48fe1fdd9ea27d9d1878428073c4dac424eba45127e519d0ffa3243621c40015",
+    "test_sha256": "4fbd18f34fd63e13c1b1cb1a0eef45a431c983f0ad02309c29057701c334f040",
+    "removed_markdown_fences": 0,
+    "response_backup": ".coverage-build/closure-backfill-20261004/manual-imports/20261003T232549575573Z/response.txt",
+    "test_annotations": 33
+  }
+}

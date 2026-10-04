@@ -166,6 +166,12 @@ def find_defects4j_bin() -> Optional[str]:
 
 def randoop_temp_base(workspace_dir: Optional[Path], name: str) -> Path:
     """Keep generated work beside the repository when its path has no spaces."""
+    if os.environ.get("RANDOOP_TEMP_ROOT"):
+        return Path(os.environ["RANDOOP_TEMP_ROOT"]) / name
+    # WSL checkouts on a mounted Windows drive can consume the generation
+    # deadline before Randoop starts. Keep temporary work on its Linux disk.
+    if os.name == "posix" and workspace_dir and str(workspace_dir).startswith("/mnt/"):
+        return Path(tempfile.gettempdir()) / ("sqa_d4j_work" if name == "d4j_work" else name)
     if workspace_dir is not None:
         build_base = Path(workspace_dir).resolve() / "BuildClasses"
         if " " not in str(build_base):

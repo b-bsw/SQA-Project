@@ -8,3 +8,9 @@ BuildClasses
 AGENTS.md
 SQA_Project_Instruction.pdf
 /.coverage-build/
+
+# Local Python/runtime files
+__pycache__/
+*.pyc
+Deepseek-flash-v4/budget_ledger.json.lock
+**/.generator_state.json.tmp_*
