@@ -12,17 +12,20 @@
 | นายสรวิชญ์ ทัศดร        | 673380065-6 | Genetic Algorithm                        |
 | นายปิยพล ตุ่นป่า        | 673380280-2 | Deepseek-flash-v4                        |
 
-<img src="https://i.pinimg.com/1200x/5c/31/e4/5c31e4f66b9633b9e8b456bfc13d1524.jpg" alt="Logo">
-
-<!--```txt
+```bash
 Project/
-  ├── Deepseek-flash-v4
-  ├── Feedback-Directed Random Test Generation
-  ├── Gemini-3.8-flash
-  ├── GeneticAlgorithm
-  ├── Resoucre
-  ├── script
-  ├── api doc.pdf
-  ├── guide.md
-  └── README.md
-```-->
+    ├── Deepseek-flash-v4
+    ├── Feedback-Directed Random Test Generation
+    ├── Gemini-3.8-flash
+    ├── GeneticAlgorithm
+    ├── Resoucre
+    ├── script
+    ├── Presentation.pdf # 2.Presentation
+    ├── guide.md
+    ├── index.html
+    ├── pyrefly.toml
+    ├── README.md
+    └── Reports.pdf # 1.รายงาน
+```
+
+<img src="https://i.pinimg.com/1200x/5c/31/e4/5c31e4f66b9633b9e8b456bfc13d1524.jpg" alt="Logo">
